@@ -35,12 +35,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GenerateTextResponse'
-        400:
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
 
 components:
   schemas:
@@ -48,9 +42,11 @@ components:
       type: object
       properties:
         error:
-          type: array
-          items:
-            type: string
+          anyOf:
+            - type: string
+            - type: array
+              items:
+                type: string
       required:
         - error
 

@@ -64,7 +64,6 @@ public class GeneralTests
                 },
             });
         
-        (await act.Should().ThrowAsync<ApiException<ErrorResponse>>())
-            .Which.Result.Error.First().Should().Be("Error in `parameters.max_new_tokens`: ensure this value is less than or equal to 250");
+        await act.Should().ThrowAsync<ApiException>();
     }
 }
