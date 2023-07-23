@@ -18,7 +18,7 @@ public class GeneralTests
             RecommendedModelIds.Gpt2,
             new GenerateTextRequest
             {
-                Inputs = "Hello",
+                Inputs = "Give random 5 words in response",
                 Parameters = new GenerateTextRequestParameters
                 {
                     Max_new_tokens = 250,
