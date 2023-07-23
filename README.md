@@ -5,30 +5,31 @@
 [![License: MIT](https://img.shields.io/github/license/tryAGI/HuggingFace)](https://github.com/tryAGI/HuggingFace/blob/main/LICENSE.txt)
 [![Discord](https://img.shields.io/discord/1115206893015662663?label=Discord&logo=discord&logoColor=white&color=d82679)](https://discord.gg/Ca2xhfBf3v)
 
-Generated C# SDK based on official HuggingFace OpenAPI specification using NSwag.  
+Generated C# SDK based on HuggingFace OpenAPI specification using NSwag.  
 Includes [tokenizer](https://github.com/tryAGI/Tiktoken) and some helper methods.
 
 ### Usage
 ```csharp
 using HuggingFace;
 
-using var httpClient = new HttpClient();
-var api = new HuggingFaceApi(apiKey, httpClient);
-var result = await api.CreateCompletionAsync(new CreateChatCompletionRequest
-{
-    Messages = new List<ChatCompletionRequestMessage>
+using var client = new HttpClient();
+var api = new HuggingFaceApi(apiKey, client);
+var response = await api.GenerateTextAsync(
+    RecommendedModelIds.Gpt2,
+    new GenerateTextRequest
     {
-        "You are a helpful weather assistant.".AsSystemMessage(),
-        "What's the weather like today?".AsUserMessage(),
-    },
-    Model = "claude2",
-});
-// ...
-var resultMessage = result.GetFirstChoiceMessage();
-var functionArgumentsJson = resultMessage.Function_call?.Arguments ?? string.Empty;
-var json = await service.CallGetCurrentWeatherAsync(functionArgumentsJson);
-// or just get arguments
-var args = service.AsGetCurrentWeatherAsyncArgs(functionArgumentsJson);
+        Inputs = "Hello",
+        Parameters = new GenerateTextRequestParameters
+        {
+            Max_new_tokens = 250,
+            Return_full_text = false,
+        },
+        Options = new GenerateTextRequestOptions
+        {
+            Use_cache = true,
+            Wait_for_model = false,
+        },
+    });
 ```
 
 ## Support

@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <PropertyGroup Label="Nuget">
-    <Description>Generated C# SDK based on official Anthropic OpenAPI specification.</Description>
-    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;anthropic;generated;nswag;claude;claude2</PackageTags>
+    <Description>Generated C# SDK based on HuggingFace OpenAPI specification.</Description>
+    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;huggingface;generated;nswag</PackageTags>
   </PropertyGroup>
   
   <ItemGroup>
@@ -18,7 +18,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="H.NSwag.Generator" Version="13.19.0.73">
+    <PackageReference Include="H.NSwag.Generator" Version="13.19.0.74">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
