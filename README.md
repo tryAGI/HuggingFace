@@ -5,29 +5,23 @@
 [![License: MIT](https://img.shields.io/github/license/tryAGI/HuggingFace)](https://github.com/tryAGI/HuggingFace/blob/main/LICENSE.txt)
 [![Discord](https://img.shields.io/discord/1115206893015662663?label=Discord&logo=discord&logoColor=white&color=d82679)](https://discord.gg/Ca2xhfBf3v)
 
-Generated C# SDK based on HuggingFace OpenAPI specification using NSwag.  
-Includes [tokenizer](https://github.com/tryAGI/Tiktoken) and some helper methods.
+## Features 🔥
+- All modern .NET features - nullability, trimming, NativeAOT, etc.
+- Support .Net Framework/.Net Standard 2.0
 
 ### Usage
 ```csharp
 using HuggingFace;
 
-using var client = new HttpClient();
-var api = new HuggingFaceApi(apiKey, client);
+using var api = new HuggingFaceApi(apiKey, client);
 var response = await api.GenerateTextAsync(
-    RecommendedModelIds.Gpt2,
+    "gpt2",
     new GenerateTextRequest
     {
         Inputs = "Hello",
         Parameters = new GenerateTextRequestParameters
         {
-            Max_new_tokens = 250,
-            Return_full_text = false,
-        },
-        Options = new GenerateTextRequestOptions
-        {
-            Use_cache = true,
-            Wait_for_model = false,
+            MaxNewTokens = 250,
         },
     });
 ```
