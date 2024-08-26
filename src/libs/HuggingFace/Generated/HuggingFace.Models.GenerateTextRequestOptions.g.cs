@@ -13,14 +13,14 @@ namespace HuggingFace
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("use_cache")]
-        public global::HuggingFace.GenerateTextRequestOptionsUseCache? UseCache { get; set; }
+        public global::HuggingFace.GenerateTextRequestOptionsUseCache? UseCache { get; set; } = true;
 
         /// <summary>
         /// If the model is not ready, wait for it instead of receiving 503. It limits the number of requests required to get your inference done. It is advised to only set this flag to true after receiving a 503 error as it will limit hanging in your application to known places.<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wait_for_model")]
-        public global::HuggingFace.GenerateTextRequestOptionsWaitForModel? WaitForModel { get; set; }
+        public global::HuggingFace.GenerateTextRequestOptionsWaitForModel? WaitForModel { get; set; } = false;
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
