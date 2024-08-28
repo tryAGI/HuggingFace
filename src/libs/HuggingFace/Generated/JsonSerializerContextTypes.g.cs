@@ -45,30 +45,18 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.GenerateTextRequestParametersReturnFullText? Type8 { get; set; }
+        public object? Type8 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.GenerateTextRequestParametersDoSample? Type9 { get; set; }
+        public global::HuggingFace.GenerateTextRequestOptions? Type9 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.GenerateTextRequestOptions? Type10 { get; set; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.GenerateTextResponseValue>? Type10 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.GenerateTextRequestOptionsUseCache? Type11 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::HuggingFace.GenerateTextRequestOptionsWaitForModel? Type12 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::HuggingFace.GenerateTextResponseValue>? Type13 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::HuggingFace.GenerateTextResponseValue? Type14 { get; set; }
+        public global::HuggingFace.GenerateTextResponseValue? Type11 { get; set; }
     }
 }
