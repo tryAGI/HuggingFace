@@ -61,7 +61,7 @@ namespace HuggingFace
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("return_full_text")]
-        public global::HuggingFace.GenerateTextRequestParametersReturnFullText? ReturnFullText { get; set; } = true;
+        public object? ReturnFullText { get; set; }
 
         /// <summary>
         /// The number of proposition you want to be returned.<br/>
@@ -76,7 +76,7 @@ namespace HuggingFace
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("do_sample")]
-        public global::HuggingFace.GenerateTextRequestParametersDoSample? DoSample { get; set; } = true;
+        public object? DoSample { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
