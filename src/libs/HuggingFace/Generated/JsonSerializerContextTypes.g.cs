@@ -17,7 +17,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public global::System.AnyOf<string?, global::System.Collections.Generic.IList<string>>? Type1 { get; set; }
+        public global::System.AnyOf<string, global::System.Collections.Generic.IList<string>>? Type1 { get; set; }
         /// <summary>
         /// 
         /// </summary>
