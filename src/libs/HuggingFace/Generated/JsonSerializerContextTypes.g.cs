@@ -13,6 +13,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.Dictionary<string, string>? StringStringDictionary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public global::HuggingFace.ErrorResponse? Type0 { get; set; }
         /// <summary>
         /// 
