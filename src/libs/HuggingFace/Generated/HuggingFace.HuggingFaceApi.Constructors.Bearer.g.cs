@@ -5,11 +5,12 @@ namespace HuggingFace
 {
     public sealed partial class HuggingFaceApi
     {
-        /// <inheritdoc cref="HuggingFaceApi(global::System.Net.Http.HttpClient?, global::System.Uri?)"/>
+        /// <inheritdoc cref="HuggingFaceApi(global::System.Net.Http.HttpClient?, global::System.Uri?, global::HuggingFace.EndPointAuthorization?)"/>
         public HuggingFaceApi(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null) : this(httpClient, baseUri)
+            global::System.Uri? baseUri = null,
+            global::HuggingFace.EndPointAuthorization? authorization = null) : this(httpClient, baseUri, authorization)
         {
             Authorizing(_httpClient, ref apiKey);
 
