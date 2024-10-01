@@ -16,7 +16,7 @@ namespace HuggingFace
         public const string BaseUrl = "https://api-inference.huggingface.co/";
 
         private readonly global::System.Net.Http.HttpClient _httpClient;
-        private global::HuggingFace.EndPointAuthorization? _authorization;
+        private global::System.Collections.Generic.List<global::HuggingFace.EndPointAuthorization> _authorizations;
 
         /// <summary>
         /// 
@@ -31,15 +31,15 @@ namespace HuggingFace
         /// </summary>
         /// <param name="httpClient"></param>
         /// <param name="baseUri"></param>
-        /// <param name="authorization"></param>
+        /// <param name="authorizations"></param>
         public HuggingFaceApi(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
-            global::HuggingFace.EndPointAuthorization? authorization = null)
+            global::System.Collections.Generic.List<global::HuggingFace.EndPointAuthorization>? authorizations = null)
         {
             _httpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             _httpClient.BaseAddress ??= baseUri ?? new global::System.Uri(BaseUrl);
-            _authorization = authorization;
+            _authorizations = authorizations ?? new global::System.Collections.Generic.List<global::HuggingFace.EndPointAuthorization>();
 
             Initialized(_httpClient);
         }
