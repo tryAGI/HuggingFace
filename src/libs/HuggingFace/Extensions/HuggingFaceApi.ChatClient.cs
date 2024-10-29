@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HuggingFace;
 
-public sealed partial class HuggingFaceApi : IChatClient
+public sealed partial class HuggingFaceClient : IChatClient
 {
     private ChatClientMetadata? _metadata;
 
     /// <inheritdoc />
-    ChatClientMetadata IChatClient.Metadata => _metadata ??= new(nameof(HuggingFaceApi), this.BaseUri);
+    ChatClientMetadata IChatClient.Metadata => _metadata ??= new(nameof(HuggingFaceClient), this.BaseUri);
 
     /// <inheritdoc />
     TService? IChatClient.GetService<TService>(object? key) where TService : class => this as TService;

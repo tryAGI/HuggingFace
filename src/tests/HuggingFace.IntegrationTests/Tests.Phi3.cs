@@ -3,11 +3,12 @@ namespace HuggingFace.IntegrationTests;
 public partial class Tests
 {
     [TestMethod]
-    public async Task Llama2()
+    public async Task Phi3()
     {
-        using var api = GetAuthorizedApi();
-        var response = await api.GenerateTextAsync(
-            "meta-llama/Llama-2-7b-hf",
+        using var client = GetAuthenticatedClient();
+        
+        var response = await client.GenerateTextAsync(
+            "microsoft/Phi-3-mini-4k-instruct",
             new GenerateTextRequest
             {
                 Inputs = "Give random 5 words in response",

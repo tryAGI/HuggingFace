@@ -3,7 +3,7 @@
 
 namespace HuggingFace
 {
-    public partial class HuggingFaceApi
+    public partial class HuggingFaceClient
     {
         partial void PrepareGenerateTextArguments(
             global::System.Net.Http.HttpClient httpClient,

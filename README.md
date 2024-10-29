@@ -11,12 +11,13 @@
 - ~~Updated and supported automatically if there are no breaking changes~~
 - All modern .NET features - nullability, trimming, NativeAOT, etc.
 - Support .Net Framework/.Net Standard 2.0
+- Now supports only Serverless Inference API
 
 ### Usage
 ```csharp
 using HuggingFace;
 
-using var api = new HuggingFaceApi(apiKey, client);
+using var client = new HuggingFaceClient(apiKey, client);
 var response = await api.GenerateTextAsync(
     "gpt2",
     new GenerateTextRequest
@@ -34,6 +35,12 @@ var response = await api.GenerateTextAsync(
 Priority place for bugs: https://github.com/tryAGI/HuggingFace/issues  
 Priority place for ideas and general questions: https://github.com/tryAGI/HuggingFace/discussions  
 Discord: https://discord.gg/Ca2xhfBf3v  
+
+## OpenAPI specs
+- Serverless Inference OpenAPI spec - (Can't find the link)
+- [Local Text Generation Inference OpenAPI spec](https://huggingface.github.io/text-generation-inference/openapi.json)
+- [Local Text Embeddings Inference OpenAPI spec](https://huggingface.github.io/text-embeddings-inference/openapi.json)
+- [Inference Endpoints (dedicated) OpenAPI spec](https://api.endpoints.huggingface.cloud/openapi.json)
 
 ## Acknowledgments
 

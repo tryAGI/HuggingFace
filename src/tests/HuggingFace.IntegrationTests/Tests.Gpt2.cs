@@ -5,8 +5,9 @@ public partial class Tests
     [TestMethod]
     public async Task Gpt2()
     {
-        using var api = GetAuthorizedApi();
-        var response = await api.GenerateTextAsync(
+        using var client = GetAuthenticatedClient();
+        
+        var response = await client.GenerateTextAsync(
             "gpt2",
             new GenerateTextRequest
             {

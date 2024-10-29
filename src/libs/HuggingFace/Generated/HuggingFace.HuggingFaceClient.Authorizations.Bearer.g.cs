@@ -3,7 +3,7 @@
 
 namespace HuggingFace
 {
-    public sealed partial class HuggingFaceApi
+    public sealed partial class HuggingFaceClient
     {
         /// <summary>
         /// Authorize using bearer authentication.

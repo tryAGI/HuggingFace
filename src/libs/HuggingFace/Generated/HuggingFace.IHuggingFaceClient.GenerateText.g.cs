@@ -2,7 +2,7 @@
 
 namespace HuggingFace
 {
-    public partial interface IHuggingFaceApi
+    public partial interface IHuggingFaceClient
     {
         /// <summary>
         /// Creates a completion for the provided prompt and parameters.

@@ -3,20 +3,21 @@ namespace HuggingFace.IntegrationTests;
 [TestClass]
 public partial class Tests
 {
-    public static HuggingFaceApi GetAuthorizedApi()
+    private static HuggingFaceClient GetAuthenticatedClient()
     {
         var apiKey =
             Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
             throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
 
-        return new HuggingFaceApi(apiKey);
+        return new HuggingFaceClient(apiKey);
     }
     
     [TestMethod]
     public async Task GenerateError()
     {
-        using var api = GetAuthorizedApi();
-        Func<Task> act = async () => await api.GenerateTextAsync(
+        using var client = GetAuthenticatedClient();
+        
+        Func<Task> act = async () => await client.GenerateTextAsync(
             "gpt2",
             new GenerateTextRequest
             {
@@ -27,6 +28,6 @@ public partial class Tests
                 },
             });
         
-        await act.Should().ThrowAsync<HttpRequestException>();
+        await act.Should().ThrowAsync<InvalidOperationException>();
     }
 }

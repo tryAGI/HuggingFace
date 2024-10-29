@@ -8,7 +8,7 @@ namespace HuggingFace
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public sealed partial class HuggingFaceApi : global::HuggingFace.IHuggingFaceApi, global::System.IDisposable
+    public sealed partial class HuggingFaceClient : global::HuggingFace.IHuggingFaceClient, global::System.IDisposable
     {
         /// <summary>
         /// 
@@ -33,7 +33,7 @@ namespace HuggingFace
 
 
         /// <summary>
-        /// Creates a new instance of the HuggingFaceApi.
+        /// Creates a new instance of the HuggingFaceClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -41,7 +41,7 @@ namespace HuggingFace
         /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public HuggingFaceApi(
+        public HuggingFaceClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::HuggingFace.EndPointAuthorization>? authorizations = null,
