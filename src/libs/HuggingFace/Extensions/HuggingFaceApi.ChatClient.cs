@@ -12,7 +12,10 @@ public sealed partial class HuggingFaceClient : IChatClient
     ChatClientMetadata IChatClient.Metadata => _metadata ??= new(nameof(HuggingFaceClient), this.BaseUri);
 
     /// <inheritdoc />
-    TService? IChatClient.GetService<TService>(object? key) where TService : class => this as TService;
+    object? IChatClient.GetService(Type serviceType, object? key)
+    {
+        return key is null && serviceType?.IsInstanceOfType(this) is true ? this : null;
+    }
 
     /// <inheritdoc />
     async Task<ChatCompletion> IChatClient.CompleteAsync(IList<ChatMessage> chatMessages, ChatOptions? options, CancellationToken cancellationToken)
@@ -48,7 +51,7 @@ public sealed partial class HuggingFaceClient : IChatClient
             Temperature = options?.Temperature,
             TopP = options?.TopP,
             TopK = options?.TopK,
-            
+
             DoSample = options?.AdditionalProperties?[nameof(GenerateTextRequestParameters.DoSample)],
             MaxTime = options?.AdditionalProperties?.TryGetValue(nameof(GenerateTextRequestParameters.MaxTime), out double maxTime) is true ? maxTime : null,
             NumReturnSequences = options?.AdditionalProperties?.TryGetValue(nameof(GenerateTextRequestParameters.NumReturnSequences), out int numReturnSequences) is true ? numReturnSequences : null,
