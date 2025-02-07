@@ -44,7 +44,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="parameters"></param>
         /// <param name="options"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GenerateTextRequest(
             string? inputs,
             global::HuggingFace.GenerateTextRequestParameters? parameters,
