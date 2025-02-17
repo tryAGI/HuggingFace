@@ -9,16 +9,17 @@ public sealed partial class HuggingFaceClient : IChatClient
     private ChatClientMetadata? _metadata;
 
     /// <inheritdoc />
-    ChatClientMetadata IChatClient.Metadata => _metadata ??= new(nameof(HuggingFaceClient), this.BaseUri);
-
-    /// <inheritdoc />
-    object? IChatClient.GetService(Type serviceType, object? key)
+    object? IChatClient.GetService(Type serviceType, object? serviceKey)
     {
-        return key is null && serviceType?.IsInstanceOfType(this) is true ? this : null;
+        return
+            serviceKey is not null ? null :
+            serviceType == typeof(ChatClientMetadata) ? (_metadata ??= new(nameof(HuggingFaceClient), this.BaseUri)) :
+            serviceType?.IsInstanceOfType(this) is true ? this :
+            null;
     }
 
     /// <inheritdoc />
-    async Task<ChatCompletion> IChatClient.CompleteAsync(IList<ChatMessage> chatMessages, ChatOptions? options, CancellationToken cancellationToken)
+    async Task<ChatResponse> IChatClient.GetResponseAsync(IList<ChatMessage> chatMessages, ChatOptions? options, CancellationToken cancellationToken)
     {
         StringBuilder prompt = new();
         foreach (ChatMessage message in chatMessages)
@@ -80,24 +81,24 @@ public sealed partial class HuggingFaceClient : IChatClient
     }
 
     /// <inheritdoc />
-    async IAsyncEnumerable<StreamingChatCompletionUpdate> IChatClient.CompleteStreamingAsync(
+    async IAsyncEnumerable<ChatResponseUpdate> IChatClient.GetStreamingResponseAsync(
         IList<ChatMessage> chatMessages, ChatOptions? options, [EnumeratorCancellation] CancellationToken cancellationToken)
     {
-        ChatCompletion completion = await ((IChatClient)this).CompleteAsync(chatMessages, options, cancellationToken).ConfigureAwait(false);
+        ChatResponse response = await ((IChatClient)this).GetResponseAsync(chatMessages, options, cancellationToken).ConfigureAwait(false);
 
-        for (int i = 0; i < completion.Choices.Count; i++)
+        for (int i = 0; i < response.Choices.Count; i++)
         {
-            ChatMessage choice = completion.Choices[i];
-            yield return new StreamingChatCompletionUpdate
+            ChatMessage choice = response.Choices[i];
+            yield return new()
             {
                 AdditionalProperties = choice.AdditionalProperties,
                 AuthorName = choice.AuthorName,
                 ChoiceIndex = i,
-                CompletionId = completion.CompletionId,
                 Contents = choice.Contents,
-                CreatedAt = completion.CreatedAt,
-                ModelId = completion.ModelId,
+                CreatedAt = response.CreatedAt,
+                ModelId = response.ModelId,
                 RawRepresentation = choice.RawRepresentation,
+                ResponseId = response.ResponseId,
                 Role = choice.Role,
             };
         }
