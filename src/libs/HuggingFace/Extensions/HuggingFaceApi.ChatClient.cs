@@ -19,10 +19,10 @@ public sealed partial class HuggingFaceClient : IChatClient
     }
 
     /// <inheritdoc />
-    async Task<ChatResponse> IChatClient.GetResponseAsync(IList<ChatMessage> chatMessages, ChatOptions? options, CancellationToken cancellationToken)
+    async Task<ChatResponse> IChatClient.GetResponseAsync(IEnumerable<ChatMessage> messages, ChatOptions? options, CancellationToken cancellationToken)
     {
         StringBuilder prompt = new();
-        foreach (ChatMessage message in chatMessages)
+        foreach (ChatMessage message in messages)
         {
             AppendRole(message.Role);
             foreach (AIContent content in message.Contents)
@@ -82,25 +82,13 @@ public sealed partial class HuggingFaceClient : IChatClient
 
     /// <inheritdoc />
     async IAsyncEnumerable<ChatResponseUpdate> IChatClient.GetStreamingResponseAsync(
-        IList<ChatMessage> chatMessages, ChatOptions? options, [EnumeratorCancellation] CancellationToken cancellationToken)
+        IEnumerable<ChatMessage> messages, ChatOptions? options, [EnumeratorCancellation] CancellationToken cancellationToken)
     {
-        ChatResponse response = await ((IChatClient)this).GetResponseAsync(chatMessages, options, cancellationToken).ConfigureAwait(false);
+        ChatResponse response = await ((IChatClient)this).GetResponseAsync(messages, options, cancellationToken).ConfigureAwait(false);
 
-        for (int i = 0; i < response.Choices.Count; i++)
+        foreach (var update in response.ToChatResponseUpdates())
         {
-            ChatMessage choice = response.Choices[i];
-            yield return new()
-            {
-                AdditionalProperties = choice.AdditionalProperties,
-                AuthorName = choice.AuthorName,
-                ChoiceIndex = i,
-                Contents = choice.Contents,
-                CreatedAt = response.CreatedAt,
-                ModelId = response.ModelId,
-                RawRepresentation = choice.RawRepresentation,
-                ResponseId = response.ResponseId,
-                Role = choice.Role,
-            };
+            yield return update;
         }
     }
 }
