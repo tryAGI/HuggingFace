@@ -18,7 +18,7 @@
 using HuggingFace;
 
 using var client = new HuggingFaceClient(apiKey, client);
-var response = await api.GenerateTextAsync(
+var response = await client.GenerateTextAsync(
     "gpt2",
     new GenerateTextRequest
     {
