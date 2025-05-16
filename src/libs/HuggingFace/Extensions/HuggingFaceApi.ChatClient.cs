@@ -38,33 +38,22 @@ public sealed partial class HuggingFaceClient : IChatClient
 
         void AppendRole(ChatRole role) => prompt.Append("<|").Append(role.Value).Append("|>");
 
-        var requestOptions = new GenerateTextRequestOptions()
+        GenerateTextRequest? request = options?.RawRepresentationFactory?.Invoke(this) as GenerateTextRequest;
+        if (request is not null)
         {
-            UseCache = options?.AdditionalProperties?[nameof(GenerateTextRequestOptions.UseCache)],
-            WaitForModel = options?.AdditionalProperties?[nameof(GenerateTextRequestOptions.WaitForModel)],
-        };
-
-        var requestParameters = new GenerateTextRequestParameters()
+            request.Inputs = prompt.ToString();
+        }
+        else
         {
-            ReturnFullText = false,
+            request = new() { Inputs = prompt.ToString() };
+        }
 
-            MaxNewTokens = options?.MaxOutputTokens,
-            Temperature = options?.Temperature,
-            TopP = options?.TopP,
-            TopK = options?.TopK,
-
-            DoSample = options?.AdditionalProperties?[nameof(GenerateTextRequestParameters.DoSample)],
-            MaxTime = options?.AdditionalProperties?.TryGetValue(nameof(GenerateTextRequestParameters.MaxTime), out double maxTime) is true ? maxTime : null,
-            NumReturnSequences = options?.AdditionalProperties?.TryGetValue(nameof(GenerateTextRequestParameters.NumReturnSequences), out int numReturnSequences) is true ? numReturnSequences : null,
-            RepetitionPenalty = options?.AdditionalProperties?.TryGetValue(nameof(GenerateTextRequestParameters.RepetitionPenalty), out double repetitionPenalty) is true ? repetitionPenalty : null,
-        };;
-
-        var request = new GenerateTextRequest()
-        {
-            Inputs = prompt.ToString(),
-            Options = requestOptions,
-            Parameters = requestParameters,
-        };
+        var requestParameters = request.Parameters ??= new();
+        requestParameters.ReturnFullText ??= false;
+        requestParameters.MaxNewTokens ??= options?.MaxOutputTokens;
+        requestParameters.Temperature ??= options?.Temperature;
+        requestParameters.TopP ??= options?.TopP;
+        requestParameters.TopK ??= options?.TopK;
 
         IList<GenerateTextResponseValue> response = await this.GenerateTextAsync(
             options?.ModelId ?? string.Empty,
