@@ -34,6 +34,13 @@ public sealed partial class HuggingFaceClient : IChatClient
             }
             prompt.AppendLine();
         }
+
+        if (!string.IsNullOrWhiteSpace(options?.Instructions))
+        {
+            AppendRole(ChatRole.System);
+            prompt.Append(options?.Instructions).AppendLine();
+        }
+
         AppendRole(ChatRole.Assistant);
 
         void AppendRole(ChatRole role) => prompt.Append("<|").Append(role.Value).Append("|>");
