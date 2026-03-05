@@ -32,6 +32,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GenerateTextResponseValue>> GenerateTextAsync(
             string modelId,
+
             global::HuggingFace.GenerateTextRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
