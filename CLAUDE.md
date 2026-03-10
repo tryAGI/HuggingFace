@@ -10,10 +10,10 @@ C# SDK for the [Hugging Face](https://huggingface.co/) Serverless Inference API,
 
 ```bash
 # Build the solution
-dotnet build HuggingFace.sln
+dotnet build HuggingFace.slnx
 
 # Build for release (also produces NuGet package)
-dotnet build HuggingFace.sln -c Release
+dotnet build HuggingFace.slnx -c Release
 
 # Run integration tests (requires HUGGINGFACE_API_KEY env var)
 dotnet test src/tests/HuggingFace.IntegrationTests/HuggingFace.IntegrationTests.csproj
