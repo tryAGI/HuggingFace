@@ -31,7 +31,7 @@ namespace HuggingFace
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GenerateTextResponseValue>> GenerateTextAsync(
             string modelId,
-            string? inputs,
+            string? inputs = default,
             global::HuggingFace.GenerateTextRequestParameters? parameters = default,
             global::HuggingFace.GenerateTextRequestOptions? options = default,
             global::System.Threading.CancellationToken cancellationToken = default);
