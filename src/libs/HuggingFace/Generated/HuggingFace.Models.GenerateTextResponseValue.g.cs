@@ -13,7 +13,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("generated_text")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public string GeneratedText { get; set; } = default!;
+        public required string GeneratedText { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
