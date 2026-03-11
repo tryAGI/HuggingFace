@@ -1,11 +1,11 @@
+using AutoSDK.Extensions;
+using AutoSDK.Models;
 using Microsoft.OpenApi;
-using Microsoft.OpenApi.Extensions;
-using Microsoft.OpenApi.Readers;
 
 var path = args[0];
-var text = await File.ReadAllTextAsync(path);
+var yamlOrJson = await File.ReadAllTextAsync(path);
 
-text = text
+yamlOrJson = yamlOrJson
     .Replace("\"exclusiveMinimum\": 0", "\"exclusiveMinimum\": true")
     .Replace("\"exclusiveMinimum\": -2", "\"minimum\": -2")
     .Replace(@",
@@ -14,20 +14,8 @@ text = text
         }", string.Empty)
     ;
 
-var openApiDocument = new OpenApiStringReader().Read(text, out var diagnostics);
+var openApiDocument = yamlOrJson.GetOpenApiDocument(Settings.Default);
 
-text = openApiDocument.SerializeAsYaml(OpenApiSpecVersion.OpenApi3_0);
-_ = new OpenApiStringReader().Read(text, out diagnostics);
+yamlOrJson = await openApiDocument.SerializeAsYamlAsync(OpenApiSpecVersion.OpenApi3_2);
 
-if (diagnostics.Errors.Count > 0)
-{
-    foreach (var error in diagnostics.Errors)
-    {
-        Console.WriteLine(error.Message);
-    }
-    // Return Exit code 1
-    Environment.Exit(1);
-}
-
-await File.WriteAllTextAsync(path, text);
-return;
+await File.WriteAllTextAsync(path, yamlOrJson);

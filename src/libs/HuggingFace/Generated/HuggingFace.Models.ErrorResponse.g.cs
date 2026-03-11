@@ -16,7 +16,7 @@ namespace HuggingFace
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>> Error { get; set; }
+        public global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>> Error { get; set; } = default!;
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
