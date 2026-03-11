@@ -11,4 +11,5 @@ autosdk generate openapi.yaml \
   --clientClassName HuggingFaceClient \
   --targetFramework net8.0 \
   --output Generated \
-  --exclude-deprecated-operations
+  --exclude-deprecated-operations \
+  --security-scheme Http:Header:Bearer
