@@ -65,3 +65,44 @@ autosdk generate openapi.json \
   --output Generated \
   --exclude-deprecated-operations \
   --security-scheme Http:Header:Bearer
+
+# Generate Inference API client from TGI (Text Generation Inference) spec
+curl --fail --silent --show-error -o tgi-openapi.json \
+  https://raw.githubusercontent.com/huggingface/text-generation-inference/main/docs/openapi.json
+
+# Fix OpenAPI 3.1 features in TGI spec that AutoSDK's 3.0 parser can't handle
+python3 << 'PYEOF'
+import json
+
+def fix_exclusive_bounds(obj):
+    """Convert 3.1-style exclusiveMinimum/Maximum (numeric) to 3.0-style (boolean)."""
+    if isinstance(obj, dict):
+        for key in ('exclusiveMinimum', 'exclusiveMaximum'):
+            if key in obj and isinstance(obj[key], (int, float)):
+                bound_key = 'minimum' if key == 'exclusiveMinimum' else 'maximum'
+                # Only set the bound if not already present
+                if bound_key not in obj:
+                    obj[bound_key] = obj[key]
+                obj[key] = True
+        for v in obj.values():
+            fix_exclusive_bounds(v)
+    elif isinstance(obj, list):
+        for item in obj:
+            fix_exclusive_bounds(item)
+
+with open('tgi-openapi.json', 'r') as f:
+    spec = json.load(f)
+fix_exclusive_bounds(spec)
+with open('tgi-openapi.json', 'w') as f:
+    json.dump(spec, f, separators=(',', ':'))
+PYEOF
+
+autosdk generate tgi-openapi.json \
+  --namespace HuggingFace \
+  --clientClassName HuggingFaceInferenceClient \
+  --targetFramework net10.0 \
+  --output Generated \
+  --exclude-deprecated-operations \
+  --base-url https://router.huggingface.co \
+  --security-scheme Http:Header:Bearer
+rm tgi-openapi.json

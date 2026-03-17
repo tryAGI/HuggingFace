@@ -11,4 +11,13 @@ public partial class Tests
 
         return new HuggingFaceClient(apiKey);
     }
+
+    private static HuggingFaceInferenceClient GetAuthenticatedInferenceClient()
+    {
+        var apiKey =
+            Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+        return new HuggingFaceInferenceClient(apiKey);
+    }
 }
