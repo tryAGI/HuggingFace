@@ -1,6 +1,7 @@
+set -e
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl -o openapi.yaml https://raw.githubusercontent.com/tryAGI/HuggingFace/8de69e61e12b762f24d1acbe844ed855267bcf60/docs/openapi.yaml
+curl --fail --silent --show-error -o openapi.yaml https://raw.githubusercontent.com/tryAGI/HuggingFace/8de69e61e12b762f24d1acbe844ed855267bcf60/docs/openapi.yaml
 autosdk generate openapi.yaml \
   --namespace HuggingFace \
   --clientClassName HuggingFaceClient \
