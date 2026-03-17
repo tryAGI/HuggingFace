@@ -1,0 +1,193 @@
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ResponseDataItemVariant22
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("author")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Author { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("downloads")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Downloads { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("availableInferenceProviders")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseDataItemVariant2AvailableInferenceProvider2> AvailableInferenceProviders { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isLikedByUser")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool IsLikedByUser { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lastModified")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime LastModified { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("likes")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Likes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pipeline_tag")]
+        public string? PipelineTag { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Private { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <default>"model"</default>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
+        public string RepoType { get; set; } = "model";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.ResponseDataItemVariant2GatedEnum4?>))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseDataItemVariant2GatedEnum4?> Gated { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
+        public global::HuggingFace.ResponseDataItemVariant2ResourceGroup2? ResourceGroup { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("numParameters")]
+        public double? NumParameters { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("authorData")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseDataItemVariant2AuthorDataVariant12, global::HuggingFace.ResponseDataItemVariant2AuthorDataVariant22>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.ResponseDataItemVariant2AuthorDataVariant12, global::HuggingFace.ResponseDataItemVariant2AuthorDataVariant22>? AuthorData { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("widgetOutputUrls")]
+        public global::System.Collections.Generic.IList<string>? WidgetOutputUrls { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <default>"model"</default>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = "model";
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponseDataItemVariant22" /> class.
+        /// </summary>
+        /// <param name="author"></param>
+        /// <param name="downloads"></param>
+        /// <param name="id"></param>
+        /// <param name="availableInferenceProviders"></param>
+        /// <param name="isLikedByUser"></param>
+        /// <param name="lastModified"></param>
+        /// <param name="likes"></param>
+        /// <param name="pipelineTag"></param>
+        /// <param name="private"></param>
+        /// <param name="repoType"></param>
+        /// <param name="gated"></param>
+        /// <param name="resourceGroup"></param>
+        /// <param name="numParameters"></param>
+        /// <param name="authorData"></param>
+        /// <param name="widgetOutputUrls"></param>
+        /// <param name="type"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ResponseDataItemVariant22(
+            string author,
+            double downloads,
+            string id,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseDataItemVariant2AvailableInferenceProvider2> availableInferenceProviders,
+            bool isLikedByUser,
+            global::System.DateTime lastModified,
+            double likes,
+            bool @private,
+            global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseDataItemVariant2GatedEnum4?> gated,
+            string? pipelineTag,
+            global::HuggingFace.ResponseDataItemVariant2ResourceGroup2? resourceGroup,
+            double? numParameters,
+            global::HuggingFace.AnyOf<global::HuggingFace.ResponseDataItemVariant2AuthorDataVariant12, global::HuggingFace.ResponseDataItemVariant2AuthorDataVariant22>? authorData,
+            global::System.Collections.Generic.IList<string>? widgetOutputUrls,
+            string repoType = "model",
+            string type = "model")
+        {
+            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
+            this.Downloads = downloads;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.AvailableInferenceProviders = availableInferenceProviders ?? throw new global::System.ArgumentNullException(nameof(availableInferenceProviders));
+            this.IsLikedByUser = isLikedByUser;
+            this.LastModified = lastModified;
+            this.Likes = likes;
+            this.Private = @private;
+            this.Gated = gated;
+            this.PipelineTag = pipelineTag;
+            this.RepoType = repoType;
+            this.ResourceGroup = resourceGroup;
+            this.NumParameters = numParameters;
+            this.AuthorData = authorData;
+            this.WidgetOutputUrls = widgetOutputUrls;
+            this.Type = type;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponseDataItemVariant22" /> class.
+        /// </summary>
+        public ResponseDataItemVariant22()
+        {
+        }
+    }
+}

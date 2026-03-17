@@ -1,0 +1,74 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ResponseOrg5
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("avatarUrl")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AvatarUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fullname")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Fullname { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Name { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponseOrg5" /> class.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="avatarUrl"></param>
+        /// <param name="fullname"></param>
+        /// <param name="name"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ResponseOrg5(
+            string id,
+            string avatarUrl,
+            string fullname,
+            string name)
+        {
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
+            this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponseOrg5" /> class.
+        /// </summary>
+        public ResponseOrg5()
+        {
+        }
+    }
+}
