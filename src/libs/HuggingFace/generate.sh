@@ -2,6 +2,62 @@ set -e
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
 curl --fail --silent --show-error -o openapi.json https://huggingface.co/.well-known/openapi.json
+
+# Fix enum values that break C# code generation (embedded quotes, emojis)
+python3 << 'PYEOF'
+import json, unicodedata
+
+EMOJI_MAP = {
+    "\U0001f525": "fire", "\U0001f680": "rocket", "\U0001f440": "eyes",
+    "\u2764\ufe0f": "heart", "\U0001f917": "hugs", "\U0001f60e": "cool",
+    "\u2795": "plus", "\U0001f9e0": "brain", "\U0001f44d": "thumbsup",
+    "\U0001f91d": "handshake", "\U0001f614": "sad", "\U0001f92f": "mindblown",
+}
+
+def fix_properties(obj):
+    """Remove _prefixed properties when non-prefixed variant exists."""
+    if isinstance(obj, dict):
+        if 'properties' in obj and isinstance(obj['properties'], dict):
+            props = obj['properties']
+            keys = set(props.keys())
+            to_remove = [k for k in keys if k.startswith('_') and k[1:] in keys]
+            for k in to_remove:
+                del props[k]
+            if 'required' in obj and isinstance(obj['required'], list):
+                obj['required'] = [r for r in obj['required'] if r not in to_remove]
+        for v in obj.values():
+            fix_properties(v)
+    elif isinstance(obj, list):
+        for item in obj:
+            fix_properties(item)
+
+def fix_enum_value(s):
+    if not isinstance(s, str):
+        return s
+    s = s.replace('"', "'")
+    for emoji, name in EMOJI_MAP.items():
+        s = s.replace(emoji, name)
+    return s
+
+def fix_enums(obj):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == 'enum' and isinstance(v, list):
+                obj[k] = [fix_enum_value(s) for s in v]
+            else:
+                fix_enums(v)
+    elif isinstance(obj, list):
+        for item in obj:
+            fix_enums(item)
+
+with open('openapi.json', 'r') as f:
+    spec = json.load(f)
+fix_enums(spec)
+fix_properties(spec)
+with open('openapi.json', 'w') as f:
+    json.dump(spec, f, separators=(',', ':'))
+PYEOF
+
 autosdk generate openapi.json \
   --namespace HuggingFace \
   --clientClassName HuggingFaceClient \

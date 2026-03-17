@@ -1,0 +1,212 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    public partial class ScimClient
+    {
+        partial void PrepareEditOrganizationsByNameScimV2GroupsByGroupIdArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string name,
+            ref string groupId,
+            global::HuggingFace.Request15 request);
+        partial void PrepareEditOrganizationsByNameScimV2GroupsByGroupIdRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string name,
+            string groupId,
+            global::HuggingFace.Request15 request);
+        partial void ProcessEditOrganizationsByNameScimV2GroupsByGroupIdResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessEditOrganizationsByNameScimV2GroupsByGroupIdResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Update SCIM group<br/>
+        /// Update attributes of a SCIM group. Updates individual attributes using Operations format. Just provide the changes you want to make using add, remove (only `members` is supported), or replace operations.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="groupId"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response28> EditOrganizationsByNameScimV2GroupsByGroupIdAsync(
+            string name,
+            string groupId,
+
+            global::HuggingFace.Request15 request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
+            PrepareArguments(
+                client: HttpClient);
+            PrepareEditOrganizationsByNameScimV2GroupsByGroupIdArguments(
+                httpClient: HttpClient,
+                name: ref name,
+                groupId: ref groupId,
+                request: request);
+
+            var __pathBuilder = new global::HuggingFace.PathBuilder(
+                path: $"/api/organizations/{name}/scim/v2/Groups/{groupId}",
+                baseUri: HttpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
+            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+#if NET6_0_OR_GREATER
+            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+#endif
+
+            foreach (var __authorization in Authorizations)
+            {
+                if (__authorization.Type == "Http" ||
+                    __authorization.Type == "OAuth2")
+                {
+                    __httpRequest.Headers.Authorization = new global::System.Net.Http.Headers.AuthenticationHeaderValue(
+                        scheme: __authorization.Name,
+                        parameter: __authorization.Value);
+                }
+                else if (__authorization.Type == "ApiKey" &&
+                         __authorization.Location == "Header")
+                {
+                    __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
+                }
+            }
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                content: __httpRequestContentBody,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+            __httpRequest.Content = __httpRequestContent;
+
+            PrepareRequest(
+                client: HttpClient,
+                request: __httpRequest);
+            PrepareEditOrganizationsByNameScimV2GroupsByGroupIdRequest(
+                httpClient: HttpClient,
+                httpRequestMessage: __httpRequest,
+                name: name,
+                groupId: groupId,
+                request: request);
+
+            using var __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: HttpClient,
+                response: __response);
+            ProcessEditOrganizationsByNameScimV2GroupsByGroupIdResponse(
+                httpClient: HttpClient,
+                httpResponseMessage: __response);
+
+            if (ReadResponseAsString)
+            {
+                var __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                    cancellationToken
+#endif
+                ).ConfigureAwait(false);
+
+                ProcessResponseContent(
+                    client: HttpClient,
+                    response: __response,
+                    content: ref __content);
+                ProcessEditOrganizationsByNameScimV2GroupsByGroupIdResponseContent(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response,
+                    content: ref __content);
+
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    return
+                        global::HuggingFace.Response28.FromJson(__content, JsonSerializerContext) ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    throw new global::HuggingFace.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+            else
+            {
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                        cancellationToken
+#endif
+                    ).ConfigureAwait(false);
+
+                    return
+                        await global::HuggingFace.Response28.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    throw new global::HuggingFace.ApiException(
+                        message: __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+        }
+
+        /// <summary>
+        /// Update SCIM group<br/>
+        /// Update attributes of a SCIM group. Updates individual attributes using Operations format. Just provide the changes you want to make using add, remove (only `members` is supported), or replace operations.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="groupId"></param>
+        /// <param name="schemas"></param>
+        /// <param name="operations"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response28> EditOrganizationsByNameScimV2GroupsByGroupIdAsync(
+            string name,
+            string groupId,
+            global::System.Collections.Generic.IList<string> schemas,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.RequestOperationVariant1, global::HuggingFace.RequestOperationVariant2>> operations,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::HuggingFace.Request15
+            {
+                Schemas = schemas,
+                Operations = operations,
+            };
+
+            return await EditOrganizationsByNameScimV2GroupsByGroupIdAsync(
+                name: name,
+                groupId: groupId,
+                request: __request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

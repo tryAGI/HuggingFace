@@ -11,23 +11,4 @@ public partial class Tests
 
         return new HuggingFaceClient(apiKey);
     }
-    
-    [TestMethod]
-    public async Task GenerateError()
-    {
-        using var client = GetAuthenticatedClient();
-        
-        Func<Task> act = async () => await client.GenerateTextAsync(
-            "gpt2",
-            new GenerateTextRequest
-            {
-                Inputs = "Hello",
-                Parameters = new GenerateTextRequestParameters
-                {
-                    MaxNewTokens = 2501,
-                },
-            });
-        
-        await act.Should().ThrowAsync<InvalidOperationException>();
-    }
 }

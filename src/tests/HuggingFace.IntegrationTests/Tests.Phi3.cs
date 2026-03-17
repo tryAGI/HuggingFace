@@ -3,25 +3,17 @@ namespace HuggingFace.IntegrationTests;
 public partial class Tests
 {
     [TestMethod]
-    public async Task Phi3()
+    public async Task GetModelTags()
     {
         using var client = GetAuthenticatedClient();
-        
-        var response = await client.GenerateTextAsync(
-            "microsoft/Phi-3-mini-4k-instruct",
-            new GenerateTextRequest
-            {
-                Inputs = "Give random 5 words in response",
-                Parameters = new GenerateTextRequestParameters
-                {
-                    MaxNewTokens = 250,
-                },
-            });
+
+        var response = await client.Models.GetModelsTagsByTypeAsync();
+        response.Should().NotBeNull();
         response.Should().NotBeEmpty();
 
-        foreach (var value in response)
+        foreach (var (tagType, tags) in response)
         {
-            Console.WriteLine(value.GeneratedText);
+            Console.WriteLine($"{tagType}: {tags.Count} tags");
         }
     }
 }

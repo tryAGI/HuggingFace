@@ -3,26 +3,13 @@ namespace HuggingFace.IntegrationTests;
 public partial class Tests
 {
     [TestMethod]
-    public async Task Gpt2()
+    public async Task WhoAmI()
     {
         using var client = GetAuthenticatedClient();
-        
-        var response = await client.GenerateTextAsync(
-            "gpt2",
-            new GenerateTextRequest
-            {
-                Inputs = "Give random 5 words in response",
-                Parameters = new GenerateTextRequestParameters
-                {
-                    MaxNewTokens = 250,
-                },
-                Options = new GenerateTextRequestOptions(),
-            });
-        response.Should().NotBeEmpty();
 
-        foreach (var value in response)
-        {
-            Console.WriteLine(value.GeneratedText);
-        }
+        var response = await client.Auth.GetWhoamiV2Async();
+        response.Should().NotBeNull();
+
+        Console.WriteLine($"User: {response}");
     }
 }

@@ -1,0 +1,85 @@
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ResponseItem19
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user")]
+        public global::HuggingFace.ResponseItemUser2? User { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("grantedBy")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseItemGrantedByVariant1, global::HuggingFace.ResponseItemGrantedByVariant2>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemGrantedByVariant1, global::HuggingFace.ResponseItemGrantedByVariant2>? GrantedBy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemStatusJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.ResponseItemStatus Status { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fields")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Fields { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime Timestamp { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponseItem19" /> class.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="grantedBy"></param>
+        /// <param name="status"></param>
+        /// <param name="fields"></param>
+        /// <param name="timestamp"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ResponseItem19(
+            global::HuggingFace.ResponseItemStatus status,
+            global::System.DateTime timestamp,
+            global::HuggingFace.ResponseItemUser2? user,
+            global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemGrantedByVariant1, global::HuggingFace.ResponseItemGrantedByVariant2>? grantedBy,
+            global::System.Collections.Generic.Dictionary<string, string>? fields)
+        {
+            this.Status = status;
+            this.Timestamp = timestamp;
+            this.User = user;
+            this.GrantedBy = grantedBy;
+            this.Fields = fields;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResponseItem19" /> class.
+        /// </summary>
+        public ResponseItem19()
+        {
+        }
+    }
+}
