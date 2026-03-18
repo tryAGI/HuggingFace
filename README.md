@@ -289,6 +289,51 @@ catch (ApiException ex)
 
 }
 ```
+
+### Search Datasets
+Search for datasets on the HuggingFace Hub using quicksearch and list results.
+
+```csharp
+using var client = new HuggingFaceClient(apiKey);
+
+var response = await client.RepoSearch.CreateQuicksearchAsync(
+    request: new Request45
+    {
+        Q = "sentiment analysis",
+        Limit = 5,
+        Exclude = [],
+    });
+
+Console.WriteLine($"Models: {response.ModelsCount}, Datasets: {response.DatasetsCount}, Spaces: {response.SpacesCount}");
+
+foreach (var dataset in response.Datasets)
+{
+    Console.WriteLine($"  Dataset: {dataset.Id}");
+}
+
+foreach (var space in response.Spaces)
+{
+    Console.WriteLine($"  Space: {space.Id}");
+}
+```
+
+### Trending by Type
+List trending items filtered by type (model, dataset, or space).
+
+```csharp
+using var client = new HuggingFaceClient(apiKey);
+
+var spaces = await client.Models.GetTrendingAsync(
+    type: Type5.Space,
+    limit: 3);
+
+Console.WriteLine("Trending Spaces:");
+foreach (var item in spaces.RecentlyTrending)
+{
+    var id = item.Value1?.RepoData?.Id ?? item.Value2?.RepoData?.Id ?? item.Value3?.RepoData?.Id;
+    Console.WriteLine($"  {id}");
+}
+```
 <!-- EXAMPLES:END -->
 
 ## Support

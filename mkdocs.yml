@@ -17,6 +17,8 @@ nav:
   - List Model Tags: examples/list-model-tags.md
   - Search Models: examples/search-models.md
   - Error Handling: examples/error-handling.md
+  - Search Datasets: examples/search-datasets.md
+  - Trending by Type: examples/trending-by-type.md
 # EXAMPLES:END
 
 #  - Quick Start: QuickStart.md
