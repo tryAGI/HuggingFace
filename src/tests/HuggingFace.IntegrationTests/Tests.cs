@@ -29,4 +29,10 @@ public partial class Tests
 
         return new HuggingFaceEmbeddingClient(apiKey);
     }
+
+    private static string GetApiKey()
+    {
+        return Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+    }
 }

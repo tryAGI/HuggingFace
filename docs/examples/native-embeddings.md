@@ -5,8 +5,7 @@ Generate dense embeddings using the TEI-native embed endpoint with normalization
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 

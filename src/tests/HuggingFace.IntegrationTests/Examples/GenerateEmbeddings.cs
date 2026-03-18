@@ -15,8 +15,7 @@ public partial class Tests
     [TestMethod]
     public async Task Example_GenerateEmbeddings()
     {
-        var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+        var apiKey = GetApiKey();
 
         using var client = new HuggingFaceEmbeddingClient(apiKey);
         IEmbeddingGenerator<string, Embedding<float>> generator = client;

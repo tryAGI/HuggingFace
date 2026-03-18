@@ -12,14 +12,37 @@
 - All modern .NET features — nullability, trimming, NativeAOT, source-generated JSON
 - Targets net10.0
 
+## Getting Started
+
+### Installation
+```bash
+dotnet add package HuggingFace
+```
+
+### Authentication
+All clients require a HuggingFace API key. Get one at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens).
+
+```csharp
+using HuggingFace;
+
+// Chat and completions (TGI)
+using var inferenceClient = new HuggingFaceInferenceClient(apiKey);
+
+// Embeddings, reranking, similarity (TEI)
+using var embeddingClient = new HuggingFaceEmbeddingClient(apiKey);
+
+// Hub API (model info, datasets, etc.)
+using var hubClient = new HuggingFaceClient(apiKey);
+```
+
+## Examples
+
 <!-- EXAMPLES:START -->
 ### Chat Completion
 Send a chat message to a HuggingFace-hosted model using the Microsoft.Extensions.AI IChatClient interface.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
-
+var apiKey = GetApiKey();
 using var client = new HuggingFaceInferenceClient(apiKey);
 IChatClient chatClient = client;
 
@@ -38,13 +61,11 @@ Console.WriteLine(response.Text);
 Stream chat completion tokens as they are generated using the IChatClient interface.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceInferenceClient(apiKey);
 IChatClient chatClient = client;
 
-var chunks = new List<string>();
 await foreach (var update in chatClient.GetStreamingResponseAsync(
     [new ChatMessage(ChatRole.User, "Say hello in one word.")],
     new ChatOptions
@@ -54,10 +75,6 @@ await foreach (var update in chatClient.GetStreamingResponseAsync(
     }))
 {
     Console.Write(update.Text);
-    if (update.Text is { } text)
-    {
-        chunks.Add(text);
-    }
 }
 ```
 
@@ -65,8 +82,7 @@ await foreach (var update in chatClient.GetStreamingResponseAsync(
 Generate text embeddings using the Microsoft.Extensions.AI IEmbeddingGenerator interface with HuggingFace TEI.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 IEmbeddingGenerator<string, Embedding<float>> generator = client;
@@ -86,8 +102,7 @@ Console.WriteLine($"Embeddings generated: {result.Count}");
 Rerank a list of texts by relevance to a query using the TEI reranking endpoint.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
@@ -111,8 +126,7 @@ foreach (var rank in results.OrderByDescending(r => r.Score))
 Compute cosine similarity between a source sentence and a list of candidate sentences.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
@@ -138,8 +152,7 @@ for (var i = 0; i < scores.Count; i++)
 Tokenize text into tokens using the TEI tokenization endpoint.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
@@ -157,8 +170,7 @@ foreach (var token in tokens[0])
 Generate sparse embeddings for text using the TEI sparse embedding endpoint.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
@@ -175,8 +187,7 @@ foreach (var sv in sparseEmbeddings[0].Take(5))
 Generate dense embeddings using the TEI-native embed endpoint with normalization control.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
@@ -191,8 +202,7 @@ Console.WriteLine($"Embedding dimension: {embeddings[0].Count}");
 Tokenize text and decode it back using the TEI tokenization and decode endpoints.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 

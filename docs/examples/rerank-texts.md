@@ -5,8 +5,7 @@ Rerank a list of texts by relevance to a query using the TEI reranking endpoint.
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
-    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+var apiKey = GetApiKey();
 
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
