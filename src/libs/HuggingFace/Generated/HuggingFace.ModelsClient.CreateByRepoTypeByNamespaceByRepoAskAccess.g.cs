@@ -122,8 +122,9 @@ namespace HuggingFace
                     }
                     else
                     {
-                        var __contentStream_303 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
-                        __value_303 = await global::System.Text.Json.JsonSerializer.DeserializeAsync(__contentStream_303, typeof(string), JsonSerializerContext).ConfigureAwait(false) as string;
+                        __content_303 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+                        __value_303 = global::System.Text.Json.JsonSerializer.Deserialize(__content_303, typeof(string), JsonSerializerContext) as string;
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -193,11 +194,25 @@ namespace HuggingFace
                 }
                 catch (global::System.Exception __ex)
                 {
+                    string? __content = null;
+                    try
+                    {
+                        __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                            cancellationToken
+#endif
+                        ).ConfigureAwait(false);
+                    }
+                    catch (global::System.Exception)
+                    {
+                    }
+
                     throw new global::HuggingFace.ApiException(
-                        message: __response.ReasonPhrase ?? string.Empty,
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
                         innerException: __ex,
                         statusCode: __response.StatusCode)
                     {
+                        ResponseBody = __content,
                         ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
                             __response.Headers,
                             h => h.Key,
