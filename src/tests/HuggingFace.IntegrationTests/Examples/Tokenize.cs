@@ -13,7 +13,10 @@ public partial class Tests
     [TestMethod]
     public async Task Example_Tokenize()
     {
-        using var client = GetAuthenticatedEmbeddingClient();
+        var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+        using var client = new HuggingFaceEmbeddingClient(apiKey);
 
         var tokens = await client.TokenizeAsync(
             inputs: new TokenizeInput("Hello world"),
@@ -23,5 +26,7 @@ public partial class Tests
         {
             Console.WriteLine($"id={token.Id} text=\"{token.Text}\" special={token.Special}");
         }
+
+        tokens[0].Count.Should().BeGreaterThan(0);
     }
 }

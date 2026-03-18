@@ -2,7 +2,16 @@ site_name: HuggingFace .NET Documentation
 nav:
 - Overview: index.md
 # EXAMPLES:START
-
+- Examples:
+  - Chat Completion: examples/chat-completion.md
+  - Streaming Chat Completion: examples/streaming-chat-completion.md
+  - Generate Embeddings: examples/generate-embeddings.md
+  - Rerank Texts: examples/rerank-texts.md
+  - Similarity Scoring: examples/similarity-scoring.md
+  - Tokenize Text: examples/tokenize-text.md
+  - Sparse Embeddings: examples/sparse-embeddings.md
+  - Native Embeddings: examples/native-embeddings.md
+  - Decode Tokens: examples/decode-tokens.md
 # EXAMPLES:END
 
 #  - Quick Start: QuickStart.md

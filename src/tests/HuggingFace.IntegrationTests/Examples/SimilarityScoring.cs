@@ -13,7 +13,10 @@ public partial class Tests
     [TestMethod]
     public async Task Example_SimilarityScoring()
     {
-        using var client = GetAuthenticatedEmbeddingClient();
+        var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+        using var client = new HuggingFaceEmbeddingClient(apiKey);
 
         var scores = await client.SimilarityAsync(
             inputs: new SimilarityInput
@@ -31,5 +34,7 @@ public partial class Tests
         {
             Console.WriteLine($"[{i}] similarity={scores[i]:F4}");
         }
+
+        scores.Should().HaveCount(3);
     }
 }

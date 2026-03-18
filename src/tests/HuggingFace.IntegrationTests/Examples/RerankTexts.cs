@@ -13,7 +13,10 @@ public partial class Tests
     [TestMethod]
     public async Task Example_RerankTexts()
     {
-        using var client = GetAuthenticatedEmbeddingClient();
+        var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+        using var client = new HuggingFaceEmbeddingClient(apiKey);
 
         var results = await client.RerankAsync(
             query: "What is Deep Learning?",
@@ -29,5 +32,7 @@ public partial class Tests
         {
             Console.WriteLine($"[{rank.Index}] score={rank.Score:F4} text={rank.Text}");
         }
+
+        results.Should().HaveCount(3);
     }
 }

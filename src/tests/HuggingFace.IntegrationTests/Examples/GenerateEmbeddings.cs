@@ -15,7 +15,10 @@ public partial class Tests
     [TestMethod]
     public async Task Example_GenerateEmbeddings()
     {
-        using var client = GetAuthenticatedEmbeddingClient();
+        var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+        using var client = new HuggingFaceEmbeddingClient(apiKey);
         IEmbeddingGenerator<string, Embedding<float>> generator = client;
 
         var result = await generator.GenerateAsync(
@@ -27,5 +30,7 @@ public partial class Tests
 
         Console.WriteLine($"Embedding dimension: {result[0].Vector.Length}");
         Console.WriteLine($"Embeddings generated: {result.Count}");
+
+        result.Should().HaveCount(2);
     }
 }

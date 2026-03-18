@@ -5,30 +5,211 @@
 [![License: MIT](https://img.shields.io/github/license/tryAGI/HuggingFace)](https://github.com/tryAGI/HuggingFace/blob/main/LICENSE.txt)
 [![Discord](https://img.shields.io/discord/1115206893015662663?label=Discord&logo=discord&logoColor=white&color=d82679)](https://discord.gg/Ca2xhfBf3v)
 
-## Features 🔥
-- ~~Fully generated C# SDK based on [official HuggingFace OpenAPI specification](https://huggingface.github.io/text-generation-inference/openapi.json) using [OpenApiGenerator](https://github.com/HavenDV/OpenApiGenerator)~~
-- ~~Same day update to support new features~~
-- ~~Updated and supported automatically if there are no breaking changes~~
-- All modern .NET features - nullability, trimming, NativeAOT, etc.
-- Support .Net Framework/.Net Standard 2.0
-- Now supports only Serverless Inference API
+## Features
+- Fully generated C# SDK based on [HuggingFace Hub](https://huggingface.co/docs/api-inference/), [TGI](https://huggingface.github.io/text-generation-inference/) and [TEI](https://huggingface.github.io/text-embeddings-inference/) OpenAPI specs using [AutoSDK](https://github.com/tryAGI/AutoSDK)
+- Three typed clients: `HuggingFaceClient` (Hub API), `HuggingFaceInferenceClient` (TGI chat/completions), `HuggingFaceEmbeddingClient` (TEI embeddings/reranking)
+- Microsoft.Extensions.AI support: `IChatClient` and `IEmbeddingGenerator<string, Embedding<float>>`
+- All modern .NET features — nullability, trimming, NativeAOT, source-generated JSON
+- Targets net10.0
 
 <!-- EXAMPLES:START -->
-### Usage
-```csharp
-using HuggingFace;
+### Chat Completion
+Send a chat message to a HuggingFace-hosted model using the Microsoft.Extensions.AI IChatClient interface.
 
-using var client = new HuggingFaceClient(apiKey, client);
-var response = await client.GenerateTextAsync(
-    "gpt2",
-    new GenerateTextRequest
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceInferenceClient(apiKey);
+IChatClient chatClient = client;
+
+var response = await chatClient.GetResponseAsync(
+    [new ChatMessage(ChatRole.User, "Say hello in one word.")],
+    new ChatOptions
     {
-        Inputs = "Hello",
-        Parameters = new GenerateTextRequestParameters
-        {
-            MaxNewTokens = 250,
-        },
+        ModelId = "Qwen/Qwen2.5-Coder-32B-Instruct",
+        MaxOutputTokens = 32,
     });
+
+Console.WriteLine(response.Text);
+```
+
+### Streaming Chat Completion
+Stream chat completion tokens as they are generated using the IChatClient interface.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceInferenceClient(apiKey);
+IChatClient chatClient = client;
+
+var chunks = new List<string>();
+await foreach (var update in chatClient.GetStreamingResponseAsync(
+    [new ChatMessage(ChatRole.User, "Say hello in one word.")],
+    new ChatOptions
+    {
+        ModelId = "Qwen/Qwen2.5-Coder-32B-Instruct",
+        MaxOutputTokens = 32,
+    }))
+{
+    Console.Write(update.Text);
+    if (update.Text is { } text)
+    {
+        chunks.Add(text);
+    }
+}
+```
+
+### Generate Embeddings
+Generate text embeddings using the Microsoft.Extensions.AI IEmbeddingGenerator interface with HuggingFace TEI.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceEmbeddingClient(apiKey);
+IEmbeddingGenerator<string, Embedding<float>> generator = client;
+
+var result = await generator.GenerateAsync(
+    ["Hello world", "How are you?"],
+    new EmbeddingGenerationOptions
+    {
+        ModelId = "sentence-transformers/all-MiniLM-L6-v2",
+    });
+
+Console.WriteLine($"Embedding dimension: {result[0].Vector.Length}");
+Console.WriteLine($"Embeddings generated: {result.Count}");
+```
+
+### Rerank Texts
+Rerank a list of texts by relevance to a query using the TEI reranking endpoint.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceEmbeddingClient(apiKey);
+
+var results = await client.RerankAsync(
+    query: "What is Deep Learning?",
+    texts:
+    [
+        "Deep Learning is a subset of Machine Learning.",
+        "The weather is sunny today.",
+        "Neural networks are inspired by the human brain.",
+    ],
+    returnText: true);
+
+foreach (var rank in results.OrderByDescending(r => r.Score))
+{
+    Console.WriteLine($"[{rank.Index}] score={rank.Score:F4} text={rank.Text}");
+}
+```
+
+### Similarity Scoring
+Compute cosine similarity between a source sentence and a list of candidate sentences.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceEmbeddingClient(apiKey);
+
+var scores = await client.SimilarityAsync(
+    inputs: new SimilarityInput
+    {
+        SourceSentence = "What is Deep Learning?",
+        Sentences =
+        [
+            "Deep Learning is a subset of Machine Learning.",
+            "The weather is sunny today.",
+            "Neural networks are inspired by the human brain.",
+        ],
+    });
+
+for (var i = 0; i < scores.Count; i++)
+{
+    Console.WriteLine($"[{i}] similarity={scores[i]:F4}");
+}
+```
+
+### Tokenize Text
+Tokenize text into tokens using the TEI tokenization endpoint.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceEmbeddingClient(apiKey);
+
+var tokens = await client.TokenizeAsync(
+    inputs: new TokenizeInput("Hello world"),
+    addSpecialTokens: true);
+
+foreach (var token in tokens[0])
+{
+    Console.WriteLine($"id={token.Id} text=\"{token.Text}\" special={token.Special}");
+}
+```
+
+### Sparse Embeddings
+Generate sparse embeddings for text using the TEI sparse embedding endpoint.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceEmbeddingClient(apiKey);
+
+var sparseEmbeddings = await client.EmbedSparseAsync(
+    inputs: new Input("Hello world"));
+
+foreach (var sv in sparseEmbeddings[0].Take(5))
+{
+    Console.WriteLine($"index={sv.Index} value={sv.Value:F4}");
+}
+```
+
+### Native Embeddings
+Generate dense embeddings using the TEI-native embed endpoint with normalization control.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceEmbeddingClient(apiKey);
+
+var embeddings = await client.EmbedAsync(
+    inputs: new Input("Hello world"),
+    normalize: true);
+
+Console.WriteLine($"Embedding dimension: {embeddings[0].Count}");
+```
+
+### Decode Tokens
+Tokenize text and decode it back using the TEI tokenization and decode endpoints.
+
+```csharp
+var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+    throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+using var client = new HuggingFaceEmbeddingClient(apiKey);
+
+// Tokenize text into token IDs.
+var tokens = await client.TokenizeAsync(
+    inputs: new TokenizeInput("Hello world"),
+    addSpecialTokens: false);
+
+var tokenIds = tokens[0].Select(t => t.Id).ToList();
+Console.WriteLine($"Token IDs: [{string.Join(", ", tokenIds)}]");
+
+// Decode token IDs back to text.
+var decoded = await client.DecodeAsync(
+    ids: new InputIds(value1: tokenIds, value2: null),
+    skipSpecialTokens: true);
+
+Console.WriteLine($"Decoded: {decoded[0]}");
 ```
 <!-- EXAMPLES:END -->
 

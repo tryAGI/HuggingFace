@@ -15,9 +15,13 @@ public partial class Tests
     [TestMethod]
     public async Task Example_StreamingChatCompletion()
     {
-        using var client = GetAuthenticatedInferenceClient();
+        var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+        using var client = new HuggingFaceInferenceClient(apiKey);
         IChatClient chatClient = client;
 
+        var chunks = new List<string>();
         await foreach (var update in chatClient.GetStreamingResponseAsync(
             [new ChatMessage(ChatRole.User, "Say hello in one word.")],
             new ChatOptions
@@ -27,6 +31,12 @@ public partial class Tests
             }))
         {
             Console.Write(update.Text);
+            if (update.Text is { } text)
+            {
+                chunks.Add(text);
+            }
         }
+
+        chunks.Should().NotBeEmpty();
     }
 }

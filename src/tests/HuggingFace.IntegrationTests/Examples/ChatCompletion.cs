@@ -15,7 +15,10 @@ public partial class Tests
     [TestMethod]
     public async Task Example_ChatCompletion()
     {
-        using var client = GetAuthenticatedInferenceClient();
+        var apiKey = Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
+
+        using var client = new HuggingFaceInferenceClient(apiKey);
         IChatClient chatClient = client;
 
         var response = await chatClient.GetResponseAsync(
@@ -27,5 +30,7 @@ public partial class Tests
             });
 
         Console.WriteLine(response.Text);
+
+        response.Text.Should().NotBeNullOrWhiteSpace();
     }
 }

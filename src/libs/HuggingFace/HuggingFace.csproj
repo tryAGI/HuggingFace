@@ -11,7 +11,7 @@
 
   <PropertyGroup Label="Nuget">
     <Description>Generated C# SDK based on HuggingFace OpenAPI specification.</Description>
-    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;huggingface;generated;nswag</PackageTags>
+    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;huggingface;generated;nswag;ichatclient;iembeddinggenerator</PackageTags>
   </PropertyGroup>
   
   <ItemGroup>
