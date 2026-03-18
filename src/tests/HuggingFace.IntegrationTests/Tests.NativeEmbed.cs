@@ -2,13 +2,6 @@ namespace HuggingFace.IntegrationTests;
 
 public partial class Tests
 {
-    //// ## Native Embeddings (TEI)
-    ////
-    //// The TEI-native `/embed` endpoint provides direct access to the embedding model,
-    //// with options for normalization and dimensionality control that go beyond the
-    //// OpenAI-compatible `/v1/embeddings` endpoint.
-
-    //// ### Single text embedding
     [TestMethod]
     public async Task Embed_NativeAsync()
     {
@@ -24,7 +17,6 @@ public partial class Tests
         Console.WriteLine($"Embedding dimension: {embeddings[0].Count}");
     }
 
-    //// ### Batch embedding
     [TestMethod]
     public async Task Embed_NativeBatchAsync()
     {
@@ -46,10 +38,6 @@ public partial class Tests
         Console.WriteLine($"Embedding dimension: {embeddings[0].Count}");
     }
 
-    //// ### Per-token embeddings (no pooling)
-    ////
-    //// `EmbedAllAsync` returns embeddings for each token individually,
-    //// useful for token-level analysis tasks.
     [TestMethod]
     public async Task EmbedAll_NativeAsync()
     {

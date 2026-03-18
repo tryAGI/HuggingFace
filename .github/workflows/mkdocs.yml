@@ -9,6 +9,8 @@ on:
       - 'examples/**'
       - 'autosdk.docs.json'
       - '.github/workflows/mkdocs.yml'
+      - 'src/tests/HuggingFace.IntegrationTests/**'
+      - 'README.md'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:

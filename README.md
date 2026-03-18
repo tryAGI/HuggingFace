@@ -13,6 +13,7 @@
 - Support .Net Framework/.Net Standard 2.0
 - Now supports only Serverless Inference API
 
+<!-- EXAMPLES:START -->
 ### Usage
 ```csharp
 using HuggingFace;
@@ -29,6 +30,7 @@ var response = await client.GenerateTextAsync(
         },
     });
 ```
+<!-- EXAMPLES:END -->
 
 ## Support
 

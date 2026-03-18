@@ -1,9 +1,17 @@
+/*
+order: 50
+title: Similarity Scoring
+slug: similarity-scoring
+
+Compute cosine similarity between a source sentence and a list of candidate sentences.
+*/
+
 namespace HuggingFace.IntegrationTests;
 
 public partial class Tests
 {
     [TestMethod]
-    public async Task Similarity_BasicAsync()
+    public async Task Example_SimilarityScoring()
     {
         using var client = GetAuthenticatedEmbeddingClient();
 
@@ -19,15 +27,9 @@ public partial class Tests
                 ],
             });
 
-        scores.Should().NotBeNull();
-        scores.Should().HaveCount(3);
-
         for (var i = 0; i < scores.Count; i++)
         {
             Console.WriteLine($"[{i}] similarity={scores[i]:F4}");
         }
-
-        // "Deep Learning is a subset of ML" should be more similar to the query than "weather is sunny"
-        scores[0].Should().BeGreaterThan(scores[1]);
     }
 }

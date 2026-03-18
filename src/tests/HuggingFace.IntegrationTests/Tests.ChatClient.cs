@@ -4,15 +4,6 @@ namespace HuggingFace.IntegrationTests;
 
 public partial class Tests
 {
-    //// ## Chat Client (IChatClient)
-    ////
-    //// The `HuggingFaceInferenceClient` implements the `IChatClient` interface
-    //// from Microsoft.Extensions.AI, enabling a standardized chat experience
-    //// with HuggingFace-hosted models via the TGI (Text Generation Inference) API.
-
-    //// ### Non-streaming chat completion
-    ////
-    //// Use `GetResponseAsync` for a single request/response exchange:
     [TestMethod]
     public async Task ChatClient_GetResponseAsync()
     {
@@ -35,9 +26,6 @@ public partial class Tests
         Console.WriteLine($"Response: {text}");
     }
 
-    //// ### Streaming chat completion
-    ////
-    //// Use `GetStreamingResponseAsync` to receive tokens as they are generated:
     [TestMethod]
     public async Task ChatClient_GetStreamingResponseAsync()
     {

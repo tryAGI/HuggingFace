@@ -14,7 +14,7 @@ public partial class HuggingFaceEmbeddingClient : IEmbeddingGenerator<string, Em
         return
             serviceKey is not null ? null :
             serviceType == typeof(EmbeddingGeneratorMetadata) ? (_embeddingMetadata ??= new(nameof(HuggingFaceEmbeddingClient), BaseUri)) :
-            serviceType?.IsInstanceOfType(this) is true ? this :
+            serviceType.IsInstanceOfType(this) ? this :
             null;
     }
 

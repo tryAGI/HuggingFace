@@ -16,7 +16,7 @@
   
   <ItemGroup>
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.5" />
-    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" Version="9.6.0" />
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" Version="10.4.0" />
 </ItemGroup>
 
 </Project>

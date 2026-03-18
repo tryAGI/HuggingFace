@@ -2,12 +2,6 @@ namespace HuggingFace.IntegrationTests;
 
 public partial class Tests
 {
-    //// ## Reranking
-    ////
-    //// The TEI rerank endpoint scores and ranks a list of texts against a query,
-    //// returning relevance scores for each text.
-
-    //// ### Basic reranking with returned text
     [TestMethod]
     public async Task Rerank_BasicAsync()
     {
@@ -36,7 +30,6 @@ public partial class Tests
         (best.Text!.Contains("Deep Learning") || best.Text.Contains("Neural")).Should().BeTrue();
     }
 
-    //// ### Reranking with raw (unnormalized) scores
     [TestMethod]
     public async Task Rerank_WithRawScoresAsync()
     {

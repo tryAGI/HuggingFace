@@ -11,12 +11,12 @@ public partial class HuggingFaceInferenceClient : IChatClient
     private ChatClientMetadata? _metadata;
 
     /// <inheritdoc />
-    object? IChatClient.GetService(Type? serviceType, object? serviceKey)
+    object? IChatClient.GetService(Type serviceType, object? serviceKey)
     {
         return
             serviceKey is not null ? null :
             serviceType == typeof(ChatClientMetadata) ? (_metadata ??= new(nameof(HuggingFaceInferenceClient), BaseUri)) :
-            serviceType?.IsInstanceOfType(this) is true ? this :
+            serviceType.IsInstanceOfType(this) ? this :
             null;
     }
 
