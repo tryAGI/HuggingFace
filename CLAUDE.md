@@ -48,7 +48,6 @@ These files are **not** auto-generated and can be edited manually:
 | `src/tests/HuggingFace.IntegrationTests/` | Integration tests against real HuggingFace API |
 | `src/helpers/FixOpenApiSpec/` | OpenAPI spec fixer tool |
 | `src/helpers/GenerateDocs/` | Documentation generator from integration tests |
-| `src/helpers/TrimmingHelper/` | NativeAOT/trimming compatibility validator |
 
 ### Build Configuration
 
