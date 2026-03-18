@@ -2,6 +2,12 @@ namespace HuggingFace.IntegrationTests;
 
 public partial class Tests
 {
+    //// ## Similarity
+    ////
+    //// The TEI similarity endpoint computes cosine similarity scores between
+    //// a source sentence and a list of candidate sentences.
+
+    //// ### Compare sentences against a source
     [TestMethod]
     public async Task Similarity_BasicAsync()
     {

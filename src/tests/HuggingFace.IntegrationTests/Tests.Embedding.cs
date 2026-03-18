@@ -4,6 +4,13 @@ namespace HuggingFace.IntegrationTests;
 
 public partial class Tests
 {
+    //// ## Embedding Generator (IEmbeddingGenerator)
+    ////
+    //// The `HuggingFaceEmbeddingClient` implements `IEmbeddingGenerator<string, Embedding<float>>`
+    //// from Microsoft.Extensions.AI, using the OpenAI-compatible `/v1/embeddings` endpoint
+    //// powered by HuggingFace TEI (Text Embeddings Inference).
+
+    //// ### Generate a single embedding
     [TestMethod]
     public async Task EmbeddingGenerator_GenerateAsync()
     {
@@ -23,6 +30,7 @@ public partial class Tests
         Console.WriteLine($"Embedding dimension: {result[0].Vector.Length}");
     }
 
+    //// ### Generate embeddings in batch
     [TestMethod]
     public async Task EmbeddingGenerator_GenerateBatchAsync()
     {
