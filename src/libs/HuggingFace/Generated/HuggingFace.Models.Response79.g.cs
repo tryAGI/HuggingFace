@@ -17,6 +17,13 @@ namespace HuggingFace
         public bool? Private { get; set; }
 
         /// <summary>
+        /// Repository visibility. `protected` is only supported for Spaces.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseVisibilityJsonConverter))]
+        public global::HuggingFace.ResponseVisibility? Visibility { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("discussionsDisabled")]
@@ -59,6 +66,9 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="Response79" /> class.
         /// </summary>
         /// <param name="private"></param>
+        /// <param name="visibility">
+        /// Repository visibility. `protected` is only supported for Spaces.
+        /// </param>
         /// <param name="discussionsDisabled"></param>
         /// <param name="discussionsSorting"></param>
         /// <param name="gated"></param>
@@ -69,6 +79,7 @@ namespace HuggingFace
 #endif
         public Response79(
             bool? @private,
+            global::HuggingFace.ResponseVisibility? visibility,
             bool? discussionsDisabled,
             global::HuggingFace.ResponseDiscussionsSorting? discussionsSorting,
             global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatedEnum2?>? gated,
@@ -76,6 +87,7 @@ namespace HuggingFace
             global::HuggingFace.ResponseGatedNotificationsMode? gatedNotificationsMode)
         {
             this.Private = @private;
+            this.Visibility = visibility;
             this.DiscussionsDisabled = discussionsDisabled;
             this.DiscussionsSorting = discussionsSorting;
             this.Gated = gated;

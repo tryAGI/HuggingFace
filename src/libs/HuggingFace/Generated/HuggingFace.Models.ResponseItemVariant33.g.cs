@@ -181,6 +181,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemVariant3Visibility3JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.ResponseItemVariant3Visibility3 Visibility { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <default>"space"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "space";
@@ -219,6 +227,7 @@ namespace HuggingFace
         /// <param name="shortDescription"></param>
         /// <param name="semanticRelevancyScore"></param>
         /// <param name="featured"></param>
+        /// <param name="visibility"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -239,6 +248,7 @@ namespace HuggingFace
             global::HuggingFace.ResponseItemVariant3Runtime3 runtime,
             global::System.Collections.Generic.IList<string> tags,
             bool featured,
+            global::HuggingFace.ResponseItemVariant3Visibility3 visibility,
             global::HuggingFace.ResponseItemVariant3Sdk3? sdk,
             global::HuggingFace.ResponseItemVariant3OriginRepo3? originRepo,
             string? aiShortDescription,
@@ -266,6 +276,7 @@ namespace HuggingFace
             this.Runtime = runtime ?? throw new global::System.ArgumentNullException(nameof(runtime));
             this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
             this.Featured = featured;
+            this.Visibility = visibility;
             this.RepoType = repoType;
             this.Sdk = sdk;
             this.OriginRepo = originRepo;

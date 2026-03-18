@@ -179,6 +179,14 @@ namespace HuggingFace
         public required bool Featured { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseRecentlyTrendingItemVariant3RepoDataVisibilityJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.ResponseRecentlyTrendingItemVariant3RepoDataVisibility Visibility { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -212,6 +220,7 @@ namespace HuggingFace
         /// <param name="shortDescription"></param>
         /// <param name="semanticRelevancyScore"></param>
         /// <param name="featured"></param>
+        /// <param name="visibility"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -231,6 +240,7 @@ namespace HuggingFace
             global::HuggingFace.ResponseRecentlyTrendingItemVariant3RepoDataRuntime runtime,
             global::System.Collections.Generic.IList<string> tags,
             bool featured,
+            global::HuggingFace.ResponseRecentlyTrendingItemVariant3RepoDataVisibility visibility,
             global::HuggingFace.ResponseRecentlyTrendingItemVariant3RepoDataSdk? sdk,
             global::HuggingFace.ResponseRecentlyTrendingItemVariant3RepoDataOriginRepo? originRepo,
             string? aiShortDescription,
@@ -257,6 +267,7 @@ namespace HuggingFace
             this.Runtime = runtime ?? throw new global::System.ArgumentNullException(nameof(runtime));
             this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
             this.Featured = featured;
+            this.Visibility = visibility;
             this.RepoType = repoType;
             this.Sdk = sdk;
             this.OriginRepo = originRepo;

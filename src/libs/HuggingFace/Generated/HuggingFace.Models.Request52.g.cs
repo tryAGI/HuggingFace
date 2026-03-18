@@ -41,10 +41,17 @@ namespace HuggingFace
         public string? LicenseLink { get; set; }
 
         /// <summary>
-        /// Repository visibility. Defaults to public
+        /// Repository visibility. Defaults to public. Cannot be specified along with visibility.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
         public bool? Private { get; set; }
+
+        /// <summary>
+        /// Repository visibility. `protected` is only supported for Spaces. Cannot be specified along with private.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestVisibility3JsonConverter))]
+        public global::HuggingFace.RequestVisibility3? Visibility { get; set; }
 
         /// <summary>
         /// 
@@ -75,7 +82,10 @@ namespace HuggingFace
         /// <param name="licenseName"></param>
         /// <param name="licenseLink"></param>
         /// <param name="private">
-        /// Repository visibility. Defaults to public
+        /// Repository visibility. Defaults to public. Cannot be specified along with visibility.
+        /// </param>
+        /// <param name="visibility">
+        /// Repository visibility. `protected` is only supported for Spaces. Cannot be specified along with private.
         /// </param>
         /// <param name="resourceGroupId"></param>
         /// <param name="files"></param>
@@ -89,6 +99,7 @@ namespace HuggingFace
             string? licenseName,
             string? licenseLink,
             bool? @private,
+            global::HuggingFace.RequestVisibility3? visibility,
             string? resourceGroupId,
             global::System.Collections.Generic.IList<global::HuggingFace.RequestFile2>? files)
         {
@@ -98,6 +109,7 @@ namespace HuggingFace
             this.LicenseName = licenseName;
             this.LicenseLink = licenseLink;
             this.Private = @private;
+            this.Visibility = visibility;
             this.ResourceGroupId = resourceGroupId;
             this.Files = files;
         }

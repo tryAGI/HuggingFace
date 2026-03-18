@@ -26,6 +26,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestVisibility2JsonConverter))]
+        public global::HuggingFace.RequestVisibility2? Visibility { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
         public string? ResourceGroupId { get; set; }
 
@@ -66,6 +73,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="repository"></param>
         /// <param name="private"></param>
+        /// <param name="visibility"></param>
         /// <param name="resourceGroupId"></param>
         /// <param name="hardware"></param>
         /// <param name="sleepTimeSeconds"></param>
@@ -81,6 +89,7 @@ namespace HuggingFace
         public Request50(
             string repository,
             bool? @private,
+            global::HuggingFace.RequestVisibility2? visibility,
             string? resourceGroupId,
             global::HuggingFace.RequestHardware? hardware,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds,
@@ -89,6 +98,7 @@ namespace HuggingFace
         {
             this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
             this.Private = @private;
+            this.Visibility = visibility;
             this.ResourceGroupId = resourceGroupId;
             this.Hardware = hardware;
             this.SleepTimeSeconds = sleepTimeSeconds;
