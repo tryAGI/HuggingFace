@@ -17,20 +17,26 @@ namespace HuggingFace
         public required int Id { get; set; }
 
         /// <summary>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("special")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Special { get; set; }
+
+        /// <summary>
         /// Example: 0
         /// </summary>
         /// <example>0</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("start")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required int Start { get; set; }
+        public int? Start { get; set; }
 
         /// <summary>
         /// Example: 2
         /// </summary>
         /// <example>2</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("stop")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required int Stop { get; set; }
+        public int? Stop { get; set; }
 
         /// <summary>
         /// Example: test
@@ -52,6 +58,9 @@ namespace HuggingFace
         /// <param name="id">
         /// Example: 0
         /// </param>
+        /// <param name="special">
+        /// Example: false
+        /// </param>
         /// <param name="start">
         /// Example: 0
         /// </param>
@@ -66,14 +75,16 @@ namespace HuggingFace
 #endif
         public SimpleToken(
             int id,
-            int start,
-            int stop,
-            string text)
+            bool special,
+            string text,
+            int? start,
+            int? stop)
         {
             this.Id = id;
+            this.Special = special;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Start = start;
             this.Stop = stop;
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
         }
 
         /// <summary>

@@ -9,6 +9,13 @@ namespace HuggingFace
     public sealed partial class Info
     {
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auto_truncate")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AutoTruncate { get; set; }
+
+        /// <summary>
         /// Example: null
         /// </summary>
         /// <example>null</example>
@@ -16,12 +23,20 @@ namespace HuggingFace
         public string? DockerLabel { get; set; }
 
         /// <summary>
-        /// Example: 2
+        /// Default Value: null<br/>
+        /// Example: null
         /// </summary>
-        /// <example>2</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("max_best_of")]
+        /// <example>null</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_batch_requests")]
+        public int? MaxBatchRequests { get; set; }
+
+        /// <summary>
+        /// Example: 2048
+        /// </summary>
+        /// <example>2048</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_batch_tokens")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int MaxBestOf { get; set; }
+        public required int MaxBatchTokens { get; set; }
 
         /// <summary>
         /// Example: 32
@@ -41,60 +56,52 @@ namespace HuggingFace
         public required int MaxConcurrentRequests { get; set; }
 
         /// <summary>
-        /// Example: 1024
+        /// Example: 512
         /// </summary>
-        /// <example>1024</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("max_input_tokens")]
+        /// <example>512</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_input_length")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int MaxInputTokens { get; set; }
+        public required int MaxInputLength { get; set; }
 
         /// <summary>
-        /// Example: 4
+        /// Example: float16
         /// </summary>
-        /// <example>4</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("max_stop_sequences")]
+        /// <example>float16</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model_dtype")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int MaxStopSequences { get; set; }
-
-        /// <summary>
-        /// Example: 2048
-        /// </summary>
-        /// <example>2048</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("max_total_tokens")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required int MaxTotalTokens { get; set; }
+        public required string ModelDtype { get; set; }
 
         /// <summary>
         /// Model info<br/>
-        /// Example: bigscience/blomm-560m
+        /// Example: thenlper/gte-base
         /// </summary>
-        /// <example>bigscience/blomm-560m</example>
+        /// <example>thenlper/gte-base</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("model_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ModelId { get; set; }
 
         /// <summary>
-        /// Example: text-generation
+        /// Example: fca14538aa9956a46526bd1d0d11d69e19b5a101
         /// </summary>
-        /// <example>text-generation</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("model_pipeline_tag")]
-        public string? ModelPipelineTag { get; set; }
-
-        /// <summary>
-        /// Example: e985a63cdc139290c5f700ff1929f0b5942cced2
-        /// </summary>
-        /// <example>e985a63cdc139290c5f700ff1929f0b5942cced2</example>
+        /// <example>fca14538aa9956a46526bd1d0d11d69e19b5a101</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("model_sha")]
         public string? ModelSha { get; set; }
 
         /// <summary>
-        /// Router Info<br/>
-        /// Example: text-generation-router
+        /// 
         /// </summary>
-        /// <example>text-generation-router</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("router")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("model_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ModelTypeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Router { get; set; }
+        public required global::HuggingFace.ModelType ModelType { get; set; }
+
+        /// <summary>
+        /// Example: thenlper/gte-base
+        /// </summary>
+        /// <example>thenlper/gte-base</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("served_model_name")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string ServedModelName { get; set; }
 
         /// <summary>
         /// Example: null
@@ -104,14 +111,15 @@ namespace HuggingFace
         public string? Sha { get; set; }
 
         /// <summary>
-        /// Example: 2
+        /// Example: 4
         /// </summary>
-        /// <example>2</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("validation_workers")]
+        /// <example>4</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tokenization_workers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int ValidationWorkers { get; set; }
+        public required int TokenizationWorkers { get; set; }
 
         /// <summary>
+        /// Router Info<br/>
         /// Example: 0.5.0
         /// </summary>
         /// <example>0.5.0</example>
@@ -128,11 +136,16 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Info" /> class.
         /// </summary>
+        /// <param name="autoTruncate"></param>
         /// <param name="dockerLabel">
         /// Example: null
         /// </param>
-        /// <param name="maxBestOf">
-        /// Example: 2
+        /// <param name="maxBatchRequests">
+        /// Default Value: null<br/>
+        /// Example: null
+        /// </param>
+        /// <param name="maxBatchTokens">
+        /// Example: 2048
         /// </param>
         /// <param name="maxClientBatchSize">
         /// Example: 32
@@ -141,69 +154,66 @@ namespace HuggingFace
         /// Router Parameters<br/>
         /// Example: 128
         /// </param>
-        /// <param name="maxInputTokens">
-        /// Example: 1024
+        /// <param name="maxInputLength">
+        /// Example: 512
         /// </param>
-        /// <param name="maxStopSequences">
-        /// Example: 4
-        /// </param>
-        /// <param name="maxTotalTokens">
-        /// Example: 2048
+        /// <param name="modelDtype">
+        /// Example: float16
         /// </param>
         /// <param name="modelId">
         /// Model info<br/>
-        /// Example: bigscience/blomm-560m
-        /// </param>
-        /// <param name="modelPipelineTag">
-        /// Example: text-generation
+        /// Example: thenlper/gte-base
         /// </param>
         /// <param name="modelSha">
-        /// Example: e985a63cdc139290c5f700ff1929f0b5942cced2
+        /// Example: fca14538aa9956a46526bd1d0d11d69e19b5a101
         /// </param>
-        /// <param name="router">
-        /// Router Info<br/>
-        /// Example: text-generation-router
+        /// <param name="modelType"></param>
+        /// <param name="servedModelName">
+        /// Example: thenlper/gte-base
         /// </param>
         /// <param name="sha">
         /// Example: null
         /// </param>
-        /// <param name="validationWorkers">
-        /// Example: 2
+        /// <param name="tokenizationWorkers">
+        /// Example: 4
         /// </param>
         /// <param name="version">
+        /// Router Info<br/>
         /// Example: 0.5.0
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Info(
-            int maxBestOf,
+            bool autoTruncate,
+            int maxBatchTokens,
             int maxClientBatchSize,
             int maxConcurrentRequests,
-            int maxInputTokens,
-            int maxStopSequences,
-            int maxTotalTokens,
+            int maxInputLength,
+            string modelDtype,
             string modelId,
-            string router,
-            int validationWorkers,
+            global::HuggingFace.ModelType modelType,
+            string servedModelName,
+            int tokenizationWorkers,
             string version,
             string? dockerLabel,
-            string? modelPipelineTag,
+            int? maxBatchRequests,
             string? modelSha,
             string? sha)
         {
-            this.MaxBestOf = maxBestOf;
+            this.AutoTruncate = autoTruncate;
+            this.MaxBatchTokens = maxBatchTokens;
             this.MaxClientBatchSize = maxClientBatchSize;
             this.MaxConcurrentRequests = maxConcurrentRequests;
-            this.MaxInputTokens = maxInputTokens;
-            this.MaxStopSequences = maxStopSequences;
-            this.MaxTotalTokens = maxTotalTokens;
+            this.MaxInputLength = maxInputLength;
+            this.ModelDtype = modelDtype ?? throw new global::System.ArgumentNullException(nameof(modelDtype));
             this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
-            this.Router = router ?? throw new global::System.ArgumentNullException(nameof(router));
-            this.ValidationWorkers = validationWorkers;
+            this.ModelType = modelType;
+            this.ServedModelName = servedModelName ?? throw new global::System.ArgumentNullException(nameof(servedModelName));
+            this.TokenizationWorkers = tokenizationWorkers;
             this.Version = version ?? throw new global::System.ArgumentNullException(nameof(version));
             this.DockerLabel = dockerLabel;
-            this.ModelPipelineTag = modelPipelineTag;
+            this.MaxBatchRequests = maxBatchRequests;
             this.ModelSha = modelSha;
             this.Sha = sha;
         }

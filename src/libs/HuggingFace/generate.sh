@@ -106,3 +106,16 @@ autosdk generate tgi-openapi.json \
   --base-url https://router.huggingface.co \
   --security-scheme Http:Header:Bearer
 rm tgi-openapi.json
+
+# Generate Embeddings API client from TEI (Text Embeddings Inference) spec
+curl --fail --silent --show-error -o tei-openapi.json \
+  https://raw.githubusercontent.com/huggingface/text-embeddings-inference/main/docs/openapi.json
+autosdk generate tei-openapi.json \
+  --namespace HuggingFace \
+  --clientClassName HuggingFaceEmbeddingClient \
+  --targetFramework net10.0 \
+  --output Generated \
+  --exclude-deprecated-operations \
+  --base-url https://router.huggingface.co \
+  --security-scheme Http:Header:Bearer
+rm tei-openapi.json
