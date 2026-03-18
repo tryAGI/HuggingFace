@@ -12,6 +12,9 @@ nav:
   - Sparse Embeddings: examples/sparse-embeddings.md
   - Native Embeddings: examples/native-embeddings.md
   - Decode Tokens: examples/decode-tokens.md
+  - Who Am I: examples/who-am-i.md
+  - Trending Models: examples/trending-models.md
+  - List Model Tags: examples/list-model-tags.md
 # EXAMPLES:END
 
 #  - Quick Start: QuickStart.md
