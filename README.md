@@ -268,6 +268,49 @@ foreach (var (tagType, tagList) in tags)
     Console.WriteLine($"{tagType}: {tagList.Count} tags");
 }
 ```
+
+### Search Models
+Search for models, datasets, and spaces on the HuggingFace Hub using quicksearch.
+
+```csharp
+var apiKey = GetApiKey();
+using var client = new HuggingFaceClient(apiKey);
+
+var response = await client.RepoSearch.CreateQuicksearchAsync(
+    request: new Request45
+    {
+        Q = "text-generation",
+        Limit = 5,
+        Exclude = [],
+    });
+
+Console.WriteLine($"Found {response.ModelsCount} models, {response.DatasetsCount} datasets");
+
+foreach (var model in response.Models)
+{
+    Console.WriteLine($"  {model.Id} (weight={model.TrendingWeight:F2})");
+}
+```
+
+### Error Handling
+Handle API errors gracefully using the ApiException type.
+
+```csharp
+var apiKey = GetApiKey();
+using var client = new HuggingFaceClient("invalid-api-key");
+
+try
+{
+    await client.Auth.GetWhoamiV2Async();
+}
+catch (ApiException ex)
+{
+    Console.WriteLine($"Status: {ex.StatusCode}");
+    Console.WriteLine($"Message: {ex.Message}");
+    Console.WriteLine($"Body: {ex.ResponseBody}");
+
+}
+```
 <!-- EXAMPLES:END -->
 
 ## Support
