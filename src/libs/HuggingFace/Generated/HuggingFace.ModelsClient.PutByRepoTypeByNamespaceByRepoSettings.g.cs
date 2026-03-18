@@ -207,6 +207,9 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="private"></param>
+        /// <param name="visibility">
+        /// Repository visibility. `protected` is only supported for Spaces.
+        /// </param>
         /// <param name="discussionsDisabled"></param>
         /// <param name="discussionsSorting"></param>
         /// <param name="gated"></param>
@@ -219,6 +222,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             bool? @private = default,
+            global::HuggingFace.RequestVisibility? visibility = default,
             bool? discussionsDisabled = default,
             global::HuggingFace.RequestDiscussionsSorting? discussionsSorting = default,
             global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatedEnum2?>? gated = default,
@@ -229,6 +233,7 @@ namespace HuggingFace
             var __request = new global::HuggingFace.Request38
             {
                 Private = @private,
+                Visibility = visibility,
                 DiscussionsDisabled = discussionsDisabled,
                 DiscussionsSorting = discussionsSorting,
                 Gated = gated,

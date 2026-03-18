@@ -206,6 +206,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="repository"></param>
         /// <param name="private"></param>
+        /// <param name="visibility"></param>
         /// <param name="resourceGroupId"></param>
         /// <param name="hardware"></param>
         /// <param name="sleepTimeSeconds"></param>
@@ -223,6 +224,7 @@ namespace HuggingFace
             string repo,
             string repository,
             bool? @private = default,
+            global::HuggingFace.RequestVisibility2? visibility = default,
             string? resourceGroupId = default,
             global::HuggingFace.RequestHardware? hardware = default,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds = default,
@@ -234,6 +236,7 @@ namespace HuggingFace
             {
                 Repository = repository,
                 Private = @private,
+                Visibility = visibility,
                 ResourceGroupId = resourceGroupId,
                 Hardware = hardware,
                 SleepTimeSeconds = sleepTimeSeconds,

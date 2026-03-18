@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Repository visibility. Defaults to public
+    /// Repository visibility. Defaults to public. Cannot be specified along with visibility.
     /// </summary>
     public sealed partial class RequestPrivate
     {
