@@ -5,7 +5,6 @@ Send a chat message to a HuggingFace-hosted model using the Microsoft.Extensions
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceInferenceClient(apiKey);
 IChatClient chatClient = client;
 

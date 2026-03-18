@@ -5,8 +5,6 @@ Generate dense embeddings using the TEI-native embed endpoint with normalization
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var embeddings = await client.EmbedAsync(

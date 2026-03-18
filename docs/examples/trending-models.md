@@ -5,7 +5,6 @@ List recently trending models, datasets, and spaces on the HuggingFace Hub.
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceClient(apiKey);
 
 var response = await client.Models.GetTrendingAsync(limit: 5);

@@ -42,7 +42,6 @@ using var hubClient = new HuggingFaceClient(apiKey);
 Send a chat message to a HuggingFace-hosted model using the Microsoft.Extensions.AI IChatClient interface.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceInferenceClient(apiKey);
 IChatClient chatClient = client;
 
@@ -61,8 +60,6 @@ Console.WriteLine(response.Text);
 Stream chat completion tokens as they are generated using the IChatClient interface.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceInferenceClient(apiKey);
 IChatClient chatClient = client;
 
@@ -82,8 +79,6 @@ await foreach (var update in chatClient.GetStreamingResponseAsync(
 Generate text embeddings using the Microsoft.Extensions.AI IEmbeddingGenerator interface with HuggingFace TEI.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 IEmbeddingGenerator<string, Embedding<float>> generator = client;
 
@@ -102,8 +97,6 @@ Console.WriteLine($"Embeddings generated: {result.Count}");
 Rerank a list of texts by relevance to a query using the TEI reranking endpoint.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var results = await client.RerankAsync(
@@ -126,8 +119,6 @@ foreach (var rank in results.OrderByDescending(r => r.Score))
 Compute cosine similarity between a source sentence and a list of candidate sentences.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var scores = await client.SimilarityAsync(
@@ -152,8 +143,6 @@ for (var i = 0; i < scores.Count; i++)
 Tokenize text into tokens using the TEI tokenization endpoint.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var tokens = await client.TokenizeAsync(
@@ -170,8 +159,6 @@ foreach (var token in tokens[0])
 Generate sparse embeddings for text using the TEI sparse embedding endpoint.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var sparseEmbeddings = await client.EmbedSparseAsync(
@@ -187,8 +174,6 @@ foreach (var sv in sparseEmbeddings[0].Take(5))
 Generate dense embeddings using the TEI-native embed endpoint with normalization control.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var embeddings = await client.EmbedAsync(
@@ -202,8 +187,6 @@ Console.WriteLine($"Embedding dimension: {embeddings[0].Count}");
 Tokenize text and decode it back using the TEI tokenization and decode endpoints.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 // Tokenize text into token IDs.
@@ -226,7 +209,6 @@ Console.WriteLine($"Decoded: {decoded[0]}");
 Get the authenticated user's account information using the Hub API.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceClient(apiKey);
 
 var response = await client.Auth.GetWhoamiV2Async();
@@ -238,7 +220,6 @@ Console.WriteLine($"User: {response}");
 List recently trending models, datasets, and spaces on the HuggingFace Hub.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceClient(apiKey);
 
 var response = await client.Models.GetTrendingAsync(limit: 5);
@@ -258,7 +239,6 @@ foreach (var item in response.RecentlyTrending)
 List available model tags grouped by type from the HuggingFace Hub.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceClient(apiKey);
 
 var tags = await client.Models.GetModelsTagsByTypeAsync();
@@ -273,7 +253,6 @@ foreach (var (tagType, tagList) in tags)
 Search for models, datasets, and spaces on the HuggingFace Hub using quicksearch.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceClient(apiKey);
 
 var response = await client.RepoSearch.CreateQuicksearchAsync(
@@ -296,7 +275,6 @@ foreach (var model in response.Models)
 Handle API errors gracefully using the ApiException type.
 
 ```csharp
-var apiKey = GetApiKey();
 using var client = new HuggingFaceClient("invalid-api-key");
 
 try

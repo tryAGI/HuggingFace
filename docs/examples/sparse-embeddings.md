@@ -5,8 +5,6 @@ Generate sparse embeddings for text using the TEI sparse embedding endpoint.
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var sparseEmbeddings = await client.EmbedSparseAsync(

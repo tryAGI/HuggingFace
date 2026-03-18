@@ -5,8 +5,6 @@ Rerank a list of texts by relevance to a query using the TEI reranking endpoint.
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var results = await client.RerankAsync(

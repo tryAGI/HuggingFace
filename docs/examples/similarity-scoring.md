@@ -5,8 +5,6 @@ Compute cosine similarity between a source sentence and a list of candidate sent
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 var scores = await client.SimilarityAsync(

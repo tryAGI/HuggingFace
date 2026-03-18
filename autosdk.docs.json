@@ -1,3 +1,7 @@
 {
-  "exampleSourceDirectory": "src/tests/HuggingFace.IntegrationTests/Examples"
+  "exampleSourceDirectory": "src/tests/HuggingFace.IntegrationTests/Examples",
+  "clientReplacements": {
+    "GetAuthenticatedInferenceClient()": "HuggingFaceInferenceClient",
+    "GetAuthenticatedEmbeddingClient()": "HuggingFaceEmbeddingClient"
+  }
 }

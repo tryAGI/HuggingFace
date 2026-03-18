@@ -5,8 +5,6 @@ Generate text embeddings using the Microsoft.Extensions.AI IEmbeddingGenerator i
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 IEmbeddingGenerator<string, Embedding<float>> generator = client;
 

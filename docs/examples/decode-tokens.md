@@ -5,8 +5,6 @@ Tokenize text and decode it back using the TEI tokenization and decode endpoints
 This example assumes `using HuggingFace;` is in scope and `apiKey` contains your HuggingFace API key.
 
 ```csharp
-var apiKey = GetApiKey();
-
 using var client = new HuggingFaceEmbeddingClient(apiKey);
 
 // Tokenize text into token IDs.
