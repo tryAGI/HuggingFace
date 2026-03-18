@@ -19,6 +19,7 @@ nav:
   - Error Handling: examples/error-handling.md
   - Search Datasets: examples/search-datasets.md
   - Trending by Type: examples/trending-by-type.md
+  - Search Papers: examples/search-papers.md
 # EXAMPLES:END
 
 #  - Quick Start: QuickStart.md
