@@ -29,7 +29,6 @@ cd src/libs/HuggingFace && ./generate.sh
 The SDK code in `Generated/` is **auto-generated** — do not manually edit files in `src/libs/HuggingFace/Generated/`.
 
 1. `src/libs/HuggingFace/openapi.yaml` — the HuggingFace OpenAPI spec
-2. `src/helpers/FixOpenApiSpec/` — converts OpenAPI 3.1 → 3.0 format for compatibility
 3. `src/libs/HuggingFace/generate.sh` — orchestrates: download spec → fix spec → run AutoSDK CLI → output to `Generated/`
 4. CI auto-updates the spec every 3 hours and creates PRs if changes are detected
 
@@ -46,8 +45,6 @@ These files are **not** auto-generated and can be edited manually:
 |---------|---------|
 | `src/libs/HuggingFace/` | Main SDK library (`HuggingFaceClient`) |
 | `src/tests/HuggingFace.IntegrationTests/` | Integration tests against real HuggingFace API |
-| `src/helpers/FixOpenApiSpec/` | OpenAPI spec fixer tool |
-| `src/helpers/GenerateDocs/` | Documentation generator from integration tests |
 
 ### Build Configuration
 
