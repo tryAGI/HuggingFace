@@ -15,41 +15,134 @@ namespace HuggingFace.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            var
-            readerCopy = reader;
+            using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
+            var __rawJson = __jsonDocument.RootElement.GetRawText();
+            var __jsonProps = new global::System.Collections.Generic.HashSet<string>();
+            if (__jsonDocument.RootElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+            {
+                foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
+                {
+                    __jsonProps.Add(__jsonProp.Name);
+                }
+            }
+
+            var __score0 = 0;
+            if (__jsonProps.Contains("details")) __score0++;
+            if (__jsonProps.Contains("generated_text")) __score0++;
+            if (__jsonProps.Contains("index")) __score0++;
+            if (__jsonProps.Contains("token")) __score0++;
+            if (__jsonProps.Contains("top_tokens")) __score0++;
+            var __score1 = 0;
+            if (__jsonProps.Contains("choices")) __score1++;
+            if (__jsonProps.Contains("created")) __score1++;
+            if (__jsonProps.Contains("id")) __score1++;
+            if (__jsonProps.Contains("model")) __score1++;
+            if (__jsonProps.Contains("system_fingerprint")) __score1++;
+            if (__jsonProps.Contains("usage")) __score1++;
+            var __score2 = 0;
+            if (__jsonProps.Contains("choices")) __score2++;
+            if (__jsonProps.Contains("created")) __score2++;
+            if (__jsonProps.Contains("id")) __score2++;
+            if (__jsonProps.Contains("model")) __score2++;
+            if (__jsonProps.Contains("system_fingerprint")) __score2++;
+            var __bestScore = 0;
+            var __bestIndex = -1;
+            if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
+            if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
+            if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
+
             global::HuggingFace.StreamResponse? value1 = default;
-            try
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.StreamResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.StreamResponse> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.StreamResponse).Name}");
-                value1 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
-            }
-            catch (global::System.Text.Json.JsonException)
-            {
-            }
-
-            readerCopy = reader;
             global::HuggingFace.ChatCompletionChunk? value2 = default;
-            try
+            global::HuggingFace.Chunk? value3 = default;
+            if (__bestIndex >= 0)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ChatCompletionChunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ChatCompletionChunk> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ChatCompletionChunk).Name}");
-                value2 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
-            }
-            catch (global::System.Text.Json.JsonException)
-            {
+                if (__bestIndex == 0)
+                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.StreamResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.StreamResponse> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.StreamResponse).Name}");
+                        value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
+                else if (__bestIndex == 1)
+                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ChatCompletionChunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ChatCompletionChunk> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ChatCompletionChunk).Name}");
+                        value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
+                else if (__bestIndex == 2)
+                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.Chunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.Chunk> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.Chunk).Name}");
+                        value3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
             }
 
-            readerCopy = reader;
-            global::HuggingFace.Chunk? value3 = default;
-            try
+            if (value1 == null && value2 == null && value3 == null)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.Chunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.Chunk> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.Chunk).Name}");
-                value3 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
-            }
-            catch (global::System.Text.Json.JsonException)
-            {
+                try
+                {
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.StreamResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.StreamResponse> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.StreamResponse).Name}");
+                    value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+
+                try
+                {
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ChatCompletionChunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ChatCompletionChunk> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ChatCompletionChunk).Name}");
+                    value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+
+                try
+                {
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.Chunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.Chunk> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.Chunk).Name}");
+                    value3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
             }
 
             var __value = new global::HuggingFace.SagemakerStreamResponse(
@@ -59,25 +152,6 @@ namespace HuggingFace.JsonConverters
 
                 value3
                 );
-
-            if (value1 != null)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.StreamResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.StreamResponse> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.StreamResponse).Name}");
-                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
-            }
-            else if (value2 != null)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ChatCompletionChunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ChatCompletionChunk> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ChatCompletionChunk).Name}");
-                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
-            }
-            else if (value3 != null)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.Chunk), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.Chunk> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.Chunk).Name}");
-                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
-            }
 
             return __value;
         }
