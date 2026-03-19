@@ -6,7 +6,7 @@ public partial class Tests
     private static HuggingFaceClient GetAuthenticatedClient()
     {
         var apiKey =
-            Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") is { Length: > 0 } apiKeyValue ? apiKeyValue :
             throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
 
         return new HuggingFaceClient(apiKey);
@@ -15,7 +15,7 @@ public partial class Tests
     private static HuggingFaceInferenceClient GetAuthenticatedInferenceClient()
     {
         var apiKey =
-            Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") is { Length: > 0 } apiKeyValue ? apiKeyValue :
             throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
 
         return new HuggingFaceInferenceClient(apiKey);
@@ -24,7 +24,7 @@ public partial class Tests
     private static HuggingFaceEmbeddingClient GetAuthenticatedEmbeddingClient()
     {
         var apiKey =
-            Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+            Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") is { Length: > 0 } apiKeyValue ? apiKeyValue :
             throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
 
         return new HuggingFaceEmbeddingClient(apiKey);
@@ -32,7 +32,7 @@ public partial class Tests
 
     private static string GetApiKey()
     {
-        return Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") ??
+        return Environment.GetEnvironmentVariable("HUGGINGFACE_API_KEY") is { Length: > 0 } apiKeyValue ? apiKeyValue :
             throw new AssertInconclusiveException("HUGGINGFACE_API_KEY environment variable is not found.");
     }
 }
