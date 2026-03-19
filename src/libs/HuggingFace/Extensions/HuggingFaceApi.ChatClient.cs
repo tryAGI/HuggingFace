@@ -145,7 +145,7 @@ public partial class HuggingFaceInferenceClient : IChatClient
         }
     }
 
-    private ChatRequest CreateChatRequest(IEnumerable<ChatMessage> chatMessages, ChatOptions? options)
+    private static ChatRequest CreateChatRequest(IEnumerable<ChatMessage> chatMessages, ChatOptions? options)
     {
         var messages = new List<Message>();
         foreach (var chatMessage in chatMessages)
