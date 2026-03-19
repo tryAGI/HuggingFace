@@ -10,12 +10,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="FluentAssertions" Version="8.9.0" />
+    <PackageReference Include="AwesomeAssertions" Version="9.4.0" />
   </ItemGroup>
 
   <ItemGroup Label="GlobalUsings">
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
-    <Using Include="FluentAssertions" />
+    <Using Include="AwesomeAssertions" />
   </ItemGroup>
 
   <ItemGroup>
