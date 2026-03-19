@@ -1,6 +1,8 @@
 site_name: HuggingFace .NET Documentation
 nav:
 - Overview: index.md
+- Guides:
+  - Microsoft.Extensions.AI: guides/meai.md
 # EXAMPLES:START
 - Examples:
   - Chat Completion: examples/chat-completion.md
