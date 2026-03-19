@@ -27,6 +27,9 @@ namespace HuggingFace.JsonConverters
             catch (global::System.Text.Json.JsonException)
             {
             }
+            catch (global::System.InvalidOperationException)
+            {
+            }
 
             readerCopy = reader;
             global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>? value2 = default;
@@ -37,6 +40,9 @@ namespace HuggingFace.JsonConverters
                 value2 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
+            {
+            }
+            catch (global::System.InvalidOperationException)
             {
             }
 

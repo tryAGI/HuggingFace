@@ -77,8 +77,8 @@ namespace HuggingFace
                 path: "/api/collections",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
-                .AddOptionalParameter("item", item?.ToString() ?? string.Empty)
-                .AddOptionalParameter("owner", owner?.ToString() ?? string.Empty)
+                .AddOptionalParameter("item", item?.ToString())
+                .AddOptionalParameter("owner", owner?.ToString())
                 .AddOptionalParameter("q", q)
                 .AddOptionalParameter("sort", sort?.ToValueString())
                 .AddOptionalParameter("cursor", cursor)

@@ -26,6 +26,9 @@ namespace HuggingFace.JsonConverters
             catch (global::System.Text.Json.JsonException)
             {
             }
+            catch (global::System.InvalidOperationException)
+            {
+            }
 
             readerCopy = reader;
             T2? value2 = default;
@@ -36,6 +39,9 @@ namespace HuggingFace.JsonConverters
                 value2 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
+            {
+            }
+            catch (global::System.InvalidOperationException)
             {
             }
 
@@ -50,6 +56,9 @@ namespace HuggingFace.JsonConverters
             catch (global::System.Text.Json.JsonException)
             {
             }
+            catch (global::System.InvalidOperationException)
+            {
+            }
 
             readerCopy = reader;
             T4? value4 = default;
@@ -60,6 +69,9 @@ namespace HuggingFace.JsonConverters
                 value4 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
+            {
+            }
+            catch (global::System.InvalidOperationException)
             {
             }
 
@@ -74,6 +86,9 @@ namespace HuggingFace.JsonConverters
             catch (global::System.Text.Json.JsonException)
             {
             }
+            catch (global::System.InvalidOperationException)
+            {
+            }
 
             readerCopy = reader;
             T6? value6 = default;
@@ -84,6 +99,9 @@ namespace HuggingFace.JsonConverters
                 value6 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
+            {
+            }
+            catch (global::System.InvalidOperationException)
             {
             }
 
@@ -98,6 +116,9 @@ namespace HuggingFace.JsonConverters
             catch (global::System.Text.Json.JsonException)
             {
             }
+            catch (global::System.InvalidOperationException)
+            {
+            }
 
             readerCopy = reader;
             T8? value8 = default;
@@ -108,6 +129,9 @@ namespace HuggingFace.JsonConverters
                 value8 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
+            {
+            }
+            catch (global::System.InvalidOperationException)
             {
             }
 
