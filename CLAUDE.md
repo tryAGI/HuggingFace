@@ -46,6 +46,13 @@ These files are **not** auto-generated and can be edited manually:
 | `src/libs/HuggingFace/` | Main SDK library (`HuggingFaceClient`) |
 | `src/tests/HuggingFace.IntegrationTests/` | Integration tests against real HuggingFace API |
 
+### Documentation Generation
+
+Tests in `src/tests/HuggingFace.IntegrationTests/Examples` are the single source of truth for both test coverage and documentation:
+- Each file has a JSDoc header (`order`, `title`, `slug`) consumed by `autosdk docs sync .`
+- Comments prefixed with `////` become prose paragraphs in generated docs
+- CI workflow (`.github/workflows/mkdocs.yml`) auto-generates `docs/examples/` and populates `EXAMPLES:START/END` markers in README.md, docs/index.md, and mkdocs.yml
+- Config: `autosdk.docs.json` points to `src/tests/HuggingFace.IntegrationTests/Examples`
 ### Build Configuration
 
 - **Target:** `net10.0` (single target)
