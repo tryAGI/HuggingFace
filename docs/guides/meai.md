@@ -1,5 +1,8 @@
 # Microsoft.Extensions.AI Integration
 
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
 The HuggingFace SDK implements `IChatClient` and `IEmbeddingGenerator<string, Embedding<float>>` from [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai), providing unified interfaces for chat completions and text embeddings via HuggingFace Serverless Inference.
 
 ## Installation
