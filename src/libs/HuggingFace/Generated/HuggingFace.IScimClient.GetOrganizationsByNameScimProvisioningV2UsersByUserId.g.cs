@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
+
         /// <summary>
         /// Get a SCIM provisioning user<br/>
         /// Retrieves a SCIM user by their ID for non-managed organizations.

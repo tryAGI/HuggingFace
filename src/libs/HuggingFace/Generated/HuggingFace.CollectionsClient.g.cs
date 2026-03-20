@@ -4,8 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Use Collections to group repositories from the Hub (Models, Datasets, Spaces and Papers) on a dedicated page.<br/>
-    /// You can learn more about it in the Collections [guide](https://huggingface.co/docs/hub/collections). Collections can also be managed using the Python client (see [guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/collections)).<br/>
+    /// Collections<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

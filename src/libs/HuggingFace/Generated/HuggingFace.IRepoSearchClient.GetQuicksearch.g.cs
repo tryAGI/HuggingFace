@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IRepoSearchClient
     {
+
         /// <summary>
         /// Quick search<br/>
         /// Quick search for models, datasets, spaces, orgs, users, papers, collections, and buckets

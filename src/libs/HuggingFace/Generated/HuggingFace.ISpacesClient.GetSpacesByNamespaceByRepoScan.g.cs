@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
+
         /// <summary>
         /// Get security status<br/>
         /// Get the security status of a repo

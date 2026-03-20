@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
+
         /// <summary>
         /// List folder content<br/>
         /// List the content of a repository tree, with pagination support.

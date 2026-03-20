@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceEmbeddingClient
     {
+
         /// <summary>
         /// Health check method
         /// </summary>

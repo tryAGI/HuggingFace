@@ -4,12 +4,14 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
+
         /// <summary>
         /// Update an attribute of a SCIM provisioning user<br/>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="userId"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

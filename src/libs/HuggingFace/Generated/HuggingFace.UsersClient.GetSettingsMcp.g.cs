@@ -19,6 +19,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get MCP tools<br/>
         /// Get the MCP tools for the current user

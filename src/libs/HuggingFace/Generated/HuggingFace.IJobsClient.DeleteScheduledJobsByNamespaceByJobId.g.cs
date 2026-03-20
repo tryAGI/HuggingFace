@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
+
         /// <summary>
         /// Delete a scheduled job
         /// </summary>

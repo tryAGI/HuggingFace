@@ -4,9 +4,11 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceInferenceClient
     {
+
         /// <summary>
         /// Generate tokens if `stream == false` or a stream of token if `stream == true`
         /// </summary>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

@@ -35,6 +35,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Generate JWT<br/>
         /// Generate a JWT token for accessing a repository. Supports optional write access for spaces in dev mode, custom expiration, and encryption.

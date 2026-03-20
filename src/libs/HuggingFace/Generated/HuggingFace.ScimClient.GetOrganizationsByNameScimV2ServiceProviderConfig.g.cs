@@ -21,6 +21,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get SCIM Service Provider Configuration<br/>
         /// Returns the SCIM 2.0 Service Provider configuration, describing the server's capabilities and supported authentication schemes.

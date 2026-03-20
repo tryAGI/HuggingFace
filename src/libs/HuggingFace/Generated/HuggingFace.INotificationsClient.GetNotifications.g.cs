@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface INotificationsClient
     {
+
         /// <summary>
         /// List notifications<br/>
         /// List notifications for the user

@@ -4,10 +4,12 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
+
         /// <summary>
         /// Create a scheduled job
         /// </summary>
         /// <param name="namespace"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// Delete a branch
         /// </summary>

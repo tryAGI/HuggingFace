@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDocsClient
     {
+
         /// <summary>
         /// List docs<br/>
         /// Get list of available documentation

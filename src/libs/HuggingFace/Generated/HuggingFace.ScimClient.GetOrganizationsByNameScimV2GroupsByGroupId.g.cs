@@ -25,6 +25,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get a SCIM group<br/>
         /// Retrieves a group by its ID. If you provide the `excludedAttributes` parameter, the `members` attribute is not returned.

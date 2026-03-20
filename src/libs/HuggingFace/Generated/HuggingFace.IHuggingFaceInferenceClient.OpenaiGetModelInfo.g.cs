@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceInferenceClient
     {
+
         /// <summary>
         /// Get model info
         /// </summary>

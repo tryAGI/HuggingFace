@@ -21,6 +21,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get resource groups<br/>
         /// Retrieve accessible resource groups. Get all resource groups the user has access to.<br/>

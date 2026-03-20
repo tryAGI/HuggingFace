@@ -25,6 +25,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Update SCIM user<br/>
         /// Update an attribute of a SCIM user. Modify individual attributes using Operations format. Just provide the changes you want to make using add, remove (only `externalId` is supported), or replace operations.<br/>
@@ -33,6 +34,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name"></param>
         /// <param name="userId"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

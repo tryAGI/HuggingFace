@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// The following endpoints are for interacting with the Hub's documentation.<br/>
+    /// Documentation<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

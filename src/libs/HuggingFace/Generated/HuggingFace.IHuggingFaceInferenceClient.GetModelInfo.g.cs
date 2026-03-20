@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceInferenceClient
     {
+
         /// <summary>
         /// Text Generation Inference endpoint info
         /// </summary>

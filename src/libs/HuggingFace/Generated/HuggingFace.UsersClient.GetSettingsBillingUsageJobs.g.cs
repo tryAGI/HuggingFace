@@ -19,6 +19,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get jobs usage<br/>
         /// Get user Jobs usage for current subscription period

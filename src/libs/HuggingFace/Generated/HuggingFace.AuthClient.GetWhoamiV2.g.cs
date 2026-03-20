@@ -19,6 +19,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get user info<br/>
         /// Get information about the user and auth method used

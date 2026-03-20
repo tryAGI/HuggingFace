@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDiscussionsClient
     {
+
         /// <summary>
         /// Get discussion details
         /// </summary>

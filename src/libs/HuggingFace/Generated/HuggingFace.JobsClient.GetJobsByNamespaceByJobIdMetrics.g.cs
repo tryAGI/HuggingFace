@@ -18,6 +18,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+
         /// <summary>
         /// Stream job metrics<br/>
         /// Stream the metrics of a job, using SSE

@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IAuthClient
     {
+
         /// <summary>
         /// Get user info<br/>
         /// Get information about the user and auth method used

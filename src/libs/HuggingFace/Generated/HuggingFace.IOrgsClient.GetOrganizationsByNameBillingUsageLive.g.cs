@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IOrgsClient
     {
+
         /// <summary>
         /// Stream usage<br/>
         /// Get live usage for org

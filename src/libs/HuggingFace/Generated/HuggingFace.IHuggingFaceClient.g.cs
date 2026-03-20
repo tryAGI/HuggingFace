@@ -43,144 +43,122 @@ namespace HuggingFace
 
 
         /// <summary>
-        /// The following endpoints get information about your currently used user based on the passed token.
+        /// Auth
         /// </summary>
         public AuthClient Auth { get; }
 
         /// <summary>
-        /// Get information from all models on the Hub.
+        /// Models
         /// </summary>
         public ModelsClient Models { get; }
 
         /// <summary>
-        /// Get information from all kernels on the Hub.
+        /// Kernels
         /// </summary>
         public KernelsClient Kernels { get; }
 
         /// <summary>
-        /// Get information from all datasets on the Hub.
+        /// Datasets
         /// </summary>
         public DatasetsClient Datasets { get; }
 
         /// <summary>
-        /// Get information from SQL Console embeds from a dataset.
+        /// SQL Console
         /// </summary>
         public SqlConsoleClient SqlConsole { get; }
 
         /// <summary>
-        /// The following endpoints manage discussions.
+        /// Discussions
         /// </summary>
         public DiscussionsClient Discussions { get; }
 
         /// <summary>
-        /// Get information from all Spaces on the Hub.
+        /// Spaces
         /// </summary>
         public SpacesClient Spaces { get; }
 
         /// <summary>
-        /// The following endpoints help get information about models, datasets, and Spaces stored on the Hub.
+        /// Repository Search
         /// </summary>
         public RepoSearchClient RepoSearch { get; }
 
         /// <summary>
-        /// The following endpoints manage repository settings like creating and deleting a repository.
+        /// Repositories
         /// </summary>
         public ReposClient Repos { get; }
 
         /// <summary>
-        /// User accounts are the base authoring entity on the Hub
+        /// Users
         /// </summary>
         public UsersClient Users { get; }
 
         /// <summary>
-        /// The following endpoints let you interact with Hub Organizations and their members.
+        /// Organizations
         /// </summary>
         public OrgsClient Orgs { get; }
 
         /// <summary>
-        /// The following endpoints manage jobs.
+        /// Jobs
         /// </summary>
         public JobsClient Jobs { get; }
 
         /// <summary>
-        /// The following endpoints manage resource groups. Resource groups are a Team or Enterprise feature.
+        /// Resource groups
         /// </summary>
         public ResourceGroupsClient ResourceGroups { get; }
 
         /// <summary>
-        /// The following endpoint gets information about papers.
+        /// Paper pages
         /// </summary>
         public PapersClient Papers { get; }
 
         /// <summary>
-        /// Use Collections to group repositories from the Hub (Models, Datasets, Spaces and Papers) on a dedicated page.<br/>
-        /// You can learn more about it in the Collections [guide](https://huggingface.co/docs/hub/collections). Collections can also be managed using the Python client (see [guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/collections)).
+        /// Collections
         /// </summary>
         public CollectionsClient Collections { get; }
 
         /// <summary>
-        /// Git-free storage buckets for files, powered by Xet. Buckets provide simple file storage without git versioning.
+        /// Buckets
         /// </summary>
         public BucketsClient Buckets { get; }
 
         /// <summary>
-        /// The following endpoints fetch Hub notifications.
+        /// Notifications
         /// </summary>
         public NotificationsClient Notifications { get; }
 
         /// <summary>
-        /// Run inference from one of our inference providers.
+        /// Inference Providers
         /// </summary>
         public InferenceProvidersClient InferenceProviders { get; }
 
         /// <summary>
-        /// Manage inference endpoints.
+        /// Inference Endpoints
         /// </summary>
         public InferenceEndpointsClient InferenceEndpoints { get; }
 
         /// <summary>
-        /// The following endpoints are for use with the MCP server.
+        /// MCP
         /// </summary>
         public McpClient Mcp { get; }
 
         /// <summary>
-        /// The following endpoints are for use with OAuth.
+        /// OAuth
         /// </summary>
         public OauthClient Oauth { get; }
 
         /// <summary>
-        /// The following endpoints are for interacting with the Hub's documentation.
+        /// Documentation
         /// </summary>
         public DocsClient Docs { get; }
 
         /// <summary>
-        /// The following endpoints are for use with webhooks.
+        /// Webhooks
         /// </summary>
         public WebhooksClient Webhooks { get; }
 
         /// <summary>
-        /// Use the SCIM API to control and manage your hub Enterprise organization manage members' access.<br/>
-        /// ## Authentication<br/>
-        /// - Must be organization owner<br/>
-        /// - Use Access token with write permission on organization<br/>
-        /// - Organization must be Enterprise Plus<br/>
-        /// ## Key Attribute Matching<br/>
-        /// - Microsoft Entra ID (Azure AD)<br/>
-        /// 	* SAML: `http://schemas.microsoft.com/identity/claims/objectidentifier`<br/>
-        /// 	* SCIM: `externalId`<br/>
-        /// - Other Identity Providers<br/>
-        /// 	* SAML: `NameID` or `unique identifier`<br/>
-        /// 	* SCIM: `externalId`<br/>
-        /// ## Supported SCIM User Attributes<br/>
-        /// | Attribute | Description |<br/>
-        /// |---|---|<br/>
-        /// | `userName` | Username for the user |<br/>
-        /// | `name.givenName` | First name |<br/>
-        /// | `name.familyName` | Last name |<br/>
-        /// | `emails` | Array of user emails; we don't support email types |<br/>
-        /// | `externalId` | IDP provider's unique identifier |<br/>
-        /// | `id` | Hugging Face SCIM endpoint identifier |<br/>
-        /// | `active` | Boolean for provisioning status |
+        /// SCIM
         /// </summary>
         public ScimClient Scim { get; }
 

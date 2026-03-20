@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
+
         /// <summary>
         /// Resolve a file<br/>
         /// This endpoint requires to follow redirection

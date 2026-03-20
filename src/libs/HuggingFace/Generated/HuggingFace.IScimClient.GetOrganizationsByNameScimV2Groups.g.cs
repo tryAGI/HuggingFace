@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
+
         /// <summary>
         /// List SCIM groups<br/>
         /// Get a list of SCIM groups. Retrieves a paginated list of all organization groups. If you provide the filter parameter, the resources for all matching groups are returned.

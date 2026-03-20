@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
+
         /// <summary>
         /// Delete a SCIM user
         /// </summary>

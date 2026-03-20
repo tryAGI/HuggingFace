@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
+
         /// <summary>
         /// List commits
         /// </summary>

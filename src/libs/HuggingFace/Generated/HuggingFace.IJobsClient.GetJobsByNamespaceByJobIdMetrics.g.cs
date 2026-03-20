@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
+
         /// <summary>
         /// Stream job metrics<br/>
         /// Stream the metrics of a job, using SSE

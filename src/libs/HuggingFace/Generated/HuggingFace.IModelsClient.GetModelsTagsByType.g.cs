@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// Get model tags<br/>
         /// Get all possible tags used for models, grouped by tag type. Optionally restrict to only one tag type

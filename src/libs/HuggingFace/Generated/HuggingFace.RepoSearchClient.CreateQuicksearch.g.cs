@@ -53,6 +53,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Quick search<br/>
         /// Quick search for models, datasets, spaces, orgs, users, papers, collections, and buckets
@@ -82,6 +83,7 @@ namespace HuggingFace
         /// <param name="discussionId"></param>
         /// <param name="discussionCollectionName"></param>
         /// <param name="spacesTags"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

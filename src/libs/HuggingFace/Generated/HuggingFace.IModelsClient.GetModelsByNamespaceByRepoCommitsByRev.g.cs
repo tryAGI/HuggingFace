@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// List commits
         /// </summary>

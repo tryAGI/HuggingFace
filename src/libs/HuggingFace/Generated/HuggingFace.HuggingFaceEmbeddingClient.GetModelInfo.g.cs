@@ -19,6 +19,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Text Embeddings Inference endpoint info
         /// </summary>

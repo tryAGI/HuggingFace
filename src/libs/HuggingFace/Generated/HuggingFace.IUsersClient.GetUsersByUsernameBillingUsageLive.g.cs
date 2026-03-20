@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
+
         /// <summary>
         /// Stream usage<br/>
         /// Get live usage for user

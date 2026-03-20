@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
+
         /// <summary>
         /// Cancel a job
         /// </summary>

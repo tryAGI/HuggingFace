@@ -4,11 +4,13 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
+
         /// <summary>
         /// Create a SCIM user<br/>
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

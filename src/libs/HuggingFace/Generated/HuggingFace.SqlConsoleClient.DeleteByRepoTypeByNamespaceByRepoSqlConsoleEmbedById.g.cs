@@ -27,6 +27,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Delete embed<br/>
         /// Delete SQL Console embed

@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
+
         /// <summary>
         /// Get notebook URL<br/>
         /// Get a jupyter notebook URL for the requested file

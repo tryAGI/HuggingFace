@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
+
         /// <summary>
         /// List jobs<br/>
         /// List of jobs for an entity

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// The following endpoints manage resource groups. Resource groups are a Team or Enterprise feature.<br/>
+    /// Resource groups<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
