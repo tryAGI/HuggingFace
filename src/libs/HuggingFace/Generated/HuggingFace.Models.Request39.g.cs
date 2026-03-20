@@ -11,22 +11,15 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("tag")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Title { get; set; }
+        public required string Tag { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Description { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pullRequest")]
-        public bool? PullRequest { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
+        public string? Message { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,20 +30,17 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request39" /> class.
         /// </summary>
-        /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="pullRequest"></param>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request39(
-            string title,
-            string description,
-            bool? pullRequest)
+            string tag,
+            string? message)
         {
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
-            this.PullRequest = pullRequest;
+            this.Tag = tag ?? throw new global::System.ArgumentNullException(nameof(tag));
+            this.Message = message;
         }
 
         /// <summary>

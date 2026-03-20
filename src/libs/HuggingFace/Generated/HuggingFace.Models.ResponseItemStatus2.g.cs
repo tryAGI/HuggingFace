@@ -6,58 +6,52 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class ResponseItemStatus2
+    public enum ResponseItemStatus2
     {
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("stage")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemStatusStageJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseItemStatusStage Stage { get; set; }
-
+        Accepted,
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
-        public string? Message { get; set; }
-
+        Rejected,
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("failureCount")]
-        public double? FailureCount { get; set; }
+        Pending,
+    }
 
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class ResponseItemStatus2Extensions
+    {
         /// <summary>
-        /// Additional properties that are not explicitly defined in the schema
+        /// Converts an enum to a string.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonExtensionData]
-        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseItemStatus2" /> class.
-        /// </summary>
-        /// <param name="stage"></param>
-        /// <param name="message"></param>
-        /// <param name="failureCount"></param>
-#if NET7_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
-#endif
-        public ResponseItemStatus2(
-            global::HuggingFace.ResponseItemStatusStage stage,
-            string? message,
-            double? failureCount)
+        public static string ToValueString(this ResponseItemStatus2 value)
         {
-            this.Stage = stage;
-            this.Message = message;
-            this.FailureCount = failureCount;
+            return value switch
+            {
+                ResponseItemStatus2.Accepted => "accepted",
+                ResponseItemStatus2.Rejected => "rejected",
+                ResponseItemStatus2.Pending => "pending",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
         }
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseItemStatus2" /> class.
+        /// Converts an string to a enum.
         /// </summary>
-        public ResponseItemStatus2()
+        public static ResponseItemStatus2? ToEnum(string value)
         {
+            return value switch
+            {
+                "accepted" => ResponseItemStatus2.Accepted,
+                "rejected" => ResponseItemStatus2.Rejected,
+                "pending" => ResponseItemStatus2.Pending,
+                _ => null,
+            };
         }
     }
 }

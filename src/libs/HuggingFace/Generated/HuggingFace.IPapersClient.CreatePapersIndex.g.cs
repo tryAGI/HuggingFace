@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response113> CreatePapersIndexAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response154> CreatePapersIndexAsync(
 
-            global::HuggingFace.Request60 request,
+            global::HuggingFace.Request76 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response113> CreatePapersIndexAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response154> CreatePapersIndexAsync(
             string arxivId,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

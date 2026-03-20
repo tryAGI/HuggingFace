@@ -1,0 +1,288 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    public partial class SpacesClient
+    {
+        partial void PrepareCreateSpacesByNamespaceByRepoCommitByRevArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string @namespace,
+            ref string repo,
+            ref string rev,
+            object? createPr,
+            object? hotReload,
+            ref global::HuggingFace.ContentType3? contentType);
+        partial void PrepareCreateSpacesByNamespaceByRepoCommitByRevRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string @namespace,
+            string repo,
+            string rev,
+            object? createPr,
+            object? hotReload,
+            global::HuggingFace.ContentType3? contentType);
+        partial void ProcessCreateSpacesByNamespaceByRepoCommitByRevResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessCreateSpacesByNamespaceByRepoCommitByRevResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Commit<br/>
+        /// For legacy reason, we support both `application/json` and `application/x-ndjson` but we recommend using `application/x-ndjson` to create a commit.<br/>
+        /// JSON-lines payload:<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   "key": "header",<br/>
+        ///   "value": {<br/>
+        ///     "summary": "string (REQUIRED)",<br/>
+        ///     "description": "string (OPTIONAL - defaults to empty string)",<br/>
+        ///     "parentCommit": "string (OPTIONAL - 40-character hex SHA)"<br/>
+        ///   }<br/>
+        /// }<br/>
+        /// {<br/>
+        ///   "key": "file", <br/>
+        ///   "value": {<br/>
+        ///     "path": "string (REQUIRED)",<br/>
+        ///     "content": "string (OPTIONAL - required if oldPath not set)",<br/>
+        ///     "encoding": "utf-8 | base64 (OPTIONAL - defaults to utf-8)",<br/>
+        ///     "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
+        ///   }<br/>
+        /// }<br/>
+        /// {<br/>
+        ///   "key": "deletedEntry",<br/>
+        ///   "value": {<br/>
+        ///     "path": "string (REQUIRED)"<br/>
+        ///   }<br/>
+        /// }<br/>
+        /// {<br/>
+        ///   "key": "lfsFile",<br/>
+        ///   "value": {<br/>
+        ///     "path": "string (REQUIRED - max 1000 chars)",<br/>
+        ///     "oid": "string (OPTIONAL - required if oldPath not set, 64 hex chars)",<br/>
+        ///     "algo": "sha256 (OPTIONAL - only sha256 supported)",<br/>
+        ///     "size": "number (OPTIONAL - required if oldPath is set)",<br/>
+        ///     "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
+        ///   }<br/>
+        /// }<br/>
+        /// ```<br/>
+        /// JSON payload:<br/>
+        /// ```json<br/>
+        /// {<br/>
+        ///   "summary": "string (REQUIRED)",<br/>
+        ///   "description": "string (OPTIONAL - defaults to empty string)",<br/>
+        ///   "parentCommit": "string (OPTIONAL - 40-character hex SHA)"<br/>
+        ///   "files": [<br/>
+        ///     {<br/>
+        ///       "path": "string (REQUIRED)",<br/>
+        ///       "content": "string (OPTIONAL - required if oldPath not set)",<br/>
+        ///       "encoding": "utf-8 | base64 (OPTIONAL - defaults to utf-8)",<br/>
+        ///       "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
+        ///     }<br/>
+        ///   ],<br/>
+        ///   "deletedEntries": [<br/>
+        ///     {<br/>
+        ///       "path": "string (REQUIRED)"<br/>
+        ///     }<br/>
+        ///   ],<br/>
+        ///   "lfsFiles": [<br/>
+        ///     {<br/>
+        ///       "path": "string (REQUIRED - max 1000 chars)",<br/>
+        ///       "oid": "string (OPTIONAL - required if oldPath not set, 64 hex chars)",<br/>
+        ///       "algo": "sha256 (OPTIONAL - only sha256 supported)",<br/>
+        ///       "size": "number (OPTIONAL - required if oldPath is set)",<br/>
+        ///       "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
+        ///     }<br/>
+        ///   ]<br/>
+        /// }<br/>
+        /// ```
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="rev"></param>
+        /// <param name="createPr">
+        /// Whether to create a pull request from the commit
+        /// </param>
+        /// <param name="hotReload">
+        /// For Spaces, whether to try to hot reload the commit (only for single python files updates)
+        /// </param>
+        /// <param name="contentType">
+        /// `application/x-ndjson` if you to commit by json lines<br/>
+        /// Default Value: application/x-ndjson
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response89> CreateSpacesByNamespaceByRepoCommitByRevAsync(
+            string @namespace,
+            string repo,
+            string rev,
+            object? createPr = default,
+            object? hotReload = default,
+            global::HuggingFace.ContentType3? contentType = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            PrepareArguments(
+                client: HttpClient);
+            PrepareCreateSpacesByNamespaceByRepoCommitByRevArguments(
+                httpClient: HttpClient,
+                @namespace: ref @namespace,
+                repo: ref repo,
+                rev: ref rev,
+                createPr: createPr,
+                hotReload: hotReload,
+                contentType: ref contentType);
+
+            var __pathBuilder = new global::HuggingFace.PathBuilder(
+                path: $"/api/spaces/{@namespace}/{repo}/commit/{rev}",
+                baseUri: HttpClient.BaseAddress); 
+            __pathBuilder
+                .AddOptionalParameter("create_pr", createPr?.ToString())
+                .AddOptionalParameter("hot_reload", hotReload?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
+            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Post,
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+#if NET6_0_OR_GREATER
+            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+#endif
+
+            foreach (var __authorization in Authorizations)
+            {
+                if (__authorization.Type == "Http" ||
+                    __authorization.Type == "OAuth2")
+                {
+                    __httpRequest.Headers.Authorization = new global::System.Net.Http.Headers.AuthenticationHeaderValue(
+                        scheme: __authorization.Name,
+                        parameter: __authorization.Value);
+                }
+                else if (__authorization.Type == "ApiKey" &&
+                         __authorization.Location == "Header")
+                {
+                    __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
+                }
+            }
+
+            if (contentType != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Content-Type", contentType?.ToValueString() ?? string.Empty);
+            }
+
+
+            PrepareRequest(
+                client: HttpClient,
+                request: __httpRequest);
+            PrepareCreateSpacesByNamespaceByRepoCommitByRevRequest(
+                httpClient: HttpClient,
+                httpRequestMessage: __httpRequest,
+                @namespace: @namespace,
+                repo: repo,
+                rev: rev,
+                createPr: createPr,
+                hotReload: hotReload,
+                contentType: contentType);
+
+            using var __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: HttpClient,
+                response: __response);
+            ProcessCreateSpacesByNamespaceByRepoCommitByRevResponse(
+                httpClient: HttpClient,
+                httpResponseMessage: __response);
+
+            if (ReadResponseAsString)
+            {
+                var __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                    cancellationToken
+#endif
+                ).ConfigureAwait(false);
+
+                ProcessResponseContent(
+                    client: HttpClient,
+                    response: __response,
+                    content: ref __content);
+                ProcessCreateSpacesByNamespaceByRepoCommitByRevResponseContent(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response,
+                    content: ref __content);
+
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    return
+                        global::HuggingFace.Response89.FromJson(__content, JsonSerializerContext) ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    throw new global::HuggingFace.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+            else
+            {
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                        cancellationToken
+#endif
+                    ).ConfigureAwait(false);
+
+                    return
+                        await global::HuggingFace.Response89.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    string? __content = null;
+                    try
+                    {
+                        __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                            cancellationToken
+#endif
+                        ).ConfigureAwait(false);
+                    }
+                    catch (global::System.Exception)
+                    {
+                    }
+
+                    throw new global::HuggingFace.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+        }
+    }
+}

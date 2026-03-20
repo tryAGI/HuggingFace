@@ -31,7 +31,7 @@ namespace HuggingFace
         /// <param name="stage"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response129> GetJobsByNamespaceCountAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response170> GetJobsByNamespaceCountAsync(
             string @namespace,
             global::HuggingFace.Stage? stage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -117,7 +117,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response129.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response170.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -148,7 +148,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response129.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response170.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

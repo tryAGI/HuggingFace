@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request48 request,
+            global::HuggingFace.Request60 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>

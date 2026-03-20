@@ -11,9 +11,23 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("comment")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("fromRepo")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Comment { get; set; }
+        public required string FromRepo { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("toRepo")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string ToRepo { get; set; }
+
+        /// <summary>
+        /// Default Value: model
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestTypeJsonConverter))]
+        public global::HuggingFace.RequestType? Type { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +38,22 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request65" /> class.
         /// </summary>
-        /// <param name="comment"></param>
+        /// <param name="fromRepo"></param>
+        /// <param name="toRepo"></param>
+        /// <param name="type">
+        /// Default Value: model
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request65(
-            string comment)
+            string fromRepo,
+            string toRepo,
+            global::HuggingFace.RequestType? type)
         {
-            this.Comment = comment ?? throw new global::System.ArgumentNullException(nameof(comment));
+            this.FromRepo = fromRepo ?? throw new global::System.ArgumentNullException(nameof(fromRepo));
+            this.ToRepo = toRepo ?? throw new global::System.ArgumentNullException(nameof(toRepo));
+            this.Type = type;
         }
 
         /// <summary>

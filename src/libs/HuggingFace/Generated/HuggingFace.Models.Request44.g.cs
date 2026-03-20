@@ -9,10 +9,10 @@ namespace HuggingFace
     public sealed partial class Request44
     {
         /// <summary>
-        /// 
+        /// The resource group to add the repository to, if null, the repository will be removed from the resource group
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("comment")]
-        public string? Comment { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -23,14 +23,16 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request44" /> class.
         /// </summary>
-        /// <param name="comment"></param>
+        /// <param name="resourceGroupId">
+        /// The resource group to add the repository to, if null, the repository will be removed from the resource group
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request44(
-            string? comment)
+            string? resourceGroupId)
         {
-            this.Comment = comment;
+            this.ResourceGroupId = resourceGroupId;
         }
 
         /// <summary>

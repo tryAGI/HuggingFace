@@ -11,19 +11,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Models,
-        /// <summary>
-        /// 
-        /// </summary>
-        Spaces,
-        /// <summary>
-        /// 
-        /// </summary>
-        Datasets,
-        /// <summary>
-        /// 
-        /// </summary>
-        Kernels,
+        Buckets,
     }
 
     /// <summary>
@@ -38,10 +26,7 @@ namespace HuggingFace
         {
             return value switch
             {
-                RepoType6.Models => "models",
-                RepoType6.Spaces => "spaces",
-                RepoType6.Datasets => "datasets",
-                RepoType6.Kernels => "kernels",
+                RepoType6.Buckets => "buckets",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +37,7 @@ namespace HuggingFace
         {
             return value switch
             {
-                "models" => RepoType6.Models,
-                "spaces" => RepoType6.Spaces,
-                "datasets" => RepoType6.Datasets,
-                "kernels" => RepoType6.Kernels,
+                "buckets" => RepoType6.Buckets,
                 _ => null,
             };
         }

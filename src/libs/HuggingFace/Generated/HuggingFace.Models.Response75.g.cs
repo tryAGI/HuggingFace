@@ -9,38 +9,18 @@ namespace HuggingFace
     public sealed partial class Response75
     {
         /// <summary>
-        /// Whether the commit was successful
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("success")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("files")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool Success { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile2> Files { get; set; }
 
         /// <summary>
-        /// The URL of the pull request
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pullRequestUrl")]
-        public string? PullRequestUrl { get; set; }
-
-        /// <summary>
-        /// The OID of the commit
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("commitOid")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string CommitOid { get; set; }
-
-        /// <summary>
-        /// The URL of the commit
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("commitUrl")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string CommitUrl { get; set; }
-
-        /// <summary>
-        /// The output of the git hook
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("hookOutput")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string HookOutput { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -51,36 +31,17 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response75" /> class.
         /// </summary>
-        /// <param name="success">
-        /// Whether the commit was successful
-        /// </param>
-        /// <param name="pullRequestUrl">
-        /// The URL of the pull request
-        /// </param>
-        /// <param name="commitOid">
-        /// The OID of the commit
-        /// </param>
-        /// <param name="commitUrl">
-        /// The URL of the commit
-        /// </param>
-        /// <param name="hookOutput">
-        /// The output of the git hook
-        /// </param>
+        /// <param name="files"></param>
+        /// <param name="commitOid"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response75(
-            bool success,
-            string commitOid,
-            string commitUrl,
-            string hookOutput,
-            string? pullRequestUrl)
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile2> files,
+            string commitOid)
         {
-            this.Success = success;
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
             this.CommitOid = commitOid ?? throw new global::System.ArgumentNullException(nameof(commitOid));
-            this.CommitUrl = commitUrl ?? throw new global::System.ArgumentNullException(nameof(commitUrl));
-            this.HookOutput = hookOutput ?? throw new global::System.ArgumentNullException(nameof(hookOutput));
-            this.PullRequestUrl = pullRequestUrl;
         }
 
         /// <summary>

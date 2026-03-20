@@ -13,11 +13,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response124> CreateCollectionsByNamespaceBySlugItemsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response165> CreateCollectionsByNamespaceBySlugItemsAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.Request69 request,
+            global::HuggingFace.Request85 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace HuggingFace
         /// <param name="note"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response124> CreateCollectionsByNamespaceBySlugItemsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response165> CreateCollectionsByNamespaceBySlugItemsAsync(
             string @namespace,
             string slug,
             global::HuggingFace.RequestItem2 item,

@@ -16,7 +16,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem21>> GetPapersAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem28>> GetPapersAsync(
             string? cursor = default,
             int? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default);

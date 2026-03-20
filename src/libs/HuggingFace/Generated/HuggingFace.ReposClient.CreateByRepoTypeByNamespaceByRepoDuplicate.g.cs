@@ -7,17 +7,17 @@ namespace HuggingFace
     {
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDuplicateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType45 repoType,
+            ref global::HuggingFace.RepoType24 repoType,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request50 request);
+            global::HuggingFace.Request62 request);
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDuplicateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType45 repoType,
+            global::HuggingFace.RepoType24 repoType,
             string @namespace,
             string repo,
-            global::HuggingFace.Request50 request);
+            global::HuggingFace.Request62 request);
         partial void ProcessCreateByRepoTypeByNamespaceByRepoDuplicateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,12 +36,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response98> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
-            global::HuggingFace.RepoType45 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response122> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
+            global::HuggingFace.RepoType24 repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request50 request,
+            global::HuggingFace.Request62 request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -134,7 +134,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response98.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response122.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -165,7 +165,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response98.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response122.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -218,13 +218,13 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response98> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
-            global::HuggingFace.RepoType45 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response122> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
+            global::HuggingFace.RepoType24 repoType,
             string @namespace,
             string repo,
             string repository,
             bool? @private = default,
-            global::HuggingFace.RequestVisibility2? visibility = default,
+            global::HuggingFace.RequestVisibility4? visibility = default,
             string? resourceGroupId = default,
             global::HuggingFace.RequestHardware? hardware = default,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds = default,
@@ -232,7 +232,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.RequestVariable>? variables = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request50
+            var __request = new global::HuggingFace.Request62
             {
                 Repository = repository,
                 Private = @private,

@@ -11,9 +11,8 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Key { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
+        public string? Message { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +23,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request47" /> class.
         /// </summary>
-        /// <param name="key"></param>
+        /// <param name="message"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request47(
-            string key)
+            string? message)
         {
-            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
+            this.Message = message;
         }
 
         /// <summary>

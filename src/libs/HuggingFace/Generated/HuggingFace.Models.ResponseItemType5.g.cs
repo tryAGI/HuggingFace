@@ -11,39 +11,15 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        PipelineTag,
+        File,
         /// <summary>
         /// 
         /// </summary>
-        Library,
+        Directory,
         /// <summary>
         /// 
         /// </summary>
-        Dataset,
-        /// <summary>
-        /// 
-        /// </summary>
-        Language,
-        /// <summary>
-        /// 
-        /// </summary>
-        License,
-        /// <summary>
-        /// 
-        /// </summary>
-        Arxiv,
-        /// <summary>
-        /// 
-        /// </summary>
-        Doi,
-        /// <summary>
-        /// 
-        /// </summary>
-        Region,
-        /// <summary>
-        /// 
-        /// </summary>
-        Other,
+        Unknown,
     }
 
     /// <summary>
@@ -58,15 +34,9 @@ namespace HuggingFace
         {
             return value switch
             {
-                ResponseItemType5.PipelineTag => "pipeline_tag",
-                ResponseItemType5.Library => "library",
-                ResponseItemType5.Dataset => "dataset",
-                ResponseItemType5.Language => "language",
-                ResponseItemType5.License => "license",
-                ResponseItemType5.Arxiv => "arxiv",
-                ResponseItemType5.Doi => "doi",
-                ResponseItemType5.Region => "region",
-                ResponseItemType5.Other => "other",
+                ResponseItemType5.File => "file",
+                ResponseItemType5.Directory => "directory",
+                ResponseItemType5.Unknown => "unknown",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -77,15 +47,9 @@ namespace HuggingFace
         {
             return value switch
             {
-                "pipeline_tag" => ResponseItemType5.PipelineTag,
-                "library" => ResponseItemType5.Library,
-                "dataset" => ResponseItemType5.Dataset,
-                "language" => ResponseItemType5.Language,
-                "license" => ResponseItemType5.License,
-                "arxiv" => ResponseItemType5.Arxiv,
-                "doi" => ResponseItemType5.Doi,
-                "region" => ResponseItemType5.Region,
-                "other" => ResponseItemType5.Other,
+                "file" => ResponseItemType5.File,
+                "directory" => ResponseItemType5.Directory,
+                "unknown" => ResponseItemType5.Unknown,
                 _ => null,
             };
         }

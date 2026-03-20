@@ -12,7 +12,7 @@ namespace HuggingFace
         /// <param name="stage"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response129> GetJobsByNamespaceCountAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response170> GetJobsByNamespaceCountAsync(
             string @namespace,
             global::HuggingFace.Stage? stage = default,
             global::System.Threading.CancellationToken cancellationToken = default);

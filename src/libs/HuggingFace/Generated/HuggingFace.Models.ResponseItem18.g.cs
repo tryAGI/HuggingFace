@@ -11,57 +11,47 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemType6JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Name { get; set; }
+        public required global::HuggingFace.ResponseItemType6 Type { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("prettyName")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("oid")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string PrettyName { get; set; }
+        public required string Oid { get; set; }
+
+        /// <summary>
+        /// If the file is a LFS pointer, it'll return the size of the remote file
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
+        public int? Size { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("cpu")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Cpu { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("lfs")]
+        public global::HuggingFace.ResponseItemLfs4? Lfs { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("ram")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Ram { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("xetHash")]
+        public string? XetHash { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("accelerator")]
-        public global::HuggingFace.ResponseItemAccelerator2? Accelerator { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("lastCommit")]
+        public global::HuggingFace.ResponseItemLastCommit4? LastCommit { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("unitCostMicroUSD")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double UnitCostMicroUSD { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("unitCostUSD")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double UnitCostUSD { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("unitLabel")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string UnitLabel { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("securityFileStatus")]
+        public global::HuggingFace.ResponseItemSecurityFileStatus4? SecurityFileStatus { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -72,35 +62,34 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem18" /> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="prettyName"></param>
-        /// <param name="cpu"></param>
-        /// <param name="ram"></param>
-        /// <param name="accelerator"></param>
-        /// <param name="unitCostMicroUSD"></param>
-        /// <param name="unitCostUSD"></param>
-        /// <param name="unitLabel"></param>
+        /// <param name="type"></param>
+        /// <param name="oid"></param>
+        /// <param name="size">
+        /// If the file is a LFS pointer, it'll return the size of the remote file
+        /// </param>
+        /// <param name="lfs"></param>
+        /// <param name="xetHash"></param>
+        /// <param name="lastCommit"></param>
+        /// <param name="securityFileStatus"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem18(
-            string name,
-            string prettyName,
-            string cpu,
-            string ram,
-            double unitCostMicroUSD,
-            double unitCostUSD,
-            string unitLabel,
-            global::HuggingFace.ResponseItemAccelerator2? accelerator)
+            global::HuggingFace.ResponseItemType6 type,
+            string oid,
+            int? size,
+            global::HuggingFace.ResponseItemLfs4? lfs,
+            string? xetHash,
+            global::HuggingFace.ResponseItemLastCommit4? lastCommit,
+            global::HuggingFace.ResponseItemSecurityFileStatus4? securityFileStatus)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.PrettyName = prettyName ?? throw new global::System.ArgumentNullException(nameof(prettyName));
-            this.Cpu = cpu ?? throw new global::System.ArgumentNullException(nameof(cpu));
-            this.Ram = ram ?? throw new global::System.ArgumentNullException(nameof(ram));
-            this.UnitCostMicroUSD = unitCostMicroUSD;
-            this.UnitCostUSD = unitCostUSD;
-            this.UnitLabel = unitLabel ?? throw new global::System.ArgumentNullException(nameof(unitLabel));
-            this.Accelerator = accelerator;
+            this.Type = type;
+            this.Oid = oid ?? throw new global::System.ArgumentNullException(nameof(oid));
+            this.Size = size;
+            this.Lfs = lfs;
+            this.XetHash = xetHash;
+            this.LastCommit = lastCommit;
+            this.SecurityFileStatus = securityFileStatus;
         }
 
         /// <summary>

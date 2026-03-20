@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("comment")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Comment { get; set; }
+        public required string Key { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +24,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request61" /> class.
         /// </summary>
-        /// <param name="comment"></param>
+        /// <param name="key"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request61(
-            string comment)
+            string key)
         {
-            this.Comment = comment ?? throw new global::System.ArgumentNullException(nameof(comment));
+            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
         }
 
         /// <summary>

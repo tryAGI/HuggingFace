@@ -12,11 +12,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response117> CreatePostsByUsernameByPostSlugCommentAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response158> CreatePostsByUsernameByPostSlugCommentAsync(
             string username,
             string postSlug,
 
-            global::HuggingFace.Request64 request,
+            global::HuggingFace.Request80 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace HuggingFace
         /// <param name="comment"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response117> CreatePostsByUsernameByPostSlugCommentAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response158> CreatePostsByUsernameByPostSlugCommentAsync(
             string username,
             string postSlug,
             string comment,

@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace HuggingFace
@@ -11,28 +13,36 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("user")]
+        public global::HuggingFace.ResponseItemUser3? User { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("grantedBy")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseItemGrantedByVariant12, global::HuggingFace.ResponseItemGrantedByVariant22>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemGrantedByVariant12, global::HuggingFace.ResponseItemGrantedByVariant22>? GrantedBy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemStatus2JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Id { get; set; }
+        public required global::HuggingFace.ResponseItemStatus2 Status { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
-        public global::HuggingFace.ResponseItemNote5? Note { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("fields")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Fields { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
-        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Position { get; set; }
+        public required global::System.DateTime Timestamp { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -43,23 +53,26 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem26" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
-        /// <param name="gallery"></param>
-        /// <param name="position"></param>
+        /// <param name="user"></param>
+        /// <param name="grantedBy"></param>
+        /// <param name="status"></param>
+        /// <param name="fields"></param>
+        /// <param name="timestamp"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem26(
-            string id,
-            double position,
-            global::HuggingFace.ResponseItemNote5? note,
-            global::System.Collections.Generic.IList<string>? gallery)
+            global::HuggingFace.ResponseItemStatus2 status,
+            global::System.DateTime timestamp,
+            global::HuggingFace.ResponseItemUser3? user,
+            global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemGrantedByVariant12, global::HuggingFace.ResponseItemGrantedByVariant22>? grantedBy,
+            global::System.Collections.Generic.Dictionary<string, string>? fields)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Position = position;
-            this.Note = note;
-            this.Gallery = gallery;
+            this.Status = status;
+            this.Timestamp = timestamp;
+            this.User = user;
+            this.GrantedBy = grantedBy;
+            this.Fields = fields;
         }
 
         /// <summary>

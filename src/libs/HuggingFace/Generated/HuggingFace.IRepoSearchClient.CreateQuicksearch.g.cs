@@ -36,9 +36,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response97> CreateQuicksearchAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response121> CreateQuicksearchAsync(
 
-            global::HuggingFace.Request45 request,
+            global::HuggingFace.Request57 request,
             string? q = default,
             int? limit = default,
             global::HuggingFace.AnyOf<global::HuggingFace.Lang5?, string>? lang = default,
@@ -51,7 +51,7 @@ namespace HuggingFace
             string? @namespace = default,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
             string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType44?, string>? repoType = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType23?, string>? repoType = default,
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,
@@ -113,7 +113,7 @@ namespace HuggingFace
         /// <param name="requestSpacesTags"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response97> CreateQuicksearchAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response121> CreateQuicksearchAsync(
             global::System.Collections.Generic.IList<string> requestExclude,
             string? q = default,
             int? limit = default,
@@ -127,7 +127,7 @@ namespace HuggingFace
             string? @namespace = default,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
             string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType44?, string>? repoType = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType23?, string>? repoType = default,
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,

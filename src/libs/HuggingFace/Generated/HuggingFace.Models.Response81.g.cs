@@ -11,16 +11,23 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("scansDone")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("casUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool ScansDone { get; set; }
+        public required string CasUrl { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("filesWithIssues")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("exp")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseFilesWithIssue> FilesWithIssues { get; set; }
+        public required double Exp { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("accessToken")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AccessToken { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,17 +38,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response81" /> class.
         /// </summary>
-        /// <param name="scansDone"></param>
-        /// <param name="filesWithIssues"></param>
+        /// <param name="casUrl"></param>
+        /// <param name="exp"></param>
+        /// <param name="accessToken"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response81(
-            bool scansDone,
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseFilesWithIssue> filesWithIssues)
+            string casUrl,
+            double exp,
+            string accessToken)
         {
-            this.ScansDone = scansDone;
-            this.FilesWithIssues = filesWithIssues ?? throw new global::System.ArgumentNullException(nameof(filesWithIssues));
+            this.CasUrl = casUrl ?? throw new global::System.ArgumentNullException(nameof(casUrl));
+            this.Exp = exp;
+            this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
         }
 
         /// <summary>

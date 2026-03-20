@@ -14,12 +14,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response103> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
-            global::HuggingFace.RepoType48 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response127> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
+            global::HuggingFace.RepoType27 repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request55 request,
+            global::HuggingFace.Request67 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -35,8 +35,8 @@ namespace HuggingFace
         /// <param name="views"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response103> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
-            global::HuggingFace.RepoType48 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response127> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
+            global::HuggingFace.RepoType27 repoType,
             string @namespace,
             string repo,
             string sql,

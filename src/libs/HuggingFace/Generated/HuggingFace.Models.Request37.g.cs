@@ -11,8 +11,21 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
-        public string? Message { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("files")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.RequestFile3> Files { get; set; }
+
+        /// <summary>
+        /// Provide this parameter if you plan to modify `.gitattributes` yourself at the same time as uploading LFS files. Note that this is not needed if you solely rely on automatic LFS detection from HF: the commit endpoint will automatically edit the `.gitattributes` file to track the files passed to its `lfsFiles` param.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gitAttributes")]
+        public string? GitAttributes { get; set; }
+
+        /// <summary>
+        /// Content of the .gitignore file for the revision. Optional, otherwise takes the existing content of `.gitignore` for the revision.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gitIgnore")]
+        public string? GitIgnore { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -23,14 +36,24 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request37" /> class.
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="files"></param>
+        /// <param name="gitAttributes">
+        /// Provide this parameter if you plan to modify `.gitattributes` yourself at the same time as uploading LFS files. Note that this is not needed if you solely rely on automatic LFS detection from HF: the commit endpoint will automatically edit the `.gitattributes` file to track the files passed to its `lfsFiles` param.
+        /// </param>
+        /// <param name="gitIgnore">
+        /// Content of the .gitignore file for the revision. Optional, otherwise takes the existing content of `.gitignore` for the revision.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request37(
-            string? message)
+            global::System.Collections.Generic.IList<global::HuggingFace.RequestFile3> files,
+            string? gitAttributes,
+            string? gitIgnore)
         {
-            this.Message = message;
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
+            this.GitAttributes = gitAttributes;
+            this.GitIgnore = gitIgnore;
         }
 
         /// <summary>

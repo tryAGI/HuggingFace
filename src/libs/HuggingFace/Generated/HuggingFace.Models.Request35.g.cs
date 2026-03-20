@@ -9,24 +9,23 @@ namespace HuggingFace
     public sealed partial class Request35
     {
         /// <summary>
-        /// The commit to start from
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("startingPoint")]
-        public string? StartingPoint { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("files")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.RequestFile> Files { get; set; }
 
         /// <summary>
-        /// Create an empty branch<br/>
-        /// Default Value: false
+        /// Provide this parameter if you plan to modify `.gitattributes` yourself at the same time as uploading LFS files. Note that this is not needed if you solely rely on automatic LFS detection from HF: the commit endpoint will automatically edit the `.gitattributes` file to track the files passed to its `lfsFiles` param.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("emptyBranch")]
-        public bool? EmptyBranch { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("gitAttributes")]
+        public string? GitAttributes { get; set; }
 
         /// <summary>
-        /// Overwrite the branch if it already exists<br/>
-        /// Default Value: false
+        /// Content of the .gitignore file for the revision. Optional, otherwise takes the existing content of `.gitignore` for the revision.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("overwrite")]
-        public bool? Overwrite { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("gitIgnore")]
+        public string? GitIgnore { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,28 +36,24 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request35" /> class.
         /// </summary>
-        /// <param name="startingPoint">
-        /// The commit to start from
+        /// <param name="files"></param>
+        /// <param name="gitAttributes">
+        /// Provide this parameter if you plan to modify `.gitattributes` yourself at the same time as uploading LFS files. Note that this is not needed if you solely rely on automatic LFS detection from HF: the commit endpoint will automatically edit the `.gitattributes` file to track the files passed to its `lfsFiles` param.
         /// </param>
-        /// <param name="emptyBranch">
-        /// Create an empty branch<br/>
-        /// Default Value: false
-        /// </param>
-        /// <param name="overwrite">
-        /// Overwrite the branch if it already exists<br/>
-        /// Default Value: false
+        /// <param name="gitIgnore">
+        /// Content of the .gitignore file for the revision. Optional, otherwise takes the existing content of `.gitignore` for the revision.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request35(
-            string? startingPoint,
-            bool? emptyBranch,
-            bool? overwrite)
+            global::System.Collections.Generic.IList<global::HuggingFace.RequestFile> files,
+            string? gitAttributes,
+            string? gitIgnore)
         {
-            this.StartingPoint = startingPoint;
-            this.EmptyBranch = emptyBranch;
-            this.Overwrite = overwrite;
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
+            this.GitAttributes = gitAttributes;
+            this.GitIgnore = gitIgnore;
         }
 
         /// <summary>

@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -13,95 +11,107 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("datasets")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Slug { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseDataset2> Datasets { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("datasetsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Title { get; set; }
+        public required double DatasetsCount { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        public string? Description { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("models")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseModel2> Models { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("lastUpdated")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime LastUpdated { get; set; }
+        public required double ModelsCount { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gating")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatingVariant22, global::HuggingFace.ResponseGatingVariant32>?>))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("orgs")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatingVariant22, global::HuggingFace.ResponseGatingVariant32>?> Gating { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseOrg6> Orgs { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseOwnerVariant12, global::HuggingFace.ResponseOwnerVariant22>))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("q")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.ResponseOwnerVariant12, global::HuggingFace.ResponseOwnerVariant22> Owner { get; set; }
+        public required string Q { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("spaces")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Position { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseSpace2> Spaces { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseTheme2JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("spacesCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseTheme2 Theme { get; set; }
+        public required double SpacesCount { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool Private { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseUser7> Users { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("upvotes")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("papers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Upvotes { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponsePaper2> Papers { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("shareUrl")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("papersCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string ShareUrl { get; set; }
+        public required double PapersCount { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isUpvotedByUser")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("collections")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool IsUpvotedByUser { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseCollection2> Collections { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("items")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("collectionsCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.ResponseItem23, global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemVariant12, global::HuggingFace.ResponseItemVariant22, global::HuggingFace.ResponseItemVariant32, global::HuggingFace.ResponseItemVariant42, global::HuggingFace.ResponseItemVariant52>?>> Items { get; set; }
+        public required double CollectionsCount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("buckets")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseBucket2> Buckets { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bucketsCount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double BucketsCount { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -112,50 +122,56 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response121" /> class.
         /// </summary>
-        /// <param name="slug"></param>
-        /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="lastUpdated"></param>
-        /// <param name="gating"></param>
-        /// <param name="owner"></param>
-        /// <param name="position"></param>
-        /// <param name="theme"></param>
-        /// <param name="private"></param>
-        /// <param name="upvotes"></param>
-        /// <param name="shareUrl"></param>
-        /// <param name="isUpvotedByUser"></param>
-        /// <param name="items"></param>
+        /// <param name="datasets"></param>
+        /// <param name="datasetsCount"></param>
+        /// <param name="models"></param>
+        /// <param name="modelsCount"></param>
+        /// <param name="orgs"></param>
+        /// <param name="q"></param>
+        /// <param name="spaces"></param>
+        /// <param name="spacesCount"></param>
+        /// <param name="users"></param>
+        /// <param name="papers"></param>
+        /// <param name="papersCount"></param>
+        /// <param name="collections"></param>
+        /// <param name="collectionsCount"></param>
+        /// <param name="buckets"></param>
+        /// <param name="bucketsCount"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response121(
-            string slug,
-            string title,
-            global::System.DateTime lastUpdated,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatingVariant22, global::HuggingFace.ResponseGatingVariant32>?> gating,
-            global::HuggingFace.AnyOf<global::HuggingFace.ResponseOwnerVariant12, global::HuggingFace.ResponseOwnerVariant22> owner,
-            double position,
-            global::HuggingFace.ResponseTheme2 theme,
-            bool @private,
-            double upvotes,
-            string shareUrl,
-            bool isUpvotedByUser,
-            global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.ResponseItem23, global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemVariant12, global::HuggingFace.ResponseItemVariant22, global::HuggingFace.ResponseItemVariant32, global::HuggingFace.ResponseItemVariant42, global::HuggingFace.ResponseItemVariant52>?>> items,
-            string? description)
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseDataset2> datasets,
+            double datasetsCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseModel2> models,
+            double modelsCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseOrg6> orgs,
+            string q,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseSpace2> spaces,
+            double spacesCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseUser7> users,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponsePaper2> papers,
+            double papersCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseCollection2> collections,
+            double collectionsCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseBucket2> buckets,
+            double bucketsCount)
         {
-            this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.LastUpdated = lastUpdated;
-            this.Gating = gating;
-            this.Owner = owner;
-            this.Position = position;
-            this.Theme = theme;
-            this.Private = @private;
-            this.Upvotes = upvotes;
-            this.ShareUrl = shareUrl ?? throw new global::System.ArgumentNullException(nameof(shareUrl));
-            this.IsUpvotedByUser = isUpvotedByUser;
-            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
-            this.Description = description;
+            this.Datasets = datasets ?? throw new global::System.ArgumentNullException(nameof(datasets));
+            this.DatasetsCount = datasetsCount;
+            this.Models = models ?? throw new global::System.ArgumentNullException(nameof(models));
+            this.ModelsCount = modelsCount;
+            this.Orgs = orgs ?? throw new global::System.ArgumentNullException(nameof(orgs));
+            this.Q = q ?? throw new global::System.ArgumentNullException(nameof(q));
+            this.Spaces = spaces ?? throw new global::System.ArgumentNullException(nameof(spaces));
+            this.SpacesCount = spacesCount;
+            this.Users = users ?? throw new global::System.ArgumentNullException(nameof(users));
+            this.Papers = papers ?? throw new global::System.ArgumentNullException(nameof(papers));
+            this.PapersCount = papersCount;
+            this.Collections = collections ?? throw new global::System.ArgumentNullException(nameof(collections));
+            this.CollectionsCount = collectionsCount;
+            this.Buckets = buckets ?? throw new global::System.ArgumentNullException(nameof(buckets));
+            this.BucketsCount = bucketsCount;
         }
 
         /// <summary>

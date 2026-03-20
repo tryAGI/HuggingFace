@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string slug,
             ref string id,
-            global::HuggingFace.Request66 request);
+            global::HuggingFace.Request82 request);
         partial void PrepareEditCollectionsByNamespaceBySlugByIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
             string id,
-            global::HuggingFace.Request66 request);
+            global::HuggingFace.Request82 request);
         partial void ProcessEditCollectionsByNamespaceBySlugByIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,12 +36,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response120> EditCollectionsByNamespaceBySlugByIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response161> EditCollectionsByNamespaceBySlugByIdAsync(
             string @namespace,
             string slug,
             string id,
 
-            global::HuggingFace.Request66 request,
+            global::HuggingFace.Request82 request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -134,7 +134,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response120.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response161.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -165,7 +165,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response120.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response161.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -212,7 +212,7 @@ namespace HuggingFace
         /// <param name="gating"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response120> EditCollectionsByNamespaceBySlugByIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response161> EditCollectionsByNamespaceBySlugByIdAsync(
             string @namespace,
             string slug,
             string id,
@@ -224,7 +224,7 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatingVariant2, global::HuggingFace.RequestGatingVariant3>? gating = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request66
+            var __request = new global::HuggingFace.Request82
             {
                 Position = position,
                 Private = @private,

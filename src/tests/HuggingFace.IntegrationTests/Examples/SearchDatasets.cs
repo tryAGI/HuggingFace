@@ -17,7 +17,7 @@ public partial class Tests
         using var client = new HuggingFaceClient(apiKey);
 
         var response = await client.RepoSearch.CreateQuicksearchAsync(
-            request: new Request45
+            request: new Request57
             {
                 Q = "sentiment analysis",
                 Limit = 5,

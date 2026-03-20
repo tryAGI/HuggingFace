@@ -7,14 +7,14 @@ namespace HuggingFace
     {
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsByNumArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType29 repoType,
+            ref global::HuggingFace.RepoType11 repoType,
             ref string @namespace,
             ref string repo,
             ref string num);
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsByNumRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType29 repoType,
+            global::HuggingFace.RepoType11 repoType,
             string @namespace,
             string repo,
             string num);
@@ -36,8 +36,8 @@ namespace HuggingFace
         /// <param name="num"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant13, global::HuggingFace.ResponseVariant22>?, global::HuggingFace.Response85>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
-            global::HuggingFace.RepoType29 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant15, global::HuggingFace.ResponseVariant24>?, global::HuggingFace.Response107>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
+            global::HuggingFace.RepoType11 repoType,
             string @namespace,
             string repo,
             string num,
@@ -125,7 +125,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant13, global::HuggingFace.ResponseVariant22>?, global::HuggingFace.Response85>.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant15, global::HuggingFace.ResponseVariant24>?, global::HuggingFace.Response107>.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -156,7 +156,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant13, global::HuggingFace.ResponseVariant22>?, global::HuggingFace.Response85>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant15, global::HuggingFace.ResponseVariant24>?, global::HuggingFace.Response107>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

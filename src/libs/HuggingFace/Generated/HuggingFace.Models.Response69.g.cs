@@ -9,18 +9,18 @@ namespace HuggingFace
     public sealed partial class Response69
     {
         /// <summary>
-        /// 
+        /// The normalized path of the subtree, starting with a slash
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("files")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile> Files { get; set; }
+        public required string Path { get; set; }
 
         /// <summary>
-        /// 
+        /// Total size in bytes of all files under the subtree
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("commitOid")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string CommitOid { get; set; }
+        public required int Size { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,17 +31,21 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response69" /> class.
         /// </summary>
-        /// <param name="files"></param>
-        /// <param name="commitOid"></param>
+        /// <param name="path">
+        /// The normalized path of the subtree, starting with a slash
+        /// </param>
+        /// <param name="size">
+        /// Total size in bytes of all files under the subtree
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response69(
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile> files,
-            string commitOid)
+            string path,
+            int size)
         {
-            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
-            this.CommitOid = commitOid ?? throw new global::System.ArgumentNullException(nameof(commitOid));
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Size = size;
         }
 
         /// <summary>

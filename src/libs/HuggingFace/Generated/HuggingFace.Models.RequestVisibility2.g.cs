@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    /// Repository visibility. `protected` is only supported for Spaces.
     /// </summary>
     public enum RequestVisibility2
     {

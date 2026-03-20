@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareCreateReposCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.AllOf<global::HuggingFace.Request52, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?> request);
+            global::HuggingFace.AllOf<global::HuggingFace.Request64, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?> request);
         partial void PrepareCreateReposCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.AllOf<global::HuggingFace.Request52, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?> request);
+            global::HuggingFace.AllOf<global::HuggingFace.Request64, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?> request);
         partial void ProcessCreateReposCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -27,9 +27,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response99> CreateReposCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response123> CreateReposCreateAsync(
 
-            global::HuggingFace.AllOf<global::HuggingFace.Request52, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?> request,
+            global::HuggingFace.AllOf<global::HuggingFace.Request64, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -96,19 +96,19 @@ namespace HuggingFace
             {
                 string? __content_409 = null;
                 global::System.Exception? __exception_409 = null;
-                global::HuggingFace.Response100? __value_409 = null;
+                global::HuggingFace.Response124? __value_409 = null;
                 try
                 {
                     if (ReadResponseAsString)
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_409 = global::HuggingFace.Response100.FromJson(__content_409, JsonSerializerContext);
+                        __value_409 = global::HuggingFace.Response124.FromJson(__content_409, JsonSerializerContext);
                     }
                     else
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_409 = global::HuggingFace.Response100.FromJson(__content_409, JsonSerializerContext);
+                        __value_409 = global::HuggingFace.Response124.FromJson(__content_409, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -116,7 +116,7 @@ namespace HuggingFace
                     __exception_409 = __ex;
                 }
 
-                throw new global::HuggingFace.ApiException<global::HuggingFace.Response100>(
+                throw new global::HuggingFace.ApiException<global::HuggingFace.Response124>(
                     message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
                     innerException: __exception_409,
                     statusCode: __response.StatusCode)
@@ -152,7 +152,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response99.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response123.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -183,7 +183,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response99.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response123.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -221,10 +221,10 @@ namespace HuggingFace
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response99> CreateReposCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response123> CreateReposCreateAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.AllOf<global::HuggingFace.Request52, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?>
+            var __request = new global::HuggingFace.AllOf<global::HuggingFace.Request64, global::HuggingFace.AnyOf<global::HuggingFace.RequestVariant1, global::HuggingFace.RequestVariant22, global::HuggingFace.RequestVariant3, global::HuggingFace.RequestVariant4>?>
             {
             };
 

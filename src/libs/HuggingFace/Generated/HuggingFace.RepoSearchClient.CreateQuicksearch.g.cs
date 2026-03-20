@@ -19,11 +19,11 @@ namespace HuggingFace
             ref string? @namespace,
             ref global::HuggingFace.AnyOf<bool?, object>? includeInvitees,
             ref string? repoName,
-            ref global::HuggingFace.AnyOf<global::HuggingFace.RepoType44?, string>? repoType,
+            ref global::HuggingFace.AnyOf<global::HuggingFace.RepoType23?, string>? repoType,
             ref string? discussionId,
             ref string? discussionCollectionName,
             global::System.Collections.Generic.IList<string>? spacesTags,
-            global::HuggingFace.Request45 request);
+            global::HuggingFace.Request57 request);
         partial void PrepareCreateQuicksearchRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -39,11 +39,11 @@ namespace HuggingFace
             string? @namespace,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees,
             string? repoName,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType44?, string>? repoType,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType23?, string>? repoType,
             string? discussionId,
             string? discussionCollectionName,
             global::System.Collections.Generic.IList<string>? spacesTags,
-            global::HuggingFace.Request45 request);
+            global::HuggingFace.Request57 request);
         partial void ProcessCreateQuicksearchResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -85,9 +85,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response97> CreateQuicksearchAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response121> CreateQuicksearchAsync(
 
-            global::HuggingFace.Request45 request,
+            global::HuggingFace.Request57 request,
             string? q = default,
             int? limit = default,
             global::HuggingFace.AnyOf<global::HuggingFace.Lang5?, string>? lang = default,
@@ -100,7 +100,7 @@ namespace HuggingFace
             string? @namespace = default,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
             string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType44?, string>? repoType = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType23?, string>? repoType = default,
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,
@@ -240,7 +240,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response97.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response121.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -271,7 +271,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response97.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response121.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -360,7 +360,7 @@ namespace HuggingFace
         /// <param name="requestSpacesTags"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response97> CreateQuicksearchAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response121> CreateQuicksearchAsync(
             global::System.Collections.Generic.IList<string> requestExclude,
             string? q = default,
             int? limit = default,
@@ -374,7 +374,7 @@ namespace HuggingFace
             string? @namespace = default,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
             string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType44?, string>? repoType = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType23?, string>? repoType = default,
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,
@@ -395,7 +395,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? requestSpacesTags = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request45
+            var __request = new global::HuggingFace.Request57
             {
                 Q = requestQ,
                 Limit = requestLimit,

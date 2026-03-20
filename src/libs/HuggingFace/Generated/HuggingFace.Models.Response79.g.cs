@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -13,48 +11,23 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
-        public bool? Private { get; set; }
-
-        /// <summary>
-        /// Repository visibility. `protected` is only supported for Spaces.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseVisibilityJsonConverter))]
-        public global::HuggingFace.ResponseVisibility? Visibility { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("casUrl")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string CasUrl { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("discussionsDisabled")]
-        public bool? DiscussionsDisabled { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("exp")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Exp { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("discussionsSorting")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseDiscussionsSortingJsonConverter))]
-        public global::HuggingFace.ResponseDiscussionsSorting? DiscussionsSorting { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.ResponseGatedEnum2?>))]
-        public global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatedEnum2?>? Gated { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsEmail")]
-        public string? GatedNotificationsEmail { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsMode")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseGatedNotificationsModeJsonConverter))]
-        public global::HuggingFace.ResponseGatedNotificationsMode? GatedNotificationsMode { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("accessToken")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AccessToken { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -65,34 +38,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response79" /> class.
         /// </summary>
-        /// <param name="private"></param>
-        /// <param name="visibility">
-        /// Repository visibility. `protected` is only supported for Spaces.
-        /// </param>
-        /// <param name="discussionsDisabled"></param>
-        /// <param name="discussionsSorting"></param>
-        /// <param name="gated"></param>
-        /// <param name="gatedNotificationsEmail"></param>
-        /// <param name="gatedNotificationsMode"></param>
+        /// <param name="casUrl"></param>
+        /// <param name="exp"></param>
+        /// <param name="accessToken"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response79(
-            bool? @private,
-            global::HuggingFace.ResponseVisibility? visibility,
-            bool? discussionsDisabled,
-            global::HuggingFace.ResponseDiscussionsSorting? discussionsSorting,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatedEnum2?>? gated,
-            string? gatedNotificationsEmail,
-            global::HuggingFace.ResponseGatedNotificationsMode? gatedNotificationsMode)
+            string casUrl,
+            double exp,
+            string accessToken)
         {
-            this.Private = @private;
-            this.Visibility = visibility;
-            this.DiscussionsDisabled = discussionsDisabled;
-            this.DiscussionsSorting = discussionsSorting;
-            this.Gated = gated;
-            this.GatedNotificationsEmail = gatedNotificationsEmail;
-            this.GatedNotificationsMode = gatedNotificationsMode;
+            this.CasUrl = casUrl ?? throw new global::System.ArgumentNullException(nameof(casUrl));
+            this.Exp = exp;
+            this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
         }
 
         /// <summary>

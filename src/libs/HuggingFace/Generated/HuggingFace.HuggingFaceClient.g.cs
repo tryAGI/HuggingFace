@@ -58,6 +58,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        /// Get information from all kernels on the Hub.
+        /// </summary>
+        public KernelsClient Kernels => new KernelsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Get information from all datasets on the Hub.
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations)

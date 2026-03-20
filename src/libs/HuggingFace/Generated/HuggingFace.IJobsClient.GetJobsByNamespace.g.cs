@@ -14,7 +14,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem28>> GetJobsByNamespaceAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem35>> GetJobsByNamespaceAsync(
             string @namespace,
             string? label = default,
             global::System.Threading.CancellationToken cancellationToken = default);

@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseData2 Data { get; set; }
+        public required string Url { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +24,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response122" /> class.
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="url"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response122(
-            global::HuggingFace.ResponseData2 data)
+            string url)
         {
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
         }
 
         /// <summary>

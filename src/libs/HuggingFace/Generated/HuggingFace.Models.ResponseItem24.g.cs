@@ -11,28 +11,57 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Id { get; set; }
+        public required string Name { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
-        public global::HuggingFace.ResponseItemNote3? Note { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
-        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("prettyName")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Position { get; set; }
+        public required string PrettyName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cpu")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Cpu { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ram")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Ram { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("accelerator")]
+        public global::HuggingFace.ResponseItemAccelerator2? Accelerator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("unitCostMicroUSD")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double UnitCostMicroUSD { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("unitCostUSD")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double UnitCostUSD { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("unitLabel")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string UnitLabel { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -43,23 +72,35 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem24" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
-        /// <param name="gallery"></param>
-        /// <param name="position"></param>
+        /// <param name="name"></param>
+        /// <param name="prettyName"></param>
+        /// <param name="cpu"></param>
+        /// <param name="ram"></param>
+        /// <param name="accelerator"></param>
+        /// <param name="unitCostMicroUSD"></param>
+        /// <param name="unitCostUSD"></param>
+        /// <param name="unitLabel"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem24(
-            string id,
-            double position,
-            global::HuggingFace.ResponseItemNote3? note,
-            global::System.Collections.Generic.IList<string>? gallery)
+            string name,
+            string prettyName,
+            string cpu,
+            string ram,
+            double unitCostMicroUSD,
+            double unitCostUSD,
+            string unitLabel,
+            global::HuggingFace.ResponseItemAccelerator2? accelerator)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Position = position;
-            this.Note = note;
-            this.Gallery = gallery;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.PrettyName = prettyName ?? throw new global::System.ArgumentNullException(nameof(prettyName));
+            this.Cpu = cpu ?? throw new global::System.ArgumentNullException(nameof(cpu));
+            this.Ram = ram ?? throw new global::System.ArgumentNullException(nameof(ram));
+            this.UnitCostMicroUSD = unitCostMicroUSD;
+            this.UnitCostUSD = unitCostUSD;
+            this.UnitLabel = unitLabel ?? throw new global::System.ArgumentNullException(nameof(unitLabel));
+            this.Accelerator = accelerator;
         }
 
         /// <summary>

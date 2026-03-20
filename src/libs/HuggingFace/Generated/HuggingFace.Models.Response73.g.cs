@@ -11,23 +11,16 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("casUrl")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("files")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string CasUrl { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile> Files { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("exp")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("commitOid")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Exp { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("accessToken")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string AccessToken { get; set; }
+        public required string CommitOid { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -38,20 +31,17 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response73" /> class.
         /// </summary>
-        /// <param name="casUrl"></param>
-        /// <param name="exp"></param>
-        /// <param name="accessToken"></param>
+        /// <param name="files"></param>
+        /// <param name="commitOid"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response73(
-            string casUrl,
-            double exp,
-            string accessToken)
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile> files,
+            string commitOid)
         {
-            this.CasUrl = casUrl ?? throw new global::System.ArgumentNullException(nameof(casUrl));
-            this.Exp = exp;
-            this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
+            this.CommitOid = commitOid ?? throw new global::System.ArgumentNullException(nameof(commitOid));
         }
 
         /// <summary>

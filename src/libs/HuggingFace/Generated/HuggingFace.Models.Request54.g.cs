@@ -12,19 +12,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string? Title { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
-        public bool? Private { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("sql")]
-        public string? Sql { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Title { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -36,19 +25,13 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="Request54" /> class.
         /// </summary>
         /// <param name="title"></param>
-        /// <param name="private"></param>
-        /// <param name="sql"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request54(
-            string? title,
-            bool? @private,
-            string? sql)
+            string title)
         {
-            this.Title = title;
-            this.Private = @private;
-            this.Sql = sql;
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
         }
 
         /// <summary>

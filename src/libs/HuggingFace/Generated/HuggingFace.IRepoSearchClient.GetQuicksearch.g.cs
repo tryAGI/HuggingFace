@@ -35,7 +35,7 @@ namespace HuggingFace
         /// <param name="spacesTags"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response96> GetQuicksearchAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response120> GetQuicksearchAsync(
             string? q = default,
             int? limit = default,
             global::HuggingFace.AnyOf<global::HuggingFace.Lang3?, string>? lang = default,
@@ -48,7 +48,7 @@ namespace HuggingFace
             string? @namespace = default,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
             string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType42?, string>? repoType = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType21?, string>? repoType = default,
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,

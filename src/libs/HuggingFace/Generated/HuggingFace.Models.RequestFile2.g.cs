@@ -11,13 +11,6 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Content { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Path { get; set; }
@@ -25,9 +18,16 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("encoding")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestFileEncodingJsonConverter))]
-        public global::HuggingFace.RequestFileEncoding? Encoding { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Size { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sample")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Sample { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -38,20 +38,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestFile2" /> class.
         /// </summary>
-        /// <param name="content"></param>
         /// <param name="path"></param>
-        /// <param name="encoding"></param>
+        /// <param name="size"></param>
+        /// <param name="sample"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public RequestFile2(
-            string content,
             string path,
-            global::HuggingFace.RequestFileEncoding? encoding)
+            double size,
+            string sample)
         {
-            this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
-            this.Encoding = encoding;
+            this.Size = size;
+            this.Sample = sample ?? throw new global::System.ArgumentNullException(nameof(sample));
         }
 
         /// <summary>

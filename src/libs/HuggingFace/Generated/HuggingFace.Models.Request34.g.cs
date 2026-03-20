@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace HuggingFace
@@ -11,15 +13,18 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("tag")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("paths")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Tag { get; set; }
+        public required global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string> Paths { get; set; }
 
         /// <summary>
-        /// 
+        /// Expand the response with the last commit and security file status
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
-        public string? Message { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("expand")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<object, bool?>))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.AnyOf<object, bool?> Expand { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -30,17 +35,19 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request34" /> class.
         /// </summary>
-        /// <param name="tag"></param>
-        /// <param name="message"></param>
+        /// <param name="paths"></param>
+        /// <param name="expand">
+        /// Expand the response with the last commit and security file status
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request34(
-            string tag,
-            string? message)
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string> paths,
+            global::HuggingFace.AnyOf<object, bool?> expand)
         {
-            this.Tag = tag ?? throw new global::System.ArgumentNullException(nameof(tag));
-            this.Message = message;
+            this.Paths = paths;
+            this.Expand = expand;
         }
 
         /// <summary>
