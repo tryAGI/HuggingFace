@@ -4,12 +4,14 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
+
         /// <summary>
         /// Delete Large files<br/>
         /// Delete Xet/LFS files in batch
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

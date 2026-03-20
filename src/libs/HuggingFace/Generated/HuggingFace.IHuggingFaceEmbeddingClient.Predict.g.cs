@@ -4,9 +4,11 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceEmbeddingClient
     {
+
         /// <summary>
         /// Get Predictions. Returns a 424 status code if the model is not a Sequence Classification model
         /// </summary>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IWebhooksClient
     {
+
         /// <summary>
         /// Replay webhook log
         /// </summary>

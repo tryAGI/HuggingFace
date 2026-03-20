@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDocsClient
     {
+
         /// <summary>
         /// Full-text search docs<br/>
         /// Full-text search across Hugging Face documentation

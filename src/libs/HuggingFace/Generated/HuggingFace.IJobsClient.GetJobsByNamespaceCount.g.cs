@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
+
         /// <summary>
         /// Count jobs<br/>
         /// Count the number of jobs for an entity with optional status stage filter

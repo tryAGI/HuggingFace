@@ -19,6 +19,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get job hardware<br/>
         /// Get available job hardware

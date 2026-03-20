@@ -23,6 +23,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Duplicate a job<br/>
         /// Duplicate an existing job, re-using its spec

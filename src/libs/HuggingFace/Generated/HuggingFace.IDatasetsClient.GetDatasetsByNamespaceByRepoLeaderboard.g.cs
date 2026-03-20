@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
+
         /// <summary>
         /// Get the leaderboard for a dataset<br/>
         /// Returns the evaluation results ranked by score for a dataset/task

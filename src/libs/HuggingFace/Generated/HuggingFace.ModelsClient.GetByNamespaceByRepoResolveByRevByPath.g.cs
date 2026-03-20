@@ -31,6 +31,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Resolve a file<br/>
         /// This endpoint requires to follow redirection

@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceInferenceClient
     {
+
         /// <summary>
         /// Prometheus metrics scrape endpoint
         /// </summary>

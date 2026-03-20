@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
+
         /// <summary>
         /// Get MCP tools<br/>
         /// Get the MCP tools for the current user

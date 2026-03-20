@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IPapersClient
     {
+
         /// <summary>
         /// Get Daily Papers
         /// </summary>

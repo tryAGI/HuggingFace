@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface INotificationsClient
     {
+
         /// <summary>
         /// Change read status<br/>
         /// Mark discussions as read or unread. If `applyToAll` is true, all notifications for the user matching the search parameters will be marked as read or unread.
@@ -26,6 +27,7 @@ namespace HuggingFace
         /// <param name="applyToAll">
         /// Default Value: false
         /// </param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

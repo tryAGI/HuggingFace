@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Git-free storage buckets for files, powered by Xet. Buckets provide simple file storage without git versioning.<br/>
+    /// Buckets<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

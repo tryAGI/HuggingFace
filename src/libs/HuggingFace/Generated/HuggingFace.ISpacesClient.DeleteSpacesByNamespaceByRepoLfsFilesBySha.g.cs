@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
+
         /// <summary>
         /// Delete Large file<br/>
         /// Delete a Xet/LFS file

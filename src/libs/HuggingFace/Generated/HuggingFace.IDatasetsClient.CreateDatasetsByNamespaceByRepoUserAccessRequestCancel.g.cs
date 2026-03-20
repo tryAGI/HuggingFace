@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
+
         /// <summary>
         /// Cancel access request<br/>
         /// Cancel the current user's access request to a gated repository

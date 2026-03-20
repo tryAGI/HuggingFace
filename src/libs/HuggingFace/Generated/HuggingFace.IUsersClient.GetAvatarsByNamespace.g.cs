@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
+
         /// <summary>
         /// Get avatar<br/>
         /// Display the avatar for any user or organization. This endpoint redirects to the avatar URL for either a user or an organization

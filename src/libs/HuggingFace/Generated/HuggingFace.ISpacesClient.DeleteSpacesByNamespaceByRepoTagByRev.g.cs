@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
+
         /// <summary>
         /// Delete a tag
         /// </summary>

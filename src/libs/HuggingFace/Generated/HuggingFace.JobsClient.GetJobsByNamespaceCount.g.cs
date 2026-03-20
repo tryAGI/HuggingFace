@@ -23,6 +23,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Count jobs<br/>
         /// Count the number of jobs for an entity with optional status stage filter

@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
+
         /// <summary>
         /// Duplicate a job<br/>
         /// Duplicate an existing job, re-using its spec

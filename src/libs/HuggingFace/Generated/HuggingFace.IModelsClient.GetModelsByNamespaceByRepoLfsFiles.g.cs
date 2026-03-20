@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// List Large files<br/>
         /// List Xet/LFS files for a repo

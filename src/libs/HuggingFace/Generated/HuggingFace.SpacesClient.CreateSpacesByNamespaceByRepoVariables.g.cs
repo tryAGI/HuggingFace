@@ -20,12 +20,14 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+
         /// <summary>
         /// Upsert variable<br/>
         /// Upsert Spaces's variable
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

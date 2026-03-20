@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IInferenceEndpointsClient
     {
+
         /// <summary>
         /// Check access<br/>
         /// Check if the user has access to the inference endpoint

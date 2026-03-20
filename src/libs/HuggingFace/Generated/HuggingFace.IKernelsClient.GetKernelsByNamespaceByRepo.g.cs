@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IKernelsClient
     {
+
         /// <summary>
         /// Get kernel
         /// </summary>

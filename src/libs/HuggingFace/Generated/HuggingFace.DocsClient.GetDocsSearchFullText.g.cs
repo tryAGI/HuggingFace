@@ -25,6 +25,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Full-text search docs<br/>
         /// Full-text search across Hugging Face documentation

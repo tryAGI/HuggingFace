@@ -21,6 +21,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get social handles<br/>
         /// Get a user's social media handles

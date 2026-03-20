@@ -25,12 +25,14 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Update a SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

@@ -4,6 +4,7 @@ namespace HuggingFace
 {
     public partial interface IOrgsClient
     {
+
         /// <summary>
         /// Get avatar<br/>
         /// Retrieve organization avatar. This endpoint returns a JSON with the avatar URL for the organization.<br/>
