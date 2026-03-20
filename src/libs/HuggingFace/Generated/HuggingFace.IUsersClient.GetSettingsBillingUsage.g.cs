@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
-
         /// <summary>
         /// Get user usage<br/>
         /// Get user usage for a given period

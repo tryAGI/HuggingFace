@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// Squash ref<br/>
         /// Squash all commits in the current ref into a single commit with the given message. Action is irreversible.
@@ -12,7 +11,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="rev"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -23,7 +21,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request47 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Squash ref<br/>
         /// Squash all commits in the current ref into a single commit with the given message. Action is irreversible.

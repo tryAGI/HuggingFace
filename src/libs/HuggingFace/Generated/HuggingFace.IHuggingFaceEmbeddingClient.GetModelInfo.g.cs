@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceEmbeddingClient
     {
-
         /// <summary>
         /// Text Embeddings Inference endpoint info
         /// </summary>

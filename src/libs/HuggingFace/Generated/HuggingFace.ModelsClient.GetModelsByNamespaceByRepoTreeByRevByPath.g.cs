@@ -35,7 +35,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List folder content<br/>
         /// List the content of a repository tree, with pagination support.

@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Get notebook URL<br/>
         /// Get a jupyter notebook URL for the requested file

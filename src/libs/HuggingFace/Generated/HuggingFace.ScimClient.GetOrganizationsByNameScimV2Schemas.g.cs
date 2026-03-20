@@ -21,7 +21,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get SCIM Schemas<br/>
         /// Returns the SCIM 2.0 schema definitions for User and Group resources.

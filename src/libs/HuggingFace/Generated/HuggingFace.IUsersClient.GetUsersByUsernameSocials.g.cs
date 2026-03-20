@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
-
         /// <summary>
         /// Get social handles<br/>
         /// Get a user's social media handles

@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
-
         /// <summary>
         /// Retrieve user avatar<br/>
         /// This endpoint returns a JSON with the avatar URL for the user.<br/>

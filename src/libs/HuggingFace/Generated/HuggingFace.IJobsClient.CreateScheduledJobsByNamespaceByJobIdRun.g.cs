@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
-
         /// <summary>
         /// Run job<br/>
         /// Trigger a scheduled job run. Trigger a scheduled job to run immediately. Throws an error if an instance is already running and job spec does not allow concurrent runs.

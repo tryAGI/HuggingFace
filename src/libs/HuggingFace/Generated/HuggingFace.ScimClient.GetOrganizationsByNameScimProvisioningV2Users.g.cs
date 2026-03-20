@@ -27,7 +27,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List SCIM-managed users<br/>
         /// Retrieves a paginated list of organization members and pending invitations managed by SCIM for non-managed organizations.

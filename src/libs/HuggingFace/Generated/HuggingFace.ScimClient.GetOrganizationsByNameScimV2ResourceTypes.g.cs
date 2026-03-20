@@ -21,7 +21,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get SCIM Resource Types<br/>
         /// Returns the list of SCIM 2.0 resource types supported by this server (User and Group).

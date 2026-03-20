@@ -27,7 +27,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// PR storage estimate<br/>
         /// Estimates the LFS storage used by a PR that could be freed if the ref is deleted.

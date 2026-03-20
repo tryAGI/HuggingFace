@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// List commits
         /// </summary>

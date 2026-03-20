@@ -29,7 +29,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Update embed<br/>
         /// Update SQL Console embed
@@ -38,7 +37,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="id"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -206,7 +204,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Update embed<br/>
         /// Update SQL Console embed

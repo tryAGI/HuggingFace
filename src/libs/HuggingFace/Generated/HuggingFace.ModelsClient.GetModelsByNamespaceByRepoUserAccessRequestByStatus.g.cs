@@ -31,7 +31,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List access requests<br/>
         /// List access requests for a gated repository

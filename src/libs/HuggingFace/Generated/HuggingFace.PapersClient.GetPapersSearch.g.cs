@@ -18,7 +18,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Search papers<br/>
         /// Perform a hybrid semantic / full-text-search on papers

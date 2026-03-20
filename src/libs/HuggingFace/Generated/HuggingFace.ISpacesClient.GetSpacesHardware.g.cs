@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// List space hardware<br/>
         /// Get available space hardware

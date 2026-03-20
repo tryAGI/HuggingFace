@@ -4,12 +4,10 @@ namespace HuggingFace
 {
     public partial interface IPapersClient
     {
-
         /// <summary>
         /// Index a paper<br/>
         /// Index a paper from arXiv by its ID. If the paper is already indexed, only its authors can re-index it.
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -17,7 +15,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request76 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Index a paper<br/>
         /// Index a paper from arXiv by its ID. If the paper is already indexed, only its authors can re-index it.

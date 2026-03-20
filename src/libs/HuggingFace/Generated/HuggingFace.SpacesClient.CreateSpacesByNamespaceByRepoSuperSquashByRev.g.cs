@@ -27,7 +27,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Squash ref<br/>
         /// Squash all commits in the current ref into a single commit with the given message. Action is irreversible.
@@ -35,7 +34,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="rev"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -200,7 +198,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Squash ref<br/>
         /// Squash all commits in the current ref into a single commit with the given message. Action is irreversible.

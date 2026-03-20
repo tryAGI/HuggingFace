@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IOrgsClient
     {
-
         /// <summary>
         /// Get org usage<br/>
         /// Get org usage for a given period

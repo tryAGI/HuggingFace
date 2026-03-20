@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// List folder content<br/>
         /// List the content of a repository tree, with pagination support.

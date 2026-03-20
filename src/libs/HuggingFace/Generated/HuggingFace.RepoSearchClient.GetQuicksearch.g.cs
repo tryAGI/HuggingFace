@@ -51,7 +51,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Quick search<br/>
         /// Quick search for models, datasets, spaces, orgs, users, papers, collections, and buckets

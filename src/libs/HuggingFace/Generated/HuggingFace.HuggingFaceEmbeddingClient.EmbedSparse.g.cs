@@ -21,11 +21,9 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get Sparse Embeddings. Returns a 424 status code if the model is not an embedding model with SPLADE pooling.
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -371,7 +369,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Get Sparse Embeddings. Returns a 424 status code if the model is not an embedding model with SPLADE pooling.
         /// </summary>

@@ -21,7 +21,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get model tags<br/>
         /// Get all possible tags used for models, grouped by tag type. Optionally restrict to only one tag type

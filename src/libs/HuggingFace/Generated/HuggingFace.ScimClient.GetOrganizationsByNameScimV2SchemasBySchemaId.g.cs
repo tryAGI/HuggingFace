@@ -23,7 +23,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get SCIM Schema by ID<br/>
         /// Returns a single SCIM 2.0 schema definition by its schema URI.

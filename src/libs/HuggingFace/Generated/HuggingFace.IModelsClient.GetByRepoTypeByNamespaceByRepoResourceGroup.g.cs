@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Get resource group
         /// </summary>

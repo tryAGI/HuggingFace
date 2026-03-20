@@ -4,12 +4,10 @@ namespace HuggingFace
 {
     public partial interface INotificationsClient
     {
-
         /// <summary>
         /// Update notification settings<br/>
         /// Update notification settings for the user
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -17,7 +15,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request2 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update notification settings<br/>
         /// Update notification settings for the user

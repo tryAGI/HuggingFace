@@ -20,7 +20,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Stream logs<br/>
         /// Get logs for a specific Space in a streaming fashion, with SSE protocol

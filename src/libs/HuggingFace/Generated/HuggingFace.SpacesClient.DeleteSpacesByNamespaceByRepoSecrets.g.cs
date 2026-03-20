@@ -20,14 +20,12 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Delete secret<br/>
         /// Delete Spaces's secret
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -179,7 +177,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Delete secret<br/>
         /// Delete Spaces's secret

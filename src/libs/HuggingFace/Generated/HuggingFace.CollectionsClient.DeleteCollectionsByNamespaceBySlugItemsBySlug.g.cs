@@ -20,7 +20,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Delete item<br/>
         /// Delete an item from a collection

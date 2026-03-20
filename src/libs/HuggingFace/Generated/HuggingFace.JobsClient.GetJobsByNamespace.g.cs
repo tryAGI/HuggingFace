@@ -23,7 +23,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List jobs<br/>
         /// List of jobs for an entity

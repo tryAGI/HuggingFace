@@ -4,11 +4,9 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceInferenceClient
     {
-
         /// <summary>
         /// Generate tokens from Sagemaker request
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -16,7 +14,6 @@ namespace HuggingFace
 
             global::HuggingFace.SagemakerRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Generate tokens from Sagemaker request
         /// </summary>

@@ -4,14 +4,12 @@ namespace HuggingFace
 {
     public partial interface IResourceGroupsClient
     {
-
         /// <summary>
         /// Create a resource group<br/>
         /// Create a new resource group in the organization.<br/>
         /// Requires the org to be Enterprise
         /// </summary>
         /// <param name="name"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -20,7 +18,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request8 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a resource group<br/>
         /// Create a new resource group in the organization.<br/>

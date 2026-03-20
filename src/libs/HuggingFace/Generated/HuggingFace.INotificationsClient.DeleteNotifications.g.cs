@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface INotificationsClient
     {
-
         /// <summary>
         /// Delete notifications<br/>
         /// Delete notifications, either by specifying discussionIds or by applying to all notifications with search parameters
@@ -27,7 +26,6 @@ namespace HuggingFace
         /// <param name="applyToAll">
         /// Default Value: false
         /// </param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -45,7 +43,6 @@ namespace HuggingFace
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Delete notifications<br/>
         /// Delete notifications, either by specifying discussionIds or by applying to all notifications with search parameters

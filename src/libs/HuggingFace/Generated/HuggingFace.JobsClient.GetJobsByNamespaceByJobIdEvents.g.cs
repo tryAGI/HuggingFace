@@ -18,7 +18,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Stream job events<br/>
         /// Stream the events of a job, using SSE

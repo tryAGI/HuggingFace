@@ -21,12 +21,10 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get Ranks. Returns a 424 status code if the model is not a Sequence Classification model with<br/>
         /// a single class.
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -372,7 +370,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Get Ranks. Returns a 424 status code if the model is not a Sequence Classification model with<br/>
         /// a single class.

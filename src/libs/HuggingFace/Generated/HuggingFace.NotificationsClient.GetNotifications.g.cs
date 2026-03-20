@@ -37,7 +37,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List notifications<br/>
         /// List notifications for the user

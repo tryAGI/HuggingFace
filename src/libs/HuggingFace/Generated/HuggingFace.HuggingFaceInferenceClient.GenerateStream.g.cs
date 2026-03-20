@@ -16,11 +16,9 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Generate a stream of token using Server-Sent Events
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -153,7 +151,6 @@ namespace HuggingFace
                 yield return __streamedResponse;
             }
         }
-
         /// <summary>
         /// Generate a stream of token using Server-Sent Events
         /// </summary>

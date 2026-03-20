@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISqlConsoleClient
     {
-
         /// <summary>
         /// Update embed<br/>
         /// Update SQL Console embed
@@ -13,7 +12,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="id"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -25,7 +23,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request66 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update embed<br/>
         /// Update SQL Console embed

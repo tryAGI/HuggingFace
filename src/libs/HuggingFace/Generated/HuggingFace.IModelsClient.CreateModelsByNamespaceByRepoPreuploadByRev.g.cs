@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Check upload method<br/>
         /// Check if a file should be uploaded through the Large File mechanism or directly.
@@ -12,7 +11,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="rev"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -23,7 +21,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request35 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Check upload method<br/>
         /// Check if a file should be uploaded through the Large File mechanism or directly.

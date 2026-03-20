@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
-
         /// <summary>
         /// Get SCIM Schemas<br/>
         /// Returns the SCIM 2.0 schema definitions for User and Group resources.

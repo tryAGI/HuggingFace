@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// List Large files<br/>
         /// List Xet/LFS files for a repo

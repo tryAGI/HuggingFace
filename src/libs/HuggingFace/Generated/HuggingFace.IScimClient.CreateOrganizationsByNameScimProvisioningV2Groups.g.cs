@@ -4,13 +4,11 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
-
         /// <summary>
         /// Create a SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -19,7 +17,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request19 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.

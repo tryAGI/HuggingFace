@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IDocsClient
     {
-
         /// <summary>
         /// Search docs<br/>
         /// Search any Hugging Face documentation

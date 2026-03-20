@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IDiscussionsClient
     {
-
         /// <summary>
         /// PR storage estimate<br/>
         /// Estimates the LFS storage used by a PR that could be freed if the ref is deleted.

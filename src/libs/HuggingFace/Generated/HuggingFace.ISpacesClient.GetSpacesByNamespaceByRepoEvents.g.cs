@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// Stream events<br/>
         /// Get status updates for a specific Space in a streaming fashion, with SSE protocol

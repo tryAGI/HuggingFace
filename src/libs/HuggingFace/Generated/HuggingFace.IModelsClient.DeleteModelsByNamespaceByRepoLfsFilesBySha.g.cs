@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Delete Large file<br/>
         /// Delete a Xet/LFS file

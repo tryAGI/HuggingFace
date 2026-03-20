@@ -23,7 +23,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Delete a SCIM provisioning user<br/>
         /// Removes a user from the organization and deletes any pending invitations for non-managed organizations.

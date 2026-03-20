@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// Xet read token<br/>
         /// Get a read short-lived access token for XET

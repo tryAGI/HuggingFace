@@ -236,6 +236,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         GoogleCloud,
+        /// <summary>
+        /// 
+        /// </summary>
+        Xet,
     }
 
     /// <summary>
@@ -307,6 +311,7 @@ namespace HuggingFace
                 Product.MicrosoftAzure => "microsoft-azure",
                 Product.Kernels => "kernels",
                 Product.GoogleCloud => "google-cloud",
+                Product.Xet => "xet",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -374,6 +379,7 @@ namespace HuggingFace
                 "microsoft-azure" => Product.MicrosoftAzure,
                 "kernels" => Product.Kernels,
                 "google-cloud" => Product.GoogleCloud,
+                "xet" => Product.Xet,
                 _ => null,
             };
         }

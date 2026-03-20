@@ -29,7 +29,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get organization members<br/>
         /// Get a list of members for the organization with optional search and pagination.
