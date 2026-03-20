@@ -9,31 +9,18 @@ namespace HuggingFace
     public sealed partial class Response68
     {
         /// <summary>
-        /// 
+        /// The normalized path of the subtree, starting with a slash
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseTag> Tags { get; set; }
+        public required string Path { get; set; }
 
         /// <summary>
-        /// 
+        /// Total size in bytes of all files under the subtree
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseBranche> Branches { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("converts")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseConvert> Converts { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pullRequests")]
-        public global::System.Collections.Generic.IList<global::HuggingFace.ResponsePullRequest>? PullRequests { get; set; }
+        public required int Size { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -44,23 +31,21 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response68" /> class.
         /// </summary>
-        /// <param name="tags"></param>
-        /// <param name="branches"></param>
-        /// <param name="converts"></param>
-        /// <param name="pullRequests"></param>
+        /// <param name="path">
+        /// The normalized path of the subtree, starting with a slash
+        /// </param>
+        /// <param name="size">
+        /// Total size in bytes of all files under the subtree
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response68(
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseTag> tags,
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseBranche> branches,
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseConvert> converts,
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponsePullRequest>? pullRequests)
+            string path,
+            int size)
         {
-            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
-            this.Branches = branches ?? throw new global::System.ArgumentNullException(nameof(branches));
-            this.Converts = converts ?? throw new global::System.ArgumentNullException(nameof(converts));
-            this.PullRequests = pullRequests;
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Size = size;
         }
 
         /// <summary>

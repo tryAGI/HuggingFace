@@ -27,7 +27,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("date")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime Date { get; set; }
+        public required string Date { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -47,11 +47,11 @@ namespace HuggingFace
         public ResponseItemLastCommit2(
             string id,
             string title,
-            global::System.DateTime date)
+            string date)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Date = date;
+            this.Date = date ?? throw new global::System.ArgumentNullException(nameof(date));
         }
 
         /// <summary>

@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -13,8 +11,8 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
-        public int? Position { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string? Title { get; set; }
 
         /// <summary>
         /// 
@@ -25,28 +23,8 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestThemeJsonConverter))]
-        public global::HuggingFace.RequestTheme? Theme { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string? Title { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        public string? Description { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gating")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.RequestGatingVariant2, global::HuggingFace.RequestGatingVariant3>))]
-        public global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatingVariant2, global::HuggingFace.RequestGatingVariant3>? Gating { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("sql")]
+        public string? Sql { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -57,29 +35,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request66" /> class.
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="private"></param>
-        /// <param name="theme"></param>
         /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="gating"></param>
+        /// <param name="private"></param>
+        /// <param name="sql"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request66(
-            int? position,
-            bool? @private,
-            global::HuggingFace.RequestTheme? theme,
             string? title,
-            string? description,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatingVariant2, global::HuggingFace.RequestGatingVariant3>? gating)
+            bool? @private,
+            string? sql)
         {
-            this.Position = position;
-            this.Private = @private;
-            this.Theme = theme;
             this.Title = title;
-            this.Description = description;
-            this.Gating = gating;
+            this.Private = @private;
+            this.Sql = sql;
         }
 
         /// <summary>

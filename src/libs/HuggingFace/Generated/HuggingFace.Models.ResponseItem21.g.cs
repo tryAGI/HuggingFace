@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace HuggingFace
@@ -11,74 +13,62 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("rank")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Id { get; set; }
+        public required double Rank { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelId")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Title { get; set; }
+        public required string ModelId { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("upvotes")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("author")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseItemAuthorVariant1, global::HuggingFace.ResponseItemAuthorVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Upvotes { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemAuthorVariant1, global::HuggingFace.ResponseItemAuthorVariant2> Author { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("publishedAt")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime PublishedAt { get; set; }
+        public required double Value { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("thumbnailUrl")]
-        public string? ThumbnailUrl { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("verified")]
+        public bool? Verified { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("authors")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("source")]
+        public global::HuggingFace.ResponseItemSource? Source { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pullRequest")]
+        public double? PullRequest { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("filename")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseItemAuthor3> Authors { get; set; }
+        public required string Filename { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Summary { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("projectPage")]
-        public string? ProjectPage { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("githubRepo")]
-        public string? GithubRepo { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("ai_summary")]
-        public string? AiSummary { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
-        public global::HuggingFace.ResponseItemOrganization? Organization { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("notes")]
+        public string? Notes { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -89,44 +79,38 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem21" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="title"></param>
-        /// <param name="upvotes"></param>
-        /// <param name="publishedAt"></param>
-        /// <param name="thumbnailUrl"></param>
-        /// <param name="authors"></param>
-        /// <param name="summary"></param>
-        /// <param name="projectPage"></param>
-        /// <param name="githubRepo"></param>
-        /// <param name="aiSummary"></param>
-        /// <param name="organization"></param>
+        /// <param name="rank"></param>
+        /// <param name="modelId"></param>
+        /// <param name="author"></param>
+        /// <param name="value"></param>
+        /// <param name="verified"></param>
+        /// <param name="source"></param>
+        /// <param name="pullRequest"></param>
+        /// <param name="filename"></param>
+        /// <param name="notes"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem21(
-            string id,
-            string title,
-            double upvotes,
-            global::System.DateTime publishedAt,
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseItemAuthor3> authors,
-            string summary,
-            string? thumbnailUrl,
-            string? projectPage,
-            string? githubRepo,
-            string? aiSummary,
-            global::HuggingFace.ResponseItemOrganization? organization)
+            double rank,
+            string modelId,
+            global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemAuthorVariant1, global::HuggingFace.ResponseItemAuthorVariant2> author,
+            double value,
+            string filename,
+            bool? verified,
+            global::HuggingFace.ResponseItemSource? source,
+            double? pullRequest,
+            string? notes)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Upvotes = upvotes;
-            this.PublishedAt = publishedAt;
-            this.Authors = authors ?? throw new global::System.ArgumentNullException(nameof(authors));
-            this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
-            this.ThumbnailUrl = thumbnailUrl;
-            this.ProjectPage = projectPage;
-            this.GithubRepo = githubRepo;
-            this.AiSummary = aiSummary;
-            this.Organization = organization;
+            this.Rank = rank;
+            this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
+            this.Author = author;
+            this.Value = value;
+            this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
+            this.Verified = verified;
+            this.Source = source;
+            this.PullRequest = pullRequest;
+            this.Notes = notes;
         }
 
         /// <summary>

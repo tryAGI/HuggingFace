@@ -13,54 +13,48 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("repository")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Repository { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
         public bool? Private { get; set; }
 
         /// <summary>
-        /// 
+        /// Repository visibility. `protected` is only supported for Spaces.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestVisibility2JsonConverter))]
-        public global::HuggingFace.RequestVisibility2? Visibility { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestVisibility3JsonConverter))]
+        public global::HuggingFace.RequestVisibility3? Visibility { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
-        public string? ResourceGroupId { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("discussionsDisabled")]
+        public bool? DiscussionsDisabled { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("hardware")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestHardwareJsonConverter))]
-        public global::HuggingFace.RequestHardware? Hardware { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("discussionsSorting")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestDiscussionsSorting3JsonConverter))]
+        public global::HuggingFace.RequestDiscussionsSorting3? DiscussionsSorting { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("sleepTimeSeconds")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, string>))]
-        public global::HuggingFace.AnyOf<int?, string>? SleepTimeSeconds { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.RequestGatedEnum6?>))]
+        public global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatedEnum6?>? Gated { get; set; }
 
         /// <summary>
-        /// Default Value: []
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
-        public global::System.Collections.Generic.IList<global::HuggingFace.RequestSecret>? Secrets { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsEmail")]
+        public string? GatedNotificationsEmail { get; set; }
 
         /// <summary>
-        /// Default Value: []
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("variables")]
-        public global::System.Collections.Generic.IList<global::HuggingFace.RequestVariable>? Variables { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsMode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestGatedNotificationsMode3JsonConverter))]
+        public global::HuggingFace.RequestGatedNotificationsMode3? GatedNotificationsMode { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -71,39 +65,34 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request50" /> class.
         /// </summary>
-        /// <param name="repository"></param>
         /// <param name="private"></param>
-        /// <param name="visibility"></param>
-        /// <param name="resourceGroupId"></param>
-        /// <param name="hardware"></param>
-        /// <param name="sleepTimeSeconds"></param>
-        /// <param name="secrets">
-        /// Default Value: []
+        /// <param name="visibility">
+        /// Repository visibility. `protected` is only supported for Spaces.
         /// </param>
-        /// <param name="variables">
-        /// Default Value: []
-        /// </param>
+        /// <param name="discussionsDisabled"></param>
+        /// <param name="discussionsSorting"></param>
+        /// <param name="gated"></param>
+        /// <param name="gatedNotificationsEmail"></param>
+        /// <param name="gatedNotificationsMode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request50(
-            string repository,
             bool? @private,
-            global::HuggingFace.RequestVisibility2? visibility,
-            string? resourceGroupId,
-            global::HuggingFace.RequestHardware? hardware,
-            global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestSecret>? secrets,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestVariable>? variables)
+            global::HuggingFace.RequestVisibility3? visibility,
+            bool? discussionsDisabled,
+            global::HuggingFace.RequestDiscussionsSorting3? discussionsSorting,
+            global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatedEnum6?>? gated,
+            string? gatedNotificationsEmail,
+            global::HuggingFace.RequestGatedNotificationsMode3? gatedNotificationsMode)
         {
-            this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
             this.Private = @private;
             this.Visibility = visibility;
-            this.ResourceGroupId = resourceGroupId;
-            this.Hardware = hardware;
-            this.SleepTimeSeconds = sleepTimeSeconds;
-            this.Secrets = secrets;
-            this.Variables = variables;
+            this.DiscussionsDisabled = discussionsDisabled;
+            this.DiscussionsSorting = discussionsSorting;
+            this.Gated = gated;
+            this.GatedNotificationsEmail = gatedNotificationsEmail;
+            this.GatedNotificationsMode = gatedNotificationsMode;
         }
 
         /// <summary>

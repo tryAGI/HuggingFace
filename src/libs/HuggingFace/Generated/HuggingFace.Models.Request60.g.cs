@@ -9,11 +9,23 @@ namespace HuggingFace
     public sealed partial class Request60
     {
         /// <summary>
-        /// The arXiv ID of the paper to index (e.g. 2301.00001)
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("arxivId")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string ArxivId { get; set; }
+        public required string Key { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("value")]
+        public string? Value { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,16 +36,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request60" /> class.
         /// </summary>
-        /// <param name="arxivId">
-        /// The arXiv ID of the paper to index (e.g. 2301.00001)
-        /// </param>
+        /// <param name="key"></param>
+        /// <param name="description"></param>
+        /// <param name="value"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request60(
-            string arxivId)
+            string key,
+            string? description,
+            string? value)
         {
-            this.ArxivId = arxivId ?? throw new global::System.ArgumentNullException(nameof(arxivId));
+            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
+            this.Description = description;
+            this.Value = value;
         }
 
         /// <summary>

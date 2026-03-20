@@ -20,10 +20,6 @@ namespace HuggingFace
         /// 
         /// </summary>
         ClientSecretPost,
-        /// <summary>
-        /// 
-        /// </summary>
-        ClientSecretJwt,
     }
 
     /// <summary>
@@ -41,7 +37,6 @@ namespace HuggingFace
                 RequestTokenEndpointAuthMethod.ClientSecretBasic => "client_secret_basic",
                 RequestTokenEndpointAuthMethod.None => "none",
                 RequestTokenEndpointAuthMethod.ClientSecretPost => "client_secret_post",
-                RequestTokenEndpointAuthMethod.ClientSecretJwt => "client_secret_jwt",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -55,7 +50,6 @@ namespace HuggingFace
                 "client_secret_basic" => RequestTokenEndpointAuthMethod.ClientSecretBasic,
                 "none" => RequestTokenEndpointAuthMethod.None,
                 "client_secret_post" => RequestTokenEndpointAuthMethod.ClientSecretPost,
-                "client_secret_jwt" => RequestTokenEndpointAuthMethod.ClientSecretJwt,
                 _ => null,
             };
         }

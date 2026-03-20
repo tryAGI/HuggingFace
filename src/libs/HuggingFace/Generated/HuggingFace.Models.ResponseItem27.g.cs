@@ -4,64 +4,71 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    /// Daily paper data for API responses
     /// </summary>
     public sealed partial class ResponseItem27
     {
         /// <summary>
-        /// 
+        /// Paper data with metadata
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("paper")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Name { get; set; }
+        public required global::HuggingFace.ResponseItemPaper Paper { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("prettyName")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("publishedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string PrettyName { get; set; }
+        public required global::System.DateTime PublishedAt { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("cpu")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Cpu { get; set; }
+        public required string Title { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("ram")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Ram { get; set; }
+        public required string Summary { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("accelerator")]
-        public global::HuggingFace.ResponseItemAccelerator4? Accelerator { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("mediaUrls")]
+        public global::System.Collections.Generic.IList<string>? MediaUrls { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("unitCostMicroUSD")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("thumbnail")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double UnitCostMicroUSD { get; set; }
+        public required string Thumbnail { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("unitCostUSD")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("numComments")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double UnitCostUSD { get; set; }
+        public required double NumComments { get; set; }
+
+        /// <summary>
+        /// User overview information
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("submittedBy")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.ResponseItemSubmittedBy SubmittedBy { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("unitLabel")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("isAuthorParticipating")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string UnitLabel { get; set; }
+        public required bool IsAuthorParticipating { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -72,35 +79,42 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem27" /> class.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="prettyName"></param>
-        /// <param name="cpu"></param>
-        /// <param name="ram"></param>
-        /// <param name="accelerator"></param>
-        /// <param name="unitCostMicroUSD"></param>
-        /// <param name="unitCostUSD"></param>
-        /// <param name="unitLabel"></param>
+        /// <param name="paper">
+        /// Paper data with metadata
+        /// </param>
+        /// <param name="publishedAt"></param>
+        /// <param name="title"></param>
+        /// <param name="summary"></param>
+        /// <param name="mediaUrls"></param>
+        /// <param name="thumbnail"></param>
+        /// <param name="numComments"></param>
+        /// <param name="submittedBy">
+        /// User overview information
+        /// </param>
+        /// <param name="isAuthorParticipating"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem27(
-            string name,
-            string prettyName,
-            string cpu,
-            string ram,
-            double unitCostMicroUSD,
-            double unitCostUSD,
-            string unitLabel,
-            global::HuggingFace.ResponseItemAccelerator4? accelerator)
+            global::HuggingFace.ResponseItemPaper paper,
+            global::System.DateTime publishedAt,
+            string title,
+            string summary,
+            string thumbnail,
+            double numComments,
+            global::HuggingFace.ResponseItemSubmittedBy submittedBy,
+            bool isAuthorParticipating,
+            global::System.Collections.Generic.IList<string>? mediaUrls)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.PrettyName = prettyName ?? throw new global::System.ArgumentNullException(nameof(prettyName));
-            this.Cpu = cpu ?? throw new global::System.ArgumentNullException(nameof(cpu));
-            this.Ram = ram ?? throw new global::System.ArgumentNullException(nameof(ram));
-            this.UnitCostMicroUSD = unitCostMicroUSD;
-            this.UnitCostUSD = unitCostUSD;
-            this.UnitLabel = unitLabel ?? throw new global::System.ArgumentNullException(nameof(unitLabel));
-            this.Accelerator = accelerator;
+            this.Paper = paper ?? throw new global::System.ArgumentNullException(nameof(paper));
+            this.PublishedAt = publishedAt;
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
+            this.Thumbnail = thumbnail ?? throw new global::System.ArgumentNullException(nameof(thumbnail));
+            this.NumComments = numComments;
+            this.SubmittedBy = submittedBy ?? throw new global::System.ArgumentNullException(nameof(submittedBy));
+            this.IsAuthorParticipating = isAuthorParticipating;
+            this.MediaUrls = mediaUrls;
         }
 
         /// <summary>

@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -13,8 +11,16 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
-        public int? Position { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("sql")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Sql { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Title { get; set; }
 
         /// <summary>
         /// 
@@ -25,28 +31,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestTheme2JsonConverter))]
-        public global::HuggingFace.RequestTheme2? Theme { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string? Title { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        public string? Description { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gating")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.RequestGatingVariant22, global::HuggingFace.RequestGatingVariant32>))]
-        public global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatingVariant22, global::HuggingFace.RequestGatingVariant32>? Gating { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("views")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.RequestView> Views { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -57,29 +44,23 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request67" /> class.
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="private"></param>
-        /// <param name="theme"></param>
+        /// <param name="sql"></param>
         /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="gating"></param>
+        /// <param name="private"></param>
+        /// <param name="views"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request67(
-            int? position,
-            bool? @private,
-            global::HuggingFace.RequestTheme2? theme,
-            string? title,
-            string? description,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatingVariant22, global::HuggingFace.RequestGatingVariant32>? gating)
+            string sql,
+            string title,
+            global::System.Collections.Generic.IList<global::HuggingFace.RequestView> views,
+            bool? @private)
         {
-            this.Position = position;
+            this.Sql = sql ?? throw new global::System.ArgumentNullException(nameof(sql));
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.Views = views ?? throw new global::System.ArgumentNullException(nameof(views));
             this.Private = @private;
-            this.Theme = theme;
-            this.Title = title;
-            this.Description = description;
-            this.Gating = gating;
         }
 
         /// <summary>

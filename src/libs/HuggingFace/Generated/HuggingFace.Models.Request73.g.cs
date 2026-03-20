@@ -9,11 +9,30 @@ namespace HuggingFace
     public sealed partial class Request73
     {
         /// <summary>
-        /// CRON schedule expression (e.g., '0 9 * * 1' for 9 AM every Monday).
+        /// Either userId or user must be provided
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("schedule")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
+        public string? UserId { get; set; }
+
+        /// <summary>
+        /// Either userId or user must be provided
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user")]
+        public string? User { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestStatus3JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Schedule { get; set; }
+        public required global::HuggingFace.RequestStatus3 Status { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rejectionReason")]
+        public string? RejectionReason { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,16 +43,27 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request73" /> class.
         /// </summary>
-        /// <param name="schedule">
-        /// CRON schedule expression (e.g., '0 9 * * 1' for 9 AM every Monday).
+        /// <param name="userId">
+        /// Either userId or user must be provided
         /// </param>
+        /// <param name="user">
+        /// Either userId or user must be provided
+        /// </param>
+        /// <param name="status"></param>
+        /// <param name="rejectionReason"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request73(
-            string schedule)
+            global::HuggingFace.RequestStatus3 status,
+            string? userId,
+            string? user,
+            string? rejectionReason)
         {
-            this.Schedule = schedule ?? throw new global::System.ArgumentNullException(nameof(schedule));
+            this.Status = status;
+            this.UserId = userId;
+            this.User = user;
+            this.RejectionReason = rejectionReason;
         }
 
         /// <summary>

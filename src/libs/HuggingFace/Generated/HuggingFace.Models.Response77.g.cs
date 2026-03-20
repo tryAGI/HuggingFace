@@ -11,22 +11,16 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("files")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Id { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile3> Files { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("commitOid")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Name { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("numUsers")]
-        public double? NumUsers { get; set; }
+        public required string CommitOid { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,20 +31,17 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response77" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
-        /// <param name="numUsers"></param>
+        /// <param name="files"></param>
+        /// <param name="commitOid"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response77(
-            string id,
-            string name,
-            double? numUsers)
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseFile3> files,
+            string commitOid)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.NumUsers = numUsers;
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
+            this.CommitOid = commitOid ?? throw new global::System.ArgumentNullException(nameof(commitOid));
         }
 
         /// <summary>

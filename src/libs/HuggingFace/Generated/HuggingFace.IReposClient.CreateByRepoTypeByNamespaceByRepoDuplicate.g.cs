@@ -13,12 +13,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response98> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
-            global::HuggingFace.RepoType45 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response122> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
+            global::HuggingFace.RepoType24 repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request50 request,
+            global::HuggingFace.Request62 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -41,13 +41,13 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response98> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
-            global::HuggingFace.RepoType45 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response122> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
+            global::HuggingFace.RepoType24 repoType,
             string @namespace,
             string repo,
             string repository,
             bool? @private = default,
-            global::HuggingFace.RequestVisibility2? visibility = default,
+            global::HuggingFace.RequestVisibility4? visibility = default,
             string? resourceGroupId = default,
             global::HuggingFace.RequestHardware? hardware = default,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds = default,

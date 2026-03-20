@@ -4,71 +4,54 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Daily paper data for API responses
+    /// 
     /// </summary>
     public sealed partial class ResponseItem20
     {
         /// <summary>
-        /// Paper data with metadata
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("paper")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemType8JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseItemPaper Paper { get; set; }
+        public required global::HuggingFace.ResponseItemType8 Type { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("publishedAt")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("oid")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime PublishedAt { get; set; }
+        public required string Oid { get; set; }
+
+        /// <summary>
+        /// If the file is a LFS pointer, it'll return the size of the remote file
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
+        public int? Size { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Title { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("lfs")]
+        public global::HuggingFace.ResponseItemLfs6? Lfs { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Summary { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("xetHash")]
+        public string? XetHash { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("mediaUrls")]
-        public global::System.Collections.Generic.IList<string>? MediaUrls { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("lastCommit")]
+        public global::HuggingFace.ResponseItemLastCommit6? LastCommit { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("thumbnail")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Thumbnail { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("numComments")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double NumComments { get; set; }
-
-        /// <summary>
-        /// User overview information
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("submittedBy")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseItemSubmittedBy SubmittedBy { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isAuthorParticipating")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool IsAuthorParticipating { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("securityFileStatus")]
+        public global::HuggingFace.ResponseItemSecurityFileStatus6? SecurityFileStatus { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -79,42 +62,34 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem20" /> class.
         /// </summary>
-        /// <param name="paper">
-        /// Paper data with metadata
+        /// <param name="type"></param>
+        /// <param name="oid"></param>
+        /// <param name="size">
+        /// If the file is a LFS pointer, it'll return the size of the remote file
         /// </param>
-        /// <param name="publishedAt"></param>
-        /// <param name="title"></param>
-        /// <param name="summary"></param>
-        /// <param name="mediaUrls"></param>
-        /// <param name="thumbnail"></param>
-        /// <param name="numComments"></param>
-        /// <param name="submittedBy">
-        /// User overview information
-        /// </param>
-        /// <param name="isAuthorParticipating"></param>
+        /// <param name="lfs"></param>
+        /// <param name="xetHash"></param>
+        /// <param name="lastCommit"></param>
+        /// <param name="securityFileStatus"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem20(
-            global::HuggingFace.ResponseItemPaper paper,
-            global::System.DateTime publishedAt,
-            string title,
-            string summary,
-            string thumbnail,
-            double numComments,
-            global::HuggingFace.ResponseItemSubmittedBy submittedBy,
-            bool isAuthorParticipating,
-            global::System.Collections.Generic.IList<string>? mediaUrls)
+            global::HuggingFace.ResponseItemType8 type,
+            string oid,
+            int? size,
+            global::HuggingFace.ResponseItemLfs6? lfs,
+            string? xetHash,
+            global::HuggingFace.ResponseItemLastCommit6? lastCommit,
+            global::HuggingFace.ResponseItemSecurityFileStatus6? securityFileStatus)
         {
-            this.Paper = paper ?? throw new global::System.ArgumentNullException(nameof(paper));
-            this.PublishedAt = publishedAt;
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
-            this.Thumbnail = thumbnail ?? throw new global::System.ArgumentNullException(nameof(thumbnail));
-            this.NumComments = numComments;
-            this.SubmittedBy = submittedBy ?? throw new global::System.ArgumentNullException(nameof(submittedBy));
-            this.IsAuthorParticipating = isAuthorParticipating;
-            this.MediaUrls = mediaUrls;
+            this.Type = type;
+            this.Oid = oid ?? throw new global::System.ArgumentNullException(nameof(oid));
+            this.Size = size;
+            this.Lfs = lfs;
+            this.XetHash = xetHash;
+            this.LastCommit = lastCommit;
+            this.SecurityFileStatus = securityFileStatus;
         }
 
         /// <summary>

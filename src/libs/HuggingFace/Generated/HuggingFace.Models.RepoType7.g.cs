@@ -24,6 +24,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Kernels,
+        /// <summary>
+        /// 
+        /// </summary>
+        Buckets,
     }
 
     /// <summary>
@@ -42,6 +46,7 @@ namespace HuggingFace
                 RepoType7.Spaces => "spaces",
                 RepoType7.Datasets => "datasets",
                 RepoType7.Kernels => "kernels",
+                RepoType7.Buckets => "buckets",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -56,6 +61,7 @@ namespace HuggingFace
                 "spaces" => RepoType7.Spaces,
                 "datasets" => RepoType7.Datasets,
                 "kernels" => RepoType7.Kernels,
+                "buckets" => RepoType7.Buckets,
                 _ => null,
             };
         }

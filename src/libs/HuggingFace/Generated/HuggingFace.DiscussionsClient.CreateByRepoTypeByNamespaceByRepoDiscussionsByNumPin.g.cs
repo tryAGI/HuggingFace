@@ -7,19 +7,19 @@ namespace HuggingFace
     {
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsByNumPinArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType34 repoType,
+            ref global::HuggingFace.RepoType16 repoType,
             ref string @namespace,
             ref string repo,
             ref string num,
-            global::HuggingFace.Request43 request);
+            global::HuggingFace.Request55 request);
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsByNumPinRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType34 repoType,
+            global::HuggingFace.RepoType16 repoType,
             string @namespace,
             string repo,
             string num,
-            global::HuggingFace.Request43 request);
+            global::HuggingFace.Request55 request);
         partial void ProcessCreateByRepoTypeByNamespaceByRepoDiscussionsByNumPinResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -35,12 +35,12 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task CreateByRepoTypeByNamespaceByRepoDiscussionsByNumPinAsync(
-            global::HuggingFace.RepoType34 repoType,
+            global::HuggingFace.RepoType16 repoType,
             string @namespace,
             string repo,
             string num,
 
-            global::HuggingFace.Request43 request,
+            global::HuggingFace.Request55 request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -200,14 +200,14 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task CreateByRepoTypeByNamespaceByRepoDiscussionsByNumPinAsync(
-            global::HuggingFace.RepoType34 repoType,
+            global::HuggingFace.RepoType16 repoType,
             string @namespace,
             string repo,
             string num,
             bool pinned,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request43
+            var __request = new global::HuggingFace.Request55
             {
                 Pinned = pinned,
             };

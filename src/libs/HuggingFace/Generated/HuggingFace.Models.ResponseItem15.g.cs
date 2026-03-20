@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -13,62 +11,55 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("rank")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemType3JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Rank { get; set; }
+        public required global::HuggingFace.ResponseItemType3 Type { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("modelId")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("oid")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string ModelId { get; set; }
+        public required string Oid { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseItemAuthorVariant1, global::HuggingFace.ResponseItemAuthorVariant2>))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemAuthorVariant1, global::HuggingFace.ResponseItemAuthorVariant2> Author { get; set; }
+        public required double Size { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("value")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("lfs")]
+        public global::HuggingFace.ResponseItemLfs? Lfs { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xetHash")]
+        public string? XetHash { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Value { get; set; }
+        public required string Path { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("verified")]
-        public bool? Verified { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("lastCommit")]
+        public global::HuggingFace.ResponseItemLastCommit? LastCommit { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("source")]
-        public global::HuggingFace.ResponseItemSource? Source { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pullRequest")]
-        public double? PullRequest { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("filename")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Filename { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("notes")]
-        public string? Notes { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("securityFileStatus")]
+        public global::HuggingFace.ResponseItemSecurityFileStatus? SecurityFileStatus { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -79,38 +70,35 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem15" /> class.
         /// </summary>
-        /// <param name="rank"></param>
-        /// <param name="modelId"></param>
-        /// <param name="author"></param>
-        /// <param name="value"></param>
-        /// <param name="verified"></param>
-        /// <param name="source"></param>
-        /// <param name="pullRequest"></param>
-        /// <param name="filename"></param>
-        /// <param name="notes"></param>
+        /// <param name="type"></param>
+        /// <param name="oid"></param>
+        /// <param name="size"></param>
+        /// <param name="lfs"></param>
+        /// <param name="xetHash"></param>
+        /// <param name="path"></param>
+        /// <param name="lastCommit"></param>
+        /// <param name="securityFileStatus"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem15(
-            double rank,
-            string modelId,
-            global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemAuthorVariant1, global::HuggingFace.ResponseItemAuthorVariant2> author,
-            double value,
-            string filename,
-            bool? verified,
-            global::HuggingFace.ResponseItemSource? source,
-            double? pullRequest,
-            string? notes)
+            global::HuggingFace.ResponseItemType3 type,
+            string oid,
+            double size,
+            string path,
+            global::HuggingFace.ResponseItemLfs? lfs,
+            string? xetHash,
+            global::HuggingFace.ResponseItemLastCommit? lastCommit,
+            global::HuggingFace.ResponseItemSecurityFileStatus? securityFileStatus)
         {
-            this.Rank = rank;
-            this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
-            this.Author = author;
-            this.Value = value;
-            this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
-            this.Verified = verified;
-            this.Source = source;
-            this.PullRequest = pullRequest;
-            this.Notes = notes;
+            this.Type = type;
+            this.Oid = oid ?? throw new global::System.ArgumentNullException(nameof(oid));
+            this.Size = size;
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Lfs = lfs;
+            this.XetHash = xetHash;
+            this.LastCommit = lastCommit;
+            this.SecurityFileStatus = securityFileStatus;
         }
 
         /// <summary>

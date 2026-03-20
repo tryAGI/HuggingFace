@@ -9,11 +9,24 @@ namespace HuggingFace
     public sealed partial class Request43
     {
         /// <summary>
-        /// 
+        /// The commit to start from
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pinned")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool Pinned { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("startingPoint")]
+        public string? StartingPoint { get; set; }
+
+        /// <summary>
+        /// Create an empty branch<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("emptyBranch")]
+        public bool? EmptyBranch { get; set; }
+
+        /// <summary>
+        /// Overwrite the branch if it already exists<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overwrite")]
+        public bool? Overwrite { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +37,28 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request43" /> class.
         /// </summary>
-        /// <param name="pinned"></param>
+        /// <param name="startingPoint">
+        /// The commit to start from
+        /// </param>
+        /// <param name="emptyBranch">
+        /// Create an empty branch<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="overwrite">
+        /// Overwrite the branch if it already exists<br/>
+        /// Default Value: false
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request43(
-            bool pinned)
+            string? startingPoint,
+            bool? emptyBranch,
+            bool? overwrite)
         {
-            this.Pinned = pinned;
+            this.StartingPoint = startingPoint;
+            this.EmptyBranch = emptyBranch;
+            this.Overwrite = overwrite;
         }
 
         /// <summary>

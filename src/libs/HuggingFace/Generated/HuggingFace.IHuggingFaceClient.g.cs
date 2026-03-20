@@ -53,6 +53,11 @@ namespace HuggingFace
         public ModelsClient Models { get; }
 
         /// <summary>
+        /// Get information from all kernels on the Hub.
+        /// </summary>
+        public KernelsClient Kernels { get; }
+
+        /// <summary>
         /// Get information from all datasets on the Hub.
         /// </summary>
         public DatasetsClient Datasets { get; }

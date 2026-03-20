@@ -7,17 +7,17 @@ namespace HuggingFace
     {
         partial void PrepareCreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType48 repoType,
+            ref global::HuggingFace.RepoType27 repoType,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request55 request);
+            global::HuggingFace.Request67 request);
         partial void PrepareCreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType48 repoType,
+            global::HuggingFace.RepoType27 repoType,
             string @namespace,
             string repo,
-            global::HuggingFace.Request55 request);
+            global::HuggingFace.Request67 request);
         partial void ProcessCreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -37,12 +37,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response103> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
-            global::HuggingFace.RepoType48 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response127> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
+            global::HuggingFace.RepoType27 repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request55 request,
+            global::HuggingFace.Request67 request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -135,7 +135,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response103.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response127.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -166,7 +166,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response103.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response127.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -212,8 +212,8 @@ namespace HuggingFace
         /// <param name="views"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response103> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
-            global::HuggingFace.RepoType48 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response127> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
+            global::HuggingFace.RepoType27 repoType,
             string @namespace,
             string repo,
             string sql,
@@ -222,7 +222,7 @@ namespace HuggingFace
             bool? @private = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request55
+            var __request = new global::HuggingFace.Request67
             {
                 Sql = sql,
                 Title = title,

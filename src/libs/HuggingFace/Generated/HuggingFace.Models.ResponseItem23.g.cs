@@ -11,28 +11,36 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
-        public global::HuggingFace.ResponseItemNote2? Note { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
-        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Position { get; set; }
+        public required string Label { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemType10JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.ResponseItemType10 Type { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subType")]
+        public string? SubType { get; set; }
+
+        /// <summary>
+        /// Default Value: true
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("clickable")]
+        public bool? Clickable { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -44,22 +52,27 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="ResponseItem23" /> class.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="note"></param>
-        /// <param name="gallery"></param>
-        /// <param name="position"></param>
+        /// <param name="label"></param>
+        /// <param name="type"></param>
+        /// <param name="subType"></param>
+        /// <param name="clickable">
+        /// Default Value: true
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem23(
             string id,
-            double position,
-            global::HuggingFace.ResponseItemNote2? note,
-            global::System.Collections.Generic.IList<string>? gallery)
+            string label,
+            global::HuggingFace.ResponseItemType10 type,
+            string? subType,
+            bool? clickable)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Position = position;
-            this.Note = note;
-            this.Gallery = gallery;
+            this.Label = label ?? throw new global::System.ArgumentNullException(nameof(label));
+            this.Type = type;
+            this.SubType = subType;
+            this.Clickable = clickable;
         }
 
         /// <summary>

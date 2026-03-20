@@ -11,10 +11,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response133> CreateScheduledJobsByNamespaceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response174> CreateScheduledJobsByNamespaceAsync(
             string @namespace,
 
-            global::HuggingFace.Request72 request,
+            global::HuggingFace.Request88 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response133> CreateScheduledJobsByNamespaceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response174> CreateScheduledJobsByNamespaceAsync(
             string @namespace,
             global::HuggingFace.RequestJobSpec jobSpec,
             string schedule,

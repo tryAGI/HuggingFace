@@ -11,15 +11,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("lastJob")]
-        public global::HuggingFace.ResponseItemStatusLastJob2? LastJob { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("stage")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemStatusStageJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.ResponseItemStatusStage Stage { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("nextJobRunAt")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime NextJobRunAt { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
+        public string? Message { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("failureCount")]
+        public double? FailureCount { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -30,17 +37,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItemStatus3" /> class.
         /// </summary>
-        /// <param name="lastJob"></param>
-        /// <param name="nextJobRunAt"></param>
+        /// <param name="stage"></param>
+        /// <param name="message"></param>
+        /// <param name="failureCount"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItemStatus3(
-            global::System.DateTime nextJobRunAt,
-            global::HuggingFace.ResponseItemStatusLastJob2? lastJob)
+            global::HuggingFace.ResponseItemStatusStage stage,
+            string? message,
+            double? failureCount)
         {
-            this.NextJobRunAt = nextJobRunAt;
-            this.LastJob = lastJob;
+            this.Stage = stage;
+            this.Message = message;
+            this.FailureCount = failureCount;
         }
 
         /// <summary>

@@ -11,9 +11,23 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("newMessage")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("casUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseNewMessage5 NewMessage { get; set; }
+        public required string CasUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exp")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Exp { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("accessToken")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AccessToken { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +38,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response86" /> class.
         /// </summary>
-        /// <param name="newMessage"></param>
+        /// <param name="casUrl"></param>
+        /// <param name="exp"></param>
+        /// <param name="accessToken"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response86(
-            global::HuggingFace.ResponseNewMessage5 newMessage)
+            string casUrl,
+            double exp,
+            string accessToken)
         {
-            this.NewMessage = newMessage ?? throw new global::System.ArgumentNullException(nameof(newMessage));
+            this.CasUrl = casUrl ?? throw new global::System.ArgumentNullException(nameof(casUrl));
+            this.Exp = exp;
+            this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
         }
 
         /// <summary>

@@ -11,55 +11,43 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemType3JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseItemType3 Type { get; set; }
+        public required string Id { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("oid")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Oid { get; set; }
+        public required string Title { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Size { get; set; }
+        public required string Message { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("lfs")]
-        public global::HuggingFace.ResponseItemLfs? Lfs { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("xetHash")]
-        public string? XetHash { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("authors")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Path { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseItemAuthor3> Authors { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("lastCommit")]
-        public global::HuggingFace.ResponseItemLastCommit? LastCommit { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime Date { get; set; }
 
         /// <summary>
-        /// 
+        /// Available if expand includes formatted
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("securityFileStatus")]
-        public global::HuggingFace.ResponseItemSecurityFileStatus? SecurityFileStatus { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("formatted")]
+        public global::HuggingFace.ResponseItemFormatted2? Formatted { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -70,35 +58,31 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem13" /> class.
         /// </summary>
-        /// <param name="type"></param>
-        /// <param name="oid"></param>
-        /// <param name="size"></param>
-        /// <param name="lfs"></param>
-        /// <param name="xetHash"></param>
-        /// <param name="path"></param>
-        /// <param name="lastCommit"></param>
-        /// <param name="securityFileStatus"></param>
+        /// <param name="id"></param>
+        /// <param name="title"></param>
+        /// <param name="message"></param>
+        /// <param name="authors"></param>
+        /// <param name="date"></param>
+        /// <param name="formatted">
+        /// Available if expand includes formatted
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem13(
-            global::HuggingFace.ResponseItemType3 type,
-            string oid,
-            double size,
-            string path,
-            global::HuggingFace.ResponseItemLfs? lfs,
-            string? xetHash,
-            global::HuggingFace.ResponseItemLastCommit? lastCommit,
-            global::HuggingFace.ResponseItemSecurityFileStatus? securityFileStatus)
+            string id,
+            string title,
+            string message,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseItemAuthor3> authors,
+            global::System.DateTime date,
+            global::HuggingFace.ResponseItemFormatted2? formatted)
         {
-            this.Type = type;
-            this.Oid = oid ?? throw new global::System.ArgumentNullException(nameof(oid));
-            this.Size = size;
-            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
-            this.Lfs = lfs;
-            this.XetHash = xetHash;
-            this.LastCommit = lastCommit;
-            this.SecurityFileStatus = securityFileStatus;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
+            this.Authors = authors ?? throw new global::System.ArgumentNullException(nameof(authors));
+            this.Date = date;
+            this.Formatted = formatted;
         }
 
         /// <summary>

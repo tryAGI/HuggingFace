@@ -11,36 +11,55 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Id { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Label { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemType6JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseItemType5JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseItemType6 Type { get; set; }
+        public required global::HuggingFace.ResponseItemType5 Type { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("subType")]
-        public string? SubType { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("oid")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Oid { get; set; }
 
         /// <summary>
-        /// Default Value: true
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("clickable")]
-        public bool? Clickable { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Size { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lfs")]
+        public global::HuggingFace.ResponseItemLfs3? Lfs { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xetHash")]
+        public string? XetHash { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Path { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lastCommit")]
+        public global::HuggingFace.ResponseItemLastCommit3? LastCommit { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("securityFileStatus")]
+        public global::HuggingFace.ResponseItemSecurityFileStatus3? SecurityFileStatus { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -51,28 +70,35 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseItem17" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="label"></param>
         /// <param name="type"></param>
-        /// <param name="subType"></param>
-        /// <param name="clickable">
-        /// Default Value: true
-        /// </param>
+        /// <param name="oid"></param>
+        /// <param name="size"></param>
+        /// <param name="lfs"></param>
+        /// <param name="xetHash"></param>
+        /// <param name="path"></param>
+        /// <param name="lastCommit"></param>
+        /// <param name="securityFileStatus"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ResponseItem17(
-            string id,
-            string label,
-            global::HuggingFace.ResponseItemType6 type,
-            string? subType,
-            bool? clickable)
+            global::HuggingFace.ResponseItemType5 type,
+            string oid,
+            double size,
+            string path,
+            global::HuggingFace.ResponseItemLfs3? lfs,
+            string? xetHash,
+            global::HuggingFace.ResponseItemLastCommit3? lastCommit,
+            global::HuggingFace.ResponseItemSecurityFileStatus3? securityFileStatus)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Label = label ?? throw new global::System.ArgumentNullException(nameof(label));
             this.Type = type;
-            this.SubType = subType;
-            this.Clickable = clickable;
+            this.Oid = oid ?? throw new global::System.ArgumentNullException(nameof(oid));
+            this.Size = size;
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Lfs = lfs;
+            this.XetHash = xetHash;
+            this.LastCommit = lastCommit;
+            this.SecurityFileStatus = securityFileStatus;
         }
 
         /// <summary>

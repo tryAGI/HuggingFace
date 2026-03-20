@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateReposMoveAsync(
 
-            global::HuggingFace.Request53 request,
+            global::HuggingFace.Request65 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>

@@ -9,32 +9,30 @@ namespace HuggingFace
     public sealed partial class Request72
     {
         /// <summary>
+        /// Either userId or user must be provided
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
+        public string? UserId { get; set; }
+
+        /// <summary>
+        /// Either userId or user must be provided
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user")]
+        public string? User { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("jobSpec")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestStatus2JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.RequestJobSpec JobSpec { get; set; }
+        public required global::HuggingFace.RequestStatus2 Status { get; set; }
 
         /// <summary>
-        /// CRON schedule expression (e.g., '0 9 * * 1' for 9 AM every Monday).
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("schedule")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Schedule { get; set; }
-
-        /// <summary>
-        /// Whether the scheduled job is suspended (paused)<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("suspend")]
-        public bool? Suspend { get; set; }
-
-        /// <summary>
-        /// Whether multiple instances of this job can run concurrently<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("concurrency")]
-        public bool? Concurrency { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("rejectionReason")]
+        public string? RejectionReason { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -45,31 +43,27 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request72" /> class.
         /// </summary>
-        /// <param name="jobSpec"></param>
-        /// <param name="schedule">
-        /// CRON schedule expression (e.g., '0 9 * * 1' for 9 AM every Monday).
+        /// <param name="userId">
+        /// Either userId or user must be provided
         /// </param>
-        /// <param name="suspend">
-        /// Whether the scheduled job is suspended (paused)<br/>
-        /// Default Value: false
+        /// <param name="user">
+        /// Either userId or user must be provided
         /// </param>
-        /// <param name="concurrency">
-        /// Whether multiple instances of this job can run concurrently<br/>
-        /// Default Value: false
-        /// </param>
+        /// <param name="status"></param>
+        /// <param name="rejectionReason"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request72(
-            global::HuggingFace.RequestJobSpec jobSpec,
-            string schedule,
-            bool? suspend,
-            bool? concurrency)
+            global::HuggingFace.RequestStatus2 status,
+            string? userId,
+            string? user,
+            string? rejectionReason)
         {
-            this.JobSpec = jobSpec ?? throw new global::System.ArgumentNullException(nameof(jobSpec));
-            this.Schedule = schedule ?? throw new global::System.ArgumentNullException(nameof(schedule));
-            this.Suspend = suspend;
-            this.Concurrency = concurrency;
+            this.Status = status;
+            this.UserId = userId;
+            this.User = user;
+            this.RejectionReason = rejectionReason;
         }
 
         /// <summary>

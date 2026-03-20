@@ -19,7 +19,7 @@ namespace HuggingFace
             ref string? @namespace,
             ref global::HuggingFace.AnyOf<bool?, object>? includeInvitees,
             ref string? repoName,
-            ref global::HuggingFace.AnyOf<global::HuggingFace.RepoType42?, string>? repoType,
+            ref global::HuggingFace.AnyOf<global::HuggingFace.RepoType21?, string>? repoType,
             ref string? discussionId,
             ref string? discussionCollectionName,
             global::System.Collections.Generic.IList<string>? spacesTags);
@@ -38,7 +38,7 @@ namespace HuggingFace
             string? @namespace,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees,
             string? repoName,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType42?, string>? repoType,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType21?, string>? repoType,
             string? discussionId,
             string? discussionCollectionName,
             global::System.Collections.Generic.IList<string>? spacesTags);
@@ -82,7 +82,7 @@ namespace HuggingFace
         /// <param name="spacesTags"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response96> GetQuicksearchAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response120> GetQuicksearchAsync(
             string? q = default,
             int? limit = default,
             global::HuggingFace.AnyOf<global::HuggingFace.Lang3?, string>? lang = default,
@@ -95,7 +95,7 @@ namespace HuggingFace
             string? @namespace = default,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
             string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType42?, string>? repoType = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.RepoType21?, string>? repoType = default,
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,
@@ -225,7 +225,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response96.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response120.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -256,7 +256,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response96.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response120.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

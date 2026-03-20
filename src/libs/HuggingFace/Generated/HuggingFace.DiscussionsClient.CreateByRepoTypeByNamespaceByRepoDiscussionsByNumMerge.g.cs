@@ -7,19 +7,19 @@ namespace HuggingFace
     {
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType35 repoType,
+            ref global::HuggingFace.RepoType17 repoType,
             ref string @namespace,
             ref string repo,
             ref string num,
-            global::HuggingFace.Request44 request);
+            global::HuggingFace.Request56 request);
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType35 repoType,
+            global::HuggingFace.RepoType17 repoType,
             string @namespace,
             string repo,
             string num,
-            global::HuggingFace.Request44 request);
+            global::HuggingFace.Request56 request);
         partial void ProcessCreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -35,12 +35,12 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task CreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeAsync(
-            global::HuggingFace.RepoType35 repoType,
+            global::HuggingFace.RepoType17 repoType,
             string @namespace,
             string repo,
             string num,
 
-            global::HuggingFace.Request44 request,
+            global::HuggingFace.Request56 request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -200,14 +200,14 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task CreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeAsync(
-            global::HuggingFace.RepoType35 repoType,
+            global::HuggingFace.RepoType17 repoType,
             string @namespace,
             string repo,
             string num,
             string? comment = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request44
+            var __request = new global::HuggingFace.Request56
             {
                 Comment = comment,
             };

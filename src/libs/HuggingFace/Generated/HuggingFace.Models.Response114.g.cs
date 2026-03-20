@@ -9,11 +9,30 @@ namespace HuggingFace
     public sealed partial class Response114
     {
         /// <summary>
-        /// 
+        /// The JWT token with Bearer prefix
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("newMessage")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("accessToken")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseNewMessage6 NewMessage { get; set; }
+        public required string AccessToken { get; set; }
+
+        /// <summary>
+        /// Token expiration timestamp in seconds (JWT standard)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exp")]
+        public int? Exp { get; set; }
+
+        /// <summary>
+        /// The JWT token
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("token")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Token { get; set; }
+
+        /// <summary>
+        /// Encrypted JWT token and key ID (only if encrypted=true was requested)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("encryptedToken")]
+        public global::HuggingFace.ResponseEncryptedToken? EncryptedToken { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +43,31 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response114" /> class.
         /// </summary>
-        /// <param name="newMessage"></param>
+        /// <param name="accessToken">
+        /// The JWT token with Bearer prefix
+        /// </param>
+        /// <param name="exp">
+        /// Token expiration timestamp in seconds (JWT standard)
+        /// </param>
+        /// <param name="token">
+        /// The JWT token
+        /// </param>
+        /// <param name="encryptedToken">
+        /// Encrypted JWT token and key ID (only if encrypted=true was requested)
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response114(
-            global::HuggingFace.ResponseNewMessage6 newMessage)
+            string accessToken,
+            string token,
+            int? exp,
+            global::HuggingFace.ResponseEncryptedToken? encryptedToken)
         {
-            this.NewMessage = newMessage ?? throw new global::System.ArgumentNullException(nameof(newMessage));
+            this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
+            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
+            this.Exp = exp;
+            this.EncryptedToken = encryptedToken;
         }
 
         /// <summary>

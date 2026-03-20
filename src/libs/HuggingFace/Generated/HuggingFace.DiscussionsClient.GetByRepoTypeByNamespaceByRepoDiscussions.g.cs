@@ -7,7 +7,7 @@ namespace HuggingFace
     {
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType27 repoType,
+            ref global::HuggingFace.RepoType9 repoType,
             ref string @namespace,
             ref string repo,
             ref int? p,
@@ -19,7 +19,7 @@ namespace HuggingFace
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType27 repoType,
+            global::HuggingFace.RepoType9 repoType,
             string @namespace,
             string repo,
             int? p,
@@ -60,8 +60,8 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response82> GetByRepoTypeByNamespaceByRepoDiscussionsAsync(
-            global::HuggingFace.RepoType27 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response104> GetByRepoTypeByNamespaceByRepoDiscussionsAsync(
+            global::HuggingFace.RepoType9 repoType,
             string @namespace,
             string repo,
             int? p = default,
@@ -172,7 +172,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response82.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.Response104.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -203,7 +203,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response82.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.Response104.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

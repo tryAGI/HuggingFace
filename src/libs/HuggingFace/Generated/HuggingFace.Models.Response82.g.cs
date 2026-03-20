@@ -11,29 +11,23 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("discussions")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("casUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseDiscussion> Discussions { get; set; }
+        public required string CasUrl { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("exp")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Count { get; set; }
+        public required double Exp { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("accessToken")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Start { get; set; }
-
-        /// <summary>
-        /// Number of closed discussions on the first page
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("numClosedDiscussions")]
-        public double? NumClosedDiscussions { get; set; }
+        public required string AccessToken { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -44,25 +38,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response82" /> class.
         /// </summary>
-        /// <param name="discussions"></param>
-        /// <param name="count"></param>
-        /// <param name="start"></param>
-        /// <param name="numClosedDiscussions">
-        /// Number of closed discussions on the first page
-        /// </param>
+        /// <param name="casUrl"></param>
+        /// <param name="exp"></param>
+        /// <param name="accessToken"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response82(
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseDiscussion> discussions,
-            double count,
-            double start,
-            double? numClosedDiscussions)
+            string casUrl,
+            double exp,
+            string accessToken)
         {
-            this.Discussions = discussions ?? throw new global::System.ArgumentNullException(nameof(discussions));
-            this.Count = count;
-            this.Start = start;
-            this.NumClosedDiscussions = numClosedDiscussions;
+            this.CasUrl = casUrl ?? throw new global::System.ArgumentNullException(nameof(casUrl));
+            this.Exp = exp;
+            this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
         }
 
         /// <summary>

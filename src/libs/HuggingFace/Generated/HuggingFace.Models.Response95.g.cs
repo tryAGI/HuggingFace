@@ -13,9 +13,48 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("recentlyTrending")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.ResponseRecentlyTrendingItemVariant1, global::HuggingFace.ResponseRecentlyTrendingItemVariant2, global::HuggingFace.ResponseRecentlyTrendingItemVariant3>> RecentlyTrending { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
+        public bool? Private { get; set; }
+
+        /// <summary>
+        /// Repository visibility. `protected` is only supported for Spaces.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseVisibilityJsonConverter))]
+        public global::HuggingFace.ResponseVisibility? Visibility { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("discussionsDisabled")]
+        public bool? DiscussionsDisabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("discussionsSorting")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseDiscussionsSortingJsonConverter))]
+        public global::HuggingFace.ResponseDiscussionsSorting? DiscussionsSorting { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.ResponseGatedEnum2?>))]
+        public global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatedEnum2?>? Gated { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsEmail")]
+        public string? GatedNotificationsEmail { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsMode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseGatedNotificationsModeJsonConverter))]
+        public global::HuggingFace.ResponseGatedNotificationsMode? GatedNotificationsMode { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -26,14 +65,34 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response95" /> class.
         /// </summary>
-        /// <param name="recentlyTrending"></param>
+        /// <param name="private"></param>
+        /// <param name="visibility">
+        /// Repository visibility. `protected` is only supported for Spaces.
+        /// </param>
+        /// <param name="discussionsDisabled"></param>
+        /// <param name="discussionsSorting"></param>
+        /// <param name="gated"></param>
+        /// <param name="gatedNotificationsEmail"></param>
+        /// <param name="gatedNotificationsMode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response95(
-            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.ResponseRecentlyTrendingItemVariant1, global::HuggingFace.ResponseRecentlyTrendingItemVariant2, global::HuggingFace.ResponseRecentlyTrendingItemVariant3>> recentlyTrending)
+            bool? @private,
+            global::HuggingFace.ResponseVisibility? visibility,
+            bool? discussionsDisabled,
+            global::HuggingFace.ResponseDiscussionsSorting? discussionsSorting,
+            global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatedEnum2?>? gated,
+            string? gatedNotificationsEmail,
+            global::HuggingFace.ResponseGatedNotificationsMode? gatedNotificationsMode)
         {
-            this.RecentlyTrending = recentlyTrending ?? throw new global::System.ArgumentNullException(nameof(recentlyTrending));
+            this.Private = @private;
+            this.Visibility = visibility;
+            this.DiscussionsDisabled = discussionsDisabled;
+            this.DiscussionsSorting = discussionsSorting;
+            this.Gated = gated;
+            this.GatedNotificationsEmail = gatedNotificationsEmail;
+            this.GatedNotificationsMode = gatedNotificationsMode;
         }
 
         /// <summary>

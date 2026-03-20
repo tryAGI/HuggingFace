@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -13,9 +11,30 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Slug { get; set; }
+        public required string Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoId")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string RepoId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("views")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.ResponseView> Views { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sql")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Sql { get; set; }
 
         /// <summary>
         /// 
@@ -27,81 +46,41 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        public string? Description { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string UserId { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("lastUpdated")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime LastUpdated { get; set; }
+        public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("gating")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatingVariant25, global::HuggingFace.ResponseGatingVariant35>?>))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatingVariant25, global::HuggingFace.ResponseGatingVariant35>?> Gating { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseOwnerVariant15, global::HuggingFace.ResponseOwnerVariant25>))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.ResponseOwnerVariant15, global::HuggingFace.ResponseOwnerVariant25> Owner { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Position { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseTheme5JsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseTheme5 Theme { get; set; }
+        public required string Slug { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool Private { get; set; }
+        public bool? Private { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("upvotes")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Upvotes { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("rating")]
+        public double? Rating { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("shareUrl")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string ShareUrl { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isUpvotedByUser")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool IsUpvotedByUser { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("items")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.ResponseItem26, global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemVariant15, global::HuggingFace.ResponseItemVariant25, global::HuggingFace.ResponseItemVariant35, global::HuggingFace.ResponseItemVariant45, global::HuggingFace.ResponseItemVariant55>?>> Items { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("justification")]
+        public string? Justification { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -112,50 +91,44 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response125" /> class.
         /// </summary>
-        /// <param name="slug"></param>
+        /// <param name="id"></param>
+        /// <param name="repoId"></param>
+        /// <param name="views"></param>
+        /// <param name="sql"></param>
         /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="lastUpdated"></param>
-        /// <param name="gating"></param>
-        /// <param name="owner"></param>
-        /// <param name="position"></param>
-        /// <param name="theme"></param>
+        /// <param name="userId"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="slug"></param>
         /// <param name="private"></param>
-        /// <param name="upvotes"></param>
-        /// <param name="shareUrl"></param>
-        /// <param name="isUpvotedByUser"></param>
-        /// <param name="items"></param>
+        /// <param name="rating"></param>
+        /// <param name="justification"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response125(
-            string slug,
+            string id,
+            string repoId,
+            global::System.Collections.Generic.IList<global::HuggingFace.ResponseView> views,
+            string sql,
             string title,
-            global::System.DateTime lastUpdated,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.ResponseGatingVariant25, global::HuggingFace.ResponseGatingVariant35>?> gating,
-            global::HuggingFace.AnyOf<global::HuggingFace.ResponseOwnerVariant15, global::HuggingFace.ResponseOwnerVariant25> owner,
-            double position,
-            global::HuggingFace.ResponseTheme5 theme,
-            bool @private,
-            double upvotes,
-            string shareUrl,
-            bool isUpvotedByUser,
-            global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.ResponseItem26, global::HuggingFace.AnyOf<global::HuggingFace.ResponseItemVariant15, global::HuggingFace.ResponseItemVariant25, global::HuggingFace.ResponseItemVariant35, global::HuggingFace.ResponseItemVariant45, global::HuggingFace.ResponseItemVariant55>?>> items,
-            string? description)
+            string userId,
+            global::System.DateTime createdAt,
+            string slug,
+            bool? @private,
+            double? rating,
+            string? justification)
         {
-            this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.RepoId = repoId ?? throw new global::System.ArgumentNullException(nameof(repoId));
+            this.Views = views ?? throw new global::System.ArgumentNullException(nameof(views));
+            this.Sql = sql ?? throw new global::System.ArgumentNullException(nameof(sql));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.LastUpdated = lastUpdated;
-            this.Gating = gating;
-            this.Owner = owner;
-            this.Position = position;
-            this.Theme = theme;
+            this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
+            this.CreatedAt = createdAt;
+            this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.Private = @private;
-            this.Upvotes = upvotes;
-            this.ShareUrl = shareUrl ?? throw new global::System.ArgumentNullException(nameof(shareUrl));
-            this.IsUpvotedByUser = isUpvotedByUser;
-            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
-            this.Description = description;
+            this.Rating = rating;
+            this.Justification = justification;
         }
 
         /// <summary>

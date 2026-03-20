@@ -4,21 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// The user to grant access to either by userId or user
+    /// 
     /// </summary>
     public sealed partial class Request59
     {
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
-        public string? UserId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("user")]
-        public string? User { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Key { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,17 +24,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request59" /> class.
         /// </summary>
-        /// <param name="userId"></param>
-        /// <param name="user"></param>
+        /// <param name="key"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request59(
-            string? userId,
-            string? user)
+            string key)
         {
-            this.UserId = userId;
-            this.User = user;
+            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
         }
 
         /// <summary>

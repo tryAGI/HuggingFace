@@ -11,10 +11,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response128> CreateJobsByNamespaceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response169> CreateJobsByNamespaceAsync(
             string @namespace,
 
-            global::HuggingFace.Request71 request,
+            global::HuggingFace.Request87 request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response128> CreateJobsByNamespaceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.Response169> CreateJobsByNamespaceAsync(
             string @namespace,
             global::HuggingFace.RequestFlavor flavor,
             string? spaceId = default,

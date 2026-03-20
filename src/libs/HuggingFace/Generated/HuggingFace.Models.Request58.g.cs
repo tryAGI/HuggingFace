@@ -9,30 +9,23 @@ namespace HuggingFace
     public sealed partial class Request58
     {
         /// <summary>
-        /// Either userId or user must be provided
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
-        public string? UserId { get; set; }
-
-        /// <summary>
-        /// Either userId or user must be provided
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("user")]
-        public string? User { get; set; }
-
-        /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.RequestStatus2JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.RequestStatus2 Status { get; set; }
+        public required string Key { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("rejectionReason")]
-        public string? RejectionReason { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("value")]
+        public string? Value { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -43,27 +36,20 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Request58" /> class.
         /// </summary>
-        /// <param name="userId">
-        /// Either userId or user must be provided
-        /// </param>
-        /// <param name="user">
-        /// Either userId or user must be provided
-        /// </param>
-        /// <param name="status"></param>
-        /// <param name="rejectionReason"></param>
+        /// <param name="key"></param>
+        /// <param name="description"></param>
+        /// <param name="value"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Request58(
-            global::HuggingFace.RequestStatus2 status,
-            string? userId,
-            string? user,
-            string? rejectionReason)
+            string key,
+            string? description,
+            string? value)
         {
-            this.Status = status;
-            this.UserId = userId;
-            this.User = user;
-            this.RejectionReason = rejectionReason;
+            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
+            this.Description = description;
+            this.Value = value;
         }
 
         /// <summary>

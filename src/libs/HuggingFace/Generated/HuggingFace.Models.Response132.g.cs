@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -11,135 +9,39 @@ namespace HuggingFace
     public sealed partial class Response132
     {
         /// <summary>
-        /// 
+        /// The XET hash of the file
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("hash")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Id { get; set; }
+        public required string Hash { get; set; }
 
         /// <summary>
-        /// 
+        /// The XET auth URL for the file
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("refreshUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime CreatedAt { get; set; }
+        public required string RefreshUrl { get; set; }
 
         /// <summary>
-        /// 
+        /// The XET reconstruction URL for the file
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("spaceId")]
-        public string? SpaceId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("dockerImage")]
-        public string? DockerImage { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("timeout")]
-        public double? Timeout { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("reconstructionUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.Dictionary<string, string> Environment { get; set; }
+        public required string ReconstructionUrl { get; set; }
 
         /// <summary>
-        /// 
+        /// The ETag of the file
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("command")]
-        public global::System.Collections.Generic.IList<string>? Command { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("arguments")]
-        public global::System.Collections.Generic.IList<string>? Arguments { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("arch")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseArch4JsonConverter))]
-        public global::HuggingFace.ResponseArch4? Arch { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("flavor")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.ResponseFlavor4JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonPropertyName("etag")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseFlavor4 Flavor { get; set; }
+        public required string Etag { get; set; }
 
         /// <summary>
-        /// 
+        /// The size of the file
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("createdBy")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseCreatedBy4 CreatedBy { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("retry")]
-        public double? Retry { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
-        public global::System.Collections.Generic.IList<global::HuggingFace.ResponseVolume4>? Volumes { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <default>"job"</default>
-        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string Type { get; set; } = "job";
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseOwner4 Owner { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("initiator")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.ResponseInitiatorVariant14, global::HuggingFace.ResponseInitiatorVariant24, global::HuggingFace.ResponseInitiatorVariant34, global::HuggingFace.ResponseInitiatorVariant44>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.ResponseInitiatorVariant14, global::HuggingFace.ResponseInitiatorVariant24, global::HuggingFace.ResponseInitiatorVariant34, global::HuggingFace.ResponseInitiatorVariant44>? Initiator { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.ResponseStatus4 Status { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
-        public global::System.Collections.Generic.IList<string>? Secrets { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
-        public global::System.Collections.Generic.Dictionary<string, string>? Labels { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("hfToken")]
-        public global::HuggingFace.ResponseHfToken4? HfToken { get; set; }
+        public required double Size { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -150,71 +52,36 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="Response132" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="spaceId"></param>
-        /// <param name="dockerImage"></param>
-        /// <param name="timeout"></param>
-        /// <param name="environment"></param>
-        /// <param name="command"></param>
-        /// <param name="arguments"></param>
-        /// <param name="arch"></param>
-        /// <param name="flavor"></param>
-        /// <param name="createdBy"></param>
-        /// <param name="retry"></param>
-        /// <param name="volumes"></param>
-        /// <param name="type"></param>
-        /// <param name="owner"></param>
-        /// <param name="initiator"></param>
-        /// <param name="status"></param>
-        /// <param name="secrets"></param>
-        /// <param name="labels"></param>
-        /// <param name="hfToken"></param>
+        /// <param name="hash">
+        /// The XET hash of the file
+        /// </param>
+        /// <param name="refreshUrl">
+        /// The XET auth URL for the file
+        /// </param>
+        /// <param name="reconstructionUrl">
+        /// The XET reconstruction URL for the file
+        /// </param>
+        /// <param name="etag">
+        /// The ETag of the file
+        /// </param>
+        /// <param name="size">
+        /// The size of the file
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Response132(
-            string id,
-            global::System.DateTime createdAt,
-            global::System.Collections.Generic.Dictionary<string, string> environment,
-            global::HuggingFace.ResponseFlavor4 flavor,
-            global::HuggingFace.ResponseCreatedBy4 createdBy,
-            global::HuggingFace.ResponseOwner4 owner,
-            global::HuggingFace.ResponseStatus4 status,
-            string? spaceId,
-            string? dockerImage,
-            double? timeout,
-            global::System.Collections.Generic.IList<string>? command,
-            global::System.Collections.Generic.IList<string>? arguments,
-            global::HuggingFace.ResponseArch4? arch,
-            double? retry,
-            global::System.Collections.Generic.IList<global::HuggingFace.ResponseVolume4>? volumes,
-            global::HuggingFace.AnyOf<global::HuggingFace.ResponseInitiatorVariant14, global::HuggingFace.ResponseInitiatorVariant24, global::HuggingFace.ResponseInitiatorVariant34, global::HuggingFace.ResponseInitiatorVariant44>? initiator,
-            global::System.Collections.Generic.IList<string>? secrets,
-            global::System.Collections.Generic.Dictionary<string, string>? labels,
-            global::HuggingFace.ResponseHfToken4? hfToken,
-            string type = "job")
+            string hash,
+            string refreshUrl,
+            string reconstructionUrl,
+            string etag,
+            double size)
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.CreatedAt = createdAt;
-            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
-            this.Flavor = flavor;
-            this.CreatedBy = createdBy ?? throw new global::System.ArgumentNullException(nameof(createdBy));
-            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
-            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
-            this.SpaceId = spaceId;
-            this.DockerImage = dockerImage;
-            this.Timeout = timeout;
-            this.Command = command;
-            this.Arguments = arguments;
-            this.Arch = arch;
-            this.Retry = retry;
-            this.Volumes = volumes;
-            this.Type = type;
-            this.Initiator = initiator;
-            this.Secrets = secrets;
-            this.Labels = labels;
-            this.HfToken = hfToken;
+            this.Hash = hash ?? throw new global::System.ArgumentNullException(nameof(hash));
+            this.RefreshUrl = refreshUrl ?? throw new global::System.ArgumentNullException(nameof(refreshUrl));
+            this.ReconstructionUrl = reconstructionUrl ?? throw new global::System.ArgumentNullException(nameof(reconstructionUrl));
+            this.Etag = etag ?? throw new global::System.ArgumentNullException(nameof(etag));
+            this.Size = size;
         }
 
         /// <summary>
