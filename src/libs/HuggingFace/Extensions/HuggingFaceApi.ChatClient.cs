@@ -1,5 +1,6 @@
 using Microsoft.Extensions.AI;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Text.Json;
 
 // ReSharper disable once CheckNamespace
@@ -88,6 +89,7 @@ public partial class HuggingFaceInferenceClient : IChatClient
         IEnumerable<ChatMessage> messages, ChatOptions? options, [EnumeratorCancellation] CancellationToken cancellationToken)
     {
         var request = CreateChatRequest(messages, options);
+        var toolCallBuilders = new Dictionary<int, (string Id, string Name, StringBuilder Args)>();
 
         await foreach (var chunk in ChatCompletionsAsStreamAsync(request, cancellationToken: cancellationToken).ConfigureAwait(false))
         {
@@ -118,17 +120,45 @@ public partial class HuggingFaceInferenceClient : IChatClient
                 {
                     foreach (var tc in toolCallDelta.ToolCalls)
                     {
-                        var args = !string.IsNullOrEmpty(tc.Function.Arguments)
-                            ? tc.Function.Arguments
-                            : null;
-                        update.Contents.Add(new FunctionCallContent(tc.Id, tc.Function.Name ?? string.Empty, args is not null
-                            ? JsonSerializer.Deserialize<Dictionary<string, object?>>(args)
-                            : null)
+                        var index = tc.Index;
+                        if (!toolCallBuilders.TryGetValue(index, out var builder))
                         {
-                            RawRepresentation = tc
-                        });
+                            builder = (
+                                Id: tc.Id ?? string.Empty,
+                                Name: tc.Function.Name ?? string.Empty,
+                                Args: new StringBuilder());
+                            toolCallBuilders[index] = builder;
+                        }
+                        else
+                        {
+                            if (!string.IsNullOrEmpty(tc.Id))
+                                toolCallBuilders[index] = builder with { Id = tc.Id };
+                            if (!string.IsNullOrEmpty(tc.Function.Name))
+                                toolCallBuilders[index] = builder with { Name = tc.Function.Name };
+                        }
+
+                        if (!string.IsNullOrEmpty(tc.Function.Arguments))
+                        {
+                            toolCallBuilders[index].Args.Append(tc.Function.Arguments);
+                        }
                     }
                 }
+            }
+
+            if (choice?.FinishReason is "tool_calls" && toolCallBuilders.Count > 0)
+            {
+                foreach (var (_, builder) in toolCallBuilders)
+                {
+                    Dictionary<string, object?>? args = null;
+                    var argsJson = builder.Args.ToString();
+                    if (argsJson.Length > 0)
+                    {
+                        try { args = JsonSerializer.Deserialize<Dictionary<string, object?>>(argsJson); }
+                        catch (JsonException) { }
+                    }
+                    update.Contents.Add(new FunctionCallContent(builder.Id, builder.Name, args));
+                }
+                toolCallBuilders.Clear();
             }
 
             if (chunk.Usage is { } u)
