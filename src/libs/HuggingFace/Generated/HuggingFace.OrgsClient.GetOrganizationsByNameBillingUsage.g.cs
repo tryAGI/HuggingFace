@@ -23,7 +23,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get org usage<br/>
         /// Get org usage for a given period

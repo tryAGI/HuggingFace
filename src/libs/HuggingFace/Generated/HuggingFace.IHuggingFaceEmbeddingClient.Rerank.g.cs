@@ -4,12 +4,10 @@ namespace HuggingFace
 {
     public partial interface IHuggingFaceEmbeddingClient
     {
-
         /// <summary>
         /// Get Ranks. Returns a 424 status code if the model is not a Sequence Classification model with<br/>
         /// a single class.
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -17,7 +15,6 @@ namespace HuggingFace
 
             global::HuggingFace.RerankRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Get Ranks. Returns a 424 status code if the model is not a Sequence Classification model with<br/>
         /// a single class.

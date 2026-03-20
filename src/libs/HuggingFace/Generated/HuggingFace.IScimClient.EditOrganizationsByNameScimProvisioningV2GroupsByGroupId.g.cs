@@ -4,14 +4,12 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
-
         /// <summary>
         /// Update SCIM group<br/>
         /// Update attributes of a SCIM group. Updates individual attributes using Operations format. Just provide the changes you want to make using add, remove (only `members` is supported), or replace operations.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -21,7 +19,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request21 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update SCIM group<br/>
         /// Update attributes of a SCIM group. Updates individual attributes using Operations format. Just provide the changes you want to make using add, remove (only `members` is supported), or replace operations.

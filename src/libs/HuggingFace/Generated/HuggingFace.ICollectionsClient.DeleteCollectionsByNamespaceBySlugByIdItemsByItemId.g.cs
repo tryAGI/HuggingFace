@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ICollectionsClient
     {
-
         /// <summary>
         /// Delete item<br/>
         /// Delete an item from a collection

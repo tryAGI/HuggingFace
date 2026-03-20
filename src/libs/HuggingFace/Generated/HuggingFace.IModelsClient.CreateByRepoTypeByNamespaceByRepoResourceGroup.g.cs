@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Add resource group<br/>
         /// Add the repository to a resource group
@@ -12,7 +11,6 @@ namespace HuggingFace
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -23,7 +21,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request44 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Add resource group<br/>
         /// Add the repository to a resource group

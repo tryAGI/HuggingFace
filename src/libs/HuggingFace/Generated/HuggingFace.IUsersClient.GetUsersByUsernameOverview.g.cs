@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
-
         /// <summary>
         /// User overview
         /// </summary>

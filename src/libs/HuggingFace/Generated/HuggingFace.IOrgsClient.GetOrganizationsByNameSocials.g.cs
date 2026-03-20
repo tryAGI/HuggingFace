@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IOrgsClient
     {
-
         /// <summary>
         /// Get social handles<br/>
         /// Get an organization's social media handles

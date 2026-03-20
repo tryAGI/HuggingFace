@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IWebhooksClient
     {
-
         /// <summary>
         /// Enable/disable webhook
         /// </summary>

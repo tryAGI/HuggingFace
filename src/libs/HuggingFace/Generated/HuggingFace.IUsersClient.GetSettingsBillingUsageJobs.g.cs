@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IUsersClient
     {
-
         /// <summary>
         /// Get jobs usage<br/>
         /// Get user Jobs usage for current subscription period

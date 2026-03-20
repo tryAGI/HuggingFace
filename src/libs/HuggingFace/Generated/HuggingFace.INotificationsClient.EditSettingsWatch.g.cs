@@ -4,12 +4,10 @@ namespace HuggingFace
 {
     public partial interface INotificationsClient
     {
-
         /// <summary>
         /// Update watch settings<br/>
         /// Update watch settings for the user. Get notified when discussions happen on your watched items.
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -17,7 +15,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request3 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update watch settings<br/>
         /// Update watch settings for the user. Get notified when discussions happen on your watched items.

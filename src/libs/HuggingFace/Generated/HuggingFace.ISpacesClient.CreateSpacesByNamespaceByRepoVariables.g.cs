@@ -4,14 +4,12 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// Upsert variable<br/>
         /// Upsert Spaces's variable
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -21,7 +19,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request60 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Upsert variable<br/>
         /// Upsert Spaces's variable

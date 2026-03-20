@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IDiscussionsClient
     {
-
         /// <summary>
         /// Create a new comment
         /// </summary>
@@ -12,7 +11,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="num"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -24,7 +22,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request52 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new comment
         /// </summary>

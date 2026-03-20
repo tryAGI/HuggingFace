@@ -4,14 +4,12 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
-
         /// <summary>
         /// List paths info
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="rev"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -22,7 +20,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request33 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// List paths info
         /// </summary>

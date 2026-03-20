@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
-
         /// <summary>
         /// Delete a tag
         /// </summary>

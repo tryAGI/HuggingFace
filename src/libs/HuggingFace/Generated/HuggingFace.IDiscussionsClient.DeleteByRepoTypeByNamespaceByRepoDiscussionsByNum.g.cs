@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IDiscussionsClient
     {
-
         /// <summary>
         /// Delete a discussion
         /// </summary>

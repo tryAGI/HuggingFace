@@ -27,7 +27,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Add item<br/>
         /// Add an item to a collection
@@ -35,7 +34,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
         /// <param name="id"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -200,7 +198,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Add item<br/>
         /// Add an item to a collection

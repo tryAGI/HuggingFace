@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IDiscussionsClient
     {
-
         /// <summary>
         /// Change status<br/>
         /// Change the status of a discussion
@@ -13,7 +12,6 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="num"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -25,7 +23,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request53 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Change status<br/>
         /// Change the status of a discussion

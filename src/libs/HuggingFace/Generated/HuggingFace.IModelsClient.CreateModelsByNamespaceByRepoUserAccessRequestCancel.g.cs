@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Cancel access request<br/>
         /// Cancel the current user's access request to a gated repository

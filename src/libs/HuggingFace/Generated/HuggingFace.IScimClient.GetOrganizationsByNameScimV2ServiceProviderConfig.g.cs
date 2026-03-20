@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
-
         /// <summary>
         /// Get SCIM Service Provider Configuration<br/>
         /// Returns the SCIM 2.0 Service Provider configuration, describing the server's capabilities and supported authentication schemes.

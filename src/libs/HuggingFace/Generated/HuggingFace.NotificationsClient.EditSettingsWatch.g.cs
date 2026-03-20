@@ -16,12 +16,10 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Update watch settings<br/>
         /// Update watch settings for the user. Get notified when discussions happen on your watched items.
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -167,7 +165,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Update watch settings<br/>
         /// Update watch settings for the user. Get notified when discussions happen on your watched items.

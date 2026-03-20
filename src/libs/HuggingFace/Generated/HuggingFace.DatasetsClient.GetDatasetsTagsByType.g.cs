@@ -21,7 +21,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get dataset tags<br/>
         /// Get all possible tags used for datasets, grouped by tag type. Optionally restrict to only one tag type

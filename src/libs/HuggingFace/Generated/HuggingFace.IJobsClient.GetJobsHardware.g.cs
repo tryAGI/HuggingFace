@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
-
         /// <summary>
         /// Get job hardware<br/>
         /// Get available job hardware

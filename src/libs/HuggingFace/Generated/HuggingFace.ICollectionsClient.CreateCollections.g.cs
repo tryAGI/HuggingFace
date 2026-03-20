@@ -4,11 +4,9 @@ namespace HuggingFace
 {
     public partial interface ICollectionsClient
     {
-
         /// <summary>
         /// Create a collection
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -16,7 +14,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request86 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a collection
         /// </summary>

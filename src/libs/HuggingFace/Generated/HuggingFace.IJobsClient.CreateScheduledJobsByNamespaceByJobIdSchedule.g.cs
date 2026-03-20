@@ -4,13 +4,11 @@ namespace HuggingFace
 {
     public partial interface IJobsClient
     {
-
         /// <summary>
         /// Update a scheduled job schedule
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobId"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -20,7 +18,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request89 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update a scheduled job schedule
         /// </summary>

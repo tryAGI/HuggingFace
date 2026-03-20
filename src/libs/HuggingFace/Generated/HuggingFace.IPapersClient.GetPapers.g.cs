@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IPapersClient
     {
-
         /// <summary>
         /// List papers<br/>
         /// List arXiv papers sorted by published date

@@ -4,14 +4,12 @@ namespace HuggingFace
 {
     public partial interface IScimClient
     {
-
         /// <summary>
         /// Update a SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -21,7 +19,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request20 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update a SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.

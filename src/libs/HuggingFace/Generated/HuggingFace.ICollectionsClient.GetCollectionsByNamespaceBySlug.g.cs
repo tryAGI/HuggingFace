@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ICollectionsClient
     {
-
         /// <summary>
         /// Get a collection
         /// </summary>

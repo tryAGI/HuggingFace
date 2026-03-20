@@ -4,13 +4,11 @@ namespace HuggingFace
 {
     public partial interface IPapersClient
     {
-
         /// <summary>
         /// Update paper links<br/>
         /// Update the project page, GitHub repository, or submitting organization for a paper. Requires the requester to be the paper author, the Daily Papers submitter, or a papers admin.
         /// </summary>
         /// <param name="paperId"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -19,7 +17,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request79 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update paper links<br/>
         /// Update the project page, GitHub repository, or submitting organization for a paper. Requires the requester to be the paper author, the Daily Papers submitter, or a papers admin.

@@ -37,7 +37,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List discussions<br/>
         /// Get discussions for a repo

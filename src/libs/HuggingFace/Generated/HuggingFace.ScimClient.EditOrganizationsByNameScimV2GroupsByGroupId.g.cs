@@ -25,14 +25,12 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Update SCIM group<br/>
         /// Update attributes of a SCIM group. Updates individual attributes using Operations format. Just provide the changes you want to make using add, remove (only `members` is supported), or replace operations.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -194,7 +192,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Update SCIM group<br/>
         /// Update attributes of a SCIM group. Updates individual attributes using Operations format. Just provide the changes you want to make using add, remove (only `members` is supported), or replace operations.

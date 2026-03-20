@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IDatasetsClient
     {
-
         /// <summary>
         /// List access requests<br/>
         /// List access requests for a gated repository

@@ -23,7 +23,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get avatar<br/>
         /// Retrieve organization avatar. This endpoint returns a JSON with the avatar URL for the organization.<br/>

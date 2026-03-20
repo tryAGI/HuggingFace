@@ -27,14 +27,12 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Create a new comment
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
         /// <param name="commentId"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -199,7 +197,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Create a new comment
         /// </summary>

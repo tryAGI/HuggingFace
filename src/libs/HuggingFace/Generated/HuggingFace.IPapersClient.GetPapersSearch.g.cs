@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IPapersClient
     {
-
         /// <summary>
         /// Search papers<br/>
         /// Perform a hybrid semantic / full-text-search on papers

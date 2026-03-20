@@ -4,12 +4,10 @@ namespace HuggingFace
 {
     public partial interface IReposClient
     {
-
         /// <summary>
         /// Move repo<br/>
         /// Move or rename a repo
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -17,7 +15,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request65 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Move repo<br/>
         /// Move or rename a repo

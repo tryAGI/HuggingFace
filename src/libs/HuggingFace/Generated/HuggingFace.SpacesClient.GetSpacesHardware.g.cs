@@ -19,7 +19,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List space hardware<br/>
         /// Get available space hardware

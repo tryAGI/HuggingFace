@@ -4,12 +4,10 @@ namespace HuggingFace
 {
     public partial interface IWebhooksClient
     {
-
         /// <summary>
         /// Update webhook
         /// </summary>
         /// <param name="webhookId"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -18,7 +16,6 @@ namespace HuggingFace
 
             global::HuggingFace.Request5 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update webhook
         /// </summary>

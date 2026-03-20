@@ -16,7 +16,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Get avatar<br/>
         /// Display the avatar for any user or organization. This endpoint redirects to the avatar URL for either a user or an organization

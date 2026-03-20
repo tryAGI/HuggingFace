@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IResourceGroupsClient
     {
-
         /// <summary>
         /// Get resource groups<br/>
         /// Retrieve accessible resource groups. Get all resource groups the user has access to.<br/>

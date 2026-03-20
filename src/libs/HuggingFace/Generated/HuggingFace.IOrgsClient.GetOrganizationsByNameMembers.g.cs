@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface IOrgsClient
     {
-
         /// <summary>
         /// Get organization members<br/>
         /// Get a list of members for the organization with optional search and pagination.

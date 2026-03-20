@@ -18,7 +18,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Stream metrics<br/>
         /// Get live metrics for a specific Space in a streaming fashion, with SSE protocol, such as current Zero-GPU usage

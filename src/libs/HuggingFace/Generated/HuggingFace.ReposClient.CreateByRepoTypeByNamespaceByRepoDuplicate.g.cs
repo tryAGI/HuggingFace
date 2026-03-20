@@ -27,14 +27,12 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Duplicate a repository
         /// </summary>
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -199,7 +197,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Duplicate a repository
         /// </summary>

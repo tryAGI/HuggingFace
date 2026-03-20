@@ -25,7 +25,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Xet read token<br/>
         /// Get a read short-lived access token for XET

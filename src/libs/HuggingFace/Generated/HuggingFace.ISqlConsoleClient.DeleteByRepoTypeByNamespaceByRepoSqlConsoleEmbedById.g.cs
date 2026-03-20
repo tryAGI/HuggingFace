@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISqlConsoleClient
     {
-
         /// <summary>
         /// Delete embed<br/>
         /// Delete SQL Console embed

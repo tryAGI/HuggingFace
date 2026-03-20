@@ -23,14 +23,12 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Create a resource group<br/>
         /// Create a new resource group in the organization.<br/>
         /// Requires the org to be Enterprise
         /// </summary>
         /// <param name="name"></param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -189,7 +187,6 @@ namespace HuggingFace
                 }
             }
         }
-
         /// <summary>
         /// Create a resource group<br/>
         /// Create a new resource group in the organization.<br/>

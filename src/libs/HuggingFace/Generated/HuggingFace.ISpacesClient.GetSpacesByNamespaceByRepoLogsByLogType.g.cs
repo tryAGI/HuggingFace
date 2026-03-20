@@ -4,7 +4,6 @@ namespace HuggingFace
 {
     public partial interface ISpacesClient
     {
-
         /// <summary>
         /// Stream logs<br/>
         /// Get logs for a specific Space in a streaming fashion, with SSE protocol

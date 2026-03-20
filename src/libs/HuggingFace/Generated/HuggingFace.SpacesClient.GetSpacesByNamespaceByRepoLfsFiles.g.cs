@@ -29,7 +29,6 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List Large files<br/>
         /// List Xet/LFS files for a repo
