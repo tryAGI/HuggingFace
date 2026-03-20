@@ -56,103 +56,103 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<int>? Type7 { get; set; }
+        public bool? Type7 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>? Type8 { get; set; }
+        public global::System.Collections.Generic.IList<string>? Type8 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public bool? Type9 { get; set; }
+        public global::HuggingFace.EmbedAllRequest? Type9 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<string>? Type10 { get; set; }
+        public global::HuggingFace.Input? Type10 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.EmbedAllRequest? Type11 { get; set; }
+        public global::HuggingFace.TruncationDirection? Type11 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.Input? Type12 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<float>>>? Type12 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.InputType? Type13 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<float>>? Type13 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::HuggingFace.InputType>? Type14 { get; set; }
+        public global::System.Collections.Generic.IList<float>? Type14 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.TruncationDirection? Type15 { get; set; }
+        public float? Type15 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<float>>>? Type16 { get; set; }
+        public global::HuggingFace.EmbedRequest? Type16 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<float>>? Type17 { get; set; }
+        public global::HuggingFace.EmbedSparseRequest? Type17 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<float>? Type18 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.SparseValue>>? Type18 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public float? Type19 { get; set; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.SparseValue>? Type19 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.EmbedRequest? Type20 { get; set; }
+        public global::HuggingFace.SparseValue? Type20 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.EmbedSparseRequest? Type21 { get; set; }
+        public global::HuggingFace.Embedding? Type21 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.SparseValue>>? Type22 { get; set; }
+        public global::HuggingFace.EmbeddingModel? Type22 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::HuggingFace.SparseValue>? Type23 { get; set; }
+        public global::HuggingFace.EncodingFormat? Type23 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.SparseValue? Type24 { get; set; }
+        public global::HuggingFace.ErrorResponse? Type24 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.Embedding? Type25 { get; set; }
+        public global::HuggingFace.ErrorType? Type25 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.EmbeddingModel? Type26 { get; set; }
+        public global::HuggingFace.Info? Type26 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.EncodingFormat? Type27 { get; set; }
+        public global::HuggingFace.ModelType? Type27 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.ErrorResponse? Type28 { get; set; }
+        public global::HuggingFace.InputType? Type28 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.ErrorType? Type29 { get; set; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.InputType>? Type29 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.Info? Type30 { get; set; }
+        public global::System.Collections.Generic.IList<int>? Type30 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::HuggingFace.ModelType? Type31 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>? Type31 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -265,39 +265,39 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<int>? ListType0 { get; set; }
+        public global::System.Collections.Generic.List<string>? ListType0 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<int>>? ListType1 { get; set; }
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::System.Collections.Generic.List<float>>>? ListType1 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<string>? ListType2 { get; set; }
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<float>>? ListType2 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::HuggingFace.InputType>? ListType3 { get; set; }
+        public global::System.Collections.Generic.List<float>? ListType3 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::System.Collections.Generic.List<float>>>? ListType4 { get; set; }
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::HuggingFace.SparseValue>>? ListType4 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<float>>? ListType5 { get; set; }
+        public global::System.Collections.Generic.List<global::HuggingFace.SparseValue>? ListType5 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<float>? ListType6 { get; set; }
+        public global::System.Collections.Generic.List<global::HuggingFace.InputType>? ListType6 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::HuggingFace.SparseValue>>? ListType7 { get; set; }
+        public global::System.Collections.Generic.List<int>? ListType7 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::HuggingFace.SparseValue>? ListType8 { get; set; }
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<int>>? ListType8 { get; set; }
         /// <summary>
         /// 
         /// </summary>

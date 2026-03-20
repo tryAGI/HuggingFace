@@ -13,10 +13,6 @@ namespace HuggingFace
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
         Converters = new global::System.Type[]
         {
-            typeof(global::HuggingFace.JsonConverters.TruncationDirectionJsonConverter),
-
-            typeof(global::HuggingFace.JsonConverters.TruncationDirectionNullableJsonConverter),
-
             typeof(global::HuggingFace.JsonConverters.EncodingFormatJsonConverter),
 
             typeof(global::HuggingFace.JsonConverters.EncodingFormatNullableJsonConverter),
@@ -25,13 +21,17 @@ namespace HuggingFace
 
             typeof(global::HuggingFace.JsonConverters.ErrorTypeNullableJsonConverter),
 
-            typeof(global::HuggingFace.JsonConverters.InputIdsJsonConverter),
+            typeof(global::HuggingFace.JsonConverters.TruncationDirectionJsonConverter),
+
+            typeof(global::HuggingFace.JsonConverters.TruncationDirectionNullableJsonConverter),
+
+            typeof(global::HuggingFace.JsonConverters.EmbeddingJsonConverter),
 
             typeof(global::HuggingFace.JsonConverters.InputJsonConverter),
 
-            typeof(global::HuggingFace.JsonConverters.InputTypeJsonConverter),
+            typeof(global::HuggingFace.JsonConverters.InputIdsJsonConverter),
 
-            typeof(global::HuggingFace.JsonConverters.EmbeddingJsonConverter),
+            typeof(global::HuggingFace.JsonConverters.InputTypeJsonConverter),
 
             typeof(global::HuggingFace.JsonConverters.ModelTypeJsonConverter),
 
@@ -51,14 +51,10 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DecodeRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.InputIds))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<int>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.EmbedAllRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.Input))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.InputType))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.InputType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.TruncationDirection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<float>>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<float>>))]
@@ -76,6 +72,10 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.ErrorType))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.Info))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.ModelType))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.InputType))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.InputType>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<int>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.ModelTypeVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.ModelTypeVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.ModelTypeVariant3))]
@@ -103,15 +103,15 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.TokenizeRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.SimpleToken>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.SimpleToken>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<int>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.InputType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::System.Collections.Generic.List<float>>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<float>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<float>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::HuggingFace.SparseValue>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.SparseValue>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.InputType>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<int>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OpenAICompatEmbedding>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.Prediction>))]
