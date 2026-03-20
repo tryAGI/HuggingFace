@@ -193,27 +193,9 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Inference Providers
-        /// </summary>
-        public InferenceProvidersClient InferenceProviders => new InferenceProvidersClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
         /// Inference Endpoints
         /// </summary>
         public InferenceEndpointsClient InferenceEndpoints => new InferenceEndpointsClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// MCP
-        /// </summary>
-        public McpClient Mcp => new McpClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
