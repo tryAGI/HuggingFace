@@ -128,19 +128,9 @@ namespace HuggingFace
         public NotificationsClient Notifications { get; }
 
         /// <summary>
-        /// Inference Providers
-        /// </summary>
-        public InferenceProvidersClient InferenceProviders { get; }
-
-        /// <summary>
         /// Inference Endpoints
         /// </summary>
         public InferenceEndpointsClient InferenceEndpoints { get; }
-
-        /// <summary>
-        /// MCP
-        /// </summary>
-        public McpClient Mcp { get; }
 
         /// <summary>
         /// OAuth
