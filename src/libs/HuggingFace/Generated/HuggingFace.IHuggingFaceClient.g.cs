@@ -48,14 +48,14 @@ namespace HuggingFace
         public AuthClient Auth { get; }
 
         /// <summary>
-        /// Models
+        /// Buckets
         /// </summary>
-        public ModelsClient Models { get; }
+        public BucketsClient Buckets { get; }
 
         /// <summary>
-        /// Kernels
+        /// Collections
         /// </summary>
-        public KernelsClient Kernels { get; }
+        public CollectionsClient Collections { get; }
 
         /// <summary>
         /// Datasets
@@ -63,19 +63,54 @@ namespace HuggingFace
         public DatasetsClient Datasets { get; }
 
         /// <summary>
-        /// SQL Console
-        /// </summary>
-        public SqlConsoleClient SqlConsole { get; }
-
-        /// <summary>
         /// Discussions
         /// </summary>
         public DiscussionsClient Discussions { get; }
 
         /// <summary>
-        /// Spaces
+        /// Documentation
         /// </summary>
-        public SpacesClient Spaces { get; }
+        public DocsClient Docs { get; }
+
+        /// <summary>
+        /// Inference Endpoints
+        /// </summary>
+        public InferenceEndpointsClient InferenceEndpoints { get; }
+
+        /// <summary>
+        /// Jobs
+        /// </summary>
+        public JobsClient Jobs { get; }
+
+        /// <summary>
+        /// Kernels
+        /// </summary>
+        public KernelsClient Kernels { get; }
+
+        /// <summary>
+        /// Models
+        /// </summary>
+        public ModelsClient Models { get; }
+
+        /// <summary>
+        /// Notifications
+        /// </summary>
+        public NotificationsClient Notifications { get; }
+
+        /// <summary>
+        /// OAuth
+        /// </summary>
+        public OauthClient Oauth { get; }
+
+        /// <summary>
+        /// Organizations
+        /// </summary>
+        public OrgsClient Orgs { get; }
+
+        /// <summary>
+        /// Paper pages
+        /// </summary>
+        public PapersClient Papers { get; }
 
         /// <summary>
         /// Repository Search
@@ -88,69 +123,34 @@ namespace HuggingFace
         public ReposClient Repos { get; }
 
         /// <summary>
-        /// Users
-        /// </summary>
-        public UsersClient Users { get; }
-
-        /// <summary>
-        /// Organizations
-        /// </summary>
-        public OrgsClient Orgs { get; }
-
-        /// <summary>
-        /// Jobs
-        /// </summary>
-        public JobsClient Jobs { get; }
-
-        /// <summary>
         /// Resource groups
         /// </summary>
         public ResourceGroupsClient ResourceGroups { get; }
 
         /// <summary>
-        /// Paper pages
+        /// SCIM
         /// </summary>
-        public PapersClient Papers { get; }
+        public ScimClient Scim { get; }
 
         /// <summary>
-        /// Collections
+        /// Spaces
         /// </summary>
-        public CollectionsClient Collections { get; }
+        public SpacesClient Spaces { get; }
 
         /// <summary>
-        /// Buckets
+        /// SQL Console
         /// </summary>
-        public BucketsClient Buckets { get; }
+        public SqlConsoleClient SqlConsole { get; }
 
         /// <summary>
-        /// Notifications
+        /// Users
         /// </summary>
-        public NotificationsClient Notifications { get; }
-
-        /// <summary>
-        /// Inference Endpoints
-        /// </summary>
-        public InferenceEndpointsClient InferenceEndpoints { get; }
-
-        /// <summary>
-        /// OAuth
-        /// </summary>
-        public OauthClient Oauth { get; }
-
-        /// <summary>
-        /// Documentation
-        /// </summary>
-        public DocsClient Docs { get; }
+        public UsersClient Users { get; }
 
         /// <summary>
         /// Webhooks
         /// </summary>
         public WebhooksClient Webhooks { get; }
-
-        /// <summary>
-        /// SCIM
-        /// </summary>
-        public ScimClient Scim { get; }
 
     }
 }
