@@ -49,18 +49,18 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Models
+        /// Buckets
         /// </summary>
-        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations)
+        public BucketsClient Buckets => new BucketsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
-        /// Kernels
+        /// Collections
         /// </summary>
-        public KernelsClient Kernels => new KernelsClient(HttpClient, authorizations: Authorizations)
+        public CollectionsClient Collections => new CollectionsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -76,15 +76,6 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// SQL Console
-        /// </summary>
-        public SqlConsoleClient SqlConsole => new SqlConsoleClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
         /// Discussions
         /// </summary>
         public DiscussionsClient Discussions => new DiscussionsClient(HttpClient, authorizations: Authorizations)
@@ -94,9 +85,81 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Spaces
+        /// Documentation
         /// </summary>
-        public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations)
+        public DocsClient Docs => new DocsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Inference Endpoints
+        /// </summary>
+        public InferenceEndpointsClient InferenceEndpoints => new InferenceEndpointsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Jobs
+        /// </summary>
+        public JobsClient Jobs => new JobsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Kernels
+        /// </summary>
+        public KernelsClient Kernels => new KernelsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Models
+        /// </summary>
+        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Notifications
+        /// </summary>
+        public NotificationsClient Notifications => new NotificationsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// OAuth
+        /// </summary>
+        public OauthClient Oauth => new OauthClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Organizations
+        /// </summary>
+        public OrgsClient Orgs => new OrgsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Paper pages
+        /// </summary>
+        public PapersClient Papers => new PapersClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -121,33 +184,6 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Users
-        /// </summary>
-        public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// Organizations
-        /// </summary>
-        public OrgsClient Orgs => new OrgsClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// Jobs
-        /// </summary>
-        public JobsClient Jobs => new JobsClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
         /// Resource groups
         /// </summary>
         public ResourceGroupsClient ResourceGroups => new ResourceGroupsClient(HttpClient, authorizations: Authorizations)
@@ -157,63 +193,36 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Paper pages
+        /// SCIM
         /// </summary>
-        public PapersClient Papers => new PapersClient(HttpClient, authorizations: Authorizations)
+        public ScimClient Scim => new ScimClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
-        /// Collections
+        /// Spaces
         /// </summary>
-        public CollectionsClient Collections => new CollectionsClient(HttpClient, authorizations: Authorizations)
+        public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
-        /// Buckets
+        /// SQL Console
         /// </summary>
-        public BucketsClient Buckets => new BucketsClient(HttpClient, authorizations: Authorizations)
+        public SqlConsoleClient SqlConsole => new SqlConsoleClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
-        /// Notifications
+        /// Users
         /// </summary>
-        public NotificationsClient Notifications => new NotificationsClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// Inference Endpoints
-        /// </summary>
-        public InferenceEndpointsClient InferenceEndpoints => new InferenceEndpointsClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// OAuth
-        /// </summary>
-        public OauthClient Oauth => new OauthClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// Documentation
-        /// </summary>
-        public DocsClient Docs => new DocsClient(HttpClient, authorizations: Authorizations)
+        public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -223,15 +232,6 @@ namespace HuggingFace
         /// Webhooks
         /// </summary>
         public WebhooksClient Webhooks => new WebhooksClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// SCIM
-        /// </summary>
-        public ScimClient Scim => new ScimClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
