@@ -12,7 +12,7 @@ namespace HuggingFace
             ref string rev,
             object? createPr,
             object? hotReload,
-            ref global::HuggingFace.ContentType3? contentType);
+            ref global::HuggingFace.CreateSpacesCommitContentType? contentType);
         partial void PrepareCreateSpacesByNamespaceByRepoCommitByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -21,7 +21,7 @@ namespace HuggingFace
             string rev,
             object? createPr,
             object? hotReload,
-            global::HuggingFace.ContentType3? contentType);
+            global::HuggingFace.CreateSpacesCommitContentType? contentType);
         partial void ProcessCreateSpacesByNamespaceByRepoCommitByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -116,13 +116,13 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response89> CreateSpacesByNamespaceByRepoCommitByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSpacesCommitResponse> CreateSpacesByNamespaceByRepoCommitByRevAsync(
             string @namespace,
             string repo,
             string rev,
             object? createPr = default,
             object? hotReload = default,
-            global::HuggingFace.ContentType3? contentType = default,
+            global::HuggingFace.CreateSpacesCommitContentType? contentType = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -221,7 +221,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response89.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateSpacesCommitResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -252,7 +252,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response89.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateSpacesCommitResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

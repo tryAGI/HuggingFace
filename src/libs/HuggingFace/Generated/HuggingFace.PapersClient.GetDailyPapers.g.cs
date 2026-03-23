@@ -13,7 +13,7 @@ namespace HuggingFace
             ref string? week,
             ref string? month,
             ref string? submitter,
-            ref global::HuggingFace.Sort2? sort);
+            ref global::HuggingFace.GetDailyPapersSort? sort);
         partial void PrepareGetDailyPapersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -23,7 +23,7 @@ namespace HuggingFace
             string? week,
             string? month,
             string? submitter,
-            global::HuggingFace.Sort2? sort);
+            global::HuggingFace.GetDailyPapersSort? sort);
         partial void ProcessGetDailyPapersResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -51,14 +51,14 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem27>> GetDailyPapersAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDailyPapersResponseItem>> GetDailyPapersAsync(
             int? p = default,
             int? limit = default,
             global::System.DateTime? date = default,
             string? week = default,
             string? month = default,
             string? submitter = default,
-            global::HuggingFace.Sort2? sort = default,
+            global::HuggingFace.GetDailyPapersSort? sort = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -158,7 +158,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem27>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem27> ??
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDailyPapersResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.GetDailyPapersResponseItem> ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -189,7 +189,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem27>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem27> ??
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDailyPapersResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.GetDailyPapersResponseItem> ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

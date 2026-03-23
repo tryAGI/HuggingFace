@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string slug,
             ref string commentId,
-            global::HuggingFace.Request27 request);
+            global::HuggingFace.CreateBlogCommentReplyRequest2 request);
         partial void PrepareCreateBlogByNamespaceBySlugCommentByCommentIdReplyRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
             string commentId,
-            global::HuggingFace.Request27 request);
+            global::HuggingFace.CreateBlogCommentReplyRequest2 request);
         partial void ProcessCreateBlogByNamespaceBySlugCommentByCommentIdReplyResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,12 +36,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response52> CreateBlogByNamespaceBySlugCommentByCommentIdReplyAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentReplyResponse2> CreateBlogByNamespaceBySlugCommentByCommentIdReplyAsync(
             string @namespace,
             string slug,
             string commentId,
 
-            global::HuggingFace.Request27 request,
+            global::HuggingFace.CreateBlogCommentReplyRequest2 request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -134,7 +134,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response52.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateBlogCommentReplyResponse2.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -165,7 +165,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response52.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateBlogCommentReplyResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -206,14 +206,14 @@ namespace HuggingFace
         /// <param name="comment"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response52> CreateBlogByNamespaceBySlugCommentByCommentIdReplyAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentReplyResponse2> CreateBlogByNamespaceBySlugCommentByCommentIdReplyAsync(
             string @namespace,
             string slug,
             string commentId,
             string comment,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request27
+            var __request = new global::HuggingFace.CreateBlogCommentReplyRequest2
             {
                 Comment = comment,
             };

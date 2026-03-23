@@ -19,12 +19,12 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem14>> GetDatasetsByNamespaceByRepoCommitsByRevAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem>> GetDatasetsByNamespaceByRepoCommitsByRevAsync(
             string @namespace,
             string repo,
             string rev,
             int? p = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.ExpandItem3>? expand = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsExpandItem>? expand = default,
             int? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

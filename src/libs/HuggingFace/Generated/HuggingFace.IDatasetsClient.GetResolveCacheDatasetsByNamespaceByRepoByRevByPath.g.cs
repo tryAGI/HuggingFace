@@ -22,7 +22,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response144> GetResolveCacheDatasetsByNamespaceByRepoByRevByPathAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetResolveCacheDatasetsResponse> GetResolveCacheDatasetsByNamespaceByRepoByRevByPathAsync(
             string @namespace,
             string repo,
             string rev,

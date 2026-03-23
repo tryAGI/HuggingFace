@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task EditSettingsNotificationsAsync(
 
-            global::HuggingFace.Request2 request,
+            global::HuggingFace.PatchSettingsNotificationsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update notification settings<br/>
@@ -26,7 +26,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task EditSettingsNotificationsAsync(
-            global::HuggingFace.RequestNotifications notifications,
+            global::HuggingFace.PatchSettingsNotificationsRequestNotifications notifications,
             string? prepaidAmount = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

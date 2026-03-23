@@ -14,7 +14,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response71> GetDatasetsByNamespaceByRepoRefsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetDatasetsRefsResponse> GetDatasetsByNamespaceByRepoRefsAsync(
             string @namespace,
             string repo,
             object? includePrs = default,

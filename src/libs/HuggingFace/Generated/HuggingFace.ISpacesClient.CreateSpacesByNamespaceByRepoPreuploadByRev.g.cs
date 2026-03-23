@@ -14,12 +14,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response75> CreateSpacesByNamespaceByRepoPreuploadByRevAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSpacesPreuploadResponse> CreateSpacesByNamespaceByRepoPreuploadByRevAsync(
             string @namespace,
             string repo,
             string rev,
 
-            global::HuggingFace.Request36 request,
+            global::HuggingFace.CreateSpacesPreuploadRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Check upload method<br/>
@@ -37,11 +37,11 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response75> CreateSpacesByNamespaceByRepoPreuploadByRevAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSpacesPreuploadResponse> CreateSpacesByNamespaceByRepoPreuploadByRevAsync(
             string @namespace,
             string repo,
             string rev,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestFile2> files,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSpacesPreuploadRequestFile> files,
             string? gitAttributes = default,
             string? gitIgnore = default,
             global::System.Threading.CancellationToken cancellationToken = default);

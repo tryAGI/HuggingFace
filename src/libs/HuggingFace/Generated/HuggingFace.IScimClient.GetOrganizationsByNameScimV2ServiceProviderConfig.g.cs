@@ -11,7 +11,7 @@ namespace HuggingFace
         /// <param name="name"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response12> GetOrganizationsByNameScimV2ServiceProviderConfigAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponse> GetOrganizationsByNameScimV2ServiceProviderConfigAsync(
             string name,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

@@ -11,11 +11,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Length,
+        EosToken,
         /// <summary>
         /// 
         /// </summary>
-        EosToken,
+        Length,
         /// <summary>
         /// 
         /// </summary>
@@ -34,8 +34,8 @@ namespace HuggingFace
         {
             return value switch
             {
-                FinishReason.Length => "length",
                 FinishReason.EosToken => "eos_token",
+                FinishReason.Length => "length",
                 FinishReason.StopSequence => "stop_sequence",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -47,8 +47,8 @@ namespace HuggingFace
         {
             return value switch
             {
-                "length" => FinishReason.Length,
                 "eos_token" => FinishReason.EosToken,
+                "length" => FinishReason.Length,
                 "stop_sequence" => FinishReason.StopSequence,
                 _ => null,
             };

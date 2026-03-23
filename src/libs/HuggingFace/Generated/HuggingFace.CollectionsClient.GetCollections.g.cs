@@ -10,7 +10,7 @@ namespace HuggingFace
             ref global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>? item,
             ref global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>? owner,
             ref string? q,
-            ref global::HuggingFace.Sort3? sort,
+            ref global::HuggingFace.GetCollectionsSort? sort,
             ref string? cursor,
             object? expand,
             ref double? limit);
@@ -20,7 +20,7 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>? item,
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>? owner,
             string? q,
-            global::HuggingFace.Sort3? sort,
+            global::HuggingFace.GetCollectionsSort? sort,
             string? cursor,
             object? expand,
             double? limit);
@@ -51,11 +51,11 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant2Item>>> GetCollectionsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>> GetCollectionsAsync(
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>? item = default,
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>? owner = default,
             string? q = default,
-            global::HuggingFace.Sort3? sort = default,
+            global::HuggingFace.GetCollectionsSort? sort = default,
             string? cursor = default,
             object? expand = default,
             double? limit = default,
@@ -158,7 +158,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant2Item>>.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -189,7 +189,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant2Item>>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

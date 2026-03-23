@@ -12,10 +12,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response31> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
             string name,
 
-            global::HuggingFace.Request16 request,
+            global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a SCIM provisioning user invitation<br/>
@@ -35,11 +35,11 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response31> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
             string name,
             global::System.Collections.Generic.IList<string> schemas,
             string userName,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestEmail3> emails,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequestEmail> emails,
             string externalId,
             bool? active = default,
             global::System.Threading.CancellationToken cancellationToken = default);

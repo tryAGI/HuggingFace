@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
             ref string username,
-            global::HuggingFace.Request9 request);
+            global::HuggingFace.PutOrganizationsMembersRoleRequest request);
         partial void PreparePutOrganizationsByNameMembersByUsernameRoleRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
             string username,
-            global::HuggingFace.Request9 request);
+            global::HuggingFace.PutOrganizationsMembersRoleRequest request);
         partial void ProcessPutOrganizationsByNameMembersByUsernameRoleResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace HuggingFace
             string name,
             string username,
 
-            global::HuggingFace.Request9 request,
+            global::HuggingFace.PutOrganizationsMembersRoleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -190,11 +190,11 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task PutOrganizationsByNameMembersByUsernameRoleAsync(
             string name,
             string username,
-            global::HuggingFace.RequestRole role,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestResourceGroup>? resourceGroups = default,
+            global::HuggingFace.PutOrganizationsMembersRoleRequestRole role,
+            global::System.Collections.Generic.IList<global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroup>? resourceGroups = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request9
+            var __request = new global::HuggingFace.PutOrganizationsMembersRoleRequest
             {
                 Role = role,
                 ResourceGroups = resourceGroups,

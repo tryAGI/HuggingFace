@@ -8,25 +8,25 @@ namespace HuggingFace
         partial void PrepareGetNotificationsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? p,
-            ref global::HuggingFace.ReadStatus? readStatus,
-            ref global::HuggingFace.RepoType2? repoType,
+            ref global::HuggingFace.GetNotificationsReadStatus? readStatus,
+            ref global::HuggingFace.GetNotificationsRepoType? repoType,
             ref string? repoName,
             ref string? postAuthor,
             ref string? paperId,
             ref string? articleId,
-            ref global::HuggingFace.Mention? mention,
+            ref global::HuggingFace.GetNotificationsMention? mention,
             ref global::System.DateTime? lastUpdate);
         partial void PrepareGetNotificationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int? p,
-            global::HuggingFace.ReadStatus? readStatus,
-            global::HuggingFace.RepoType2? repoType,
+            global::HuggingFace.GetNotificationsReadStatus? readStatus,
+            global::HuggingFace.GetNotificationsRepoType? repoType,
             string? repoName,
             string? postAuthor,
             string? paperId,
             string? articleId,
-            global::HuggingFace.Mention? mention,
+            global::HuggingFace.GetNotificationsMention? mention,
             global::System.DateTime? lastUpdate);
         partial void ProcessGetNotificationsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -58,15 +58,15 @@ namespace HuggingFace
         /// <param name="lastUpdate"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response> GetNotificationsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetNotificationsResponse> GetNotificationsAsync(
             int? p = default,
-            global::HuggingFace.ReadStatus? readStatus = default,
-            global::HuggingFace.RepoType2? repoType = default,
+            global::HuggingFace.GetNotificationsReadStatus? readStatus = default,
+            global::HuggingFace.GetNotificationsRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention? mention = default,
+            global::HuggingFace.GetNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -173,7 +173,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetNotificationsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -204,7 +204,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetNotificationsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

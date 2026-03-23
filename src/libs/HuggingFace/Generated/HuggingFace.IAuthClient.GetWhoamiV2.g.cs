@@ -10,7 +10,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response55> GetWhoamiV2Async(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetWhoamiV2Response2> GetWhoamiV2Async(
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

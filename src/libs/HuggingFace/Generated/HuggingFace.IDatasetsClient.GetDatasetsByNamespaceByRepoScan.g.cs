@@ -12,7 +12,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response102> GetDatasetsByNamespaceByRepoScanAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetDatasetsScanResponse> GetDatasetsByNamespaceByRepoScanAsync(
             string @namespace,
             string repo,
             global::System.Threading.CancellationToken cancellationToken = default);

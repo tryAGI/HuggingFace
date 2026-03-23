@@ -13,8 +13,8 @@ namespace HuggingFace
         /// <param name="num"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant15, global::HuggingFace.ResponseVariant24>?, global::HuggingFace.Response107>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
-            global::HuggingFace.RepoType11 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
+            global::HuggingFace.GetDiscussionsRepoType2 repoType,
             string @namespace,
             string repo,
             string num,

@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareCreatePapersByPaperIdLinksArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string paperId,
-            global::HuggingFace.Request79 request);
+            global::HuggingFace.CreatePapersLinksRequest request);
         partial void PrepareCreatePapersByPaperIdLinksRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string paperId,
-            global::HuggingFace.Request79 request);
+            global::HuggingFace.CreatePapersLinksRequest request);
         partial void ProcessCreatePapersByPaperIdLinksResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -31,10 +31,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response157> CreatePapersByPaperIdLinksAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePapersLinksResponse> CreatePapersByPaperIdLinksAsync(
             string paperId,
 
-            global::HuggingFace.Request79 request,
+            global::HuggingFace.CreatePapersLinksRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -123,7 +123,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response157.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreatePapersLinksResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -154,7 +154,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response157.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreatePapersLinksResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -196,14 +196,14 @@ namespace HuggingFace
         /// <param name="organizationId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response157> CreatePapersByPaperIdLinksAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePapersLinksResponse> CreatePapersByPaperIdLinksAsync(
             string paperId,
             string? projectPage = default,
             string? githubRepo = default,
             string? organizationId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request79
+            var __request = new global::HuggingFace.CreatePapersLinksRequest
             {
                 ProjectPage = projectPage,
                 GithubRepo = githubRepo,

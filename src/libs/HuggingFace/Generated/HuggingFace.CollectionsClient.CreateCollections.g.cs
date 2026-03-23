@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareCreateCollectionsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.Request86 request);
+            global::HuggingFace.CreateCollectionsRequest request);
         partial void PrepareCreateCollectionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Request86 request);
+            global::HuggingFace.CreateCollectionsRequest request);
         partial void ProcessCreateCollectionsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -27,9 +27,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response166> CreateCollectionsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResponse> CreateCollectionsAsync(
 
-            global::HuggingFace.Request86 request,
+            global::HuggingFace.CreateCollectionsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -98,19 +98,19 @@ namespace HuggingFace
             {
                 string? __content_409 = null;
                 global::System.Exception? __exception_409 = null;
-                global::HuggingFace.Response167? __value_409 = null;
+                global::HuggingFace.CreateCollectionsResponse2? __value_409 = null;
                 try
                 {
                     if (ReadResponseAsString)
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_409 = global::HuggingFace.Response167.FromJson(__content_409, JsonSerializerContext);
+                        __value_409 = global::HuggingFace.CreateCollectionsResponse2.FromJson(__content_409, JsonSerializerContext);
                     }
                     else
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_409 = global::HuggingFace.Response167.FromJson(__content_409, JsonSerializerContext);
+                        __value_409 = global::HuggingFace.CreateCollectionsResponse2.FromJson(__content_409, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -118,7 +118,7 @@ namespace HuggingFace
                     __exception_409 = __ex;
                 }
 
-                throw new global::HuggingFace.ApiException<global::HuggingFace.Response167>(
+                throw new global::HuggingFace.ApiException<global::HuggingFace.CreateCollectionsResponse2>(
                     message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
                     innerException: __exception_409,
                     statusCode: __response.StatusCode)
@@ -154,7 +154,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response166.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateCollectionsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -185,7 +185,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response166.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateCollectionsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -229,15 +229,15 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response166> CreateCollectionsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResponse> CreateCollectionsAsync(
             string title,
             string @namespace,
             string? description = default,
-            global::HuggingFace.RequestItem5? item = default,
+            global::HuggingFace.CreateCollectionsRequestItem? item = default,
             bool? @private = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request86
+            var __request = new global::HuggingFace.CreateCollectionsRequest
             {
                 Title = title,
                 Description = description,

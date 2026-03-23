@@ -10,9 +10,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response46> CreateOauthDeviceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthDeviceResponse> CreateOauthDeviceAsync(
 
-            global::HuggingFace.Request23 request,
+            global::HuggingFace.CreateOauthDeviceRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Initiate device authorization
@@ -21,7 +21,7 @@ namespace HuggingFace
         /// <param name="scope"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response46> CreateOauthDeviceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthDeviceResponse> CreateOauthDeviceAsync(
             string clientId,
             string? scope = default,
             global::System.Threading.CancellationToken cancellationToken = default);

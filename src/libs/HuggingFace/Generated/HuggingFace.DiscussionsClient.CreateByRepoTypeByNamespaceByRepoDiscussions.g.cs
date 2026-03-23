@@ -7,17 +7,17 @@ namespace HuggingFace
     {
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType10 repoType,
+            ref global::HuggingFace.CreateDiscussionsRepoType repoType,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request51 request);
+            global::HuggingFace.CreateDiscussionsRequest request);
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType10 repoType,
+            global::HuggingFace.CreateDiscussionsRepoType repoType,
             string @namespace,
             string repo,
-            global::HuggingFace.Request51 request);
+            global::HuggingFace.CreateDiscussionsRequest request);
         partial void ProcessCreateByRepoTypeByNamespaceByRepoDiscussionsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,12 +36,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response105> CreateByRepoTypeByNamespaceByRepoDiscussionsAsync(
-            global::HuggingFace.RepoType10 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDiscussionsResponse> CreateByRepoTypeByNamespaceByRepoDiscussionsAsync(
+            global::HuggingFace.CreateDiscussionsRepoType repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request51 request,
+            global::HuggingFace.CreateDiscussionsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -134,7 +134,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response105.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateDiscussionsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -165,7 +165,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response105.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateDiscussionsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -208,8 +208,8 @@ namespace HuggingFace
         /// <param name="pullRequest"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response105> CreateByRepoTypeByNamespaceByRepoDiscussionsAsync(
-            global::HuggingFace.RepoType10 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDiscussionsResponse> CreateByRepoTypeByNamespaceByRepoDiscussionsAsync(
+            global::HuggingFace.CreateDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string title,
@@ -217,7 +217,7 @@ namespace HuggingFace
             bool? pullRequest = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request51
+            var __request = new global::HuggingFace.CreateDiscussionsRequest
             {
                 Title = title,
                 Description = description,

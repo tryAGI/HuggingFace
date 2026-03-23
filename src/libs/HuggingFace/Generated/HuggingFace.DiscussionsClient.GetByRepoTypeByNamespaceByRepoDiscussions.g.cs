@@ -7,27 +7,27 @@ namespace HuggingFace
     {
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType9 repoType,
+            ref global::HuggingFace.GetDiscussionsRepoType repoType,
             ref string @namespace,
             ref string repo,
             ref int? p,
-            ref global::HuggingFace.Type2? type,
-            ref global::HuggingFace.Status? status,
+            ref global::HuggingFace.GetDiscussionsType? type,
+            ref global::HuggingFace.GetDiscussionsStatus? status,
             ref string? author,
             ref string? search,
-            ref global::HuggingFace.Sort? sort);
+            ref global::HuggingFace.GetDiscussionsSort? sort);
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType9 repoType,
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             int? p,
-            global::HuggingFace.Type2? type,
-            global::HuggingFace.Status? status,
+            global::HuggingFace.GetDiscussionsType? type,
+            global::HuggingFace.GetDiscussionsStatus? status,
             string? author,
             string? search,
-            global::HuggingFace.Sort? sort);
+            global::HuggingFace.GetDiscussionsSort? sort);
         partial void ProcessGetByRepoTypeByNamespaceByRepoDiscussionsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -60,16 +60,16 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response104> GetByRepoTypeByNamespaceByRepoDiscussionsAsync(
-            global::HuggingFace.RepoType9 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetDiscussionsResponse> GetByRepoTypeByNamespaceByRepoDiscussionsAsync(
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             int? p = default,
-            global::HuggingFace.Type2? type = default,
-            global::HuggingFace.Status? status = default,
+            global::HuggingFace.GetDiscussionsType? type = default,
+            global::HuggingFace.GetDiscussionsStatus? status = default,
             string? author = default,
             string? search = default,
-            global::HuggingFace.Sort? sort = default,
+            global::HuggingFace.GetDiscussionsSort? sort = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -172,7 +172,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response104.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetDiscussionsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -203,7 +203,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response104.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetDiscussionsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

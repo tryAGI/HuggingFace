@@ -31,7 +31,7 @@ namespace HuggingFace
         /// <param name="userId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response17> GetOrganizationsByNameScimV2UsersByUserIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsScimV2UsersResponse2> GetOrganizationsByNameScimV2UsersByUserIdAsync(
             string name,
             string userId,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -114,7 +114,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response17.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetOrganizationsScimV2UsersResponse2.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -145,7 +145,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response17.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetOrganizationsScimV2UsersResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

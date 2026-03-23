@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string rev,
-            global::HuggingFace.Request38 request);
+            global::HuggingFace.CreateModelsTagRequest request);
         partial void PrepareCreateModelsByNamespaceByRepoTagByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
             string rev,
-            global::HuggingFace.Request38 request);
+            global::HuggingFace.CreateModelsTagRequest request);
         partial void ProcessCreateModelsByNamespaceByRepoTagByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,7 +36,7 @@ namespace HuggingFace
             string repo,
             string rev,
 
-            global::HuggingFace.Request38 request,
+            global::HuggingFace.CreateModelsTagRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -200,7 +200,7 @@ namespace HuggingFace
             string? message = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request38
+            var __request = new global::HuggingFace.CreateModelsTagRequest
             {
                 Tag = tag,
                 Message = message,

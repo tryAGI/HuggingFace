@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
             ref string userId,
-            global::HuggingFace.Request17 request);
+            global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequest request);
         partial void PrepareEditOrganizationsByNameScimProvisioningV2UsersByUserIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
             string userId,
-            global::HuggingFace.Request17 request);
+            global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequest request);
         partial void ProcessEditOrganizationsByNameScimProvisioningV2UsersByUserIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -34,11 +34,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response33> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersResponse> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
             string name,
             string userId,
 
-            global::HuggingFace.Request17 request,
+            global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -129,7 +129,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response33.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -160,7 +160,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response33.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -202,14 +202,14 @@ namespace HuggingFace
         /// <param name="operations"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response33> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersResponse> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
             string name,
             string userId,
             global::System.Collections.Generic.IList<string> schemas,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestOperation2> operations,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperation> operations,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request17
+            var __request = new global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequest
             {
                 Schemas = schemas,
                 Operations = operations,

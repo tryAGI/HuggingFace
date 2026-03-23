@@ -13,11 +13,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response165> CreateCollectionsByNamespaceBySlugItemsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsItemsResponse2> CreateCollectionsByNamespaceBySlugItemsAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.Request85 request,
+            global::HuggingFace.CreateCollectionsItemsRequest2 request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add item<br/>
@@ -29,10 +29,10 @@ namespace HuggingFace
         /// <param name="note"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response165> CreateCollectionsByNamespaceBySlugItemsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsItemsResponse2> CreateCollectionsByNamespaceBySlugItemsAsync(
             string @namespace,
             string slug,
-            global::HuggingFace.RequestItem2 item,
+            global::HuggingFace.CreateCollectionsItemsRequestItem2 item,
             string? note = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

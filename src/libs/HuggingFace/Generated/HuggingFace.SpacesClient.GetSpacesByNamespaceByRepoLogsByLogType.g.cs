@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            ref global::HuggingFace.LogType logType);
+            ref global::HuggingFace.GetSpacesLogsLogType logType);
         partial void PrepareGetSpacesByNamespaceByRepoLogsByLogTypeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.LogType logType);
+            global::HuggingFace.GetSpacesLogsLogType logType);
         partial void ProcessGetSpacesByNamespaceByRepoLogsByLogTypeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -32,7 +32,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task GetSpacesByNamespaceByRepoLogsByLogTypeAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.LogType logType,
+            global::HuggingFace.GetSpacesLogsLogType logType,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

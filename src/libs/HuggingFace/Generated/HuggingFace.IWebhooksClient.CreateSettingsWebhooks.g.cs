@@ -10,9 +10,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response3> CreateSettingsWebhooksAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksAsync(
 
-            global::HuggingFace.Request4 request,
+            global::HuggingFace.CreateSettingsWebhooksRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create webhook
@@ -25,11 +25,11 @@ namespace HuggingFace
         /// <param name="secret"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response3> CreateSettingsWebhooksAsync(
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestWatchedItem> watched,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestDomain> domains,
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksAsync(
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem> watched,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain> domains,
             string? url = default,
-            global::HuggingFace.RequestJob? job = default,
+            global::HuggingFace.CreateSettingsWebhooksRequestJob? job = default,
             string? jobSourceId = default,
             string? secret = default,
             global::System.Threading.CancellationToken cancellationToken = default);

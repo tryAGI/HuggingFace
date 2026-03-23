@@ -22,14 +22,14 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem27>> GetDailyPapersAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDailyPapersResponseItem>> GetDailyPapersAsync(
             int? p = default,
             int? limit = default,
             global::System.DateTime? date = default,
             string? week = default,
             string? month = default,
             string? submitter = default,
-            global::HuggingFace.Sort2? sort = default,
+            global::HuggingFace.GetDailyPapersSort? sort = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareEditSettingsNotificationsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.Request2 request);
+            global::HuggingFace.PatchSettingsNotificationsRequest request);
         partial void PrepareEditSettingsNotificationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Request2 request);
+            global::HuggingFace.PatchSettingsNotificationsRequest request);
         partial void ProcessEditSettingsNotificationsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -25,7 +25,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task EditSettingsNotificationsAsync(
 
-            global::HuggingFace.Request2 request,
+            global::HuggingFace.PatchSettingsNotificationsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -176,11 +176,11 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task EditSettingsNotificationsAsync(
-            global::HuggingFace.RequestNotifications notifications,
+            global::HuggingFace.PatchSettingsNotificationsRequestNotifications notifications,
             string? prepaidAmount = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request2
+            var __request = new global::HuggingFace.PatchSettingsNotificationsRequest
             {
                 Notifications = notifications,
                 PrepaidAmount = prepaidAmount,

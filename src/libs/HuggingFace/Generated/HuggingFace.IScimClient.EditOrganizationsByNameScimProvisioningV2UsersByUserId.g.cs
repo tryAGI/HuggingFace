@@ -13,11 +13,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response33> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersResponse> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
             string name,
             string userId,
 
-            global::HuggingFace.Request17 request,
+            global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update an attribute of a SCIM provisioning user<br/>
@@ -29,11 +29,11 @@ namespace HuggingFace
         /// <param name="operations"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response33> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersResponse> EditOrganizationsByNameScimProvisioningV2UsersByUserIdAsync(
             string name,
             string userId,
             global::System.Collections.Generic.IList<string> schemas,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestOperation2> operations,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperation> operations,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string rev,
-            global::HuggingFace.Request46 request);
+            global::HuggingFace.CreateDatasetsSuperSquashRequest request);
         partial void PrepareCreateDatasetsByNamespaceByRepoSuperSquashByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
             string rev,
-            global::HuggingFace.Request46 request);
+            global::HuggingFace.CreateDatasetsSuperSquashRequest request);
         partial void ProcessCreateDatasetsByNamespaceByRepoSuperSquashByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -37,12 +37,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response93> CreateDatasetsByNamespaceByRepoSuperSquashByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDatasetsSuperSquashResponse> CreateDatasetsByNamespaceByRepoSuperSquashByRevAsync(
             string @namespace,
             string repo,
             string rev,
 
-            global::HuggingFace.Request46 request,
+            global::HuggingFace.CreateDatasetsSuperSquashRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -135,7 +135,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response93.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateDatasetsSuperSquashResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -166,7 +166,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response93.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateDatasetsSuperSquashResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -208,14 +208,14 @@ namespace HuggingFace
         /// <param name="message"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response93> CreateDatasetsByNamespaceByRepoSuperSquashByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDatasetsSuperSquashResponse> CreateDatasetsByNamespaceByRepoSuperSquashByRevAsync(
             string @namespace,
             string repo,
             string rev,
             string? message = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request46
+            var __request = new global::HuggingFace.CreateDatasetsSuperSquashRequest
             {
                 Message = message,
             };

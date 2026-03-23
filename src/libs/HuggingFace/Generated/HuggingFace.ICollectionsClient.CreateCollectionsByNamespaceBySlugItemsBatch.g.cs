@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string slug,
 
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestItem4> request,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem2> request,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

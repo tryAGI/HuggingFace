@@ -31,15 +31,15 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
 
-            global::HuggingFace.Request28 request,
+            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request,
             int? p = default,
-            global::HuggingFace.ReadStatus3? readStatus = default,
-            global::HuggingFace.RepoType4? repoType = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention3? mention = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -75,13 +75,13 @@ namespace HuggingFace
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
             int? p = default,
-            global::HuggingFace.ReadStatus3? readStatus = default,
-            global::HuggingFace.RepoType4? repoType = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention3? mention = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,

@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareCreateOrganizationsByNameResourceGroupsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            global::HuggingFace.Request8 request);
+            global::HuggingFace.CreateOrganizationsResourceGroupsRequest request);
         partial void PrepareCreateOrganizationsByNameResourceGroupsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            global::HuggingFace.Request8 request);
+            global::HuggingFace.CreateOrganizationsResourceGroupsRequest request);
         partial void ProcessCreateOrganizationsByNameResourceGroupsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -32,10 +32,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response10> CreateOrganizationsByNameResourceGroupsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsResponse> CreateOrganizationsByNameResourceGroupsAsync(
             string name,
 
-            global::HuggingFace.Request8 request,
+            global::HuggingFace.CreateOrganizationsResourceGroupsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -124,7 +124,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response10.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateOrganizationsResourceGroupsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -155,7 +155,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response10.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateOrganizationsResourceGroupsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -204,16 +204,16 @@ namespace HuggingFace
         /// <param name="autoJoin"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response10> CreateOrganizationsByNameResourceGroupsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsResponse> CreateOrganizationsByNameResourceGroupsAsync(
             string name,
             string requestName,
             string? description = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestUser>? users = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUser>? users = default,
             global::System.Collections.Generic.IList<global::HuggingFace.RepoId>? repos = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RequestAutoJoinVariant1, global::HuggingFace.RequestAutoJoinVariant2>? autoJoin = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant2>? autoJoin = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request8
+            var __request = new global::HuggingFace.CreateOrganizationsResourceGroupsRequest
             {
                 Name = requestName,
                 Description = description,

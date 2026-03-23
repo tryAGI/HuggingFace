@@ -18,7 +18,7 @@ namespace HuggingFace
             string repo,
             string rev,
 
-            global::HuggingFace.Request42 request,
+            global::HuggingFace.CreateSpacesBranchRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create branch

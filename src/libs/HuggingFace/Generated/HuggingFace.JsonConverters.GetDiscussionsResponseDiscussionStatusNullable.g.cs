@@ -1,0 +1,60 @@
+#nullable enable
+
+namespace HuggingFace.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class GetDiscussionsResponseDiscussionStatusNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.GetDiscussionsResponseDiscussionStatus?>
+    {
+        /// <inheritdoc />
+        public override global::HuggingFace.GetDiscussionsResponseDiscussionStatus? Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::HuggingFace.GetDiscussionsResponseDiscussionStatusExtensions.ToEnum(stringValue);
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::HuggingFace.GetDiscussionsResponseDiscussionStatus)numValue;
+                }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::HuggingFace.GetDiscussionsResponseDiscussionStatus?);
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::HuggingFace.GetDiscussionsResponseDiscussionStatus? value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::HuggingFace.GetDiscussionsResponseDiscussionStatusExtensions.ToValueString(value.Value));
+            }
+        }
+    }
+}

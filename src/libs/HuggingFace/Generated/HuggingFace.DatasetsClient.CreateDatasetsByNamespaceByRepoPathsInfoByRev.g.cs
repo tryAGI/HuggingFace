@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string rev,
-            global::HuggingFace.Request33 request);
+            global::HuggingFace.CreateDatasetsPathsInfoRequest request);
         partial void PrepareCreateDatasetsByNamespaceByRepoPathsInfoByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
             string rev,
-            global::HuggingFace.Request33 request);
+            global::HuggingFace.CreateDatasetsPathsInfoRequest request);
         partial void ProcessCreateDatasetsByNamespaceByRepoPathsInfoByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,12 +36,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem16>> CreateDatasetsByNamespaceByRepoPathsInfoByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPathsInfoResponseItem>> CreateDatasetsByNamespaceByRepoPathsInfoByRevAsync(
             string @namespace,
             string repo,
             string rev,
 
-            global::HuggingFace.Request33 request,
+            global::HuggingFace.CreateDatasetsPathsInfoRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -134,7 +134,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem16>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem16> ??
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPathsInfoResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPathsInfoResponseItem> ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -165,7 +165,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem16>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem16> ??
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPathsInfoResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPathsInfoResponseItem> ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -209,7 +209,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem16>> CreateDatasetsByNamespaceByRepoPathsInfoByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPathsInfoResponseItem>> CreateDatasetsByNamespaceByRepoPathsInfoByRevAsync(
             string @namespace,
             string repo,
             string rev,
@@ -217,7 +217,7 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<object, bool?> expand,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request33
+            var __request = new global::HuggingFace.CreateDatasetsPathsInfoRequest
             {
                 Paths = paths,
                 Expand = expand,

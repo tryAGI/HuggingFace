@@ -7,14 +7,14 @@ namespace HuggingFace
     {
         partial void PrepareDeleteByRepoTypeByNamespaceByRepoDiscussionsByNumArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType12 repoType,
+            ref global::HuggingFace.DeleteDiscussionsRepoType repoType,
             ref string @namespace,
             ref string repo,
             ref string num);
         partial void PrepareDeleteByRepoTypeByNamespaceByRepoDiscussionsByNumRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType12 repoType,
+            global::HuggingFace.DeleteDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string num);
@@ -32,7 +32,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
-            global::HuggingFace.RepoType12 repoType,
+            global::HuggingFace.DeleteDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string num,

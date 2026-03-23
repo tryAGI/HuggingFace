@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateReposMoveAsync(
 
-            global::HuggingFace.Request65 request,
+            global::HuggingFace.CreateReposMoveRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Move repo<br/>
@@ -29,7 +29,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task CreateReposMoveAsync(
             string fromRepo,
             string toRepo,
-            global::HuggingFace.RequestType? type = default,
+            global::HuggingFace.CreateReposMoveRequestType? type = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

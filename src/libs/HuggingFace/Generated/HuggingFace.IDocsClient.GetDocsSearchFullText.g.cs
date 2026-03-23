@@ -15,7 +15,7 @@ namespace HuggingFace
         /// <param name="domain"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response53> GetDocsSearchFullTextAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetDocsSearchFullTextResponse> GetDocsSearchFullTextAsync(
             string q,
             int? limit = default,
             string? domain = default,

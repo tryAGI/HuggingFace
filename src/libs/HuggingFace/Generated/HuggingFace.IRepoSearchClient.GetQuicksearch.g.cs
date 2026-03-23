@@ -35,20 +35,20 @@ namespace HuggingFace
         /// <param name="spacesTags"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response120> GetQuicksearchAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetQuicksearchResponse> GetQuicksearchAsync(
             string? q = default,
             int? limit = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.Lang3?, string>? lang = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.Library3?, string>? library = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.TypeVariant1Item>, global::System.Collections.Generic.IList<string>>? type = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.OrgsFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? orgsFilter = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.ReposFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? reposFilter = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.PipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLang2?, string>? lang = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLibrary2?, string>? library = default,
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchTypeVariant1Item>, global::System.Collections.Generic.IList<string>>? type = default,
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchOrgsFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? orgsFilter = default,
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchReposFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? reposFilter = default,
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines = default,
             global::System.Collections.Generic.IList<string>? exclude = default,
             string? @namespace = default,
             global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
             string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RepoType21?, string>? repoType = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchRepoType2?, string>? repoType = default,
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,

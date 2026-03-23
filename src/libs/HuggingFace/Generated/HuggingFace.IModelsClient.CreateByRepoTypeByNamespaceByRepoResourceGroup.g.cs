@@ -14,12 +14,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response90> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
-            global::HuggingFace.RepoType7 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateResourceGroupResponse> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
+            global::HuggingFace.CreateResourceGroupRepoType repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request44 request,
+            global::HuggingFace.CreateResourceGroupRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add resource group<br/>
@@ -33,8 +33,8 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response90> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
-            global::HuggingFace.RepoType7 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateResourceGroupResponse> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
+            global::HuggingFace.CreateResourceGroupRepoType repoType,
             string @namespace,
             string repo,
             string? resourceGroupId = default,

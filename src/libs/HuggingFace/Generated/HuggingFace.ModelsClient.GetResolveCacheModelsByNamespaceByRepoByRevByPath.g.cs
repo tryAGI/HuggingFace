@@ -49,7 +49,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response148> GetResolveCacheModelsByNamespaceByRepoByRevByPathAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetResolveCacheModelsResponse> GetResolveCacheModelsByNamespaceByRepoByRevByPathAsync(
             string @namespace,
             string repo,
             string rev,
@@ -268,7 +268,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response148.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetResolveCacheModelsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -299,7 +299,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response148.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetResolveCacheModelsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

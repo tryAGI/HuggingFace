@@ -15,12 +15,12 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeAsync(
-            global::HuggingFace.RepoType17 repoType,
+            global::HuggingFace.CreateDiscussionsMergeRepoType repoType,
             string @namespace,
             string repo,
             string num,
 
-            global::HuggingFace.Request56 request,
+            global::HuggingFace.CreateDiscussionsMergeRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Merge a pull request
@@ -33,7 +33,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeAsync(
-            global::HuggingFace.RepoType17 repoType,
+            global::HuggingFace.CreateDiscussionsMergeRepoType repoType,
             string @namespace,
             string repo,
             string num,

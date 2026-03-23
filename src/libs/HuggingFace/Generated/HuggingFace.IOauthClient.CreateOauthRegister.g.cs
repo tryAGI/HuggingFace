@@ -10,9 +10,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response45> CreateOauthRegisterAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthRegisterResponse> CreateOauthRegisterAsync(
 
-            global::HuggingFace.Request22 request,
+            global::HuggingFace.CreateOauthRegisterRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Register a new OAuth app
@@ -28,14 +28,14 @@ namespace HuggingFace
         /// <param name="softwareVersion"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response45> CreateOauthRegisterAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthRegisterResponse> CreateOauthRegisterAsync(
             global::System.Collections.Generic.IList<string>? redirectUris = default,
             string? clientName = default,
             string? clientUri = default,
             string? logoUri = default,
             string? scope = default,
             global::System.Collections.Generic.IList<string>? contacts = default,
-            global::HuggingFace.RequestTokenEndpointAuthMethod? tokenEndpointAuthMethod = default,
+            global::HuggingFace.CreateOauthRegisterRequestTokenEndpointAuthMethod? tokenEndpointAuthMethod = default,
             string? softwareId = default,
             string? softwareVersion = default,
             global::System.Threading.CancellationToken cancellationToken = default);

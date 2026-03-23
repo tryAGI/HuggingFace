@@ -7,13 +7,13 @@ namespace HuggingFace
     {
         partial void PrepareGetByRepoTypeByNamespaceByRepoXetWriteTokenArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType5 repoType,
+            ref global::HuggingFace.GetXetWriteTokenRepoType repoType,
             ref string @namespace,
             ref string repo);
         partial void PrepareGetByRepoTypeByNamespaceByRepoXetWriteTokenRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType5 repoType,
+            global::HuggingFace.GetXetWriteTokenRepoType repoType,
             string @namespace,
             string repo);
         partial void ProcessGetByRepoTypeByNamespaceByRepoXetWriteTokenResponse(
@@ -34,8 +34,8 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response82> GetByRepoTypeByNamespaceByRepoXetWriteTokenAsync(
-            global::HuggingFace.RepoType5 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetXetWriteTokenResponse> GetByRepoTypeByNamespaceByRepoXetWriteTokenAsync(
+            global::HuggingFace.GetXetWriteTokenRepoType repoType,
             string @namespace,
             string repo,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -120,7 +120,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response82.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetXetWriteTokenResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -151,7 +151,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response82.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetXetWriteTokenResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

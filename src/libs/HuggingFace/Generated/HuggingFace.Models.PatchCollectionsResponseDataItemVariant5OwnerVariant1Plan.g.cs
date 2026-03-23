@@ -1,0 +1,63 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        Academia,
+        /// <summary>
+        /// 
+        /// </summary>
+        Enterprise,
+        /// <summary>
+        /// 
+        /// </summary>
+        Plus,
+        /// <summary>
+        /// 
+        /// </summary>
+        Team,
+    }
+
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class PatchCollectionsResponseDataItemVariant5OwnerVariant1PlanExtensions
+    {
+        /// <summary>
+        /// Converts an enum to a string.
+        /// </summary>
+        public static string ToValueString(this PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan value)
+        {
+            return value switch
+            {
+                PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Academia => "academia",
+                PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Enterprise => "enterprise",
+                PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Plus => "plus",
+                PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Team => "team",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
+        }
+        /// <summary>
+        /// Converts an string to a enum.
+        /// </summary>
+        public static PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan? ToEnum(string value)
+        {
+            return value switch
+            {
+                "academia" => PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Academia,
+                "enterprise" => PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Enterprise,
+                "plus" => PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Plus,
+                "team" => PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan.Team,
+                _ => null,
+            };
+        }
+    }
+}

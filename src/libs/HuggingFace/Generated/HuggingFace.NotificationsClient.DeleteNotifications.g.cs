@@ -8,30 +8,30 @@ namespace HuggingFace
         partial void PrepareDeleteNotificationsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? p,
-            ref global::HuggingFace.ReadStatus2? readStatus,
-            ref global::HuggingFace.RepoType3? repoType,
+            ref global::HuggingFace.DeleteNotificationsReadStatus? readStatus,
+            ref global::HuggingFace.DeleteNotificationsRepoType? repoType,
             ref string? repoName,
             ref string? postAuthor,
             ref string? paperId,
             ref string? articleId,
-            ref global::HuggingFace.Mention2? mention,
+            ref global::HuggingFace.DeleteNotificationsMention? mention,
             ref global::System.DateTime? lastUpdate,
             object? applyToAll,
-            global::HuggingFace.Request request);
+            global::HuggingFace.DeleteNotificationsRequest request);
         partial void PrepareDeleteNotificationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int? p,
-            global::HuggingFace.ReadStatus2? readStatus,
-            global::HuggingFace.RepoType3? repoType,
+            global::HuggingFace.DeleteNotificationsReadStatus? readStatus,
+            global::HuggingFace.DeleteNotificationsRepoType? repoType,
             string? repoName,
             string? postAuthor,
             string? paperId,
             string? articleId,
-            global::HuggingFace.Mention2? mention,
+            global::HuggingFace.DeleteNotificationsMention? mention,
             global::System.DateTime? lastUpdate,
             object? applyToAll,
-            global::HuggingFace.Request request);
+            global::HuggingFace.DeleteNotificationsRequest request);
         partial void ProcessDeleteNotificationsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,15 +63,15 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task DeleteNotificationsAsync(
 
-            global::HuggingFace.Request request,
+            global::HuggingFace.DeleteNotificationsRequest request,
             int? p = default,
-            global::HuggingFace.ReadStatus2? readStatus = default,
-            global::HuggingFace.RepoType3? repoType = default,
+            global::HuggingFace.DeleteNotificationsReadStatus? readStatus = default,
+            global::HuggingFace.DeleteNotificationsRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention2? mention = default,
+            global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -272,19 +272,19 @@ namespace HuggingFace
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task DeleteNotificationsAsync(
             int? p = default,
-            global::HuggingFace.ReadStatus2? readStatus = default,
-            global::HuggingFace.RepoType3? repoType = default,
+            global::HuggingFace.DeleteNotificationsReadStatus? readStatus = default,
+            global::HuggingFace.DeleteNotificationsRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention2? mention = default,
+            global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request
+            var __request = new global::HuggingFace.DeleteNotificationsRequest
             {
                 DiscussionIds = discussionIds,
             };

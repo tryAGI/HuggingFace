@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request61 request,
+            global::HuggingFace.DeleteSpacesVariablesRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete variable<br/>

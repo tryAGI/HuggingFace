@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request72 request);
+            global::HuggingFace.CreateModelsUserAccessRequestHandleRequest request);
         partial void PrepareCreateModelsByNamespaceByRepoUserAccessRequestHandleRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.Request72 request);
+            global::HuggingFace.CreateModelsUserAccessRequestHandleRequest request);
         partial void ProcessCreateModelsByNamespaceByRepoUserAccessRequestHandleResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request72 request,
+            global::HuggingFace.CreateModelsUserAccessRequestHandleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -196,13 +196,13 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task CreateModelsByNamespaceByRepoUserAccessRequestHandleAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.RequestStatus2 status,
+            global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus status,
             string? userId = default,
             string? user = default,
             string? rejectionReason = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request72
+            var __request = new global::HuggingFace.CreateModelsUserAccessRequestHandleRequest
             {
                 UserId = userId,
                 User = user,

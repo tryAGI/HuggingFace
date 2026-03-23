@@ -16,7 +16,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response67> GetModelsByNamespaceByRepoTreesizeByRevByPathAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetModelsTreesizeResponse> GetModelsByNamespaceByRepoTreesizeByRevByPathAsync(
             string @namespace,
             string repo,
             string rev,

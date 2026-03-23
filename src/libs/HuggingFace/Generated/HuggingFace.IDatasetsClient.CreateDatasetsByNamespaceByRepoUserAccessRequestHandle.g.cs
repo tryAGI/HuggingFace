@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request73 request,
+            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Handle access request<br/>
@@ -38,7 +38,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task CreateDatasetsByNamespaceByRepoUserAccessRequestHandleAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.RequestStatus3 status,
+            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestStatus status,
             string? userId = default,
             string? user = default,
             string? rejectionReason = default,

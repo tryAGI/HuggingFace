@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request58 request,
+            global::HuggingFace.CreateSpacesSecretsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upsert secret<br/>

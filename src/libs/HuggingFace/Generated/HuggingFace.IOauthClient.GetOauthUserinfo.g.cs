@@ -10,7 +10,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response47> GetOauthUserinfoAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetOauthUserinfoResponse> GetOauthUserinfoAsync(
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -7,14 +7,14 @@ namespace HuggingFace
     {
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsByNumStorageArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType19 repoType,
+            ref global::HuggingFace.GetDiscussionsStorageRepoType repoType,
             ref string @namespace,
             ref string repo,
             ref string num);
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsByNumStorageRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType19 repoType,
+            global::HuggingFace.GetDiscussionsStorageRepoType repoType,
             string @namespace,
             string repo,
             string num);
@@ -37,8 +37,8 @@ namespace HuggingFace
         /// <param name="num"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response111> GetByRepoTypeByNamespaceByRepoDiscussionsByNumStorageAsync(
-            global::HuggingFace.RepoType19 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetDiscussionsStorageResponse> GetByRepoTypeByNamespaceByRepoDiscussionsByNumStorageAsync(
+            global::HuggingFace.GetDiscussionsStorageRepoType repoType,
             string @namespace,
             string repo,
             string num,
@@ -126,7 +126,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response111.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetDiscussionsStorageResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -157,7 +157,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response111.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetDiscussionsStorageResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

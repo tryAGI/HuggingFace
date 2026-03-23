@@ -9,7 +9,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            ref global::HuggingFace.Status2 status,
+            ref global::HuggingFace.GetModelsUserAccessRequestStatus status,
             ref int? limit,
             ref global::System.DateTime? after,
             ref global::System.DateTime? before);
@@ -18,7 +18,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.Status2 status,
+            global::HuggingFace.GetModelsUserAccessRequestStatus status,
             int? limit,
             global::System.DateTime? after,
             global::System.DateTime? before);
@@ -45,10 +45,10 @@ namespace HuggingFace
         /// <param name="before"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem25>> GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>> GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.Status2 status,
+            global::HuggingFace.GetModelsUserAccessRequestStatus status,
             int? limit = default,
             global::System.DateTime? after = default,
             global::System.DateTime? before = default,
@@ -145,7 +145,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem25>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem25> ??
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem> ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -176,7 +176,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem25>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem25> ??
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem> ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

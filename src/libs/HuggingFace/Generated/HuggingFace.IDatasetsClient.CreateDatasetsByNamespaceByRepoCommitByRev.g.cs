@@ -89,13 +89,13 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response88> CreateDatasetsByNamespaceByRepoCommitByRevAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateDatasetsCommitResponse> CreateDatasetsByNamespaceByRepoCommitByRevAsync(
             string @namespace,
             string repo,
             string rev,
             object? createPr = default,
             object? hotReload = default,
-            global::HuggingFace.ContentType2? contentType = default,
+            global::HuggingFace.CreateDatasetsCommitContentType? contentType = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

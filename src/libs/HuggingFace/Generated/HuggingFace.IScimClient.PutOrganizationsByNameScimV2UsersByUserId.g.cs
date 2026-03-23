@@ -13,11 +13,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response20> PutOrganizationsByNameScimV2UsersByUserIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PutOrganizationsScimV2UsersResponse> PutOrganizationsByNameScimV2UsersByUserIdAsync(
             string name,
             string userId,
 
-            global::HuggingFace.Request12 request,
+            global::HuggingFace.PutOrganizationsScimV2UsersRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update a SCIM user<br/>
@@ -37,13 +37,13 @@ namespace HuggingFace
         /// <param name="externalId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response20> PutOrganizationsByNameScimV2UsersByUserIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PutOrganizationsScimV2UsersResponse> PutOrganizationsByNameScimV2UsersByUserIdAsync(
             string name,
             string userId,
             global::System.Collections.Generic.IList<string> schemas,
             string userName,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestEmail2> emails,
-            global::HuggingFace.RequestName2 requestName,
+            global::System.Collections.Generic.IList<global::HuggingFace.PutOrganizationsScimV2UsersRequestEmail> emails,
+            global::HuggingFace.PutOrganizationsScimV2UsersRequestName requestName,
             string externalId,
             bool? active = default,
             global::System.Threading.CancellationToken cancellationToken = default);
