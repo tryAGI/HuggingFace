@@ -17,7 +17,7 @@ public partial class Tests
         using var client = new HuggingFaceClient(apiKey);
 
         var spaces = await client.Models.GetTrendingAsync(
-            type: Type5.Space,
+            type: GetTrendingType.Space,
             limit: 3);
 
         Console.WriteLine("Trending Spaces:");
