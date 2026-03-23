@@ -1,7 +1,7 @@
 set -e
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl --fail --silent --show-error -o openapi.json https://huggingface.co/.well-known/openapi.json
+curl --fail --silent --show-error -o openapi.json.tmp https://huggingface.co/.well-known/openapi.json && mv openapi.json.tmp openapi.json || echo "Warning: Failed to download openapi.json, using existing file"
 
 # Fix enum values that break C# code generation (embedded quotes, emojis)
 python3 << 'PYEOF'
