@@ -16,8 +16,8 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response119> GetTrendingAsync(
-            global::HuggingFace.Type5? type = default,
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetTrendingResponse> GetTrendingAsync(
+            global::HuggingFace.GetTrendingType? type = default,
             int? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

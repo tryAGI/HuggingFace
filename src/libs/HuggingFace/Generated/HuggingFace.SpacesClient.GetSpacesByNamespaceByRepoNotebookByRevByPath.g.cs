@@ -39,7 +39,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant13, global::HuggingFace.ResponseVariant23, global::HuggingFace.ResponseVariant33>> GetSpacesByNamespaceByRepoNotebookByRevByPathAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.GetSpacesNotebookResponseVariant1, global::HuggingFace.GetSpacesNotebookResponseVariant2, global::HuggingFace.GetSpacesNotebookResponseVariant3>> GetSpacesByNamespaceByRepoNotebookByRevByPathAsync(
             string @namespace,
             string repo,
             string rev,
@@ -128,7 +128,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant13, global::HuggingFace.ResponseVariant23, global::HuggingFace.ResponseVariant33>.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.AnyOf<global::HuggingFace.GetSpacesNotebookResponseVariant1, global::HuggingFace.GetSpacesNotebookResponseVariant2, global::HuggingFace.GetSpacesNotebookResponseVariant3>.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -159,7 +159,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant13, global::HuggingFace.ResponseVariant23, global::HuggingFace.ResponseVariant33>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.AnyOf<global::HuggingFace.GetSpacesNotebookResponseVariant1, global::HuggingFace.GetSpacesNotebookResponseVariant2, global::HuggingFace.GetSpacesNotebookResponseVariant3>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

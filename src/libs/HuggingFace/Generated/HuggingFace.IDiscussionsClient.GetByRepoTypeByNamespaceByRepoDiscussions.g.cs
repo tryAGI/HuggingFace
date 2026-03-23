@@ -27,16 +27,16 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response104> GetByRepoTypeByNamespaceByRepoDiscussionsAsync(
-            global::HuggingFace.RepoType9 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetDiscussionsResponse> GetByRepoTypeByNamespaceByRepoDiscussionsAsync(
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             int? p = default,
-            global::HuggingFace.Type2? type = default,
-            global::HuggingFace.Status? status = default,
+            global::HuggingFace.GetDiscussionsType? type = default,
+            global::HuggingFace.GetDiscussionsStatus? status = default,
             string? author = default,
             string? search = default,
-            global::HuggingFace.Sort? sort = default,
+            global::HuggingFace.GetDiscussionsSort? sort = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

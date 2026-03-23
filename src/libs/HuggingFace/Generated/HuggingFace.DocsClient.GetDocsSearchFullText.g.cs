@@ -36,7 +36,7 @@ namespace HuggingFace
         /// <param name="domain"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response53> GetDocsSearchFullTextAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetDocsSearchFullTextResponse> GetDocsSearchFullTextAsync(
             string q,
             int? limit = default,
             string? domain = default,
@@ -127,7 +127,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response53.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetDocsSearchFullTextResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -158,7 +158,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response53.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetDocsSearchFullTextResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

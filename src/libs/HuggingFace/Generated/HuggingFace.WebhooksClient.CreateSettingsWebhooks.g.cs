@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareCreateSettingsWebhooksArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.Request4 request);
+            global::HuggingFace.CreateSettingsWebhooksRequest request);
         partial void PrepareCreateSettingsWebhooksRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Request4 request);
+            global::HuggingFace.CreateSettingsWebhooksRequest request);
         partial void ProcessCreateSettingsWebhooksResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -27,9 +27,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response3> CreateSettingsWebhooksAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksAsync(
 
-            global::HuggingFace.Request4 request,
+            global::HuggingFace.CreateSettingsWebhooksRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -116,7 +116,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response3.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateSettingsWebhooksResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -147,7 +147,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response3.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateSettingsWebhooksResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -190,16 +190,16 @@ namespace HuggingFace
         /// <param name="secret"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response3> CreateSettingsWebhooksAsync(
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestWatchedItem> watched,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestDomain> domains,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksAsync(
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem> watched,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain> domains,
             string? url = default,
-            global::HuggingFace.RequestJob? job = default,
+            global::HuggingFace.CreateSettingsWebhooksRequestJob? job = default,
             string? jobSourceId = default,
             string? secret = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request4
+            var __request = new global::HuggingFace.CreateSettingsWebhooksRequest
             {
                 Watched = watched,
                 Url = url,

@@ -30,7 +30,7 @@ namespace HuggingFace
         /// <param name="jobId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response175> GetScheduledJobsByNamespaceByJobIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetScheduledJobsResponse> GetScheduledJobsByNamespaceByJobIdAsync(
             string @namespace,
             string jobId,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -113,7 +113,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response175.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetScheduledJobsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -144,7 +144,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response175.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetScheduledJobsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

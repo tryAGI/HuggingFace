@@ -11,10 +11,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response169> CreateJobsByNamespaceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateJobsResponse> CreateJobsByNamespaceAsync(
             string @namespace,
 
-            global::HuggingFace.Request87 request,
+            global::HuggingFace.CreateJobsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Start a job
@@ -45,20 +45,20 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response169> CreateJobsByNamespaceAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateJobsResponse> CreateJobsByNamespaceAsync(
             string @namespace,
-            global::HuggingFace.RequestFlavor flavor,
+            global::HuggingFace.CreateJobsRequestFlavor flavor,
             string? spaceId = default,
             string? dockerImage = default,
             global::System.Collections.Generic.IList<string>? arguments = default,
             global::System.Collections.Generic.IList<string>? command = default,
             global::System.Collections.Generic.Dictionary<string, string>? environment = default,
             global::System.Collections.Generic.Dictionary<string, string>? secrets = default,
-            global::HuggingFace.RequestArch? arch = default,
+            global::HuggingFace.CreateJobsRequestArch? arch = default,
             int? timeoutSeconds = default,
             int? attempts = default,
             global::System.Collections.Generic.Dictionary<string, string>? labels = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestVolume>? volumes = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

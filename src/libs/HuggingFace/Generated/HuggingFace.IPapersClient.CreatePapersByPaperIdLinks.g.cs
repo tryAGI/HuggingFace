@@ -12,10 +12,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response157> CreatePapersByPaperIdLinksAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreatePapersLinksResponse> CreatePapersByPaperIdLinksAsync(
             string paperId,
 
-            global::HuggingFace.Request79 request,
+            global::HuggingFace.CreatePapersLinksRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update paper links<br/>
@@ -27,7 +27,7 @@ namespace HuggingFace
         /// <param name="organizationId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response157> CreatePapersByPaperIdLinksAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreatePapersLinksResponse> CreatePapersByPaperIdLinksAsync(
             string paperId,
             string? projectPage = default,
             string? githubRepo = default,

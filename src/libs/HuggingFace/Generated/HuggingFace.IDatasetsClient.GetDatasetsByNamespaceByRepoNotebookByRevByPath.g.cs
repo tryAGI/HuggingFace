@@ -16,7 +16,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.ResponseVariant12, global::HuggingFace.ResponseVariant22, global::HuggingFace.ResponseVariant32>> GetDatasetsByNamespaceByRepoNotebookByRevByPathAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsNotebookResponseVariant1, global::HuggingFace.GetDatasetsNotebookResponseVariant2, global::HuggingFace.GetDatasetsNotebookResponseVariant3>> GetDatasetsByNamespaceByRepoNotebookByRevByPathAsync(
             string @namespace,
             string repo,
             string rev,

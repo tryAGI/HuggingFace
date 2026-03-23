@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request73 request);
+            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request);
         partial void PrepareCreateDatasetsByNamespaceByRepoUserAccessRequestHandleRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.Request73 request);
+            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request);
         partial void ProcessCreateDatasetsByNamespaceByRepoUserAccessRequestHandleResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request73 request,
+            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -196,13 +196,13 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task CreateDatasetsByNamespaceByRepoUserAccessRequestHandleAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.RequestStatus3 status,
+            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestStatus status,
             string? userId = default,
             string? user = default,
             string? rejectionReason = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request73
+            var __request = new global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest
             {
                 UserId = userId,
                 User = user,

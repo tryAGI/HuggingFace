@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request75 request);
+            global::HuggingFace.CreateDatasetsUserAccessRequestGrantRequest request);
         partial void PrepareCreateDatasetsByNamespaceByRepoUserAccessRequestGrantRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.Request75 request);
+            global::HuggingFace.CreateDatasetsUserAccessRequestGrantRequest request);
         partial void ProcessCreateDatasetsByNamespaceByRepoUserAccessRequestGrantResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request75 request,
+            global::HuggingFace.CreateDatasetsUserAccessRequestGrantRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -194,7 +194,7 @@ namespace HuggingFace
             string? user = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request75
+            var __request = new global::HuggingFace.CreateDatasetsUserAccessRequestGrantRequest
             {
                 UserId = userId,
                 User = user,

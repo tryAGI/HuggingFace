@@ -12,7 +12,7 @@ namespace HuggingFace
             ref string rev,
             object? createPr,
             object? hotReload,
-            ref global::HuggingFace.ContentType2? contentType);
+            ref global::HuggingFace.CreateDatasetsCommitContentType? contentType);
         partial void PrepareCreateDatasetsByNamespaceByRepoCommitByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -21,7 +21,7 @@ namespace HuggingFace
             string rev,
             object? createPr,
             object? hotReload,
-            global::HuggingFace.ContentType2? contentType);
+            global::HuggingFace.CreateDatasetsCommitContentType? contentType);
         partial void ProcessCreateDatasetsByNamespaceByRepoCommitByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -116,13 +116,13 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response88> CreateDatasetsByNamespaceByRepoCommitByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDatasetsCommitResponse> CreateDatasetsByNamespaceByRepoCommitByRevAsync(
             string @namespace,
             string repo,
             string rev,
             object? createPr = default,
             object? hotReload = default,
-            global::HuggingFace.ContentType2? contentType = default,
+            global::HuggingFace.CreateDatasetsCommitContentType? contentType = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -221,7 +221,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response88.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateDatasetsCommitResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -252,7 +252,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response88.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateDatasetsCommitResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

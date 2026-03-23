@@ -1,0 +1,51 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        Auto,
+        /// <summary>
+        /// 
+        /// </summary>
+        Manual,
+    }
+
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2Extensions
+    {
+        /// <summary>
+        /// Converts an enum to a string.
+        /// </summary>
+        public static string ToValueString(this GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2 value)
+        {
+            return value switch
+            {
+                GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2.Auto => "auto",
+                GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2.Manual => "manual",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
+        }
+        /// <summary>
+        /// Converts an string to a enum.
+        /// </summary>
+        public static GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2? ToEnum(string value)
+        {
+            return value switch
+            {
+                "auto" => GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2.Auto,
+                "manual" => GetCollectionsResponseVariant1ItemItemVariant2GatedEnum2.Manual,
+                _ => null,
+            };
+        }
+    }
+}

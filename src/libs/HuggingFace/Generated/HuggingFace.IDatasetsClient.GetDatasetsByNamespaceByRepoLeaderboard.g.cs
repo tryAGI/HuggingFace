@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <param name="taskId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem21>> GetDatasetsByNamespaceByRepoLeaderboardAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsLeaderboardResponseItem>> GetDatasetsByNamespaceByRepoLeaderboardAsync(
             string @namespace,
             string repo,
             string? taskId = default,

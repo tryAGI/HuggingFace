@@ -12,11 +12,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response178> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateScheduledJobsScheduleResponse> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
             string @namespace,
             string jobId,
 
-            global::HuggingFace.Request89 request,
+            global::HuggingFace.CreateScheduledJobsScheduleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update a scheduled job schedule
@@ -28,7 +28,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response178> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateScheduledJobsScheduleResponse> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
             string @namespace,
             string jobId,
             string schedule,

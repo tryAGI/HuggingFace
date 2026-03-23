@@ -22,11 +22,11 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.ResponseVariant2Item>>> GetCollectionsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>> GetCollectionsAsync(
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>? item = default,
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>? owner = default,
             string? q = default,
-            global::HuggingFace.Sort3? sort = default,
+            global::HuggingFace.GetCollectionsSort? sort = default,
             string? cursor = default,
             object? expand = default,
             double? limit = default,

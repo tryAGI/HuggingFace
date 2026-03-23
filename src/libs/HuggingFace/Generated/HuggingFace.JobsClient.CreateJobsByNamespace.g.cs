@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareCreateJobsByNamespaceArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
-            global::HuggingFace.Request87 request);
+            global::HuggingFace.CreateJobsRequest request);
         partial void PrepareCreateJobsByNamespaceRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
-            global::HuggingFace.Request87 request);
+            global::HuggingFace.CreateJobsRequest request);
         partial void ProcessCreateJobsByNamespaceResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -30,10 +30,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response169> CreateJobsByNamespaceAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateJobsResponse> CreateJobsByNamespaceAsync(
             string @namespace,
 
-            global::HuggingFace.Request87 request,
+            global::HuggingFace.CreateJobsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -122,7 +122,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response169.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateJobsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -153,7 +153,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response169.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateJobsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -214,23 +214,23 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response169> CreateJobsByNamespaceAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateJobsResponse> CreateJobsByNamespaceAsync(
             string @namespace,
-            global::HuggingFace.RequestFlavor flavor,
+            global::HuggingFace.CreateJobsRequestFlavor flavor,
             string? spaceId = default,
             string? dockerImage = default,
             global::System.Collections.Generic.IList<string>? arguments = default,
             global::System.Collections.Generic.IList<string>? command = default,
             global::System.Collections.Generic.Dictionary<string, string>? environment = default,
             global::System.Collections.Generic.Dictionary<string, string>? secrets = default,
-            global::HuggingFace.RequestArch? arch = default,
+            global::HuggingFace.CreateJobsRequestArch? arch = default,
             int? timeoutSeconds = default,
             int? attempts = default,
             global::System.Collections.Generic.Dictionary<string, string>? labels = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestVolume>? volumes = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request87
+            var __request = new global::HuggingFace.CreateJobsRequest
             {
                 SpaceId = spaceId,
                 DockerImage = dockerImage,

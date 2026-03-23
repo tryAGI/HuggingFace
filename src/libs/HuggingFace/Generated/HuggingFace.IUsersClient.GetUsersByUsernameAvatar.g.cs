@@ -15,7 +15,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response61> GetUsersByUsernameAvatarAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetUsersAvatarResponse> GetUsersByUsernameAvatarAsync(
             string username,
             object? redirect = default,
             global::System.Threading.CancellationToken cancellationToken = default);

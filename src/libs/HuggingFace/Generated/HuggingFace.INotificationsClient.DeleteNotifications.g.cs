@@ -31,15 +31,15 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task DeleteNotificationsAsync(
 
-            global::HuggingFace.Request request,
+            global::HuggingFace.DeleteNotificationsRequest request,
             int? p = default,
-            global::HuggingFace.ReadStatus2? readStatus = default,
-            global::HuggingFace.RepoType3? repoType = default,
+            global::HuggingFace.DeleteNotificationsReadStatus? readStatus = default,
+            global::HuggingFace.DeleteNotificationsRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention2? mention = default,
+            global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -70,13 +70,13 @@ namespace HuggingFace
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task DeleteNotificationsAsync(
             int? p = default,
-            global::HuggingFace.ReadStatus2? readStatus = default,
-            global::HuggingFace.RepoType3? repoType = default,
+            global::HuggingFace.DeleteNotificationsReadStatus? readStatus = default,
+            global::HuggingFace.DeleteNotificationsRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention2? mention = default,
+            global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,

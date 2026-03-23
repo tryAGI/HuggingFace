@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request60 request,
+            global::HuggingFace.CreateSpacesVariablesRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upsert variable<br/>

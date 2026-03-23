@@ -17,7 +17,7 @@ namespace HuggingFace
             string name,
             string username,
 
-            global::HuggingFace.Request9 request,
+            global::HuggingFace.PutOrganizationsMembersRoleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Change member role<br/>
@@ -32,8 +32,8 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task PutOrganizationsByNameMembersByUsernameRoleAsync(
             string name,
             string username,
-            global::HuggingFace.RequestRole role,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestResourceGroup>? resourceGroups = default,
+            global::HuggingFace.PutOrganizationsMembersRoleRequestRole role,
+            global::System.Collections.Generic.IList<global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroup>? resourceGroups = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

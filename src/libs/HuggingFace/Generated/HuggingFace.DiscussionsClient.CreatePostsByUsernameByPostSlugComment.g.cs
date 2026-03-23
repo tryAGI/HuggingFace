@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string username,
             ref string postSlug,
-            global::HuggingFace.Request80 request);
+            global::HuggingFace.CreatePostsCommentRequest request);
         partial void PrepareCreatePostsByUsernameByPostSlugCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string username,
             string postSlug,
-            global::HuggingFace.Request80 request);
+            global::HuggingFace.CreatePostsCommentRequest request);
         partial void ProcessCreatePostsByUsernameByPostSlugCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,11 +33,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response158> CreatePostsByUsernameByPostSlugCommentAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePostsCommentResponse> CreatePostsByUsernameByPostSlugCommentAsync(
             string username,
             string postSlug,
 
-            global::HuggingFace.Request80 request,
+            global::HuggingFace.CreatePostsCommentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -128,7 +128,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response158.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreatePostsCommentResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -159,7 +159,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response158.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreatePostsCommentResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -199,13 +199,13 @@ namespace HuggingFace
         /// <param name="comment"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response158> CreatePostsByUsernameByPostSlugCommentAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePostsCommentResponse> CreatePostsByUsernameByPostSlugCommentAsync(
             string username,
             string postSlug,
             string comment,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request80
+            var __request = new global::HuggingFace.CreatePostsCommentRequest
             {
                 Comment = comment,
             };

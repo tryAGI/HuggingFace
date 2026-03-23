@@ -12,7 +12,7 @@ namespace HuggingFace
         /// <param name="schemaId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response13> GetOrganizationsByNameScimV2SchemasBySchemaIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsScimV2SchemasResponse> GetOrganizationsByNameScimV2SchemasBySchemaIdAsync(
             string name,
             string schemaId,
             global::System.Threading.CancellationToken cancellationToken = default);

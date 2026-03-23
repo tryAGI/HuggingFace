@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareCreateSettingsWebhooksByWebhookIdByActionArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string webhookId,
-            ref global::HuggingFace.Action action);
+            ref global::HuggingFace.CreateSettingsWebhooksAction action);
         partial void PrepareCreateSettingsWebhooksByWebhookIdByActionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string webhookId,
-            global::HuggingFace.Action action);
+            global::HuggingFace.CreateSettingsWebhooksAction action);
         partial void ProcessCreateSettingsWebhooksByWebhookIdByActionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -30,9 +30,9 @@ namespace HuggingFace
         /// <param name="action"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response7> CreateSettingsWebhooksByWebhookIdByActionAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse3> CreateSettingsWebhooksByWebhookIdByActionAsync(
             string webhookId,
-            global::HuggingFace.Action action,
+            global::HuggingFace.CreateSettingsWebhooksAction action,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -113,7 +113,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response7.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateSettingsWebhooksResponse3.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -144,7 +144,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response7.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateSettingsWebhooksResponse3.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

@@ -15,7 +15,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumRefAsync(
-            global::HuggingFace.RepoType18 repoType,
+            global::HuggingFace.DeleteDiscussionsRefRepoType repoType,
             string @namespace,
             string repo,
             string num,

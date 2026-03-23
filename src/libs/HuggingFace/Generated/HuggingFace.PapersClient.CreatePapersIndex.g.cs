@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareCreatePapersIndexArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.Request76 request);
+            global::HuggingFace.CreatePapersIndexRequest request);
         partial void PrepareCreatePapersIndexRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Request76 request);
+            global::HuggingFace.CreatePapersIndexRequest request);
         partial void ProcessCreatePapersIndexResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -28,9 +28,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response154> CreatePapersIndexAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePapersIndexResponse> CreatePapersIndexAsync(
 
-            global::HuggingFace.Request76 request,
+            global::HuggingFace.CreatePapersIndexRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -117,7 +117,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response154.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreatePapersIndexResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -148,7 +148,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response154.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreatePapersIndexResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -189,11 +189,11 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response154> CreatePapersIndexAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePapersIndexResponse> CreatePapersIndexAsync(
             string arxivId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request76
+            var __request = new global::HuggingFace.CreatePapersIndexRequest
             {
                 ArxivId = arxivId,
             };

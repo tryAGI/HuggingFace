@@ -7,17 +7,17 @@ namespace HuggingFace
     {
         partial void PrepareCreateByRepoTypeByNamespaceByRepoResourceGroupArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType7 repoType,
+            ref global::HuggingFace.CreateResourceGroupRepoType repoType,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request44 request);
+            global::HuggingFace.CreateResourceGroupRequest request);
         partial void PrepareCreateByRepoTypeByNamespaceByRepoResourceGroupRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType7 repoType,
+            global::HuggingFace.CreateResourceGroupRepoType repoType,
             string @namespace,
             string repo,
-            global::HuggingFace.Request44 request);
+            global::HuggingFace.CreateResourceGroupRequest request);
         partial void ProcessCreateByRepoTypeByNamespaceByRepoResourceGroupResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -37,12 +37,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response90> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
-            global::HuggingFace.RepoType7 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateResourceGroupResponse> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
+            global::HuggingFace.CreateResourceGroupRepoType repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request44 request,
+            global::HuggingFace.CreateResourceGroupRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -135,7 +135,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response90.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateResourceGroupResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -166,7 +166,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response90.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateResourceGroupResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -210,14 +210,14 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response90> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
-            global::HuggingFace.RepoType7 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateResourceGroupResponse> CreateByRepoTypeByNamespaceByRepoResourceGroupAsync(
+            global::HuggingFace.CreateResourceGroupRepoType repoType,
             string @namespace,
             string repo,
             string? resourceGroupId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request44
+            var __request = new global::HuggingFace.CreateResourceGroupRequest
             {
                 ResourceGroupId = resourceGroupId,
             };

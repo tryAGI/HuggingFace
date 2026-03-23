@@ -13,12 +13,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response122> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
-            global::HuggingFace.RepoType24 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateDuplicateResponse> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
+            global::HuggingFace.CreateDuplicateRepoType repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request62 request,
+            global::HuggingFace.CreateDuplicateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Duplicate a repository
@@ -40,18 +40,18 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response122> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
-            global::HuggingFace.RepoType24 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateDuplicateResponse> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
+            global::HuggingFace.CreateDuplicateRepoType repoType,
             string @namespace,
             string repo,
             string repository,
             bool? @private = default,
-            global::HuggingFace.RequestVisibility4? visibility = default,
+            global::HuggingFace.CreateDuplicateRequestVisibility? visibility = default,
             string? resourceGroupId = default,
-            global::HuggingFace.RequestHardware? hardware = default,
+            global::HuggingFace.CreateDuplicateRequestHardware? hardware = default,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestSecret>? secrets = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestVariable>? variables = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestSecret>? secrets = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVariable>? variables = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

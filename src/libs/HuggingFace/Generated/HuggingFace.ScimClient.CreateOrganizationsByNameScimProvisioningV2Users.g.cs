@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareCreateOrganizationsByNameScimProvisioningV2UsersArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            global::HuggingFace.Request16 request);
+            global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequest request);
         partial void PrepareCreateOrganizationsByNameScimProvisioningV2UsersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            global::HuggingFace.Request16 request);
+            global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequest request);
         partial void ProcessCreateOrganizationsByNameScimProvisioningV2UsersResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -31,10 +31,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response31> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
             string name,
 
-            global::HuggingFace.Request16 request,
+            global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -123,7 +123,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response31.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -154,7 +154,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response31.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -204,16 +204,16 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response31> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
             string name,
             global::System.Collections.Generic.IList<string> schemas,
             string userName,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestEmail3> emails,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequestEmail> emails,
             string externalId,
             bool? active = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request16
+            var __request = new global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequest
             {
                 Schemas = schemas,
                 UserName = userName,

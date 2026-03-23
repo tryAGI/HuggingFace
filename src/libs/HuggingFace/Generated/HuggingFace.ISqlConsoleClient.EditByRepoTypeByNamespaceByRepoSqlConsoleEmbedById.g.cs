@@ -15,13 +15,13 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response125> EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync(
-            global::HuggingFace.RepoType25 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchSqlConsoleEmbedResponse> EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync(
+            global::HuggingFace.PatchSqlConsoleEmbedRepoType repoType,
             string @namespace,
             string repo,
             string id,
 
-            global::HuggingFace.Request66 request,
+            global::HuggingFace.PatchSqlConsoleEmbedRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update embed<br/>
@@ -36,8 +36,8 @@ namespace HuggingFace
         /// <param name="sql"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response125> EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync(
-            global::HuggingFace.RepoType25 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchSqlConsoleEmbedResponse> EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync(
+            global::HuggingFace.PatchSqlConsoleEmbedRepoType repoType,
             string @namespace,
             string repo,
             string id,

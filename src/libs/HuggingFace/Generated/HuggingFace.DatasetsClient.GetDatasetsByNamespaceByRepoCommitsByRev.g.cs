@@ -11,7 +11,7 @@ namespace HuggingFace
             ref string repo,
             ref string rev,
             ref int? p,
-            global::System.Collections.Generic.IList<global::HuggingFace.ExpandItem3>? expand,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsExpandItem>? expand,
             ref int? limit);
         partial void PrepareGetDatasetsByNamespaceByRepoCommitsByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -20,7 +20,7 @@ namespace HuggingFace
             string repo,
             string rev,
             int? p,
-            global::System.Collections.Generic.IList<global::HuggingFace.ExpandItem3>? expand,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsExpandItem>? expand,
             int? limit);
         partial void ProcessGetDatasetsByNamespaceByRepoCommitsByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -46,12 +46,12 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem14>> GetDatasetsByNamespaceByRepoCommitsByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem>> GetDatasetsByNamespaceByRepoCommitsByRevAsync(
             string @namespace,
             string repo,
             string rev,
             int? p = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.ExpandItem3>? expand = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsExpandItem>? expand = default,
             int? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -146,7 +146,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem14>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem14> ??
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem> ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -177,7 +177,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem14>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem14> ??
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem> ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

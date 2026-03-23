@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareCreateOrganizationsByNameSettingsTokensRevokeArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            global::HuggingFace.Request7 request);
+            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request);
         partial void PrepareCreateOrganizationsByNameSettingsTokensRevokeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            global::HuggingFace.Request7 request);
+            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request);
         partial void ProcessCreateOrganizationsByNameSettingsTokensRevokeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -29,7 +29,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task CreateOrganizationsByNameSettingsTokensRevokeAsync(
             string name,
 
-            global::HuggingFace.Request7 request,
+            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -184,7 +184,7 @@ namespace HuggingFace
             string token,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request7
+            var __request = new global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest
             {
                 Token = token,
             };

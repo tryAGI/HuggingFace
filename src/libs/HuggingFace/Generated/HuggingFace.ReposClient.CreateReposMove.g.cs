@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareCreateReposMoveArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.Request65 request);
+            global::HuggingFace.CreateReposMoveRequest request);
         partial void PrepareCreateReposMoveRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Request65 request);
+            global::HuggingFace.CreateReposMoveRequest request);
         partial void ProcessCreateReposMoveResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -25,7 +25,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task CreateReposMoveAsync(
 
-            global::HuggingFace.Request65 request,
+            global::HuggingFace.CreateReposMoveRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -179,10 +179,10 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task CreateReposMoveAsync(
             string fromRepo,
             string toRepo,
-            global::HuggingFace.RequestType? type = default,
+            global::HuggingFace.CreateReposMoveRequestType? type = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request65
+            var __request = new global::HuggingFace.CreateReposMoveRequest
             {
                 FromRepo = fromRepo,
                 ToRepo = toRepo,

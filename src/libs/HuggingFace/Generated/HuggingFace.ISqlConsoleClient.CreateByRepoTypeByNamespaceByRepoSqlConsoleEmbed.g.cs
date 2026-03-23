@@ -14,12 +14,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response127> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
-            global::HuggingFace.RepoType27 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSqlConsoleEmbedResponse> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
+            global::HuggingFace.CreateSqlConsoleEmbedRepoType repoType,
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request67 request,
+            global::HuggingFace.CreateSqlConsoleEmbedRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create embed<br/>
@@ -34,13 +34,13 @@ namespace HuggingFace
         /// <param name="views"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response127> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
-            global::HuggingFace.RepoType27 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSqlConsoleEmbedResponse> CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync(
+            global::HuggingFace.CreateSqlConsoleEmbedRepoType repoType,
             string @namespace,
             string repo,
             string sql,
             string title,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestView> views,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSqlConsoleEmbedRequestView> views,
             bool? @private = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

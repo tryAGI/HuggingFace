@@ -11,11 +11,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Float,
+        Base64,
         /// <summary>
         /// 
         /// </summary>
-        Base64,
+        Float,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace HuggingFace
         {
             return value switch
             {
-                EncodingFormat.Float => "float",
                 EncodingFormat.Base64 => "base64",
+                EncodingFormat.Float => "float",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace HuggingFace
         {
             return value switch
             {
-                "float" => EncodingFormat.Float,
                 "base64" => EncodingFormat.Base64,
+                "float" => EncodingFormat.Float,
                 _ => null,
             };
         }

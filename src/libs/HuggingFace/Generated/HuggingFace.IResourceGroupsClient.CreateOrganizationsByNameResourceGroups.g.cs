@@ -13,10 +13,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response10> CreateOrganizationsByNameResourceGroupsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsResponse> CreateOrganizationsByNameResourceGroupsAsync(
             string name,
 
-            global::HuggingFace.Request8 request,
+            global::HuggingFace.CreateOrganizationsResourceGroupsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a resource group<br/>
@@ -35,13 +35,13 @@ namespace HuggingFace
         /// <param name="autoJoin"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response10> CreateOrganizationsByNameResourceGroupsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsResponse> CreateOrganizationsByNameResourceGroupsAsync(
             string name,
             string requestName,
             string? description = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestUser>? users = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUser>? users = default,
             global::System.Collections.Generic.IList<global::HuggingFace.RepoId>? repos = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.RequestAutoJoinVariant1, global::HuggingFace.RequestAutoJoinVariant2>? autoJoin = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant2>? autoJoin = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

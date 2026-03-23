@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareCreateOauthDeviceArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.Request23 request);
+            global::HuggingFace.CreateOauthDeviceRequest request);
         partial void PrepareCreateOauthDeviceRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Request23 request);
+            global::HuggingFace.CreateOauthDeviceRequest request);
         partial void ProcessCreateOauthDeviceResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -27,9 +27,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response46> CreateOauthDeviceAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthDeviceResponse> CreateOauthDeviceAsync(
 
-            global::HuggingFace.Request23 request,
+            global::HuggingFace.CreateOauthDeviceRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -116,7 +116,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response46.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateOauthDeviceResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -147,7 +147,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response46.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateOauthDeviceResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -186,12 +186,12 @@ namespace HuggingFace
         /// <param name="scope"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response46> CreateOauthDeviceAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthDeviceResponse> CreateOauthDeviceAsync(
             string clientId,
             string? scope = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request23
+            var __request = new global::HuggingFace.CreateOauthDeviceRequest
             {
                 ClientId = clientId,
                 Scope = scope,

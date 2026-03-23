@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request75 request,
+            global::HuggingFace.CreateDatasetsUserAccessRequestGrantRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Grant access<br/>

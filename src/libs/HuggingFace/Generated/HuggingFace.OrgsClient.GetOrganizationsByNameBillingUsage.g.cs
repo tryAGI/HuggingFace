@@ -31,7 +31,7 @@ namespace HuggingFace
         /// <param name="periodId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response56> GetOrganizationsByNameBillingUsageAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageResponse> GetOrganizationsByNameBillingUsageAsync(
             string name,
             string? periodId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -117,7 +117,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response56.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetOrganizationsBillingUsageResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -148,7 +148,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response56.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetOrganizationsBillingUsageResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

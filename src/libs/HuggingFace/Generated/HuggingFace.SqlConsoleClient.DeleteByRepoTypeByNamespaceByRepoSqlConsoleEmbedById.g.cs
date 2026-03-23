@@ -7,14 +7,14 @@ namespace HuggingFace
     {
         partial void PrepareDeleteByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType26 repoType,
+            ref global::HuggingFace.DeleteSqlConsoleEmbedRepoType repoType,
             ref string @namespace,
             ref string repo,
             ref string id);
         partial void PrepareDeleteByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType26 repoType,
+            global::HuggingFace.DeleteSqlConsoleEmbedRepoType repoType,
             string @namespace,
             string repo,
             string id);
@@ -37,8 +37,8 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response126> DeleteByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync(
-            global::HuggingFace.RepoType26 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.DeleteSqlConsoleEmbedResponse> DeleteByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync(
+            global::HuggingFace.DeleteSqlConsoleEmbedRepoType repoType,
             string @namespace,
             string repo,
             string id,
@@ -126,7 +126,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response126.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.DeleteSqlConsoleEmbedResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -157,7 +157,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response126.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.DeleteSqlConsoleEmbedResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

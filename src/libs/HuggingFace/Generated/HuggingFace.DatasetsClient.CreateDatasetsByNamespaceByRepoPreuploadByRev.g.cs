@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string rev,
-            global::HuggingFace.Request37 request);
+            global::HuggingFace.CreateDatasetsPreuploadRequest request);
         partial void PrepareCreateDatasetsByNamespaceByRepoPreuploadByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
             string rev,
-            global::HuggingFace.Request37 request);
+            global::HuggingFace.CreateDatasetsPreuploadRequest request);
         partial void ProcessCreateDatasetsByNamespaceByRepoPreuploadByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -37,12 +37,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response77> CreateDatasetsByNamespaceByRepoPreuploadByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDatasetsPreuploadResponse> CreateDatasetsByNamespaceByRepoPreuploadByRevAsync(
             string @namespace,
             string repo,
             string rev,
 
-            global::HuggingFace.Request37 request,
+            global::HuggingFace.CreateDatasetsPreuploadRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -173,7 +173,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response77.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateDatasetsPreuploadResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -204,7 +204,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response77.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateDatasetsPreuploadResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -252,16 +252,16 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response77> CreateDatasetsByNamespaceByRepoPreuploadByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDatasetsPreuploadResponse> CreateDatasetsByNamespaceByRepoPreuploadByRevAsync(
             string @namespace,
             string repo,
             string rev,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestFile3> files,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPreuploadRequestFile> files,
             string? gitAttributes = default,
             string? gitIgnore = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request37
+            var __request = new global::HuggingFace.CreateDatasetsPreuploadRequest
             {
                 Files = files,
                 GitAttributes = gitAttributes,

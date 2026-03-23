@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request30 request,
+            global::HuggingFace.CreateDatasetsLfsFilesBatchRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete Large files<br/>
@@ -31,7 +31,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task CreateDatasetsByNamespaceByRepoLfsFilesBatchAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.RequestDeletions2 deletions,
+            global::HuggingFace.CreateDatasetsLfsFilesBatchRequestDeletions deletions,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

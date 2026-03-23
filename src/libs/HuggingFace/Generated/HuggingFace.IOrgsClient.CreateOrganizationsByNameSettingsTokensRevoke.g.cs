@@ -15,7 +15,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task CreateOrganizationsByNameSettingsTokensRevokeAsync(
             string name,
 
-            global::HuggingFace.Request7 request,
+            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Revoke a member's access token from the organization<br/>

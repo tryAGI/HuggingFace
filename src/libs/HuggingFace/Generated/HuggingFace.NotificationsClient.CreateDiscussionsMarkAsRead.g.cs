@@ -8,30 +8,30 @@ namespace HuggingFace
         partial void PrepareCreateDiscussionsMarkAsReadArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? p,
-            ref global::HuggingFace.ReadStatus3? readStatus,
-            ref global::HuggingFace.RepoType4? repoType,
+            ref global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus,
+            ref global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType,
             ref string? repoName,
             ref string? postAuthor,
             ref string? paperId,
             ref string? articleId,
-            ref global::HuggingFace.Mention3? mention,
+            ref global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention,
             ref global::System.DateTime? lastUpdate,
             object? applyToAll,
-            global::HuggingFace.Request28 request);
+            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request);
         partial void PrepareCreateDiscussionsMarkAsReadRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int? p,
-            global::HuggingFace.ReadStatus3? readStatus,
-            global::HuggingFace.RepoType4? repoType,
+            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus,
+            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType,
             string? repoName,
             string? postAuthor,
             string? paperId,
             string? articleId,
-            global::HuggingFace.Mention3? mention,
+            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention,
             global::System.DateTime? lastUpdate,
             object? applyToAll,
-            global::HuggingFace.Request28 request);
+            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request);
         partial void ProcessCreateDiscussionsMarkAsReadResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,15 +63,15 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
 
-            global::HuggingFace.Request28 request,
+            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request,
             int? p = default,
-            global::HuggingFace.ReadStatus3? readStatus = default,
-            global::HuggingFace.RepoType4? repoType = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention3? mention = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -277,20 +277,20 @@ namespace HuggingFace
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
             int? p = default,
-            global::HuggingFace.ReadStatus3? readStatus = default,
-            global::HuggingFace.RepoType4? repoType = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.Mention3? mention = default,
+            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,
             bool? read = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request28
+            var __request = new global::HuggingFace.CreateDiscussionsMarkAsReadRequest
             {
                 DiscussionIds = discussionIds,
                 Read = read,

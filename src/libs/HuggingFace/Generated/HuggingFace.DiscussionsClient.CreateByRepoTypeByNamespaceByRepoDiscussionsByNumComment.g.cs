@@ -7,19 +7,19 @@ namespace HuggingFace
     {
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.RepoType13 repoType,
+            ref global::HuggingFace.CreateDiscussionsCommentRepoType repoType,
             ref string @namespace,
             ref string repo,
             ref string num,
-            global::HuggingFace.Request52 request);
+            global::HuggingFace.CreateDiscussionsCommentRequest request);
         partial void PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.RepoType13 repoType,
+            global::HuggingFace.CreateDiscussionsCommentRepoType repoType,
             string @namespace,
             string repo,
             string num,
-            global::HuggingFace.Request52 request);
+            global::HuggingFace.CreateDiscussionsCommentRequest request);
         partial void ProcessCreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -39,13 +39,13 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response108> CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync(
-            global::HuggingFace.RepoType13 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDiscussionsCommentResponse> CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync(
+            global::HuggingFace.CreateDiscussionsCommentRepoType repoType,
             string @namespace,
             string repo,
             string num,
 
-            global::HuggingFace.Request52 request,
+            global::HuggingFace.CreateDiscussionsCommentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -140,7 +140,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response108.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateDiscussionsCommentResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -171,7 +171,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response108.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateDiscussionsCommentResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -213,15 +213,15 @@ namespace HuggingFace
         /// <param name="comment"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response108> CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync(
-            global::HuggingFace.RepoType13 repoType,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDiscussionsCommentResponse> CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync(
+            global::HuggingFace.CreateDiscussionsCommentRepoType repoType,
             string @namespace,
             string repo,
             string num,
             string comment,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request52
+            var __request = new global::HuggingFace.CreateDiscussionsCommentRequest
             {
                 Comment = comment,
             };

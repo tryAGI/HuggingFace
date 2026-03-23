@@ -13,11 +13,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response28> EditOrganizationsByNameScimV2GroupsByGroupIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimV2GroupsResponse> EditOrganizationsByNameScimV2GroupsByGroupIdAsync(
             string name,
             string groupId,
 
-            global::HuggingFace.Request15 request,
+            global::HuggingFace.PatchOrganizationsScimV2GroupsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update SCIM group<br/>
@@ -29,11 +29,11 @@ namespace HuggingFace
         /// <param name="operations"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response28> EditOrganizationsByNameScimV2GroupsByGroupIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimV2GroupsResponse> EditOrganizationsByNameScimV2GroupsByGroupIdAsync(
             string name,
             string groupId,
             global::System.Collections.Generic.IList<string> schemas,
-            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.RequestOperationVariant1, global::HuggingFace.RequestOperationVariant2>> operations,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant2>> operations,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

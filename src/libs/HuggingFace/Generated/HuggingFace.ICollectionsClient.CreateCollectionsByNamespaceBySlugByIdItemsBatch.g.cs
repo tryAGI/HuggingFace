@@ -19,7 +19,7 @@ namespace HuggingFace
             string slug,
             string id,
 
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestItem3> request,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem> request,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -12,7 +12,7 @@ namespace HuggingFace
         /// <param name="periodId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response56> GetOrganizationsByNameBillingUsageAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageResponse> GetOrganizationsByNameBillingUsageAsync(
             string name,
             string? periodId = default,
             global::System.Threading.CancellationToken cancellationToken = default);

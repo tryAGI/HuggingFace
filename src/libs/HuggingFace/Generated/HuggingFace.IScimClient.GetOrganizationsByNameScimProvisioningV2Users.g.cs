@@ -20,7 +20,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response30> GetOrganizationsByNameScimProvisioningV2UsersAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsScimProvisioningV2UsersResponse> GetOrganizationsByNameScimProvisioningV2UsersAsync(
             string name,
             double? startIndex = default,
             double? count = default,

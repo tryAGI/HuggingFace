@@ -17,7 +17,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem4>> GetOrganizationsByNameMembersAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsMembersResponseItem>> GetOrganizationsByNameMembersAsync(
             string name,
             string? search = default,
             string? email = default,

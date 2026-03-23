@@ -27,7 +27,7 @@ namespace HuggingFace
         /// <param name="username"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response59> GetUsersByUsernameOverviewAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetUsersOverviewResponse> GetUsersByUsernameOverviewAsync(
             string username,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -107,7 +107,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response59.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetUsersOverviewResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -138,7 +138,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response59.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetUsersOverviewResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

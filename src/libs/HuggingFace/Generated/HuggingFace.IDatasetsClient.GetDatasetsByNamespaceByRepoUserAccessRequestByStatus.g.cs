@@ -18,10 +18,10 @@ namespace HuggingFace
         /// <param name="before"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem26>> GetDatasetsByNamespaceByRepoUserAccessRequestByStatusAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsUserAccessRequestResponseItem>> GetDatasetsByNamespaceByRepoUserAccessRequestByStatusAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.Status3 status,
+            global::HuggingFace.GetDatasetsUserAccessRequestStatus status,
             int? limit = default,
             global::System.DateTime? after = default,
             global::System.DateTime? before = default,

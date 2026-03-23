@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <param name="excludedAttributes"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response41> GetOrganizationsByNameScimProvisioningV2GroupsByGroupIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsScimProvisioningV2GroupsResponse2> GetOrganizationsByNameScimProvisioningV2GroupsByGroupIdAsync(
             string name,
             string groupId,
             string? excludedAttributes = default,

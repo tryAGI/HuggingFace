@@ -13,11 +13,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response27> PutOrganizationsByNameScimV2GroupsByGroupIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PutOrganizationsScimV2GroupsResponse> PutOrganizationsByNameScimV2GroupsByGroupIdAsync(
             string name,
             string groupId,
 
-            global::HuggingFace.Request14 request,
+            global::HuggingFace.PutOrganizationsScimV2GroupsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update a SCIM group<br/>
@@ -31,12 +31,12 @@ namespace HuggingFace
         /// <param name="members"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response27> PutOrganizationsByNameScimV2GroupsByGroupIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PutOrganizationsScimV2GroupsResponse> PutOrganizationsByNameScimV2GroupsByGroupIdAsync(
             string name,
             string groupId,
             global::System.Collections.Generic.IList<string> schemas,
             string displayName,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestMember2> members,
+            global::System.Collections.Generic.IList<global::HuggingFace.PutOrganizationsScimV2GroupsRequestMember> members,
             string? externalId = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

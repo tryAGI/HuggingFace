@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareGetDatasetsTagsByTypeArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.Type4? type);
+            ref global::HuggingFace.GetDatasetsTagsByTypeType? type);
         partial void PrepareGetDatasetsTagsByTypeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Type4? type);
+            global::HuggingFace.GetDatasetsTagsByTypeType? type);
         partial void ProcessGetDatasetsTagsByTypeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -28,8 +28,8 @@ namespace HuggingFace
         /// <param name="type"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem23>>> GetDatasetsTagsByTypeAsync(
-            global::HuggingFace.Type4? type = default,
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>>> GetDatasetsTagsByTypeAsync(
+            global::HuggingFace.GetDatasetsTagsByTypeType? type = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -111,7 +111,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem23>>), JsonSerializerContext) as global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem23>> ??
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>>), JsonSerializerContext) as global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>> ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -142,7 +142,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem23>>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem23>> ??
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>> ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

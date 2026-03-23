@@ -17,7 +17,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request72 request,
+            global::HuggingFace.CreateModelsUserAccessRequestHandleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Handle access request<br/>
@@ -38,7 +38,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task CreateModelsByNamespaceByRepoUserAccessRequestHandleAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.RequestStatus2 status,
+            global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus status,
             string? userId = default,
             string? user = default,
             string? rejectionReason = default,

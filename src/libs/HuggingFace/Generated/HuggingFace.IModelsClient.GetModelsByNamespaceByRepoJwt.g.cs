@@ -18,7 +18,7 @@ namespace HuggingFace
         /// <param name="billingDetails"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response114> GetModelsByNamespaceByRepoJwtAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetModelsJwtResponse> GetModelsByNamespaceByRepoJwtAsync(
             string @namespace,
             string repo,
             object? write = default,

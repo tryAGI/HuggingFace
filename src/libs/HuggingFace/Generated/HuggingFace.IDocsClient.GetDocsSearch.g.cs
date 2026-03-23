@@ -15,9 +15,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem8>> GetDocsSearchAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDocsSearchResponseItem>> GetDocsSearchAsync(
             string q,
-            global::HuggingFace.Product? product = default,
+            global::HuggingFace.GetDocsSearchProduct? product = default,
             int? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

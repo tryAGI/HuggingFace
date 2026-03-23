@@ -13,11 +13,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response97> PutDatasetsByNamespaceByRepoSettingsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PutDatasetsSettingsResponse> PutDatasetsByNamespaceByRepoSettingsAsync(
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request50 request,
+            global::HuggingFace.PutDatasetsSettingsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update repo settings<br/>
@@ -36,16 +36,16 @@ namespace HuggingFace
         /// <param name="gatedNotificationsMode"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response97> PutDatasetsByNamespaceByRepoSettingsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PutDatasetsSettingsResponse> PutDatasetsByNamespaceByRepoSettingsAsync(
             string @namespace,
             string repo,
             bool? @private = default,
-            global::HuggingFace.RequestVisibility3? visibility = default,
+            global::HuggingFace.PutDatasetsSettingsRequestVisibility? visibility = default,
             bool? discussionsDisabled = default,
-            global::HuggingFace.RequestDiscussionsSorting3? discussionsSorting = default,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatedEnum6?>? gated = default,
+            global::HuggingFace.PutDatasetsSettingsRequestDiscussionsSorting? discussionsSorting = default,
+            global::HuggingFace.AnyOf<string, global::HuggingFace.PutDatasetsSettingsRequestGatedEnum2?>? gated = default,
             string? gatedNotificationsEmail = default,
-            global::HuggingFace.RequestGatedNotificationsMode3? gatedNotificationsMode = default,
+            global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode? gatedNotificationsMode = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

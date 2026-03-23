@@ -11,10 +11,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response49> CreateBlogBySlugCommentAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentResponse> CreateBlogBySlugCommentAsync(
             string slug,
 
-            global::HuggingFace.Request24 request,
+            global::HuggingFace.CreateBlogCommentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a new comment
@@ -23,7 +23,7 @@ namespace HuggingFace
         /// <param name="comment"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response49> CreateBlogBySlugCommentAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentResponse> CreateBlogBySlugCommentAsync(
             string slug,
             string comment,
             global::System.Threading.CancellationToken cancellationToken = default);

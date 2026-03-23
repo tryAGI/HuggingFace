@@ -11,19 +11,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Completed,
-        /// <summary>
-        /// 
-        /// </summary>
         Canceled,
         /// <summary>
         /// 
         /// </summary>
-        Error,
+        Completed,
         /// <summary>
         /// 
         /// </summary>
         Deleted,
+        /// <summary>
+        /// 
+        /// </summary>
+        Error,
         /// <summary>
         /// 
         /// </summary>
@@ -42,10 +42,10 @@ namespace HuggingFace
         {
             return value switch
             {
-                JobStatusStage.Completed => "COMPLETED",
                 JobStatusStage.Canceled => "CANCELED",
-                JobStatusStage.Error => "ERROR",
+                JobStatusStage.Completed => "COMPLETED",
                 JobStatusStage.Deleted => "DELETED",
+                JobStatusStage.Error => "ERROR",
                 JobStatusStage.Running => "RUNNING",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -57,10 +57,10 @@ namespace HuggingFace
         {
             return value switch
             {
-                "COMPLETED" => JobStatusStage.Completed,
                 "CANCELED" => JobStatusStage.Canceled,
-                "ERROR" => JobStatusStage.Error,
+                "COMPLETED" => JobStatusStage.Completed,
                 "DELETED" => JobStatusStage.Deleted,
+                "ERROR" => JobStatusStage.Error,
                 "RUNNING" => JobStatusStage.Running,
                 _ => null,
             };

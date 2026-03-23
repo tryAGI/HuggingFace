@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request31 request);
+            global::HuggingFace.CreateSpacesLfsFilesBatchRequest request);
         partial void PrepareCreateSpacesByNamespaceByRepoLfsFilesBatchRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.Request31 request);
+            global::HuggingFace.CreateSpacesLfsFilesBatchRequest request);
         partial void ProcessCreateSpacesByNamespaceByRepoLfsFilesBatchResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request31 request,
+            global::HuggingFace.CreateSpacesLfsFilesBatchRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -189,10 +189,10 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task CreateSpacesByNamespaceByRepoLfsFilesBatchAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.RequestDeletions3 deletions,
+            global::HuggingFace.CreateSpacesLfsFilesBatchRequestDeletions deletions,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request31
+            var __request = new global::HuggingFace.CreateSpacesLfsFilesBatchRequest
             {
                 Deletions = deletions,
             };

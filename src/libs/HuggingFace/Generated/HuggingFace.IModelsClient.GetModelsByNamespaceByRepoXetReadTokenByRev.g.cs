@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <param name="rev"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response83> GetModelsByNamespaceByRepoXetReadTokenByRevAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetModelsXetReadTokenResponse> GetModelsByNamespaceByRepoXetReadTokenByRevAsync(
             string @namespace,
             string repo,
             string rev,

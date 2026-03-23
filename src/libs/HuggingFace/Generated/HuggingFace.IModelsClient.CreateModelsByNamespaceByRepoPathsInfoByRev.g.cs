@@ -13,12 +13,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem15>> CreateModelsByNamespaceByRepoPathsInfoByRevAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.CreateModelsPathsInfoResponseItem>> CreateModelsByNamespaceByRepoPathsInfoByRevAsync(
             string @namespace,
             string repo,
             string rev,
 
-            global::HuggingFace.Request32 request,
+            global::HuggingFace.CreateModelsPathsInfoRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// List paths info
@@ -32,7 +32,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem15>> CreateModelsByNamespaceByRepoPathsInfoByRevAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.CreateModelsPathsInfoResponseItem>> CreateModelsByNamespaceByRepoPathsInfoByRevAsync(
             string @namespace,
             string repo,
             string rev,

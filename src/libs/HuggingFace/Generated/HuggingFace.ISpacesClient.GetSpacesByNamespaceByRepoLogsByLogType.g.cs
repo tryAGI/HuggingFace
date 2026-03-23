@@ -16,7 +16,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task GetSpacesByNamespaceByRepoLogsByLogTypeAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.LogType logType,
+            global::HuggingFace.GetSpacesLogsLogType logType,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -8,13 +8,13 @@ namespace HuggingFace
         partial void PrepareGetDocsSearchArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string q,
-            ref global::HuggingFace.Product? product,
+            ref global::HuggingFace.GetDocsSearchProduct? product,
             ref int? limit);
         partial void PrepareGetDocsSearchRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string q,
-            global::HuggingFace.Product? product,
+            global::HuggingFace.GetDocsSearchProduct? product,
             int? limit);
         partial void ProcessGetDocsSearchResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -36,9 +36,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem8>> GetDocsSearchAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDocsSearchResponseItem>> GetDocsSearchAsync(
             string q,
-            global::HuggingFace.Product? product = default,
+            global::HuggingFace.GetDocsSearchProduct? product = default,
             int? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -127,7 +127,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem8>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem8> ??
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDocsSearchResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::HuggingFace.GetDocsSearchResponseItem> ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -158,7 +158,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem8>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem8> ??
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDocsSearchResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::HuggingFace.GetDocsSearchResponseItem> ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

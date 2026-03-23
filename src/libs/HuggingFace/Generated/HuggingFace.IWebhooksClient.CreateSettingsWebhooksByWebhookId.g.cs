@@ -11,10 +11,10 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response5> CreateSettingsWebhooksByWebhookIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse2> CreateSettingsWebhooksByWebhookIdAsync(
             string webhookId,
 
-            global::HuggingFace.Request5 request,
+            global::HuggingFace.CreateSettingsWebhooksRequest2 request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update webhook
@@ -28,12 +28,12 @@ namespace HuggingFace
         /// <param name="secret"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response5> CreateSettingsWebhooksByWebhookIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse2> CreateSettingsWebhooksByWebhookIdAsync(
             string webhookId,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestWatchedItem2> watched,
-            global::System.Collections.Generic.IList<global::HuggingFace.RequestDomain2> domains,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem2> watched,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain2> domains,
             string? url = default,
-            global::HuggingFace.RequestJob2? job = default,
+            global::HuggingFace.CreateSettingsWebhooksRequestJob2? job = default,
             string? jobSourceId = default,
             string? secret = default,
             global::System.Threading.CancellationToken cancellationToken = default);

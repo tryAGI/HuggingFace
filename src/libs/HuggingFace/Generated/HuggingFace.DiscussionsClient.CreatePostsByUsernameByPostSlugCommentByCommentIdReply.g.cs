@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string username,
             ref string postSlug,
             ref string commentId,
-            global::HuggingFace.Request81 request);
+            global::HuggingFace.CreatePostsCommentReplyRequest request);
         partial void PrepareCreatePostsByUsernameByPostSlugCommentByCommentIdReplyRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string username,
             string postSlug,
             string commentId,
-            global::HuggingFace.Request81 request);
+            global::HuggingFace.CreatePostsCommentReplyRequest request);
         partial void ProcessCreatePostsByUsernameByPostSlugCommentByCommentIdReplyResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,12 +36,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response159> CreatePostsByUsernameByPostSlugCommentByCommentIdReplyAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePostsCommentReplyResponse> CreatePostsByUsernameByPostSlugCommentByCommentIdReplyAsync(
             string username,
             string postSlug,
             string commentId,
 
-            global::HuggingFace.Request81 request,
+            global::HuggingFace.CreatePostsCommentReplyRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -134,7 +134,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response159.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreatePostsCommentReplyResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -165,7 +165,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response159.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreatePostsCommentReplyResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -206,14 +206,14 @@ namespace HuggingFace
         /// <param name="comment"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response159> CreatePostsByUsernameByPostSlugCommentByCommentIdReplyAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreatePostsCommentReplyResponse> CreatePostsByUsernameByPostSlugCommentByCommentIdReplyAsync(
             string username,
             string postSlug,
             string commentId,
             string comment,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request81
+            var __request = new global::HuggingFace.CreatePostsCommentReplyRequest
             {
                 Comment = comment,
             };

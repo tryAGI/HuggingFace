@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request58 request);
+            global::HuggingFace.CreateSpacesSecretsRequest request);
         partial void PrepareCreateSpacesByNamespaceByRepoSecretsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.Request58 request);
+            global::HuggingFace.CreateSpacesSecretsRequest request);
         partial void ProcessCreateSpacesByNamespaceByRepoSecretsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request58 request,
+            global::HuggingFace.CreateSpacesSecretsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -196,7 +196,7 @@ namespace HuggingFace
             string? value = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request58
+            var __request = new global::HuggingFace.CreateSpacesSecretsRequest
             {
                 Key = key,
                 Description = description,

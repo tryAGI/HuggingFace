@@ -18,7 +18,7 @@ namespace HuggingFace
             string repo,
             string rev,
 
-            global::HuggingFace.Request39 request,
+            global::HuggingFace.CreateSpacesTagRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create tag

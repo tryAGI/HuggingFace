@@ -17,7 +17,7 @@ namespace HuggingFace
         /// <param name="xet"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.ResponseItem9>> GetModelsByNamespaceByRepoLfsFilesAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>> GetModelsByNamespaceByRepoLfsFilesAsync(
             string @namespace,
             string repo,
             string? cursor = default,

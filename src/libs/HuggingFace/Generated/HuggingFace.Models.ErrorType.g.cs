@@ -11,11 +11,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Unhealthy,
+        Backend,
         /// <summary>
         /// 
         /// </summary>
-        Backend,
+        Empty,
         /// <summary>
         /// 
         /// </summary>
@@ -23,15 +23,15 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Validation,
-        /// <summary>
-        /// 
-        /// </summary>
         Tokenizer,
         /// <summary>
         /// 
         /// </summary>
-        Empty,
+        Unhealthy,
+        /// <summary>
+        /// 
+        /// </summary>
+        Validation,
     }
 
     /// <summary>
@@ -46,12 +46,12 @@ namespace HuggingFace
         {
             return value switch
             {
-                ErrorType.Unhealthy => "Unhealthy",
                 ErrorType.Backend => "Backend",
-                ErrorType.Overloaded => "Overloaded",
-                ErrorType.Validation => "Validation",
-                ErrorType.Tokenizer => "Tokenizer",
                 ErrorType.Empty => "Empty",
+                ErrorType.Overloaded => "Overloaded",
+                ErrorType.Tokenizer => "Tokenizer",
+                ErrorType.Unhealthy => "Unhealthy",
+                ErrorType.Validation => "Validation",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -62,12 +62,12 @@ namespace HuggingFace
         {
             return value switch
             {
-                "Unhealthy" => ErrorType.Unhealthy,
                 "Backend" => ErrorType.Backend,
-                "Overloaded" => ErrorType.Overloaded,
-                "Validation" => ErrorType.Validation,
-                "Tokenizer" => ErrorType.Tokenizer,
                 "Empty" => ErrorType.Empty,
+                "Overloaded" => ErrorType.Overloaded,
+                "Tokenizer" => ErrorType.Tokenizer,
+                "Unhealthy" => ErrorType.Unhealthy,
+                "Validation" => ErrorType.Validation,
                 _ => null,
             };
         }

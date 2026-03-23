@@ -7,11 +7,11 @@ namespace HuggingFace
     {
         partial void PrepareCreateOauthRegisterArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.Request22 request);
+            global::HuggingFace.CreateOauthRegisterRequest request);
         partial void PrepareCreateOauthRegisterRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.Request22 request);
+            global::HuggingFace.CreateOauthRegisterRequest request);
         partial void ProcessCreateOauthRegisterResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -27,9 +27,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response45> CreateOauthRegisterAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthRegisterResponse> CreateOauthRegisterAsync(
 
-            global::HuggingFace.Request22 request,
+            global::HuggingFace.CreateOauthRegisterRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -116,7 +116,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response45.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateOauthRegisterResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -147,7 +147,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response45.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateOauthRegisterResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -193,19 +193,19 @@ namespace HuggingFace
         /// <param name="softwareVersion"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response45> CreateOauthRegisterAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOauthRegisterResponse> CreateOauthRegisterAsync(
             global::System.Collections.Generic.IList<string>? redirectUris = default,
             string? clientName = default,
             string? clientUri = default,
             string? logoUri = default,
             string? scope = default,
             global::System.Collections.Generic.IList<string>? contacts = default,
-            global::HuggingFace.RequestTokenEndpointAuthMethod? tokenEndpointAuthMethod = default,
+            global::HuggingFace.CreateOauthRegisterRequestTokenEndpointAuthMethod? tokenEndpointAuthMethod = default,
             string? softwareId = default,
             string? softwareVersion = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request22
+            var __request = new global::HuggingFace.CreateOauthRegisterRequest
             {
                 RedirectUris = redirectUris,
                 ClientName = clientName,

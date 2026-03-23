@@ -13,8 +13,8 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response82> GetByRepoTypeByNamespaceByRepoXetWriteTokenAsync(
-            global::HuggingFace.RepoType5 repoType,
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetXetWriteTokenResponse> GetByRepoTypeByNamespaceByRepoXetWriteTokenAsync(
+            global::HuggingFace.GetXetWriteTokenRepoType repoType,
             string @namespace,
             string repo,
             global::System.Threading.CancellationToken cancellationToken = default);

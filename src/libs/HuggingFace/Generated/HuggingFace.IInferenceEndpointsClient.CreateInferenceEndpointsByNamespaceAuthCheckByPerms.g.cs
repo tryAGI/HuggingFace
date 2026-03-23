@@ -18,9 +18,9 @@ namespace HuggingFace
         /// <param name="repoId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response63> CreateInferenceEndpointsByNamespaceAuthCheckByPermsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse> CreateInferenceEndpointsByNamespaceAuthCheckByPermsAsync(
             string @namespace,
-            global::HuggingFace.Perms perms,
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms perms,
             object? own = default,
             object? isCreator = default,
             string? creatorId = default,

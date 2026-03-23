@@ -10,14 +10,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string rev,
-            global::HuggingFace.Request42 request);
+            global::HuggingFace.CreateSpacesBranchRequest request);
         partial void PrepareCreateSpacesByNamespaceByRepoBranchByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
             string rev,
-            global::HuggingFace.Request42 request);
+            global::HuggingFace.CreateSpacesBranchRequest request);
         partial void ProcessCreateSpacesByNamespaceByRepoBranchByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,7 +36,7 @@ namespace HuggingFace
             string repo,
             string rev,
 
-            global::HuggingFace.Request42 request,
+            global::HuggingFace.CreateSpacesBranchRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -210,7 +210,7 @@ namespace HuggingFace
             bool? overwrite = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request42
+            var __request = new global::HuggingFace.CreateSpacesBranchRequest
             {
                 StartingPoint = startingPoint,
                 EmptyBranch = emptyBranch,

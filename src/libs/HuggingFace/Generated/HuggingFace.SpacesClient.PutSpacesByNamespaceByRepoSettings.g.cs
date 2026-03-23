@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.Request49 request);
+            global::HuggingFace.PutSpacesSettingsRequest request);
         partial void PreparePutSpacesByNamespaceByRepoSettingsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.Request49 request);
+            global::HuggingFace.PutSpacesSettingsRequest request);
         partial void ProcessPutSpacesByNamespaceByRepoSettingsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -34,11 +34,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response96> PutSpacesByNamespaceByRepoSettingsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.PutSpacesSettingsResponse> PutSpacesByNamespaceByRepoSettingsAsync(
             string @namespace,
             string repo,
 
-            global::HuggingFace.Request49 request,
+            global::HuggingFace.PutSpacesSettingsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -129,7 +129,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response96.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.PutSpacesSettingsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -160,7 +160,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response96.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.PutSpacesSettingsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -209,19 +209,19 @@ namespace HuggingFace
         /// <param name="gatedNotificationsMode"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response96> PutSpacesByNamespaceByRepoSettingsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.PutSpacesSettingsResponse> PutSpacesByNamespaceByRepoSettingsAsync(
             string @namespace,
             string repo,
             bool? @private = default,
-            global::HuggingFace.RequestVisibility2? visibility = default,
+            global::HuggingFace.PutSpacesSettingsRequestVisibility? visibility = default,
             bool? discussionsDisabled = default,
-            global::HuggingFace.RequestDiscussionsSorting2? discussionsSorting = default,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatedEnum4?>? gated = default,
+            global::HuggingFace.PutSpacesSettingsRequestDiscussionsSorting? discussionsSorting = default,
+            global::HuggingFace.AnyOf<string, global::HuggingFace.PutSpacesSettingsRequestGatedEnum2?>? gated = default,
             string? gatedNotificationsEmail = default,
-            global::HuggingFace.RequestGatedNotificationsMode2? gatedNotificationsMode = default,
+            global::HuggingFace.PutSpacesSettingsRequestGatedNotificationsMode? gatedNotificationsMode = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request49
+            var __request = new global::HuggingFace.PutSpacesSettingsRequest
             {
                 Private = @private,
                 Visibility = visibility,

@@ -16,7 +16,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response68> GetSpacesByNamespaceByRepoTreesizeByRevByPathAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetSpacesTreesizeResponse> GetSpacesByNamespaceByRepoTreesizeByRevByPathAsync(
             string @namespace,
             string repo,
             string rev,

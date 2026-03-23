@@ -13,12 +13,12 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response161> EditCollectionsByNamespaceBySlugByIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchCollectionsResponse> EditCollectionsByNamespaceBySlugByIdAsync(
             string @namespace,
             string slug,
             string id,
 
-            global::HuggingFace.Request82 request,
+            global::HuggingFace.PatchCollectionsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update a collection
@@ -34,16 +34,16 @@ namespace HuggingFace
         /// <param name="gating"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response161> EditCollectionsByNamespaceBySlugByIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.PatchCollectionsResponse> EditCollectionsByNamespaceBySlugByIdAsync(
             string @namespace,
             string slug,
             string id,
             int? position = default,
             bool? @private = default,
-            global::HuggingFace.RequestTheme? theme = default,
+            global::HuggingFace.PatchCollectionsRequestTheme? theme = default,
             string? title = default,
             string? description = default,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.RequestGatingVariant2, global::HuggingFace.RequestGatingVariant3>? gating = default,
+            global::HuggingFace.AnyOf<string, global::HuggingFace.PatchCollectionsRequestGatingVariant2, global::HuggingFace.PatchCollectionsRequestGatingVariant3>? gating = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

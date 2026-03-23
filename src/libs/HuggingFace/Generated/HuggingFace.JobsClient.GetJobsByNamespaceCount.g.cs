@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareGetJobsByNamespaceCountArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
-            ref global::HuggingFace.Stage? stage);
+            ref global::HuggingFace.GetJobsCountStage? stage);
         partial void PrepareGetJobsByNamespaceCountRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
-            global::HuggingFace.Stage? stage);
+            global::HuggingFace.GetJobsCountStage? stage);
         partial void ProcessGetJobsByNamespaceCountResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -31,9 +31,9 @@ namespace HuggingFace
         /// <param name="stage"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response170> GetJobsByNamespaceCountAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetJobsCountResponse> GetJobsByNamespaceCountAsync(
             string @namespace,
-            global::HuggingFace.Stage? stage = default,
+            global::HuggingFace.GetJobsCountStage? stage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -117,7 +117,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response170.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetJobsCountResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -148,7 +148,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response170.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetJobsCountResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

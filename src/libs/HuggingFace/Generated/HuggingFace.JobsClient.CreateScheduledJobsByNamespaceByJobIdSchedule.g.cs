@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string jobId,
-            global::HuggingFace.Request89 request);
+            global::HuggingFace.CreateScheduledJobsScheduleRequest request);
         partial void PrepareCreateScheduledJobsByNamespaceByJobIdScheduleRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string jobId,
-            global::HuggingFace.Request89 request);
+            global::HuggingFace.CreateScheduledJobsScheduleRequest request);
         partial void ProcessCreateScheduledJobsByNamespaceByJobIdScheduleResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,11 +33,11 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response178> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateScheduledJobsScheduleResponse> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
             string @namespace,
             string jobId,
 
-            global::HuggingFace.Request89 request,
+            global::HuggingFace.CreateScheduledJobsScheduleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -128,7 +128,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.Response178.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.CreateScheduledJobsScheduleResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -159,7 +159,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.Response178.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateScheduledJobsScheduleResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -201,13 +201,13 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.Response178> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateScheduledJobsScheduleResponse> CreateScheduledJobsByNamespaceByJobIdScheduleAsync(
             string @namespace,
             string jobId,
             string schedule,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.Request89
+            var __request = new global::HuggingFace.CreateScheduledJobsScheduleRequest
             {
                 Schedule = schedule,
             };

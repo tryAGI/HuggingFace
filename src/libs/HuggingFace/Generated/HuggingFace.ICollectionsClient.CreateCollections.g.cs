@@ -10,9 +10,9 @@ namespace HuggingFace
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response166> CreateCollectionsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResponse> CreateCollectionsAsync(
 
-            global::HuggingFace.Request86 request,
+            global::HuggingFace.CreateCollectionsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a collection
@@ -26,11 +26,11 @@ namespace HuggingFace
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.Response166> CreateCollectionsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResponse> CreateCollectionsAsync(
             string title,
             string @namespace,
             string? description = default,
-            global::HuggingFace.RequestItem5? item = default,
+            global::HuggingFace.CreateCollectionsRequestItem? item = default,
             bool? @private = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
