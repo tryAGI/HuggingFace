@@ -24,6 +24,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         TokenPolicy,
+        /// <summary>
+        /// 
+        /// </summary>
+        TokenRevoked,
     }
 
     /// <summary>
@@ -42,6 +46,7 @@ namespace HuggingFace
                 CreateOauthUserinfoResponseOrgSecurityRestriction.Mfa => "mfa",
                 CreateOauthUserinfoResponseOrgSecurityRestriction.Sso => "sso",
                 CreateOauthUserinfoResponseOrgSecurityRestriction.TokenPolicy => "token-policy",
+                CreateOauthUserinfoResponseOrgSecurityRestriction.TokenRevoked => "token-revoked",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -56,6 +61,7 @@ namespace HuggingFace
                 "mfa" => CreateOauthUserinfoResponseOrgSecurityRestriction.Mfa,
                 "sso" => CreateOauthUserinfoResponseOrgSecurityRestriction.Sso,
                 "token-policy" => CreateOauthUserinfoResponseOrgSecurityRestriction.TokenPolicy,
+                "token-revoked" => CreateOauthUserinfoResponseOrgSecurityRestriction.TokenRevoked,
                 _ => null,
             };
         }
