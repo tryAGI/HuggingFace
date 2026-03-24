@@ -11,6 +11,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Bucket,
+        /// <summary>
+        /// 
+        /// </summary>
         Collection,
         /// <summary>
         /// 
@@ -42,6 +46,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                CreateCollectionsRequestItemType.Bucket => "bucket",
                 CreateCollectionsRequestItemType.Collection => "collection",
                 CreateCollectionsRequestItemType.Dataset => "dataset",
                 CreateCollectionsRequestItemType.Model => "model",
@@ -57,6 +62,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                "bucket" => CreateCollectionsRequestItemType.Bucket,
                 "collection" => CreateCollectionsRequestItemType.Collection,
                 "dataset" => CreateCollectionsRequestItemType.Dataset,
                 "model" => CreateCollectionsRequestItemType.Model,

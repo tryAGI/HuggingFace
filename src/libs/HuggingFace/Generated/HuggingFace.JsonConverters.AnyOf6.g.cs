@@ -3,10 +3,10 @@
 namespace HuggingFace.JsonConverters
 {
     /// <inheritdoc />
-    public class AnyOfJsonConverter<T1, T2, T3, T4, T5> : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.AnyOf<T1, T2, T3, T4, T5>>
+    public class AnyOfJsonConverter<T1, T2, T3, T4, T5, T6> : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.AnyOf<T1, T2, T3, T4, T5, T6>>
     {
         /// <inheritdoc />
-        public override global::HuggingFace.AnyOf<T1, T2, T3, T4, T5> Read(
+        public override global::HuggingFace.AnyOf<T1, T2, T3, T4, T5, T6> Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -81,6 +81,17 @@ namespace HuggingFace.JsonConverters
                     }
                 }
             }
+            var __score5 = 0;
+            {
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(T6), options);
+                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
+                {
+                    foreach (var __prop in __ti.Properties)
+                    {
+                        if (__jsonProps.Contains(__prop.Name)) __score5++;
+                    }
+                }
+            }
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
@@ -88,12 +99,14 @@ namespace HuggingFace.JsonConverters
             if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
             if (__score3 > __bestScore) { __bestScore = __score3; __bestIndex = 3; }
             if (__score4 > __bestScore) { __bestScore = __score4; __bestIndex = 4; }
+            if (__score5 > __bestScore) { __bestScore = __score5; __bestIndex = 5; }
 
             T1? value1 = default;
             T2? value2 = default;
             T3? value3 = default;
             T4? value4 = default;
             T5? value5 = default;
+            T6? value6 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -180,9 +193,26 @@ namespace HuggingFace.JsonConverters
                     {
                     }
                 }
+
+                else if (__bestIndex == 5)
+                {
+                    try
+                    {
+
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T6), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T6> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T6).Name}");
+                        value6 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
             }
 
-            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null)
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null)
             {
                 try
                 {
@@ -253,9 +283,23 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T6), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T6> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T6).Name}");
+                    value6 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
             }
 
-            var __value = new global::HuggingFace.AnyOf<T1, T2, T3, T4, T5>(
+            var __value = new global::HuggingFace.AnyOf<T1, T2, T3, T4, T5, T6>(
                 value1,
 
                 value2,
@@ -264,7 +308,9 @@ namespace HuggingFace.JsonConverters
 
                 value4,
 
-                value5
+                value5,
+
+                value6
                 );
 
             return __value;
@@ -273,7 +319,7 @@ namespace HuggingFace.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::HuggingFace.AnyOf<T1, T2, T3, T4, T5> value,
+            global::HuggingFace.AnyOf<T1, T2, T3, T4, T5, T6> value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
@@ -308,6 +354,12 @@ namespace HuggingFace.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T5), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T5?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T5).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value5, typeInfo);
+            }
+            else if (value.IsValue6)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(T6), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<T6?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(T6).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value6, typeInfo);
             }
         }
     }

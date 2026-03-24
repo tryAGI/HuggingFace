@@ -101,7 +101,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.CreateCollectionsItemsResponseItem, global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3, global::HuggingFace.CreateCollectionsItemsResponseItemVariant4, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5>?>> Items { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.CreateCollectionsItemsResponseItem, global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3, global::HuggingFace.CreateCollectionsItemsResponseItemVariant4, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5, global::HuggingFace.CreateCollectionsItemsResponseItemVariant6>?>> Items { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -140,7 +140,7 @@ namespace HuggingFace
             double upvotes,
             string shareUrl,
             bool isUpvotedByUser,
-            global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.CreateCollectionsItemsResponseItem, global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3, global::HuggingFace.CreateCollectionsItemsResponseItemVariant4, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5>?>> items,
+            global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.CreateCollectionsItemsResponseItem, global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3, global::HuggingFace.CreateCollectionsItemsResponseItemVariant4, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5, global::HuggingFace.CreateCollectionsItemsResponseItemVariant6>?>> items,
             string? description)
         {
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
