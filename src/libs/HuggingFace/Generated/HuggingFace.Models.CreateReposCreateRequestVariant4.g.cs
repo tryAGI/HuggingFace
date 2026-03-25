@@ -37,12 +37,6 @@ namespace HuggingFace
         public global::HuggingFace.CreateReposCreateRequestVariant4Hardware? Hardware { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("storageTier")]
-        public global::HuggingFace.CreateReposCreateRequestVariant4StorageTier2? StorageTier { get; set; }
-
-        /// <summary>
         /// Default Value: []
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
@@ -96,7 +90,6 @@ namespace HuggingFace
         /// <param name="hardware">
         /// The hardware flavor of the space. If you select 'zero-a10g' or 'zerogpu', the SDK must be Gradio.
         /// </param>
-        /// <param name="storageTier"></param>
         /// <param name="secrets">
         /// Default Value: []
         /// </param>
@@ -115,7 +108,6 @@ namespace HuggingFace
             string? template,
             string? shortDescription,
             global::HuggingFace.CreateReposCreateRequestVariant4Hardware? hardware,
-            global::HuggingFace.CreateReposCreateRequestVariant4StorageTier2? storageTier,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Secret>? secrets,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Variable>? variables,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds,
@@ -128,7 +120,6 @@ namespace HuggingFace
             this.Template = template;
             this.ShortDescription = shortDescription;
             this.Hardware = hardware;
-            this.StorageTier = storageTier;
             this.Secrets = secrets;
             this.Variables = variables;
             this.SleepTimeSeconds = sleepTimeSeconds;

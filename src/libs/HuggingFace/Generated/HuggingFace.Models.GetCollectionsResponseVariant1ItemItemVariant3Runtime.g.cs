@@ -26,12 +26,6 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("storage")]
-        public global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeStorage2? Storage { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("errorMessage")]
         public string? ErrorMessage { get; set; }
 
@@ -73,6 +67,12 @@ namespace HuggingFace
         public global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeHotReloading? HotReloading { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeVolume>? Volumes { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -83,7 +83,6 @@ namespace HuggingFace
         /// </summary>
         /// <param name="stage"></param>
         /// <param name="hardware"></param>
-        /// <param name="storage"></param>
         /// <param name="errorMessage"></param>
         /// <param name="gcTimeout"></param>
         /// <param name="replicas"></param>
@@ -91,6 +90,7 @@ namespace HuggingFace
         /// <param name="domains"></param>
         /// <param name="sha"></param>
         /// <param name="hotReloading"></param>
+        /// <param name="volumes"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -98,24 +98,24 @@ namespace HuggingFace
             global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeStage stage,
             global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeHardware hardware,
             global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeReplicas replicas,
-            global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeStorage2? storage,
             string? errorMessage,
             double? gcTimeout,
             bool? devMode,
             global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeDomain>? domains,
             string? sha,
-            global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeHotReloading? hotReloading)
+            global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeHotReloading? hotReloading,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3RuntimeVolume>? volumes)
         {
             this.Stage = stage;
             this.Hardware = hardware ?? throw new global::System.ArgumentNullException(nameof(hardware));
             this.Replicas = replicas ?? throw new global::System.ArgumentNullException(nameof(replicas));
-            this.Storage = storage;
             this.ErrorMessage = errorMessage;
             this.GcTimeout = gcTimeout;
             this.DevMode = devMode;
             this.Domains = domains;
             this.Sha = sha;
             this.HotReloading = hotReloading;
+            this.Volumes = volumes;
         }
 
         /// <summary>

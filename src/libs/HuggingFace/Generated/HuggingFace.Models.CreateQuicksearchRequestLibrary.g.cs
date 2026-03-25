@@ -295,6 +295,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        GraniteLibrary,
+        /// <summary>
+        /// 
+        /// </summary>
         Grok,
         /// <summary>
         /// 
@@ -917,6 +921,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Gliner2 => "gliner2",
                 CreateQuicksearchRequestLibrary.GlmTts => "glm-tts",
                 CreateQuicksearchRequestLibrary.GlyphByt5 => "glyph-byt5",
+                CreateQuicksearchRequestLibrary.GraniteLibrary => "granite-library",
                 CreateQuicksearchRequestLibrary.Grok => "grok",
                 CreateQuicksearchRequestLibrary.HabibiTts => "habibi-tts",
                 CreateQuicksearchRequestLibrary.Hallo => "hallo",
@@ -1133,6 +1138,7 @@ namespace HuggingFace
                 "gliner2" => CreateQuicksearchRequestLibrary.Gliner2,
                 "glm-tts" => CreateQuicksearchRequestLibrary.GlmTts,
                 "glyph-byt5" => CreateQuicksearchRequestLibrary.GlyphByt5,
+                "granite-library" => CreateQuicksearchRequestLibrary.GraniteLibrary,
                 "grok" => CreateQuicksearchRequestLibrary.Grok,
                 "habibi-tts" => CreateQuicksearchRequestLibrary.HabibiTts,
                 "hallo" => CreateQuicksearchRequestLibrary.Hallo,

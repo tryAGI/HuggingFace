@@ -323,6 +323,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        SpacesRemoveVolumes,
+        /// <summary>
+        /// 
+        /// </summary>
+        SpacesSetVolumes,
+        /// <summary>
+        /// 
+        /// </summary>
         SpacesUpdateHardware,
         /// <summary>
         /// 
@@ -420,6 +428,8 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.ScheduledJobUpdateSchedule => "scheduled_job.update_schedule",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesAddStorage => "spaces.add_storage",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveStorage => "spaces.remove_storage",
+                GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveVolumes => "spaces.remove_volumes",
+                GetOrganizationsAuditLogExportResponseItemType.SpacesSetVolumes => "spaces.set_volumes",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateHardware => "spaces.update_hardware",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateSleepTime => "spaces.update_sleep_time",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -510,6 +520,8 @@ namespace HuggingFace
                 "scheduled_job.update_schedule" => GetOrganizationsAuditLogExportResponseItemType.ScheduledJobUpdateSchedule,
                 "spaces.add_storage" => GetOrganizationsAuditLogExportResponseItemType.SpacesAddStorage,
                 "spaces.remove_storage" => GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveStorage,
+                "spaces.remove_volumes" => GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveVolumes,
+                "spaces.set_volumes" => GetOrganizationsAuditLogExportResponseItemType.SpacesSetVolumes,
                 "spaces.update_hardware" => GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateHardware,
                 "spaces.update_sleep_time" => GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateSleepTime,
                 _ => null,
