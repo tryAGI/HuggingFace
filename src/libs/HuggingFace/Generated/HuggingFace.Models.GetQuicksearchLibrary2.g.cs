@@ -391,6 +391,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Lagernvs,
+        /// <summary>
+        /// 
+        /// </summary>
         Lerobot,
         /// <summary>
         /// 
@@ -945,6 +949,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.KimiAudio => "kimi-audio",
                 GetQuicksearchLibrary2.Kittentts => "kittentts",
                 GetQuicksearchLibrary2.Kronos => "kronos",
+                GetQuicksearchLibrary2.Lagernvs => "lagernvs",
                 GetQuicksearchLibrary2.Lerobot => "lerobot",
                 GetQuicksearchLibrary2.Lightglue => "lightglue",
                 GetQuicksearchLibrary2.LightningIr => "lightning-ir",
@@ -1162,6 +1167,7 @@ namespace HuggingFace
                 "kimi-audio" => GetQuicksearchLibrary2.KimiAudio,
                 "kittentts" => GetQuicksearchLibrary2.Kittentts,
                 "kronos" => GetQuicksearchLibrary2.Kronos,
+                "lagernvs" => GetQuicksearchLibrary2.Lagernvs,
                 "lerobot" => GetQuicksearchLibrary2.Lerobot,
                 "lightglue" => GetQuicksearchLibrary2.Lightglue,
                 "lightning-ir" => GetQuicksearchLibrary2.LightningIr,

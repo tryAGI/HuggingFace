@@ -37,7 +37,7 @@ namespace HuggingFace
         public string? Revision { get; set; }
 
         /// <summary>
-        /// Read-only mount (forced true for repos, defaults to false for buckets)
+        /// Read-only mount (true for repos, false default for buckets)
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("readOnly")]
         public bool? ReadOnly { get; set; }
@@ -68,7 +68,7 @@ namespace HuggingFace
         /// Git revision (only for repos, defaults to 'main')
         /// </param>
         /// <param name="readOnly">
-        /// Read-only mount (forced true for repos, defaults to false for buckets)
+        /// Read-only mount (true for repos, false default for buckets)
         /// </param>
         /// <param name="path">
         /// Subfolder prefix inside the bucket/repo to mount, e.g. 'path/to/dir'
