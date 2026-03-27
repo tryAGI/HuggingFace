@@ -9,14 +9,14 @@ namespace HuggingFace
         /// Delete an item from a collection
         /// </summary>
         /// <param name="namespace"></param>
-        /// <param name="slug1"></param>
-        /// <param name="slug2"></param>
+        /// <param name="slug"></param>
+        /// <param name="slug"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task DeleteCollectionsByNamespaceBySlugItemsBySlugAsync(
             string @namespace,
-            string slug1,
-            string slug2,
+            string slug,
+            string slug,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
