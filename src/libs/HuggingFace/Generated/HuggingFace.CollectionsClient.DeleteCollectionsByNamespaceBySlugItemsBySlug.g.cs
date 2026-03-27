@@ -8,14 +8,14 @@ namespace HuggingFace
         partial void PrepareDeleteCollectionsByNamespaceBySlugItemsBySlugArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
-            ref string slug1,
-            ref string slug2);
+            ref string slug,
+            ref string slug);
         partial void PrepareDeleteCollectionsByNamespaceBySlugItemsBySlugRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
-            string slug1,
-            string slug2);
+            string slug,
+            string slug);
         partial void ProcessDeleteCollectionsByNamespaceBySlugItemsBySlugResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -25,14 +25,14 @@ namespace HuggingFace
         /// Delete an item from a collection
         /// </summary>
         /// <param name="namespace"></param>
-        /// <param name="slug1"></param>
-        /// <param name="slug2"></param>
+        /// <param name="slug"></param>
+        /// <param name="slug"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task DeleteCollectionsByNamespaceBySlugItemsBySlugAsync(
             string @namespace,
-            string slug1,
-            string slug2,
+            string slug,
+            string slug,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -40,11 +40,11 @@ namespace HuggingFace
             PrepareDeleteCollectionsByNamespaceBySlugItemsBySlugArguments(
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
-                slug1: ref slug1,
-                slug2: ref slug2);
+                slug: ref slug,
+                slug: ref slug);
 
             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                path: $"/api/collections/{@namespace}/{slug1}/items/{slug1}",
+                path: $"/api/collections/{@namespace}/{slug}/items/{slug}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -78,8 +78,8 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 @namespace: @namespace,
-                slug1: slug1,
-                slug2: slug2);
+                slug: slug,
+                slug: slug);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
