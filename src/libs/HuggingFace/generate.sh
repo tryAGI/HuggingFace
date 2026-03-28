@@ -2,7 +2,7 @@
 set -euo pipefail
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl --fail --silent --show-error -o openapi.json.tmp https://huggingface.co/.well-known/openapi.json && mv openapi.json.tmp openapi.json || echo "Warning: Failed to download openapi.json, using existing file"
+curl --fail --silent --show-error -L -o openapi.json.tmp https://huggingface.co/.well-known/openapi.json && mv openapi.json.tmp openapi.json || echo "Warning: Failed to download openapi.json, using existing file"
 
 # Fix enum values that break C# code generation (embedded quotes, emojis)
 python3 << 'PYEOF'
@@ -68,7 +68,7 @@ autosdk generate openapi.json \
   --security-scheme Http:Header:Bearer
 
 # Generate Inference API client from TGI (Text Generation Inference) spec
-curl --fail --silent --show-error -o tgi-openapi.json \
+curl --fail --silent --show-error -L -o tgi-openapi.json \
   https://raw.githubusercontent.com/huggingface/text-generation-inference/main/docs/openapi.json
 
 # Fix OpenAPI 3.1 features in TGI spec that AutoSDK's 3.0 parser can't handle
@@ -109,7 +109,7 @@ autosdk generate tgi-openapi.json \
 rm tgi-openapi.json
 
 # Generate Embeddings API client from TEI (Text Embeddings Inference) spec
-curl --fail --silent --show-error -o tei-openapi.json \
+curl --fail --silent --show-error -L -o tei-openapi.json \
   https://raw.githubusercontent.com/huggingface/text-embeddings-inference/main/docs/openapi.json
 autosdk generate tei-openapi.json \
   --namespace HuggingFace \
