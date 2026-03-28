@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -e
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
