@@ -142,13 +142,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_302 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_302 = global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext) as string;
+                        __value_302 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
                     }
                     else
                     {
                         __content_302 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_302 = global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext) as string;
+                        __value_302 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -180,13 +180,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_304 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_304 = global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext) as string;
+                        __value_304 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
                     }
                     else
                     {
                         __content_304 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_304 = global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext) as string;
+                        __value_304 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -218,13 +218,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_307 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_307 = global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext) as string;
+                        __value_307 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
                     }
                     else
                     {
                         __content_307 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_307 = global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext) as string;
+                        __value_307 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
