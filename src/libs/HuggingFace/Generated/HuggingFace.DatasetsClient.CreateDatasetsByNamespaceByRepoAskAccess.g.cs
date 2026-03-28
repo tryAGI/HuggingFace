@@ -112,13 +112,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_303 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_303 = global::System.Text.Json.JsonSerializer.Deserialize(__content_303, typeof(string), JsonSerializerContext) as string;
+                        __value_303 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_303, typeof(string), JsonSerializerContext);
                     }
                     else
                     {
                         __content_303 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_303 = global::System.Text.Json.JsonSerializer.Deserialize(__content_303, typeof(string), JsonSerializerContext) as string;
+                        __value_303 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_303, typeof(string), JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
