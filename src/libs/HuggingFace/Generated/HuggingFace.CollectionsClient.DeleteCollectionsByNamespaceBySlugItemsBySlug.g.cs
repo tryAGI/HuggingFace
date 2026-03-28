@@ -9,13 +9,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string slug,
-            ref string slug);
+            ref string slug2);
         partial void PrepareDeleteCollectionsByNamespaceBySlugItemsBySlugRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
-            string slug);
+            string slug2);
         partial void ProcessDeleteCollectionsByNamespaceBySlugItemsBySlugResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -26,13 +26,13 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
-        /// <param name="slug"></param>
+        /// <param name="slug2"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task DeleteCollectionsByNamespaceBySlugItemsBySlugAsync(
             string @namespace,
             string slug,
-            string slug,
+            string slug2,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -41,10 +41,10 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 slug: ref slug,
-                slug: ref slug);
+                slug2: ref slug2);
 
             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                path: $"/api/collections/{@namespace}/{slug}/items/{slug}",
+                path: $"/api/collections/{@namespace}/{slug2}/items/{slug2}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -79,7 +79,7 @@ namespace HuggingFace
                 httpRequestMessage: __httpRequest,
                 @namespace: @namespace,
                 slug: slug,
-                slug: slug);
+                slug2: slug2);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
