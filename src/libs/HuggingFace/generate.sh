@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
 curl --fail --silent --show-error -o openapi.json.tmp https://huggingface.co/.well-known/openapi.json && mv openapi.json.tmp openapi.json || echo "Warning: Failed to download openapi.json, using existing file"
