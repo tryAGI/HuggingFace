@@ -67,13 +67,13 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSettingsBillingUsageResponsePeriodInvoiceVariant1" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="id"></param>
         /// <param name="amountDueCents"></param>
         /// <param name="totalCents"></param>
         /// <param name="status"></param>
         /// <param name="dueDate"></param>
         /// <param name="collectionMethod"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -86,12 +86,12 @@ namespace HuggingFace
             global::HuggingFace.GetSettingsBillingUsageResponsePeriodInvoiceVariant1CollectionMethod? collectionMethod,
             string type = "stripe")
         {
+            this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.AmountDueCents = amountDueCents;
             this.TotalCents = totalCents;
             this.Status = status;
             this.DueDate = dueDate;
-            this.Type = type;
             this.CollectionMethod = collectionMethod;
         }
 

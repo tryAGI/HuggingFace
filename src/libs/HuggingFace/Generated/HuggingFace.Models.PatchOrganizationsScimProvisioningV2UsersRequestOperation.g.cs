@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <param name="op">
         /// `remove` operation is not supported for non-managed organizations
         /// </param>
-        /// <param name="path"></param>
         /// <param name="value"></param>
+        /// <param name="path"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -53,8 +53,8 @@ namespace HuggingFace
             global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath? path)
         {
             this.Op = op;
-            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
             this.Path = path;
+            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
         }
 
         /// <summary>

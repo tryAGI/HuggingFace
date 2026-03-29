@@ -38,9 +38,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsBatchRequestItem2" /> class.
         /// </summary>
-        /// <param name="action"></param>
         /// <param name="id"></param>
         /// <param name="data"></param>
+        /// <param name="action"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,9 +49,9 @@ namespace HuggingFace
             global::HuggingFace.CreateCollectionsItemsBatchRequestItemData2 data,
             global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction2 action)
         {
+            this.Action = action;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
-            this.Action = action;
         }
 
         /// <summary>

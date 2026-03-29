@@ -126,14 +126,14 @@ namespace HuggingFace
         /// <param name="isLikedByUser"></param>
         /// <param name="lastModified"></param>
         /// <param name="likes"></param>
-        /// <param name="pipelineTag"></param>
         /// <param name="private"></param>
-        /// <param name="repoType"></param>
         /// <param name="gated"></param>
+        /// <param name="pipelineTag"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="numParameters"></param>
         /// <param name="authorData"></param>
         /// <param name="widgetOutputUrls"></param>
+        /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -161,10 +161,10 @@ namespace HuggingFace
             this.IsLikedByUser = isLikedByUser;
             this.LastModified = lastModified;
             this.Likes = likes;
-            this.Private = @private;
-            this.Gated = gated;
             this.PipelineTag = pipelineTag;
+            this.Private = @private;
             this.RepoType = repoType;
+            this.Gated = gated;
             this.ResourceGroup = resourceGroup;
             this.NumParameters = numParameters;
             this.AuthorData = authorData;

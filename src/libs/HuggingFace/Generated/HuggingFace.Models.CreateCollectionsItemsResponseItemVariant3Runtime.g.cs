@@ -83,9 +83,9 @@ namespace HuggingFace
         /// </summary>
         /// <param name="stage"></param>
         /// <param name="hardware"></param>
+        /// <param name="replicas"></param>
         /// <param name="errorMessage"></param>
         /// <param name="gcTimeout"></param>
-        /// <param name="replicas"></param>
         /// <param name="devMode"></param>
         /// <param name="domains"></param>
         /// <param name="sha"></param>
@@ -108,9 +108,9 @@ namespace HuggingFace
         {
             this.Stage = stage;
             this.Hardware = hardware ?? throw new global::System.ArgumentNullException(nameof(hardware));
-            this.Replicas = replicas ?? throw new global::System.ArgumentNullException(nameof(replicas));
             this.ErrorMessage = errorMessage;
             this.GcTimeout = gcTimeout;
+            this.Replicas = replicas ?? throw new global::System.ArgumentNullException(nameof(replicas));
             this.DevMode = devMode;
             this.Domains = domains;
             this.Sha = sha;

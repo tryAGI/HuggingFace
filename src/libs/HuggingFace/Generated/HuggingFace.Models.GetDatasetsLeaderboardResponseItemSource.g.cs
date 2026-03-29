@@ -45,8 +45,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetDatasetsLeaderboardResponseItemSource" /> class.
         /// </summary>
         /// <param name="url"></param>
-        /// <param name="name"></param>
         /// <param name="isExternal"></param>
+        /// <param name="name"></param>
         /// <param name="author"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,8 +58,8 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant1, global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant2>? author)
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.IsExternal = isExternal;
             this.Name = name;
+            this.IsExternal = isExternal;
             this.Author = author;
         }
 

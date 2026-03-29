@@ -104,7 +104,6 @@ namespace HuggingFace
         /// </summary>
         /// <param name="slug"></param>
         /// <param name="lastUpdated"></param>
-        /// <param name="description"></param>
         /// <param name="owner"></param>
         /// <param name="title"></param>
         /// <param name="theme"></param>
@@ -113,6 +112,7 @@ namespace HuggingFace
         /// <param name="shareUrl"></param>
         /// <param name="id"></param>
         /// <param name="numberItems"></param>
+        /// <param name="description"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -133,6 +133,7 @@ namespace HuggingFace
         {
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.LastUpdated = lastUpdated;
+            this.Description = description;
             this.Owner = owner;
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Theme = theme;
@@ -141,7 +142,6 @@ namespace HuggingFace
             this.ShareUrl = shareUrl ?? throw new global::System.ArgumentNullException(nameof(shareUrl));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.NumberItems = numberItems;
-            this.Description = description;
             this.Type = type;
         }
 

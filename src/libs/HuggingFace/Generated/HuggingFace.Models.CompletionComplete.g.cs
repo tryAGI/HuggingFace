@@ -46,8 +46,8 @@ namespace HuggingFace
         /// </summary>
         /// <param name="finishReason"></param>
         /// <param name="index"></param>
-        /// <param name="logprobs"></param>
         /// <param name="text"></param>
+        /// <param name="logprobs"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -59,8 +59,8 @@ namespace HuggingFace
         {
             this.FinishReason = finishReason ?? throw new global::System.ArgumentNullException(nameof(finishReason));
             this.Index = index;
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Logprobs = logprobs;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
         }
 
         /// <summary>

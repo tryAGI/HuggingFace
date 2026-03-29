@@ -93,7 +93,6 @@ namespace HuggingFace
         /// <param name="avatarUrl"></param>
         /// <param name="fullname"></param>
         /// <param name="name"></param>
-        /// <param name="type"></param>
         /// <param name="isHf"></param>
         /// <param name="isFollowing"></param>
         /// <param name="plan"></param>
@@ -101,6 +100,7 @@ namespace HuggingFace
         /// <param name="hasPrivateMembersList"></param>
         /// <param name="userRole"></param>
         /// <param name="numUsers"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -120,8 +120,8 @@ namespace HuggingFace
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.IsHf = isHf;
             this.Type = type;
+            this.IsHf = isHf;
             this.IsFollowing = isFollowing;
             this.Plan = plan;
             this.Details = details;

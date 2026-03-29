@@ -85,13 +85,13 @@ namespace HuggingFace
         /// <param name="publishedAt"></param>
         /// <param name="title"></param>
         /// <param name="summary"></param>
-        /// <param name="mediaUrls"></param>
         /// <param name="thumbnail"></param>
         /// <param name="numComments"></param>
         /// <param name="submittedBy">
         /// User overview information
         /// </param>
         /// <param name="isAuthorParticipating"></param>
+        /// <param name="mediaUrls"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -110,11 +110,11 @@ namespace HuggingFace
             this.PublishedAt = publishedAt;
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
+            this.MediaUrls = mediaUrls;
             this.Thumbnail = thumbnail ?? throw new global::System.ArgumentNullException(nameof(thumbnail));
             this.NumComments = numComments;
             this.SubmittedBy = submittedBy ?? throw new global::System.ArgumentNullException(nameof(submittedBy));
             this.IsAuthorParticipating = isAuthorParticipating;
-            this.MediaUrls = mediaUrls;
         }
 
         /// <summary>

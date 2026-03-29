@@ -64,10 +64,10 @@ namespace HuggingFace
         /// </param>
         /// <param name="emails"></param>
         /// <param name="name"></param>
+        /// <param name="externalId"></param>
         /// <param name="active">
         /// Default Value: true
         /// </param>
-        /// <param name="externalId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -83,8 +83,8 @@ namespace HuggingFace
             this.UserName = userName ?? throw new global::System.ArgumentNullException(nameof(userName));
             this.Emails = emails ?? throw new global::System.ArgumentNullException(nameof(emails));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
             this.Active = active;
+            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
         }
 
         /// <summary>

@@ -30,8 +30,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateScheduledJobsResponseStatus" /> class.
         /// </summary>
-        /// <param name="lastJob"></param>
         /// <param name="nextJobRunAt"></param>
+        /// <param name="lastJob"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -39,8 +39,8 @@ namespace HuggingFace
             global::System.DateTime nextJobRunAt,
             global::HuggingFace.CreateScheduledJobsResponseStatusLastJob2? lastJob)
         {
-            this.NextJobRunAt = nextJobRunAt;
             this.LastJob = lastJob;
+            this.NextJobRunAt = nextJobRunAt;
         }
 
         /// <summary>

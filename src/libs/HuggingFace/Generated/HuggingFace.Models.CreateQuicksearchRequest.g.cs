@@ -123,6 +123,10 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateQuicksearchRequest" /> class.
         /// </summary>
+        /// <param name="exclude">
+        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName<br/>
+        /// Default Value: []
+        /// </param>
         /// <param name="q"></param>
         /// <param name="limit"></param>
         /// <param name="lang"></param>
@@ -132,10 +136,6 @@ namespace HuggingFace
         /// <param name="reposFilter"></param>
         /// <param name="pipelines">
         /// Comma-separated or array of pipeline types
-        /// </param>
-        /// <param name="exclude">
-        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName<br/>
-        /// Default Value: []
         /// </param>
         /// <param name="namespace">
         /// Namespace to filter by
@@ -169,7 +169,6 @@ namespace HuggingFace
             string? discussionCollectionName,
             global::System.Collections.Generic.IList<string>? spacesTags)
         {
-            this.Exclude = exclude ?? throw new global::System.ArgumentNullException(nameof(exclude));
             this.Q = q;
             this.Limit = limit;
             this.Lang = lang;
@@ -178,6 +177,7 @@ namespace HuggingFace
             this.OrgsFilter = orgsFilter;
             this.ReposFilter = reposFilter;
             this.Pipelines = pipelines;
+            this.Exclude = exclude ?? throw new global::System.ArgumentNullException(nameof(exclude));
             this.Namespace = @namespace;
             this.IncludeInvitees = includeInvitees;
             this.RepoName = repoName;

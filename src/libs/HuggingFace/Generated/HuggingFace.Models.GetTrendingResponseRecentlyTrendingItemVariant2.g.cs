@@ -31,8 +31,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetTrendingResponseRecentlyTrendingItemVariant2" /> class.
         /// </summary>
-        /// <param name="repoType"></param>
         /// <param name="repoData"></param>
+        /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace HuggingFace
             global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoData repoData,
             string repoType = "model")
         {
-            this.RepoData = repoData ?? throw new global::System.ArgumentNullException(nameof(repoData));
             this.RepoType = repoType;
+            this.RepoData = repoData ?? throw new global::System.ArgumentNullException(nameof(repoData));
         }
 
         /// <summary>

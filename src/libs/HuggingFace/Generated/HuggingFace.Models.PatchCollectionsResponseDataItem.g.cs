@@ -44,9 +44,9 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="PatchCollectionsResponseDataItem" /> class.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="position"></param>
         /// <param name="note"></param>
         /// <param name="gallery"></param>
-        /// <param name="position"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,9 +57,9 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? gallery)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Position = position;
             this.Note = note;
             this.Gallery = gallery;
+            this.Position = position;
         }
 
         /// <summary>

@@ -84,15 +84,15 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetDiscussionsResponseVariant1Org" /> class.
         /// </summary>
         /// <param name="avatarUrl"></param>
-        /// <param name="email"></param>
         /// <param name="fullname"></param>
         /// <param name="name"></param>
-        /// <param name="type"></param>
         /// <param name="isHf"></param>
+        /// <param name="email"></param>
         /// <param name="plan"></param>
         /// <param name="details"></param>
         /// <param name="hasPrivateMembersList"></param>
         /// <param name="requiresSSO"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -109,11 +109,11 @@ namespace HuggingFace
             string type = "org")
         {
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
+            this.Email = email;
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.IsHf = isHf;
-            this.Email = email;
             this.Type = type;
+            this.IsHf = isHf;
             this.Plan = plan;
             this.Details = details;
             this.HasPrivateMembersList = hasPrivateMembersList;

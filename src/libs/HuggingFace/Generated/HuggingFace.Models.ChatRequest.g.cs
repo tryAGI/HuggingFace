@@ -177,6 +177,10 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatRequest" /> class.
         /// </summary>
+        /// <param name="messages">
+        /// A list of messages comprising the conversation so far.<br/>
+        /// Example: [{"role": "user", "content": "What is Deep Learning?"}]
+        /// </param>
         /// <param name="frequencyPenalty">
         /// Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far,<br/>
         /// decreasing the model's likelihood to repeat the same line verbatim.<br/>
@@ -199,10 +203,6 @@ namespace HuggingFace
         /// The maximum number of tokens that can be generated in the chat completion.<br/>
         /// Default Value: 1024<br/>
         /// Example: 32
-        /// </param>
-        /// <param name="messages">
-        /// A list of messages comprising the conversation so far.<br/>
-        /// Example: [{"role": "user", "content": "What is Deep Learning?"}]
         /// </param>
         /// <param name="model">
         /// [UNUSED] ID of the model to use. See the model endpoint compatibility table for details on which models work with the Chat API.<br/>
@@ -283,11 +283,11 @@ namespace HuggingFace
             int? topLogprobs,
             float? topP)
         {
-            this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.FrequencyPenalty = frequencyPenalty;
             this.LogitBias = logitBias;
             this.Logprobs = logprobs;
             this.MaxTokens = maxTokens;
+            this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.Model = model;
             this.N = n;
             this.PresencePenalty = presencePenalty;

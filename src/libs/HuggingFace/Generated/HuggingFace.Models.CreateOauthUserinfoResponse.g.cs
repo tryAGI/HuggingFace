@@ -96,6 +96,10 @@ namespace HuggingFace
         /// <param name="sub">
         /// ID of the user
         /// </param>
+        /// <param name="isPro">
+        /// Whether the user is a Pro user
+        /// </param>
+        /// <param name="orgs"></param>
         /// <param name="name">
         /// Full name of the user
         /// </param>
@@ -117,16 +121,12 @@ namespace HuggingFace
         /// <param name="emailVerified">
         /// Whether the email is verified
         /// </param>
-        /// <param name="isPro">
-        /// Whether the user is a Pro user
-        /// </param>
         /// <param name="canPay">
         /// Whether the user has access to billing. You should check `canPay` first.
         /// </param>
         /// <param name="billingMode">
         /// Whether the user is on prepaid or postpaid billing
         /// </param>
-        /// <param name="orgs"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -145,8 +145,6 @@ namespace HuggingFace
             global::HuggingFace.CreateOauthUserinfoResponseBillingMode? billingMode)
         {
             this.Sub = sub ?? throw new global::System.ArgumentNullException(nameof(sub));
-            this.IsPro = isPro;
-            this.Orgs = orgs ?? throw new global::System.ArgumentNullException(nameof(orgs));
             this.Name = name;
             this.PreferredUsername = preferredUsername;
             this.Profile = profile;
@@ -154,8 +152,10 @@ namespace HuggingFace
             this.Website = website;
             this.Email = email;
             this.EmailVerified = emailVerified;
+            this.IsPro = isPro;
             this.CanPay = canPay;
             this.BillingMode = billingMode;
+            this.Orgs = orgs ?? throw new global::System.ArgumentNullException(nameof(orgs));
         }
 
         /// <summary>

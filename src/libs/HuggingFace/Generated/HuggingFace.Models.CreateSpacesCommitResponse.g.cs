@@ -54,9 +54,6 @@ namespace HuggingFace
         /// <param name="success">
         /// Whether the commit was successful
         /// </param>
-        /// <param name="pullRequestUrl">
-        /// The URL of the pull request
-        /// </param>
         /// <param name="commitOid">
         /// The OID of the commit
         /// </param>
@@ -65,6 +62,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="hookOutput">
         /// The output of the git hook
+        /// </param>
+        /// <param name="pullRequestUrl">
+        /// The URL of the pull request
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -77,10 +77,10 @@ namespace HuggingFace
             string? pullRequestUrl)
         {
             this.Success = success;
+            this.PullRequestUrl = pullRequestUrl;
             this.CommitOid = commitOid ?? throw new global::System.ArgumentNullException(nameof(commitOid));
             this.CommitUrl = commitUrl ?? throw new global::System.ArgumentNullException(nameof(commitUrl));
             this.HookOutput = hookOutput ?? throw new global::System.ArgumentNullException(nameof(hookOutput));
-            this.PullRequestUrl = pullRequestUrl;
         }
 
         /// <summary>

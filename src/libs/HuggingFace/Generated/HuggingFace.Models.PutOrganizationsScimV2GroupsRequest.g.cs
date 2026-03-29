@@ -46,8 +46,8 @@ namespace HuggingFace
         /// </summary>
         /// <param name="schemas"></param>
         /// <param name="displayName"></param>
-        /// <param name="externalId"></param>
         /// <param name="members"></param>
+        /// <param name="externalId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -59,8 +59,8 @@ namespace HuggingFace
         {
             this.Schemas = schemas ?? throw new global::System.ArgumentNullException(nameof(schemas));
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
-            this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
             this.ExternalId = externalId;
+            this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
         }
 
         /// <summary>

@@ -92,12 +92,12 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="createdAt"></param>
         /// <param name="type"></param>
-        /// <param name="data"></param>
         /// <param name="message"></param>
+        /// <param name="author"></param>
+        /// <param name="data"></param>
         /// <param name="ip"></param>
         /// <param name="location"></param>
         /// <param name="userAgent"></param>
-        /// <param name="author"></param>
         /// <param name="token"></param>
         /// <param name="oauth"></param>
 #if NET7_0_OR_GREATER
@@ -119,12 +119,12 @@ namespace HuggingFace
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
             this.Type = type;
-            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
-            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Data = data;
+            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.Ip = ip;
             this.Location = location;
             this.UserAgent = userAgent;
+            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Token = token;
             this.Oauth = oauth;
         }

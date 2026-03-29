@@ -46,11 +46,11 @@ namespace HuggingFace
         /// <param name="accessToken">
         /// The JWT token with Bearer prefix
         /// </param>
-        /// <param name="exp">
-        /// Token expiration timestamp in seconds (JWT standard)
-        /// </param>
         /// <param name="token">
         /// The JWT token
+        /// </param>
+        /// <param name="exp">
+        /// Token expiration timestamp in seconds (JWT standard)
         /// </param>
         /// <param name="encryptedToken">
         /// Encrypted JWT token and key ID (only if encrypted=true was requested)
@@ -65,8 +65,8 @@ namespace HuggingFace
             global::HuggingFace.GetModelsJwtResponseEncryptedToken? encryptedToken)
         {
             this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
-            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.Exp = exp;
+            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.EncryptedToken = encryptedToken;
         }
 

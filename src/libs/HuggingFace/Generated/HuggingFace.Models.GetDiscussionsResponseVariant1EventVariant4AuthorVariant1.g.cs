@@ -100,9 +100,9 @@ namespace HuggingFace
         /// <param name="isHfAdmin"></param>
         /// <param name="isMod"></param>
         /// <param name="followerCount"></param>
-        /// <param name="type"></param>
         /// <param name="plan"></param>
         /// <param name="isUserFollowing"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

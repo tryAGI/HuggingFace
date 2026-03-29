@@ -150,24 +150,24 @@ namespace HuggingFace
         /// </summary>
         /// <param name="id"></param>
         /// <param name="createdAt"></param>
+        /// <param name="environment"></param>
+        /// <param name="flavor"></param>
+        /// <param name="createdBy"></param>
+        /// <param name="owner"></param>
+        /// <param name="status"></param>
         /// <param name="spaceId"></param>
         /// <param name="dockerImage"></param>
         /// <param name="timeout"></param>
-        /// <param name="environment"></param>
         /// <param name="command"></param>
         /// <param name="arguments"></param>
         /// <param name="arch"></param>
-        /// <param name="flavor"></param>
-        /// <param name="createdBy"></param>
         /// <param name="retry"></param>
         /// <param name="volumes"></param>
-        /// <param name="type"></param>
-        /// <param name="owner"></param>
         /// <param name="initiator"></param>
-        /// <param name="status"></param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
         /// <param name="hfToken"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -195,21 +195,21 @@ namespace HuggingFace
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
-            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
-            this.Flavor = flavor;
-            this.CreatedBy = createdBy ?? throw new global::System.ArgumentNullException(nameof(createdBy));
-            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
-            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.SpaceId = spaceId;
             this.DockerImage = dockerImage;
             this.Timeout = timeout;
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
             this.Command = command;
             this.Arguments = arguments;
             this.Arch = arch;
+            this.Flavor = flavor;
+            this.CreatedBy = createdBy ?? throw new global::System.ArgumentNullException(nameof(createdBy));
             this.Retry = retry;
             this.Volumes = volumes;
             this.Type = type;
+            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.Initiator = initiator;
+            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.Secrets = secrets;
             this.Labels = labels;
             this.HfToken = hfToken;

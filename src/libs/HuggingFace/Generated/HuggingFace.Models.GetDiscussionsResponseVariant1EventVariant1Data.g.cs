@@ -105,13 +105,13 @@ namespace HuggingFace
         /// </summary>
         /// <param name="edited"></param>
         /// <param name="hidden"></param>
-        /// <param name="hiddenBy"></param>
-        /// <param name="hiddenReason"></param>
         /// <param name="latest"></param>
         /// <param name="numEdits"></param>
         /// <param name="editors"></param>
         /// <param name="editorAvatarUrls"></param>
         /// <param name="reactions"></param>
+        /// <param name="hiddenBy"></param>
+        /// <param name="hiddenReason"></param>
         /// <param name="identifiedLanguage"></param>
         /// <param name="relatedEventId"></param>
         /// <param name="isReport"></param>
@@ -136,13 +136,13 @@ namespace HuggingFace
         {
             this.Edited = edited;
             this.Hidden = hidden;
+            this.HiddenBy = hiddenBy;
+            this.HiddenReason = hiddenReason;
             this.Latest = latest ?? throw new global::System.ArgumentNullException(nameof(latest));
             this.NumEdits = numEdits;
             this.Editors = editors ?? throw new global::System.ArgumentNullException(nameof(editors));
             this.EditorAvatarUrls = editorAvatarUrls ?? throw new global::System.ArgumentNullException(nameof(editorAvatarUrls));
             this.Reactions = reactions ?? throw new global::System.ArgumentNullException(nameof(reactions));
-            this.HiddenBy = hiddenBy;
-            this.HiddenReason = hiddenReason;
             this.IdentifiedLanguage = identifiedLanguage;
             this.RelatedEventId = relatedEventId;
             this.IsReport = isReport;

@@ -50,8 +50,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateCollectionsRequest" /> class.
         /// </summary>
         /// <param name="title"></param>
-        /// <param name="description"></param>
         /// <param name="namespace"></param>
+        /// <param name="description"></param>
         /// <param name="item"></param>
         /// <param name="private">
         /// If not provided, the collection will be public. This field will respect the organization's visibility setting.
@@ -67,8 +67,8 @@ namespace HuggingFace
             bool? @private)
         {
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Namespace = @namespace ?? throw new global::System.ArgumentNullException(nameof(@namespace));
             this.Description = description;
+            this.Namespace = @namespace ?? throw new global::System.ArgumentNullException(nameof(@namespace));
             this.Item = item;
             this.Private = @private;
         }

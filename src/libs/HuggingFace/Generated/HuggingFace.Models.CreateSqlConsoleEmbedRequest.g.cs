@@ -46,8 +46,8 @@ namespace HuggingFace
         /// </summary>
         /// <param name="sql"></param>
         /// <param name="title"></param>
-        /// <param name="private"></param>
         /// <param name="views"></param>
+        /// <param name="private"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -59,8 +59,8 @@ namespace HuggingFace
         {
             this.Sql = sql ?? throw new global::System.ArgumentNullException(nameof(sql));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Views = views ?? throw new global::System.ArgumentNullException(nameof(views));
             this.Private = @private;
+            this.Views = views ?? throw new global::System.ArgumentNullException(nameof(views));
         }
 
         /// <summary>

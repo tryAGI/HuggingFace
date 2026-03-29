@@ -62,8 +62,8 @@ namespace HuggingFace
         /// <param name="slug"></param>
         /// <param name="title"></param>
         /// <param name="canonical"></param>
-        /// <param name="authorName"></param>
         /// <param name="participating"></param>
+        /// <param name="authorName"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -79,8 +79,8 @@ namespace HuggingFace
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Canonical = canonical;
-            this.Participating = participating ?? throw new global::System.ArgumentNullException(nameof(participating));
             this.AuthorName = authorName;
+            this.Participating = participating ?? throw new global::System.ArgumentNullException(nameof(participating));
         }
 
         /// <summary>

@@ -67,6 +67,9 @@ namespace HuggingFace
         /// <param name="query">
         /// Example: What is Deep Learning?
         /// </param>
+        /// <param name="texts">
+        /// Example: [Deep Learning is ...]
+        /// </param>
         /// <param name="rawScores">
         /// Default Value: false<br/>
         /// Example: false
@@ -74,9 +77,6 @@ namespace HuggingFace
         /// <param name="returnText">
         /// Default Value: false<br/>
         /// Example: false
-        /// </param>
-        /// <param name="texts">
-        /// Example: [Deep Learning is ...]
         /// </param>
         /// <param name="truncate">
         /// Default Value: false<br/>
@@ -97,9 +97,9 @@ namespace HuggingFace
             global::HuggingFace.TruncationDirection? truncationDirection)
         {
             this.Query = query ?? throw new global::System.ArgumentNullException(nameof(query));
-            this.Texts = texts ?? throw new global::System.ArgumentNullException(nameof(texts));
             this.RawScores = rawScores;
             this.ReturnText = returnText;
+            this.Texts = texts ?? throw new global::System.ArgumentNullException(nameof(texts));
             this.Truncate = truncate;
             this.TruncationDirection = truncationDirection;
         }

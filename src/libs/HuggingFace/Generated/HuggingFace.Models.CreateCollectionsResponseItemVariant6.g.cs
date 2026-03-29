@@ -94,7 +94,6 @@ namespace HuggingFace
         /// </summary>
         /// <param name="author"></param>
         /// <param name="id"></param>
-        /// <param name="private"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
         /// <param name="size">
@@ -103,9 +102,10 @@ namespace HuggingFace
         /// <param name="totalFiles">
         /// The total number of files in the bucket
         /// </param>
-        /// <param name="repoType"></param>
         /// <param name="cdnRegions"></param>
+        /// <param name="private"></param>
         /// <param name="resourceGroup"></param>
+        /// <param name="repoType"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -125,13 +125,13 @@ namespace HuggingFace
         {
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Private = @private;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Size = size;
             this.TotalFiles = totalFiles;
-            this.CdnRegions = cdnRegions ?? throw new global::System.ArgumentNullException(nameof(cdnRegions));
-            this.Private = @private;
             this.RepoType = repoType;
+            this.CdnRegions = cdnRegions ?? throw new global::System.ArgumentNullException(nameof(cdnRegions));
             this.ResourceGroup = resourceGroup;
             this.Type = type;
         }

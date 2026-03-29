@@ -43,13 +43,13 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateDatasetsUserAccessRequestHandleRequest" /> class.
         /// </summary>
+        /// <param name="status"></param>
         /// <param name="userId">
         /// Either userId or user must be provided
         /// </param>
         /// <param name="user">
         /// Either userId or user must be provided
         /// </param>
-        /// <param name="status"></param>
         /// <param name="rejectionReason"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -60,9 +60,9 @@ namespace HuggingFace
             string? user,
             string? rejectionReason)
         {
-            this.Status = status;
             this.UserId = userId;
             this.User = user;
+            this.Status = status;
             this.RejectionReason = rejectionReason;
         }
 

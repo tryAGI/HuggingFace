@@ -99,14 +99,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetScheduledJobsResponseJobSpec" /> class.
         /// </summary>
+        /// <param name="environment"></param>
+        /// <param name="flavor"></param>
         /// <param name="spaceId"></param>
         /// <param name="dockerImage"></param>
         /// <param name="timeout"></param>
-        /// <param name="environment"></param>
         /// <param name="command"></param>
         /// <param name="arguments"></param>
         /// <param name="arch"></param>
-        /// <param name="flavor"></param>
         /// <param name="retry"></param>
         /// <param name="volumes"></param>
         /// <param name="secrets"></param>
@@ -130,14 +130,14 @@ namespace HuggingFace
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::HuggingFace.GetScheduledJobsResponseJobSpecHfToken? hfToken)
         {
-            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
-            this.Flavor = flavor;
             this.SpaceId = spaceId;
             this.DockerImage = dockerImage;
             this.Timeout = timeout;
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
             this.Command = command;
             this.Arguments = arguments;
             this.Arch = arch;
+            this.Flavor = flavor;
             this.Retry = retry;
             this.Volumes = volumes;
             this.Secrets = secrets;

@@ -74,14 +74,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSettingsWebhooksResponseWebhookJob" /> class.
         /// </summary>
-        /// <param name="dockerImage"></param>
-        /// <param name="spaceId"></param>
         /// <param name="environment">
         /// Default Value: {}
         /// </param>
+        /// <param name="flavor"></param>
+        /// <param name="dockerImage"></param>
+        /// <param name="spaceId"></param>
         /// <param name="arguments"></param>
         /// <param name="command"></param>
-        /// <param name="flavor"></param>
         /// <param name="timeoutSeconds">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
@@ -103,12 +103,12 @@ namespace HuggingFace
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::System.Collections.Generic.IList<string>? secrets)
         {
-            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
-            this.Flavor = flavor;
             this.DockerImage = dockerImage;
             this.SpaceId = spaceId;
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
             this.Arguments = arguments;
             this.Command = command;
+            this.Flavor = flavor;
             this.TimeoutSeconds = timeoutSeconds;
             this.Labels = labels;
             this.Secrets = secrets;

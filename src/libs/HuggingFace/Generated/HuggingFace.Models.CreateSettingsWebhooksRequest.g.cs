@@ -56,10 +56,10 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateSettingsWebhooksRequest" /> class.
         /// </summary>
         /// <param name="watched"></param>
+        /// <param name="domains"></param>
         /// <param name="url"></param>
         /// <param name="job"></param>
         /// <param name="jobSourceId"></param>
-        /// <param name="domains"></param>
         /// <param name="secret"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -73,10 +73,10 @@ namespace HuggingFace
             string? secret)
         {
             this.Watched = watched ?? throw new global::System.ArgumentNullException(nameof(watched));
-            this.Domains = domains ?? throw new global::System.ArgumentNullException(nameof(domains));
             this.Url = url;
             this.Job = job;
             this.JobSourceId = jobSourceId;
+            this.Domains = domains ?? throw new global::System.ArgumentNullException(nameof(domains));
             this.Secret = secret;
         }
 

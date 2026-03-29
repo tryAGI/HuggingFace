@@ -38,8 +38,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="FunctionDefinition" /> class.
         /// </summary>
         /// <param name="arguments"></param>
-        /// <param name="description"></param>
         /// <param name="name"></param>
+        /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,8 +49,8 @@ namespace HuggingFace
             string? description)
         {
             this.Arguments = arguments ?? throw new global::System.ArgumentNullException(nameof(arguments));
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
         }
 
         /// <summary>

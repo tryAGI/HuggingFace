@@ -51,11 +51,11 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetOrganizationsAuditLogExportResponseItemToken" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="id"></param>
+        /// <param name="deleted"></param>
         /// <param name="role"></param>
         /// <param name="last4"></param>
-        /// <param name="deleted"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -66,11 +66,11 @@ namespace HuggingFace
             string? last4,
             string type = "access_token")
         {
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Deleted = deleted;
             this.Type = type;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Role = role;
             this.Last4 = last4;
+            this.Deleted = deleted;
         }
 
         /// <summary>

@@ -109,21 +109,21 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateOauthRegisterResponse" /> class.
         /// </summary>
         /// <param name="clientId"></param>
-        /// <param name="clientSecret"></param>
         /// <param name="clientIdIssuedAt"></param>
         /// <param name="clientSecretExpiresAt"></param>
         /// <param name="redirectUris"></param>
+        /// <param name="scope"></param>
+        /// <param name="clientSecret"></param>
         /// <param name="clientName"></param>
         /// <param name="clientUri"></param>
         /// <param name="logoUri"></param>
-        /// <param name="scope"></param>
-        /// <param name="grantTypes">
-        /// Included only in responses
-        /// </param>
         /// <param name="contacts"></param>
         /// <param name="tokenEndpointAuthMethod"></param>
         /// <param name="softwareId"></param>
         /// <param name="softwareVersion"></param>
+        /// <param name="grantTypes">
+        /// Included only in responses
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -144,14 +144,14 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOauthRegisterResponseGrantType> grantTypes = default!)
         {
             this.ClientId = clientId ?? throw new global::System.ArgumentNullException(nameof(clientId));
+            this.ClientSecret = clientSecret;
             this.ClientIdIssuedAt = clientIdIssuedAt;
             this.ClientSecretExpiresAt = clientSecretExpiresAt;
             this.RedirectUris = redirectUris ?? throw new global::System.ArgumentNullException(nameof(redirectUris));
-            this.Scope = scope ?? throw new global::System.ArgumentNullException(nameof(scope));
-            this.ClientSecret = clientSecret;
             this.ClientName = clientName;
             this.ClientUri = clientUri;
             this.LogoUri = logoUri;
+            this.Scope = scope ?? throw new global::System.ArgumentNullException(nameof(scope));
             this.GrantTypes = grantTypes;
             this.Contacts = contacts;
             this.TokenEndpointAuthMethod = tokenEndpointAuthMethod;

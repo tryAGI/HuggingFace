@@ -47,8 +47,8 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name"></param>
         /// <param name="type"></param>
-        /// <param name="addedBy"></param>
         /// <param name="private"></param>
+        /// <param name="addedBy"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -60,8 +60,8 @@ namespace HuggingFace
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;
-            this.Private = @private;
             this.AddedBy = addedBy;
+            this.Private = @private;
         }
 
         /// <summary>

@@ -58,10 +58,10 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateModelsPathsInfoResponseItemSecurityFileStatus" /> class.
         /// </summary>
         /// <param name="status"></param>
-        /// <param name="jFrogScan"></param>
-        /// <param name="protectAiScan"></param>
         /// <param name="avScan"></param>
         /// <param name="pickleImportScan"></param>
+        /// <param name="jFrogScan"></param>
+        /// <param name="protectAiScan"></param>
         /// <param name="virusTotalScan"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -75,10 +75,10 @@ namespace HuggingFace
             global::HuggingFace.CreateModelsPathsInfoResponseItemSecurityFileStatusVirusTotalScan? virusTotalScan)
         {
             this.Status = status;
-            this.AvScan = avScan ?? throw new global::System.ArgumentNullException(nameof(avScan));
-            this.PickleImportScan = pickleImportScan ?? throw new global::System.ArgumentNullException(nameof(pickleImportScan));
             this.JFrogScan = jFrogScan;
             this.ProtectAiScan = protectAiScan;
+            this.AvScan = avScan ?? throw new global::System.ArgumentNullException(nameof(avScan));
+            this.PickleImportScan = pickleImportScan ?? throw new global::System.ArgumentNullException(nameof(pickleImportScan));
             this.VirusTotalScan = virusTotalScan;
         }
 

@@ -73,13 +73,13 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="EmbedRequest" /> class.
         /// </summary>
+        /// <param name="inputs"></param>
         /// <param name="dimensions">
         /// The number of dimensions that the output embeddings should have. If not set, the original<br/>
         /// shape of the representation will be returned instead.<br/>
         /// Default Value: null<br/>
         /// Example: null
         /// </param>
-        /// <param name="inputs"></param>
         /// <param name="normalize">
         /// Default Value: true<br/>
         /// Example: true
@@ -113,8 +113,8 @@ namespace HuggingFace
             bool? truncate,
             global::HuggingFace.TruncationDirection? truncationDirection)
         {
-            this.Inputs = inputs;
             this.Dimensions = dimensions;
+            this.Inputs = inputs;
             this.Normalize = normalize;
             this.PromptName = promptName;
             this.Truncate = truncate;

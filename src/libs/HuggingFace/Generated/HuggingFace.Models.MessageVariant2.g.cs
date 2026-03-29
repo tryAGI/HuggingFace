@@ -32,11 +32,11 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageVariant2" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Example: "David"
-        /// </param>
         /// <param name="role">
         /// Example: user
+        /// </param>
+        /// <param name="name">
+        /// Example: "David"
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -45,8 +45,8 @@ namespace HuggingFace
             string role,
             string? name)
         {
-            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.Name = name;
+            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
         }
 
         /// <summary>

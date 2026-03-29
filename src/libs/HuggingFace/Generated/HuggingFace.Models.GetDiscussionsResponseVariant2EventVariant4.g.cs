@@ -54,9 +54,9 @@ namespace HuggingFace
         /// </summary>
         /// <param name="id"></param>
         /// <param name="createdAt"></param>
+        /// <param name="data"></param>
         /// <param name="author"></param>
         /// <param name="type"></param>
-        /// <param name="data"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -69,9 +69,9 @@ namespace HuggingFace
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Author = author;
             this.Type = type;
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
         }
 
         /// <summary>

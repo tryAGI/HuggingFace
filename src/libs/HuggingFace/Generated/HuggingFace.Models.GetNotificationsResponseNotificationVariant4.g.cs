@@ -51,11 +51,11 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetNotificationsResponseNotificationVariant4" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="updatedAt"></param>
         /// <param name="read"></param>
-        /// <param name="discussionEventId"></param>
         /// <param name="blog"></param>
+        /// <param name="discussionEventId"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -66,11 +66,11 @@ namespace HuggingFace
             string? discussionEventId,
             string type = "community_blog")
         {
+            this.Type = type;
             this.UpdatedAt = updatedAt;
             this.Read = read;
-            this.Blog = blog ?? throw new global::System.ArgumentNullException(nameof(blog));
-            this.Type = type;
             this.DiscussionEventId = discussionEventId;
+            this.Blog = blog ?? throw new global::System.ArgumentNullException(nameof(blog));
         }
 
         /// <summary>

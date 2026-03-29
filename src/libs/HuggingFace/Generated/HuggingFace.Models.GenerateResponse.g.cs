@@ -31,10 +31,10 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GenerateResponse" /> class.
         /// </summary>
-        /// <param name="details"></param>
         /// <param name="generatedText">
         /// Example: test
         /// </param>
+        /// <param name="details"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -42,8 +42,8 @@ namespace HuggingFace
             string generatedText,
             global::HuggingFace.Details? details)
         {
-            this.GeneratedText = generatedText ?? throw new global::System.ArgumentNullException(nameof(generatedText));
             this.Details = details;
+            this.GeneratedText = generatedText ?? throw new global::System.ArgumentNullException(nameof(generatedText));
         }
 
         /// <summary>

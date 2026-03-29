@@ -93,6 +93,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateScheduledJobsRequestJobSpec" /> class.
         /// </summary>
+        /// <param name="flavor"></param>
         /// <param name="spaceId"></param>
         /// <param name="dockerImage"></param>
         /// <param name="arguments"></param>
@@ -101,7 +102,6 @@ namespace HuggingFace
         /// Default Value: {}
         /// </param>
         /// <param name="secrets"></param>
-        /// <param name="flavor"></param>
         /// <param name="arch"></param>
         /// <param name="timeoutSeconds">
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
@@ -133,13 +133,13 @@ namespace HuggingFace
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateScheduledJobsRequestJobSpecVolume>? volumes)
         {
-            this.Flavor = flavor;
             this.SpaceId = spaceId;
             this.DockerImage = dockerImage;
             this.Arguments = arguments;
             this.Command = command;
             this.Environment = environment;
             this.Secrets = secrets;
+            this.Flavor = flavor;
             this.Arch = arch;
             this.TimeoutSeconds = timeoutSeconds;
             this.Attempts = attempts;

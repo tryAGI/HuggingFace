@@ -31,8 +31,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsResponseGatingVariant3" /> class.
         /// </summary>
-        /// <param name="mode"></param>
         /// <param name="notifications"></param>
+        /// <param name="mode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace HuggingFace
             global::HuggingFace.CreateCollectionsItemsResponseGatingVariant3Notifications notifications,
             string mode = "manual")
         {
-            this.Notifications = notifications ?? throw new global::System.ArgumentNullException(nameof(notifications));
             this.Mode = mode;
+            this.Notifications = notifications ?? throw new global::System.ArgumentNullException(nameof(notifications));
         }
 
         /// <summary>

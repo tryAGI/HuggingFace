@@ -39,8 +39,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="PatchCollectionsResponseDataItemVariant3RuntimeDomain2" /> class.
         /// </summary>
         /// <param name="domain"></param>
-        /// <param name="isCustom"></param>
         /// <param name="stage"></param>
+        /// <param name="isCustom"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -50,8 +50,8 @@ namespace HuggingFace
             bool? isCustom)
         {
             this.Domain = domain ?? throw new global::System.ArgumentNullException(nameof(domain));
-            this.Stage = stage;
             this.IsCustom = isCustom;
+            this.Stage = stage;
         }
 
         /// <summary>

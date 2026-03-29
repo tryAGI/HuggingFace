@@ -42,10 +42,10 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDiscussionsResponseVariant2EventVariant4AuthorOauthApp" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="imageUrl"></param>
         /// <param name="imageData"></param>
         /// <param name="url"></param>
-        /// <param name="name"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -55,10 +55,10 @@ namespace HuggingFace
             global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4AuthorOauthAppImageData? imageData,
             string? url)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.ImageUrl = imageUrl;
             this.ImageData = imageData;
             this.Url = url;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
         }
 
         /// <summary>

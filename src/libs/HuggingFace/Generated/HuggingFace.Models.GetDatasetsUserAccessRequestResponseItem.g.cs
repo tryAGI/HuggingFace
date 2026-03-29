@@ -51,11 +51,11 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDatasetsUserAccessRequestResponseItem" /> class.
         /// </summary>
+        /// <param name="status"></param>
+        /// <param name="timestamp"></param>
         /// <param name="user"></param>
         /// <param name="grantedBy"></param>
-        /// <param name="status"></param>
         /// <param name="fields"></param>
-        /// <param name="timestamp"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -66,11 +66,11 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>? grantedBy,
             global::System.Collections.Generic.Dictionary<string, string>? fields)
         {
-            this.Status = status;
-            this.Timestamp = timestamp;
             this.User = user;
             this.GrantedBy = grantedBy;
+            this.Status = status;
             this.Fields = fields;
+            this.Timestamp = timestamp;
         }
 
         /// <summary>

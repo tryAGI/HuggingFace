@@ -105,11 +105,11 @@ namespace HuggingFace
         /// <param name="isHf"></param>
         /// <param name="isHfAdmin"></param>
         /// <param name="isMod"></param>
-        /// <param name="followerCount"></param>
-        /// <param name="type"></param>
         /// <param name="isPro"></param>
+        /// <param name="followerCount"></param>
         /// <param name="isUserFollowing"></param>
         /// <param name="primaryOrg"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -134,9 +134,9 @@ namespace HuggingFace
             this.IsHf = isHf;
             this.IsHfAdmin = isHfAdmin;
             this.IsMod = isMod;
-            this.IsPro = isPro;
             this.FollowerCount = followerCount;
             this.Type = type;
+            this.IsPro = isPro;
             this.IsUserFollowing = isUserFollowing;
             this.PrimaryOrg = primaryOrg;
         }

@@ -77,13 +77,13 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetSettingsWebhooksResponseWebhook" /> class.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="disabled"></param>
+        /// <param name="watched"></param>
+        /// <param name="domains"></param>
         /// <param name="url"></param>
         /// <param name="job"></param>
         /// <param name="jobSourceId"></param>
-        /// <param name="disabled"></param>
-        /// <param name="watched"></param>
         /// <param name="secret"></param>
-        /// <param name="domains"></param>
         /// <param name="lastTriggerAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -100,13 +100,13 @@ namespace HuggingFace
             global::System.DateTime? lastTriggerAt)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Disabled = disabled;
-            this.Watched = watched ?? throw new global::System.ArgumentNullException(nameof(watched));
-            this.Domains = domains ?? throw new global::System.ArgumentNullException(nameof(domains));
             this.Url = url;
             this.Job = job;
             this.JobSourceId = jobSourceId;
+            this.Disabled = disabled;
+            this.Watched = watched ?? throw new global::System.ArgumentNullException(nameof(watched));
             this.Secret = secret;
+            this.Domains = domains ?? throw new global::System.ArgumentNullException(nameof(domains));
             this.LastTriggerAt = lastTriggerAt;
         }
 

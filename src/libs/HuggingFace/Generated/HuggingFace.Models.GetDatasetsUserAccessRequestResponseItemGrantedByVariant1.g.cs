@@ -144,11 +144,11 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetDatasetsUserAccessRequestResponseItemGrantedByVariant1" /> class.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="orgs"></param>
         /// <param name="avatarUrl"></param>
         /// <param name="fullname"></param>
         /// <param name="isPro"></param>
         /// <param name="user"></param>
+        /// <param name="orgs"></param>
         /// <param name="numModels"></param>
         /// <param name="numDatasets"></param>
         /// <param name="numSpaces"></param>
@@ -161,8 +161,8 @@ namespace HuggingFace
         /// <param name="details"></param>
         /// <param name="isFollowing"></param>
         /// <param name="reasonToFollow"></param>
-        /// <param name="type"></param>
         /// <param name="email"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -189,11 +189,11 @@ namespace HuggingFace
             string type = "user")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Orgs = orgs;
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
             this.IsPro = isPro;
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
-            this.Orgs = orgs;
             this.NumModels = numModels;
             this.NumDatasets = numDatasets;
             this.NumSpaces = numSpaces;
