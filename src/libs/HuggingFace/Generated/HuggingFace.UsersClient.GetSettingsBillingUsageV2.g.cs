@@ -42,8 +42,8 @@ namespace HuggingFace
                 path: "/api/settings/billing/usage-v2",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
-                .AddRequiredParameter("startDate", startDate.ToString())
-                .AddRequiredParameter("endDate", endDate.ToString()) 
+                .AddRequiredParameter("startDate", startDate.ToString()!)
+                .AddRequiredParameter("endDate", endDate.ToString()!) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
