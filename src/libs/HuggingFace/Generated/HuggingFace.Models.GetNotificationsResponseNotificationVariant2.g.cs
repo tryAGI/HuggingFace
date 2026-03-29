@@ -58,12 +58,12 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetNotificationsResponseNotificationVariant2" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="updatedAt"></param>
         /// <param name="read"></param>
-        /// <param name="discussionEventId"></param>
         /// <param name="repo"></param>
         /// <param name="discussion"></param>
+        /// <param name="discussionEventId"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -75,12 +75,12 @@ namespace HuggingFace
             string? discussionEventId,
             string type = "repo")
         {
+            this.Type = type;
             this.UpdatedAt = updatedAt;
             this.Read = read;
+            this.DiscussionEventId = discussionEventId;
             this.Repo = repo ?? throw new global::System.ArgumentNullException(nameof(repo));
             this.Discussion = discussion ?? throw new global::System.ArgumentNullException(nameof(discussion));
-            this.Type = type;
-            this.DiscussionEventId = discussionEventId;
         }
 
         /// <summary>

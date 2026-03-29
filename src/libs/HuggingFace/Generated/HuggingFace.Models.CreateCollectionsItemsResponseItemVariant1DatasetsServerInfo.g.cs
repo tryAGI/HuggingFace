@@ -53,10 +53,10 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsResponseItemVariant1DatasetsServerInfo" /> class.
         /// </summary>
         /// <param name="viewer"></param>
-        /// <param name="numRows"></param>
         /// <param name="libraries"></param>
         /// <param name="formats"></param>
         /// <param name="modalities"></param>
+        /// <param name="numRows"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -68,10 +68,10 @@ namespace HuggingFace
             double? numRows)
         {
             this.Viewer = viewer;
+            this.NumRows = numRows;
             this.Libraries = libraries ?? throw new global::System.ArgumentNullException(nameof(libraries));
             this.Formats = formats ?? throw new global::System.ArgumentNullException(nameof(formats));
             this.Modalities = modalities ?? throw new global::System.ArgumentNullException(nameof(modalities));
-            this.NumRows = numRows;
         }
 
         /// <summary>

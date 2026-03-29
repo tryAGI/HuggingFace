@@ -81,10 +81,10 @@ namespace HuggingFace
         /// <param name="modelId"></param>
         /// <param name="author"></param>
         /// <param name="value"></param>
+        /// <param name="filename"></param>
         /// <param name="verified"></param>
         /// <param name="source"></param>
         /// <param name="pullRequest"></param>
-        /// <param name="filename"></param>
         /// <param name="notes"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -104,10 +104,10 @@ namespace HuggingFace
             this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
             this.Author = author;
             this.Value = value;
-            this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
             this.Verified = verified;
             this.Source = source;
             this.PullRequest = pullRequest;
+            this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
             this.Notes = notes;
         }
 

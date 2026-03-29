@@ -102,7 +102,6 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetDiscussionsResponseDiscussion" /> class.
         /// </summary>
         /// <param name="num"></param>
-        /// <param name="author"></param>
         /// <param name="repo"></param>
         /// <param name="title"></param>
         /// <param name="createdAt"></param>
@@ -112,6 +111,7 @@ namespace HuggingFace
         /// <param name="numComments"></param>
         /// <param name="numReactionUsers"></param>
         /// <param name="pinned"></param>
+        /// <param name="author"></param>
         /// <param name="repoOwner"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -131,6 +131,7 @@ namespace HuggingFace
             global::HuggingFace.GetDiscussionsResponseDiscussionRepoOwner? repoOwner)
         {
             this.Num = num;
+            this.Author = author;
             this.Repo = repo ?? throw new global::System.ArgumentNullException(nameof(repo));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.CreatedAt = createdAt;
@@ -140,7 +141,6 @@ namespace HuggingFace
             this.NumComments = numComments;
             this.NumReactionUsers = numReactionUsers;
             this.Pinned = pinned;
-            this.Author = author;
             this.RepoOwner = repoOwner;
         }
 

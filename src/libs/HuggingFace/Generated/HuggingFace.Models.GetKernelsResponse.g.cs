@@ -107,11 +107,11 @@ namespace HuggingFace
         /// <param name="lastModified"></param>
         /// <param name="likes"></param>
         /// <param name="private"></param>
-        /// <param name="repoType"></param>
         /// <param name="gated"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="authorData"></param>
         /// <param name="files"></param>
+        /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -136,8 +136,8 @@ namespace HuggingFace
             this.LastModified = lastModified;
             this.Likes = likes;
             this.Private = @private;
-            this.Gated = gated;
             this.RepoType = repoType;
+            this.Gated = gated;
             this.ResourceGroup = resourceGroup;
             this.AuthorData = authorData;
             this.Files = files;

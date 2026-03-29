@@ -38,10 +38,10 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateOrganizationsScimProvisioningV2GroupsRequest" /> class.
         /// </summary>
         /// <param name="displayName"></param>
-        /// <param name="externalId"></param>
         /// <param name="members">
         /// Array of SCIM user ids
         /// </param>
+        /// <param name="externalId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -51,8 +51,8 @@ namespace HuggingFace
             string? externalId)
         {
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
-            this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
             this.ExternalId = externalId;
+            this.Members = members ?? throw new global::System.ArgumentNullException(nameof(members));
         }
 
         /// <summary>

@@ -38,10 +38,10 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="PutOrganizationsScimProvisioningV2UsersRequest" /> class.
         /// </summary>
         /// <param name="schemas"></param>
+        /// <param name="externalId"></param>
         /// <param name="active">
         /// Default Value: true
         /// </param>
-        /// <param name="externalId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -51,8 +51,8 @@ namespace HuggingFace
             bool? active)
         {
             this.Schemas = schemas ?? throw new global::System.ArgumentNullException(nameof(schemas));
-            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
             this.Active = active;
+            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
         }
 
         /// <summary>

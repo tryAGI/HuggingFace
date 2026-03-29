@@ -38,8 +38,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateQuicksearchResponseDataset" /> class.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="private"></param>
         /// <param name="trendingWeight"></param>
+        /// <param name="private"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,8 +49,8 @@ namespace HuggingFace
             bool? @private)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.TrendingWeight = trendingWeight;
             this.Private = @private;
+            this.TrendingWeight = trendingWeight;
         }
 
         /// <summary>

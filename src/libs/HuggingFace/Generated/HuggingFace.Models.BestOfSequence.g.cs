@@ -79,10 +79,10 @@ namespace HuggingFace
         /// Example: 1
         /// </param>
         /// <param name="prefill"></param>
+        /// <param name="tokens"></param>
         /// <param name="seed">
         /// Example: 42
         /// </param>
-        /// <param name="tokens"></param>
         /// <param name="topTokens"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -100,8 +100,8 @@ namespace HuggingFace
             this.GeneratedText = generatedText ?? throw new global::System.ArgumentNullException(nameof(generatedText));
             this.GeneratedTokens = generatedTokens;
             this.Prefill = prefill ?? throw new global::System.ArgumentNullException(nameof(prefill));
-            this.Tokens = tokens ?? throw new global::System.ArgumentNullException(nameof(tokens));
             this.Seed = seed;
+            this.Tokens = tokens ?? throw new global::System.ArgumentNullException(nameof(tokens));
             this.TopTokens = topTokens;
         }
 

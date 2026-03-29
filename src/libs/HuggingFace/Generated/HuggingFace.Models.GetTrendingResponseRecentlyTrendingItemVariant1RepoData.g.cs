@@ -103,14 +103,14 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="isLikedByUser"></param>
         /// <param name="likes"></param>
-        /// <param name="datasetsServerInfo"></param>
         /// <param name="private"></param>
-        /// <param name="repoType"></param>
         /// <param name="downloads"></param>
         /// <param name="gated"></param>
         /// <param name="lastModified"></param>
+        /// <param name="datasetsServerInfo"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="isBenchmark"></param>
+        /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -132,12 +132,12 @@ namespace HuggingFace
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.IsLikedByUser = isLikedByUser;
             this.Likes = likes;
+            this.DatasetsServerInfo = datasetsServerInfo;
             this.Private = @private;
+            this.RepoType = repoType;
             this.Downloads = downloads;
             this.Gated = gated;
             this.LastModified = lastModified;
-            this.DatasetsServerInfo = datasetsServerInfo;
-            this.RepoType = repoType;
             this.ResourceGroup = resourceGroup;
             this.IsBenchmark = isBenchmark;
         }

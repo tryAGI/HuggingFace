@@ -137,13 +137,6 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="Info" /> class.
         /// </summary>
         /// <param name="autoTruncate"></param>
-        /// <param name="dockerLabel">
-        /// Example: null
-        /// </param>
-        /// <param name="maxBatchRequests">
-        /// Default Value: null<br/>
-        /// Example: null
-        /// </param>
         /// <param name="maxBatchTokens">
         /// Example: 2048
         /// </param>
@@ -164,15 +157,9 @@ namespace HuggingFace
         /// Model info<br/>
         /// Example: thenlper/gte-base
         /// </param>
-        /// <param name="modelSha">
-        /// Example: fca14538aa9956a46526bd1d0d11d69e19b5a101
-        /// </param>
         /// <param name="modelType"></param>
         /// <param name="servedModelName">
         /// Example: thenlper/gte-base
-        /// </param>
-        /// <param name="sha">
-        /// Example: null
         /// </param>
         /// <param name="tokenizationWorkers">
         /// Example: 4
@@ -180,6 +167,19 @@ namespace HuggingFace
         /// <param name="version">
         /// Router Info<br/>
         /// Example: 0.5.0
+        /// </param>
+        /// <param name="dockerLabel">
+        /// Example: null
+        /// </param>
+        /// <param name="maxBatchRequests">
+        /// Default Value: null<br/>
+        /// Example: null
+        /// </param>
+        /// <param name="modelSha">
+        /// Example: fca14538aa9956a46526bd1d0d11d69e19b5a101
+        /// </param>
+        /// <param name="sha">
+        /// Example: null
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -202,20 +202,20 @@ namespace HuggingFace
             string? sha)
         {
             this.AutoTruncate = autoTruncate;
+            this.DockerLabel = dockerLabel;
+            this.MaxBatchRequests = maxBatchRequests;
             this.MaxBatchTokens = maxBatchTokens;
             this.MaxClientBatchSize = maxClientBatchSize;
             this.MaxConcurrentRequests = maxConcurrentRequests;
             this.MaxInputLength = maxInputLength;
             this.ModelDtype = modelDtype ?? throw new global::System.ArgumentNullException(nameof(modelDtype));
             this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
+            this.ModelSha = modelSha;
             this.ModelType = modelType;
             this.ServedModelName = servedModelName ?? throw new global::System.ArgumentNullException(nameof(servedModelName));
+            this.Sha = sha;
             this.TokenizationWorkers = tokenizationWorkers;
             this.Version = version ?? throw new global::System.ArgumentNullException(nameof(version));
-            this.DockerLabel = dockerLabel;
-            this.MaxBatchRequests = maxBatchRequests;
-            this.ModelSha = modelSha;
-            this.Sha = sha;
         }
 
         /// <summary>

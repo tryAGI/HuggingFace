@@ -31,8 +31,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsResponseItemVariant3RuntimeReplicas2" /> class.
         /// </summary>
-        /// <param name="current"></param>
         /// <param name="requested"></param>
+        /// <param name="current"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<double?, string> requested,
             double? current)
         {
-            this.Requested = requested;
             this.Current = current;
+            this.Requested = requested;
         }
 
         /// <summary>

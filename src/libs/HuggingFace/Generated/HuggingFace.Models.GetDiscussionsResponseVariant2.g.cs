@@ -121,22 +121,22 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetDiscussionsResponseVariant2" /> class.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="num"></param>
-        /// <param name="author"></param>
-        /// <param name="org"></param>
-        /// <param name="repo"></param>
         /// <param name="title"></param>
-        /// <param name="createdAt"></param>
         /// <param name="status"></param>
         /// <param name="events"></param>
         /// <param name="pinned"></param>
         /// <param name="locked"></param>
-        /// <param name="collection"></param>
-        /// <param name="isPullRequest"></param>
         /// <param name="filesWithConflicts">
         /// The list of files with conflicts. `true` means there are conflicts but we cannot list them.
         /// </param>
         /// <param name="changes"></param>
+        /// <param name="num"></param>
+        /// <param name="author"></param>
+        /// <param name="org"></param>
+        /// <param name="repo"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="collection"></param>
+        /// <param name="isPullRequest"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -158,20 +158,20 @@ namespace HuggingFace
             string isPullRequest = "True")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Status = status;
-            this.Events = events ?? throw new global::System.ArgumentNullException(nameof(events));
-            this.Pinned = pinned;
-            this.Locked = locked;
-            this.FilesWithConflicts = filesWithConflicts;
-            this.Changes = changes ?? throw new global::System.ArgumentNullException(nameof(changes));
             this.Num = num;
             this.Author = author;
             this.Org = org;
             this.Repo = repo;
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.CreatedAt = createdAt;
+            this.Status = status;
+            this.Events = events ?? throw new global::System.ArgumentNullException(nameof(events));
+            this.Pinned = pinned;
+            this.Locked = locked;
             this.Collection = collection;
             this.IsPullRequest = isPullRequest;
+            this.FilesWithConflicts = filesWithConflicts;
+            this.Changes = changes ?? throw new global::System.ArgumentNullException(nameof(changes));
         }
 
         /// <summary>

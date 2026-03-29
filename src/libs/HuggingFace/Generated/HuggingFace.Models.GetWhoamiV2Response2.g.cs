@@ -105,18 +105,18 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetWhoamiV2Response2" /> class.
         /// </summary>
         /// <param name="auth"></param>
-        /// <param name="type"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="fullname"></param>
+        /// <param name="avatarUrl"></param>
+        /// <param name="isPro"></param>
+        /// <param name="orgs"></param>
         /// <param name="email"></param>
         /// <param name="canPay"></param>
         /// <param name="billingMode"></param>
-        /// <param name="avatarUrl"></param>
         /// <param name="periodEnd"></param>
         /// <param name="emailVerified"></param>
-        /// <param name="isPro"></param>
-        /// <param name="orgs"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -136,18 +136,18 @@ namespace HuggingFace
             string type = "user")
         {
             this.Auth = auth ?? throw new global::System.ArgumentNullException(nameof(auth));
+            this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
-            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
-            this.IsPro = isPro;
-            this.Orgs = orgs ?? throw new global::System.ArgumentNullException(nameof(orgs));
-            this.Type = type;
             this.Email = email;
             this.CanPay = canPay;
             this.BillingMode = billingMode;
+            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.PeriodEnd = periodEnd;
             this.EmailVerified = emailVerified;
+            this.IsPro = isPro;
+            this.Orgs = orgs ?? throw new global::System.ArgumentNullException(nameof(orgs));
         }
 
         /// <summary>

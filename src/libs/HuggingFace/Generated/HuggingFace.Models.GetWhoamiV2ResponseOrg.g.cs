@@ -119,14 +119,13 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWhoamiV2ResponseOrg" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="fullname"></param>
+        /// <param name="avatarUrl"></param>
         /// <param name="email"></param>
         /// <param name="canPay"></param>
         /// <param name="billingMode"></param>
-        /// <param name="avatarUrl"></param>
         /// <param name="periodEnd"></param>
         /// <param name="plan"></param>
         /// <param name="roleInOrg"></param>
@@ -134,6 +133,7 @@ namespace HuggingFace
         /// Current security restrictions for accessing data in this organization with current authentication method
         /// </param>
         /// <param name="resourceGroups"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -152,14 +152,14 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroup>? resourceGroups,
             string type = "org")
         {
+            this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
-            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
-            this.Type = type;
             this.Email = email;
             this.CanPay = canPay;
             this.BillingMode = billingMode;
+            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.PeriodEnd = periodEnd;
             this.Plan = plan;
             this.RoleInOrg = roleInOrg;

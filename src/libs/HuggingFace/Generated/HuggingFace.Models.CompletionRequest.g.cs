@@ -103,6 +103,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CompletionRequest" /> class.
         /// </summary>
+        /// <param name="prompt"></param>
         /// <param name="frequencyPenalty">
         /// Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far,<br/>
         /// decreasing the model's likelihood to repeat the same line verbatim.<br/>
@@ -118,7 +119,6 @@ namespace HuggingFace
         /// ID of the model to use. See the model endpoint compatibility table for details on which models work with the Chat API.<br/>
         /// Example: mistralai/Mistral-7B-Instruct-v0.2
         /// </param>
-        /// <param name="prompt"></param>
         /// <param name="repetitionPenalty"></param>
         /// <param name="seed">
         /// Example: 42
@@ -158,10 +158,10 @@ namespace HuggingFace
             float? temperature,
             float? topP)
         {
-            this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
             this.FrequencyPenalty = frequencyPenalty;
             this.MaxTokens = maxTokens;
             this.Model = model;
+            this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
             this.RepetitionPenalty = repetitionPenalty;
             this.Seed = seed;
             this.Stop = stop;

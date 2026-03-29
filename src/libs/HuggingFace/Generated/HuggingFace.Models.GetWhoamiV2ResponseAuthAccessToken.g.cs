@@ -47,8 +47,8 @@ namespace HuggingFace
         /// </summary>
         /// <param name="displayName"></param>
         /// <param name="role"></param>
-        /// <param name="fineGrained"></param>
         /// <param name="createdAt"></param>
+        /// <param name="fineGrained"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -60,8 +60,8 @@ namespace HuggingFace
         {
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
             this.Role = role;
-            this.CreatedAt = createdAt;
             this.FineGrained = fineGrained;
+            this.CreatedAt = createdAt;
         }
 
         /// <summary>

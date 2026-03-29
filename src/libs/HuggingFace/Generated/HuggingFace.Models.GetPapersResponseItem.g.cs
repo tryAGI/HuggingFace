@@ -93,9 +93,9 @@ namespace HuggingFace
         /// <param name="title"></param>
         /// <param name="upvotes"></param>
         /// <param name="publishedAt"></param>
-        /// <param name="thumbnailUrl"></param>
         /// <param name="authors"></param>
         /// <param name="summary"></param>
+        /// <param name="thumbnailUrl"></param>
         /// <param name="projectPage"></param>
         /// <param name="githubRepo"></param>
         /// <param name="aiSummary"></param>
@@ -120,9 +120,9 @@ namespace HuggingFace
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Upvotes = upvotes;
             this.PublishedAt = publishedAt;
+            this.ThumbnailUrl = thumbnailUrl;
             this.Authors = authors ?? throw new global::System.ArgumentNullException(nameof(authors));
             this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
-            this.ThumbnailUrl = thumbnailUrl;
             this.ProjectPage = projectPage;
             this.GithubRepo = githubRepo;
             this.AiSummary = aiSummary;

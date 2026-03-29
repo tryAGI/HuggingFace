@@ -98,17 +98,17 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetSettingsBillingUsageResponseUsageItem" /> class.
         /// </summary>
         /// <param name="entityId"></param>
-        /// <param name="label"></param>
         /// <param name="product"></param>
         /// <param name="quantity"></param>
-        /// <param name="startedAt"></param>
-        /// <param name="stoppedAt"></param>
-        /// <param name="freeGrant"></param>
         /// <param name="productPrettyName"></param>
-        /// <param name="unitLabel"></param>
         /// <param name="totalCostMicroUSD"></param>
         /// <param name="unitCostMicroUSD"></param>
         /// <param name="active"></param>
+        /// <param name="label"></param>
+        /// <param name="startedAt"></param>
+        /// <param name="stoppedAt"></param>
+        /// <param name="freeGrant"></param>
+        /// <param name="unitLabel"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -127,17 +127,17 @@ namespace HuggingFace
             string? unitLabel)
         {
             this.EntityId = entityId ?? throw new global::System.ArgumentNullException(nameof(entityId));
+            this.Label = label;
             this.Product = product;
             this.Quantity = quantity;
-            this.ProductPrettyName = productPrettyName ?? throw new global::System.ArgumentNullException(nameof(productPrettyName));
-            this.TotalCostMicroUSD = totalCostMicroUSD;
-            this.UnitCostMicroUSD = unitCostMicroUSD;
-            this.Active = active;
-            this.Label = label;
             this.StartedAt = startedAt;
             this.StoppedAt = stoppedAt;
             this.FreeGrant = freeGrant;
+            this.ProductPrettyName = productPrettyName ?? throw new global::System.ArgumentNullException(nameof(productPrettyName));
             this.UnitLabel = unitLabel;
+            this.TotalCostMicroUSD = totalCostMicroUSD;
+            this.UnitCostMicroUSD = unitCostMicroUSD;
+            this.Active = active;
         }
 
         /// <summary>

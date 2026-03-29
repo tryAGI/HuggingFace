@@ -79,9 +79,9 @@ namespace HuggingFace
         /// <param name="dueDate"></param>
         /// <param name="usageAtChargeTimeMicroUSD"></param>
         /// <param name="amountCents"></param>
-        /// <param name="billedThrough"></param>
         /// <param name="paymentIntentId"></param>
         /// <param name="paymentIntentStatus"></param>
+        /// <param name="billedThrough"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -100,9 +100,9 @@ namespace HuggingFace
             this.DueDate = dueDate;
             this.UsageAtChargeTimeMicroUSD = usageAtChargeTimeMicroUSD;
             this.AmountCents = amountCents;
+            this.BilledThrough = billedThrough;
             this.PaymentIntentId = paymentIntentId ?? throw new global::System.ArgumentNullException(nameof(paymentIntentId));
             this.PaymentIntentStatus = paymentIntentStatus;
-            this.BilledThrough = billedThrough;
         }
 
         /// <summary>

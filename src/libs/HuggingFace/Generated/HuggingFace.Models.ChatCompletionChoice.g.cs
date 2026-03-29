@@ -45,8 +45,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="ChatCompletionChoice" /> class.
         /// </summary>
         /// <param name="delta"></param>
-        /// <param name="finishReason"></param>
         /// <param name="index"></param>
+        /// <param name="finishReason"></param>
         /// <param name="logprobs"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,8 +58,8 @@ namespace HuggingFace
             global::HuggingFace.ChatCompletionLogprobs? logprobs)
         {
             this.Delta = delta;
-            this.Index = index;
             this.FinishReason = finishReason;
+            this.Index = index;
             this.Logprobs = logprobs;
         }
 

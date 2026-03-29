@@ -32,8 +32,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateOrganizationsResourceGroupsResponseAutoJoinVariant1" /> class.
         /// </summary>
-        /// <param name="enabled"></param>
         /// <param name="role"></param>
+        /// <param name="enabled"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -41,8 +41,8 @@ namespace HuggingFace
             global::HuggingFace.CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Role role,
             string enabled = "True")
         {
-            this.Role = role;
             this.Enabled = enabled;
+            this.Role = role;
         }
 
         /// <summary>

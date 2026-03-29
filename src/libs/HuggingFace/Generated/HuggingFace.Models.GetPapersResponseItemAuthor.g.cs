@@ -58,12 +58,12 @@ namespace HuggingFace
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name"></param>
+        /// <param name="hidden"></param>
         /// <param name="status"></param>
         /// <param name="statusLastChangedAt"></param>
         /// <param name="user">
         /// User overview information
         /// </param>
-        /// <param name="hidden"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,10 +77,10 @@ namespace HuggingFace
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Hidden = hidden;
             this.Status = status;
             this.StatusLastChangedAt = statusLastChangedAt;
             this.User = user;
+            this.Hidden = hidden;
         }
 
         /// <summary>

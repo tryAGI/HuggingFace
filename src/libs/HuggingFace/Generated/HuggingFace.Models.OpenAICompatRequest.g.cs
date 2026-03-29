@@ -54,6 +54,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenAICompatRequest" /> class.
         /// </summary>
+        /// <param name="input"></param>
         /// <param name="dimensions">
         /// Default Value: null<br/>
         /// Example: null
@@ -61,7 +62,6 @@ namespace HuggingFace
         /// <param name="encodingFormat">
         /// Default Value: float
         /// </param>
-        /// <param name="input"></param>
         /// <param name="model">
         /// Example: null
         /// </param>
@@ -78,9 +78,9 @@ namespace HuggingFace
             string? model,
             string? user)
         {
-            this.Input = input;
             this.Dimensions = dimensions;
             this.EncodingFormat = encodingFormat;
+            this.Input = input;
             this.Model = model;
             this.User = user;
         }

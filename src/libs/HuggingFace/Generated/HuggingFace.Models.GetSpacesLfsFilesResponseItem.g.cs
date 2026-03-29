@@ -69,12 +69,12 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSpacesLfsFilesResponseItem" /> class.
         /// </summary>
-        /// <param name="pusher"></param>
-        /// <param name="ref"></param>
         /// <param name="fileOid"></param>
         /// <param name="oid"></param>
         /// <param name="size"></param>
         /// <param name="pushedAt"></param>
+        /// <param name="pusher"></param>
+        /// <param name="ref"></param>
         /// <param name="filename">
         /// Potential filename of the LFS file
         /// </param>
@@ -92,12 +92,12 @@ namespace HuggingFace
             string? filename,
             string? xetHash)
         {
+            this.Pusher = pusher;
+            this.Ref = @ref;
             this.FileOid = fileOid ?? throw new global::System.ArgumentNullException(nameof(fileOid));
             this.Oid = oid ?? throw new global::System.ArgumentNullException(nameof(oid));
             this.Size = size;
             this.PushedAt = pushedAt;
-            this.Pusher = pusher;
-            this.Ref = @ref;
             this.Filename = filename;
             this.XetHash = xetHash;
         }

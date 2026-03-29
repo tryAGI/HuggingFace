@@ -92,10 +92,10 @@ namespace HuggingFace
         /// <param name="suspend"></param>
         /// <param name="concurrency"></param>
         /// <param name="status"></param>
-        /// <param name="type"></param>
         /// <param name="owner"></param>
-        /// <param name="initiator"></param>
         /// <param name="jobSpec"></param>
+        /// <param name="initiator"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -117,10 +117,10 @@ namespace HuggingFace
             this.Suspend = suspend;
             this.Concurrency = concurrency;
             this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
-            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
-            this.JobSpec = jobSpec ?? throw new global::System.ArgumentNullException(nameof(jobSpec));
             this.Type = type;
+            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.Initiator = initiator;
+            this.JobSpec = jobSpec ?? throw new global::System.ArgumentNullException(nameof(jobSpec));
         }
 
         /// <summary>

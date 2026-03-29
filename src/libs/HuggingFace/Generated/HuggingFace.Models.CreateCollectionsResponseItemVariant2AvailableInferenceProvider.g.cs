@@ -112,12 +112,12 @@ namespace HuggingFace
         /// <param name="modelStatus"></param>
         /// <param name="providerId"></param>
         /// <param name="task"></param>
-        /// <param name="adapterType"></param>
-        /// <param name="adapterWeightsPath"></param>
-        /// <param name="features"></param>
         /// <param name="isCheapestPricingOutput"></param>
         /// <param name="isFastestThroughput"></param>
         /// <param name="isModelAuthor"></param>
+        /// <param name="adapterType"></param>
+        /// <param name="adapterWeightsPath"></param>
+        /// <param name="features"></param>
         /// <param name="tokensPerSecond"></param>
         /// <param name="pricingOutput"></param>
 #if NET7_0_OR_GREATER
@@ -143,12 +143,12 @@ namespace HuggingFace
             this.ModelStatus = modelStatus;
             this.ProviderId = providerId ?? throw new global::System.ArgumentNullException(nameof(providerId));
             this.Task = task;
-            this.IsCheapestPricingOutput = isCheapestPricingOutput;
-            this.IsFastestThroughput = isFastestThroughput;
-            this.IsModelAuthor = isModelAuthor;
             this.AdapterType = adapterType;
             this.AdapterWeightsPath = adapterWeightsPath;
             this.Features = features;
+            this.IsCheapestPricingOutput = isCheapestPricingOutput;
+            this.IsFastestThroughput = isFastestThroughput;
+            this.IsModelAuthor = isModelAuthor;
             this.TokensPerSecond = tokensPerSecond;
             this.PricingOutput = pricingOutput;
         }

@@ -76,10 +76,10 @@ namespace HuggingFace
         /// <param name="prettyName"></param>
         /// <param name="cpu"></param>
         /// <param name="ram"></param>
-        /// <param name="accelerator"></param>
         /// <param name="unitCostMicroUSD"></param>
         /// <param name="unitCostUSD"></param>
         /// <param name="unitLabel"></param>
+        /// <param name="accelerator"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -97,10 +97,10 @@ namespace HuggingFace
             this.PrettyName = prettyName ?? throw new global::System.ArgumentNullException(nameof(prettyName));
             this.Cpu = cpu ?? throw new global::System.ArgumentNullException(nameof(cpu));
             this.Ram = ram ?? throw new global::System.ArgumentNullException(nameof(ram));
+            this.Accelerator = accelerator;
             this.UnitCostMicroUSD = unitCostMicroUSD;
             this.UnitCostUSD = unitCostUSD;
             this.UnitLabel = unitLabel ?? throw new global::System.ArgumentNullException(nameof(unitLabel));
-            this.Accelerator = accelerator;
         }
 
         /// <summary>

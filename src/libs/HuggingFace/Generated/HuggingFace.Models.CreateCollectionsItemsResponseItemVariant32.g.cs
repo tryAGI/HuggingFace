@@ -211,21 +211,21 @@ namespace HuggingFace
         /// <param name="likes"></param>
         /// <param name="pinned"></param>
         /// <param name="private"></param>
-        /// <param name="repoType"></param>
         /// <param name="title"></param>
-        /// <param name="sdk"></param>
         /// <param name="runtime"></param>
+        /// <param name="tags"></param>
+        /// <param name="featured"></param>
+        /// <param name="visibility"></param>
+        /// <param name="sdk"></param>
         /// <param name="originRepo"></param>
         /// <param name="aiShortDescription"></param>
         /// <param name="aiCategory"></param>
         /// <param name="trendingScore"></param>
         /// <param name="resourceGroup"></param>
-        /// <param name="tags"></param>
         /// <param name="authorData"></param>
         /// <param name="shortDescription"></param>
         /// <param name="semanticRelevancyScore"></param>
-        /// <param name="featured"></param>
-        /// <param name="visibility"></param>
+        /// <param name="repoType"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -270,21 +270,21 @@ namespace HuggingFace
             this.Likes = likes;
             this.Pinned = pinned;
             this.Private = @private;
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.Runtime = runtime ?? throw new global::System.ArgumentNullException(nameof(runtime));
-            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
-            this.Featured = featured;
-            this.Visibility = visibility;
             this.RepoType = repoType;
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Sdk = sdk;
+            this.Runtime = runtime ?? throw new global::System.ArgumentNullException(nameof(runtime));
             this.OriginRepo = originRepo;
             this.AiShortDescription = aiShortDescription;
             this.AiCategory = aiCategory;
             this.TrendingScore = trendingScore;
             this.ResourceGroup = resourceGroup;
+            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
             this.AuthorData = authorData;
             this.ShortDescription = shortDescription;
             this.SemanticRelevancyScore = semanticRelevancyScore;
+            this.Featured = featured;
+            this.Visibility = visibility;
             this.Type = type;
         }
 

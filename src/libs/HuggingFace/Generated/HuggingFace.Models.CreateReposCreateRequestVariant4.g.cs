@@ -82,7 +82,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateReposCreateRequestVariant4" /> class.
         /// </summary>
-        /// <param name="type"></param>
+        /// <param name="sdk"></param>
         /// <param name="template"></param>
         /// <param name="shortDescription"></param>
         /// <param name="hardware">
@@ -95,9 +95,9 @@ namespace HuggingFace
         /// Default Value: []
         /// </param>
         /// <param name="sleepTimeSeconds"></param>
-        /// <param name="sdk"></param>
         /// <param name="sdkVersion"></param>
         /// <param name="devModeEnabled"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -113,7 +113,6 @@ namespace HuggingFace
             bool? devModeEnabled,
             string type = "space")
         {
-            this.Sdk = sdk;
             this.Type = type;
             this.Template = template;
             this.ShortDescription = shortDescription;
@@ -121,6 +120,7 @@ namespace HuggingFace
             this.Secrets = secrets;
             this.Variables = variables;
             this.SleepTimeSeconds = sleepTimeSeconds;
+            this.Sdk = sdk;
             this.SdkVersion = sdkVersion;
             this.DevModeEnabled = devModeEnabled;
         }

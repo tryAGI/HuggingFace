@@ -100,9 +100,8 @@ namespace HuggingFace
         /// <param name="fullname"></param>
         /// <param name="isPro"></param>
         /// <param name="user"></param>
-        /// <param name="type"></param>
-        /// <param name="isFollowing"></param>
         /// <param name="id"></param>
+        /// <param name="isFollowing"></param>
         /// <param name="role"></param>
         /// <param name="resourceGroups"></param>
         /// <param name="twoFaEnabled"></param>
@@ -110,6 +109,7 @@ namespace HuggingFace
         /// The user's SSO email, if the org has a Team or Enterprise plan and the requester is an admin
         /// </param>
         /// <param name="isExternalCollaborator"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -131,9 +131,9 @@ namespace HuggingFace
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
             this.IsPro = isPro;
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
-            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Type = type;
             this.IsFollowing = isFollowing;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Role = role;
             this.ResourceGroups = resourceGroups;
             this.TwoFaEnabled = twoFaEnabled;

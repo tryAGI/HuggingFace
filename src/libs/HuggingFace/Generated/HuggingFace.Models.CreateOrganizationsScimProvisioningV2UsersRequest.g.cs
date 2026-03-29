@@ -56,11 +56,11 @@ namespace HuggingFace
         /// Username of the existing Hugging Face user
         /// </param>
         /// <param name="emails"></param>
-        /// <param name="active">
-        /// Default Value: true
-        /// </param>
         /// <param name="externalId">
         /// SSO unique identifier (SAML nameid or OIDC sub claim) - required for SSO login
+        /// </param>
+        /// <param name="active">
+        /// Default Value: true
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -75,8 +75,8 @@ namespace HuggingFace
             this.Schemas = schemas ?? throw new global::System.ArgumentNullException(nameof(schemas));
             this.UserName = userName ?? throw new global::System.ArgumentNullException(nameof(userName));
             this.Emails = emails ?? throw new global::System.ArgumentNullException(nameof(emails));
-            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
             this.Active = active;
+            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
         }
 
         /// <summary>

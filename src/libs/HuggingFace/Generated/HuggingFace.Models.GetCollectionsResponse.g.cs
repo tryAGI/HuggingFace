@@ -112,7 +112,6 @@ namespace HuggingFace
         /// </summary>
         /// <param name="slug"></param>
         /// <param name="title"></param>
-        /// <param name="description"></param>
         /// <param name="lastUpdated"></param>
         /// <param name="gating"></param>
         /// <param name="owner"></param>
@@ -123,6 +122,7 @@ namespace HuggingFace
         /// <param name="shareUrl"></param>
         /// <param name="isUpvotedByUser"></param>
         /// <param name="items"></param>
+        /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -143,6 +143,7 @@ namespace HuggingFace
         {
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.Description = description;
             this.LastUpdated = lastUpdated;
             this.Gating = gating;
             this.Owner = owner;
@@ -153,7 +154,6 @@ namespace HuggingFace
             this.ShareUrl = shareUrl ?? throw new global::System.ArgumentNullException(nameof(shareUrl));
             this.IsUpvotedByUser = isUpvotedByUser;
             this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
-            this.Description = description;
         }
 
         /// <summary>

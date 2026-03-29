@@ -31,8 +31,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GrammarTypeVariant2" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="value"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace HuggingFace
             string value,
             global::HuggingFace.GrammarTypeVariant2Type type)
         {
-            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
             this.Type = type;
+            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
         }
 
         /// <summary>

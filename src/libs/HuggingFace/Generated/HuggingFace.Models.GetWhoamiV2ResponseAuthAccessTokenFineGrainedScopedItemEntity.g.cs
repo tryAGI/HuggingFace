@@ -39,8 +39,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntity" /> class.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name"></param>
         /// <param name="type"></param>
+        /// <param name="name"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -50,8 +50,8 @@ namespace HuggingFace
             string? name)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Type = type;
             this.Name = name;
+            this.Type = type;
         }
 
         /// <summary>

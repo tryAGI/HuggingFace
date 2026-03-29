@@ -66,13 +66,13 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetOrganizationsResourceGroupsResponseItemUser" /> class.
         /// </summary>
-        /// <param name="type"></param>
         /// <param name="id"></param>
         /// <param name="fullname"></param>
         /// <param name="name"></param>
         /// <param name="avatarUrl"></param>
         /// <param name="role"></param>
         /// <param name="addedBy"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -85,12 +85,12 @@ namespace HuggingFace
             string? addedBy,
             string type = "user")
         {
+            this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.Role = role;
-            this.Type = type;
             this.AddedBy = addedBy;
         }
 

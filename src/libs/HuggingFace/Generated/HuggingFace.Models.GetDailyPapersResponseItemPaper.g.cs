@@ -122,17 +122,17 @@ namespace HuggingFace
         /// </summary>
         /// <param name="id"></param>
         /// <param name="authors"></param>
-        /// <param name="mediaUrls"></param>
         /// <param name="publishedAt"></param>
-        /// <param name="submittedOnDailyAt"></param>
         /// <param name="title"></param>
+        /// <param name="summary"></param>
+        /// <param name="upvotes"></param>
+        /// <param name="discussionId"></param>
+        /// <param name="mediaUrls"></param>
+        /// <param name="submittedOnDailyAt"></param>
         /// <param name="submittedOnDailyBy">
         /// User overview information
         /// </param>
-        /// <param name="summary"></param>
-        /// <param name="upvotes"></param>
         /// <param name="withdrawnAt"></param>
-        /// <param name="discussionId"></param>
         /// <param name="projectPage"></param>
         /// <param name="githubRepo"></param>
         /// <param name="aiSummary"></param>
@@ -161,15 +161,15 @@ namespace HuggingFace
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Authors = authors ?? throw new global::System.ArgumentNullException(nameof(authors));
+            this.MediaUrls = mediaUrls;
             this.PublishedAt = publishedAt;
+            this.SubmittedOnDailyAt = submittedOnDailyAt;
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.SubmittedOnDailyBy = submittedOnDailyBy;
             this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
             this.Upvotes = upvotes;
-            this.DiscussionId = discussionId ?? throw new global::System.ArgumentNullException(nameof(discussionId));
-            this.MediaUrls = mediaUrls;
-            this.SubmittedOnDailyAt = submittedOnDailyAt;
-            this.SubmittedOnDailyBy = submittedOnDailyBy;
             this.WithdrawnAt = withdrawnAt;
+            this.DiscussionId = discussionId ?? throw new global::System.ArgumentNullException(nameof(discussionId));
             this.ProjectPage = projectPage;
             this.GithubRepo = githubRepo;
             this.AiSummary = aiSummary;

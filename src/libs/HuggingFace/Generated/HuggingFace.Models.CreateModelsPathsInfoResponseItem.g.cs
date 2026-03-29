@@ -73,9 +73,9 @@ namespace HuggingFace
         /// <param name="type"></param>
         /// <param name="oid"></param>
         /// <param name="size"></param>
+        /// <param name="path"></param>
         /// <param name="lfs"></param>
         /// <param name="xetHash"></param>
-        /// <param name="path"></param>
         /// <param name="lastCommit"></param>
         /// <param name="securityFileStatus"></param>
 #if NET7_0_OR_GREATER
@@ -94,9 +94,9 @@ namespace HuggingFace
             this.Type = type;
             this.Oid = oid ?? throw new global::System.ArgumentNullException(nameof(oid));
             this.Size = size;
-            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.Lfs = lfs;
             this.XetHash = xetHash;
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.LastCommit = lastCommit;
             this.SecurityFileStatus = securityFileStatus;
         }

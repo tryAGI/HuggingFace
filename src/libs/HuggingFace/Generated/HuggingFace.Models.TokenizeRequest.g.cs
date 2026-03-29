@@ -48,11 +48,11 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenizeRequest" /> class.
         /// </summary>
+        /// <param name="inputs"></param>
         /// <param name="addSpecialTokens">
         /// Default Value: true<br/>
         /// Example: true
         /// </param>
-        /// <param name="inputs"></param>
         /// <param name="promptName">
         /// The name of the prompt that should be used by for encoding. If not set, no prompt<br/>
         /// will be applied.<br/>
@@ -72,8 +72,8 @@ namespace HuggingFace
             bool? addSpecialTokens,
             string? promptName)
         {
-            this.Inputs = inputs;
             this.AddSpecialTokens = addSpecialTokens;
+            this.Inputs = inputs;
             this.PromptName = promptName;
         }
 

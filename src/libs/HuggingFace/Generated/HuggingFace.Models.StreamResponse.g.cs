@@ -51,6 +51,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="StreamResponse" /> class.
         /// </summary>
+        /// <param name="index"></param>
+        /// <param name="token"></param>
         /// <param name="details">
         /// Default Value: null
         /// </param>
@@ -58,8 +60,6 @@ namespace HuggingFace
         /// Default Value: null<br/>
         /// Example: test
         /// </param>
-        /// <param name="index"></param>
-        /// <param name="token"></param>
         /// <param name="topTokens"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -71,10 +71,10 @@ namespace HuggingFace
             string? generatedText,
             global::System.Collections.Generic.IList<global::HuggingFace.Token>? topTokens)
         {
-            this.Index = index;
-            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.Details = details;
             this.GeneratedText = generatedText;
+            this.Index = index;
+            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
             this.TopTokens = topTokens;
         }
 

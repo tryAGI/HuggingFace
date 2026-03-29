@@ -43,11 +43,11 @@ namespace HuggingFace
         /// <param name="id">
         /// Example: 0
         /// </param>
-        /// <param name="logprob">
-        /// Example: -0.34F
-        /// </param>
         /// <param name="text">
         /// Example: test
+        /// </param>
+        /// <param name="logprob">
+        /// Example: -0.34F
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,8 +58,8 @@ namespace HuggingFace
             float? logprob)
         {
             this.Id = id;
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Logprob = logprob;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
         }
 
         /// <summary>

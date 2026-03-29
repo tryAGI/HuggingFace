@@ -61,14 +61,14 @@ namespace HuggingFace
         /// <param name="special">
         /// Example: false
         /// </param>
+        /// <param name="text">
+        /// Example: test
+        /// </param>
         /// <param name="start">
         /// Example: 0
         /// </param>
         /// <param name="stop">
         /// Example: 2
-        /// </param>
-        /// <param name="text">
-        /// Example: test
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -82,9 +82,9 @@ namespace HuggingFace
         {
             this.Id = id;
             this.Special = special;
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Start = start;
             this.Stop = stop;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
         }
 
         /// <summary>

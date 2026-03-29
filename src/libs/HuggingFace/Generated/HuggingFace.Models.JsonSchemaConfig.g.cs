@@ -30,11 +30,11 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonSchemaConfig" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Optional name identifier for the schema
-        /// </param>
         /// <param name="schema">
         /// The actual JSON schema definition
+        /// </param>
+        /// <param name="name">
+        /// Optional name identifier for the schema
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -43,8 +43,8 @@ namespace HuggingFace
             object schema,
             string? name)
         {
-            this.Schema = schema ?? throw new global::System.ArgumentNullException(nameof(schema));
             this.Name = name;
+            this.Schema = schema ?? throw new global::System.ArgumentNullException(nameof(schema));
         }
 
         /// <summary>

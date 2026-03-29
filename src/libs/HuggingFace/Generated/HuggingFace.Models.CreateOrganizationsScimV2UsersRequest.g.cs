@@ -64,11 +64,11 @@ namespace HuggingFace
         /// </param>
         /// <param name="emails"></param>
         /// <param name="name"></param>
-        /// <param name="active">
-        /// Default Value: true
-        /// </param>
         /// <param name="externalId">
         /// External ID for the user, it must be unique within the organization and is required for managed users
+        /// </param>
+        /// <param name="active">
+        /// Default Value: true
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -85,8 +85,8 @@ namespace HuggingFace
             this.UserName = userName ?? throw new global::System.ArgumentNullException(nameof(userName));
             this.Emails = emails ?? throw new global::System.ArgumentNullException(nameof(emails));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
             this.Active = active;
+            this.ExternalId = externalId ?? throw new global::System.ArgumentNullException(nameof(externalId));
         }
 
         /// <summary>

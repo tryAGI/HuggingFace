@@ -38,8 +38,8 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateReposCreateRequestVariant4Variable" /> class.
         /// </summary>
         /// <param name="key"></param>
-        /// <param name="description"></param>
         /// <param name="value"></param>
+        /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,8 +49,8 @@ namespace HuggingFace
             string? description)
         {
             this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
-            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
             this.Description = description;
+            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
         }
 
         /// <summary>

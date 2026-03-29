@@ -31,8 +31,8 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateOrganizationsScimProvisioningV2UsersResponseMeta" /> class.
         /// </summary>
-        /// <param name="resourceType"></param>
         /// <param name="location"></param>
+        /// <param name="resourceType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace HuggingFace
             string location,
             global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponseMetaResourceType resourceType)
         {
-            this.Location = location ?? throw new global::System.ArgumentNullException(nameof(location));
             this.ResourceType = resourceType;
+            this.Location = location ?? throw new global::System.ArgumentNullException(nameof(location));
         }
 
         /// <summary>
