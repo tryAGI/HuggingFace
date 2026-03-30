@@ -43,6 +43,11 @@ namespace HuggingFace
 
 
         /// <summary>
+        /// Agentic Provisioning
+        /// </summary>
+        public AgenticProvisioningClient AgenticProvisioning { get; }
+
+        /// <summary>
         /// Auth
         /// </summary>
         public AuthClient Auth { get; }

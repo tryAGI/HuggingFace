@@ -92,6 +92,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<string>? Files { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supportedDriverFamilies")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsRevisionResponseSupportedDriverFamilie>? SupportedDriverFamilies { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -111,6 +117,7 @@ namespace HuggingFace
         /// <param name="resourceGroup"></param>
         /// <param name="authorData"></param>
         /// <param name="files"></param>
+        /// <param name="supportedDriverFamilies"></param>
         /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -127,6 +134,7 @@ namespace HuggingFace
             global::HuggingFace.GetKernelsRevisionResponseResourceGroup? resourceGroup,
             global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsRevisionResponseAuthorDataVariant1, global::HuggingFace.GetKernelsRevisionResponseAuthorDataVariant2>? authorData,
             global::System.Collections.Generic.IList<string>? files,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsRevisionResponseSupportedDriverFamilie>? supportedDriverFamilies,
             string repoType = "kernel")
         {
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
@@ -141,6 +149,7 @@ namespace HuggingFace
             this.ResourceGroup = resourceGroup;
             this.AuthorData = authorData;
             this.Files = files;
+            this.SupportedDriverFamilies = supportedDriverFamilies;
         }
 
         /// <summary>

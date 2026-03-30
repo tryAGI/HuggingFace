@@ -40,6 +40,15 @@ namespace HuggingFace
 
 
         /// <summary>
+        /// Agentic Provisioning
+        /// </summary>
+        public AgenticProvisioningClient AgenticProvisioning => new AgenticProvisioningClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Auth
         /// </summary>
         public AuthClient Auth => new AuthClient(HttpClient, authorizations: Authorizations)
