@@ -39,6 +39,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Cli,
+        /// <summary>
+        /// 
+        /// </summary>
         ComputerVisionCourse,
         /// <summary>
         /// 
@@ -261,6 +265,7 @@ namespace HuggingFace
                 GetDocsSearchProduct.Autotrain => "autotrain",
                 GetDocsSearchProduct.Bitsandbytes => "bitsandbytes",
                 GetDocsSearchProduct.ChatUi => "chat-ui",
+                GetDocsSearchProduct.Cli => "cli",
                 GetDocsSearchProduct.ComputerVisionCourse => "computer-vision-course",
                 GetDocsSearchProduct.Cookbook => "cookbook",
                 GetDocsSearchProduct.DatasetViewer => "dataset-viewer",
@@ -329,6 +334,7 @@ namespace HuggingFace
                 "autotrain" => GetDocsSearchProduct.Autotrain,
                 "bitsandbytes" => GetDocsSearchProduct.Bitsandbytes,
                 "chat-ui" => GetDocsSearchProduct.ChatUi,
+                "cli" => GetDocsSearchProduct.Cli,
                 "computer-vision-course" => GetDocsSearchProduct.ComputerVisionCourse,
                 "cookbook" => GetDocsSearchProduct.Cookbook,
                 "dataset-viewer" => GetDocsSearchProduct.DatasetViewer,
