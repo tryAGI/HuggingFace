@@ -715,6 +715,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        SynthefyMigas,
+        /// <summary>
+        /// 
+        /// </summary>
         Tabpfn,
         /// <summary>
         /// 
@@ -1030,6 +1034,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Stanza => "stanza",
                 CreateQuicksearchLibrary2.Supertonic => "supertonic",
                 CreateQuicksearchLibrary2.Swarmformer => "swarmformer",
+                CreateQuicksearchLibrary2.SynthefyMigas => "synthefy-migas",
                 CreateQuicksearchLibrary2.Tabpfn => "tabpfn",
                 CreateQuicksearchLibrary2.TencentSongGeneration => "tencent-song-generation",
                 CreateQuicksearchLibrary2.Tensorflowtts => "tensorflowtts",
@@ -1248,6 +1253,7 @@ namespace HuggingFace
                 "stanza" => CreateQuicksearchLibrary2.Stanza,
                 "supertonic" => CreateQuicksearchLibrary2.Supertonic,
                 "swarmformer" => CreateQuicksearchLibrary2.Swarmformer,
+                "synthefy-migas" => CreateQuicksearchLibrary2.SynthefyMigas,
                 "tabpfn" => CreateQuicksearchLibrary2.Tabpfn,
                 "tencent-song-generation" => CreateQuicksearchLibrary2.TencentSongGeneration,
                 "tensorflowtts" => CreateQuicksearchLibrary2.Tensorflowtts,
