@@ -28,6 +28,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Running,
+        /// <summary>
+        /// 
+        /// </summary>
+        Scheduling,
     }
 
     /// <summary>
@@ -47,6 +51,7 @@ namespace HuggingFace
                 CreateScheduledJobsRunResponseStatusStage.Deleted => "DELETED",
                 CreateScheduledJobsRunResponseStatusStage.Error => "ERROR",
                 CreateScheduledJobsRunResponseStatusStage.Running => "RUNNING",
+                CreateScheduledJobsRunResponseStatusStage.Scheduling => "SCHEDULING",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -62,6 +67,7 @@ namespace HuggingFace
                 "DELETED" => CreateScheduledJobsRunResponseStatusStage.Deleted,
                 "ERROR" => CreateScheduledJobsRunResponseStatusStage.Error,
                 "RUNNING" => CreateScheduledJobsRunResponseStatusStage.Running,
+                "SCHEDULING" => CreateScheduledJobsRunResponseStatusStage.Scheduling,
                 _ => null,
             };
         }

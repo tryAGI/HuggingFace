@@ -14,7 +14,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.GetJobsCountResponse> GetJobsByNamespaceCountAsync(
             string @namespace,
-            global::HuggingFace.GetJobsCountStage? stage = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetJobsCountStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsCountStageItem>>? stage = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
