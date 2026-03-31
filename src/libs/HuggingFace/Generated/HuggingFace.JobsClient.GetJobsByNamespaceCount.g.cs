@@ -8,12 +8,12 @@ namespace HuggingFace
         partial void PrepareGetJobsByNamespaceCountArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
-            ref global::HuggingFace.GetJobsCountStage? stage);
+            ref global::HuggingFace.AnyOf<global::HuggingFace.GetJobsCountStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsCountStageItem>>? stage);
         partial void PrepareGetJobsByNamespaceCountRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
-            global::HuggingFace.GetJobsCountStage? stage);
+            global::HuggingFace.AnyOf<global::HuggingFace.GetJobsCountStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsCountStageItem>>? stage);
         partial void ProcessGetJobsByNamespaceCountResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.GetJobsCountResponse> GetJobsByNamespaceCountAsync(
             string @namespace,
-            global::HuggingFace.GetJobsCountStage? stage = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetJobsCountStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsCountStageItem>>? stage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -47,7 +47,7 @@ namespace HuggingFace
                 path: $"/api/jobs/{@namespace}/count",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
-                .AddOptionalParameter("stage", stage?.ToValueString()) 
+                .AddOptionalParameter("stage", stage?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
