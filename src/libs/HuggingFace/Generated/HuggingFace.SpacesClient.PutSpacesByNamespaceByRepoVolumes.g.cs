@@ -3,49 +3,54 @@
 
 namespace HuggingFace
 {
-    public partial class AgenticProvisioningClient
+    public partial class SpacesClient
     {
-        partial void PrepareCreateAgenticProvisioningDeepLinksArguments(
+        partial void PreparePutSpacesByNamespaceByRepoVolumesArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.CreateAgenticProvisioningDeepLinksRequest request);
-        partial void PrepareCreateAgenticProvisioningDeepLinksRequest(
+            ref string @namespace,
+            ref string repo,
+            global::HuggingFace.PutSpacesVolumesRequest request);
+        partial void PreparePutSpacesByNamespaceByRepoVolumesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.CreateAgenticProvisioningDeepLinksRequest request);
-        partial void ProcessCreateAgenticProvisioningDeepLinksResponse(
+            string @namespace,
+            string repo,
+            global::HuggingFace.PutSpacesVolumesRequest request);
+        partial void ProcessPutSpacesByNamespaceByRepoVolumesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateAgenticProvisioningDeepLinksResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// (not implemented yet) Create a deep link
+        /// Set Space volumes
         /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse> CreateAgenticProvisioningDeepLinksAsync(
+        public async global::System.Threading.Tasks.Task PutSpacesByNamespaceByRepoVolumesAsync(
+            string @namespace,
+            string repo,
 
-            global::HuggingFace.CreateAgenticProvisioningDeepLinksRequest request,
+            global::HuggingFace.PutSpacesVolumesRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateAgenticProvisioningDeepLinksArguments(
+            PreparePutSpacesByNamespaceByRepoVolumesArguments(
                 httpClient: HttpClient,
+                @namespace: ref @namespace,
+                repo: ref repo,
                 request: request);
 
             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                path: "/api/agentic/provisioning/deep_links",
+                path: $"/api/spaces/{@namespace}/{repo}/volumes",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Post,
+                method: global::System.Net.Http.HttpMethod.Put,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -77,9 +82,11 @@ namespace HuggingFace
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareCreateAgenticProvisioningDeepLinksRequest(
+            PreparePutSpacesByNamespaceByRepoVolumesRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
+                @namespace: @namespace,
+                repo: repo,
                 request: request);
 
             using var __response = await HttpClient.SendAsync(
@@ -90,47 +97,9 @@ namespace HuggingFace
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessCreateAgenticProvisioningDeepLinksResponse(
+            ProcessPutSpacesByNamespaceByRepoVolumesResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-            // Deep link error
-            if ((int)__response.StatusCode == 400)
-            {
-                string? __content_400 = null;
-                global::System.Exception? __exception_400 = null;
-                global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse2? __value_400 = null;
-                try
-                {
-                    if (ReadResponseAsString)
-                    {
-                        __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse2.FromJson(__content_400, JsonSerializerContext);
-                    }
-                    else
-                    {
-                        __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-                        __value_400 = global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse2.FromJson(__content_400, JsonSerializerContext);
-                    }
-                }
-                catch (global::System.Exception __ex)
-                {
-                    __exception_400 = __ex;
-                }
-
-                throw new global::HuggingFace.ApiException<global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse2>(
-                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_400,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content_400,
-                    ResponseObject = __value_400,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
 
             if (ReadResponseAsString)
             {
@@ -144,18 +113,11 @@ namespace HuggingFace
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessCreateAgenticProvisioningDeepLinksResponseContent(
-                    httpClient: HttpClient,
-                    httpResponseMessage: __response,
-                    content: ref __content);
 
                 try
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse.FromJson(__content, JsonSerializerContext) ??
-                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -184,9 +146,6 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -218,21 +177,27 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// (not implemented yet) Create a deep link
+        /// Set Space volumes
         /// </summary>
-        /// <param name="purpose"></param>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="volumes"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateAgenticProvisioningDeepLinksResponse> CreateAgenticProvisioningDeepLinksAsync(
-            string purpose,
+        public async global::System.Threading.Tasks.Task PutSpacesByNamespaceByRepoVolumesAsync(
+            string @namespace,
+            string repo,
+            global::System.Collections.Generic.IList<global::HuggingFace.PutSpacesVolumesRequestVolume> volumes,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateAgenticProvisioningDeepLinksRequest
+            var __request = new global::HuggingFace.PutSpacesVolumesRequest
             {
-                Purpose = purpose,
+                Volumes = volumes,
             };
 
-            return await CreateAgenticProvisioningDeepLinksAsync(
+            await PutSpacesByNamespaceByRepoVolumesAsync(
+                @namespace: @namespace,
+                repo: repo,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
         }

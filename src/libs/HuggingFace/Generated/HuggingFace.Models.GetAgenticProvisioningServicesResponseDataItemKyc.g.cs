@@ -13,7 +13,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("required_fields")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> RequiredFields { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKycRequiredField> RequiredFields { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,7 +29,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetAgenticProvisioningServicesResponseDataItemKyc(
-            global::System.Collections.Generic.IList<string> requiredFields)
+            global::System.Collections.Generic.IList<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKycRequiredField> requiredFields)
         {
             this.RequiredFields = requiredFields ?? throw new global::System.ArgumentNullException(nameof(requiredFields));
         }

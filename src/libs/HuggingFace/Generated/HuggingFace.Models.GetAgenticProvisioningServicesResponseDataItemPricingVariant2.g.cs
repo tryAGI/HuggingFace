@@ -19,8 +19,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paid")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant2>?, global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2>>>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2Paid Paid { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant2>?, global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2>>> Paid { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,11 +38,11 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetAgenticProvisioningServicesResponseDataItemPricingVariant2(
-            global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2Paid paid,
+            global::HuggingFace.AnyOf<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant2>?, global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2>>> paid,
             string type = "paid")
         {
             this.Type = type;
-            this.Paid = paid ?? throw new global::System.ArgumentNullException(nameof(paid));
+            this.Paid = paid;
         }
 
         /// <summary>

@@ -32,10 +32,17 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("kind")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetAgenticProvisioningServicesResponseDataItemKindJsonConverter))]
+        public global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKind? Kind { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pricing")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2> Pricing { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3> Pricing { get; set; }
 
         /// <summary>
         /// 
@@ -74,6 +81,7 @@ namespace HuggingFace
         /// <param name="description"></param>
         /// <param name="categories"></param>
         /// <param name="pricing"></param>
+        /// <param name="kind"></param>
         /// <param name="group"></param>
         /// <param name="kyc"></param>
         /// <param name="configurationSchema"></param>
@@ -85,7 +93,8 @@ namespace HuggingFace
             string id,
             string description,
             global::System.Collections.Generic.IList<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemCategorie> categories,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2> pricing,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3> pricing,
+            global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKind? kind,
             string? group,
             global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKyc? kyc,
             global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemConfigurationSchema? configurationSchema,
@@ -94,6 +103,7 @@ namespace HuggingFace
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.Categories = categories ?? throw new global::System.ArgumentNullException(nameof(categories));
+            this.Kind = kind;
             this.Pricing = pricing;
             this.Group = group;
             this.Kyc = kyc;
