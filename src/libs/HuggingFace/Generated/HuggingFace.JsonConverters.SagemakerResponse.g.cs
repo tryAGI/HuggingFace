@@ -167,19 +167,19 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.GenerateResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.GenerateResponse?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.GenerateResponse).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Generate, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Generate!, typeInfo);
             }
             else if (value.IsChatCompletion)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ChatCompletion), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ChatCompletion?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ChatCompletion).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ChatCompletion, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ChatCompletion!, typeInfo);
             }
             else if (value.IsCompletionFinal)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.CompletionFinal), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.CompletionFinal?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.CompletionFinal).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CompletionFinal, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CompletionFinal!, typeInfo);
             }
         }
     }

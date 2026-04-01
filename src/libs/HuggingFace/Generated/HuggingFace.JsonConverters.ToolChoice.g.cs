@@ -187,25 +187,25 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ToolChoiceVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ToolChoiceVariant1> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ToolChoiceVariant1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!.Value, typeInfo);
             }
             else if (value.IsValue2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ToolChoiceVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ToolChoiceVariant2> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ToolChoiceVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2!.Value, typeInfo);
             }
             else if (value.IsValue3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ToolChoiceVariant3), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ToolChoiceVariant3> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ToolChoiceVariant3).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value3, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value3!.Value, typeInfo);
             }
             else if (value.IsValue4)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ToolChoiceVariant4), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ToolChoiceVariant4?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ToolChoiceVariant4).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value4, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value4!, typeInfo);
             }
         }
     }

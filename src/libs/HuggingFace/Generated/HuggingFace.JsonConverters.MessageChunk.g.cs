@@ -124,13 +124,13 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageChunkVariant1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text!, typeInfo);
             }
             else if (value.IsImageUrl)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageChunkVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageUrl, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageUrl!, typeInfo);
             }
         }
     }

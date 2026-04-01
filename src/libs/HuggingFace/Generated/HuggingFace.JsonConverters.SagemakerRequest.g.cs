@@ -186,19 +186,19 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.CompatGenerateRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.CompatGenerateRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.CompatGenerateRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CompatGenerate, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CompatGenerate!, typeInfo);
             }
             else if (value.IsChat)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ChatRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ChatRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Chat, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Chat!, typeInfo);
             }
             else if (value.IsCompletion)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.CompletionRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.CompletionRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.CompletionRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Completion, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Completion!, typeInfo);
             }
         }
     }

@@ -29,7 +29,6 @@ namespace HuggingFace
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
-
             request = new global::HuggingFace.ChatRequest
             {
                 FrequencyPenalty = request.FrequencyPenalty,
