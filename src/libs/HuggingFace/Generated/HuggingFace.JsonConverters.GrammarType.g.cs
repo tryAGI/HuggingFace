@@ -159,19 +159,19 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.GrammarTypeVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.GrammarTypeVariant1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.GrammarTypeVariant1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Json, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Json!, typeInfo);
             }
             else if (value.IsRegex)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.GrammarTypeVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.GrammarTypeVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.GrammarTypeVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Regex, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Regex!, typeInfo);
             }
             else if (value.IsJsonSchema)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.GrammarTypeVariant3), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.GrammarTypeVariant3?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.GrammarTypeVariant3).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.JsonSchema, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.JsonSchema!, typeInfo);
             }
         }
     }

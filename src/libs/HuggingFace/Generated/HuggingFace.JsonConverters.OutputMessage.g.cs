@@ -125,13 +125,13 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.TextMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.TextMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.TextMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text!, typeInfo);
             }
             else if (value.IsToolCall)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ToolCallMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ToolCallMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ToolCallMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolCall, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolCall!, typeInfo);
             }
         }
     }
