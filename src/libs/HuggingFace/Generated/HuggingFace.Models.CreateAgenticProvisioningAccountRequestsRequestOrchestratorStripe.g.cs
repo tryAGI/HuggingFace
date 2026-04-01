@@ -11,9 +11,8 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("organisation")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Organisation { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
+        public string? Organization { get; set; }
 
         /// <summary>
         /// 
@@ -31,16 +30,16 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAgenticProvisioningAccountRequestsRequestOrchestratorStripe" /> class.
         /// </summary>
-        /// <param name="organisation"></param>
         /// <param name="account"></param>
+        /// <param name="organization"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateAgenticProvisioningAccountRequestsRequestOrchestratorStripe(
-            string organisation,
-            string account)
+            string account,
+            string? organization)
         {
-            this.Organisation = organisation ?? throw new global::System.ArgumentNullException(nameof(organisation));
+            this.Organization = organization;
             this.Account = account ?? throw new global::System.ArgumentNullException(nameof(account));
         }
 

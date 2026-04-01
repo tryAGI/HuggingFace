@@ -2,7 +2,7 @@
 
 namespace HuggingFace
 {
-    public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType
+    public sealed partial class PutSpacesVolumesRequest
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -34,14 +34,14 @@ namespace HuggingFace
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType? FromJson(
+        public static global::HuggingFace.PutSpacesVolumesRequest? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType),
-                jsonSerializerContext) as global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType;
+                typeof(global::HuggingFace.PutSpacesVolumesRequest),
+                jsonSerializerContext) as global::HuggingFace.PutSpacesVolumesRequest;
         }
 
         /// <summary>
@@ -51,11 +51,11 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType? FromJson(
+        public static global::HuggingFace.PutSpacesVolumesRequest? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::HuggingFace.PutSpacesVolumesRequest>(
                 json,
                 jsonSerializerOptions);
         }
@@ -63,14 +63,14 @@ namespace HuggingFace
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::HuggingFace.PutSpacesVolumesRequest?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType),
-                jsonSerializerContext).ConfigureAwait(false)) as global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType;
+                typeof(global::HuggingFace.PutSpacesVolumesRequest),
+                jsonSerializerContext).ConfigureAwait(false)) as global::HuggingFace.PutSpacesVolumesRequest;
         }
 
         /// <summary>
@@ -80,11 +80,11 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.PutSpacesVolumesRequest?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HuggingFace.PutSpacesVolumesRequest?>(
                 jsonStream,
                 jsonSerializerOptions);
         }

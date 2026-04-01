@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidType
+    public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant2Configuration
     {
 
         /// <summary>
