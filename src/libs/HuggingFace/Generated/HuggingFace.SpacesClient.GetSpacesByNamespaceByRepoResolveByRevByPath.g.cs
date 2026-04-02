@@ -142,13 +142,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_302 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_302 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
+                        __value_302 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_302, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_302 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_302 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
+                        __value_302 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_302, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -180,13 +180,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_304 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_304 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
+                        __value_304 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_304, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_304 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_304 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
+                        __value_304 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_304, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -218,13 +218,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_307 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_307 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
+                        __value_307 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_307, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_307 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_307 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
+                        __value_307 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_307, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -268,7 +268,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.GetSpacesResolveResponse.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.GetSpacesResolveResponse.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -299,7 +299,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.GetSpacesResolveResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.GetSpacesResolveResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

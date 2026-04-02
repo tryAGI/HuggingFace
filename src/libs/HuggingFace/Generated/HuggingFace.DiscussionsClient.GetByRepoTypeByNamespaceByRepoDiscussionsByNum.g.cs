@@ -125,7 +125,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>.FromJson(__content, JsonSerializerContext) ??
+                        global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -156,7 +156,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
