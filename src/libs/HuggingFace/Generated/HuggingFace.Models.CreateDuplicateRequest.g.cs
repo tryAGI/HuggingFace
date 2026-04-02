@@ -61,6 +61,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVariable>? Variables { get; set; }
 
         /// <summary>
+        /// HuggingFace Buckets or Repos to mount as volumes in the duplicated Space.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVolume>? Volumes { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -81,6 +87,9 @@ namespace HuggingFace
         /// <param name="variables">
         /// Default Value: []
         /// </param>
+        /// <param name="volumes">
+        /// HuggingFace Buckets or Repos to mount as volumes in the duplicated Space.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -92,7 +101,8 @@ namespace HuggingFace
             global::HuggingFace.CreateDuplicateRequestHardware? hardware,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestSecret>? secrets,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVariable>? variables)
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVariable>? variables,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVolume>? volumes)
         {
             this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
             this.Private = @private;
@@ -102,6 +112,7 @@ namespace HuggingFace
             this.SleepTimeSeconds = sleepTimeSeconds;
             this.Secrets = secrets;
             this.Variables = variables;
+            this.Volumes = volumes;
         }
 
         /// <summary>
