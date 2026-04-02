@@ -13,52 +13,52 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.ModelTypeVariant1? Value1 { get; init; }
+        public global::HuggingFace.ModelTypeVariant1? ModelTypeVariant1 { get; init; }
 #else
-        public global::HuggingFace.ModelTypeVariant1? Value1 { get; }
+        public global::HuggingFace.ModelTypeVariant1? ModelTypeVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelTypeVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsModelTypeVariant1 => ModelTypeVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.ModelTypeVariant2? Value2 { get; init; }
+        public global::HuggingFace.ModelTypeVariant2? ModelTypeVariant2 { get; init; }
 #else
-        public global::HuggingFace.ModelTypeVariant2? Value2 { get; }
+        public global::HuggingFace.ModelTypeVariant2? ModelTypeVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelTypeVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsModelTypeVariant2 => ModelTypeVariant2 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.ModelTypeVariant3? Value3 { get; init; }
+        public global::HuggingFace.ModelTypeVariant3? ModelTypeVariant3 { get; init; }
 #else
-        public global::HuggingFace.ModelTypeVariant3? Value3 { get; }
+        public global::HuggingFace.ModelTypeVariant3? ModelTypeVariant3 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelTypeVariant3))]
 #endif
-        public bool IsValue3 => Value3 != null;
+        public bool IsModelTypeVariant3 => ModelTypeVariant3 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -67,14 +67,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.ModelTypeVariant1?(ModelType @this) => @this.Value1;
+        public static implicit operator global::HuggingFace.ModelTypeVariant1?(ModelType @this) => @this.ModelTypeVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelType(global::HuggingFace.ModelTypeVariant1? value)
         {
-            Value1 = value;
+            ModelTypeVariant1 = value;
         }
 
         /// <summary>
@@ -85,14 +85,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.ModelTypeVariant2?(ModelType @this) => @this.Value2;
+        public static implicit operator global::HuggingFace.ModelTypeVariant2?(ModelType @this) => @this.ModelTypeVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelType(global::HuggingFace.ModelTypeVariant2? value)
         {
-            Value2 = value;
+            ModelTypeVariant2 = value;
         }
 
         /// <summary>
@@ -103,46 +103,46 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.ModelTypeVariant3?(ModelType @this) => @this.Value3;
+        public static implicit operator global::HuggingFace.ModelTypeVariant3?(ModelType @this) => @this.ModelTypeVariant3;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelType(global::HuggingFace.ModelTypeVariant3? value)
         {
-            Value3 = value;
+            ModelTypeVariant3 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public ModelType(
-            global::HuggingFace.ModelTypeVariant1? value1,
-            global::HuggingFace.ModelTypeVariant2? value2,
-            global::HuggingFace.ModelTypeVariant3? value3
+            global::HuggingFace.ModelTypeVariant1? modelTypeVariant1,
+            global::HuggingFace.ModelTypeVariant2? modelTypeVariant2,
+            global::HuggingFace.ModelTypeVariant3? modelTypeVariant3
             )
         {
-            Value1 = value1;
-            Value2 = value2;
-            Value3 = value3;
+            ModelTypeVariant1 = modelTypeVariant1;
+            ModelTypeVariant2 = modelTypeVariant2;
+            ModelTypeVariant3 = modelTypeVariant3;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value3 as object ??
-            Value2 as object ??
-            Value1 as object 
+            ModelTypeVariant3 as object ??
+            ModelTypeVariant2 as object ??
+            ModelTypeVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() ??
-            Value3?.ToString() 
+            ModelTypeVariant1?.ToString() ??
+            ModelTypeVariant2?.ToString() ??
+            ModelTypeVariant3?.ToString() 
             ;
 
         /// <summary>
@@ -150,16 +150,16 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 && !IsValue3 || !IsValue1 && IsValue2 && !IsValue3 || !IsValue1 && !IsValue2 && IsValue3;
+            return IsModelTypeVariant1 && !IsModelTypeVariant2 && !IsModelTypeVariant3 || !IsModelTypeVariant1 && IsModelTypeVariant2 && !IsModelTypeVariant3 || !IsModelTypeVariant1 && !IsModelTypeVariant2 && IsModelTypeVariant3;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.ModelTypeVariant1?, TResult>? value1 = null,
-            global::System.Func<global::HuggingFace.ModelTypeVariant2?, TResult>? value2 = null,
-            global::System.Func<global::HuggingFace.ModelTypeVariant3?, TResult>? value3 = null,
+            global::System.Func<global::HuggingFace.ModelTypeVariant1?, TResult>? modelTypeVariant1 = null,
+            global::System.Func<global::HuggingFace.ModelTypeVariant2?, TResult>? modelTypeVariant2 = null,
+            global::System.Func<global::HuggingFace.ModelTypeVariant3?, TResult>? modelTypeVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -167,17 +167,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsModelTypeVariant1 && modelTypeVariant1 != null)
             {
-                return value1(Value1!);
+                return modelTypeVariant1(ModelTypeVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsModelTypeVariant2 && modelTypeVariant2 != null)
             {
-                return value2(Value2!);
+                return modelTypeVariant2(ModelTypeVariant2!);
             }
-            else if (IsValue3 && value3 != null)
+            else if (IsModelTypeVariant3 && modelTypeVariant3 != null)
             {
-                return value3(Value3!);
+                return modelTypeVariant3(ModelTypeVariant3!);
             }
 
             return default(TResult);
@@ -187,9 +187,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.ModelTypeVariant1?>? value1 = null,
-            global::System.Action<global::HuggingFace.ModelTypeVariant2?>? value2 = null,
-            global::System.Action<global::HuggingFace.ModelTypeVariant3?>? value3 = null,
+            global::System.Action<global::HuggingFace.ModelTypeVariant1?>? modelTypeVariant1 = null,
+            global::System.Action<global::HuggingFace.ModelTypeVariant2?>? modelTypeVariant2 = null,
+            global::System.Action<global::HuggingFace.ModelTypeVariant3?>? modelTypeVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -197,17 +197,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsModelTypeVariant1)
             {
-                value1?.Invoke(Value1!);
+                modelTypeVariant1?.Invoke(ModelTypeVariant1!);
             }
-            else if (IsValue2)
+            else if (IsModelTypeVariant2)
             {
-                value2?.Invoke(Value2!);
+                modelTypeVariant2?.Invoke(ModelTypeVariant2!);
             }
-            else if (IsValue3)
+            else if (IsModelTypeVariant3)
             {
-                value3?.Invoke(Value3!);
+                modelTypeVariant3?.Invoke(ModelTypeVariant3!);
             }
         }
 
@@ -218,11 +218,11 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                ModelTypeVariant1,
                 typeof(global::HuggingFace.ModelTypeVariant1),
-                Value2,
+                ModelTypeVariant2,
                 typeof(global::HuggingFace.ModelTypeVariant2),
-                Value3,
+                ModelTypeVariant3,
                 typeof(global::HuggingFace.ModelTypeVariant3),
             };
             const int offset = unchecked((int)2166136261);
@@ -240,9 +240,9 @@ namespace HuggingFace
         public bool Equals(ModelType other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ModelTypeVariant1?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ModelTypeVariant2?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ModelTypeVariant3?>.Default.Equals(Value3, other.Value3) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ModelTypeVariant1?>.Default.Equals(ModelTypeVariant1, other.ModelTypeVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ModelTypeVariant2?>.Default.Equals(ModelTypeVariant2, other.ModelTypeVariant2) &&
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ModelTypeVariant3?>.Default.Equals(ModelTypeVariant3, other.ModelTypeVariant3) 
                 ;
         }
 

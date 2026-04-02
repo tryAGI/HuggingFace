@@ -13,35 +13,35 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<float>? Value1 { get; init; }
+        public global::System.Collections.Generic.IList<float>? EmbeddingVariant1 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<float>? Value1 { get; }
+        public global::System.Collections.Generic.IList<float>? EmbeddingVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsEmbeddingVariant1 => EmbeddingVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value2 { get; init; }
+        public string? EmbeddingVariant2 { get; init; }
 #else
-        public string? Value2 { get; }
+        public string? EmbeddingVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsEmbeddingVariant2 => EmbeddingVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,42 +50,42 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(Embedding @this) => @this.Value2;
+        public static implicit operator string?(Embedding @this) => @this.EmbeddingVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public Embedding(string? value)
         {
-            Value2 = value;
+            EmbeddingVariant2 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public Embedding(
-            global::System.Collections.Generic.IList<float>? value1,
-            string? value2
+            global::System.Collections.Generic.IList<float>? embeddingVariant1,
+            string? embeddingVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            EmbeddingVariant1 = embeddingVariant1;
+            EmbeddingVariant2 = embeddingVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            EmbeddingVariant2 as object ??
+            EmbeddingVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            EmbeddingVariant1?.ToString() ??
+            EmbeddingVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -93,15 +93,15 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 || !IsValue1 && IsValue2;
+            return IsEmbeddingVariant1 && !IsEmbeddingVariant2 || !IsEmbeddingVariant1 && IsEmbeddingVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.IList<float>?, TResult>? value1 = null,
-            global::System.Func<string?, TResult>? value2 = null,
+            global::System.Func<global::System.Collections.Generic.IList<float>?, TResult>? embeddingVariant1 = null,
+            global::System.Func<string?, TResult>? embeddingVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -109,13 +109,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsEmbeddingVariant1 && embeddingVariant1 != null)
             {
-                return value1(Value1!);
+                return embeddingVariant1(EmbeddingVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsEmbeddingVariant2 && embeddingVariant2 != null)
             {
-                return value2(Value2!);
+                return embeddingVariant2(EmbeddingVariant2!);
             }
 
             return default(TResult);
@@ -125,8 +125,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.IList<float>?>? value1 = null,
-            global::System.Action<string?>? value2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<float>?>? embeddingVariant1 = null,
+            global::System.Action<string?>? embeddingVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -134,13 +134,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsEmbeddingVariant1)
             {
-                value1?.Invoke(Value1!);
+                embeddingVariant1?.Invoke(EmbeddingVariant1!);
             }
-            else if (IsValue2)
+            else if (IsEmbeddingVariant2)
             {
-                value2?.Invoke(Value2!);
+                embeddingVariant2?.Invoke(EmbeddingVariant2!);
             }
         }
 
@@ -151,9 +151,9 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                EmbeddingVariant1,
                 typeof(global::System.Collections.Generic.IList<float>),
-                Value2,
+                EmbeddingVariant2,
                 typeof(string),
             };
             const int offset = unchecked((int)2166136261);
@@ -171,8 +171,8 @@ namespace HuggingFace
         public bool Equals(Embedding other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<float>?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<float>?>.Default.Equals(EmbeddingVariant1, other.EmbeddingVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(EmbeddingVariant2, other.EmbeddingVariant2) 
                 ;
         }
 

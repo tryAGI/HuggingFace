@@ -14,52 +14,52 @@ namespace HuggingFace
         /// A single string
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value1 { get; init; }
+        public string? PredictInputVariant1 { get; init; }
 #else
-        public string? Value1 { get; }
+        public string? PredictInputVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictInputVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsPredictInputVariant1 => PredictInputVariant1 != null;
 
         /// <summary>
         /// A pair of strings
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<string>? Value2 { get; init; }
+        public global::System.Collections.Generic.IList<string>? PredictInputVariant2 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<string>? Value2 { get; }
+        public global::System.Collections.Generic.IList<string>? PredictInputVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictInputVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsPredictInputVariant2 => PredictInputVariant2 != null;
 
         /// <summary>
         /// A batch
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>? Value3 { get; init; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>? PredictInputVariant3 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>? Value3 { get; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>? PredictInputVariant3 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictInputVariant3))]
 #endif
-        public bool IsValue3 => Value3 != null;
+        public bool IsPredictInputVariant3 => PredictInputVariant3 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -68,46 +68,46 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(PredictInput @this) => @this.Value1;
+        public static implicit operator string?(PredictInput @this) => @this.PredictInputVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public PredictInput(string? value)
         {
-            Value1 = value;
+            PredictInputVariant1 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public PredictInput(
-            string? value1,
-            global::System.Collections.Generic.IList<string>? value2,
-            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>? value3
+            string? predictInputVariant1,
+            global::System.Collections.Generic.IList<string>? predictInputVariant2,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>? predictInputVariant3
             )
         {
-            Value1 = value1;
-            Value2 = value2;
-            Value3 = value3;
+            PredictInputVariant1 = predictInputVariant1;
+            PredictInputVariant2 = predictInputVariant2;
+            PredictInputVariant3 = predictInputVariant3;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value3 as object ??
-            Value2 as object ??
-            Value1 as object 
+            PredictInputVariant3 as object ??
+            PredictInputVariant2 as object ??
+            PredictInputVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() ??
-            Value3?.ToString() 
+            PredictInputVariant1?.ToString() ??
+            PredictInputVariant2?.ToString() ??
+            PredictInputVariant3?.ToString() 
             ;
 
         /// <summary>
@@ -115,16 +115,16 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 && !IsValue3 || !IsValue1 && IsValue2 && !IsValue3 || !IsValue1 && !IsValue2 && IsValue3;
+            return IsPredictInputVariant1 && !IsPredictInputVariant2 && !IsPredictInputVariant3 || !IsPredictInputVariant1 && IsPredictInputVariant2 && !IsPredictInputVariant3 || !IsPredictInputVariant1 && !IsPredictInputVariant2 && IsPredictInputVariant3;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? value1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? value2 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>?, TResult>? value3 = null,
+            global::System.Func<string?, TResult>? predictInputVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? predictInputVariant2 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>?, TResult>? predictInputVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -132,17 +132,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsPredictInputVariant1 && predictInputVariant1 != null)
             {
-                return value1(Value1!);
+                return predictInputVariant1(PredictInputVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsPredictInputVariant2 && predictInputVariant2 != null)
             {
-                return value2(Value2!);
+                return predictInputVariant2(PredictInputVariant2!);
             }
-            else if (IsValue3 && value3 != null)
+            else if (IsPredictInputVariant3 && predictInputVariant3 != null)
             {
-                return value3(Value3!);
+                return predictInputVariant3(PredictInputVariant3!);
             }
 
             return default(TResult);
@@ -152,9 +152,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? value1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>?>? value2 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>?>? value3 = null,
+            global::System.Action<string?>? predictInputVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>?>? predictInputVariant2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>?>? predictInputVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -162,17 +162,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsPredictInputVariant1)
             {
-                value1?.Invoke(Value1!);
+                predictInputVariant1?.Invoke(PredictInputVariant1!);
             }
-            else if (IsValue2)
+            else if (IsPredictInputVariant2)
             {
-                value2?.Invoke(Value2!);
+                predictInputVariant2?.Invoke(PredictInputVariant2!);
             }
-            else if (IsValue3)
+            else if (IsPredictInputVariant3)
             {
-                value3?.Invoke(Value3!);
+                predictInputVariant3?.Invoke(PredictInputVariant3!);
             }
         }
 
@@ -183,11 +183,11 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                PredictInputVariant1,
                 typeof(string),
-                Value2,
+                PredictInputVariant2,
                 typeof(global::System.Collections.Generic.IList<string>),
-                Value3,
+                PredictInputVariant3,
                 typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>),
             };
             const int offset = unchecked((int)2166136261);
@@ -205,9 +205,9 @@ namespace HuggingFace
         public bool Equals(PredictInput other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>?>.Default.Equals(Value3, other.Value3) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(PredictInputVariant1, other.PredictInputVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(PredictInputVariant2, other.PredictInputVariant2) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>?>.Default.Equals(PredictInputVariant3, other.PredictInputVariant3) 
                 ;
         }
 

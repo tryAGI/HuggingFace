@@ -13,52 +13,52 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.StreamResponse? Value1 { get; init; }
+        public global::HuggingFace.StreamResponse? StreamResponse { get; init; }
 #else
-        public global::HuggingFace.StreamResponse? Value1 { get; }
+        public global::HuggingFace.StreamResponse? StreamResponse { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(StreamResponse))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsStreamResponse => StreamResponse != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.ChatCompletionChunk? Value2 { get; init; }
+        public global::HuggingFace.ChatCompletionChunk? ChatCompletionChunk { get; init; }
 #else
-        public global::HuggingFace.ChatCompletionChunk? Value2 { get; }
+        public global::HuggingFace.ChatCompletionChunk? ChatCompletionChunk { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletionChunk))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsChatCompletionChunk => ChatCompletionChunk != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.Chunk? Value3 { get; init; }
+        public global::HuggingFace.Chunk? Chunk { get; init; }
 #else
-        public global::HuggingFace.Chunk? Value3 { get; }
+        public global::HuggingFace.Chunk? Chunk { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Chunk))]
 #endif
-        public bool IsValue3 => Value3 != null;
+        public bool IsChunk => Chunk != null;
         /// <summary>
         /// 
         /// </summary>
@@ -67,14 +67,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.StreamResponse?(SagemakerStreamResponse @this) => @this.Value1;
+        public static implicit operator global::HuggingFace.StreamResponse?(SagemakerStreamResponse @this) => @this.StreamResponse;
 
         /// <summary>
         /// 
         /// </summary>
         public SagemakerStreamResponse(global::HuggingFace.StreamResponse? value)
         {
-            Value1 = value;
+            StreamResponse = value;
         }
 
         /// <summary>
@@ -85,14 +85,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.ChatCompletionChunk?(SagemakerStreamResponse @this) => @this.Value2;
+        public static implicit operator global::HuggingFace.ChatCompletionChunk?(SagemakerStreamResponse @this) => @this.ChatCompletionChunk;
 
         /// <summary>
         /// 
         /// </summary>
         public SagemakerStreamResponse(global::HuggingFace.ChatCompletionChunk? value)
         {
-            Value2 = value;
+            ChatCompletionChunk = value;
         }
 
         /// <summary>
@@ -103,46 +103,46 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.Chunk?(SagemakerStreamResponse @this) => @this.Value3;
+        public static implicit operator global::HuggingFace.Chunk?(SagemakerStreamResponse @this) => @this.Chunk;
 
         /// <summary>
         /// 
         /// </summary>
         public SagemakerStreamResponse(global::HuggingFace.Chunk? value)
         {
-            Value3 = value;
+            Chunk = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public SagemakerStreamResponse(
-            global::HuggingFace.StreamResponse? value1,
-            global::HuggingFace.ChatCompletionChunk? value2,
-            global::HuggingFace.Chunk? value3
+            global::HuggingFace.StreamResponse? streamResponse,
+            global::HuggingFace.ChatCompletionChunk? chatCompletionChunk,
+            global::HuggingFace.Chunk? chunk
             )
         {
-            Value1 = value1;
-            Value2 = value2;
-            Value3 = value3;
+            StreamResponse = streamResponse;
+            ChatCompletionChunk = chatCompletionChunk;
+            Chunk = chunk;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value3 as object ??
-            Value2 as object ??
-            Value1 as object 
+            Chunk as object ??
+            ChatCompletionChunk as object ??
+            StreamResponse as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() ??
-            Value3?.ToString() 
+            StreamResponse?.ToString() ??
+            ChatCompletionChunk?.ToString() ??
+            Chunk?.ToString() 
             ;
 
         /// <summary>
@@ -150,16 +150,16 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 && !IsValue3 || !IsValue1 && IsValue2 && !IsValue3 || !IsValue1 && !IsValue2 && IsValue3;
+            return IsStreamResponse && !IsChatCompletionChunk && !IsChunk || !IsStreamResponse && IsChatCompletionChunk && !IsChunk || !IsStreamResponse && !IsChatCompletionChunk && IsChunk;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.StreamResponse?, TResult>? value1 = null,
-            global::System.Func<global::HuggingFace.ChatCompletionChunk?, TResult>? value2 = null,
-            global::System.Func<global::HuggingFace.Chunk?, TResult>? value3 = null,
+            global::System.Func<global::HuggingFace.StreamResponse?, TResult>? streamResponse = null,
+            global::System.Func<global::HuggingFace.ChatCompletionChunk?, TResult>? chatCompletionChunk = null,
+            global::System.Func<global::HuggingFace.Chunk?, TResult>? chunk = null,
             bool validate = true)
         {
             if (validate)
@@ -167,17 +167,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsStreamResponse && streamResponse != null)
             {
-                return value1(Value1!);
+                return streamResponse(StreamResponse!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsChatCompletionChunk && chatCompletionChunk != null)
             {
-                return value2(Value2!);
+                return chatCompletionChunk(ChatCompletionChunk!);
             }
-            else if (IsValue3 && value3 != null)
+            else if (IsChunk && chunk != null)
             {
-                return value3(Value3!);
+                return chunk(Chunk!);
             }
 
             return default(TResult);
@@ -187,9 +187,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.StreamResponse?>? value1 = null,
-            global::System.Action<global::HuggingFace.ChatCompletionChunk?>? value2 = null,
-            global::System.Action<global::HuggingFace.Chunk?>? value3 = null,
+            global::System.Action<global::HuggingFace.StreamResponse?>? streamResponse = null,
+            global::System.Action<global::HuggingFace.ChatCompletionChunk?>? chatCompletionChunk = null,
+            global::System.Action<global::HuggingFace.Chunk?>? chunk = null,
             bool validate = true)
         {
             if (validate)
@@ -197,17 +197,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsStreamResponse)
             {
-                value1?.Invoke(Value1!);
+                streamResponse?.Invoke(StreamResponse!);
             }
-            else if (IsValue2)
+            else if (IsChatCompletionChunk)
             {
-                value2?.Invoke(Value2!);
+                chatCompletionChunk?.Invoke(ChatCompletionChunk!);
             }
-            else if (IsValue3)
+            else if (IsChunk)
             {
-                value3?.Invoke(Value3!);
+                chunk?.Invoke(Chunk!);
             }
         }
 
@@ -218,11 +218,11 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                StreamResponse,
                 typeof(global::HuggingFace.StreamResponse),
-                Value2,
+                ChatCompletionChunk,
                 typeof(global::HuggingFace.ChatCompletionChunk),
-                Value3,
+                Chunk,
                 typeof(global::HuggingFace.Chunk),
             };
             const int offset = unchecked((int)2166136261);
@@ -240,9 +240,9 @@ namespace HuggingFace
         public bool Equals(SagemakerStreamResponse other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.StreamResponse?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ChatCompletionChunk?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.Chunk?>.Default.Equals(Value3, other.Value3) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.StreamResponse?>.Default.Equals(StreamResponse, other.StreamResponse) &&
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ChatCompletionChunk?>.Default.Equals(ChatCompletionChunk, other.ChatCompletionChunk) &&
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.Chunk?>.Default.Equals(Chunk, other.Chunk) 
                 ;
         }
 

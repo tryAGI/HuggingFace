@@ -13,35 +13,35 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.MessageBodyVariant1? Value1 { get; init; }
+        public global::HuggingFace.MessageBodyVariant1? MessageBodyVariant1 { get; init; }
 #else
-        public global::HuggingFace.MessageBodyVariant1? Value1 { get; }
+        public global::HuggingFace.MessageBodyVariant1? MessageBodyVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageBodyVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsMessageBodyVariant1 => MessageBodyVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.MessageBodyVariant2? Value2 { get; init; }
+        public global::HuggingFace.MessageBodyVariant2? MessageBodyVariant2 { get; init; }
 #else
-        public global::HuggingFace.MessageBodyVariant2? Value2 { get; }
+        public global::HuggingFace.MessageBodyVariant2? MessageBodyVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageBodyVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsMessageBodyVariant2 => MessageBodyVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,14 +50,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.MessageBodyVariant1?(MessageBody @this) => @this.Value1;
+        public static implicit operator global::HuggingFace.MessageBodyVariant1?(MessageBody @this) => @this.MessageBodyVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public MessageBody(global::HuggingFace.MessageBodyVariant1? value)
         {
-            Value1 = value;
+            MessageBodyVariant1 = value;
         }
 
         /// <summary>
@@ -68,42 +68,42 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.MessageBodyVariant2?(MessageBody @this) => @this.Value2;
+        public static implicit operator global::HuggingFace.MessageBodyVariant2?(MessageBody @this) => @this.MessageBodyVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public MessageBody(global::HuggingFace.MessageBodyVariant2? value)
         {
-            Value2 = value;
+            MessageBodyVariant2 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public MessageBody(
-            global::HuggingFace.MessageBodyVariant1? value1,
-            global::HuggingFace.MessageBodyVariant2? value2
+            global::HuggingFace.MessageBodyVariant1? messageBodyVariant1,
+            global::HuggingFace.MessageBodyVariant2? messageBodyVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            MessageBodyVariant1 = messageBodyVariant1;
+            MessageBodyVariant2 = messageBodyVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            MessageBodyVariant2 as object ??
+            MessageBodyVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            MessageBodyVariant1?.ToString() ??
+            MessageBodyVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -111,15 +111,15 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 || !IsValue1 && IsValue2;
+            return IsMessageBodyVariant1 && !IsMessageBodyVariant2 || !IsMessageBodyVariant1 && IsMessageBodyVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.MessageBodyVariant1?, TResult>? value1 = null,
-            global::System.Func<global::HuggingFace.MessageBodyVariant2?, TResult>? value2 = null,
+            global::System.Func<global::HuggingFace.MessageBodyVariant1?, TResult>? messageBodyVariant1 = null,
+            global::System.Func<global::HuggingFace.MessageBodyVariant2?, TResult>? messageBodyVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -127,13 +127,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsMessageBodyVariant1 && messageBodyVariant1 != null)
             {
-                return value1(Value1!);
+                return messageBodyVariant1(MessageBodyVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsMessageBodyVariant2 && messageBodyVariant2 != null)
             {
-                return value2(Value2!);
+                return messageBodyVariant2(MessageBodyVariant2!);
             }
 
             return default(TResult);
@@ -143,8 +143,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.MessageBodyVariant1?>? value1 = null,
-            global::System.Action<global::HuggingFace.MessageBodyVariant2?>? value2 = null,
+            global::System.Action<global::HuggingFace.MessageBodyVariant1?>? messageBodyVariant1 = null,
+            global::System.Action<global::HuggingFace.MessageBodyVariant2?>? messageBodyVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -152,13 +152,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsMessageBodyVariant1)
             {
-                value1?.Invoke(Value1!);
+                messageBodyVariant1?.Invoke(MessageBodyVariant1!);
             }
-            else if (IsValue2)
+            else if (IsMessageBodyVariant2)
             {
-                value2?.Invoke(Value2!);
+                messageBodyVariant2?.Invoke(MessageBodyVariant2!);
             }
         }
 
@@ -169,9 +169,9 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                MessageBodyVariant1,
                 typeof(global::HuggingFace.MessageBodyVariant1),
-                Value2,
+                MessageBodyVariant2,
                 typeof(global::HuggingFace.MessageBodyVariant2),
             };
             const int offset = unchecked((int)2166136261);
@@ -189,8 +189,8 @@ namespace HuggingFace
         public bool Equals(MessageBody other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.MessageBodyVariant1?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.MessageBodyVariant2?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.MessageBodyVariant1?>.Default.Equals(MessageBodyVariant1, other.MessageBodyVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.MessageBodyVariant2?>.Default.Equals(MessageBodyVariant2, other.MessageBodyVariant2) 
                 ;
         }
 
