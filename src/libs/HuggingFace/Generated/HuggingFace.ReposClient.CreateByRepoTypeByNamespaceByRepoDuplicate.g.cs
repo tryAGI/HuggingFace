@@ -215,6 +215,9 @@ namespace HuggingFace
         /// <param name="variables">
         /// Default Value: []
         /// </param>
+        /// <param name="volumes">
+        /// HuggingFace Buckets or Repos to mount as volumes in the duplicated Space.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateDuplicateResponse> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
@@ -229,6 +232,7 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestSecret>? secrets = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVariable>? variables = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVolume>? volumes = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::HuggingFace.CreateDuplicateRequest
@@ -241,6 +245,7 @@ namespace HuggingFace
                 SleepTimeSeconds = sleepTimeSeconds,
                 Secrets = secrets,
                 Variables = variables,
+                Volumes = volumes,
             };
 
             return await CreateByRepoTypeByNamespaceByRepoDuplicateAsync(

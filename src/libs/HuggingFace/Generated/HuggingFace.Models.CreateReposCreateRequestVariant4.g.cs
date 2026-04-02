@@ -54,6 +54,12 @@ namespace HuggingFace
         public global::HuggingFace.AnyOf<int?, string>? SleepTimeSeconds { get; set; }
 
         /// <summary>
+        /// HuggingFace Buckets or Repos to mount as volumes in the Space container.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Volume>? Volumes { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sdk")]
@@ -95,6 +101,9 @@ namespace HuggingFace
         /// Default Value: []
         /// </param>
         /// <param name="sleepTimeSeconds"></param>
+        /// <param name="volumes">
+        /// HuggingFace Buckets or Repos to mount as volumes in the Space container.
+        /// </param>
         /// <param name="sdkVersion"></param>
         /// <param name="devModeEnabled"></param>
         /// <param name="type"></param>
@@ -109,6 +118,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Secret>? secrets,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Variable>? variables,
             global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Volume>? volumes,
             string? sdkVersion,
             bool? devModeEnabled,
             string type = "space")
@@ -120,6 +130,7 @@ namespace HuggingFace
             this.Secrets = secrets;
             this.Variables = variables;
             this.SleepTimeSeconds = sleepTimeSeconds;
+            this.Volumes = volumes;
             this.Sdk = sdk;
             this.SdkVersion = sdkVersion;
             this.DevModeEnabled = devModeEnabled;
