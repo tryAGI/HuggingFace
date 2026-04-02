@@ -40,6 +40,30 @@ namespace HuggingFace
             string rev,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetDatasetsByNamespaceByRepoXetReadTokenByRevAsResponseAsync(
+                @namespace: @namespace,
+                repo: repo,
+                rev: rev,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Xet read token<br/>
+        /// Get a read short-lived access token for XET
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="rev"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetDatasetsXetReadTokenResponse>> GetDatasetsByNamespaceByRepoXetReadTokenByRevAsResponseAsync(
+            string @namespace,
+            string repo,
+            string rev,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetDatasetsByNamespaceByRepoXetReadTokenByRevArguments(
@@ -119,9 +143,12 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::HuggingFace.GetDatasetsXetReadTokenResponse.FromJson(__content, JsonSerializerOptions) ??
+                    var __value = global::HuggingFace.GetDatasetsXetReadTokenResponse.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetDatasetsXetReadTokenResponse>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -150,9 +177,12 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::HuggingFace.GetDatasetsXetReadTokenResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::HuggingFace.GetDatasetsXetReadTokenResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetDatasetsXetReadTokenResponse>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {

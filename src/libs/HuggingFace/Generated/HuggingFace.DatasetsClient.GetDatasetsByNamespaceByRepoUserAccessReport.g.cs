@@ -36,6 +36,27 @@ namespace HuggingFace
             string repo,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetDatasetsByNamespaceByRepoUserAccessReportAsResponseAsync(
+                @namespace: @namespace,
+                repo: repo,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Export access report<br/>
+        /// Export a report of all access requests for a gated repository
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<string>> GetDatasetsByNamespaceByRepoUserAccessReportAsResponseAsync(
+            string @namespace,
+            string repo,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetDatasetsByNamespaceByRepoUserAccessReportArguments(
@@ -113,7 +134,10 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return __content;
+                    return new global::HuggingFace.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -142,7 +166,10 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    return __content;
+                    return new global::HuggingFace.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {

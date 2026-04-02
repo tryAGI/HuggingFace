@@ -70,6 +70,55 @@ namespace HuggingFace
             string? cursor = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetModelsByNamespaceByRepoTreeByRevByPathAsResponseAsync(
+                @namespace: @namespace,
+                repo: repo,
+                rev: rev,
+                path: path,
+                expand: expand,
+                recursive: recursive,
+                limit: limit,
+                cursor: cursor,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List folder content<br/>
+        /// List the content of a repository tree, with pagination support.
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="rev"></param>
+        /// <param name="path">
+        /// Wildcard path parameter
+        /// </param>
+        /// <param name="expand">
+        /// If true, returns returns associated commit data for each entry and security scanner metadata.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="recursive">
+        /// If true, returns the tree recursively.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="limit">
+        /// 1.000 by default, 100 by default for expand=true
+        /// </param>
+        /// <param name="cursor"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>>> GetModelsByNamespaceByRepoTreeByRevByPathAsResponseAsync(
+            string @namespace,
+            string repo,
+            string rev,
+            string path,
+            object? expand = default,
+            object? recursive = default,
+            int? limit = default,
+            string? cursor = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetModelsByNamespaceByRepoTreeByRevByPathArguments(
@@ -165,9 +214,12 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>?>(__content, JsonSerializerOptions) ??
+                    var __value = global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>?>(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -196,9 +248,12 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
