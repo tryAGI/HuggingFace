@@ -54,6 +54,41 @@ namespace HuggingFace
             global::System.DateTime? before = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetModelsByNamespaceByRepoUserAccessRequestByStatusAsResponseAsync(
+                @namespace: @namespace,
+                repo: repo,
+                status: status,
+                limit: limit,
+                after: after,
+                before: before,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List access requests<br/>
+        /// List access requests for a gated repository
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="status"></param>
+        /// <param name="limit">
+        /// Default Value: 1000
+        /// </param>
+        /// <param name="after"></param>
+        /// <param name="before"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>> GetModelsByNamespaceByRepoUserAccessRequestByStatusAsResponseAsync(
+            string @namespace,
+            string repo,
+            global::HuggingFace.GetModelsUserAccessRequestStatus status,
+            int? limit = default,
+            global::System.DateTime? after = default,
+            global::System.DateTime? before = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusArguments(
@@ -144,9 +179,12 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?>(__content, JsonSerializerOptions) ??
+                    var __value = global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?>(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -175,9 +213,12 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {

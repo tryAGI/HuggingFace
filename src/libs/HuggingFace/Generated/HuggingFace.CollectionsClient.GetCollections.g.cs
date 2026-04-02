@@ -61,6 +61,47 @@ namespace HuggingFace
             double? limit = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetCollectionsAsResponseAsync(
+                item: item,
+                owner: owner,
+                q: q,
+                sort: sort,
+                cursor: cursor,
+                expand: expand,
+                limit: limit,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Get collections
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="owner"></param>
+        /// <param name="q"></param>
+        /// <param name="sort">
+        /// Default Value: trending
+        /// </param>
+        /// <param name="cursor"></param>
+        /// <param name="expand">
+        /// Default Value: true
+        /// </param>
+        /// <param name="limit">
+        /// Default Value: 10
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>>> GetCollectionsAsResponseAsync(
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>? item = default,
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>? owner = default,
+            string? q = default,
+            global::HuggingFace.GetCollectionsSort? sort = default,
+            string? cursor = default,
+            object? expand = default,
+            double? limit = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetCollectionsArguments(
@@ -157,9 +198,12 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>.FromJson(__content, JsonSerializerOptions) ??
+                    var __value = global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -188,9 +232,12 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {

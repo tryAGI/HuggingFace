@@ -50,6 +50,38 @@ namespace HuggingFace
             object? xet = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetModelsByNamespaceByRepoLfsFilesAsResponseAsync(
+                @namespace: @namespace,
+                repo: repo,
+                cursor: cursor,
+                limit: limit,
+                xet: xet,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List Large files<br/>
+        /// List Xet/LFS files for a repo
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="cursor"></param>
+        /// <param name="limit">
+        /// Default Value: 1000
+        /// </param>
+        /// <param name="xet"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>>> GetModelsByNamespaceByRepoLfsFilesAsResponseAsync(
+            string @namespace,
+            string repo,
+            string? cursor = default,
+            int? limit = default,
+            object? xet = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetModelsByNamespaceByRepoLfsFilesArguments(
@@ -138,9 +170,12 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>?>(__content, JsonSerializerOptions) ??
+                    var __value = global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>?>(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -169,9 +204,12 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>>(
+                        statusCode: __response.StatusCode,
+                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
