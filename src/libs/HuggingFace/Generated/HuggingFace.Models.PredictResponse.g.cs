@@ -13,62 +13,62 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? Value1 { get; init; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? PredictResponseVariant1 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? Value1 { get; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? PredictResponseVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictResponseVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsPredictResponseVariant1 => PredictResponseVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? Value2 { get; init; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? PredictResponseVariant2 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? Value2 { get; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? PredictResponseVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictResponseVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsPredictResponseVariant2 => PredictResponseVariant2 != null;
 
         /// <summary>
         /// 
         /// </summary>
         public PredictResponse(
-            global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? value1,
-            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? value2
+            global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? predictResponseVariant1,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? predictResponseVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            PredictResponseVariant1 = predictResponseVariant1;
+            PredictResponseVariant2 = predictResponseVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            PredictResponseVariant2 as object ??
+            PredictResponseVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            PredictResponseVariant1?.ToString() ??
+            PredictResponseVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -76,15 +76,15 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 || !IsValue1 && IsValue2;
+            return IsPredictResponseVariant1 && !IsPredictResponseVariant2 || !IsPredictResponseVariant1 && IsPredictResponseVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?, TResult>? value1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?, TResult>? value2 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?, TResult>? predictResponseVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?, TResult>? predictResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -92,13 +92,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsPredictResponseVariant1 && predictResponseVariant1 != null)
             {
-                return value1(Value1!);
+                return predictResponseVariant1(PredictResponseVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsPredictResponseVariant2 && predictResponseVariant2 != null)
             {
-                return value2(Value2!);
+                return predictResponseVariant2(PredictResponseVariant2!);
             }
 
             return default(TResult);
@@ -108,8 +108,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?>? value1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?>? value2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?>? predictResponseVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?>? predictResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -117,13 +117,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsPredictResponseVariant1)
             {
-                value1?.Invoke(Value1!);
+                predictResponseVariant1?.Invoke(PredictResponseVariant1!);
             }
-            else if (IsValue2)
+            else if (IsPredictResponseVariant2)
             {
-                value2?.Invoke(Value2!);
+                predictResponseVariant2?.Invoke(PredictResponseVariant2!);
             }
         }
 
@@ -134,9 +134,9 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                PredictResponseVariant1,
                 typeof(global::System.Collections.Generic.IList<global::HuggingFace.Prediction>),
-                Value2,
+                PredictResponseVariant2,
                 typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>),
             };
             const int offset = unchecked((int)2166136261);
@@ -154,8 +154,8 @@ namespace HuggingFace
         public bool Equals(PredictResponse other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?>.Default.Equals(PredictResponseVariant1, other.PredictResponseVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?>.Default.Equals(PredictResponseVariant2, other.PredictResponseVariant2) 
                 ;
         }
 

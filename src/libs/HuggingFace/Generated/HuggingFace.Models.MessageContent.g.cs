@@ -13,35 +13,35 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value1 { get; init; }
+        public string? MessageContentVariant1 { get; init; }
 #else
-        public string? Value1 { get; }
+        public string? MessageContentVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageContentVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsMessageContentVariant1 => MessageContentVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? Value2 { get; init; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? MessageContentVariant2 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? Value2 { get; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? MessageContentVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageContentVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsMessageContentVariant2 => MessageContentVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,42 +50,42 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(MessageContent @this) => @this.Value1;
+        public static implicit operator string?(MessageContent @this) => @this.MessageContentVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public MessageContent(string? value)
         {
-            Value1 = value;
+            MessageContentVariant1 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public MessageContent(
-            string? value1,
-            global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? value2
+            string? messageContentVariant1,
+            global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? messageContentVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            MessageContentVariant1 = messageContentVariant1;
+            MessageContentVariant2 = messageContentVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            MessageContentVariant2 as object ??
+            MessageContentVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            MessageContentVariant1?.ToString() ??
+            MessageContentVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -93,15 +93,15 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 || !IsValue1 && IsValue2;
+            return IsMessageContentVariant1 && !IsMessageContentVariant2 || !IsMessageContentVariant1 && IsMessageContentVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? value1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?, TResult>? value2 = null,
+            global::System.Func<string?, TResult>? messageContentVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?, TResult>? messageContentVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -109,13 +109,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsMessageContentVariant1 && messageContentVariant1 != null)
             {
-                return value1(Value1!);
+                return messageContentVariant1(MessageContentVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsMessageContentVariant2 && messageContentVariant2 != null)
             {
-                return value2(Value2!);
+                return messageContentVariant2(MessageContentVariant2!);
             }
 
             return default(TResult);
@@ -125,8 +125,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? value1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?>? value2 = null,
+            global::System.Action<string?>? messageContentVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?>? messageContentVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -134,13 +134,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsMessageContentVariant1)
             {
-                value1?.Invoke(Value1!);
+                messageContentVariant1?.Invoke(MessageContentVariant1!);
             }
-            else if (IsValue2)
+            else if (IsMessageContentVariant2)
             {
-                value2?.Invoke(Value2!);
+                messageContentVariant2?.Invoke(MessageContentVariant2!);
             }
         }
 
@@ -151,9 +151,9 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                MessageContentVariant1,
                 typeof(string),
-                Value2,
+                MessageContentVariant2,
                 typeof(global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>),
             };
             const int offset = unchecked((int)2166136261);
@@ -171,8 +171,8 @@ namespace HuggingFace
         public bool Equals(MessageContent other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(MessageContentVariant1, other.MessageContentVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?>.Default.Equals(MessageContentVariant2, other.MessageContentVariant2) 
                 ;
         }
 

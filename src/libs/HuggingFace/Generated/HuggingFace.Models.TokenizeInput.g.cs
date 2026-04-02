@@ -13,35 +13,35 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value1 { get; init; }
+        public string? TokenizeInputVariant1 { get; init; }
 #else
-        public string? Value1 { get; }
+        public string? TokenizeInputVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TokenizeInputVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsTokenizeInputVariant1 => TokenizeInputVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<string>? Value2 { get; init; }
+        public global::System.Collections.Generic.IList<string>? TokenizeInputVariant2 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<string>? Value2 { get; }
+        public global::System.Collections.Generic.IList<string>? TokenizeInputVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TokenizeInputVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsTokenizeInputVariant2 => TokenizeInputVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,42 +50,42 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(TokenizeInput @this) => @this.Value1;
+        public static implicit operator string?(TokenizeInput @this) => @this.TokenizeInputVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public TokenizeInput(string? value)
         {
-            Value1 = value;
+            TokenizeInputVariant1 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TokenizeInput(
-            string? value1,
-            global::System.Collections.Generic.IList<string>? value2
+            string? tokenizeInputVariant1,
+            global::System.Collections.Generic.IList<string>? tokenizeInputVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            TokenizeInputVariant1 = tokenizeInputVariant1;
+            TokenizeInputVariant2 = tokenizeInputVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            TokenizeInputVariant2 as object ??
+            TokenizeInputVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            TokenizeInputVariant1?.ToString() ??
+            TokenizeInputVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -93,15 +93,15 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 || !IsValue1 && IsValue2;
+            return IsTokenizeInputVariant1 && !IsTokenizeInputVariant2 || !IsTokenizeInputVariant1 && IsTokenizeInputVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? value1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? value2 = null,
+            global::System.Func<string?, TResult>? tokenizeInputVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? tokenizeInputVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -109,13 +109,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsTokenizeInputVariant1 && tokenizeInputVariant1 != null)
             {
-                return value1(Value1!);
+                return tokenizeInputVariant1(TokenizeInputVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsTokenizeInputVariant2 && tokenizeInputVariant2 != null)
             {
-                return value2(Value2!);
+                return tokenizeInputVariant2(TokenizeInputVariant2!);
             }
 
             return default(TResult);
@@ -125,8 +125,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? value1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>?>? value2 = null,
+            global::System.Action<string?>? tokenizeInputVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>?>? tokenizeInputVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -134,13 +134,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsTokenizeInputVariant1)
             {
-                value1?.Invoke(Value1!);
+                tokenizeInputVariant1?.Invoke(TokenizeInputVariant1!);
             }
-            else if (IsValue2)
+            else if (IsTokenizeInputVariant2)
             {
-                value2?.Invoke(Value2!);
+                tokenizeInputVariant2?.Invoke(TokenizeInputVariant2!);
             }
         }
 
@@ -151,9 +151,9 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                TokenizeInputVariant1,
                 typeof(string),
-                Value2,
+                TokenizeInputVariant2,
                 typeof(global::System.Collections.Generic.IList<string>),
             };
             const int offset = unchecked((int)2166136261);
@@ -171,8 +171,8 @@ namespace HuggingFace
         public bool Equals(TokenizeInput other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(TokenizeInputVariant1, other.TokenizeInputVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(TokenizeInputVariant2, other.TokenizeInputVariant2) 
                 ;
         }
 

@@ -13,35 +13,35 @@ namespace HuggingFace
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::HuggingFace.InputType? Value1 { get; init; }
+        public global::HuggingFace.InputType? Type { get; init; }
 #else
-        public global::HuggingFace.InputType? Value1 { get; }
+        public global::HuggingFace.InputType? Type { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Type))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsType => Type != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::HuggingFace.InputType>? Value2 { get; init; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.InputType>? InputVariant2 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::HuggingFace.InputType>? Value2 { get; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.InputType>? InputVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsInputVariant2 => InputVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,42 +50,42 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::HuggingFace.InputType?(Input @this) => @this.Value1;
+        public static implicit operator global::HuggingFace.InputType?(Input @this) => @this.Type;
 
         /// <summary>
         /// 
         /// </summary>
         public Input(global::HuggingFace.InputType? value)
         {
-            Value1 = value;
+            Type = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public Input(
-            global::HuggingFace.InputType? value1,
-            global::System.Collections.Generic.IList<global::HuggingFace.InputType>? value2
+            global::HuggingFace.InputType? type,
+            global::System.Collections.Generic.IList<global::HuggingFace.InputType>? inputVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            Type = type;
+            InputVariant2 = inputVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            InputVariant2 as object ??
+            Type as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            Type?.ToString() ??
+            InputVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -93,15 +93,15 @@ namespace HuggingFace
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 || !IsValue1 && IsValue2;
+            return IsType && !IsInputVariant2 || !IsType && IsInputVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.InputType?, TResult>? value1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.InputType>?, TResult>? value2 = null,
+            global::System.Func<global::HuggingFace.InputType?, TResult>? type = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.InputType>?, TResult>? inputVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -109,13 +109,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsType && type != null)
             {
-                return value1(Value1!);
+                return type(Type!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsInputVariant2 && inputVariant2 != null)
             {
-                return value2(Value2!);
+                return inputVariant2(InputVariant2!);
             }
 
             return default(TResult);
@@ -125,8 +125,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.InputType?>? value1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.InputType>?>? value2 = null,
+            global::System.Action<global::HuggingFace.InputType?>? type = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.InputType>?>? inputVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -134,13 +134,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsType)
             {
-                value1?.Invoke(Value1!);
+                type?.Invoke(Type!);
             }
-            else if (IsValue2)
+            else if (IsInputVariant2)
             {
-                value2?.Invoke(Value2!);
+                inputVariant2?.Invoke(InputVariant2!);
             }
         }
 
@@ -151,9 +151,9 @@ namespace HuggingFace
         {
             var fields = new object?[]
             {
-                Value1,
+                Type,
                 typeof(global::HuggingFace.InputType),
-                Value2,
+                InputVariant2,
                 typeof(global::System.Collections.Generic.IList<global::HuggingFace.InputType>),
             };
             const int offset = unchecked((int)2166136261);
@@ -171,8 +171,8 @@ namespace HuggingFace
         public bool Equals(Input other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.InputType?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.InputType>?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.InputType?>.Default.Equals(Type, other.Type) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.InputType>?>.Default.Equals(InputVariant2, other.InputVariant2) 
                 ;
         }
 
