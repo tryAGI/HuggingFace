@@ -73,7 +73,7 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, JsonSerializerOptions);
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -112,13 +112,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_303 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_303 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_303, JsonSerializerOptions);
+                        __value_303 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_303, typeof(string), JsonSerializerContext);
                     }
                     else
                     {
                         __content_303 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_303 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_303, JsonSerializerOptions);
+                        __value_303 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_303, typeof(string), JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)

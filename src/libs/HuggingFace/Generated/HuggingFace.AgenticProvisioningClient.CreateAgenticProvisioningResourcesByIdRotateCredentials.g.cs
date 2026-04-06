@@ -95,13 +95,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse2.FromJson(__content_400, JsonSerializerOptions);
+                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse2.FromJson(__content_400, JsonSerializerContext);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse2.FromJson(__content_400, JsonSerializerOptions);
+                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse2.FromJson(__content_400, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -133,13 +133,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse3.FromJson(__content_404, JsonSerializerOptions);
+                        __value_404 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse3.FromJson(__content_404, JsonSerializerContext);
                     }
                     else
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_404 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse3.FromJson(__content_404, JsonSerializerOptions);
+                        __value_404 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse3.FromJson(__content_404, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -171,13 +171,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_409 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse4.FromJson(__content_409, JsonSerializerOptions);
+                        __value_409 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse4.FromJson(__content_409, JsonSerializerContext);
                     }
                     else
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_409 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse4.FromJson(__content_409, JsonSerializerOptions);
+                        __value_409 = global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponse4.FromJson(__content_409, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -221,7 +221,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant2>.FromJson(__content, JsonSerializerOptions) ??
+                        global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant2>.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -251,7 +251,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant2>.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        await global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRotateCredentialsResponseVariant2>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

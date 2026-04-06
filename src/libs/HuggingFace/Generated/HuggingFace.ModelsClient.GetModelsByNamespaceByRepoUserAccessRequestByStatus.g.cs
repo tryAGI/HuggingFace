@@ -179,7 +179,7 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    var __value = global::System.Text.Json.JsonSerializer.Deserialize<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?>(__content, JsonSerializerOptions) ??
+                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                     return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
                         statusCode: __response.StatusCode,
@@ -212,7 +212,7 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    var __value = await global::System.Text.Json.JsonSerializer.DeserializeAsync<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?>(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                     return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
                         statusCode: __response.StatusCode,
