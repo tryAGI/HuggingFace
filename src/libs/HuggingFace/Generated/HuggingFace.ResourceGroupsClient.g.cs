@@ -34,7 +34,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Text.Json.JsonSerializerOptions JsonSerializerOptions { get; set; } = new global::System.Text.Json.JsonSerializerOptions();
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::HuggingFace.SourceGenerationContext.Default;
 
 
         /// <summary>

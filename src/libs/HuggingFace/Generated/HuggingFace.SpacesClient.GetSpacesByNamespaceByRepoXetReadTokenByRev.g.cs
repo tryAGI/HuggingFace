@@ -143,7 +143,7 @@ namespace HuggingFace
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    var __value = global::HuggingFace.GetSpacesXetReadTokenResponse.FromJson(__content, JsonSerializerOptions) ??
+                    var __value = global::HuggingFace.GetSpacesXetReadTokenResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                     return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSpacesXetReadTokenResponse>(
                         statusCode: __response.StatusCode,
@@ -176,7 +176,7 @@ namespace HuggingFace
 #endif
                     ).ConfigureAwait(false);
 
-                    var __value = await global::HuggingFace.GetSpacesXetReadTokenResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::HuggingFace.GetSpacesXetReadTokenResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                     return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSpacesXetReadTokenResponse>(
                         statusCode: __response.StatusCode,

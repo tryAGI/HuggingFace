@@ -102,13 +102,13 @@ namespace HuggingFace
                     if (ReadResponseAsString)
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_409 = global::HuggingFace.CreateScheduledJobsRunResponse2.FromJson(__content_409, JsonSerializerOptions);
+                        __value_409 = global::HuggingFace.CreateScheduledJobsRunResponse2.FromJson(__content_409, JsonSerializerContext);
                     }
                     else
                     {
                         __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_409 = global::HuggingFace.CreateScheduledJobsRunResponse2.FromJson(__content_409, JsonSerializerOptions);
+                        __value_409 = global::HuggingFace.CreateScheduledJobsRunResponse2.FromJson(__content_409, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -152,7 +152,7 @@ namespace HuggingFace
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::HuggingFace.CreateScheduledJobsRunResponse.FromJson(__content, JsonSerializerOptions) ??
+                        global::HuggingFace.CreateScheduledJobsRunResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -182,7 +182,7 @@ namespace HuggingFace
                     ).ConfigureAwait(false);
 
                     return
-                        await global::HuggingFace.CreateScheduledJobsRunResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        await global::HuggingFace.CreateScheduledJobsRunResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
