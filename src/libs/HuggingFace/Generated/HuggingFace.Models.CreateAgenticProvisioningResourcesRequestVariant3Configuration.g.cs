@@ -9,11 +9,11 @@ namespace HuggingFace
     public sealed partial class CreateAgenticProvisioningResourcesRequestVariant3Configuration
     {
         /// <summary>
-        /// 
+        /// The amount of credits to purchase (defaults to $5)<br/>
+        /// Default Value: 5
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("amountUsd")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double AmountUsd { get; set; }
+        public double? AmountUsd { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,12 +24,15 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesRequestVariant3Configuration" /> class.
         /// </summary>
-        /// <param name="amountUsd"></param>
+        /// <param name="amountUsd">
+        /// The amount of credits to purchase (defaults to $5)<br/>
+        /// Default Value: 5
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateAgenticProvisioningResourcesRequestVariant3Configuration(
-            double amountUsd)
+            double? amountUsd)
         {
             this.AmountUsd = amountUsd;
         }

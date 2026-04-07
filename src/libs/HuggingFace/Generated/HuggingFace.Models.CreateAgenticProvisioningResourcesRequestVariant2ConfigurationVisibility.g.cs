@@ -4,6 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
+    /// The visibility of the repository (defaults to private)<br/>
     /// Default Value: private
     /// </summary>
     public enum CreateAgenticProvisioningResourcesRequestVariant2ConfigurationVisibility

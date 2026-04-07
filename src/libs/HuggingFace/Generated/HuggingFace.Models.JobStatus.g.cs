@@ -25,6 +25,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cancelReason")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.JobStatusCancelReason?, string>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.JobStatusCancelReason?, string>? CancelReason { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("failureCount")]
         public double? FailureCount { get; set; }
 
@@ -39,6 +46,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="stage"></param>
         /// <param name="message"></param>
+        /// <param name="cancelReason"></param>
         /// <param name="failureCount"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -46,10 +54,12 @@ namespace HuggingFace
         public JobStatus(
             global::HuggingFace.JobStatusStage stage,
             string? message,
+            global::HuggingFace.AnyOf<global::HuggingFace.JobStatusCancelReason?, string>? cancelReason,
             double? failureCount)
         {
             this.Stage = stage;
             this.Message = message;
+            this.CancelReason = cancelReason;
             this.FailureCount = failureCount;
         }
 
