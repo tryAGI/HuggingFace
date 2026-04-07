@@ -9,13 +9,14 @@ namespace HuggingFace
     public sealed partial class CreateAgenticProvisioningResourcesRequestVariant2Configuration
     {
         /// <summary>
-        /// 
+        /// The name of the repository (defaults to a random name if not provided)<br/>
+        /// Default Value: RTGAJomt
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
+        /// The visibility of the repository (defaults to private)<br/>
         /// Default Value: private
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
@@ -31,18 +32,22 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesRequestVariant2Configuration" /> class.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">
+        /// The name of the repository (defaults to a random name if not provided)<br/>
+        /// Default Value: RTGAJomt
+        /// </param>
         /// <param name="visibility">
+        /// The visibility of the repository (defaults to private)<br/>
         /// Default Value: private
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateAgenticProvisioningResourcesRequestVariant2Configuration(
-            string name,
+            string? name,
             global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant2ConfigurationVisibility? visibility)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Name = name;
             this.Visibility = visibility;
         }
 

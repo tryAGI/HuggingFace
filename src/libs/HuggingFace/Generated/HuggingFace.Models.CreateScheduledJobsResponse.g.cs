@@ -39,6 +39,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("suspendReason")]
+        public string? SuspendReason { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("concurrency")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Concurrency { get; set; }
@@ -94,6 +100,7 @@ namespace HuggingFace
         /// <param name="status"></param>
         /// <param name="owner"></param>
         /// <param name="jobSpec"></param>
+        /// <param name="suspendReason"></param>
         /// <param name="initiator"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -108,6 +115,7 @@ namespace HuggingFace
             global::HuggingFace.CreateScheduledJobsResponseStatus status,
             global::HuggingFace.CreateScheduledJobsResponseOwner owner,
             global::HuggingFace.CreateScheduledJobsResponseJobSpec jobSpec,
+            string? suspendReason,
             global::HuggingFace.CreateScheduledJobsResponseInitiator? initiator,
             string type = "scheduled-job")
         {
@@ -115,6 +123,7 @@ namespace HuggingFace
             this.CreatedAt = createdAt;
             this.Schedule = schedule ?? throw new global::System.ArgumentNullException(nameof(schedule));
             this.Suspend = suspend;
+            this.SuspendReason = suspendReason;
             this.Concurrency = concurrency;
             this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.Type = type;

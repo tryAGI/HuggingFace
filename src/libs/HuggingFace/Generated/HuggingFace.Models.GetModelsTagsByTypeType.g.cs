@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Bucket,
+        /// <summary>
+        /// 
+        /// </summary>
         Dataset,
         /// <summary>
         /// 
@@ -59,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 GetModelsTagsByTypeType.Arxiv => "arxiv",
+                GetModelsTagsByTypeType.Bucket => "bucket",
                 GetModelsTagsByTypeType.Dataset => "dataset",
                 GetModelsTagsByTypeType.Doi => "doi",
                 GetModelsTagsByTypeType.Language => "language",
@@ -78,6 +83,7 @@ namespace HuggingFace
             return value switch
             {
                 "arxiv" => GetModelsTagsByTypeType.Arxiv,
+                "bucket" => GetModelsTagsByTypeType.Bucket,
                 "dataset" => GetModelsTagsByTypeType.Dataset,
                 "doi" => GetModelsTagsByTypeType.Doi,
                 "language" => GetModelsTagsByTypeType.Language,
