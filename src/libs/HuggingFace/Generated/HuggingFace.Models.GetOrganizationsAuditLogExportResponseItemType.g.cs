@@ -103,6 +103,18 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        OrgCustomRoleCreate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgCustomRoleDelete,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgCustomRoleUpdate,
+        /// <summary>
+        /// 
+        /// </summary>
         OrgDelete,
         /// <summary>
         /// 
@@ -373,6 +385,9 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole => "org.change_role",
                 GetOrganizationsAuditLogExportResponseItemType.OrgCreate => "org.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgCustomRoleCreate => "org.custom_role.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgCustomRoleDelete => "org.custom_role.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgCustomRoleUpdate => "org.custom_role.update",
                 GetOrganizationsAuditLogExportResponseItemType.OrgDelete => "org.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgInviteAccept => "org.invite.accept",
                 GetOrganizationsAuditLogExportResponseItemType.OrgInviteEmail => "org.invite.email",
@@ -465,6 +480,9 @@ namespace HuggingFace
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
                 "org.change_role" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole,
                 "org.create" => GetOrganizationsAuditLogExportResponseItemType.OrgCreate,
+                "org.custom_role.create" => GetOrganizationsAuditLogExportResponseItemType.OrgCustomRoleCreate,
+                "org.custom_role.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgCustomRoleDelete,
+                "org.custom_role.update" => GetOrganizationsAuditLogExportResponseItemType.OrgCustomRoleUpdate,
                 "org.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgDelete,
                 "org.invite.accept" => GetOrganizationsAuditLogExportResponseItemType.OrgInviteAccept,
                 "org.invite.email" => GetOrganizationsAuditLogExportResponseItemType.OrgInviteEmail,

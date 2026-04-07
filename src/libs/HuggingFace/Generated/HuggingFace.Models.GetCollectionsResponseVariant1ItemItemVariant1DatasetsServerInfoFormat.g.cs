@@ -11,6 +11,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        AgentTraces,
+        /// <summary>
+        /// 
+        /// </summary>
         Arrow,
         /// <summary>
         /// 
@@ -58,6 +62,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.AgentTraces => "agent-traces",
                 GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.Arrow => "arrow",
                 GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.Audiofolder => "audiofolder",
                 GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.Csv => "csv",
@@ -77,6 +82,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                "agent-traces" => GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.AgentTraces,
                 "arrow" => GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.Arrow,
                 "audiofolder" => GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.Audiofolder,
                 "csv" => GetCollectionsResponseVariant1ItemItemVariant1DatasetsServerInfoFormat.Csv,

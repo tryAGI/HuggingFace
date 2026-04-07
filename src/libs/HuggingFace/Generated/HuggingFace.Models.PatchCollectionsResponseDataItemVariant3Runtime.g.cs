@@ -67,12 +67,6 @@ namespace HuggingFace
         public global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHotReloading? HotReloading { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
-        public global::System.Collections.Generic.IList<global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeVolume>? Volumes { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -90,7 +84,6 @@ namespace HuggingFace
         /// <param name="domains"></param>
         /// <param name="sha"></param>
         /// <param name="hotReloading"></param>
-        /// <param name="volumes"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -103,8 +96,7 @@ namespace HuggingFace
             bool? devMode,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeDomain>? domains,
             string? sha,
-            global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHotReloading? hotReloading,
-            global::System.Collections.Generic.IList<global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeVolume>? volumes)
+            global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHotReloading? hotReloading)
         {
             this.Stage = stage;
             this.Hardware = hardware ?? throw new global::System.ArgumentNullException(nameof(hardware));
@@ -115,7 +107,6 @@ namespace HuggingFace
             this.Domains = domains;
             this.Sha = sha;
             this.HotReloading = hotReloading;
-            this.Volumes = volumes;
         }
 
         /// <summary>

@@ -60,8 +60,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsMembersResponseItemRoleJsonConverter))]
-        public global::HuggingFace.GetOrganizationsMembersResponseItemRole? Role { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetOrganizationsMembersResponseItemRole?, string>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsMembersResponseItemRole?, string>? Role { get; set; }
 
         /// <summary>
         /// 
@@ -120,7 +120,7 @@ namespace HuggingFace
             string user,
             string id,
             bool? isFollowing,
-            global::HuggingFace.GetOrganizationsMembersResponseItemRole? role,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsMembersResponseItemRole?, string>? role,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroup>? resourceGroups,
             bool? twoFaEnabled,
             string? verifiedEmail,
