@@ -26,9 +26,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetWhoamiV2ResponseOrgResourceGroupRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole Role { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole?, string> Role { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -48,7 +48,7 @@ namespace HuggingFace
         public GetWhoamiV2ResponseOrgResourceGroup(
             string id,
             string name,
-            global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole role)
+            global::HuggingFace.AnyOf<global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole?, string> role)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));

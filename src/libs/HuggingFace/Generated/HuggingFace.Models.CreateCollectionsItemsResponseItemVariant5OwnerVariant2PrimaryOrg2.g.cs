@@ -72,8 +72,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userRole")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2JsonConverter))]
-        public global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2? UserRole { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2?, string>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2?, string>? UserRole { get; set; }
 
         /// <summary>
         /// 
@@ -113,7 +113,7 @@ namespace HuggingFace
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2? plan,
             string? details,
             bool? hasPrivateMembersList,
-            global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2? userRole,
+            global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2?, string>? userRole,
             double? numUsers,
             string type = "org")
         {

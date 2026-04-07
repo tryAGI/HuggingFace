@@ -11,6 +11,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        AgentTraces,
+        /// <summary>
+        /// 
+        /// </summary>
         Arrow,
         /// <summary>
         /// 
@@ -58,6 +62,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.AgentTraces => "agent-traces",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.Arrow => "arrow",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.Audiofolder => "audiofolder",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.Csv => "csv",
@@ -77,6 +82,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                "agent-traces" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.AgentTraces,
                 "arrow" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.Arrow,
                 "audiofolder" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.Audiofolder,
                 "csv" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat.Csv,

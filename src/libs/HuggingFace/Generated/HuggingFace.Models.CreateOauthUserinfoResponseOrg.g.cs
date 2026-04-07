@@ -62,8 +62,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("roleInOrg")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOauthUserinfoResponseOrgRoleInOrgJsonConverter))]
-        public global::HuggingFace.CreateOauthUserinfoResponseOrgRoleInOrg? RoleInOrg { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOauthUserinfoResponseOrgRoleInOrg?, string>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.CreateOauthUserinfoResponseOrgRoleInOrg?, string>? RoleInOrg { get; set; }
 
         /// <summary>
         /// 
@@ -131,7 +131,7 @@ namespace HuggingFace
             global::HuggingFace.CreateOauthUserinfoResponseOrgPlan? plan,
             bool? canPay,
             global::HuggingFace.CreateOauthUserinfoResponseOrgBillingMode? billingMode,
-            global::HuggingFace.CreateOauthUserinfoResponseOrgRoleInOrg? roleInOrg,
+            global::HuggingFace.AnyOf<global::HuggingFace.CreateOauthUserinfoResponseOrgRoleInOrg?, string>? roleInOrg,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOauthUserinfoResponseOrgSecurityRestriction>? securityRestrictions,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOauthUserinfoResponseOrgResourceGroup>? resourceGroups)
         {

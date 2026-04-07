@@ -47,9 +47,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseItemUserRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole Role { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole?, string> Role { get; set; }
 
         /// <summary>
         /// 
@@ -81,7 +81,7 @@ namespace HuggingFace
             string fullname,
             string name,
             string avatarUrl,
-            global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole role,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole?, string> role,
             string? addedBy,
             string type = "user")
         {

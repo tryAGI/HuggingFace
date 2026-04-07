@@ -72,8 +72,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userRole")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetSpacesLfsFilesResponseItemPusherPrimaryOrgUserRoleJsonConverter))]
-        public global::HuggingFace.GetSpacesLfsFilesResponseItemPusherPrimaryOrgUserRole? UserRole { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSpacesLfsFilesResponseItemPusherPrimaryOrgUserRole?, string>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.GetSpacesLfsFilesResponseItemPusherPrimaryOrgUserRole?, string>? UserRole { get; set; }
 
         /// <summary>
         /// 
@@ -113,7 +113,7 @@ namespace HuggingFace
             global::HuggingFace.GetSpacesLfsFilesResponseItemPusherPrimaryOrgPlan? plan,
             string? details,
             bool? hasPrivateMembersList,
-            global::HuggingFace.GetSpacesLfsFilesResponseItemPusherPrimaryOrgUserRole? userRole,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetSpacesLfsFilesResponseItemPusherPrimaryOrgUserRole?, string>? userRole,
             double? numUsers,
             string type = "org")
         {

@@ -12,9 +12,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PutOrganizationsMembersRoleRequestRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutOrganizationsMembersRoleRequestRole?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.PutOrganizationsMembersRoleRequestRole Role { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsMembersRoleRequestRole?, string> Role { get; set; }
 
         /// <summary>
         /// 
@@ -37,7 +37,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PutOrganizationsMembersRoleRequest(
-            global::HuggingFace.PutOrganizationsMembersRoleRequestRole role,
+            global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsMembersRoleRequestRole?, string> role,
             global::System.Collections.Generic.IList<global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroup>? resourceGroups)
         {
             this.Role = role;
