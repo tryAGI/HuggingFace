@@ -67,6 +67,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sha")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Sha { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.GetKernelsResponseGatedEnum2?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -113,6 +120,7 @@ namespace HuggingFace
         /// <param name="lastModified"></param>
         /// <param name="likes"></param>
         /// <param name="private"></param>
+        /// <param name="sha"></param>
         /// <param name="gated"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="authorData"></param>
@@ -130,6 +138,7 @@ namespace HuggingFace
             global::System.DateTime lastModified,
             double likes,
             bool @private,
+            string sha,
             global::HuggingFace.AnyOf<string, global::HuggingFace.GetKernelsResponseGatedEnum2?> gated,
             global::HuggingFace.GetKernelsResponseResourceGroup? resourceGroup,
             global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>? authorData,
@@ -145,6 +154,7 @@ namespace HuggingFace
             this.Likes = likes;
             this.Private = @private;
             this.RepoType = repoType;
+            this.Sha = sha ?? throw new global::System.ArgumentNullException(nameof(sha));
             this.Gated = gated;
             this.ResourceGroup = resourceGroup;
             this.AuthorData = authorData;

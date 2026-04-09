@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IAgenticProvisioningClient
     {
         /// <summary>
-        /// (not implemented yet) Create a deep link
+        /// Create a deep link to the user's Hub page
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -15,7 +15,7 @@ namespace HuggingFace
             global::HuggingFace.CreateAgenticProvisioningDeepLinksRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// (not implemented yet) Create a deep link
+        /// Create a deep link to the user's Hub page
         /// </summary>
         /// <param name="purpose"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
