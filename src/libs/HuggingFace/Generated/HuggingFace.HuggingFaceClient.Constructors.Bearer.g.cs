@@ -6,6 +6,7 @@ namespace HuggingFace
     public sealed partial class HuggingFaceClient
     {
         /// <inheritdoc cref="HuggingFaceClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::HuggingFace.EndPointAuthorization}?, bool)"/>
+
         public HuggingFaceClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

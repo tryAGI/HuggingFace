@@ -93,6 +93,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isTraces")]
+        public bool? IsTraces { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <default>"dataset"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "dataset";
@@ -117,6 +123,7 @@ namespace HuggingFace
         /// <param name="datasetsServerInfo"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="isBenchmark"></param>
+        /// <param name="isTraces"></param>
         /// <param name="repoType"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -134,6 +141,7 @@ namespace HuggingFace
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfo? datasetsServerInfo,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant1ResourceGroup? resourceGroup,
             bool? isBenchmark,
+            bool? isTraces,
             string repoType = "dataset",
             string type = "dataset")
         {
@@ -149,6 +157,7 @@ namespace HuggingFace
             this.LastModified = lastModified;
             this.ResourceGroup = resourceGroup;
             this.IsBenchmark = isBenchmark;
+            this.IsTraces = isTraces;
             this.Type = type;
         }
 

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Notifications<br/>
+    /// Notifications. The following endpoints fetch Hub notifications.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

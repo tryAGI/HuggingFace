@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Repository Search<br/>
+    /// Repository Search. The following endpoints help get information about models, datasets, and Spaces stored on the Hub.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <summary>
         /// Hub
         /// </summary>
-        public const string DefaultBaseUrl = "https://huggingface.co";
+        public const string DefaultBaseUrl = "https://huggingface.co/";
 
         private bool _disposeHttpClient = true;
 

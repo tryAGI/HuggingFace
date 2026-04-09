@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class InferenceEndpointsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsSecurityRequirement0,
+            };
         partial void PrepareCreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
@@ -78,6 +97,12 @@ namespace HuggingFace
                 resourceGroupId: ref resourceGroupId,
                 repoId: ref repoId);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsSecurityRequirements,
+                operationName: "CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{perms}",
                 baseUri: HttpClient.BaseAddress); 
@@ -88,7 +113,7 @@ namespace HuggingFace
                 .AddOptionalParameter("incur_cost", incurCost?.ToString())
                 .AddOptionalParameter("resource_group_id", resourceGroupId)
                 .AddOptionalParameter("repo_id", repoId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -98,7 +123,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

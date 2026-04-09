@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class WebhooksClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_DeleteSettingsWebhooksByWebhookIdSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_DeleteSettingsWebhooksByWebhookIdSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_DeleteSettingsWebhooksByWebhookIdSecurityRequirement0,
+            };
         partial void PrepareDeleteSettingsWebhooksByWebhookIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string webhookId);
@@ -37,9 +56,15 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 webhookId: ref webhookId);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteSettingsWebhooksByWebhookIdSecurityRequirements,
+                operationName: "DeleteSettingsWebhooksByWebhookIdAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/settings/webhooks/{webhookId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -49,7 +74,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

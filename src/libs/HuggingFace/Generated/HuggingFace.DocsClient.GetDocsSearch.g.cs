@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class DocsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetDocsSearchSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetDocsSearchSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_GetDocsSearchSecurityRequirement0,
+            };
         partial void PrepareGetDocsSearchArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string q,
@@ -50,6 +69,12 @@ namespace HuggingFace
                 product: ref product,
                 limit: ref limit);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetDocsSearchSecurityRequirements,
+                operationName: "GetDocsSearchAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: "/api/docs/search",
                 baseUri: HttpClient.BaseAddress); 
@@ -57,7 +82,7 @@ namespace HuggingFace
                 .AddRequiredParameter("q", q)
                 .AddOptionalParameter("product", product?.ToValueString())
                 .AddOptionalParameter("limit", limit?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -67,7 +92,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

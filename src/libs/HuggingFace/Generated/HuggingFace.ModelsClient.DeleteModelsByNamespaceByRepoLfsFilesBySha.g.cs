@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class ModelsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_DeleteModelsByNamespaceByRepoLfsFilesByShaSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_DeleteModelsByNamespaceByRepoLfsFilesByShaSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_DeleteModelsByNamespaceByRepoLfsFilesByShaSecurityRequirement0,
+            };
         partial void PrepareDeleteModelsByNamespaceByRepoLfsFilesByShaArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
@@ -50,12 +69,18 @@ namespace HuggingFace
                 sha: ref sha,
                 rewriteHistory: rewriteHistory);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteModelsByNamespaceByRepoLfsFilesByShaSecurityRequirements,
+                operationName: "DeleteModelsByNamespaceByRepoLfsFilesByShaAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/models/{@namespace}/{repo}/lfs-files/{sha}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("rewriteHistory", rewriteHistory?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -65,7 +90,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

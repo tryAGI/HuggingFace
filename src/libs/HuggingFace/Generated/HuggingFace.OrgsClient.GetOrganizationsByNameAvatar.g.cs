@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class OrgsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameAvatarSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameAvatarSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_GetOrganizationsByNameAvatarSecurityRequirement0,
+            };
         partial void PrepareGetOrganizationsByNameAvatarArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
@@ -46,12 +65,18 @@ namespace HuggingFace
                 name: ref name,
                 redirect: redirect);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetOrganizationsByNameAvatarSecurityRequirements,
+                operationName: "GetOrganizationsByNameAvatarAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/organizations/{name}/avatar",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("redirect", redirect?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -61,7 +86,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

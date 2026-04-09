@@ -91,6 +91,12 @@ namespace HuggingFace
         public bool? IsBenchmark { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isTraces")]
+        public bool? IsTraces { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -110,6 +116,7 @@ namespace HuggingFace
         /// <param name="datasetsServerInfo"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="isBenchmark"></param>
+        /// <param name="isTraces"></param>
         /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -126,6 +133,7 @@ namespace HuggingFace
             global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfo? datasetsServerInfo,
             global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataResourceGroup? resourceGroup,
             bool? isBenchmark,
+            bool? isTraces,
             string repoType = "dataset")
         {
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
@@ -140,6 +148,7 @@ namespace HuggingFace
             this.LastModified = lastModified;
             this.ResourceGroup = resourceGroup;
             this.IsBenchmark = isBenchmark;
+            this.IsTraces = isTraces;
         }
 
         /// <summary>

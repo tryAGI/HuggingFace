@@ -15,7 +15,7 @@ namespace HuggingFace
         /// <summary>
         /// Hub
         /// </summary>
-        public const string DefaultBaseUrl = "https://huggingface.co";
+        public const string DefaultBaseUrl = "https://huggingface.co/";
 
         private bool _disposeHttpClient = true;
 
@@ -40,7 +40,7 @@ namespace HuggingFace
 
 
         /// <summary>
-        /// Agentic Provisioning
+        /// Agentic Provisioning. The following endpoints are for use with Agentic Provisioning Protocol.
         /// </summary>
         public AgenticProvisioningClient AgenticProvisioning => new AgenticProvisioningClient(HttpClient, authorizations: Authorizations)
         {
@@ -49,7 +49,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Auth
+        /// Auth. The following endpoints get information about your currently used user based on the passed token.
         /// </summary>
         public AuthClient Auth => new AuthClient(HttpClient, authorizations: Authorizations)
         {
@@ -58,7 +58,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Buckets
+        /// Buckets. Git-free storage buckets for files, powered by Xet. Buckets provide simple file storage without git versioning.
         /// </summary>
         public BucketsClient Buckets => new BucketsClient(HttpClient, authorizations: Authorizations)
         {
@@ -67,7 +67,8 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Collections
+        /// Collections. Use Collections to group repositories from the Hub (Models, Datasets, Spaces and Papers) on a dedicated page.<br/>
+        /// You can learn more about it in the Collections [guide](https://huggingface.co/docs/hub/collections). Collections can also be managed using the Python client (see [guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/collections)).
         /// </summary>
         public CollectionsClient Collections => new CollectionsClient(HttpClient, authorizations: Authorizations)
         {
@@ -76,7 +77,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Datasets
+        /// Datasets. Get information from all datasets on the Hub.
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations)
         {
@@ -85,7 +86,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Discussions
+        /// Discussions. The following endpoints manage discussions.
         /// </summary>
         public DiscussionsClient Discussions => new DiscussionsClient(HttpClient, authorizations: Authorizations)
         {
@@ -94,7 +95,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Documentation
+        /// Documentation. The following endpoints are for interacting with the Hub's documentation.
         /// </summary>
         public DocsClient Docs => new DocsClient(HttpClient, authorizations: Authorizations)
         {
@@ -103,7 +104,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Inference Endpoints
+        /// Inference Endpoints. Manage inference endpoints.
         /// </summary>
         public InferenceEndpointsClient InferenceEndpoints => new InferenceEndpointsClient(HttpClient, authorizations: Authorizations)
         {
@@ -112,7 +113,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Jobs
+        /// Jobs. The following endpoints manage jobs.
         /// </summary>
         public JobsClient Jobs => new JobsClient(HttpClient, authorizations: Authorizations)
         {
@@ -121,7 +122,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Kernels
+        /// Kernels. Get information from all kernels on the Hub.
         /// </summary>
         public KernelsClient Kernels => new KernelsClient(HttpClient, authorizations: Authorizations)
         {
@@ -130,7 +131,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Models
+        /// Models. Get information from all models on the Hub.
         /// </summary>
         public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations)
         {
@@ -139,7 +140,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Notifications
+        /// Notifications. The following endpoints fetch Hub notifications.
         /// </summary>
         public NotificationsClient Notifications => new NotificationsClient(HttpClient, authorizations: Authorizations)
         {
@@ -148,7 +149,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// OAuth
+        /// OAuth. The following endpoints are for use with OAuth.
         /// </summary>
         public OauthClient Oauth => new OauthClient(HttpClient, authorizations: Authorizations)
         {
@@ -157,7 +158,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Organizations
+        /// Organizations. The following endpoints let you interact with Hub Organizations and their members.
         /// </summary>
         public OrgsClient Orgs => new OrgsClient(HttpClient, authorizations: Authorizations)
         {
@@ -166,7 +167,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Paper pages
+        /// Paper pages. The following endpoint gets information about papers.
         /// </summary>
         public PapersClient Papers => new PapersClient(HttpClient, authorizations: Authorizations)
         {
@@ -175,7 +176,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Repository Search
+        /// Repository Search. The following endpoints help get information about models, datasets, and Spaces stored on the Hub.
         /// </summary>
         public RepoSearchClient RepoSearch => new RepoSearchClient(HttpClient, authorizations: Authorizations)
         {
@@ -184,7 +185,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Repositories
+        /// Repositories. The following endpoints manage repository settings like creating and deleting a repository.
         /// </summary>
         public ReposClient Repos => new ReposClient(HttpClient, authorizations: Authorizations)
         {
@@ -193,7 +194,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Resource groups
+        /// Resource groups. The following endpoints manage resource groups. Resource groups are a Team or Enterprise feature.
         /// </summary>
         public ResourceGroupsClient ResourceGroups => new ResourceGroupsClient(HttpClient, authorizations: Authorizations)
         {
@@ -202,7 +203,28 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// SCIM
+        /// SCIM. Use the SCIM API to control and manage your hub Enterprise organization manage members' access.<br/>
+        /// ## Authentication<br/>
+        /// - Must be organization owner<br/>
+        /// - Use Access token with write permission on organization<br/>
+        /// - Organization must be Enterprise Plus<br/>
+        /// ## Key Attribute Matching<br/>
+        /// - Microsoft Entra ID (Azure AD)<br/>
+        /// 	* SAML: `http://schemas.microsoft.com/identity/claims/objectidentifier`<br/>
+        /// 	* SCIM: `externalId`<br/>
+        /// - Other Identity Providers<br/>
+        /// 	* SAML: `NameID` or `unique identifier`<br/>
+        /// 	* SCIM: `externalId`<br/>
+        /// ## Supported SCIM User Attributes<br/>
+        /// | Attribute | Description |<br/>
+        /// |---|---|<br/>
+        /// | `userName` | Username for the user |<br/>
+        /// | `name.givenName` | First name |<br/>
+        /// | `name.familyName` | Last name |<br/>
+        /// | `emails` | Array of user emails; we don't support email types |<br/>
+        /// | `externalId` | IDP provider's unique identifier |<br/>
+        /// | `id` | Hugging Face SCIM endpoint identifier |<br/>
+        /// | `active` | Boolean for provisioning status |.
         /// </summary>
         public ScimClient Scim => new ScimClient(HttpClient, authorizations: Authorizations)
         {
@@ -211,7 +233,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Spaces
+        /// Spaces. Get information from all Spaces on the Hub.
         /// </summary>
         public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations)
         {
@@ -220,7 +242,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// SQL Console
+        /// SQL Console. Get information from SQL Console embeds from a dataset.
         /// </summary>
         public SqlConsoleClient SqlConsole => new SqlConsoleClient(HttpClient, authorizations: Authorizations)
         {
@@ -229,7 +251,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Users
+        /// Users. User accounts are the base authoring entity on the Hub.
         /// </summary>
         public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations)
         {
@@ -238,7 +260,7 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Webhooks
+        /// Webhooks. The following endpoints are for use with webhooks.
         /// </summary>
         public WebhooksClient Webhooks => new WebhooksClient(HttpClient, authorizations: Authorizations)
         {

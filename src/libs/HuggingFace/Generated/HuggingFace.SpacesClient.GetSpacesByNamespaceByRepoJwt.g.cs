@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class SpacesClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetSpacesByNamespaceByRepoJwtSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetSpacesByNamespaceByRepoJwtSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_GetSpacesByNamespaceByRepoJwtSecurityRequirement0,
+            };
         partial void PrepareGetSpacesByNamespaceByRepoJwtArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
@@ -73,6 +92,12 @@ namespace HuggingFace
                 includeProStatus: includeProStatus,
                 billingDetails: billingDetails);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetSpacesByNamespaceByRepoJwtSecurityRequirements,
+                operationName: "GetSpacesByNamespaceByRepoJwtAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/spaces/{@namespace}/{repo}/jwt",
                 baseUri: HttpClient.BaseAddress); 
@@ -83,7 +108,7 @@ namespace HuggingFace
                 .AddOptionalParameter("inference_api", inferenceApi?.ToString())
                 .AddOptionalParameter("include_pro_status", includeProStatus?.ToString())
                 .AddOptionalParameter("billing_details", billingDetails?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -93,7 +118,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

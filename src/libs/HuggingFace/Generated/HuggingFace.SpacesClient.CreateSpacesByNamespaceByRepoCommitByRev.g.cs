@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class SpacesClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirement0,
+            };
         partial void PrepareCreateSpacesByNamespaceByRepoCommitByRevArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
@@ -136,13 +155,19 @@ namespace HuggingFace
                 hotReload: hotReload,
                 contentType: ref contentType);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirements,
+                operationName: "CreateSpacesByNamespaceByRepoCommitByRevAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/spaces/{@namespace}/{repo}/commit/{rev}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("create_pr", createPr?.ToString())
                 .AddOptionalParameter("hot_reload", hotReload?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -152,7 +177,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
