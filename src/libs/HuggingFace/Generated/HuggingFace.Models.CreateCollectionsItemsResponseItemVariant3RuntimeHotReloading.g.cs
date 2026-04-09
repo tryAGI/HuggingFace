@@ -20,7 +20,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("replicaStatuses")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<byte[]> ReplicaStatuses { get; set; }
+        public required global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>> ReplicaStatuses { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -38,7 +38,7 @@ namespace HuggingFace
 #endif
         public CreateCollectionsItemsResponseItemVariant3RuntimeHotReloading(
             string status,
-            global::System.Collections.Generic.IList<byte[]> replicaStatuses)
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>> replicaStatuses)
         {
             this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.ReplicaStatuses = replicaStatuses ?? throw new global::System.ArgumentNullException(nameof(replicaStatuses));
