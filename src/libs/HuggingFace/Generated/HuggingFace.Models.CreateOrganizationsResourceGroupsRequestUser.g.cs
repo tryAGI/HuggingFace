@@ -19,9 +19,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsRequestUserRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUserRole?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateOrganizationsResourceGroupsRequestUserRole Role { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUserRole?, string> Role { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,7 +39,7 @@ namespace HuggingFace
 #endif
         public CreateOrganizationsResourceGroupsRequestUser(
             string user,
-            global::HuggingFace.CreateOrganizationsResourceGroupsRequestUserRole role)
+            global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUserRole?, string> role)
         {
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
             this.Role = role;
