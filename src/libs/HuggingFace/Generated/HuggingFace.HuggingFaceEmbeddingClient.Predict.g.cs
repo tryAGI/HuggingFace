@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class HuggingFaceEmbeddingClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_PredictSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_PredictSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_PredictSecurityRequirement0,
+            };
         partial void PreparePredictArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::HuggingFace.PredictRequest request);
@@ -40,9 +59,15 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_PredictSecurityRequirements,
+                operationName: "PredictAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: "/predict",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -52,7 +77,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

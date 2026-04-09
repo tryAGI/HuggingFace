@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class SpacesClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateSpacesByNamespaceByRepoLfsFilesBatchSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateSpacesByNamespaceByRepoLfsFilesBatchSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_CreateSpacesByNamespaceByRepoLfsFilesBatchSecurityRequirement0,
+            };
         partial void PrepareCreateSpacesByNamespaceByRepoLfsFilesBatchArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
@@ -46,9 +65,15 @@ namespace HuggingFace
                 repo: ref repo,
                 request: request);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateSpacesByNamespaceByRepoLfsFilesBatchSecurityRequirements,
+                operationName: "CreateSpacesByNamespaceByRepoLfsFilesBatchAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/spaces/{@namespace}/{repo}/lfs-files/batch",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -58,7 +83,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

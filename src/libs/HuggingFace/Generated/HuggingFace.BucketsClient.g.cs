@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Buckets<br/>
+    /// Buckets. Git-free storage buckets for files, powered by Xet. Buckets provide simple file storage without git versioning.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <summary>
         /// Hub
         /// </summary>
-        public const string DefaultBaseUrl = "https://huggingface.co";
+        public const string DefaultBaseUrl = "https://huggingface.co/";
 
         private bool _disposeHttpClient = true;
 

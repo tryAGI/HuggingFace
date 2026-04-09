@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class NotificationsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_DeleteNotificationsSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_DeleteNotificationsSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_DeleteNotificationsSecurityRequirement0,
+            };
         partial void PrepareDeleteNotificationsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? p,
@@ -94,6 +113,12 @@ namespace HuggingFace
                 applyToAll: applyToAll,
                 request: request);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteNotificationsSecurityRequirements,
+                operationName: "DeleteNotificationsAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: "/api/notifications",
                 baseUri: HttpClient.BaseAddress); 
@@ -108,7 +133,7 @@ namespace HuggingFace
                 .AddOptionalParameter("mention", mention?.ToValueString())
                 .AddOptionalParameter("lastUpdate", lastUpdate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("applyToAll", applyToAll?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -118,7 +143,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

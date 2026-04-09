@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class ScimClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_DeleteOrganizationsByNameScimV2UsersByUserIdSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_DeleteOrganizationsByNameScimV2UsersByUserIdSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_DeleteOrganizationsByNameScimV2UsersByUserIdSecurityRequirement0,
+            };
         partial void PrepareDeleteOrganizationsByNameScimV2UsersByUserIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
@@ -42,9 +61,15 @@ namespace HuggingFace
                 name: ref name,
                 userId: ref userId);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteOrganizationsByNameScimV2UsersByUserIdSecurityRequirements,
+                operationName: "DeleteOrganizationsByNameScimV2UsersByUserIdAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/organizations/{name}/scim/v2/Users/{userId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -54,7 +79,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

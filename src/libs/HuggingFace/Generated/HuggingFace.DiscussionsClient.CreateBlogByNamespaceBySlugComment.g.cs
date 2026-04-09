@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class DiscussionsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateBlogByNamespaceBySlugCommentSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateBlogByNamespaceBySlugCommentSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_CreateBlogByNamespaceBySlugCommentSecurityRequirement0,
+            };
         partial void PrepareCreateBlogByNamespaceBySlugCommentArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
@@ -50,9 +69,15 @@ namespace HuggingFace
                 slug: ref slug,
                 request: request);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateBlogByNamespaceBySlugCommentSecurityRequirements,
+                operationName: "CreateBlogByNamespaceBySlugCommentAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/blog/{@namespace}/{slug}/comment",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -62,7 +87,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

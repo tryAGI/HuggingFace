@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class DiscussionsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetByRepoTypeByNamespaceByRepoDiscussionsSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetByRepoTypeByNamespaceByRepoDiscussionsSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_GetByRepoTypeByNamespaceByRepoDiscussionsSecurityRequirement0,
+            };
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::HuggingFace.GetDiscussionsRepoType repoType,
@@ -86,6 +105,12 @@ namespace HuggingFace
                 search: ref search,
                 sort: ref sort);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetByRepoTypeByNamespaceByRepoDiscussionsSecurityRequirements,
+                operationName: "GetByRepoTypeByNamespaceByRepoDiscussionsAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/{repoType}/{@namespace}/{repo}/discussions",
                 baseUri: HttpClient.BaseAddress); 
@@ -96,7 +121,7 @@ namespace HuggingFace
                 .AddOptionalParameter("author", author)
                 .AddOptionalParameter("search", search)
                 .AddOptionalParameter("sort", sort?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -106,7 +131,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

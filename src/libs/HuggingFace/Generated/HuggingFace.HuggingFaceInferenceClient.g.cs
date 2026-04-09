@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public const string DefaultBaseUrl = "https://router.huggingface.co";
+        public const string DefaultBaseUrl = "https://router.huggingface.co/";
 
         private bool _disposeHttpClient = true;
 

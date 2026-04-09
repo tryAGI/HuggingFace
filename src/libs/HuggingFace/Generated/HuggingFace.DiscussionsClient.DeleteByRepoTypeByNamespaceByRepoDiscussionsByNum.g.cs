@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class DiscussionsClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumSecurityRequirement0,
+            };
         partial void PrepareDeleteByRepoTypeByNamespaceByRepoDiscussionsByNumArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::HuggingFace.DeleteDiscussionsRepoType repoType,
@@ -47,9 +66,15 @@ namespace HuggingFace
                 repo: ref repo,
                 num: ref num);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumSecurityRequirements,
+                operationName: "DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/{repoType}/{@namespace}/{repo}/discussions/{num}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -59,7 +84,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

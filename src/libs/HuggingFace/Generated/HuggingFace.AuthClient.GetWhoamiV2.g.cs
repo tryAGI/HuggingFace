@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class AuthClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetWhoamiV2SecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetWhoamiV2SecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_GetWhoamiV2SecurityRequirement0,
+            };
         partial void PrepareGetWhoamiV2Arguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareGetWhoamiV2Request(
@@ -33,9 +52,15 @@ namespace HuggingFace
             PrepareGetWhoamiV2Arguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetWhoamiV2SecurityRequirements,
+                operationName: "GetWhoamiV2Async");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: "/api/whoami-v2",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -45,7 +70,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

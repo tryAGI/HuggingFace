@@ -5,6 +5,25 @@ namespace HuggingFace
 {
     public partial class ScimClient
     {
+
+
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameScimProvisioningV2GroupsSecurityRequirement0 =
+            new global::HuggingFace.EndPointSecurityRequirement
+            {
+                Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
+                {                    new global::HuggingFace.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameScimProvisioningV2GroupsSecurityRequirements =
+            new global::HuggingFace.EndPointSecurityRequirement[]
+            {                s_GetOrganizationsByNameScimProvisioningV2GroupsSecurityRequirement0,
+            };
         partial void PrepareGetOrganizationsByNameScimProvisioningV2GroupsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
@@ -62,6 +81,12 @@ namespace HuggingFace
                 filter: ref filter,
                 excludedAttributes: ref excludedAttributes);
 
+
+            var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetOrganizationsByNameScimProvisioningV2GroupsSecurityRequirements,
+                operationName: "GetOrganizationsByNameScimProvisioningV2GroupsAsync");
+
             var __pathBuilder = new global::HuggingFace.PathBuilder(
                 path: $"/api/organizations/{name}/scim-provisioning/v2/Groups",
                 baseUri: HttpClient.BaseAddress); 
@@ -70,7 +95,7 @@ namespace HuggingFace
                 .AddOptionalParameter("count", count?.ToString())
                 .AddOptionalParameter("filter", filter)
                 .AddOptionalParameter("excludedAttributes", excludedAttributes) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -80,7 +105,7 @@ namespace HuggingFace
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

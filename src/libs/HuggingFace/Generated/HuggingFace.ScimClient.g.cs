@@ -4,7 +4,28 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// SCIM<br/>
+    /// SCIM. Use the SCIM API to control and manage your hub Enterprise organization manage members' access.<br/>
+    /// ## Authentication<br/>
+    /// - Must be organization owner<br/>
+    /// - Use Access token with write permission on organization<br/>
+    /// - Organization must be Enterprise Plus<br/>
+    /// ## Key Attribute Matching<br/>
+    /// - Microsoft Entra ID (Azure AD)<br/>
+    /// 	* SAML: `http://schemas.microsoft.com/identity/claims/objectidentifier`<br/>
+    /// 	* SCIM: `externalId`<br/>
+    /// - Other Identity Providers<br/>
+    /// 	* SAML: `NameID` or `unique identifier`<br/>
+    /// 	* SCIM: `externalId`<br/>
+    /// ## Supported SCIM User Attributes<br/>
+    /// | Attribute | Description |<br/>
+    /// |---|---|<br/>
+    /// | `userName` | Username for the user |<br/>
+    /// | `name.givenName` | First name |<br/>
+    /// | `name.familyName` | Last name |<br/>
+    /// | `emails` | Array of user emails; we don't support email types |<br/>
+    /// | `externalId` | IDP provider's unique identifier |<br/>
+    /// | `id` | Hugging Face SCIM endpoint identifier |<br/>
+    /// | `active` | Boolean for provisioning status |.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -13,7 +34,7 @@ namespace HuggingFace
         /// <summary>
         /// Hub
         /// </summary>
-        public const string DefaultBaseUrl = "https://huggingface.co";
+        public const string DefaultBaseUrl = "https://huggingface.co/";
 
         private bool _disposeHttpClient = true;
 
