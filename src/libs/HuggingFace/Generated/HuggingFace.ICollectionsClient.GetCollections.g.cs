@@ -20,6 +20,7 @@ namespace HuggingFace
         /// <param name="limit">
         /// Default Value: 10
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>> GetCollectionsAsync(
@@ -30,6 +31,7 @@ namespace HuggingFace
             string? cursor = default,
             object? expand = default,
             double? limit = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get collections
@@ -47,6 +49,7 @@ namespace HuggingFace
         /// <param name="limit">
         /// Default Value: 10
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>>> GetCollectionsAsResponseAsync(
@@ -57,6 +60,7 @@ namespace HuggingFace
             string? cursor = default,
             object? expand = default,
             double? limit = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

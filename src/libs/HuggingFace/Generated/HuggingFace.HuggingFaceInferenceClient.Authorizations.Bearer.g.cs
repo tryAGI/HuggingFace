@@ -25,6 +25,7 @@ namespace HuggingFace
             Authorizations.Add(new global::HuggingFace.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

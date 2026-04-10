@@ -10,12 +10,14 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimV2UsersResponse> CreateOrganizationsByNameScimV2UsersAsync(
             string name,
 
             global::HuggingFace.CreateOrganizationsScimV2UsersRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a SCIM user<br/>
@@ -34,6 +36,7 @@ namespace HuggingFace
         /// <param name="externalId">
         /// External ID for the user, it must be unique within the organization and is required for managed users
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimV2UsersResponse> CreateOrganizationsByNameScimV2UsersAsync(
@@ -44,6 +47,7 @@ namespace HuggingFace
             global::HuggingFace.CreateOrganizationsScimV2UsersRequestName requestName,
             string externalId,
             bool? active = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

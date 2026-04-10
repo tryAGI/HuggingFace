@@ -8,11 +8,13 @@ namespace HuggingFace
         /// Create a collection
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResponse> CreateCollectionsAsync(
 
             global::HuggingFace.CreateCollectionsRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a collection
@@ -24,6 +26,7 @@ namespace HuggingFace
         /// <param name="private">
         /// If not provided, the collection will be public. This field will respect the organization's visibility setting.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResponse> CreateCollectionsAsync(
@@ -32,6 +35,7 @@ namespace HuggingFace
             string? description = default,
             global::HuggingFace.CreateCollectionsRequestItem? item = default,
             bool? @private = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

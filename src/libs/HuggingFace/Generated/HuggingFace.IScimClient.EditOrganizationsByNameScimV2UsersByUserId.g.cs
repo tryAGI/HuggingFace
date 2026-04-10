@@ -13,6 +13,7 @@ namespace HuggingFace
         /// <param name="name"></param>
         /// <param name="userId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimV2UsersResponse> EditOrganizationsByNameScimV2UsersByUserIdAsync(
@@ -20,6 +21,7 @@ namespace HuggingFace
             string userId,
 
             global::HuggingFace.PatchOrganizationsScimV2UsersRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update SCIM user<br/>
@@ -31,6 +33,7 @@ namespace HuggingFace
         /// <param name="userId"></param>
         /// <param name="schemas"></param>
         /// <param name="operations"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsScimV2UsersResponse> EditOrganizationsByNameScimV2UsersByUserIdAsync(
@@ -38,6 +41,7 @@ namespace HuggingFace
             string userId,
             global::System.Collections.Generic.IList<string> schemas,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperation> operations,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

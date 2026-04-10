@@ -8,11 +8,13 @@ namespace HuggingFace
         /// Generate tokens
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<global::HuggingFace.Chunk> CompletionsAsStreamAsync(
 
             global::HuggingFace.CompletionRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Generate tokens
@@ -55,6 +57,7 @@ namespace HuggingFace
         /// tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.<br/>
         /// Example: 0.95F
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<global::HuggingFace.Chunk> CompletionsAsStreamAsync(
@@ -68,6 +71,7 @@ namespace HuggingFace
             string? suffix = default,
             float? temperature = default,
             float? topP = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

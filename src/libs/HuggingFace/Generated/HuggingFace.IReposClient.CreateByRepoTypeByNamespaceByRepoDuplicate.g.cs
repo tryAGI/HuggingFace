@@ -11,6 +11,7 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateDuplicateResponse> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
@@ -19,6 +20,7 @@ namespace HuggingFace
             string repo,
 
             global::HuggingFace.CreateDuplicateRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Duplicate a repository
@@ -41,6 +43,7 @@ namespace HuggingFace
         /// <param name="volumes">
         /// HuggingFace Buckets or Repos to mount as volumes in the duplicated Space.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateDuplicateResponse> CreateByRepoTypeByNamespaceByRepoDuplicateAsync(
@@ -56,6 +59,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestSecret>? secrets = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVariable>? variables = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVolume>? volumes = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -34,6 +34,7 @@ namespace HuggingFace
         /// <param name="discussionCollectionName"></param>
         /// <param name="spacesTags"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateQuicksearchResponse> CreateQuicksearchAsync(
@@ -55,6 +56,7 @@ namespace HuggingFace
             string? discussionId = default,
             string? discussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? spacesTags = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Quick search<br/>
@@ -110,6 +112,7 @@ namespace HuggingFace
         /// <param name="requestDiscussionId"></param>
         /// <param name="requestDiscussionCollectionName"></param>
         /// <param name="requestSpacesTags"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateQuicksearchResponse> CreateQuicksearchAsync(
@@ -145,6 +148,7 @@ namespace HuggingFace
             string? requestDiscussionId = default,
             string? requestDiscussionCollectionName = default,
             global::System.Collections.Generic.IList<string>? requestSpacesTags = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

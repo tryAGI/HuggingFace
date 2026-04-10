@@ -10,12 +10,14 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
             string name,
 
             global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a SCIM provisioning user invitation<br/>
@@ -33,6 +35,7 @@ namespace HuggingFace
         /// <param name="externalId">
         /// SSO unique identifier (SAML nameid or OIDC sub claim) - required for SSO login
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersResponse> CreateOrganizationsByNameScimProvisioningV2UsersAsync(
@@ -42,6 +45,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsScimProvisioningV2UsersRequestEmail> emails,
             string externalId,
             bool? active = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -27,6 +27,7 @@ namespace HuggingFace
         /// Default Value: false
         /// </param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task DeleteNotificationsAsync(
@@ -42,6 +43,7 @@ namespace HuggingFace
             global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete notifications<br/>
@@ -66,6 +68,7 @@ namespace HuggingFace
         /// Default Value: false
         /// </param>
         /// <param name="discussionIds"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task DeleteNotificationsAsync(
@@ -80,6 +83,7 @@ namespace HuggingFace
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
