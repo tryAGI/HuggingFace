@@ -235,6 +235,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Eupe,
+        /// <summary>
+        /// 
+        /// </summary>
         F5Tts,
         /// <summary>
         /// 
@@ -914,6 +918,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Edsnlp => "edsnlp",
                 CreateQuicksearchLibrary2.Elm => "elm",
                 CreateQuicksearchLibrary2.Espnet => "espnet",
+                CreateQuicksearchLibrary2.Eupe => "eupe",
                 CreateQuicksearchLibrary2.F5Tts => "f5-tts",
                 CreateQuicksearchLibrary2.Fairseq => "fairseq",
                 CreateQuicksearchLibrary2.Fastai => "fastai",
@@ -1133,6 +1138,7 @@ namespace HuggingFace
                 "edsnlp" => CreateQuicksearchLibrary2.Edsnlp,
                 "elm" => CreateQuicksearchLibrary2.Elm,
                 "espnet" => CreateQuicksearchLibrary2.Espnet,
+                "eupe" => CreateQuicksearchLibrary2.Eupe,
                 "f5-tts" => CreateQuicksearchLibrary2.F5Tts,
                 "fairseq" => CreateQuicksearchLibrary2.Fairseq,
                 "fastai" => CreateQuicksearchLibrary2.Fastai,
