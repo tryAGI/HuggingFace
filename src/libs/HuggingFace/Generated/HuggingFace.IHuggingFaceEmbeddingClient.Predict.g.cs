@@ -8,11 +8,13 @@ namespace HuggingFace
         /// Get Predictions. Returns a 424 status code if the model is not a Sequence Classification model
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.PredictResponse> PredictAsync(
 
             global::HuggingFace.PredictRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get Predictions. Returns a 424 status code if the model is not a Sequence Classification model
@@ -32,6 +34,7 @@ namespace HuggingFace
         /// <param name="truncationDirection">
         /// Default Value: right
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.PredictResponse> PredictAsync(
@@ -39,6 +42,7 @@ namespace HuggingFace
             bool? rawScores = default,
             bool? truncate = default,
             global::HuggingFace.TruncationDirection? truncationDirection = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

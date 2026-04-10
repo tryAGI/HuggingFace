@@ -33,6 +33,9 @@ namespace HuggingFace
 #if DEBUG
             = true;
 #endif
+
+        /// <inheritdoc/>
+        public global::HuggingFace.AutoSDKClientOptions Options { get; }
         /// <summary>
         /// 
         /// </summary>
@@ -42,7 +45,7 @@ namespace HuggingFace
         /// <summary>
         /// Agentic Provisioning. The following endpoints are for use with Agentic Provisioning Protocol.
         /// </summary>
-        public AgenticProvisioningClient AgenticProvisioning => new AgenticProvisioningClient(HttpClient, authorizations: Authorizations)
+        public AgenticProvisioningClient AgenticProvisioning => new AgenticProvisioningClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -51,7 +54,7 @@ namespace HuggingFace
         /// <summary>
         /// Auth. The following endpoints get information about your currently used user based on the passed token.
         /// </summary>
-        public AuthClient Auth => new AuthClient(HttpClient, authorizations: Authorizations)
+        public AuthClient Auth => new AuthClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -60,7 +63,7 @@ namespace HuggingFace
         /// <summary>
         /// Buckets. Git-free storage buckets for files, powered by Xet. Buckets provide simple file storage without git versioning.
         /// </summary>
-        public BucketsClient Buckets => new BucketsClient(HttpClient, authorizations: Authorizations)
+        public BucketsClient Buckets => new BucketsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -70,7 +73,7 @@ namespace HuggingFace
         /// Collections. Use Collections to group repositories from the Hub (Models, Datasets, Spaces and Papers) on a dedicated page.<br/>
         /// You can learn more about it in the Collections [guide](https://huggingface.co/docs/hub/collections). Collections can also be managed using the Python client (see [guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/collections)).
         /// </summary>
-        public CollectionsClient Collections => new CollectionsClient(HttpClient, authorizations: Authorizations)
+        public CollectionsClient Collections => new CollectionsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -79,7 +82,7 @@ namespace HuggingFace
         /// <summary>
         /// Datasets. Get information from all datasets on the Hub.
         /// </summary>
-        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations)
+        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -88,7 +91,7 @@ namespace HuggingFace
         /// <summary>
         /// Discussions. The following endpoints manage discussions.
         /// </summary>
-        public DiscussionsClient Discussions => new DiscussionsClient(HttpClient, authorizations: Authorizations)
+        public DiscussionsClient Discussions => new DiscussionsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -97,7 +100,7 @@ namespace HuggingFace
         /// <summary>
         /// Documentation. The following endpoints are for interacting with the Hub's documentation.
         /// </summary>
-        public DocsClient Docs => new DocsClient(HttpClient, authorizations: Authorizations)
+        public DocsClient Docs => new DocsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -106,7 +109,7 @@ namespace HuggingFace
         /// <summary>
         /// Inference Endpoints. Manage inference endpoints.
         /// </summary>
-        public InferenceEndpointsClient InferenceEndpoints => new InferenceEndpointsClient(HttpClient, authorizations: Authorizations)
+        public InferenceEndpointsClient InferenceEndpoints => new InferenceEndpointsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -115,7 +118,7 @@ namespace HuggingFace
         /// <summary>
         /// Jobs. The following endpoints manage jobs.
         /// </summary>
-        public JobsClient Jobs => new JobsClient(HttpClient, authorizations: Authorizations)
+        public JobsClient Jobs => new JobsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -124,7 +127,7 @@ namespace HuggingFace
         /// <summary>
         /// Kernels. Get information from all kernels on the Hub.
         /// </summary>
-        public KernelsClient Kernels => new KernelsClient(HttpClient, authorizations: Authorizations)
+        public KernelsClient Kernels => new KernelsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -133,7 +136,7 @@ namespace HuggingFace
         /// <summary>
         /// Models. Get information from all models on the Hub.
         /// </summary>
-        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations)
+        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -142,7 +145,7 @@ namespace HuggingFace
         /// <summary>
         /// Notifications. The following endpoints fetch Hub notifications.
         /// </summary>
-        public NotificationsClient Notifications => new NotificationsClient(HttpClient, authorizations: Authorizations)
+        public NotificationsClient Notifications => new NotificationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -151,7 +154,7 @@ namespace HuggingFace
         /// <summary>
         /// OAuth. The following endpoints are for use with OAuth.
         /// </summary>
-        public OauthClient Oauth => new OauthClient(HttpClient, authorizations: Authorizations)
+        public OauthClient Oauth => new OauthClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -160,7 +163,7 @@ namespace HuggingFace
         /// <summary>
         /// Organizations. The following endpoints let you interact with Hub Organizations and their members.
         /// </summary>
-        public OrgsClient Orgs => new OrgsClient(HttpClient, authorizations: Authorizations)
+        public OrgsClient Orgs => new OrgsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -169,7 +172,7 @@ namespace HuggingFace
         /// <summary>
         /// Paper pages. The following endpoint gets information about papers.
         /// </summary>
-        public PapersClient Papers => new PapersClient(HttpClient, authorizations: Authorizations)
+        public PapersClient Papers => new PapersClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -178,7 +181,7 @@ namespace HuggingFace
         /// <summary>
         /// Repository Search. The following endpoints help get information about models, datasets, and Spaces stored on the Hub.
         /// </summary>
-        public RepoSearchClient RepoSearch => new RepoSearchClient(HttpClient, authorizations: Authorizations)
+        public RepoSearchClient RepoSearch => new RepoSearchClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -187,7 +190,7 @@ namespace HuggingFace
         /// <summary>
         /// Repositories. The following endpoints manage repository settings like creating and deleting a repository.
         /// </summary>
-        public ReposClient Repos => new ReposClient(HttpClient, authorizations: Authorizations)
+        public ReposClient Repos => new ReposClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -196,7 +199,7 @@ namespace HuggingFace
         /// <summary>
         /// Resource groups. The following endpoints manage resource groups. Resource groups are a Team or Enterprise feature.
         /// </summary>
-        public ResourceGroupsClient ResourceGroups => new ResourceGroupsClient(HttpClient, authorizations: Authorizations)
+        public ResourceGroupsClient ResourceGroups => new ResourceGroupsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -226,7 +229,7 @@ namespace HuggingFace
         /// | `id` | Hugging Face SCIM endpoint identifier |<br/>
         /// | `active` | Boolean for provisioning status |.
         /// </summary>
-        public ScimClient Scim => new ScimClient(HttpClient, authorizations: Authorizations)
+        public ScimClient Scim => new ScimClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -235,7 +238,7 @@ namespace HuggingFace
         /// <summary>
         /// Spaces. Get information from all Spaces on the Hub.
         /// </summary>
-        public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations)
+        public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -244,7 +247,7 @@ namespace HuggingFace
         /// <summary>
         /// SQL Console. Get information from SQL Console embeds from a dataset.
         /// </summary>
-        public SqlConsoleClient SqlConsole => new SqlConsoleClient(HttpClient, authorizations: Authorizations)
+        public SqlConsoleClient SqlConsole => new SqlConsoleClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -253,7 +256,7 @@ namespace HuggingFace
         /// <summary>
         /// Users. User accounts are the base authoring entity on the Hub.
         /// </summary>
-        public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations)
+        public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -262,7 +265,7 @@ namespace HuggingFace
         /// <summary>
         /// Webhooks. The following endpoints are for use with webhooks.
         /// </summary>
-        public WebhooksClient Webhooks => new WebhooksClient(HttpClient, authorizations: Authorizations)
+        public WebhooksClient Webhooks => new WebhooksClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -281,11 +284,37 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::HuggingFace.EndPointAuthorization>? authorizations = null,
+            bool disposeHttpClient = true) : this(
+                httpClient,
+                baseUri,
+                authorizations,
+                options: null,
+                disposeHttpClient: disposeHttpClient)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new instance of the HuggingFaceClient.
+        /// If no httpClient is provided, a new one will be created.
+        /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
+        /// </summary>
+        /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
+        /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
+        /// <param name="authorizations">The authorizations to use for the requests.</param>
+        /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
+        /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
+        public HuggingFaceClient(
+            global::System.Net.Http.HttpClient? httpClient = null,
+            global::System.Uri? baseUri = null,
+            global::System.Collections.Generic.List<global::HuggingFace.EndPointAuthorization>? authorizations = null,
+            global::HuggingFace.AutoSDKClientOptions? options = null,
             bool disposeHttpClient = true)
         {
+
             HttpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             HttpClient.BaseAddress ??= baseUri ?? new global::System.Uri(DefaultBaseUrl);
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::HuggingFace.EndPointAuthorization>();
+            Options = options ?? new global::HuggingFace.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
 
             Initialized(HttpClient);

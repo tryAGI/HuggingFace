@@ -12,6 +12,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="rev"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateSpacesSuperSquashResponse> CreateSpacesByNamespaceByRepoSuperSquashByRevAsync(
@@ -20,6 +21,7 @@ namespace HuggingFace
             string rev,
 
             global::HuggingFace.CreateSpacesSuperSquashRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Squash ref<br/>
@@ -29,6 +31,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="rev"></param>
         /// <param name="message"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateSpacesSuperSquashResponse> CreateSpacesByNamespaceByRepoSuperSquashByRevAsync(
@@ -36,6 +39,7 @@ namespace HuggingFace
             string repo,
             string rev,
             string? message = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -17,6 +17,7 @@ namespace HuggingFace
         /// <param name="limit">
         /// Default Value: 50
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem>> GetDatasetsByNamespaceByRepoCommitsByRevAsync(
@@ -26,6 +27,7 @@ namespace HuggingFace
             int? p = default,
             global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsExpandItem>? expand = default,
             int? limit = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// List commits
@@ -40,6 +42,7 @@ namespace HuggingFace
         /// <param name="limit">
         /// Default Value: 50
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsResponseItem>>> GetDatasetsByNamespaceByRepoCommitsByRevAsResponseAsync(
@@ -49,6 +52,7 @@ namespace HuggingFace
             int? p = default,
             global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsCommitsExpandItem>? expand = default,
             int? limit = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
