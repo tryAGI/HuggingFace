@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// SQL Console. Get information from SQL Console embeds from a dataset.<br/>
+    /// SQL Console<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -33,11 +33,11 @@ namespace HuggingFace
         /// ensuring <see cref="ApiException.ResponseBody"/> is populated.
         /// </summary>
         public bool ReadResponseAsString { get; set; }
-
         /// <summary>
         /// Client-wide request defaults such as headers, query parameters, retries, and timeout.
         /// </summary>
         public global::HuggingFace.AutoSDKClientOptions Options { get; }
+
 
         /// <summary>
         /// 

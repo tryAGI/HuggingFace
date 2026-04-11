@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Auth. The following endpoints get information about your currently used user based on the passed token.<br/>
+    /// Auth<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
