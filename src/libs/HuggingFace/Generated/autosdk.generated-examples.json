@@ -1,0 +1,114 @@
+{
+  "Examples": [
+    {
+      "Order": 1,
+      "Title": "Decode input ids",
+      "Slug": "decode",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Decode input ids\n# @name decode\nPOST {{host}}/decode\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022ids\u0022: [\n    0\n  ],\n  \u0022skip_special_tokens\u0022: \u0022true\u0022\n}\n\n## Responses\n# 200\n# Description: Decoded ids\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "decode",
+      "Setup": null
+    },
+    {
+      "Order": 2,
+      "Title": "Get Embeddings. Returns a 424 status code if the model is not an embedding model.",
+      "Slug": "embed",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Get Embeddings. Returns a 424 status code if the model is not an embedding model.\n# @name embed\nPOST {{host}}/embed\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022dimensions\u0022: \u0022null\u0022,\n  \u0022inputs\u0022: \u0022string\u0022,\n  \u0022normalize\u0022: \u0022true\u0022,\n  \u0022prompt_name\u0022: \u0022null\u0022,\n  \u0022truncate\u0022: \u0022false\u0022,\n  \u0022truncation_direction\u0022: \u0022right\u0022\n}\n\n## Responses\n# 200\n# Description: Embeddings\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json\n# 424\n# Description: Embedding Error\n# Content-Type: application/json\n# 429\n# Description: Model is overloaded\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "embed",
+      "Setup": null
+    },
+    {
+      "Order": 3,
+      "Title": "Get all Embeddings without Pooling.",
+      "Slug": "embed-all",
+      "Description": "Returns a 424 status code if the model is not an embedding model.",
+      "Language": "http",
+      "Code": "### Get all Embeddings without Pooling.\n# @name embed_all\nPOST {{host}}/embed_all\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022inputs\u0022: \u0022string\u0022,\n  \u0022prompt_name\u0022: \u0022null\u0022,\n  \u0022truncate\u0022: \u0022false\u0022,\n  \u0022truncation_direction\u0022: \u0022right\u0022\n}\n\n## Responses\n# 200\n# Description: Embeddings\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json\n# 424\n# Description: Embedding Error\n# Content-Type: application/json\n# 429\n# Description: Model is overloaded\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "embed_all",
+      "Setup": null
+    },
+    {
+      "Order": 4,
+      "Title": "Get Sparse Embeddings. Returns a 424 status code if the model is not an embedding model with SPLADE pooling.",
+      "Slug": "embed-sparse",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Get Sparse Embeddings. Returns a 424 status code if the model is not an embedding model with SPLADE pooling.\n# @name embed_sparse\nPOST {{host}}/embed_sparse\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022inputs\u0022: \u0022string\u0022,\n  \u0022prompt_name\u0022: \u0022null\u0022,\n  \u0022truncate\u0022: \u0022false\u0022,\n  \u0022truncation_direction\u0022: \u0022right\u0022\n}\n\n## Responses\n# 200\n# Description: Embeddings\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json\n# 424\n# Description: Embedding Error\n# Content-Type: application/json\n# 429\n# Description: Model is overloaded\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "embed_sparse",
+      "Setup": null
+    },
+    {
+      "Order": 5,
+      "Title": "Health check method",
+      "Slug": "health",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "csharp",
+      "Code": "using var client = new HuggingFaceEmbeddingClient(apiKey);\nawait client.HealthAsync();",
+      "Format": "sdk",
+      "OperationId": "health",
+      "Setup": "This example assumes \u0060using HuggingFace;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 6,
+      "Title": "OpenAI compatible route. Returns a 424 status code if the model is not an embedding model.",
+      "Slug": "openai-embed",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### OpenAI compatible route. Returns a 424 status code if the model is not an embedding model.\n# @name openai_embed\nPOST {{host}}/v1/embeddings\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022dimensions\u0022: \u0022null\u0022,\n  \u0022encoding_format\u0022: \u0022float\u0022,\n  \u0022input\u0022: \u0022string\u0022,\n  \u0022model\u0022: \u0022null\u0022,\n  \u0022user\u0022: \u0022null\u0022\n}\n\n## Responses\n# 200\n# Description: Embeddings\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json\n# 424\n# Description: Embedding Error\n# Content-Type: application/json\n# 429\n# Description: Model is overloaded\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "openai_embed",
+      "Setup": null
+    },
+    {
+      "Order": 7,
+      "Title": "Get Predictions. Returns a 424 status code if the model is not a Sequence Classification model",
+      "Slug": "predict",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Get Predictions. Returns a 424 status code if the model is not a Sequence Classification model\n# @name predict\nPOST {{host}}/predict\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022inputs\u0022: \u0022What is Deep Learning?\u0022,\n  \u0022raw_scores\u0022: \u0022false\u0022,\n  \u0022truncate\u0022: \u0022false\u0022,\n  \u0022truncation_direction\u0022: \u0022right\u0022\n}\n\n## Responses\n# 200\n# Description: Predictions\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json\n# 424\n# Description: Prediction Error\n# Content-Type: application/json\n# 429\n# Description: Model is overloaded\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "predict",
+      "Setup": null
+    },
+    {
+      "Order": 8,
+      "Title": "Get Ranks. Returns a 424 status code if the model is not a Sequence Classification model with",
+      "Slug": "rerank",
+      "Description": "a single class.",
+      "Language": "http",
+      "Code": "### Get Ranks. Returns a 424 status code if the model is not a Sequence Classification model with\n# @name rerank\nPOST {{host}}/rerank\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022query\u0022: \u0022What is Deep Learning?\u0022,\n  \u0022raw_scores\u0022: \u0022false\u0022,\n  \u0022return_text\u0022: \u0022false\u0022,\n  \u0022texts\u0022: [\n    \u0022Deep Learning is ...\u0022\n  ],\n  \u0022truncate\u0022: \u0022false\u0022,\n  \u0022truncation_direction\u0022: \u0022right\u0022\n}\n\n## Responses\n# 200\n# Description: Ranks\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json\n# 424\n# Description: Rerank Error\n# Content-Type: application/json\n# 429\n# Description: Model is overloaded\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "rerank",
+      "Setup": null
+    },
+    {
+      "Order": 9,
+      "Title": "Get Sentence Similarity. Returns a 424 status code if the model is not an embedding model.",
+      "Slug": "similarity",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Get Sentence Similarity. Returns a 424 status code if the model is not an embedding model.\n# @name similarity\nPOST {{host}}/similarity\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022inputs\u0022: {\n    \u0022sentences\u0022: [\n      \u0022What is Machine Learning?\u0022\n    ],\n    \u0022source_sentence\u0022: \u0022What is Deep Learning?\u0022\n  },\n  \u0022parameters\u0022: \u0022null\u0022\n}\n\n## Responses\n# 200\n# Description: Sentence Similarity\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json\n# 424\n# Description: Embedding Error\n# Content-Type: application/json\n# 429\n# Description: Model is overloaded\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "similarity",
+      "Setup": null
+    },
+    {
+      "Order": 10,
+      "Title": "Tokenize inputs",
+      "Slug": "tokenize",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Tokenize inputs\n# @name tokenize\nPOST {{host}}/tokenize\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022add_special_tokens\u0022: \u0022true\u0022,\n  \u0022inputs\u0022: \u0022string\u0022,\n  \u0022prompt_name\u0022: \u0022null\u0022\n}\n\n## Responses\n# 200\n# Description: Tokenized ids\n# Content-Type: application/json\n# 400\n# Description: Batch is empty\n# Content-Type: application/json\n# 413\n# Description: Batch size error\n# Content-Type: application/json\n# 422\n# Description: Tokenization error\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "tokenize",
+      "Setup": null
+    }
+  ]
+}

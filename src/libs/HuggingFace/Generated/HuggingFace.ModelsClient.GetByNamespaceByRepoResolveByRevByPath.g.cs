@@ -146,14 +146,14 @@ namespace HuggingFace
                 } 
             }
 
-                if (range != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Range", range.ToString());
-                }
-                if (accept != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Accept", accept.ToString());
-                }
+            if (range != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Range", range.ToString());
+            }
+            if (accept != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Accept", accept.ToString());
+            }
 
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

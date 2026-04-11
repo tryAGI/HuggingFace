@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Users. User accounts are the base authoring entity on the Hub.<br/>
+    /// Users<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

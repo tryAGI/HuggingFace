@@ -217,10 +217,10 @@ namespace HuggingFace
                 } 
             }
 
-                if (contentType != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Content-Type", contentType?.ToValueString() ?? string.Empty);
-                }
+            if (contentType != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Content-Type", contentType?.ToValueString() ?? string.Empty);
+            }
 
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
