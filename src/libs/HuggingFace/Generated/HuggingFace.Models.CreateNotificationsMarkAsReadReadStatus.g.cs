@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// Default Value: all
     /// </summary>
-    public enum CreateDiscussionsMarkAsReadReadStatus
+    public enum CreateNotificationsMarkAsReadReadStatus
     {
         /// <summary>
         /// 
@@ -21,29 +21,29 @@ namespace HuggingFace
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class CreateDiscussionsMarkAsReadReadStatusExtensions
+    public static class CreateNotificationsMarkAsReadReadStatusExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this CreateDiscussionsMarkAsReadReadStatus value)
+        public static string ToValueString(this CreateNotificationsMarkAsReadReadStatus value)
         {
             return value switch
             {
-                CreateDiscussionsMarkAsReadReadStatus.All => "all",
-                CreateDiscussionsMarkAsReadReadStatus.Unread => "unread",
+                CreateNotificationsMarkAsReadReadStatus.All => "all",
+                CreateNotificationsMarkAsReadReadStatus.Unread => "unread",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static CreateDiscussionsMarkAsReadReadStatus? ToEnum(string value)
+        public static CreateNotificationsMarkAsReadReadStatus? ToEnum(string value)
         {
             return value switch
             {
-                "all" => CreateDiscussionsMarkAsReadReadStatus.All,
-                "unread" => CreateDiscussionsMarkAsReadReadStatus.Unread,
+                "all" => CreateNotificationsMarkAsReadReadStatus.All,
+                "unread" => CreateNotificationsMarkAsReadReadStatus.Unread,
                 _ => null,
             };
         }
