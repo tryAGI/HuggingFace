@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public enum CreateDiscussionsMarkAsReadRepoType
+    public enum CreateNotificationsMarkAsReadRepoType
     {
         /// <summary>
         /// 
@@ -33,35 +33,35 @@ namespace HuggingFace
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class CreateDiscussionsMarkAsReadRepoTypeExtensions
+    public static class CreateNotificationsMarkAsReadRepoTypeExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this CreateDiscussionsMarkAsReadRepoType value)
+        public static string ToValueString(this CreateNotificationsMarkAsReadRepoType value)
         {
             return value switch
             {
-                CreateDiscussionsMarkAsReadRepoType.Bucket => "bucket",
-                CreateDiscussionsMarkAsReadRepoType.Dataset => "dataset",
-                CreateDiscussionsMarkAsReadRepoType.Kernel => "kernel",
-                CreateDiscussionsMarkAsReadRepoType.Model => "model",
-                CreateDiscussionsMarkAsReadRepoType.Space => "space",
+                CreateNotificationsMarkAsReadRepoType.Bucket => "bucket",
+                CreateNotificationsMarkAsReadRepoType.Dataset => "dataset",
+                CreateNotificationsMarkAsReadRepoType.Kernel => "kernel",
+                CreateNotificationsMarkAsReadRepoType.Model => "model",
+                CreateNotificationsMarkAsReadRepoType.Space => "space",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static CreateDiscussionsMarkAsReadRepoType? ToEnum(string value)
+        public static CreateNotificationsMarkAsReadRepoType? ToEnum(string value)
         {
             return value switch
             {
-                "bucket" => CreateDiscussionsMarkAsReadRepoType.Bucket,
-                "dataset" => CreateDiscussionsMarkAsReadRepoType.Dataset,
-                "kernel" => CreateDiscussionsMarkAsReadRepoType.Kernel,
-                "model" => CreateDiscussionsMarkAsReadRepoType.Model,
-                "space" => CreateDiscussionsMarkAsReadRepoType.Space,
+                "bucket" => CreateNotificationsMarkAsReadRepoType.Bucket,
+                "dataset" => CreateNotificationsMarkAsReadRepoType.Dataset,
+                "kernel" => CreateNotificationsMarkAsReadRepoType.Kernel,
+                "model" => CreateNotificationsMarkAsReadRepoType.Model,
+                "space" => CreateNotificationsMarkAsReadRepoType.Space,
                 _ => null,
             };
         }

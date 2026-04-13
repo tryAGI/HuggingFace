@@ -30,17 +30,17 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
+        global::System.Threading.Tasks.Task CreateNotificationsMarkAsReadAsync(
 
-            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request,
+            global::HuggingFace.CreateNotificationsMarkAsReadRequest request,
             int? p = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -76,15 +76,15 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
+        global::System.Threading.Tasks.Task CreateNotificationsMarkAsReadAsync(
             int? p = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,

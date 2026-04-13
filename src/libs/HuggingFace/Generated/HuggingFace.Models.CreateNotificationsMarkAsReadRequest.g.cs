@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class CreateDiscussionsMarkAsReadRequest
+    public sealed partial class CreateNotificationsMarkAsReadRequest
     {
         /// <summary>
         /// Default Value: []
@@ -27,7 +27,7 @@ namespace HuggingFace
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateDiscussionsMarkAsReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateNotificationsMarkAsReadRequest" /> class.
         /// </summary>
         /// <param name="discussionIds">
         /// Default Value: []
@@ -38,7 +38,7 @@ namespace HuggingFace
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public CreateDiscussionsMarkAsReadRequest(
+        public CreateNotificationsMarkAsReadRequest(
             global::System.Collections.Generic.IList<string>? discussionIds,
             bool? read)
         {
@@ -47,9 +47,9 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateDiscussionsMarkAsReadRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateNotificationsMarkAsReadRequest" /> class.
         /// </summary>
-        public CreateDiscussionsMarkAsReadRequest()
+        public CreateNotificationsMarkAsReadRequest()
         {
         }
     }

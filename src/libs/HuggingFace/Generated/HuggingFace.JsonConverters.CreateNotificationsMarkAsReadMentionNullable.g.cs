@@ -3,10 +3,10 @@
 namespace HuggingFace.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class CreateDiscussionsMarkAsReadMentionJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.CreateDiscussionsMarkAsReadMention>
+    public sealed class CreateNotificationsMarkAsReadMentionNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.CreateNotificationsMarkAsReadMention?>
     {
         /// <inheritdoc />
-        public override global::HuggingFace.CreateDiscussionsMarkAsReadMention Read(
+        public override global::HuggingFace.CreateNotificationsMarkAsReadMention? Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace HuggingFace.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::HuggingFace.CreateDiscussionsMarkAsReadMentionExtensions.ToEnum(stringValue) ?? default;
+                        return global::HuggingFace.CreateNotificationsMarkAsReadMentionExtensions.ToEnum(stringValue);
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace HuggingFace.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::HuggingFace.CreateDiscussionsMarkAsReadMention)numValue;
+                    return (global::HuggingFace.CreateNotificationsMarkAsReadMention)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::HuggingFace.CreateDiscussionsMarkAsReadMention);
+                    return default(global::HuggingFace.CreateNotificationsMarkAsReadMention?);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,19 @@ namespace HuggingFace.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::HuggingFace.CreateDiscussionsMarkAsReadMention value,
+            global::HuggingFace.CreateNotificationsMarkAsReadMention? value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::HuggingFace.CreateDiscussionsMarkAsReadMentionExtensions.ToValueString(value));
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::HuggingFace.CreateNotificationsMarkAsReadMentionExtensions.ToValueString(value.Value));
+            }
         }
     }
 }

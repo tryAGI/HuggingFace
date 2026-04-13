@@ -7,7 +7,7 @@ namespace HuggingFace
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateDiscussionsMarkAsReadSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateNotificationsMarkAsReadSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,38 +21,38 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateDiscussionsMarkAsReadSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateNotificationsMarkAsReadSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_CreateDiscussionsMarkAsReadSecurityRequirement0,
+            {                s_CreateNotificationsMarkAsReadSecurityRequirement0,
             };
-        partial void PrepareCreateDiscussionsMarkAsReadArguments(
+        partial void PrepareCreateNotificationsMarkAsReadArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? p,
-            ref global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus,
-            ref global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType,
+            ref global::HuggingFace.CreateNotificationsMarkAsReadReadStatus? readStatus,
+            ref global::HuggingFace.CreateNotificationsMarkAsReadRepoType? repoType,
             ref string? repoName,
             ref string? postAuthor,
             ref string? paperId,
             ref string? articleId,
-            ref global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention,
+            ref global::HuggingFace.CreateNotificationsMarkAsReadMention? mention,
             ref global::System.DateTime? lastUpdate,
             object? applyToAll,
-            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request);
-        partial void PrepareCreateDiscussionsMarkAsReadRequest(
+            global::HuggingFace.CreateNotificationsMarkAsReadRequest request);
+        partial void PrepareCreateNotificationsMarkAsReadRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int? p,
-            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus,
-            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType,
+            global::HuggingFace.CreateNotificationsMarkAsReadReadStatus? readStatus,
+            global::HuggingFace.CreateNotificationsMarkAsReadRepoType? repoType,
             string? repoName,
             string? postAuthor,
             string? paperId,
             string? articleId,
-            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention,
+            global::HuggingFace.CreateNotificationsMarkAsReadMention? mention,
             global::System.DateTime? lastUpdate,
             object? applyToAll,
-            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request);
-        partial void ProcessCreateDiscussionsMarkAsReadResponse(
+            global::HuggingFace.CreateNotificationsMarkAsReadRequest request);
+        partial void ProcessCreateNotificationsMarkAsReadResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
@@ -82,17 +82,17 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
+        public async global::System.Threading.Tasks.Task CreateNotificationsMarkAsReadAsync(
 
-            global::HuggingFace.CreateDiscussionsMarkAsReadRequest request,
+            global::HuggingFace.CreateNotificationsMarkAsReadRequest request,
             int? p = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -102,7 +102,7 @@ namespace HuggingFace
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateDiscussionsMarkAsReadArguments(
+            PrepareCreateNotificationsMarkAsReadArguments(
                 httpClient: HttpClient,
                 p: ref p,
                 readStatus: ref readStatus,
@@ -119,8 +119,8 @@ namespace HuggingFace
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateDiscussionsMarkAsReadSecurityRequirements,
-                operationName: "CreateDiscussionsMarkAsReadAsync");
+                securityRequirements: s_CreateNotificationsMarkAsReadSecurityRequirements,
+                operationName: "CreateNotificationsMarkAsReadAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -139,7 +139,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: "/api/discussions/mark-as-read",
+                                path: "/api/notifications/mark-as-read",
                                 baseUri: HttpClient.BaseAddress); 
                             __pathBuilder
                                 .AddOptionalParameter("p", p?.ToString())
@@ -196,7 +196,7 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateDiscussionsMarkAsReadRequest(
+                PrepareCreateNotificationsMarkAsReadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     p: p,
@@ -226,9 +226,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createDiscussionsMarkAsRead",
-                                methodName: "CreateDiscussionsMarkAsReadAsync",
-                                pathTemplate: "\"/api/discussions/mark-as-read\"",
+                                operationId: "createNotificationsMarkAsRead",
+                                methodName: "CreateNotificationsMarkAsReadAsync",
+                                pathTemplate: "\"/api/notifications/mark-as-read\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -253,9 +253,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createDiscussionsMarkAsRead",
-                                methodName: "CreateDiscussionsMarkAsReadAsync",
-                                pathTemplate: "\"/api/discussions/mark-as-read\"",
+                                operationId: "createNotificationsMarkAsRead",
+                                methodName: "CreateNotificationsMarkAsReadAsync",
+                                pathTemplate: "\"/api/notifications/mark-as-read\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -288,9 +288,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createDiscussionsMarkAsRead",
-                                methodName: "CreateDiscussionsMarkAsReadAsync",
-                                pathTemplate: "\"/api/discussions/mark-as-read\"",
+                                operationId: "createNotificationsMarkAsRead",
+                                methodName: "CreateNotificationsMarkAsReadAsync",
+                                pathTemplate: "\"/api/notifications/mark-as-read\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -327,7 +327,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateDiscussionsMarkAsReadResponse(
+                ProcessCreateNotificationsMarkAsReadResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -335,9 +335,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createDiscussionsMarkAsRead",
-                                methodName: "CreateDiscussionsMarkAsReadAsync",
-                                pathTemplate: "\"/api/discussions/mark-as-read\"",
+                                operationId: "createNotificationsMarkAsRead",
+                                methodName: "CreateNotificationsMarkAsReadAsync",
+                                pathTemplate: "\"/api/notifications/mark-as-read\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -355,9 +355,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createDiscussionsMarkAsRead",
-                                methodName: "CreateDiscussionsMarkAsReadAsync",
-                                pathTemplate: "\"/api/discussions/mark-as-read\"",
+                                operationId: "createNotificationsMarkAsRead",
+                                methodName: "CreateNotificationsMarkAsReadAsync",
+                                pathTemplate: "\"/api/notifications/mark-as-read\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -477,15 +477,15 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task CreateDiscussionsMarkAsReadAsync(
+        public async global::System.Threading.Tasks.Task CreateNotificationsMarkAsReadAsync(
             int? p = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadReadStatus? readStatus = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadRepoType? repoType = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadReadStatus? readStatus = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadRepoType? repoType = default,
             string? repoName = default,
             string? postAuthor = default,
             string? paperId = default,
             string? articleId = default,
-            global::HuggingFace.CreateDiscussionsMarkAsReadMention? mention = default,
+            global::HuggingFace.CreateNotificationsMarkAsReadMention? mention = default,
             global::System.DateTime? lastUpdate = default,
             object? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,
@@ -493,13 +493,13 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateDiscussionsMarkAsReadRequest
+            var __request = new global::HuggingFace.CreateNotificationsMarkAsReadRequest
             {
                 DiscussionIds = discussionIds,
                 Read = read,
             };
 
-            await CreateDiscussionsMarkAsReadAsync(
+            await CreateNotificationsMarkAsReadAsync(
                 p: p,
                 readStatus: readStatus,
                 repoType: repoType,
