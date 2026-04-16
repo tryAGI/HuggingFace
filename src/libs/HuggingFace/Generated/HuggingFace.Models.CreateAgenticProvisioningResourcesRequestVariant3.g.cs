@@ -11,22 +11,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        /// <default>"credits"</default>
+        /// <default>"free"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("service_id")]
-        public string ServiceId { get; set; } = "credits";
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("configuration")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3Configuration Configuration { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("payment_credentials")]
-        public global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3PaymentCredentials? PaymentCredentials { get; set; }
+        public string ServiceId { get; set; } = "free";
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,20 +24,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesRequestVariant3" /> class.
         /// </summary>
-        /// <param name="configuration"></param>
-        /// <param name="paymentCredentials"></param>
         /// <param name="serviceId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateAgenticProvisioningResourcesRequestVariant3(
-            global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3Configuration configuration,
-            global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3PaymentCredentials? paymentCredentials,
-            string serviceId = "credits")
+            string serviceId = "free")
         {
             this.ServiceId = serviceId;
-            this.Configuration = configuration ?? throw new global::System.ArgumentNullException(nameof(configuration));
-            this.PaymentCredentials = paymentCredentials;
         }
 
         /// <summary>

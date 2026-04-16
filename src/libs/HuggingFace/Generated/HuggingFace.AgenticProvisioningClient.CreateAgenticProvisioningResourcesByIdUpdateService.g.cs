@@ -7,7 +7,7 @@ namespace HuggingFace
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateAgenticProvisioningResourcesSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateAgenticProvisioningResourcesByIdUpdateServiceSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,50 +21,57 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateAgenticProvisioningResourcesSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateAgenticProvisioningResourcesByIdUpdateServiceSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_CreateAgenticProvisioningResourcesSecurityRequirement0,
+            {                s_CreateAgenticProvisioningResourcesByIdUpdateServiceSecurityRequirement0,
             };
-        partial void PrepareCreateAgenticProvisioningResourcesArguments(
+        partial void PrepareCreateAgenticProvisioningResourcesByIdUpdateServiceArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4> request);
-        partial void PrepareCreateAgenticProvisioningResourcesRequest(
+            ref string id,
+            global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequest request);
+        partial void PrepareCreateAgenticProvisioningResourcesByIdUpdateServiceRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4> request);
-        partial void ProcessCreateAgenticProvisioningResourcesResponse(
+            string id,
+            global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequest request);
+        partial void ProcessCreateAgenticProvisioningResourcesByIdUpdateServiceResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateAgenticProvisioningResourcesResponseContent(
+        partial void ProcessCreateAgenticProvisioningResourcesByIdUpdateServiceResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Provision a resource
+        /// Update a resource's service (e.g. plan upgrade)
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2>> CreateAgenticProvisioningResourcesAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsync(
+            string id,
 
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4> request,
+            global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateAgenticProvisioningResourcesArguments(
+            PrepareCreateAgenticProvisioningResourcesByIdUpdateServiceArguments(
                 httpClient: HttpClient,
+                id: ref id,
                 request: request);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateAgenticProvisioningResourcesSecurityRequirements,
-                operationName: "CreateAgenticProvisioningResourcesAsync");
+                securityRequirements: s_CreateAgenticProvisioningResourcesByIdUpdateServiceSecurityRequirements,
+                operationName: "CreateAgenticProvisioningResourcesByIdUpdateServiceAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -83,7 +90,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: "/api/agentic/provisioning/resources",
+                                path: $"/api/agentic/provisioning/resources/{id}/update_service",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -128,9 +135,10 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateAgenticProvisioningResourcesRequest(
+                PrepareCreateAgenticProvisioningResourcesByIdUpdateServiceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    id: id,
                     request: request);
 
                 return __httpRequest;
@@ -148,9 +156,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAgenticProvisioningResources",
-                                methodName: "CreateAgenticProvisioningResourcesAsync",
-                                pathTemplate: "\"/api/agentic/provisioning/resources\"",
+                                operationId: "createAgenticProvisioningResourcesByIdUpdateService",
+                                methodName: "CreateAgenticProvisioningResourcesByIdUpdateServiceAsync",
+                                pathTemplate: "$\"/api/agentic/provisioning/resources/{id}/update_service\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -175,9 +183,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAgenticProvisioningResources",
-                                methodName: "CreateAgenticProvisioningResourcesAsync",
-                                pathTemplate: "\"/api/agentic/provisioning/resources\"",
+                                operationId: "createAgenticProvisioningResourcesByIdUpdateService",
+                                methodName: "CreateAgenticProvisioningResourcesByIdUpdateServiceAsync",
+                                pathTemplate: "$\"/api/agentic/provisioning/resources/{id}/update_service\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -210,9 +218,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAgenticProvisioningResources",
-                                methodName: "CreateAgenticProvisioningResourcesAsync",
-                                pathTemplate: "\"/api/agentic/provisioning/resources\"",
+                                operationId: "createAgenticProvisioningResourcesByIdUpdateService",
+                                methodName: "CreateAgenticProvisioningResourcesByIdUpdateServiceAsync",
+                                pathTemplate: "$\"/api/agentic/provisioning/resources/{id}/update_service\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -249,7 +257,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateAgenticProvisioningResourcesResponse(
+                ProcessCreateAgenticProvisioningResourcesByIdUpdateServiceResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -257,9 +265,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAgenticProvisioningResources",
-                                methodName: "CreateAgenticProvisioningResourcesAsync",
-                                pathTemplate: "\"/api/agentic/provisioning/resources\"",
+                                operationId: "createAgenticProvisioningResourcesByIdUpdateService",
+                                methodName: "CreateAgenticProvisioningResourcesByIdUpdateServiceAsync",
+                                pathTemplate: "$\"/api/agentic/provisioning/resources/{id}/update_service\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -277,9 +285,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAgenticProvisioningResources",
-                                methodName: "CreateAgenticProvisioningResourcesAsync",
-                                pathTemplate: "\"/api/agentic/provisioning/resources\"",
+                                operationId: "createAgenticProvisioningResourcesByIdUpdateService",
+                                methodName: "CreateAgenticProvisioningResourcesByIdUpdateServiceAsync",
+                                pathTemplate: "$\"/api/agentic/provisioning/resources/{id}/update_service\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -292,24 +300,24 @@ namespace HuggingFace
                                 willRetry: false,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Resource provisioning error
+                            // Service update error
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;
                                 global::System.Exception? __exception_400 = null;
-                                global::HuggingFace.CreateAgenticProvisioningResourcesResponse2? __value_400 = null;
+                                global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponse2? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponse2.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponse2.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -317,7 +325,7 @@ namespace HuggingFace
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::HuggingFace.ApiException<global::HuggingFace.CreateAgenticProvisioningResourcesResponse2>(
+                                throw new global::HuggingFace.ApiException<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponse2>(
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     statusCode: __response.StatusCode)
@@ -343,7 +351,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateAgenticProvisioningResourcesResponseContent(
+                                ProcessCreateAgenticProvisioningResourcesByIdUpdateServiceResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -353,7 +361,7 @@ namespace HuggingFace
                                     __response.EnsureSuccessStatusCode();
 
                                     return
-                                        global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2>.FromJson(__content, JsonSerializerContext) ??
+                                        global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2>.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                                 }
                                 catch (global::System.Exception __ex)
@@ -383,7 +391,7 @@ namespace HuggingFace
                                     ).ConfigureAwait(false);
 
                                     return
-                                        await global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        await global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                                 }
                                 catch (global::System.Exception __ex)
@@ -423,20 +431,32 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Provision a resource
+        /// Update a resource's service (e.g. plan upgrade)
         /// </summary>
+        /// <param name="id"></param>
+        /// <param name="serviceId"></param>
+        /// <param name="configuration"></param>
+        /// <param name="paymentCredentials"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2>> CreateAgenticProvisioningResourcesAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsync(
+            string id,
+            string? serviceId = default,
+            global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequestConfiguration? configuration = default,
+            global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequestPaymentCredentials? paymentCredentials = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant3, global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4>
+            var __request = new global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequest
             {
+                ServiceId = serviceId,
+                Configuration = configuration,
+                PaymentCredentials = paymentCredentials,
             };
 
-            return await CreateAgenticProvisioningResourcesAsync(
+            return await CreateAgenticProvisioningResourcesByIdUpdateServiceAsync(
+                id: id,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
