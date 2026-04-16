@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        /// <default>"dashboard"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("purpose")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Purpose { get; set; }
+        public string Purpose { get; set; } = "dashboard";
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,9 +29,9 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateAgenticProvisioningDeepLinksRequest(
-            string purpose)
+            string purpose = "dashboard")
         {
-            this.Purpose = purpose ?? throw new global::System.ArgumentNullException(nameof(purpose));
+            this.Purpose = purpose;
         }
 
         /// <summary>

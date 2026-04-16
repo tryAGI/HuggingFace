@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    /// Resource provisioning error
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesResponseVariant2
     {
         /// <summary>
         /// 
         /// </summary>
-        /// <default>"complete"</default>
+        /// <default>"error"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public string Status { get; set; } = "complete";
+        public string Status { get; set; } = "error";
 
         /// <summary>
         /// 
@@ -25,9 +25,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("complete")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2Complete Complete { get; set; }
+        public required global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2Error Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,19 +39,19 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesResponseVariant2" /> class.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="complete"></param>
+        /// <param name="error"></param>
         /// <param name="status"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateAgenticProvisioningResourcesResponseVariant2(
             string id,
-            global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2Complete complete,
-            string status = "complete")
+            global::HuggingFace.CreateAgenticProvisioningResourcesResponseVariant2Error error,
+            string status = "error")
         {
             this.Status = status;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.Complete = complete ?? throw new global::System.ArgumentNullException(nameof(complete));
+            this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }
 
         /// <summary>
