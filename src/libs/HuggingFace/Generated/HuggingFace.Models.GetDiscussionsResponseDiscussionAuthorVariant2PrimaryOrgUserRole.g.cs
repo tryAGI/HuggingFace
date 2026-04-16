@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        NoAccess,
+        /// <summary>
+        /// 
+        /// </summary>
         Read,
         /// <summary>
         /// 
@@ -40,6 +44,7 @@ namespace HuggingFace
             {
                 GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Admin => "admin",
                 GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Contributor => "contributor",
+                GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.NoAccess => "no_access",
                 GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Read => "read",
                 GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Write => "write",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -54,6 +59,7 @@ namespace HuggingFace
             {
                 "admin" => GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Admin,
                 "contributor" => GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Contributor,
+                "no_access" => GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.NoAccess,
                 "read" => GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Read,
                 "write" => GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgUserRole.Write,
                 _ => null,

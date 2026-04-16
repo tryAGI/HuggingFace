@@ -671,6 +671,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Skala,
+        /// <summary>
+        /// 
+        /// </summary>
         Sklearn,
         /// <summary>
         /// 
@@ -1027,6 +1031,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.SelfForcing => "self-forcing",
                 GetQuicksearchLibrary2.SentenceTransformers => "sentence-transformers",
                 GetQuicksearchLibrary2.Setfit => "setfit",
+                GetQuicksearchLibrary2.Skala => "skala",
                 GetQuicksearchLibrary2.Sklearn => "sklearn",
                 GetQuicksearchLibrary2.Soloaudio => "soloaudio",
                 GetQuicksearchLibrary2.Songbloom => "songbloom",
@@ -1247,6 +1252,7 @@ namespace HuggingFace
                 "self-forcing" => GetQuicksearchLibrary2.SelfForcing,
                 "sentence-transformers" => GetQuicksearchLibrary2.SentenceTransformers,
                 "setfit" => GetQuicksearchLibrary2.Setfit,
+                "skala" => GetQuicksearchLibrary2.Skala,
                 "sklearn" => GetQuicksearchLibrary2.Sklearn,
                 "soloaudio" => GetQuicksearchLibrary2.Soloaudio,
                 "songbloom" => GetQuicksearchLibrary2.Songbloom,
