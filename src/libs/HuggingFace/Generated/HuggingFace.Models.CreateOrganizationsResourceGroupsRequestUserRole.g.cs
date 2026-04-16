@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        NoAccess,
+        /// <summary>
+        /// 
+        /// </summary>
         Read,
         /// <summary>
         /// 
@@ -40,6 +44,7 @@ namespace HuggingFace
             {
                 CreateOrganizationsResourceGroupsRequestUserRole.Admin => "admin",
                 CreateOrganizationsResourceGroupsRequestUserRole.Contributor => "contributor",
+                CreateOrganizationsResourceGroupsRequestUserRole.NoAccess => "no_access",
                 CreateOrganizationsResourceGroupsRequestUserRole.Read => "read",
                 CreateOrganizationsResourceGroupsRequestUserRole.Write => "write",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -54,6 +59,7 @@ namespace HuggingFace
             {
                 "admin" => CreateOrganizationsResourceGroupsRequestUserRole.Admin,
                 "contributor" => CreateOrganizationsResourceGroupsRequestUserRole.Contributor,
+                "no_access" => CreateOrganizationsResourceGroupsRequestUserRole.NoAccess,
                 "read" => CreateOrganizationsResourceGroupsRequestUserRole.Read,
                 "write" => CreateOrganizationsResourceGroupsRequestUserRole.Write,
                 _ => null,

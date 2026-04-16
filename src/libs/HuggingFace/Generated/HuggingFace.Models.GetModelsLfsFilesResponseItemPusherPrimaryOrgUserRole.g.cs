@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        NoAccess,
+        /// <summary>
+        /// 
+        /// </summary>
         Read,
         /// <summary>
         /// 
@@ -40,6 +44,7 @@ namespace HuggingFace
             {
                 GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Admin => "admin",
                 GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Contributor => "contributor",
+                GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.NoAccess => "no_access",
                 GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Read => "read",
                 GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Write => "write",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -54,6 +59,7 @@ namespace HuggingFace
             {
                 "admin" => GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Admin,
                 "contributor" => GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Contributor,
+                "no_access" => GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.NoAccess,
                 "read" => GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Read,
                 "write" => GetModelsLfsFilesResponseItemPusherPrimaryOrgUserRole.Write,
                 _ => null,

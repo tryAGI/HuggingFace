@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        NoAccess,
+        /// <summary>
+        /// 
+        /// </summary>
         Read,
         /// <summary>
         /// 
@@ -40,6 +44,7 @@ namespace HuggingFace
             {
                 PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Admin => "admin",
                 PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Contributor => "contributor",
+                PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.NoAccess => "no_access",
                 PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Read => "read",
                 PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Write => "write",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -54,6 +59,7 @@ namespace HuggingFace
             {
                 "admin" => PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Admin,
                 "contributor" => PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Contributor,
+                "no_access" => PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.NoAccess,
                 "read" => PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Read,
                 "write" => PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole.Write,
                 _ => null,
