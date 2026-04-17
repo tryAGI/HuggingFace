@@ -23,6 +23,14 @@ namespace HuggingFace.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
@@ -31,6 +39,10 @@ namespace HuggingFace.JsonConverters
             if (__jsonProps.Contains("generated_text")) __score0++;
             if (__jsonProps.Contains("index")) __score0++;
             if (__jsonProps.Contains("token")) __score0++;
+            if (__jsonProps.Contains("token.id")) __score0++;
+            if (__jsonProps.Contains("token.logprob")) __score0++;
+            if (__jsonProps.Contains("token.special")) __score0++;
+            if (__jsonProps.Contains("token.text")) __score0++;
             if (__jsonProps.Contains("top_tokens")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("choices")) __score1++;

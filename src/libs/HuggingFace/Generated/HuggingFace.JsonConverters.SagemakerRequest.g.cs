@@ -23,12 +23,39 @@ namespace HuggingFace.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
             var __score0 = 0;
             if (__jsonProps.Contains("inputs")) __score0++;
             if (__jsonProps.Contains("parameters")) __score0++;
+            if (__jsonProps.Contains("parameters.adapter_id")) __score0++;
+            if (__jsonProps.Contains("parameters.best_of")) __score0++;
+            if (__jsonProps.Contains("parameters.decoder_input_details")) __score0++;
+            if (__jsonProps.Contains("parameters.details")) __score0++;
+            if (__jsonProps.Contains("parameters.do_sample")) __score0++;
+            if (__jsonProps.Contains("parameters.frequency_penalty")) __score0++;
+            if (__jsonProps.Contains("parameters.grammar")) __score0++;
+            if (__jsonProps.Contains("parameters.max_new_tokens")) __score0++;
+            if (__jsonProps.Contains("parameters.repetition_penalty")) __score0++;
+            if (__jsonProps.Contains("parameters.return_full_text")) __score0++;
+            if (__jsonProps.Contains("parameters.seed")) __score0++;
+            if (__jsonProps.Contains("parameters.stop")) __score0++;
+            if (__jsonProps.Contains("parameters.temperature")) __score0++;
+            if (__jsonProps.Contains("parameters.top_k")) __score0++;
+            if (__jsonProps.Contains("parameters.top_n_tokens")) __score0++;
+            if (__jsonProps.Contains("parameters.top_p")) __score0++;
+            if (__jsonProps.Contains("parameters.truncate")) __score0++;
+            if (__jsonProps.Contains("parameters.typical_p")) __score0++;
+            if (__jsonProps.Contains("parameters.watermark")) __score0++;
             if (__jsonProps.Contains("stream")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("frequency_penalty")) __score1++;
