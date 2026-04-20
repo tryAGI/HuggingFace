@@ -63,10 +63,6 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        BillingUpdateSubscriptionContractDetails,
-        /// <summary>
-        /// 
-        /// </summary>
         BillingUpdateSubscriptionPlan,
         /// <summary>
         /// 
@@ -375,7 +371,6 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.BillingUnCancelSubscription => "billing.un_cancel_subscription",
                 GetOrganizationsAuditLogExportResponseItemType.BillingUpdatePaymentMethod => "billing.update_payment_method",
                 GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscription => "billing.update_subscription",
-                GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscriptionContractDetails => "billing.update_subscription_contract_details",
                 GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscriptionPlan => "billing.update_subscription_plan",
                 GetOrganizationsAuditLogExportResponseItemType.CollectionCreate => "collection.create",
                 GetOrganizationsAuditLogExportResponseItemType.CollectionDelete => "collection.delete",
@@ -470,7 +465,6 @@ namespace HuggingFace
                 "billing.un_cancel_subscription" => GetOrganizationsAuditLogExportResponseItemType.BillingUnCancelSubscription,
                 "billing.update_payment_method" => GetOrganizationsAuditLogExportResponseItemType.BillingUpdatePaymentMethod,
                 "billing.update_subscription" => GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscription,
-                "billing.update_subscription_contract_details" => GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscriptionContractDetails,
                 "billing.update_subscription_plan" => GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscriptionPlan,
                 "collection.create" => GetOrganizationsAuditLogExportResponseItemType.CollectionCreate,
                 "collection.delete" => GetOrganizationsAuditLogExportResponseItemType.CollectionDelete,
