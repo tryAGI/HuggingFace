@@ -47,6 +47,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        ContextCourse,
+        /// <summary>
+        /// 
+        /// </summary>
         Cookbook,
         /// <summary>
         /// 
@@ -267,6 +271,7 @@ namespace HuggingFace
                 GetDocsSearchProduct.ChatUi => "chat-ui",
                 GetDocsSearchProduct.Cli => "cli",
                 GetDocsSearchProduct.ComputerVisionCourse => "computer-vision-course",
+                GetDocsSearchProduct.ContextCourse => "context-course",
                 GetDocsSearchProduct.Cookbook => "cookbook",
                 GetDocsSearchProduct.DatasetViewer => "dataset-viewer",
                 GetDocsSearchProduct.Datasets => "datasets",
@@ -336,6 +341,7 @@ namespace HuggingFace
                 "chat-ui" => GetDocsSearchProduct.ChatUi,
                 "cli" => GetDocsSearchProduct.Cli,
                 "computer-vision-course" => GetDocsSearchProduct.ComputerVisionCourse,
+                "context-course" => GetDocsSearchProduct.ContextCourse,
                 "cookbook" => GetDocsSearchProduct.Cookbook,
                 "dataset-viewer" => GetDocsSearchProduct.DatasetViewer,
                 "datasets" => GetDocsSearchProduct.Datasets,
