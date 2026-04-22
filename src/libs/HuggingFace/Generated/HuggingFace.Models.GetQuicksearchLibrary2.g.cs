@@ -615,6 +615,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RoboOrchardLab,
+        /// <summary>
+        /// 
+        /// </summary>
         Saelens,
         /// <summary>
         /// 
@@ -1017,6 +1021,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Renderformer => "renderformer",
                 GetQuicksearchLibrary2.Reverb => "reverb",
                 GetQuicksearchLibrary2.Rkllm => "rkllm",
+                GetQuicksearchLibrary2.RoboOrchardLab => "robo-orchard-lab",
                 GetQuicksearchLibrary2.Saelens => "saelens",
                 GetQuicksearchLibrary2.Sam3dBody => "sam-3d-body",
                 GetQuicksearchLibrary2.Sam3dObjects => "sam-3d-objects",
@@ -1238,6 +1243,7 @@ namespace HuggingFace
                 "renderformer" => GetQuicksearchLibrary2.Renderformer,
                 "reverb" => GetQuicksearchLibrary2.Reverb,
                 "rkllm" => GetQuicksearchLibrary2.Rkllm,
+                "robo-orchard-lab" => GetQuicksearchLibrary2.RoboOrchardLab,
                 "saelens" => GetQuicksearchLibrary2.Saelens,
                 "sam-3d-body" => GetQuicksearchLibrary2.Sam3dBody,
                 "sam-3d-objects" => GetQuicksearchLibrary2.Sam3dObjects,
