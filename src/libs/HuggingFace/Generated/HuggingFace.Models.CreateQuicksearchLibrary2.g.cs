@@ -339,6 +339,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        HyWorld2,
+        /// <summary>
+        /// 
+        /// </summary>
         HyWorldplay,
         /// <summary>
         /// 
@@ -952,6 +956,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.HunyuanDit => "hunyuan-dit",
                 CreateQuicksearchLibrary2.Hunyuan3d2 => "hunyuan3d-2",
                 CreateQuicksearchLibrary2.HunyuanworldVoyager => "hunyuanworld-voyager",
+                CreateQuicksearchLibrary2.HyWorld2 => "hy-world-2",
                 CreateQuicksearchLibrary2.HyWorldplay => "hy-worldplay",
                 CreateQuicksearchLibrary2.ImageMatchingModels => "image-matching-models",
                 CreateQuicksearchLibrary2.Imstoucan => "imstoucan",
@@ -1174,6 +1179,7 @@ namespace HuggingFace
                 "hunyuan-dit" => CreateQuicksearchLibrary2.HunyuanDit,
                 "hunyuan3d-2" => CreateQuicksearchLibrary2.Hunyuan3d2,
                 "hunyuanworld-voyager" => CreateQuicksearchLibrary2.HunyuanworldVoyager,
+                "hy-world-2" => CreateQuicksearchLibrary2.HyWorld2,
                 "hy-worldplay" => CreateQuicksearchLibrary2.HyWorldplay,
                 "image-matching-models" => CreateQuicksearchLibrary2.ImageMatchingModels,
                 "imstoucan" => CreateQuicksearchLibrary2.Imstoucan,
