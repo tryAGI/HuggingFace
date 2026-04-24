@@ -10,7 +10,7 @@ namespace HuggingFace
     {
         /// <summary>
         /// The name of the repository (defaults to a random name if not provided)<br/>
-        /// Default Value: poJaMlUx
+        /// Default Value: NxSQDoWe
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
@@ -34,7 +34,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name">
         /// The name of the repository (defaults to a random name if not provided)<br/>
-        /// Default Value: poJaMlUx
+        /// Default Value: NxSQDoWe
         /// </param>
         /// <param name="visibility">
         /// The visibility of the repository (defaults to private)<br/>
