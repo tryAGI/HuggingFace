@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        LowQuality,
+        /// <summary>
+        /// 
+        /// </summary>
         OffTopic,
         /// <summary>
         /// 
@@ -44,6 +48,7 @@ namespace HuggingFace
             {
                 CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.Abuse => "Abuse",
                 CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.GraphicContent => "Graphic Content",
+                CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.LowQuality => "Low Quality",
                 CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.OffTopic => "Off-Topic",
                 CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.Resolved => "Resolved",
                 CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.Spam => "Spam",
@@ -59,6 +64,7 @@ namespace HuggingFace
             {
                 "Abuse" => CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.Abuse,
                 "Graphic Content" => CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.GraphicContent,
+                "Low Quality" => CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.LowQuality,
                 "Off-Topic" => CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.OffTopic,
                 "Resolved" => CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.Resolved,
                 "Spam" => CreateBlogCommentReplyResponseNewMessageDataHiddenReason2.Spam,

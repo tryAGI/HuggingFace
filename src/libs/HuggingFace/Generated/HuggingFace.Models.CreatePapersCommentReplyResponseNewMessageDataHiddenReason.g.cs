@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        LowQuality,
+        /// <summary>
+        /// 
+        /// </summary>
         OffTopic,
         /// <summary>
         /// 
@@ -44,6 +48,7 @@ namespace HuggingFace
             {
                 CreatePapersCommentReplyResponseNewMessageDataHiddenReason.Abuse => "Abuse",
                 CreatePapersCommentReplyResponseNewMessageDataHiddenReason.GraphicContent => "Graphic Content",
+                CreatePapersCommentReplyResponseNewMessageDataHiddenReason.LowQuality => "Low Quality",
                 CreatePapersCommentReplyResponseNewMessageDataHiddenReason.OffTopic => "Off-Topic",
                 CreatePapersCommentReplyResponseNewMessageDataHiddenReason.Resolved => "Resolved",
                 CreatePapersCommentReplyResponseNewMessageDataHiddenReason.Spam => "Spam",
@@ -59,6 +64,7 @@ namespace HuggingFace
             {
                 "Abuse" => CreatePapersCommentReplyResponseNewMessageDataHiddenReason.Abuse,
                 "Graphic Content" => CreatePapersCommentReplyResponseNewMessageDataHiddenReason.GraphicContent,
+                "Low Quality" => CreatePapersCommentReplyResponseNewMessageDataHiddenReason.LowQuality,
                 "Off-Topic" => CreatePapersCommentReplyResponseNewMessageDataHiddenReason.OffTopic,
                 "Resolved" => CreatePapersCommentReplyResponseNewMessageDataHiddenReason.Resolved,
                 "Spam" => CreatePapersCommentReplyResponseNewMessageDataHiddenReason.Spam,

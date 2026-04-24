@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        LowQuality,
+        /// <summary>
+        /// 
+        /// </summary>
         OffTopic,
         /// <summary>
         /// 
@@ -44,6 +48,7 @@ namespace HuggingFace
             {
                 GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.Abuse => "Abuse",
                 GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.GraphicContent => "Graphic Content",
+                GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.LowQuality => "Low Quality",
                 GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.OffTopic => "Off-Topic",
                 GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.Resolved => "Resolved",
                 GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.Spam => "Spam",
@@ -59,6 +64,7 @@ namespace HuggingFace
             {
                 "Abuse" => GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.Abuse,
                 "Graphic Content" => GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.GraphicContent,
+                "Low Quality" => GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.LowQuality,
                 "Off-Topic" => GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.OffTopic,
                 "Resolved" => GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.Resolved,
                 "Spam" => GetDiscussionsResponseVariant1EventVariant1DataHiddenReason.Spam,
