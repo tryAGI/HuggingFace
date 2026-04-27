@@ -371,6 +371,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        IsingDecoding,
+        /// <summary>
+        /// 
+        /// </summary>
         K2,
         /// <summary>
         /// 
@@ -432,6 +436,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Lvface,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lyra20,
         /// <summary>
         /// 
         /// </summary>
@@ -964,6 +972,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.InfiniteYou => "infinite-you",
                 GetQuicksearchLibrary2.Infinitetalk => "infinitetalk",
                 GetQuicksearchLibrary2.Intellifold => "intellifold",
+                GetQuicksearchLibrary2.IsingDecoding => "ising-decoding",
                 GetQuicksearchLibrary2.K2 => "k2",
                 GetQuicksearchLibrary2.Keras => "keras",
                 GetQuicksearchLibrary2.KerasHub => "keras-hub",
@@ -980,6 +989,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Liveportrait => "liveportrait",
                 GetQuicksearchLibrary2.LlamaCppPython => "llama-cpp-python",
                 GetQuicksearchLibrary2.Lvface => "lvface",
+                GetQuicksearchLibrary2.Lyra20 => "lyra-2.0",
                 GetQuicksearchLibrary2.MagentaRealtime => "magenta-realtime",
                 GetQuicksearchLibrary2.Magi1 => "magi-1",
                 GetQuicksearchLibrary2.MambaSsm => "mamba-ssm",
@@ -1187,6 +1197,7 @@ namespace HuggingFace
                 "infinite-you" => GetQuicksearchLibrary2.InfiniteYou,
                 "infinitetalk" => GetQuicksearchLibrary2.Infinitetalk,
                 "intellifold" => GetQuicksearchLibrary2.Intellifold,
+                "ising-decoding" => GetQuicksearchLibrary2.IsingDecoding,
                 "k2" => GetQuicksearchLibrary2.K2,
                 "keras" => GetQuicksearchLibrary2.Keras,
                 "keras-hub" => GetQuicksearchLibrary2.KerasHub,
@@ -1203,6 +1214,7 @@ namespace HuggingFace
                 "liveportrait" => GetQuicksearchLibrary2.Liveportrait,
                 "llama-cpp-python" => GetQuicksearchLibrary2.LlamaCppPython,
                 "lvface" => GetQuicksearchLibrary2.Lvface,
+                "lyra-2.0" => GetQuicksearchLibrary2.Lyra20,
                 "magenta-realtime" => GetQuicksearchLibrary2.MagentaRealtime,
                 "magi-1" => GetQuicksearchLibrary2.Magi1,
                 "mamba-ssm" => GetQuicksearchLibrary2.MambaSsm,

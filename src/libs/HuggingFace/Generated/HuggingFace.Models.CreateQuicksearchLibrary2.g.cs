@@ -371,6 +371,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        IsingDecoding,
+        /// <summary>
+        /// 
+        /// </summary>
         K2,
         /// <summary>
         /// 
@@ -432,6 +436,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Lvface,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lyra20,
         /// <summary>
         /// 
         /// </summary>
@@ -964,6 +972,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.InfiniteYou => "infinite-you",
                 CreateQuicksearchLibrary2.Infinitetalk => "infinitetalk",
                 CreateQuicksearchLibrary2.Intellifold => "intellifold",
+                CreateQuicksearchLibrary2.IsingDecoding => "ising-decoding",
                 CreateQuicksearchLibrary2.K2 => "k2",
                 CreateQuicksearchLibrary2.Keras => "keras",
                 CreateQuicksearchLibrary2.KerasHub => "keras-hub",
@@ -980,6 +989,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Liveportrait => "liveportrait",
                 CreateQuicksearchLibrary2.LlamaCppPython => "llama-cpp-python",
                 CreateQuicksearchLibrary2.Lvface => "lvface",
+                CreateQuicksearchLibrary2.Lyra20 => "lyra-2.0",
                 CreateQuicksearchLibrary2.MagentaRealtime => "magenta-realtime",
                 CreateQuicksearchLibrary2.Magi1 => "magi-1",
                 CreateQuicksearchLibrary2.MambaSsm => "mamba-ssm",
@@ -1187,6 +1197,7 @@ namespace HuggingFace
                 "infinite-you" => CreateQuicksearchLibrary2.InfiniteYou,
                 "infinitetalk" => CreateQuicksearchLibrary2.Infinitetalk,
                 "intellifold" => CreateQuicksearchLibrary2.Intellifold,
+                "ising-decoding" => CreateQuicksearchLibrary2.IsingDecoding,
                 "k2" => CreateQuicksearchLibrary2.K2,
                 "keras" => CreateQuicksearchLibrary2.Keras,
                 "keras-hub" => CreateQuicksearchLibrary2.KerasHub,
@@ -1203,6 +1214,7 @@ namespace HuggingFace
                 "liveportrait" => CreateQuicksearchLibrary2.Liveportrait,
                 "llama-cpp-python" => CreateQuicksearchLibrary2.LlamaCppPython,
                 "lvface" => CreateQuicksearchLibrary2.Lvface,
+                "lyra-2.0" => CreateQuicksearchLibrary2.Lyra20,
                 "magenta-realtime" => CreateQuicksearchLibrary2.MagentaRealtime,
                 "magi-1" => CreateQuicksearchLibrary2.Magi1,
                 "mamba-ssm" => CreateQuicksearchLibrary2.MambaSsm,
