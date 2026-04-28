@@ -323,6 +323,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Holomotion,
+        /// <summary>
+        /// 
+        /// </summary>
         Htrflow,
         /// <summary>
         /// 
@@ -960,6 +964,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Hallo => "hallo",
                 CreateQuicksearchLibrary2.Hermes => "hermes",
                 CreateQuicksearchLibrary2.Hezar => "hezar",
+                CreateQuicksearchLibrary2.Holomotion => "holomotion",
                 CreateQuicksearchLibrary2.Htrflow => "htrflow",
                 CreateQuicksearchLibrary2.HunyuanDit => "hunyuan-dit",
                 CreateQuicksearchLibrary2.Hunyuan3d2 => "hunyuan3d-2",
@@ -1185,6 +1190,7 @@ namespace HuggingFace
                 "hallo" => CreateQuicksearchLibrary2.Hallo,
                 "hermes" => CreateQuicksearchLibrary2.Hermes,
                 "hezar" => CreateQuicksearchLibrary2.Hezar,
+                "holomotion" => CreateQuicksearchLibrary2.Holomotion,
                 "htrflow" => CreateQuicksearchLibrary2.Htrflow,
                 "hunyuan-dit" => CreateQuicksearchLibrary2.HunyuanDit,
                 "hunyuan3d-2" => CreateQuicksearchLibrary2.Hunyuan3d2,

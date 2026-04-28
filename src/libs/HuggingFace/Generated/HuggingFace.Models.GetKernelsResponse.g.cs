@@ -105,6 +105,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseSupportedDriverFamilie>? SupportedDriverFamilies { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trustedPublisher")]
+        public bool? TrustedPublisher { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -126,6 +132,7 @@ namespace HuggingFace
         /// <param name="authorData"></param>
         /// <param name="files"></param>
         /// <param name="supportedDriverFamilies"></param>
+        /// <param name="trustedPublisher"></param>
         /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -144,6 +151,7 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>? authorData,
             global::System.Collections.Generic.IList<string>? files,
             global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseSupportedDriverFamilie>? supportedDriverFamilies,
+            bool? trustedPublisher,
             string repoType = "kernel")
         {
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
@@ -160,6 +168,7 @@ namespace HuggingFace
             this.AuthorData = authorData;
             this.Files = files;
             this.SupportedDriverFamilies = supportedDriverFamilies;
+            this.TrustedPublisher = trustedPublisher;
         }
 
         /// <summary>
