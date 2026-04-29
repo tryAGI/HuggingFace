@@ -154,10 +154,10 @@ namespace HuggingFace
                 PrepareEditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoType: repoType,
-                    @namespace: @namespace,
-                    repo: repo,
-                    id: id,
+                    repoType: repoType!,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    id: id!,
                     request: request);
 
                 return __httpRequest;

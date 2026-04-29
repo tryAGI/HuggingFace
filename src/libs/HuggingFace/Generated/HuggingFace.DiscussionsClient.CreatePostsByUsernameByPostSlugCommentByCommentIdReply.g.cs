@@ -148,9 +148,9 @@ namespace HuggingFace
                 PrepareCreatePostsByUsernameByPostSlugCommentByCommentIdReplyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    username: username,
-                    postSlug: postSlug,
-                    commentId: commentId,
+                    username: username!,
+                    postSlug: postSlug!,
+                    commentId: commentId!,
                     request: request);
 
                 return __httpRequest;

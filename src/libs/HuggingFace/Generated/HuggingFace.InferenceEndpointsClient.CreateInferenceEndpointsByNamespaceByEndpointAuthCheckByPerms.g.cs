@@ -173,9 +173,9 @@ namespace HuggingFace
                 PrepareCreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    endpoint: endpoint,
-                    perms: perms,
+                    @namespace: @namespace!,
+                    endpoint: endpoint!,
+                    perms: perms!,
                     own: own,
                     isCreator: isCreator,
                     creatorId: creatorId,

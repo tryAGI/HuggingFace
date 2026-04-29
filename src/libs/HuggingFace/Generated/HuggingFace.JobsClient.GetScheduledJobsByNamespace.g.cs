@@ -135,7 +135,7 @@ namespace HuggingFace
                 PrepareGetScheduledJobsByNamespaceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
+                    @namespace: @namespace!,
                     label: label);
 
                 return __httpRequest;

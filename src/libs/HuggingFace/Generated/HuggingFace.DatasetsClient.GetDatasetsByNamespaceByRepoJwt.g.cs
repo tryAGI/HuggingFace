@@ -168,8 +168,8 @@ namespace HuggingFace
                 PrepareGetDatasetsByNamespaceByRepoJwtRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
+                    @namespace: @namespace!,
+                    repo: repo!,
                     write: write,
                     expiration: expiration,
                     encrypted: encrypted,

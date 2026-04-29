@@ -142,7 +142,7 @@ namespace HuggingFace
                 PrepareGetDocsSearchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    q: q,
+                    q: q!,
                     product: product,
                     limit: limit);
 

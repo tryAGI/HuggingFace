@@ -139,8 +139,8 @@ namespace HuggingFace
                 PrepareCreateDatasetsByNamespaceByRepoUserAccessRequestHandleRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
+                    @namespace: @namespace!,
+                    repo: repo!,
                     request: request);
 
                 return __httpRequest;

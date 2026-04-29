@@ -140,9 +140,9 @@ namespace HuggingFace
                 PrepareDeleteDatasetsByNamespaceByRepoLfsFilesByShaRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    sha: sha,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    sha: sha!,
                     rewriteHistory: rewriteHistory);
 
                 return __httpRequest;

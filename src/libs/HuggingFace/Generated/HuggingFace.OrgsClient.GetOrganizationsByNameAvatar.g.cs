@@ -136,7 +136,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameAvatarRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
+                    name: name!,
                     redirect: redirect);
 
                 return __httpRequest;

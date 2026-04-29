@@ -129,8 +129,8 @@ namespace HuggingFace
                 PrepareCreateSettingsWebhooksByWebhookIdByActionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    webhookId: webhookId,
-                    action: action);
+                    webhookId: webhookId!,
+                    action: action!);
 
                 return __httpRequest;
             }

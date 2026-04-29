@@ -139,7 +139,7 @@ namespace HuggingFace
                 PrepareCreatePapersByPaperIdLinksRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    paperId: paperId,
+                    paperId: paperId!,
                     request: request);
 
                 return __httpRequest;

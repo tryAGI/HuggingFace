@@ -233,9 +233,9 @@ namespace HuggingFace
                 PrepareCreateModelsByNamespaceByRepoCommitByRevRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    rev: rev,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    rev: rev!,
                     createPr: createPr,
                     hotReload: hotReload,
                     contentType: contentType);

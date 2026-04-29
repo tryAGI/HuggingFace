@@ -166,10 +166,10 @@ namespace HuggingFace
                 PrepareGetResolveCacheModelsByNamespaceByRepoByRevByPathRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    rev: rev,
-                    path: path,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    rev: rev!,
+                    path: path!,
                     range: range,
                     accept: accept);
 

@@ -138,8 +138,8 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameScimProvisioningV2GroupsByGroupIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    groupId: groupId,
+                    name: name!,
+                    groupId: groupId!,
                     excludedAttributes: excludedAttributes);
 
                 return __httpRequest;

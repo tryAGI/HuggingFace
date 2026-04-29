@@ -124,8 +124,8 @@ namespace HuggingFace
                 PrepareDeleteSpacesByNamespaceByRepoVolumesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo);
+                    @namespace: @namespace!,
+                    repo: repo!);
 
                 return __httpRequest;
             }

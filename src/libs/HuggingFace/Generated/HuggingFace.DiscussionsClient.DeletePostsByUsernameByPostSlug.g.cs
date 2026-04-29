@@ -124,8 +124,8 @@ namespace HuggingFace
                 PrepareDeletePostsByUsernameByPostSlugRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    username: username,
-                    postSlug: postSlug);
+                    username: username!,
+                    postSlug: postSlug!);
 
                 return __httpRequest;
             }

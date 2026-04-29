@@ -134,9 +134,9 @@ namespace HuggingFace
                 PrepareGetByRepoTypeByNamespaceByRepoResourceGroupRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoType: repoType,
-                    @namespace: @namespace,
-                    repo: repo);
+                    repoType: repoType!,
+                    @namespace: @namespace!,
+                    repo: repo!);
 
                 return __httpRequest;
             }

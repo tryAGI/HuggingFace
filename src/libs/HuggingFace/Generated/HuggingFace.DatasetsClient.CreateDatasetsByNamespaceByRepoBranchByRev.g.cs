@@ -143,9 +143,9 @@ namespace HuggingFace
                 PrepareCreateDatasetsByNamespaceByRepoBranchByRevRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    rev: rev,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    rev: rev!,
                     request: request);
 
                 return __httpRequest;

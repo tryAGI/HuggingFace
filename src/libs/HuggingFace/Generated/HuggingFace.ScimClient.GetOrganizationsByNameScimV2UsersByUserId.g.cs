@@ -130,8 +130,8 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameScimV2UsersByUserIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    userId: userId);
+                    name: name!,
+                    userId: userId!);
 
                 return __httpRequest;
             }

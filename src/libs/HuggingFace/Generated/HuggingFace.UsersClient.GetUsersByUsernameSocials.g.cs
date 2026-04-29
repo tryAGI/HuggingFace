@@ -125,7 +125,7 @@ namespace HuggingFace
                 PrepareGetUsersByUsernameSocialsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    username: username);
+                    username: username!);
 
                 return __httpRequest;
             }

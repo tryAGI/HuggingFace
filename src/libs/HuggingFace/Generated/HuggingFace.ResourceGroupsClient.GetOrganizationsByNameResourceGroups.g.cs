@@ -126,7 +126,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameResourceGroupsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name);
+                    name: name!);
 
                 return __httpRequest;
             }

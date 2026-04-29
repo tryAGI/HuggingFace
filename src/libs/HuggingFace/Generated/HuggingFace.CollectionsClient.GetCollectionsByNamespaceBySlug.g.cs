@@ -129,8 +129,8 @@ namespace HuggingFace
                 PrepareGetCollectionsByNamespaceBySlugRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    slug: slug);
+                    @namespace: @namespace!,
+                    slug: slug!);
 
                 return __httpRequest;
             }

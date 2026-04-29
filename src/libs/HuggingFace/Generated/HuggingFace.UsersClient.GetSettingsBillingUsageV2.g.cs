@@ -129,8 +129,8 @@ namespace HuggingFace
                 PrepareGetSettingsBillingUsageV2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    startDate: startDate,
-                    endDate: endDate);
+                    startDate: startDate!,
+                    endDate: endDate!);
 
                 return __httpRequest;
             }

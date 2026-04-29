@@ -148,10 +148,10 @@ namespace HuggingFace
                 PrepareCreateByRepoTypeByNamespaceByRepoDiscussionsByNumMergeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoType: repoType,
-                    @namespace: @namespace,
-                    repo: repo,
-                    num: num,
+                    repoType: repoType!,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    num: num!,
                     request: request);
 
                 return __httpRequest;

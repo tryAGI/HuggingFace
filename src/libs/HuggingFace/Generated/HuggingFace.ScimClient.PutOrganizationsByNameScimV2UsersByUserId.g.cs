@@ -144,8 +144,8 @@ namespace HuggingFace
                 PreparePutOrganizationsByNameScimV2UsersByUserIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    userId: userId,
+                    name: name!,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

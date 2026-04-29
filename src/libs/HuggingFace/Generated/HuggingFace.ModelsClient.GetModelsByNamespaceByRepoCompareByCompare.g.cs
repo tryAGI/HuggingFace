@@ -144,9 +144,9 @@ namespace HuggingFace
                 PrepareGetModelsByNamespaceByRepoCompareByCompareRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    compare: compare,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    compare: compare!,
                     raw: raw);
 
                 return __httpRequest;

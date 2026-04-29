@@ -130,9 +130,9 @@ namespace HuggingFace
                 PrepareGetSpacesByNamespaceByRepoLogsByLogTypeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    logType: logType);
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    logType: logType!);
 
                 return __httpRequest;
             }

@@ -134,9 +134,9 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameBillingUsageV2Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    startDate: startDate,
-                    endDate: endDate);
+                    name: name!,
+                    startDate: startDate!,
+                    endDate: endDate!);
 
                 return __httpRequest;
             }

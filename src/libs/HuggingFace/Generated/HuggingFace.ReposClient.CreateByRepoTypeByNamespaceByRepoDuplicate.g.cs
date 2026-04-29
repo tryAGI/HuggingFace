@@ -148,9 +148,9 @@ namespace HuggingFace
                 PrepareCreateByRepoTypeByNamespaceByRepoDuplicateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoType: repoType,
-                    @namespace: @namespace,
-                    repo: repo,
+                    repoType: repoType!,
+                    @namespace: @namespace!,
+                    repo: repo!,
                     request: request);
 
                 return __httpRequest;

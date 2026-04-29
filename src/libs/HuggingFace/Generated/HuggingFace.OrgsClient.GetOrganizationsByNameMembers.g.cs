@@ -188,7 +188,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameMembersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
+                    name: name!,
                     search: search,
                     email: email,
                     cursor: cursor,

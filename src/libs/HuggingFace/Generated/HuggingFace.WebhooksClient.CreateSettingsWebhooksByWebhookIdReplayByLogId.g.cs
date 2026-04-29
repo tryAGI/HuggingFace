@@ -129,8 +129,8 @@ namespace HuggingFace
                 PrepareCreateSettingsWebhooksByWebhookIdReplayByLogIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    webhookId: webhookId,
-                    logId: logId);
+                    webhookId: webhookId!,
+                    logId: logId!);
 
                 return __httpRequest;
             }

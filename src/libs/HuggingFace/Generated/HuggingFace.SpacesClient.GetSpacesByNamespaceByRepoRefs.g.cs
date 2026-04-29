@@ -139,8 +139,8 @@ namespace HuggingFace
                 PrepareGetSpacesByNamespaceByRepoRefsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
+                    @namespace: @namespace!,
+                    repo: repo!,
                     includePrs: includePrs);
 
                 return __httpRequest;

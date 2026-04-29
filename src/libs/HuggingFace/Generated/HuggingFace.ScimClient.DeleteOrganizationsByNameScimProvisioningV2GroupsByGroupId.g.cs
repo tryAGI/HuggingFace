@@ -129,8 +129,8 @@ namespace HuggingFace
                 PrepareDeleteOrganizationsByNameScimProvisioningV2GroupsByGroupIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    groupId: groupId);
+                    name: name!,
+                    groupId: groupId!);
 
                 return __httpRequest;
             }
