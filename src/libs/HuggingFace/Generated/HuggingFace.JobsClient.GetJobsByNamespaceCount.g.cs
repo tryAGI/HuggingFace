@@ -133,7 +133,7 @@ namespace HuggingFace
                 PrepareGetJobsByNamespaceCountRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
+                    @namespace: @namespace!,
                     stage: stage);
 
                 return __httpRequest;

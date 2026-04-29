@@ -133,7 +133,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameBillingUsageRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
+                    name: name!,
                     periodId: periodId);
 
                 return __httpRequest;

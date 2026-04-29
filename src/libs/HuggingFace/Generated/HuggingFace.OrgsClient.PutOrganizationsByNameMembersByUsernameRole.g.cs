@@ -139,8 +139,8 @@ namespace HuggingFace
                 PreparePutOrganizationsByNameMembersByUsernameRoleRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    username: username,
+                    name: name!,
+                    username: username!,
                     request: request);
 
                 return __httpRequest;

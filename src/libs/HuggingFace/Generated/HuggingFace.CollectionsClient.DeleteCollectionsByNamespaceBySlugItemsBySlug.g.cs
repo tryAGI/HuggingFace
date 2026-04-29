@@ -130,9 +130,9 @@ namespace HuggingFace
                 PrepareDeleteCollectionsByNamespaceBySlugItemsBySlugRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    slug: slug,
-                    slug2: slug2);
+                    @namespace: @namespace!,
+                    slug: slug!,
+                    slug2: slug2!);
 
                 return __httpRequest;
             }

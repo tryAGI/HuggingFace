@@ -157,7 +157,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameAuditLogExportRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
+                    name: name!,
                     q: q);
 
                 return __httpRequest;

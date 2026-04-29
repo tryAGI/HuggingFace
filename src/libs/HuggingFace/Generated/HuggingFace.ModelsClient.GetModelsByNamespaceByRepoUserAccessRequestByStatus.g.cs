@@ -195,9 +195,9 @@ namespace HuggingFace
                 PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    status: status,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    status: status!,
                     limit: limit,
                     after: after,
                     before: before);

@@ -136,7 +136,7 @@ namespace HuggingFace
                 PrepareGetUsersByUsernameAvatarRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    username: username,
+                    username: username!,
                     redirect: redirect);
 
                 return __httpRequest;

@@ -142,10 +142,10 @@ namespace HuggingFace
                 PrepareGetSpacesByNamespaceByRepoNotebookByRevByPathRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    rev: rev,
-                    path: path);
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    rev: rev!,
+                    path: path!);
 
                 return __httpRequest;
             }

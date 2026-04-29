@@ -143,8 +143,8 @@ namespace HuggingFace
                 PrepareCreatePapersByPaperIdCommentByCommentIdReplyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    paperId: paperId,
-                    commentId: commentId,
+                    paperId: paperId!,
+                    commentId: commentId!,
                     request: request);
 
                 return __httpRequest;

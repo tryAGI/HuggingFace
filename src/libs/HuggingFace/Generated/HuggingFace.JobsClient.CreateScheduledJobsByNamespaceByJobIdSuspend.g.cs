@@ -124,8 +124,8 @@ namespace HuggingFace
                 PrepareCreateScheduledJobsByNamespaceByJobIdSuspendRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    jobId: jobId);
+                    @namespace: @namespace!,
+                    jobId: jobId!);
 
                 return __httpRequest;
             }

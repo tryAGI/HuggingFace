@@ -133,8 +133,8 @@ namespace HuggingFace
                 PrepareGetSpacesByNamespaceByRepoEventsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
+                    @namespace: @namespace!,
+                    repo: repo!,
                     sessionUuid: sessionUuid);
 
                 return __httpRequest;

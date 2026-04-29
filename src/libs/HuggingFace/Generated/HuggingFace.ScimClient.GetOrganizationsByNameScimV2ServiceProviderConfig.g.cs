@@ -125,7 +125,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameScimV2ServiceProviderConfigRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name);
+                    name: name!);
 
                 return __httpRequest;
             }

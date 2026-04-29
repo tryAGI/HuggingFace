@@ -140,10 +140,10 @@ namespace HuggingFace
                 PrepareDeleteByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoType: repoType,
-                    @namespace: @namespace,
-                    repo: repo,
-                    id: id);
+                    repoType: repoType!,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    id: id!);
 
                 return __httpRequest;
             }

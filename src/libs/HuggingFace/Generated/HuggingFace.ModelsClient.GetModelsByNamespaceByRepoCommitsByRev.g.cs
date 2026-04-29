@@ -197,9 +197,9 @@ namespace HuggingFace
                 PrepareGetModelsByNamespaceByRepoCommitsByRevRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
-                    rev: rev,
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    rev: rev!,
                     p: p,
                     expand: expand,
                     limit: limit);

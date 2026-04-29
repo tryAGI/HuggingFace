@@ -144,8 +144,8 @@ namespace HuggingFace
                 PrepareEditOrganizationsByNameScimV2GroupsByGroupIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    groupId: groupId,
+                    name: name!,
+                    groupId: groupId!,
                     request: request);
 
                 return __httpRequest;

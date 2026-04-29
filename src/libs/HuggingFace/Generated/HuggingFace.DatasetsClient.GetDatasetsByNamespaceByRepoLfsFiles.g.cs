@@ -187,8 +187,8 @@ namespace HuggingFace
                 PrepareGetDatasetsByNamespaceByRepoLfsFilesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace,
-                    repo: repo,
+                    @namespace: @namespace!,
+                    repo: repo!,
                     cursor: cursor,
                     limit: limit,
                     xet: xet);

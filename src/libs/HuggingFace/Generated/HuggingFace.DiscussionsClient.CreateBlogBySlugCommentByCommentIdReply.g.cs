@@ -143,8 +143,8 @@ namespace HuggingFace
                 PrepareCreateBlogBySlugCommentByCommentIdReplyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    slug: slug,
-                    commentId: commentId,
+                    slug: slug!,
+                    commentId: commentId!,
                     request: request);
 
                 return __httpRequest;

@@ -151,7 +151,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameScimProvisioningV2UsersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
+                    name: name!,
                     startIndex: startIndex,
                     count: count,
                     filter: filter);

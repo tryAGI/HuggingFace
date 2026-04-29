@@ -181,9 +181,9 @@ namespace HuggingFace
                 PrepareGetByRepoTypeByNamespaceByRepoDiscussionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoType: repoType,
-                    @namespace: @namespace,
-                    repo: repo,
+                    repoType: repoType!,
+                    @namespace: @namespace!,
+                    repo: repo!,
                     p: p,
                     type: type,
                     status: status,
