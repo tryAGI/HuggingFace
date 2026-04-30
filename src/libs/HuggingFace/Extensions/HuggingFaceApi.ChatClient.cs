@@ -201,8 +201,8 @@ public partial class HuggingFaceInferenceClient : IChatClient
                 }).ToList();
 
                 messages.Add(new Message(
-                    value1: new MessageBody(new MessageBodyVariant2(toolCalls)),
-                    value2: new MessageVariant2(role: role, name: null)));
+                    body: new MessageBody(new MessageBodyVariant2(toolCalls)),
+                    messageVariant2: new MessageVariant2(role: role, name: null)));
                 continue;
             }
 
@@ -220,8 +220,8 @@ public partial class HuggingFaceInferenceClient : IChatClient
                         ToolCallId = fr.CallId,
                     };
                     messages.Add(new Message(
-                        value1: new MessageBody(new MessageBodyVariant1(new MessageContent(text))),
-                        value2: new MessageVariant2(role: role, name: null)));
+                        body: new MessageBody(new MessageBodyVariant1(new MessageContent(text))),
+                        messageVariant2: new MessageVariant2(role: role, name: null)));
                 }
                 continue;
             }
@@ -229,8 +229,8 @@ public partial class HuggingFaceInferenceClient : IChatClient
             // Text content
             var content = string.Concat(chatMessage.Contents.OfType<TextContent>().Select(tc => tc.Text));
             messages.Add(new Message(
-                value1: new MessageBody(new MessageBodyVariant1(new MessageContent(content))),
-                value2: new MessageVariant2(role: role, name: null)));
+                body: new MessageBody(new MessageBodyVariant1(new MessageContent(content))),
+                messageVariant2: new MessageVariant2(role: role, name: null)));
         }
 
         var request = new ChatRequest

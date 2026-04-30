@@ -27,7 +27,7 @@ public partial class Tests
 
         //// Decode token IDs back to text.
         var decoded = await client.DecodeAsync(
-            ids: new InputIds(value1: tokenIds, value2: null),
+            ids: new InputIds(inputIdsVariant1: tokenIds, inputIdsVariant2: null),
             skipSpecialTokens: true);
 
         Console.WriteLine($"Decoded: {decoded[0]}");

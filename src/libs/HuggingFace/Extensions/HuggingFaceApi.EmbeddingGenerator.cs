@@ -29,7 +29,7 @@ public partial class HuggingFaceEmbeddingClient : IEmbeddingGenerator<string, Em
 
         var request = new OpenAICompatRequest
         {
-            Input = new Input(value1: null, value2: inputTypes),
+            Input = new Input(type: null, inputVariant2: inputTypes),
             Model = options?.ModelId,
             Dimensions = options?.Dimensions,
         };
@@ -40,7 +40,7 @@ public partial class HuggingFaceEmbeddingClient : IEmbeddingGenerator<string, Em
 
         foreach (var item in response.Data.OrderBy(d => d.Index))
         {
-            var vector = item.Embedding.Value1;
+            var vector = item.Embedding.EmbeddingVariant1;
             if (vector is not null)
             {
                 embeddings.Add(new Embedding<float>(vector.ToArray())
