@@ -6,14 +6,14 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class CreateAgenticProvisioningResourcesResponseVariant2
+    public sealed partial class GetAgenticProvisioningResourcesResponseVariant3
     {
         /// <summary>
         /// 
         /// </summary>
-        /// <default>"pending"</default>
+        /// <default>"removed"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public string Status { get; set; } = "pending";
+        public string Status { get; set; } = "removed";
 
         /// <summary>
         /// 
@@ -29,25 +29,25 @@ namespace HuggingFace
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesResponseVariant2" /> class.
+        /// Initializes a new instance of the <see cref="GetAgenticProvisioningResourcesResponseVariant3" /> class.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="status"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public CreateAgenticProvisioningResourcesResponseVariant2(
+        public GetAgenticProvisioningResourcesResponseVariant3(
             string id,
-            string status = "pending")
+            string status = "removed")
         {
             this.Status = status;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesResponseVariant2" /> class.
+        /// Initializes a new instance of the <see cref="GetAgenticProvisioningResourcesResponseVariant3" /> class.
         /// </summary>
-        public CreateAgenticProvisioningResourcesResponseVariant2()
+        public GetAgenticProvisioningResourcesResponseVariant3()
         {
         }
     }

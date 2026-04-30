@@ -9,8 +9,7 @@ namespace HuggingFace
     public sealed partial class CreateAgenticProvisioningResourcesRequestVariant4Configuration
     {
         /// <summary>
-        /// Amount in USD charged per top-up. Usage is billed in increments of rechargeAmountUsd — the prepaid-credit balance is topped back up to this amount whenever it runs low, starting with the very first charge at provisioning (minimum $15, defaults to $15).<br/>
-        /// Default Value: 15
+        /// Optional pay-as-you-go auto top-up ceiling, in USD. If set, usage above the plan's included quota is billed via the shared payment token (minimum $15). If omitted, the plan's included quota is a hard cap.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rechargeAmountUsd")]
         public double? RechargeAmountUsd { get; set; }
@@ -25,8 +24,7 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesRequestVariant4Configuration" /> class.
         /// </summary>
         /// <param name="rechargeAmountUsd">
-        /// Amount in USD charged per top-up. Usage is billed in increments of rechargeAmountUsd — the prepaid-credit balance is topped back up to this amount whenever it runs low, starting with the very first charge at provisioning (minimum $15, defaults to $15).<br/>
-        /// Default Value: 15
+        /// Optional pay-as-you-go auto top-up ceiling, in USD. If set, usage above the plan's included quota is billed via the shared payment token (minimum $15). If omitted, the plan's included quota is a hard cap.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
