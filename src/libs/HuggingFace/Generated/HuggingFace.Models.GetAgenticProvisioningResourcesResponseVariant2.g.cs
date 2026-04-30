@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        /// <default>"removed"</default>
+        /// <default>"pending"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public string Status { get; set; } = "removed";
+        public string Status { get; set; } = "pending";
 
         /// <summary>
         /// 
@@ -38,7 +38,7 @@ namespace HuggingFace
 #endif
         public GetAgenticProvisioningResourcesResponseVariant2(
             string id,
-            string status = "removed")
+            string status = "pending")
         {
             this.Status = status;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

@@ -11,16 +11,15 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        /// <default>"pay_as_you_go"</default>
+        /// <default>"pro"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("service_id")]
-        public string ServiceId { get; set; } = "pay_as_you_go";
+        public string ServiceId { get; set; } = "pro";
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configuration")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4Configuration Configuration { get; set; }
+        public global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4Configuration? Configuration { get; set; }
 
         /// <summary>
         /// 
@@ -44,12 +43,12 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateAgenticProvisioningResourcesRequestVariant4(
-            global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4Configuration configuration,
+            global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4Configuration? configuration,
             global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant4PaymentCredentials? paymentCredentials,
-            string serviceId = "pay_as_you_go")
+            string serviceId = "pro")
         {
             this.ServiceId = serviceId;
-            this.Configuration = configuration ?? throw new global::System.ArgumentNullException(nameof(configuration));
+            this.Configuration = configuration;
             this.PaymentCredentials = paymentCredentials;
         }
 

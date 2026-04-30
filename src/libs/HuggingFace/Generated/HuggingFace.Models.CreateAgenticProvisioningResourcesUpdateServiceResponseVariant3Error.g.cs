@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class CreateAgenticProvisioningResourcesResponseVariant2Error
+    public sealed partial class CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3Error
     {
         /// <summary>
         /// 
@@ -29,14 +29,14 @@ namespace HuggingFace
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesResponseVariant2Error" /> class.
+        /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3Error" /> class.
         /// </summary>
         /// <param name="code"></param>
         /// <param name="message"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public CreateAgenticProvisioningResourcesResponseVariant2Error(
+        public CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3Error(
             string code,
             string message)
         {
@@ -45,9 +45,9 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesResponseVariant2Error" /> class.
+        /// Initializes a new instance of the <see cref="CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3Error" /> class.
         /// </summary>
-        public CreateAgenticProvisioningResourcesResponseVariant2Error()
+        public CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3Error()
         {
         }
     }
