@@ -22,6 +22,13 @@ namespace HuggingFace
         public string? Organization { get; set; }
 
         /// <summary>
+        /// The region where the repository is hosted.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("region")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateReposCreateRequestRegionJsonConverter))]
+        public global::HuggingFace.CreateReposCreateRequestRegion? Region { get; set; }
+
+        /// <summary>
         /// The license of the repository. You can select 'Other' if your license is not in the list
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("license")]
@@ -76,6 +83,9 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name"></param>
         /// <param name="organization"></param>
+        /// <param name="region">
+        /// The region where the repository is hosted.
+        /// </param>
         /// <param name="license">
         /// The license of the repository. You can select 'Other' if your license is not in the list
         /// </param>
@@ -95,6 +105,7 @@ namespace HuggingFace
         public CreateReposCreateRequest2(
             string name,
             string? organization,
+            global::HuggingFace.CreateReposCreateRequestRegion? region,
             global::HuggingFace.CreateReposCreateRequestLicense? license,
             string? licenseName,
             string? licenseLink,
@@ -105,6 +116,7 @@ namespace HuggingFace
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Organization = organization;
+            this.Region = region;
             this.License = license;
             this.LicenseName = licenseName;
             this.LicenseLink = licenseLink;
