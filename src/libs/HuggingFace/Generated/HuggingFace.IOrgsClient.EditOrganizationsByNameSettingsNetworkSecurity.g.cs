@@ -28,8 +28,8 @@ namespace HuggingFace
         /// <param name="enforceIpRestriction"></param>
         /// <param name="highRateLimits"></param>
         /// <param name="ipRanges"></param>
-        /// <param name="blockedUrls"></param>
-        /// <param name="allowedUrls"></param>
+        /// <param name="blockedContents"></param>
+        /// <param name="allowedContents"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -39,8 +39,8 @@ namespace HuggingFace
             bool? enforceIpRestriction = default,
             bool? highRateLimits = default,
             global::System.Collections.Generic.IList<string>? ipRanges = default,
-            global::System.Collections.Generic.IList<string>? blockedUrls = default,
-            global::System.Collections.Generic.IList<string>? allowedUrls = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContent>? blockedContents = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>? allowedContents = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
