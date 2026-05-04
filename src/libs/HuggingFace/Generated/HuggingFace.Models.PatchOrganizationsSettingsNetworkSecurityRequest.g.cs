@@ -35,14 +35,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("blockedUrls")]
-        public global::System.Collections.Generic.IList<string>? BlockedUrls { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("blockedContents")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContent>? BlockedContents { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("allowedUrls")]
-        public global::System.Collections.Generic.IList<string>? AllowedUrls { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("allowedContents")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>? AllowedContents { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -57,8 +57,8 @@ namespace HuggingFace
         /// <param name="enforceIpRestriction"></param>
         /// <param name="highRateLimits"></param>
         /// <param name="ipRanges"></param>
-        /// <param name="blockedUrls"></param>
-        /// <param name="allowedUrls"></param>
+        /// <param name="blockedContents"></param>
+        /// <param name="allowedContents"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -67,15 +67,15 @@ namespace HuggingFace
             bool? enforceIpRestriction,
             bool? highRateLimits,
             global::System.Collections.Generic.IList<string>? ipRanges,
-            global::System.Collections.Generic.IList<string>? blockedUrls,
-            global::System.Collections.Generic.IList<string>? allowedUrls)
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContent>? blockedContents,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>? allowedContents)
         {
             this.EnforceAuth = enforceAuth;
             this.EnforceIpRestriction = enforceIpRestriction;
             this.HighRateLimits = highRateLimits;
             this.IpRanges = ipRanges;
-            this.BlockedUrls = blockedUrls;
-            this.AllowedUrls = allowedUrls;
+            this.BlockedContents = blockedContents;
+            this.AllowedContents = allowedContents;
         }
 
         /// <summary>

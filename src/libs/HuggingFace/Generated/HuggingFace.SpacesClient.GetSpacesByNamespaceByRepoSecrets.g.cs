@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class OrgsClient
+    public partial class SpacesClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_EditOrganizationsByNameSettingsNetworkSecuritySecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetSpacesByNamespaceByRepoSecretsSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,58 +21,55 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_EditOrganizationsByNameSettingsNetworkSecuritySecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetSpacesByNamespaceByRepoSecretsSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_EditOrganizationsByNameSettingsNetworkSecuritySecurityRequirement0,
+            {                s_GetSpacesByNamespaceByRepoSecretsSecurityRequirement0,
             };
-        partial void PrepareEditOrganizationsByNameSettingsNetworkSecurityArguments(
+        partial void PrepareGetSpacesByNamespaceByRepoSecretsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string name,
-            global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequest request);
-        partial void PrepareEditOrganizationsByNameSettingsNetworkSecurityRequest(
+            ref string @namespace,
+            ref string repo);
+        partial void PrepareGetSpacesByNamespaceByRepoSecretsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string name,
-            global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequest request);
-        partial void ProcessEditOrganizationsByNameSettingsNetworkSecurityResponse(
+            string @namespace,
+            string repo);
+        partial void ProcessGetSpacesByNamespaceByRepoSecretsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessEditOrganizationsByNameSettingsNetworkSecurityResponseContent(
+        partial void ProcessGetSpacesByNamespaceByRepoSecretsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Update network security settings<br/>
-        /// Update the network security settings for an organization.
+        /// List secrets<br/>
+        /// List a Space's secret keys. Values are never returned.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="request"></param>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponse> EditOrganizationsByNameSettingsNetworkSecurityAsync(
-            string name,
-
-            global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequest request,
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.Dictionary<string, global::HuggingFace.GetSpacesSecretsResponse2>> GetSpacesByNamespaceByRepoSecretsAsync(
+            string @namespace,
+            string repo,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareEditOrganizationsByNameSettingsNetworkSecurityArguments(
+            PrepareGetSpacesByNamespaceByRepoSecretsArguments(
                 httpClient: HttpClient,
-                name: ref name,
-                request: request);
+                @namespace: ref @namespace,
+                repo: ref repo);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_EditOrganizationsByNameSettingsNetworkSecuritySecurityRequirements,
-                operationName: "EditOrganizationsByNameSettingsNetworkSecurityAsync");
+                securityRequirements: s_GetSpacesByNamespaceByRepoSecretsSecurityRequirements,
+                operationName: "GetSpacesByNamespaceByRepoSecretsAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -91,7 +88,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/organizations/{name}/settings/network-security",
+                                path: $"/api/spaces/{@namespace}/{repo}/secrets",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -99,7 +96,7 @@ namespace HuggingFace
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: new global::System.Net.Http.HttpMethod("PATCH"),
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -122,12 +119,6 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -136,11 +127,11 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareEditOrganizationsByNameSettingsNetworkSecurityRequest(
+                PrepareGetSpacesByNamespaceByRepoSecretsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name!,
-                    request: request);
+                    @namespace: @namespace!,
+                    repo: repo!);
 
                 return __httpRequest;
             }
@@ -157,10 +148,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editOrganizationsByNameSettingsNetworkSecurity",
-                                methodName: "EditOrganizationsByNameSettingsNetworkSecurityAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/network-security\"",
-                                httpMethod: "PATCH",
+                                operationId: "getSpacesByNamespaceByRepoSecrets",
+                                methodName: "GetSpacesByNamespaceByRepoSecretsAsync",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/secrets\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -184,10 +175,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editOrganizationsByNameSettingsNetworkSecurity",
-                                methodName: "EditOrganizationsByNameSettingsNetworkSecurityAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/network-security\"",
-                                httpMethod: "PATCH",
+                                operationId: "getSpacesByNamespaceByRepoSecrets",
+                                methodName: "GetSpacesByNamespaceByRepoSecretsAsync",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/secrets\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -219,10 +210,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editOrganizationsByNameSettingsNetworkSecurity",
-                                methodName: "EditOrganizationsByNameSettingsNetworkSecurityAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/network-security\"",
-                                httpMethod: "PATCH",
+                                operationId: "getSpacesByNamespaceByRepoSecrets",
+                                methodName: "GetSpacesByNamespaceByRepoSecretsAsync",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/secrets\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -258,7 +249,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessEditOrganizationsByNameSettingsNetworkSecurityResponse(
+                ProcessGetSpacesByNamespaceByRepoSecretsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -266,10 +257,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editOrganizationsByNameSettingsNetworkSecurity",
-                                methodName: "EditOrganizationsByNameSettingsNetworkSecurityAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/network-security\"",
-                                httpMethod: "PATCH",
+                                operationId: "getSpacesByNamespaceByRepoSecrets",
+                                methodName: "GetSpacesByNamespaceByRepoSecretsAsync",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/secrets\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -286,10 +277,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editOrganizationsByNameSettingsNetworkSecurity",
-                                methodName: "EditOrganizationsByNameSettingsNetworkSecurityAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/network-security\"",
-                                httpMethod: "PATCH",
+                                operationId: "getSpacesByNamespaceByRepoSecrets",
+                                methodName: "GetSpacesByNamespaceByRepoSecretsAsync",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/secrets\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -314,7 +305,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessEditOrganizationsByNameSettingsNetworkSecurityResponseContent(
+                                ProcessGetSpacesByNamespaceByRepoSecretsResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -324,7 +315,7 @@ namespace HuggingFace
                                     __response.EnsureSuccessStatusCode();
 
                                     return
-                                        global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponse.FromJson(__content, JsonSerializerContext) ??
+                                        (global::System.Collections.Generic.Dictionary<string, global::HuggingFace.GetSpacesSecretsResponse2>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.Dictionary<string, global::HuggingFace.GetSpacesSecretsResponse2>), JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                                 }
                                 catch (global::System.Exception __ex)
@@ -354,7 +345,7 @@ namespace HuggingFace
                                     ).ConfigureAwait(false);
 
                                     return
-                                        await global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        (global::System.Collections.Generic.Dictionary<string, global::HuggingFace.GetSpacesSecretsResponse2>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.Dictionary<string, global::HuggingFace.GetSpacesSecretsResponse2>), JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                                 }
                                 catch (global::System.Exception __ex)
@@ -392,47 +383,6 @@ namespace HuggingFace
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Update network security settings<br/>
-        /// Update the network security settings for an organization.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="enforceAuth"></param>
-        /// <param name="enforceIpRestriction"></param>
-        /// <param name="highRateLimits"></param>
-        /// <param name="ipRanges"></param>
-        /// <param name="blockedContents"></param>
-        /// <param name="allowedContents"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponse> EditOrganizationsByNameSettingsNetworkSecurityAsync(
-            string name,
-            bool? enforceAuth = default,
-            bool? enforceIpRestriction = default,
-            bool? highRateLimits = default,
-            global::System.Collections.Generic.IList<string>? ipRanges = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContent>? blockedContents = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>? allowedContents = default,
-            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequest
-            {
-                EnforceAuth = enforceAuth,
-                EnforceIpRestriction = enforceIpRestriction,
-                HighRateLimits = highRateLimits,
-                IpRanges = ipRanges,
-                BlockedContents = blockedContents,
-                AllowedContents = allowedContents,
-            };
-
-            return await EditOrganizationsByNameSettingsNetworkSecurityAsync(
-                name: name,
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

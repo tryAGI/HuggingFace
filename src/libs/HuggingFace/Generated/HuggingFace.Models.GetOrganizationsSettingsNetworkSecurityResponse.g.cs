@@ -41,16 +41,16 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("blockedUrls")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("blockedContents")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> BlockedUrls { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseBlockedContent> BlockedContents { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("allowedUrls")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("allowedContents")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> AllowedUrls { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseAllowedContent> AllowedContents { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -65,8 +65,8 @@ namespace HuggingFace
         /// <param name="enforceIpRestriction"></param>
         /// <param name="highRateLimits"></param>
         /// <param name="ipRanges"></param>
-        /// <param name="blockedUrls"></param>
-        /// <param name="allowedUrls"></param>
+        /// <param name="blockedContents"></param>
+        /// <param name="allowedContents"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -75,15 +75,15 @@ namespace HuggingFace
             bool enforceIpRestriction,
             global::HuggingFace.AnyOf<bool?, string> highRateLimits,
             global::System.Collections.Generic.IList<string> ipRanges,
-            global::System.Collections.Generic.IList<string> blockedUrls,
-            global::System.Collections.Generic.IList<string> allowedUrls)
+            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseBlockedContent> blockedContents,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseAllowedContent> allowedContents)
         {
             this.EnforceAuth = enforceAuth;
             this.EnforceIpRestriction = enforceIpRestriction;
             this.HighRateLimits = highRateLimits;
             this.IpRanges = ipRanges ?? throw new global::System.ArgumentNullException(nameof(ipRanges));
-            this.BlockedUrls = blockedUrls ?? throw new global::System.ArgumentNullException(nameof(blockedUrls));
-            this.AllowedUrls = allowedUrls ?? throw new global::System.ArgumentNullException(nameof(allowedUrls));
+            this.BlockedContents = blockedContents ?? throw new global::System.ArgumentNullException(nameof(blockedContents));
+            this.AllowedContents = allowedContents ?? throw new global::System.ArgumentNullException(nameof(allowedContents));
         }
 
         /// <summary>
