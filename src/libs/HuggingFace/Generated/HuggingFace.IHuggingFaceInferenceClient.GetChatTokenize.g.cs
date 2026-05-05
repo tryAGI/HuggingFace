@@ -19,6 +19,18 @@ namespace HuggingFace
         /// <summary>
         /// Template and tokenize ChatRequest
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.ChatTokenizeResponse>> GetChatTokenizeAsResponseAsync(
+
+            global::HuggingFace.ChatRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Template and tokenize ChatRequest
+        /// </summary>
         /// <param name="frequencyPenalty">
         /// Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far,<br/>
         /// decreasing the model's likelihood to repeat the same line verbatim.<br/>

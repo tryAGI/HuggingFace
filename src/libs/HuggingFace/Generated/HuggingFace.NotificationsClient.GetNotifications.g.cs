@@ -92,6 +92,57 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetNotificationsAsResponseAsync(
+                p: p,
+                readStatus: readStatus,
+                repoType: repoType,
+                repoName: repoName,
+                postAuthor: postAuthor,
+                paperId: paperId,
+                articleId: articleId,
+                mention: mention,
+                lastUpdate: lastUpdate,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List notifications<br/>
+        /// List notifications for the user
+        /// </summary>
+        /// <param name="p">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="readStatus">
+        /// Default Value: all
+        /// </param>
+        /// <param name="repoType"></param>
+        /// <param name="repoName"></param>
+        /// <param name="postAuthor"></param>
+        /// <param name="paperId"></param>
+        /// <param name="articleId"></param>
+        /// <param name="mention">
+        /// Default Value: all
+        /// </param>
+        /// <param name="lastUpdate"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetNotificationsResponse>> GetNotificationsAsResponseAsync(
+            int? p = default,
+            global::HuggingFace.GetNotificationsReadStatus? readStatus = default,
+            global::HuggingFace.GetNotificationsRepoType? repoType = default,
+            string? repoName = default,
+            string? postAuthor = default,
+            string? paperId = default,
+            string? articleId = default,
+            global::HuggingFace.GetNotificationsMention? mention = default,
+            global::System.DateTime? lastUpdate = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetNotificationsArguments(
@@ -128,9 +179,10 @@ namespace HuggingFace
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
                                 path: "/api/notifications",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("p", p?.ToString())
                                 .AddOptionalParameter("readStatus", readStatus?.ToValueString())
@@ -140,7 +192,7 @@ namespace HuggingFace
                                 .AddOptionalParameter("paperId", paperId)
                                 .AddOptionalParameter("articleId", articleId)
                                 .AddOptionalParameter("mention", mention?.ToValueString())
-                                .AddOptionalParameter("lastUpdate", lastUpdate?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                                .AddOptionalParameter("lastUpdate", lastUpdate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -220,6 +272,8 @@ namespace HuggingFace
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -230,6 +284,11 @@ namespace HuggingFace
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::HuggingFace.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -247,6 +306,8 @@ namespace HuggingFace
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -256,8 +317,7 @@ namespace HuggingFace
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -266,6 +326,11 @@ namespace HuggingFace
                         __attempt < __maxAttempts &&
                         global::HuggingFace.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::HuggingFace.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -282,14 +347,15 @@ namespace HuggingFace
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -329,6 +395,8 @@ namespace HuggingFace
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -349,6 +417,8 @@ namespace HuggingFace
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -373,9 +443,13 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::HuggingFace.GetNotificationsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.GetNotificationsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetNotificationsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -403,9 +477,13 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::HuggingFace.GetNotificationsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.GetNotificationsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetNotificationsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

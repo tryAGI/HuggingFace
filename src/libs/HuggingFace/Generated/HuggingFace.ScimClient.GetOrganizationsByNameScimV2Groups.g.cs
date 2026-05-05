@@ -74,6 +74,43 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetOrganizationsByNameScimV2GroupsAsResponseAsync(
+                name: name,
+                startIndex: startIndex,
+                count: count,
+                filter: filter,
+                excludedAttributes: excludedAttributes,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List SCIM groups<br/>
+        /// Get a list of SCIM groups. Retrieves a paginated list of all organization groups. If you provide the filter parameter, the resources for all matching groups are returned.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="startIndex">
+        /// Default Value: 1
+        /// </param>
+        /// <param name="count">
+        /// Default Value: 1000
+        /// </param>
+        /// <param name="filter"></param>
+        /// <param name="excludedAttributes"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsScimV2GroupsResponse>> GetOrganizationsByNameScimV2GroupsAsResponseAsync(
+            string name,
+            double? startIndex = default,
+            double? count = default,
+            string? filter = default,
+            string? excludedAttributes = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetOrganizationsByNameScimV2GroupsArguments(
@@ -106,14 +143,15 @@ namespace HuggingFace
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
                                 path: $"/api/organizations/{name}/scim/v2/Groups",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("startIndex", startIndex?.ToString())
                                 .AddOptionalParameter("count", count?.ToString())
                                 .AddOptionalParameter("filter", filter)
-                                .AddOptionalParameter("excludedAttributes", excludedAttributes) 
+                                .AddOptionalParameter("excludedAttributes", excludedAttributes)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -189,6 +227,8 @@ namespace HuggingFace
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -199,6 +239,11 @@ namespace HuggingFace
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::HuggingFace.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -216,6 +261,8 @@ namespace HuggingFace
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -225,8 +272,7 @@ namespace HuggingFace
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -235,6 +281,11 @@ namespace HuggingFace
                         __attempt < __maxAttempts &&
                         global::HuggingFace.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::HuggingFace.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -251,14 +302,15 @@ namespace HuggingFace
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -298,6 +350,8 @@ namespace HuggingFace
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -318,6 +372,8 @@ namespace HuggingFace
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -342,9 +398,13 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::HuggingFace.GetOrganizationsScimV2GroupsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.GetOrganizationsScimV2GroupsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsScimV2GroupsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -372,9 +432,13 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::HuggingFace.GetOrganizationsScimV2GroupsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.GetOrganizationsScimV2GroupsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsScimV2GroupsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

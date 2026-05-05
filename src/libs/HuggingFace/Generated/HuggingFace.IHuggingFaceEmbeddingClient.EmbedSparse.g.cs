@@ -19,6 +19,18 @@ namespace HuggingFace
         /// <summary>
         /// Get Sparse Embeddings. Returns a 424 status code if the model is not an embedding model with SPLADE pooling.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.SparseValue>>>> EmbedSparseAsResponseAsync(
+
+            global::HuggingFace.EmbedSparseRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get Sparse Embeddings. Returns a 424 status code if the model is not an embedding model with SPLADE pooling.
+        /// </summary>
         /// <param name="inputs"></param>
         /// <param name="promptName">
         /// The name of the prompt that should be used by for encoding. If not set, no prompt<br/>

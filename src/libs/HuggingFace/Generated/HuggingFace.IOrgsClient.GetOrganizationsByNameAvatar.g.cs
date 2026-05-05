@@ -21,5 +21,22 @@ namespace HuggingFace
             object? redirect = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get avatar<br/>
+        /// Retrieve organization avatar. This endpoint returns a JSON with the avatar URL for the organization.<br/>
+        /// If called with the `Sec-Fetch-Dest: image` header, it instead redirects to the avatar URL
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="redirect">
+        /// Redirect to the avatar url instead of returning it
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsAvatarResponse>> GetOrganizationsByNameAvatarAsResponseAsync(
+            string name,
+            object? redirect = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
