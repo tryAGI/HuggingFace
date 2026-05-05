@@ -22,6 +22,20 @@ namespace HuggingFace
         /// Update webhook
         /// </summary>
         /// <param name="webhookId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse2>> CreateSettingsWebhooksByWebhookIdAsResponseAsync(
+            string webhookId,
+
+            global::HuggingFace.CreateSettingsWebhooksRequest2 request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update webhook
+        /// </summary>
+        /// <param name="webhookId"></param>
         /// <param name="watched"></param>
         /// <param name="url"></param>
         /// <param name="job"></param>

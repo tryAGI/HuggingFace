@@ -24,6 +24,21 @@ namespace HuggingFace
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateOrganizationsScimV2UsersResponse>> CreateOrganizationsByNameScimV2UsersAsResponseAsync(
+            string name,
+
+            global::HuggingFace.CreateOrganizationsScimV2UsersRequest request,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a SCIM user<br/>
+        /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
+        /// </summary>
+        /// <param name="name"></param>
         /// <param name="schemas"></param>
         /// <param name="userName">
         /// Username for the user, it should respect the hub rules: No consecutive dashes, No digit-only, Does not start or end with a dash, Only dashes, letters or numbers, Not 24 chars hex string
