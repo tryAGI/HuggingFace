@@ -90,6 +90,24 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("startedAt")]
+        public global::System.DateTime? StartedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("finishedAt")]
+        public global::System.DateTime? FinishedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("durations")]
+        public global::HuggingFace.CreateJobsDuplicateResponseDurations? Durations { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsDuplicateResponseVolume>? Volumes { get; set; }
 
@@ -162,6 +180,9 @@ namespace HuggingFace
         /// <param name="arguments"></param>
         /// <param name="arch"></param>
         /// <param name="retry"></param>
+        /// <param name="startedAt"></param>
+        /// <param name="finishedAt"></param>
+        /// <param name="durations"></param>
         /// <param name="volumes"></param>
         /// <param name="initiator"></param>
         /// <param name="secrets"></param>
@@ -186,6 +207,9 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? arguments,
             global::HuggingFace.CreateJobsDuplicateResponseArch? arch,
             double? retry,
+            global::System.DateTime? startedAt,
+            global::System.DateTime? finishedAt,
+            global::HuggingFace.CreateJobsDuplicateResponseDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsDuplicateResponseVolume>? volumes,
             global::HuggingFace.AnyOf<global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant1, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant2, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant3, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
@@ -205,6 +229,9 @@ namespace HuggingFace
             this.Flavor = flavor;
             this.CreatedBy = createdBy ?? throw new global::System.ArgumentNullException(nameof(createdBy));
             this.Retry = retry;
+            this.StartedAt = startedAt;
+            this.FinishedAt = finishedAt;
+            this.Durations = durations;
             this.Volumes = volumes;
             this.Type = type;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));

@@ -116,6 +116,24 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("startedAt")]
+        public global::System.DateTime? StartedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("finishedAt")]
+        public global::System.DateTime? FinishedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("durations")]
+        public global::HuggingFace.JobDurations? Durations { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
         public global::System.Collections.Generic.IList<global::HuggingFace.JobVolume>? Volumes { get; set; }
 
@@ -144,6 +162,9 @@ namespace HuggingFace
         /// <param name="arch"></param>
         /// <param name="tags"></param>
         /// <param name="retry"></param>
+        /// <param name="startedAt"></param>
+        /// <param name="finishedAt"></param>
+        /// <param name="durations"></param>
         /// <param name="volumes"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -165,6 +186,9 @@ namespace HuggingFace
             global::HuggingFace.JobArch? arch,
             global::System.Collections.Generic.IList<string>? tags,
             double? retry,
+            global::System.DateTime? startedAt,
+            global::System.DateTime? finishedAt,
+            global::HuggingFace.JobDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.JobVolume>? volumes)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -183,6 +207,9 @@ namespace HuggingFace
             this.CreatedBy = createdBy ?? throw new global::System.ArgumentNullException(nameof(createdBy));
             this.Tags = tags;
             this.Retry = retry;
+            this.StartedAt = startedAt;
+            this.FinishedAt = finishedAt;
+            this.Durations = durations;
             this.Volumes = volumes;
         }
 

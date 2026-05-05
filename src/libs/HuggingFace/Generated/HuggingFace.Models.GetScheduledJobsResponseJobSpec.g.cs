@@ -69,6 +69,24 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("startedAt")]
+        public global::System.DateTime? StartedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("finishedAt")]
+        public global::System.DateTime? FinishedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("durations")]
+        public global::HuggingFace.GetScheduledJobsResponseJobSpecDurations? Durations { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetScheduledJobsResponseJobSpecVolume>? Volumes { get; set; }
 
@@ -108,6 +126,9 @@ namespace HuggingFace
         /// <param name="arguments"></param>
         /// <param name="arch"></param>
         /// <param name="retry"></param>
+        /// <param name="startedAt"></param>
+        /// <param name="finishedAt"></param>
+        /// <param name="durations"></param>
         /// <param name="volumes"></param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
@@ -125,6 +146,9 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? arguments,
             global::HuggingFace.GetScheduledJobsResponseJobSpecArch? arch,
             double? retry,
+            global::System.DateTime? startedAt,
+            global::System.DateTime? finishedAt,
+            global::HuggingFace.GetScheduledJobsResponseJobSpecDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.GetScheduledJobsResponseJobSpecVolume>? volumes,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
@@ -139,6 +163,9 @@ namespace HuggingFace
             this.Arch = arch;
             this.Flavor = flavor;
             this.Retry = retry;
+            this.StartedAt = startedAt;
+            this.FinishedAt = finishedAt;
+            this.Durations = durations;
             this.Volumes = volumes;
             this.Secrets = secrets;
             this.Labels = labels;

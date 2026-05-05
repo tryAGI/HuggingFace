@@ -83,6 +83,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        JobsUpdateLabels,
+        /// <summary>
+        /// 
+        /// </summary>
         OauthToken,
         /// <summary>
         /// 
@@ -319,6 +323,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        ScheduledJobUpdateLabels,
+        /// <summary>
+        /// 
+        /// </summary>
         ScheduledJobUpdateSchedule,
         /// <summary>
         /// 
@@ -376,6 +384,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.CollectionDelete => "collection.delete",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCancel => "jobs.cancel",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCreate => "jobs.create",
+                GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels => "jobs.update_labels",
                 GetOrganizationsAuditLogExportResponseItemType.OauthToken => "oauth.token",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole => "org.change_role",
@@ -435,6 +444,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.ScheduledJobResume => "scheduled_job.resume",
                 GetOrganizationsAuditLogExportResponseItemType.ScheduledJobRun => "scheduled_job.run",
                 GetOrganizationsAuditLogExportResponseItemType.ScheduledJobSuspend => "scheduled_job.suspend",
+                GetOrganizationsAuditLogExportResponseItemType.ScheduledJobUpdateLabels => "scheduled_job.update_labels",
                 GetOrganizationsAuditLogExportResponseItemType.ScheduledJobUpdateSchedule => "scheduled_job.update_schedule",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesAddStorage => "spaces.add_storage",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveStorage => "spaces.remove_storage",
@@ -470,6 +480,7 @@ namespace HuggingFace
                 "collection.delete" => GetOrganizationsAuditLogExportResponseItemType.CollectionDelete,
                 "jobs.cancel" => GetOrganizationsAuditLogExportResponseItemType.JobsCancel,
                 "jobs.create" => GetOrganizationsAuditLogExportResponseItemType.JobsCreate,
+                "jobs.update_labels" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels,
                 "oauth.token" => GetOrganizationsAuditLogExportResponseItemType.OauthToken,
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
                 "org.change_role" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole,
@@ -529,6 +540,7 @@ namespace HuggingFace
                 "scheduled_job.resume" => GetOrganizationsAuditLogExportResponseItemType.ScheduledJobResume,
                 "scheduled_job.run" => GetOrganizationsAuditLogExportResponseItemType.ScheduledJobRun,
                 "scheduled_job.suspend" => GetOrganizationsAuditLogExportResponseItemType.ScheduledJobSuspend,
+                "scheduled_job.update_labels" => GetOrganizationsAuditLogExportResponseItemType.ScheduledJobUpdateLabels,
                 "scheduled_job.update_schedule" => GetOrganizationsAuditLogExportResponseItemType.ScheduledJobUpdateSchedule,
                 "spaces.add_storage" => GetOrganizationsAuditLogExportResponseItemType.SpacesAddStorage,
                 "spaces.remove_storage" => GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveStorage,
