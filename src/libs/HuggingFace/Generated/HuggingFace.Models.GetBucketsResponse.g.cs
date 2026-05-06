@@ -1,0 +1,136 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class GetBucketsResponse
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("author")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Author { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
+        public bool? Private { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime CreatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime UpdatedAt { get; set; }
+
+        /// <summary>
+        /// The amount of storage used by the bucket in bytes
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("size")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Size { get; set; }
+
+        /// <summary>
+        /// The total number of files in the bucket
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("totalFiles")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double TotalFiles { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <default>"bucket"</default>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
+        public string RepoType { get; set; } = "bucket";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cdnRegions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetBucketsResponseCdnRegion> CdnRegions { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
+        public global::HuggingFace.GetBucketsResponseResourceGroup? ResourceGroup { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetBucketsResponse" /> class.
+        /// </summary>
+        /// <param name="author"></param>
+        /// <param name="id"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="size">
+        /// The amount of storage used by the bucket in bytes
+        /// </param>
+        /// <param name="totalFiles">
+        /// The total number of files in the bucket
+        /// </param>
+        /// <param name="cdnRegions"></param>
+        /// <param name="private"></param>
+        /// <param name="resourceGroup"></param>
+        /// <param name="repoType"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public GetBucketsResponse(
+            string author,
+            string id,
+            global::System.DateTime createdAt,
+            global::System.DateTime updatedAt,
+            double size,
+            double totalFiles,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetBucketsResponseCdnRegion> cdnRegions,
+            bool? @private,
+            global::HuggingFace.GetBucketsResponseResourceGroup? resourceGroup,
+            string repoType = "bucket")
+        {
+            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Private = @private;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.Size = size;
+            this.TotalFiles = totalFiles;
+            this.RepoType = repoType;
+            this.CdnRegions = cdnRegions ?? throw new global::System.ArgumentNullException(nameof(cdnRegions));
+            this.ResourceGroup = resourceGroup;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetBucketsResponse" /> class.
+        /// </summary>
+        public GetBucketsResponse()
+        {
+        }
+    }
+}
