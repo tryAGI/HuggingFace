@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public readonly partial struct AllOf<[global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T1, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T2> : global::System.IEquatable<AllOf<T1, T2>>
+    public readonly partial struct AllOf<T1, T2> : global::System.IEquatable<AllOf<T1, T2>>
     {
         /// <summary>
         /// 
@@ -105,42 +105,17 @@ namespace HuggingFace
             Value2?.ToString() 
             ;
 
-        private static bool RequiresValue<[global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] TValue>() => RequirementCache<TValue>.Value;
-
-        private static bool DetermineRequiresValue([global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] global::System.Type type)
+        private static bool RequiresValue<TValue>()
         {
+            var type = typeof(TValue);
             if (global::System.Nullable.GetUnderlyingType(type) != null)
             {
                 return false;
             }
 
-            if (type.IsValueType ||
-                type == typeof(string) ||
-                type.IsArray)
-            {
-                return true;
-            }
-
-            foreach (var property in type.GetProperties(global::System.Reflection.BindingFlags.Instance | global::System.Reflection.BindingFlags.Public))
-            {
-                foreach (var attributeData in property.CustomAttributes)
-                {
-                    var attributeTypeName = attributeData.AttributeType.FullName;
-                    if (attributeTypeName == "System.Text.Json.Serialization.JsonRequiredAttribute" ||
-                        attributeTypeName == "Newtonsoft.Json.JsonRequiredAttribute" ||
-                        attributeTypeName == "System.Runtime.CompilerServices.RequiredMemberAttribute")
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-        }
-
-        private static class RequirementCache<[global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] TValue>
-        {
-            public static readonly bool Value = DetermineRequiresValue(typeof(TValue));
+            return type.IsValueType ||
+                   type == typeof(string) ||
+                   type.IsArray;
         }
 
 
