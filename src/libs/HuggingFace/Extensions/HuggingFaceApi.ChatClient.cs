@@ -48,7 +48,7 @@ public partial class HuggingFaceInferenceClient : IChatClient
                 foreach (var tc in toolCallMsg.ToolCalls)
                 {
                     var args = tc.Function.Arguments is JsonElement je
-                        ? je.Deserialize<Dictionary<string, object?>>()
+                        ? ParseArguments(je)
                         : null;
                     responseMessage.Contents.Add(new FunctionCallContent(tc.Id, tc.Function.Name, args)
                     {
@@ -153,8 +153,7 @@ public partial class HuggingFaceInferenceClient : IChatClient
                     var argsJson = builder.Args.ToString();
                     if (argsJson.Length > 0)
                     {
-                        try { args = JsonSerializer.Deserialize<Dictionary<string, object?>>(argsJson); }
-                        catch (JsonException) { }
+                        args = ParseArguments(argsJson);
                     }
                     update.Contents.Add(new FunctionCallContent(builder.Id, builder.Name, args));
                 }
@@ -259,5 +258,34 @@ public partial class HuggingFaceInferenceClient : IChatClient
         }
 
         return request;
+    }
+
+    private static Dictionary<string, object?>? ParseArguments(string argumentsJson)
+    {
+        try
+        {
+            using var document = JsonDocument.Parse(argumentsJson);
+            return ParseArguments(document.RootElement);
+        }
+        catch (JsonException)
+        {
+            return null;
+        }
+    }
+
+    private static Dictionary<string, object?>? ParseArguments(JsonElement element)
+    {
+        if (element.ValueKind != JsonValueKind.Object)
+        {
+            return null;
+        }
+
+        var result = new Dictionary<string, object?>(StringComparer.Ordinal);
+        foreach (var property in element.EnumerateObject())
+        {
+            result[property.Name] = property.Value.Clone();
+        }
+
+        return result;
     }
 }
