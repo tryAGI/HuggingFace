@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickTextMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.TextMessage? value)
+        {
+            value = TextMessage;
+            return IsTextMessage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolCallDelta? ToolCall { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolCall))]
 #endif
         public bool IsToolCall => ToolCall != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ToolCallDelta? value)
+        {
+            value = ToolCall;
+            return IsToolCall;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.TextMessage?, TResult>? textMessage = null,
-            global::System.Func<global::HuggingFace.ToolCallDelta?, TResult>? toolCall = null,
+            global::System.Func<global::HuggingFace.TextMessage, TResult>? textMessage = null,
+            global::System.Func<global::HuggingFace.ToolCallDelta, TResult>? toolCall = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.TextMessage?>? textMessage = null,
-            global::System.Action<global::HuggingFace.ToolCallDelta?>? toolCall = null,
+            global::System.Action<global::HuggingFace.TextMessage>? textMessage = null,
+
+            global::System.Action<global::HuggingFace.ToolCallDelta>? toolCall = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsTextMessage)
+            {
+                textMessage?.Invoke(TextMessage!);
+            }
+            else if (IsToolCall)
+            {
+                toolCall?.Invoke(ToolCall!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.TextMessage>? textMessage = null,
+            global::System.Action<global::HuggingFace.ToolCallDelta>? toolCall = null,
             bool validate = true)
         {
             if (validate)

@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickEmbeddingVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<float>? value)
+        {
+            value = EmbeddingVariant1;
+            return IsEmbeddingVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? EmbeddingVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingVariant2))]
 #endif
         public bool IsEmbeddingVariant2 => EmbeddingVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEmbeddingVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = EmbeddingVariant2;
+            return IsEmbeddingVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +126,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.IList<float>?, TResult>? embeddingVariant1 = null,
-            global::System.Func<string?, TResult>? embeddingVariant2 = null,
+            global::System.Func<global::System.Collections.Generic.IList<float>, TResult>? embeddingVariant1 = null,
+            global::System.Func<string, TResult>? embeddingVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +151,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.IList<float>?>? embeddingVariant1 = null,
-            global::System.Action<string?>? embeddingVariant2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<float>>? embeddingVariant1 = null,
+
+            global::System.Action<string>? embeddingVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEmbeddingVariant1)
+            {
+                embeddingVariant1?.Invoke(EmbeddingVariant1!);
+            }
+            else if (IsEmbeddingVariant2)
+            {
+                embeddingVariant2?.Invoke(EmbeddingVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::System.Collections.Generic.IList<float>>? embeddingVariant1 = null,
+            global::System.Action<string>? embeddingVariant2 = null,
             bool validate = true)
         {
             if (validate)

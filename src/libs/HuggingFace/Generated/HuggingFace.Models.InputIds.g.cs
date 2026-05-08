@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickInputIdsVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<int>? value)
+        {
+            value = InputIdsVariant1;
+            return IsInputIdsVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>? InputIdsVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputIdsVariant2))]
 #endif
         public bool IsInputIdsVariant2 => InputIdsVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickInputIdsVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>? value)
+        {
+            value = InputIdsVariant2;
+            return IsInputIdsVariant2;
+        }
 
         /// <summary>
         /// 
@@ -83,8 +109,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.IList<int>?, TResult>? inputIdsVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>?, TResult>? inputIdsVariant2 = null,
+            global::System.Func<global::System.Collections.Generic.IList<int>, TResult>? inputIdsVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>, TResult>? inputIdsVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -108,8 +134,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.IList<int>?>? inputIdsVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>?>? inputIdsVariant2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<int>>? inputIdsVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>? inputIdsVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsInputIdsVariant1)
+            {
+                inputIdsVariant1?.Invoke(InputIdsVariant1!);
+            }
+            else if (IsInputIdsVariant2)
+            {
+                inputIdsVariant2?.Invoke(InputIdsVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::System.Collections.Generic.IList<int>>? inputIdsVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>? inputIdsVariant2 = null,
             bool validate = true)
         {
             if (validate)

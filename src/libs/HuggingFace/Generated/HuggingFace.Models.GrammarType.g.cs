@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickJson(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.GrammarTypeVariant1? value)
+        {
+            value = Json;
+            return IsJson;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GrammarTypeVariant2? Regex { get; init; }
 #else
@@ -46,6 +59,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickRegex(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.GrammarTypeVariant2? value)
+        {
+            value = Regex;
+            return IsRegex;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GrammarTypeVariant3? JsonSchema { get; init; }
 #else
@@ -59,6 +85,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonSchema))]
 #endif
         public bool IsJsonSchema => JsonSchema != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickJsonSchema(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.GrammarTypeVariant3? value)
+        {
+            value = JsonSchema;
+            return IsJsonSchema;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -157,9 +196,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.GrammarTypeVariant1?, TResult>? json = null,
-            global::System.Func<global::HuggingFace.GrammarTypeVariant2?, TResult>? regex = null,
-            global::System.Func<global::HuggingFace.GrammarTypeVariant3?, TResult>? jsonSchema = null,
+            global::System.Func<global::HuggingFace.GrammarTypeVariant1, TResult>? json = null,
+            global::System.Func<global::HuggingFace.GrammarTypeVariant2, TResult>? regex = null,
+            global::System.Func<global::HuggingFace.GrammarTypeVariant3, TResult>? jsonSchema = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +226,39 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.GrammarTypeVariant1?>? json = null,
-            global::System.Action<global::HuggingFace.GrammarTypeVariant2?>? regex = null,
-            global::System.Action<global::HuggingFace.GrammarTypeVariant3?>? jsonSchema = null,
+            global::System.Action<global::HuggingFace.GrammarTypeVariant1>? json = null,
+
+            global::System.Action<global::HuggingFace.GrammarTypeVariant2>? regex = null,
+
+            global::System.Action<global::HuggingFace.GrammarTypeVariant3>? jsonSchema = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsJson)
+            {
+                json?.Invoke(Json!);
+            }
+            else if (IsRegex)
+            {
+                regex?.Invoke(Regex!);
+            }
+            else if (IsJsonSchema)
+            {
+                jsonSchema?.Invoke(JsonSchema!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.GrammarTypeVariant1>? json = null,
+            global::System.Action<global::HuggingFace.GrammarTypeVariant2>? regex = null,
+            global::System.Action<global::HuggingFace.GrammarTypeVariant3>? jsonSchema = null,
             bool validate = true)
         {
             if (validate)
