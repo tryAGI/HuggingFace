@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickMessageContentVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = MessageContentVariant1;
+            return IsMessageContentVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? MessageContentVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageContentVariant2))]
 #endif
         public bool IsMessageContentVariant2 => MessageContentVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageContentVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? value)
+        {
+            value = MessageContentVariant2;
+            return IsMessageContentVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +126,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? messageContentVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?, TResult>? messageContentVariant2 = null,
+            global::System.Func<string, TResult>? messageContentVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>, TResult>? messageContentVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +151,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? messageContentVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?>? messageContentVariant2 = null,
+            global::System.Action<string>? messageContentVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>>? messageContentVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsMessageContentVariant1)
+            {
+                messageContentVariant1?.Invoke(MessageContentVariant1!);
+            }
+            else if (IsMessageContentVariant2)
+            {
+                messageContentVariant2?.Invoke(MessageContentVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? messageContentVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>>? messageContentVariant2 = null,
             bool validate = true)
         {
             if (validate)

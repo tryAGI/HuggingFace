@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickTokenizeInputVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = TokenizeInputVariant1;
+            return IsTokenizeInputVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? TokenizeInputVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TokenizeInputVariant2))]
 #endif
         public bool IsTokenizeInputVariant2 => TokenizeInputVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTokenizeInputVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<string>? value)
+        {
+            value = TokenizeInputVariant2;
+            return IsTokenizeInputVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +126,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? tokenizeInputVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? tokenizeInputVariant2 = null,
+            global::System.Func<string, TResult>? tokenizeInputVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>, TResult>? tokenizeInputVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +151,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? tokenizeInputVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>?>? tokenizeInputVariant2 = null,
+            global::System.Action<string>? tokenizeInputVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<string>>? tokenizeInputVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsTokenizeInputVariant1)
+            {
+                tokenizeInputVariant1?.Invoke(TokenizeInputVariant1!);
+            }
+            else if (IsTokenizeInputVariant2)
+            {
+                tokenizeInputVariant2?.Invoke(TokenizeInputVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? tokenizeInputVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>>? tokenizeInputVariant2 = null,
             bool validate = true)
         {
             if (validate)

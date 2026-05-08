@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickInputTypeVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = InputTypeVariant1;
+            return IsInputTypeVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<int>? InputTypeVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputTypeVariant2))]
 #endif
         public bool IsInputTypeVariant2 => InputTypeVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickInputTypeVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<int>? value)
+        {
+            value = InputTypeVariant2;
+            return IsInputTypeVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +126,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? inputTypeVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<int>?, TResult>? inputTypeVariant2 = null,
+            global::System.Func<string, TResult>? inputTypeVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<int>, TResult>? inputTypeVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +151,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? inputTypeVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<int>?>? inputTypeVariant2 = null,
+            global::System.Action<string>? inputTypeVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<int>>? inputTypeVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsInputTypeVariant1)
+            {
+                inputTypeVariant1?.Invoke(InputTypeVariant1!);
+            }
+            else if (IsInputTypeVariant2)
+            {
+                inputTypeVariant2?.Invoke(InputTypeVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? inputTypeVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<int>>? inputTypeVariant2 = null,
             bool validate = true)
         {
             if (validate)

@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickModelTypeVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ModelTypeVariant1? value)
+        {
+            value = ModelTypeVariant1;
+            return IsModelTypeVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ModelTypeVariant2? ModelTypeVariant2 { get; init; }
 #else
@@ -46,6 +59,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickModelTypeVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ModelTypeVariant2? value)
+        {
+            value = ModelTypeVariant2;
+            return IsModelTypeVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ModelTypeVariant3? ModelTypeVariant3 { get; init; }
 #else
@@ -59,6 +85,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelTypeVariant3))]
 #endif
         public bool IsModelTypeVariant3 => ModelTypeVariant3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickModelTypeVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ModelTypeVariant3? value)
+        {
+            value = ModelTypeVariant3;
+            return IsModelTypeVariant3;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -157,9 +196,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.ModelTypeVariant1?, TResult>? modelTypeVariant1 = null,
-            global::System.Func<global::HuggingFace.ModelTypeVariant2?, TResult>? modelTypeVariant2 = null,
-            global::System.Func<global::HuggingFace.ModelTypeVariant3?, TResult>? modelTypeVariant3 = null,
+            global::System.Func<global::HuggingFace.ModelTypeVariant1, TResult>? modelTypeVariant1 = null,
+            global::System.Func<global::HuggingFace.ModelTypeVariant2, TResult>? modelTypeVariant2 = null,
+            global::System.Func<global::HuggingFace.ModelTypeVariant3, TResult>? modelTypeVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +226,39 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.ModelTypeVariant1?>? modelTypeVariant1 = null,
-            global::System.Action<global::HuggingFace.ModelTypeVariant2?>? modelTypeVariant2 = null,
-            global::System.Action<global::HuggingFace.ModelTypeVariant3?>? modelTypeVariant3 = null,
+            global::System.Action<global::HuggingFace.ModelTypeVariant1>? modelTypeVariant1 = null,
+
+            global::System.Action<global::HuggingFace.ModelTypeVariant2>? modelTypeVariant2 = null,
+
+            global::System.Action<global::HuggingFace.ModelTypeVariant3>? modelTypeVariant3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsModelTypeVariant1)
+            {
+                modelTypeVariant1?.Invoke(ModelTypeVariant1!);
+            }
+            else if (IsModelTypeVariant2)
+            {
+                modelTypeVariant2?.Invoke(ModelTypeVariant2!);
+            }
+            else if (IsModelTypeVariant3)
+            {
+                modelTypeVariant3?.Invoke(ModelTypeVariant3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.ModelTypeVariant1>? modelTypeVariant1 = null,
+            global::System.Action<global::HuggingFace.ModelTypeVariant2>? modelTypeVariant2 = null,
+            global::System.Action<global::HuggingFace.ModelTypeVariant3>? modelTypeVariant3 = null,
             bool validate = true)
         {
             if (validate)

@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickBody(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.MessageBody? value)
+        {
+            value = Body;
+            return IsBody;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageVariant2? MessageVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageVariant2))]
 #endif
         public bool IsMessageVariant2 => MessageVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.MessageVariant2? value)
+        {
+            value = MessageVariant2;
+            return IsMessageVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -119,7 +145,7 @@ namespace HuggingFace
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.MessageBody?, TResult>? body = null,
-            global::System.Func<global::HuggingFace.MessageVariant2?, TResult>? messageVariant2 = null,
+            global::System.Func<global::HuggingFace.MessageVariant2, TResult>? messageVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -144,7 +170,31 @@ namespace HuggingFace
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.MessageBody?>? body = null,
-            global::System.Action<global::HuggingFace.MessageVariant2?>? messageVariant2 = null,
+
+            global::System.Action<global::HuggingFace.MessageVariant2>? messageVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsBody)
+            {
+                body?.Invoke(Body!);
+            }
+            else if (IsMessageVariant2)
+            {
+                messageVariant2?.Invoke(MessageVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.MessageBody?>? body = null,
+            global::System.Action<global::HuggingFace.MessageVariant2>? messageVariant2 = null,
             bool validate = true)
         {
             if (validate)

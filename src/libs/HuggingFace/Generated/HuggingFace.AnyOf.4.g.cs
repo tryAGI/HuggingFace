@@ -28,6 +28,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickValue1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T1? value)
+        {
+            value = Value1;
+            return IsValue1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public T2? Value2 { get; init; }
 #else
@@ -41,6 +54,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
 #endif
         public bool IsValue2 => Value2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickValue2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T2? value)
+        {
+            value = Value2;
+            return IsValue2;
+        }
 
         /// <summary>
         /// 
@@ -62,6 +88,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickValue3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T3? value)
+        {
+            value = Value3;
+            return IsValue3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public T4? Value4 { get; init; }
 #else
@@ -75,6 +114,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value4))]
 #endif
         public bool IsValue4 => Value4 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickValue4(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T4? value)
+        {
+            value = Value4;
+            return IsValue4;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -230,6 +282,42 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<T1>? value1 = null,
+
+            global::System.Action<T2>? value2 = null,
+
+            global::System.Action<T3>? value3 = null,
+
+            global::System.Action<T4>? value4 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsValue1)
+            {
+                value1?.Invoke(Value1!);
+            }
+            else if (IsValue2)
+            {
+                value2?.Invoke(Value2!);
+            }
+            else if (IsValue3)
+            {
+                value3?.Invoke(Value3!);
+            }
+            else if (IsValue4)
+            {
+                value4?.Invoke(Value4!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<T1>? value1 = null,
             global::System.Action<T2>? value2 = null,
             global::System.Action<T3>? value3 = null,

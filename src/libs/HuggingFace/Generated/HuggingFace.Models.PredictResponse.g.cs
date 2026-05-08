@@ -29,6 +29,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickPredictResponseVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? value)
+        {
+            value = PredictResponseVariant1;
+            return IsPredictResponseVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? PredictResponseVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictResponseVariant2))]
 #endif
         public bool IsPredictResponseVariant2 => PredictResponseVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPredictResponseVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? value)
+        {
+            value = PredictResponseVariant2;
+            return IsPredictResponseVariant2;
+        }
 
         /// <summary>
         /// 
@@ -83,8 +109,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?, TResult>? predictResponseVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?, TResult>? predictResponseVariant2 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>, TResult>? predictResponseVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>, TResult>? predictResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -108,8 +134,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?>? predictResponseVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?>? predictResponseVariant2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? predictResponseVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>>? predictResponseVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPredictResponseVariant1)
+            {
+                predictResponseVariant1?.Invoke(PredictResponseVariant1!);
+            }
+            else if (IsPredictResponseVariant2)
+            {
+                predictResponseVariant2?.Invoke(PredictResponseVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? predictResponseVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>>? predictResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
