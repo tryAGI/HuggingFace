@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.IList<float> PickEmbeddingVariant1() => IsEmbeddingVariant1
+            ? EmbeddingVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? EmbeddingVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = EmbeddingVariant2;
             return IsEmbeddingVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickEmbeddingVariant2() => IsEmbeddingVariant2
+            ? EmbeddingVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +99,11 @@ namespace HuggingFace
         {
             EmbeddingVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Embedding FromEmbeddingVariant2(string? value) => new Embedding(value);
 
         /// <summary>
         /// 

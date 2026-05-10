@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public string PickTokenizeInputVariant1() => IsTokenizeInputVariant1
+            ? TokenizeInputVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TokenizeInputVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? TokenizeInputVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = TokenizeInputVariant2;
             return IsTokenizeInputVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<string> PickTokenizeInputVariant2() => IsTokenizeInputVariant2
+            ? TokenizeInputVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TokenizeInputVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +99,11 @@ namespace HuggingFace
         {
             TokenizeInputVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static TokenizeInput FromTokenizeInputVariant1(string? value) => new TokenizeInput(value);
 
         /// <summary>
         /// 

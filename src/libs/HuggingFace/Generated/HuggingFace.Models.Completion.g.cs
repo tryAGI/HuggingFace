@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12> PickCompletionVariant1() => IsCompletionVariant1
+            ? CompletionVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>? CompletionVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = CompletionVariant2;
             return IsCompletionVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22> PickCompletionVariant2() => IsCompletionVariant2
+            ? CompletionVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static Completion FromCompletionVariant1(global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12>? value) => new Completion(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Completion(global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22> value) => new Completion((global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace HuggingFace
         {
             CompletionVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Completion FromCompletionVariant2(global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>? value) => new Completion(value);
 
         /// <summary>
         /// 

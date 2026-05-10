@@ -40,6 +40,13 @@ namespace HuggingFace
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolChoiceVariant1 PickToolChoiceVariant1() => IsToolChoiceVariant1
+            ? ToolChoiceVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// Means the model will not call any tool and instead generates a message.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = ToolChoiceVariant2;
             return IsToolChoiceVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolChoiceVariant2 PickToolChoiceVariant2() => IsToolChoiceVariant2
+            ? ToolChoiceVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// Means the model must call one or more tools.
@@ -102,6 +116,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.ToolChoiceVariant3 PickToolChoiceVariant3() => IsToolChoiceVariant3
+            ? ToolChoiceVariant3!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant3' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolChoiceVariant4? ToolChoiceVariant4 { get; init; }
 #else
@@ -128,6 +149,13 @@ namespace HuggingFace
             value = ToolChoiceVariant4;
             return IsToolChoiceVariant4;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolChoiceVariant4 PickToolChoiceVariant4() => IsToolChoiceVariant4
+            ? ToolChoiceVariant4!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant4' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -145,6 +173,11 @@ namespace HuggingFace
         {
             ToolChoiceVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolChoice FromToolChoiceVariant1(global::HuggingFace.ToolChoiceVariant1? value) => new ToolChoice(value);
 
         /// <summary>
         /// 
@@ -167,6 +200,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static ToolChoice FromToolChoiceVariant2(global::HuggingFace.ToolChoiceVariant2? value) => new ToolChoice(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant3 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant3?)value);
 
         /// <summary>
@@ -185,6 +223,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static ToolChoice FromToolChoiceVariant3(global::HuggingFace.ToolChoiceVariant3? value) => new ToolChoice(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant4 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant4?)value);
 
         /// <summary>
@@ -199,6 +242,11 @@ namespace HuggingFace
         {
             ToolChoiceVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolChoice FromToolChoiceVariant4(global::HuggingFace.ToolChoiceVariant4? value) => new ToolChoice(value);
 
         /// <summary>
         /// 

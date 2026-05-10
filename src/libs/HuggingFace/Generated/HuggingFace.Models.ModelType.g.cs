@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.ModelTypeVariant1 PickModelTypeVariant1() => IsModelTypeVariant1
+            ? ModelTypeVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelTypeVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ModelTypeVariant2? ModelTypeVariant2 { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.ModelTypeVariant2 PickModelTypeVariant2() => IsModelTypeVariant2
+            ? ModelTypeVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelTypeVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ModelTypeVariant3? ModelTypeVariant3 { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace HuggingFace
             value = ModelTypeVariant3;
             return IsModelTypeVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ModelTypeVariant3 PickModelTypeVariant3() => IsModelTypeVariant3
+            ? ModelTypeVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelTypeVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +136,11 @@ namespace HuggingFace
         {
             ModelTypeVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ModelType FromModelTypeVariant1(global::HuggingFace.ModelTypeVariant1? value) => new ModelType(value);
 
         /// <summary>
         /// 
@@ -137,6 +163,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static ModelType FromModelTypeVariant2(global::HuggingFace.ModelTypeVariant2? value) => new ModelType(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ModelType(global::HuggingFace.ModelTypeVariant3 value) => new ModelType((global::HuggingFace.ModelTypeVariant3?)value);
 
         /// <summary>
@@ -151,6 +182,11 @@ namespace HuggingFace
         {
             ModelTypeVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ModelType FromModelTypeVariant3(global::HuggingFace.ModelTypeVariant3? value) => new ModelType(value);
 
         /// <summary>
         /// 
