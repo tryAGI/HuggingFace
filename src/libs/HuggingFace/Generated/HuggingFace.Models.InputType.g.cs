@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public string PickInputTypeVariant1() => IsInputTypeVariant1
+            ? InputTypeVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InputTypeVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<int>? InputTypeVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = InputTypeVariant2;
             return IsInputTypeVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<int> PickInputTypeVariant2() => IsInputTypeVariant2
+            ? InputTypeVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InputTypeVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +99,11 @@ namespace HuggingFace
         {
             InputTypeVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputType FromInputTypeVariant1(string? value) => new InputType(value);
 
         /// <summary>
         /// 

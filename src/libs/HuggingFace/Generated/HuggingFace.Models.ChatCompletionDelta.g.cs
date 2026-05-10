@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.TextMessage PickTextMessage() => IsTextMessage
+            ? TextMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextMessage' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolCallDelta? ToolCall { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = ToolCall;
             return IsToolCall;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolCallDelta PickToolCall() => IsToolCall
+            ? ToolCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCall' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionDelta FromTextMessage(global::HuggingFace.TextMessage? value) => new ChatCompletionDelta(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionDelta(global::HuggingFace.ToolCallDelta value) => new ChatCompletionDelta((global::HuggingFace.ToolCallDelta?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace HuggingFace
         {
             ToolCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionDelta FromToolCall(global::HuggingFace.ToolCallDelta? value) => new ChatCompletionDelta(value);
 
         /// <summary>
         /// 

@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.MessageBody PickBody() => IsBody
+            ? Body!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Body' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageVariant2? MessageVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = MessageVariant2;
             return IsMessageVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.MessageVariant2 PickMessageVariant2() => IsMessageVariant2
+            ? MessageVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static Message FromBody(global::HuggingFace.MessageBody? value) => new Message(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Message(global::HuggingFace.MessageVariant2 value) => new Message((global::HuggingFace.MessageVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace HuggingFace
         {
             MessageVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Message FromMessageVariant2(global::HuggingFace.MessageVariant2? value) => new Message(value);
 
         /// <summary>
         /// 

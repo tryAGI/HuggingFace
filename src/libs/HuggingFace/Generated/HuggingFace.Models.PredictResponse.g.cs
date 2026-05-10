@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.IList<global::HuggingFace.Prediction> PickPredictResponseVariant1() => IsPredictResponseVariant1
+            ? PredictResponseVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PredictResponseVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? PredictResponseVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = PredictResponseVariant2;
             return IsPredictResponseVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>> PickPredictResponseVariant2() => IsPredictResponseVariant2
+            ? PredictResponseVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PredictResponseVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// 

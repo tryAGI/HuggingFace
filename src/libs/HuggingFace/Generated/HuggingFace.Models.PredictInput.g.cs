@@ -41,6 +41,13 @@ namespace HuggingFace
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public string PickPredictInputVariant1() => IsPredictInputVariant1
+            ? PredictInputVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PredictInputVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// A pair of strings
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -71,6 +78,13 @@ namespace HuggingFace
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<string> PickPredictInputVariant2() => IsPredictInputVariant2
+            ? PredictInputVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PredictInputVariant2' but the value was {ToString()}.");
+
+        /// <summary>
         /// A batch
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -99,6 +113,13 @@ namespace HuggingFace
             value = PredictInputVariant3;
             return IsPredictInputVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>> PickPredictInputVariant3() => IsPredictInputVariant3
+            ? PredictInputVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PredictInputVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -116,6 +137,11 @@ namespace HuggingFace
         {
             PredictInputVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PredictInput FromPredictInputVariant1(string? value) => new PredictInput(value);
 
         /// <summary>
         /// 

@@ -47,6 +47,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.MessageChunkVariant1 PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageChunkVariant2? ImageUrl { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace HuggingFace
             value = ImageUrl;
             return IsImageUrl;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.MessageChunkVariant2 PickImageUrl() => IsImageUrl
+            ? ImageUrl!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ImageUrl' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -94,6 +108,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static MessageChunk FromText(global::HuggingFace.MessageChunkVariant1? value) => new MessageChunk(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MessageChunk(global::HuggingFace.MessageChunkVariant2 value) => new MessageChunk((global::HuggingFace.MessageChunkVariant2?)value);
 
         /// <summary>
@@ -108,6 +127,11 @@ namespace HuggingFace
         {
             ImageUrl = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageChunk FromImageUrl(global::HuggingFace.MessageChunkVariant2? value) => new MessageChunk(value);
 
         /// <summary>
         /// 

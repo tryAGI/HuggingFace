@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.CompatGenerateRequest PickCompatGenerate() => IsCompatGenerate
+            ? CompatGenerate!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompatGenerate' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ChatRequest? Chat { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.ChatRequest PickChat() => IsChat
+            ? Chat!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Chat' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.CompletionRequest? Completion { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace HuggingFace
             value = Completion;
             return IsCompletion;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.CompletionRequest PickCompletion() => IsCompletion
+            ? Completion!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Completion' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +136,11 @@ namespace HuggingFace
         {
             CompatGenerate = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerRequest FromCompatGenerate(global::HuggingFace.CompatGenerateRequest? value) => new SagemakerRequest(value);
 
         /// <summary>
         /// 
@@ -137,6 +163,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static SagemakerRequest FromChat(global::HuggingFace.ChatRequest? value) => new SagemakerRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator SagemakerRequest(global::HuggingFace.CompletionRequest value) => new SagemakerRequest((global::HuggingFace.CompletionRequest?)value);
 
         /// <summary>
@@ -151,6 +182,11 @@ namespace HuggingFace
         {
             Completion = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerRequest FromCompletion(global::HuggingFace.CompletionRequest? value) => new SagemakerRequest(value);
 
         /// <summary>
         /// 

@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public string PickMessageContentVariant1() => IsMessageContentVariant1
+            ? MessageContentVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageContentVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? MessageContentVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = MessageContentVariant2;
             return IsMessageContentVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk> PickMessageContentVariant2() => IsMessageContentVariant2
+            ? MessageContentVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageContentVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +99,11 @@ namespace HuggingFace
         {
             MessageContentVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageContent FromMessageContentVariant1(string? value) => new MessageContent(value);
 
         /// <summary>
         /// 

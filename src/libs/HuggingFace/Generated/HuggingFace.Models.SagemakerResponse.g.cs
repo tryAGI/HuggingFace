@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.GenerateResponse PickGenerate() => IsGenerate
+            ? Generate!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Generate' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ChatCompletion? ChatCompletion { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.ChatCompletion PickChatCompletion() => IsChatCompletion
+            ? ChatCompletion!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletion' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.CompletionFinal? CompletionFinal { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace HuggingFace
             value = CompletionFinal;
             return IsCompletionFinal;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.CompletionFinal PickCompletionFinal() => IsCompletionFinal
+            ? CompletionFinal!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionFinal' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +136,11 @@ namespace HuggingFace
         {
             Generate = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerResponse FromGenerate(global::HuggingFace.GenerateResponse? value) => new SagemakerResponse(value);
 
         /// <summary>
         /// 
@@ -137,6 +163,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static SagemakerResponse FromChatCompletion(global::HuggingFace.ChatCompletion? value) => new SagemakerResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator SagemakerResponse(global::HuggingFace.CompletionFinal value) => new SagemakerResponse((global::HuggingFace.CompletionFinal?)value);
 
         /// <summary>
@@ -151,6 +182,11 @@ namespace HuggingFace
         {
             CompletionFinal = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerResponse FromCompletionFinal(global::HuggingFace.CompletionFinal? value) => new SagemakerResponse(value);
 
         /// <summary>
         /// 

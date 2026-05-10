@@ -47,6 +47,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.GrammarTypeVariant1 PickJson() => IsJson
+            ? Json!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Json' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GrammarTypeVariant2? Regex { get; init; }
 #else
@@ -77,6 +84,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.GrammarTypeVariant2 PickRegex() => IsRegex
+            ? Regex!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Regex' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GrammarTypeVariant3? JsonSchema { get; init; }
 #else
@@ -103,6 +117,13 @@ namespace HuggingFace
             value = JsonSchema;
             return IsJsonSchema;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.GrammarTypeVariant3 PickJsonSchema() => IsJsonSchema
+            ? JsonSchema!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonSchema' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -120,6 +141,11 @@ namespace HuggingFace
         {
             Json = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GrammarType FromJson(global::HuggingFace.GrammarTypeVariant1? value) => new GrammarType(value);
 
         /// <summary>
         /// 
@@ -142,6 +168,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static GrammarType FromRegex(global::HuggingFace.GrammarTypeVariant2? value) => new GrammarType(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GrammarType(global::HuggingFace.GrammarTypeVariant3 value) => new GrammarType((global::HuggingFace.GrammarTypeVariant3?)value);
 
         /// <summary>
@@ -156,6 +187,11 @@ namespace HuggingFace
         {
             JsonSchema = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GrammarType FromJsonSchema(global::HuggingFace.GrammarTypeVariant3? value) => new GrammarType(value);
 
         /// <summary>
         /// 

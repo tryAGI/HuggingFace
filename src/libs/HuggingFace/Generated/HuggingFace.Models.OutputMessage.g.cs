@@ -42,6 +42,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.TextMessage PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolCallMessage? ToolCall { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace HuggingFace
             value = ToolCall;
             return IsToolCall;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolCallMessage PickToolCall() => IsToolCall
+            ? ToolCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCall' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static OutputMessage FromText(global::HuggingFace.TextMessage? value) => new OutputMessage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator OutputMessage(global::HuggingFace.ToolCallMessage value) => new OutputMessage((global::HuggingFace.ToolCallMessage?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace HuggingFace
         {
             ToolCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static OutputMessage FromToolCall(global::HuggingFace.ToolCallMessage? value) => new OutputMessage(value);
 
         /// <summary>
         /// 
