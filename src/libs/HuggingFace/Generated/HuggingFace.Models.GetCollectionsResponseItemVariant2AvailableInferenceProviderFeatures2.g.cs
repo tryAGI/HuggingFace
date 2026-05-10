@@ -39,5 +39,6 @@ namespace HuggingFace
         public GetCollectionsResponseItemVariant2AvailableInferenceProviderFeatures2()
         {
         }
+
     }
 }

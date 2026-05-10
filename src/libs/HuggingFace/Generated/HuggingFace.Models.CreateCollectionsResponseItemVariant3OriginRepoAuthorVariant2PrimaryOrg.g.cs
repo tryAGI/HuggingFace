@@ -136,5 +136,6 @@ namespace HuggingFace
         public CreateCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrg()
         {
         }
+
     }
 }

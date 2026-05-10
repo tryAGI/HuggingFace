@@ -66,5 +66,6 @@ namespace HuggingFace
         public GetUsersSocialsResponseSocialHandles()
         {
         }
+
     }
 }

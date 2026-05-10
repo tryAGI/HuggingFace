@@ -138,5 +138,6 @@ namespace HuggingFace
         public PatchCollectionsResponseDataItemVariant5OwnerVariant12()
         {
         }
+
     }
 }

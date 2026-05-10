@@ -80,5 +80,6 @@ namespace HuggingFace
         public GetDiscussionsResponseVariant2EventVariant1()
         {
         }
+
     }
 }

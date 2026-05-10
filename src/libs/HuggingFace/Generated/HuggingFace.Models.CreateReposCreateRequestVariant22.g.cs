@@ -41,5 +41,6 @@ namespace HuggingFace
         public CreateReposCreateRequestVariant22()
         {
         }
+
     }
 }

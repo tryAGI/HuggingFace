@@ -151,5 +151,6 @@ namespace HuggingFace
         public CreateCollectionsItemsResponseItemVariant5()
         {
         }
+
     }
 }

@@ -58,5 +58,6 @@ namespace HuggingFace
         public GetAgenticProvisioningServicesResponseDataItemPricingVariant3ComponentOptionVariant1()
         {
         }
+
     }
 }

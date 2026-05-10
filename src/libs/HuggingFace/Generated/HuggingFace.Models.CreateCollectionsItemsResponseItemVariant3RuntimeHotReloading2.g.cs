@@ -50,5 +50,6 @@ namespace HuggingFace
         public CreateCollectionsItemsResponseItemVariant3RuntimeHotReloading2()
         {
         }
+
     }
 }

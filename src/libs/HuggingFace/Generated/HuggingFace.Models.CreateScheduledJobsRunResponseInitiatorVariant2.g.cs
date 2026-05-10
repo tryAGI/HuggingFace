@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateScheduledJobsRunResponseInitiatorVariant2()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateScheduledJobsRunResponseInitiatorVariant2"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateScheduledJobsRunResponseInitiatorVariant2 FromId(string id)
+        {
+            return new CreateScheduledJobsRunResponseInitiatorVariant2
+            {
+                Id = id,
+            };
+        }
+
     }
 }

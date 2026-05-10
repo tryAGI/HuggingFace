@@ -70,5 +70,6 @@ namespace HuggingFace
         public GetModelsUserAccessRequestResponseItemGrantedByVariant1Org()
         {
         }
+
     }
 }

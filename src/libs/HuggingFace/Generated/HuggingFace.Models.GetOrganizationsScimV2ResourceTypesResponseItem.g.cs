@@ -100,5 +100,6 @@ namespace HuggingFace
         public GetOrganizationsScimV2ResourceTypesResponseItem()
         {
         }
+
     }
 }

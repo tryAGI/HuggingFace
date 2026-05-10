@@ -89,5 +89,6 @@ namespace HuggingFace
         public CreateOrganizationsResourceGroupsResponse()
         {
         }
+
     }
 }

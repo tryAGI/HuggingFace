@@ -85,5 +85,6 @@ namespace HuggingFace
         public CreateOrganizationsScimProvisioningV2UsersRequest()
         {
         }
+
     }
 }

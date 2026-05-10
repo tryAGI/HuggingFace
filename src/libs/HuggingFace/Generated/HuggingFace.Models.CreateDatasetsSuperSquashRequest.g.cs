@@ -39,5 +39,6 @@ namespace HuggingFace
         public CreateDatasetsSuperSquashRequest()
         {
         }
+
     }
 }

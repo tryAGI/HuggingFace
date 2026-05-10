@@ -99,5 +99,6 @@ namespace HuggingFace
         public PutSpacesSettingsResponse()
         {
         }
+
     }
 }

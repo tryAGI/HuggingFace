@@ -50,5 +50,18 @@ namespace HuggingFace
         public PutJobsLabelsResponseInitiatorVariant4()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="PutJobsLabelsResponseInitiatorVariant4"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static PutJobsLabelsResponseInitiatorVariant4 FromId(string id)
+        {
+            return new PutJobsLabelsResponseInitiatorVariant4
+            {
+                Id = id,
+            };
+        }
+
     }
 }

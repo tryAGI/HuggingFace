@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateAgenticProvisioningResourcesRequestVariant2()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateAgenticProvisioningResourcesRequestVariant2"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateAgenticProvisioningResourcesRequestVariant2 FromConfiguration(global::HuggingFace.CreateAgenticProvisioningResourcesRequestVariant2Configuration configuration)
+        {
+            return new CreateAgenticProvisioningResourcesRequestVariant2
+            {
+                Configuration = configuration,
+            };
+        }
+
     }
 }

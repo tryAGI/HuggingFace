@@ -50,5 +50,6 @@ namespace HuggingFace
         public GetNotificationsResponseNotificationVariant1Paper()
         {
         }
+
     }
 }

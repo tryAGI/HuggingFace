@@ -226,5 +226,6 @@ namespace HuggingFace
         public GetDatasetsUserAccessRequestResponseItemUser()
         {
         }
+
     }
 }

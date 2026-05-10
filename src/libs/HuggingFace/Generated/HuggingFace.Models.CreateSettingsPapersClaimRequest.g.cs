@@ -64,5 +64,6 @@ namespace HuggingFace
         public CreateSettingsPapersClaimRequest()
         {
         }
+
     }
 }

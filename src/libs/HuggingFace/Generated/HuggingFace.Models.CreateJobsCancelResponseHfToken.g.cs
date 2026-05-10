@@ -77,5 +77,6 @@ namespace HuggingFace
         public CreateJobsCancelResponseHfToken()
         {
         }
+
     }
 }

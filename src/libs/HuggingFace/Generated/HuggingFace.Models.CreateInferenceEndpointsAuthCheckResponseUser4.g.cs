@@ -59,5 +59,6 @@ namespace HuggingFace
         public CreateInferenceEndpointsAuthCheckResponseUser4()
         {
         }
+
     }
 }

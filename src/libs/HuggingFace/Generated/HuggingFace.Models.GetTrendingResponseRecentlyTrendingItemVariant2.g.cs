@@ -50,5 +50,18 @@ namespace HuggingFace
         public GetTrendingResponseRecentlyTrendingItemVariant2()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="GetTrendingResponseRecentlyTrendingItemVariant2"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static GetTrendingResponseRecentlyTrendingItemVariant2 FromRepoData(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoData repoData)
+        {
+            return new GetTrendingResponseRecentlyTrendingItemVariant2
+            {
+                RepoData = repoData,
+            };
+        }
+
     }
 }

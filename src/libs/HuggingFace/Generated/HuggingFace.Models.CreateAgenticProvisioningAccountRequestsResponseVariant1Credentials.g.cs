@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateAgenticProvisioningAccountRequestsResponseVariant1Credentials()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateAgenticProvisioningAccountRequestsResponseVariant1Credentials"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateAgenticProvisioningAccountRequestsResponseVariant1Credentials FromBearer(global::HuggingFace.CreateAgenticProvisioningAccountRequestsResponseVariant1CredentialsBearer bearer)
+        {
+            return new CreateAgenticProvisioningAccountRequestsResponseVariant1Credentials
+            {
+                Bearer = bearer,
+            };
+        }
+
     }
 }

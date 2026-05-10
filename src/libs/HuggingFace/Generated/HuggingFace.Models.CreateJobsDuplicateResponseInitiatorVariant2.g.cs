@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateJobsDuplicateResponseInitiatorVariant2()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateJobsDuplicateResponseInitiatorVariant2"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateJobsDuplicateResponseInitiatorVariant2 FromId(string id)
+        {
+            return new CreateJobsDuplicateResponseInitiatorVariant2
+            {
+                Id = id,
+            };
+        }
+
     }
 }

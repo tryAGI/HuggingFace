@@ -330,5 +330,6 @@ namespace HuggingFace
         public GenerateParameters()
         {
         }
+
     }
 }

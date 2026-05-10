@@ -159,5 +159,6 @@ namespace HuggingFace
         public PatchCollectionsResponseDataItemVariant2AvailableInferenceProvider2()
         {
         }
+
     }
 }

@@ -58,5 +58,6 @@ namespace HuggingFace
         public GetSpacesSecretsResponse2()
         {
         }
+
     }
 }

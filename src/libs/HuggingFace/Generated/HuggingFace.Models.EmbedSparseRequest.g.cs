@@ -95,5 +95,6 @@ namespace HuggingFace
         public EmbedSparseRequest()
         {
         }
+
     }
 }

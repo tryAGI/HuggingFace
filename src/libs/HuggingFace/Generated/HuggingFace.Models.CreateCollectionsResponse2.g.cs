@@ -49,5 +49,6 @@ namespace HuggingFace
         public CreateCollectionsResponse2()
         {
         }
+
     }
 }

@@ -193,5 +193,6 @@ namespace HuggingFace
         public CreateQuicksearchRequest()
         {
         }
+
     }
 }

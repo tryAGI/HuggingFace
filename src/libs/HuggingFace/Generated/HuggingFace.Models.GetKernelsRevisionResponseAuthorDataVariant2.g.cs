@@ -147,5 +147,6 @@ namespace HuggingFace
         public GetKernelsRevisionResponseAuthorDataVariant2()
         {
         }
+
     }
 }

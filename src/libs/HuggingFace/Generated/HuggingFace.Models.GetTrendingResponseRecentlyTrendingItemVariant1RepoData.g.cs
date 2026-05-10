@@ -157,5 +157,6 @@ namespace HuggingFace
         public GetTrendingResponseRecentlyTrendingItemVariant1RepoData()
         {
         }
+
     }
 }

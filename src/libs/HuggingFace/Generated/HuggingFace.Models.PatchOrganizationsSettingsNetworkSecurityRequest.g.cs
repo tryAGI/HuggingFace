@@ -84,5 +84,6 @@ namespace HuggingFace
         public PatchOrganizationsSettingsNetworkSecurityRequest()
         {
         }
+
     }
 }
