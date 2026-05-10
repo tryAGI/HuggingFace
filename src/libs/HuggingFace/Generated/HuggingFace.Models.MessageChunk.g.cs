@@ -12,6 +12,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.MessageChunkDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageChunkVariant1? Text { get; init; }
 #else
@@ -108,10 +113,13 @@ namespace HuggingFace
         /// 
         /// </summary>
         public MessageChunk(
+            global::HuggingFace.MessageChunkDiscriminatorType? type,
             global::HuggingFace.MessageChunkVariant1? text,
             global::HuggingFace.MessageChunkVariant2? imageUrl
             )
         {
+            Type = type;
+
             Text = text;
             ImageUrl = imageUrl;
         }

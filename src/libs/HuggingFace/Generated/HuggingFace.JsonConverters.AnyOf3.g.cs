@@ -137,7 +137,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null)
+            {
                 try
                 {
 
@@ -151,7 +154,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null)
+            {
                 try
                 {
 

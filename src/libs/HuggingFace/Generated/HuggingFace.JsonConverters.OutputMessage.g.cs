@@ -79,6 +79,7 @@ namespace HuggingFace.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.TextMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.TextMessage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.TextMessage).Name}");
                     text = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -89,9 +90,13 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (text == null && toolCall == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ToolCallMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ToolCallMessage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ToolCallMessage).Name}");
                     toolCall = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

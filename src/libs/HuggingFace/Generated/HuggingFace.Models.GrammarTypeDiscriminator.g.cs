@@ -12,7 +12,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string? Type { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GrammarTypeDiscriminatorTypeJsonConverter))]
+        public global::HuggingFace.GrammarTypeDiscriminatorType? Type { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -28,7 +29,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GrammarTypeDiscriminator(
-            string? type)
+            global::HuggingFace.GrammarTypeDiscriminatorType? type)
         {
             this.Type = type;
         }

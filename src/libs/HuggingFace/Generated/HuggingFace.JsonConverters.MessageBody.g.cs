@@ -76,6 +76,7 @@ namespace HuggingFace.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageBodyVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageBodyVariant1> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageBodyVariant1).Name}");
                     messageBodyVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -86,9 +87,13 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (messageBodyVariant1 == null && messageBodyVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageBodyVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageBodyVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageBodyVariant2).Name}");
                     messageBodyVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

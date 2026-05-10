@@ -151,6 +151,7 @@ namespace HuggingFace.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.CompatGenerateRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.CompatGenerateRequest> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.CompatGenerateRequest).Name}");
                     compatGenerate = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -161,9 +162,13 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (compatGenerate == null && chat == null && completion == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ChatRequest> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ChatRequest).Name}");
                     chat = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -174,9 +179,13 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (compatGenerate == null && chat == null && completion == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.CompletionRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.CompletionRequest> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.CompletionRequest).Name}");
                     completion = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
