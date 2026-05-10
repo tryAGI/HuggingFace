@@ -50,5 +50,18 @@ namespace HuggingFace
         public PatchCollectionsRequestGatingVariant32()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="PatchCollectionsRequestGatingVariant32"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static PatchCollectionsRequestGatingVariant32 FromNotifications(global::HuggingFace.PatchCollectionsRequestGatingVariant3Notifications2 notifications)
+        {
+            return new PatchCollectionsRequestGatingVariant32
+            {
+                Notifications = notifications,
+            };
+        }
+
     }
 }

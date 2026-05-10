@@ -92,5 +92,6 @@ namespace HuggingFace
         public GetOrganizationsSettingsNetworkSecurityResponse()
         {
         }
+
     }
 }

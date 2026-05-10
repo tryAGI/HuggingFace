@@ -146,5 +146,6 @@ namespace HuggingFace
         public GetOrganizationsBillingUsageResponseUsageItem()
         {
         }
+
     }
 }

@@ -82,5 +82,6 @@ namespace HuggingFace
         public GetJobsHardwareResponseItemAccelerator2()
         {
         }
+
     }
 }

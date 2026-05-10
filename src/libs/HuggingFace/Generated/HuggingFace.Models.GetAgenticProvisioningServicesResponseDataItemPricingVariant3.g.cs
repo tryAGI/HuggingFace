@@ -50,5 +50,18 @@ namespace HuggingFace
         public GetAgenticProvisioningServicesResponseDataItemPricingVariant3()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="GetAgenticProvisioningServicesResponseDataItemPricingVariant3"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static GetAgenticProvisioningServicesResponseDataItemPricingVariant3 FromComponent(global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3Component component)
+        {
+            return new GetAgenticProvisioningServicesResponseDataItemPricingVariant3
+            {
+                Component = component,
+            };
+        }
+
     }
 }

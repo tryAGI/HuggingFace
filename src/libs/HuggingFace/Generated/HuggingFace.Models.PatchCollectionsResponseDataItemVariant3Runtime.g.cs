@@ -115,5 +115,6 @@ namespace HuggingFace
         public PatchCollectionsResponseDataItemVariant3Runtime()
         {
         }
+
     }
 }

@@ -65,5 +65,6 @@ namespace HuggingFace
         public TextMessage()
         {
         }
+
     }
 }

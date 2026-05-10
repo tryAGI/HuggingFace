@@ -142,5 +142,18 @@ namespace HuggingFace
         public CreateReposCreateRequestVariant4()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateReposCreateRequestVariant4"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateReposCreateRequestVariant4 FromSdk(global::HuggingFace.CreateReposCreateRequestVariant4Sdk sdk)
+        {
+            return new CreateReposCreateRequestVariant4
+            {
+                Sdk = sdk,
+            };
+        }
+
     }
 }

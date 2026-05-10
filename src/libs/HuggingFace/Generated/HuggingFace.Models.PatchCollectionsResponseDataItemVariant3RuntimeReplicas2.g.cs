@@ -50,5 +50,6 @@ namespace HuggingFace
         public PatchCollectionsResponseDataItemVariant3RuntimeReplicas2()
         {
         }
+
     }
 }

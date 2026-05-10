@@ -50,5 +50,18 @@ namespace HuggingFace
         public GetAgenticProvisioningResourcesResponseVariant2()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="GetAgenticProvisioningResourcesResponseVariant2"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static GetAgenticProvisioningResourcesResponseVariant2 FromId(string id)
+        {
+            return new GetAgenticProvisioningResourcesResponseVariant2
+            {
+                Id = id,
+            };
+        }
+
     }
 }

@@ -136,5 +136,6 @@ namespace HuggingFace
         public CreateCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrg()
         {
         }
+
     }
 }

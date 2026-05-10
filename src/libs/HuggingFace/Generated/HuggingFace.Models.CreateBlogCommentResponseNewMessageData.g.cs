@@ -155,5 +155,6 @@ namespace HuggingFace
         public CreateBlogCommentResponseNewMessageData()
         {
         }
+
     }
 }

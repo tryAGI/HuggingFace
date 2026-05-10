@@ -135,5 +135,6 @@ namespace HuggingFace
         public GetDailyPapersResponseItemPaperSubmittedOnDailyBy()
         {
         }
+
     }
 }

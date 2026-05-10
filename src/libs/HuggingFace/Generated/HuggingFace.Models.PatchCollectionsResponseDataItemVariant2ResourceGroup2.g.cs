@@ -59,5 +59,6 @@ namespace HuggingFace
         public PatchCollectionsResponseDataItemVariant2ResourceGroup2()
         {
         }
+
     }
 }

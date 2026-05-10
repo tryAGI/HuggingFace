@@ -294,5 +294,6 @@ namespace HuggingFace
         public GetCollectionsResponseVariant1ItemItemVariant3()
         {
         }
+
     }
 }

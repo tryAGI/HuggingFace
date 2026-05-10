@@ -177,5 +177,6 @@ namespace HuggingFace
         public GetKernelsResponse()
         {
         }
+
     }
 }

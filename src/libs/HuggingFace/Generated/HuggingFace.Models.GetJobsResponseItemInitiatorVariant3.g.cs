@@ -50,5 +50,18 @@ namespace HuggingFace
         public GetJobsResponseItemInitiatorVariant3()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="GetJobsResponseItemInitiatorVariant3"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static GetJobsResponseItemInitiatorVariant3 FromId(string id)
+        {
+            return new GetJobsResponseItemInitiatorVariant3
+            {
+                Id = id,
+            };
+        }
+
     }
 }

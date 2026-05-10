@@ -107,5 +107,6 @@ namespace HuggingFace
         public Details()
         {
         }
+
     }
 }

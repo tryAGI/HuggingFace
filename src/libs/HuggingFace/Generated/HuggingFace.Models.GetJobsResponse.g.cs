@@ -248,5 +248,6 @@ namespace HuggingFace
         public GetJobsResponse()
         {
         }
+
     }
 }

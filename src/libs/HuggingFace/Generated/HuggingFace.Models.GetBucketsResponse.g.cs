@@ -132,5 +132,6 @@ namespace HuggingFace
         public GetBucketsResponse()
         {
         }
+
     }
 }

@@ -73,5 +73,6 @@ namespace HuggingFace
         public CreateBucketsRequest()
         {
         }
+
     }
 }

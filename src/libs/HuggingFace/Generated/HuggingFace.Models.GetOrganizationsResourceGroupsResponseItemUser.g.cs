@@ -100,5 +100,6 @@ namespace HuggingFace
         public GetOrganizationsResourceGroupsResponseItemUser()
         {
         }
+
     }
 }

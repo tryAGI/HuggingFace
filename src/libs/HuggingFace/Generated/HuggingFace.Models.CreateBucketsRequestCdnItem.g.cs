@@ -52,5 +52,6 @@ namespace HuggingFace
         public CreateBucketsRequestCdnItem()
         {
         }
+
     }
 }

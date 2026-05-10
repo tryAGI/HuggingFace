@@ -173,5 +173,6 @@ namespace HuggingFace
         public GetWhoamiV2ResponseOrg()
         {
         }
+
     }
 }

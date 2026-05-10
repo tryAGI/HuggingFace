@@ -216,5 +216,6 @@ namespace HuggingFace
         public GetModelsUserAccessRequestResponseItemGrantedByVariant1()
         {
         }
+
     }
 }

@@ -153,5 +153,6 @@ namespace HuggingFace
         public CreateSettingsWebhooksRequestJob2()
         {
         }
+
     }
 }

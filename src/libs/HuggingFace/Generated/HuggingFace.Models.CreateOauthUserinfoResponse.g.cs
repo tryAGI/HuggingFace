@@ -164,5 +164,6 @@ namespace HuggingFace
         public CreateOauthUserinfoResponse()
         {
         }
+
     }
 }

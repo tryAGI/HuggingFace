@@ -127,5 +127,6 @@ namespace HuggingFace
         public EmbedRequest()
         {
         }
+
     }
 }

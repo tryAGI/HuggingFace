@@ -119,5 +119,6 @@ namespace HuggingFace
         public GetOrganizationsScimV2UsersResponseResource()
         {
         }
+
     }
 }

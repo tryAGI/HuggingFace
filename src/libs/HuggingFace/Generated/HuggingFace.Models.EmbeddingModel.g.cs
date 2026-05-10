@@ -43,5 +43,6 @@ namespace HuggingFace
         public EmbeddingModel()
         {
         }
+
     }
 }

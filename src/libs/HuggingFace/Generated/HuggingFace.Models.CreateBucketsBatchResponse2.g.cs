@@ -78,5 +78,6 @@ namespace HuggingFace
         public CreateBucketsBatchResponse2()
         {
         }
+
     }
 }

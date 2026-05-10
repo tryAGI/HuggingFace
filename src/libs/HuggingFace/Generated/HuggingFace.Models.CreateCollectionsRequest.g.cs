@@ -79,5 +79,6 @@ namespace HuggingFace
         public CreateCollectionsRequest()
         {
         }
+
     }
 }

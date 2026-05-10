@@ -80,5 +80,6 @@ namespace HuggingFace
         public GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfo()
         {
         }
+
     }
 }

@@ -67,5 +67,6 @@ namespace HuggingFace
         public CreatePapersCommentResponseNewMessageAuthorOauthApp()
         {
         }
+
     }
 }

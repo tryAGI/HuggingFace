@@ -86,5 +86,6 @@ namespace HuggingFace
         public CreateModelsPathsInfoResponseItemSecurityFileStatusVirusTotalScan()
         {
         }
+
     }
 }

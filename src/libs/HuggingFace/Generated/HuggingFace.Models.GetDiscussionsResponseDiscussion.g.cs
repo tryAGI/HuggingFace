@@ -150,5 +150,6 @@ namespace HuggingFace
         public GetDiscussionsResponseDiscussion()
         {
         }
+
     }
 }

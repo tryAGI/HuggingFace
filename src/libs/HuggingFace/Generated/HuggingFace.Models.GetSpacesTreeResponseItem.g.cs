@@ -98,5 +98,6 @@ namespace HuggingFace
         public GetSpacesTreeResponseItem()
         {
         }
+
     }
 }

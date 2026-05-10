@@ -137,5 +137,6 @@ namespace HuggingFace
         public CreateSqlConsoleEmbedResponse()
         {
         }
+
     }
 }

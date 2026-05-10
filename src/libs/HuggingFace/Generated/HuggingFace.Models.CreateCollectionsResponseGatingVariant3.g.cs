@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateCollectionsResponseGatingVariant3()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateCollectionsResponseGatingVariant3"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateCollectionsResponseGatingVariant3 FromNotifications(global::HuggingFace.CreateCollectionsResponseGatingVariant3Notifications notifications)
+        {
+            return new CreateCollectionsResponseGatingVariant3
+            {
+                Notifications = notifications,
+            };
+        }
+
     }
 }

@@ -39,5 +39,6 @@ namespace HuggingFace
         public GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderFeatures()
         {
         }
+
     }
 }

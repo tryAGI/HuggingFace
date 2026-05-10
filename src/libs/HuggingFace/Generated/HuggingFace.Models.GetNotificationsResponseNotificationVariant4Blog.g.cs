@@ -89,5 +89,6 @@ namespace HuggingFace
         public GetNotificationsResponseNotificationVariant4Blog()
         {
         }
+
     }
 }

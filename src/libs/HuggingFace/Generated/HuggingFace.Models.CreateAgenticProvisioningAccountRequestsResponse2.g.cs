@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateAgenticProvisioningAccountRequestsResponse2()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateAgenticProvisioningAccountRequestsResponse2"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateAgenticProvisioningAccountRequestsResponse2 FromError(global::HuggingFace.CreateAgenticProvisioningAccountRequestsResponseError error)
+        {
+            return new CreateAgenticProvisioningAccountRequestsResponse2
+            {
+                Error = error,
+            };
+        }
+
     }
 }
