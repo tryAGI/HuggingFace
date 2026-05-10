@@ -119,7 +119,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public object? Object =>
+        public object? Object1 =>
             CompletionVariant2 as object ??
             CompletionVariant1 as object 
             ;

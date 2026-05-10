@@ -12,6 +12,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.GrammarTypeDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GrammarTypeVariant1? Json { get; init; }
 #else
@@ -156,11 +161,14 @@ namespace HuggingFace
         /// 
         /// </summary>
         public GrammarType(
+            global::HuggingFace.GrammarTypeDiscriminatorType? type,
             global::HuggingFace.GrammarTypeVariant1? json,
             global::HuggingFace.GrammarTypeVariant2? regex,
             global::HuggingFace.GrammarTypeVariant3? jsonSchema
             )
         {
+            Type = type;
+
             Json = json;
             Regex = regex;
             JsonSchema = jsonSchema;
