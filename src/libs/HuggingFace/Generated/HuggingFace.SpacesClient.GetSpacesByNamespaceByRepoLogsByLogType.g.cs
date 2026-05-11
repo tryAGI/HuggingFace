@@ -29,13 +29,15 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            ref global::HuggingFace.GetSpacesLogsLogType logType);
+            ref global::HuggingFace.GetSpacesLogsLogType logType,
+            ref int? tail);
         partial void PrepareGetSpacesByNamespaceByRepoLogsByLogTypeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.GetSpacesLogsLogType logType);
+            global::HuggingFace.GetSpacesLogsLogType logType,
+            int? tail);
         partial void ProcessGetSpacesByNamespaceByRepoLogsByLogTypeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -47,6 +49,9 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="logType"></param>
+        /// <param name="tail">
+        /// Maximum number of lines to return from the logs.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -54,6 +59,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             global::HuggingFace.GetSpacesLogsLogType logType,
+            int? tail = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -61,6 +67,7 @@ namespace HuggingFace
                 @namespace: @namespace,
                 repo: repo,
                 logType: logType,
+                tail: tail,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -72,6 +79,9 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="logType"></param>
+        /// <param name="tail">
+        /// Maximum number of lines to return from the logs.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -79,6 +89,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             global::HuggingFace.GetSpacesLogsLogType logType,
+            int? tail = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -88,7 +99,8 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 repo: ref repo,
-                logType: ref logType);
+                logType: ref logType,
+                tail: ref tail);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -116,6 +128,9 @@ namespace HuggingFace
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
                                 path: $"/api/spaces/{@namespace}/{repo}/logs/{logType}",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("tail", tail?.ToString())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -158,7 +173,8 @@ namespace HuggingFace
                     httpRequestMessage: __httpRequest,
                     @namespace: @namespace!,
                     repo: repo!,
-                    logType: logType!);
+                    logType: logType!,
+                    tail: tail);
 
                 return __httpRequest;
             }

@@ -28,12 +28,14 @@ namespace HuggingFace
         partial void PrepareGetJobsByNamespaceByJobIdLogsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
-            ref string jobId);
+            ref string jobId,
+            ref int? tail);
         partial void PrepareGetJobsByNamespaceByJobIdLogsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
-            string jobId);
+            string jobId,
+            int? tail);
         partial void ProcessGetJobsByNamespaceByJobIdLogsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,18 +46,23 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobId"></param>
+        /// <param name="tail">
+        /// Maximum number of lines to return from the logs.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task GetJobsByNamespaceByJobIdLogsAsync(
             string @namespace,
             string jobId,
+            int? tail = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             await GetJobsByNamespaceByJobIdLogsAsResponseAsync(
                 @namespace: @namespace,
                 jobId: jobId,
+                tail: tail,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -66,12 +73,16 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobId"></param>
+        /// <param name="tail">
+        /// Maximum number of lines to return from the logs.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse> GetJobsByNamespaceByJobIdLogsAsResponseAsync(
             string @namespace,
             string jobId,
+            int? tail = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -80,7 +91,8 @@ namespace HuggingFace
             PrepareGetJobsByNamespaceByJobIdLogsArguments(
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
-                jobId: ref jobId);
+                jobId: ref jobId,
+                tail: ref tail);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -108,6 +120,9 @@ namespace HuggingFace
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
                                 path: $"/api/jobs/{@namespace}/{jobId}/logs",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("tail", tail?.ToString())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -149,7 +164,8 @@ namespace HuggingFace
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     @namespace: @namespace!,
-                    jobId: jobId!);
+                    jobId: jobId!,
+                    tail: tail);
 
                 return __httpRequest;
             }
