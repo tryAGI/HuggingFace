@@ -11,6 +11,9 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="logType"></param>
+        /// <param name="tail">
+        /// Maximum number of lines to return from the logs.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -18,6 +21,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             global::HuggingFace.GetSpacesLogsLogType logType,
+            int? tail = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -27,6 +31,9 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="logType"></param>
+        /// <param name="tail">
+        /// Maximum number of lines to return from the logs.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -34,6 +41,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             global::HuggingFace.GetSpacesLogsLogType logType,
+            int? tail = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
