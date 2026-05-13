@@ -42,6 +42,12 @@ namespace HuggingFace
         public global::HuggingFace.AnyOf<string, global::HuggingFace.PutModelsSettingsRequestGatedEnum2?>? Gated { get; set; }
 
         /// <summary>
+        /// If true, members of the owning org (except admins) must also go through the gated access-request flow.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orgMembersGated")]
+        public bool? OrgMembersGated { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsEmail")]
@@ -70,6 +76,9 @@ namespace HuggingFace
         /// <param name="discussionsDisabled"></param>
         /// <param name="discussionsSorting"></param>
         /// <param name="gated"></param>
+        /// <param name="orgMembersGated">
+        /// If true, members of the owning org (except admins) must also go through the gated access-request flow.
+        /// </param>
         /// <param name="gatedNotificationsEmail"></param>
         /// <param name="gatedNotificationsMode"></param>
 #if NET7_0_OR_GREATER
@@ -81,6 +90,7 @@ namespace HuggingFace
             bool? discussionsDisabled,
             global::HuggingFace.PutModelsSettingsRequestDiscussionsSorting? discussionsSorting,
             global::HuggingFace.AnyOf<string, global::HuggingFace.PutModelsSettingsRequestGatedEnum2?>? gated,
+            bool? orgMembersGated,
             string? gatedNotificationsEmail,
             global::HuggingFace.PutModelsSettingsRequestGatedNotificationsMode? gatedNotificationsMode)
         {
@@ -89,6 +99,7 @@ namespace HuggingFace
             this.DiscussionsDisabled = discussionsDisabled;
             this.DiscussionsSorting = discussionsSorting;
             this.Gated = gated;
+            this.OrgMembersGated = orgMembersGated;
             this.GatedNotificationsEmail = gatedNotificationsEmail;
             this.GatedNotificationsMode = gatedNotificationsMode;
         }
