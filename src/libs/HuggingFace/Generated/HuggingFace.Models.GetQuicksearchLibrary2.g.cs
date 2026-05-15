@@ -671,6 +671,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Sapiens2,
+        /// <summary>
+        /// 
+        /// </summary>
         SeedStory,
         /// <summary>
         /// 
@@ -1051,6 +1055,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Sana => "sana",
                 GetQuicksearchLibrary2.SapRpt1Oss => "sap-rpt-1-oss",
                 GetQuicksearchLibrary2.Sapiens => "sapiens",
+                GetQuicksearchLibrary2.Sapiens2 => "sapiens2",
                 GetQuicksearchLibrary2.SeedStory => "seed-story",
                 GetQuicksearchLibrary2.Seedvr => "seedvr",
                 GetQuicksearchLibrary2.SelfForcing => "self-forcing",
@@ -1277,6 +1282,7 @@ namespace HuggingFace
                 "sana" => GetQuicksearchLibrary2.Sana,
                 "sap-rpt-1-oss" => GetQuicksearchLibrary2.SapRpt1Oss,
                 "sapiens" => GetQuicksearchLibrary2.Sapiens,
+                "sapiens2" => GetQuicksearchLibrary2.Sapiens2,
                 "seed-story" => GetQuicksearchLibrary2.SeedStory,
                 "seedvr" => GetQuicksearchLibrary2.Seedvr,
                 "self-forcing" => GetQuicksearchLibrary2.SelfForcing,
