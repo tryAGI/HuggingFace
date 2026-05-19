@@ -39,6 +39,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ephemeralStorage")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string EphemeralStorage { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accelerator")]
         public global::HuggingFace.GetJobsHardwareResponseItemAccelerator2? Accelerator { get; set; }
 
@@ -76,6 +83,7 @@ namespace HuggingFace
         /// <param name="prettyName"></param>
         /// <param name="cpu"></param>
         /// <param name="ram"></param>
+        /// <param name="ephemeralStorage"></param>
         /// <param name="unitCostMicroUSD"></param>
         /// <param name="unitCostUSD"></param>
         /// <param name="unitLabel"></param>
@@ -88,6 +96,7 @@ namespace HuggingFace
             string prettyName,
             string cpu,
             string ram,
+            string ephemeralStorage,
             double unitCostMicroUSD,
             double unitCostUSD,
             string unitLabel,
@@ -97,6 +106,7 @@ namespace HuggingFace
             this.PrettyName = prettyName ?? throw new global::System.ArgumentNullException(nameof(prettyName));
             this.Cpu = cpu ?? throw new global::System.ArgumentNullException(nameof(cpu));
             this.Ram = ram ?? throw new global::System.ArgumentNullException(nameof(ram));
+            this.EphemeralStorage = ephemeralStorage ?? throw new global::System.ArgumentNullException(nameof(ephemeralStorage));
             this.Accelerator = accelerator;
             this.UnitCostMicroUSD = unitCostMicroUSD;
             this.UnitCostUSD = unitCostUSD;
