@@ -143,6 +143,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Collectorvision,
+        /// <summary>
+        /// 
+        /// </summary>
         Colpali,
         /// <summary>
         /// 
@@ -228,6 +232,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Elm,
+        /// <summary>
+        /// 
+        /// </summary>
+        Encoderfile,
         /// <summary>
         /// 
         /// </summary>
@@ -531,6 +539,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Multimolecule,
+        /// <summary>
+        /// 
+        /// </summary>
         Nemo,
         /// <summary>
         /// 
@@ -807,6 +819,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Trellis2,
+        /// <summary>
+        /// 
+        /// </summary>
         Ultralytics,
         /// <summary>
         /// 
@@ -923,6 +939,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Clipscope => "clipscope",
                 CreateQuicksearchLibrary2.CloudAgents => "cloud-agents",
                 CreateQuicksearchLibrary2.Colipri => "colipri",
+                CreateQuicksearchLibrary2.Collectorvision => "collectorvision",
                 CreateQuicksearchLibrary2.Colpali => "colpali",
                 CreateQuicksearchLibrary2.Comet => "comet",
                 CreateQuicksearchLibrary2.Cosmos => "cosmos",
@@ -945,6 +962,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Doctr => "doctr",
                 CreateQuicksearchLibrary2.Edsnlp => "edsnlp",
                 CreateQuicksearchLibrary2.Elm => "elm",
+                CreateQuicksearchLibrary2.Encoderfile => "encoderfile",
                 CreateQuicksearchLibrary2.Espnet => "espnet",
                 CreateQuicksearchLibrary2.Eupe => "eupe",
                 CreateQuicksearchLibrary2.F5Tts => "f5-tts",
@@ -1020,6 +1038,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Monkeyocr => "monkeyocr",
                 CreateQuicksearchLibrary2.Moshi => "moshi",
                 CreateQuicksearchLibrary2.Mtvcraft => "mtvcraft",
+                CreateQuicksearchLibrary2.Multimolecule => "multimolecule",
                 CreateQuicksearchLibrary2.Nemo => "nemo",
                 CreateQuicksearchLibrary2.NvMedtech => "nv-medtech",
                 CreateQuicksearchLibrary2.OpenOasis => "open-oasis",
@@ -1089,6 +1108,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Transformers => "transformers",
                 CreateQuicksearchLibrary2.TransformersJs => "transformers.js",
                 CreateQuicksearchLibrary2.Trellis => "trellis",
+                CreateQuicksearchLibrary2.Trellis2 => "trellis2",
                 CreateQuicksearchLibrary2.Ultralytics => "ultralytics",
                 CreateQuicksearchLibrary2.Uni3dar => "uni-3dar",
                 CreateQuicksearchLibrary2.UnitySentis => "unity-sentis",
@@ -1150,6 +1170,7 @@ namespace HuggingFace
                 "clipscope" => CreateQuicksearchLibrary2.Clipscope,
                 "cloud-agents" => CreateQuicksearchLibrary2.CloudAgents,
                 "colipri" => CreateQuicksearchLibrary2.Colipri,
+                "collectorvision" => CreateQuicksearchLibrary2.Collectorvision,
                 "colpali" => CreateQuicksearchLibrary2.Colpali,
                 "comet" => CreateQuicksearchLibrary2.Comet,
                 "cosmos" => CreateQuicksearchLibrary2.Cosmos,
@@ -1172,6 +1193,7 @@ namespace HuggingFace
                 "doctr" => CreateQuicksearchLibrary2.Doctr,
                 "edsnlp" => CreateQuicksearchLibrary2.Edsnlp,
                 "elm" => CreateQuicksearchLibrary2.Elm,
+                "encoderfile" => CreateQuicksearchLibrary2.Encoderfile,
                 "espnet" => CreateQuicksearchLibrary2.Espnet,
                 "eupe" => CreateQuicksearchLibrary2.Eupe,
                 "f5-tts" => CreateQuicksearchLibrary2.F5Tts,
@@ -1247,6 +1269,7 @@ namespace HuggingFace
                 "monkeyocr" => CreateQuicksearchLibrary2.Monkeyocr,
                 "moshi" => CreateQuicksearchLibrary2.Moshi,
                 "mtvcraft" => CreateQuicksearchLibrary2.Mtvcraft,
+                "multimolecule" => CreateQuicksearchLibrary2.Multimolecule,
                 "nemo" => CreateQuicksearchLibrary2.Nemo,
                 "nv-medtech" => CreateQuicksearchLibrary2.NvMedtech,
                 "open-oasis" => CreateQuicksearchLibrary2.OpenOasis,
@@ -1316,6 +1339,7 @@ namespace HuggingFace
                 "transformers" => CreateQuicksearchLibrary2.Transformers,
                 "transformers.js" => CreateQuicksearchLibrary2.TransformersJs,
                 "trellis" => CreateQuicksearchLibrary2.Trellis,
+                "trellis2" => CreateQuicksearchLibrary2.Trellis2,
                 "ultralytics" => CreateQuicksearchLibrary2.Ultralytics,
                 "uni-3dar" => CreateQuicksearchLibrary2.Uni3dar,
                 "unity-sentis" => CreateQuicksearchLibrary2.UnitySentis,
