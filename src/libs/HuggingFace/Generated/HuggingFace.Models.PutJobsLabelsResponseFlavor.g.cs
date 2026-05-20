@@ -95,6 +95,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RtxPro6000,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x2,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x4,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x8,
+        /// <summary>
+        /// 
+        /// </summary>
         Sprx8,
         /// <summary>
         /// 
@@ -143,6 +159,10 @@ namespace HuggingFace
                 PutJobsLabelsResponseFlavor.L40sx8 => "l40sx8",
                 PutJobsLabelsResponseFlavor.L4x1 => "l4x1",
                 PutJobsLabelsResponseFlavor.L4x4 => "l4x4",
+                PutJobsLabelsResponseFlavor.RtxPro6000 => "rtx-pro-6000",
+                PutJobsLabelsResponseFlavor.RtxPro6000x2 => "rtx-pro-6000x2",
+                PutJobsLabelsResponseFlavor.RtxPro6000x4 => "rtx-pro-6000x4",
+                PutJobsLabelsResponseFlavor.RtxPro6000x8 => "rtx-pro-6000x8",
                 PutJobsLabelsResponseFlavor.Sprx8 => "sprx8",
                 PutJobsLabelsResponseFlavor.T4Medium => "t4-medium",
                 PutJobsLabelsResponseFlavor.T4Small => "t4-small",
@@ -178,6 +198,10 @@ namespace HuggingFace
                 "l40sx8" => PutJobsLabelsResponseFlavor.L40sx8,
                 "l4x1" => PutJobsLabelsResponseFlavor.L4x1,
                 "l4x4" => PutJobsLabelsResponseFlavor.L4x4,
+                "rtx-pro-6000" => PutJobsLabelsResponseFlavor.RtxPro6000,
+                "rtx-pro-6000x2" => PutJobsLabelsResponseFlavor.RtxPro6000x2,
+                "rtx-pro-6000x4" => PutJobsLabelsResponseFlavor.RtxPro6000x4,
+                "rtx-pro-6000x8" => PutJobsLabelsResponseFlavor.RtxPro6000x8,
                 "sprx8" => PutJobsLabelsResponseFlavor.Sprx8,
                 "t4-medium" => PutJobsLabelsResponseFlavor.T4Medium,
                 "t4-small" => PutJobsLabelsResponseFlavor.T4Small,
