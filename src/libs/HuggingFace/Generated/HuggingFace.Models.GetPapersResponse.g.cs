@@ -153,6 +153,13 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<global::HuggingFace.GetPapersResponseLinkedSpace> LinkedSpaces { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("numTotalSpaces")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double NumTotalSpaces { get; set; }
+
+        /// <summary>
         /// only available when field contains 'comments'
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("comments")]
@@ -179,6 +186,7 @@ namespace HuggingFace
         /// <param name="linkedDatasets"></param>
         /// <param name="numTotalDatasets"></param>
         /// <param name="linkedSpaces"></param>
+        /// <param name="numTotalSpaces"></param>
         /// <param name="mediaUrls"></param>
         /// <param name="submittedOnDailyAt"></param>
         /// <param name="submittedOnDailyBy">
@@ -212,6 +220,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.GetPapersResponseLinkedDataset> linkedDatasets,
             double numTotalDatasets,
             global::System.Collections.Generic.IList<global::HuggingFace.GetPapersResponseLinkedSpace> linkedSpaces,
+            double numTotalSpaces,
             global::System.Collections.Generic.IList<string>? mediaUrls,
             global::System.DateTime? submittedOnDailyAt,
             global::HuggingFace.GetPapersResponseSubmittedOnDailyBy? submittedOnDailyBy,
@@ -246,6 +255,7 @@ namespace HuggingFace
             this.LinkedDatasets = linkedDatasets ?? throw new global::System.ArgumentNullException(nameof(linkedDatasets));
             this.NumTotalDatasets = numTotalDatasets;
             this.LinkedSpaces = linkedSpaces ?? throw new global::System.ArgumentNullException(nameof(linkedSpaces));
+            this.NumTotalSpaces = numTotalSpaces;
             this.Comments = comments;
         }
 
