@@ -95,6 +95,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RtxPro6000,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x2,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x4,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x8,
+        /// <summary>
+        /// 
+        /// </summary>
         Sprx8,
         /// <summary>
         /// 
@@ -143,6 +159,10 @@ namespace HuggingFace
                 CreateScheduledJobsScheduleResponseJobSpecFlavor.L40sx8 => "l40sx8",
                 CreateScheduledJobsScheduleResponseJobSpecFlavor.L4x1 => "l4x1",
                 CreateScheduledJobsScheduleResponseJobSpecFlavor.L4x4 => "l4x4",
+                CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000 => "rtx-pro-6000",
+                CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000x2 => "rtx-pro-6000x2",
+                CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000x4 => "rtx-pro-6000x4",
+                CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000x8 => "rtx-pro-6000x8",
                 CreateScheduledJobsScheduleResponseJobSpecFlavor.Sprx8 => "sprx8",
                 CreateScheduledJobsScheduleResponseJobSpecFlavor.T4Medium => "t4-medium",
                 CreateScheduledJobsScheduleResponseJobSpecFlavor.T4Small => "t4-small",
@@ -178,6 +198,10 @@ namespace HuggingFace
                 "l40sx8" => CreateScheduledJobsScheduleResponseJobSpecFlavor.L40sx8,
                 "l4x1" => CreateScheduledJobsScheduleResponseJobSpecFlavor.L4x1,
                 "l4x4" => CreateScheduledJobsScheduleResponseJobSpecFlavor.L4x4,
+                "rtx-pro-6000" => CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000,
+                "rtx-pro-6000x2" => CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000x2,
+                "rtx-pro-6000x4" => CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000x4,
+                "rtx-pro-6000x8" => CreateScheduledJobsScheduleResponseJobSpecFlavor.RtxPro6000x8,
                 "sprx8" => CreateScheduledJobsScheduleResponseJobSpecFlavor.Sprx8,
                 "t4-medium" => CreateScheduledJobsScheduleResponseJobSpecFlavor.T4Medium,
                 "t4-small" => CreateScheduledJobsScheduleResponseJobSpecFlavor.T4Small,

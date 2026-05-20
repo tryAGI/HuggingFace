@@ -95,6 +95,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RtxPro6000,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x2,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x4,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x8,
+        /// <summary>
+        /// 
+        /// </summary>
         Sprx8,
         /// <summary>
         /// 
@@ -143,6 +159,10 @@ namespace HuggingFace
                 GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.L40sx8 => "l40sx8",
                 GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.L4x1 => "l4x1",
                 GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.L4x4 => "l4x4",
+                GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000 => "rtx-pro-6000",
+                GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000x2 => "rtx-pro-6000x2",
+                GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000x4 => "rtx-pro-6000x4",
+                GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000x8 => "rtx-pro-6000x8",
                 GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.Sprx8 => "sprx8",
                 GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.T4Medium => "t4-medium",
                 GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.T4Small => "t4-small",
@@ -178,6 +198,10 @@ namespace HuggingFace
                 "l40sx8" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.L40sx8,
                 "l4x1" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.L4x1,
                 "l4x4" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.L4x4,
+                "rtx-pro-6000" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000,
+                "rtx-pro-6000x2" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000x2,
+                "rtx-pro-6000x4" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000x4,
+                "rtx-pro-6000x8" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.RtxPro6000x8,
                 "sprx8" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.Sprx8,
                 "t4-medium" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.T4Medium,
                 "t4-small" => GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2.T4Small,

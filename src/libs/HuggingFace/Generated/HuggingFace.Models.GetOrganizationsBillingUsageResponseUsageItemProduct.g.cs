@@ -155,6 +155,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        EndpointsAwsNvidiaRtxPro6000X1,
+        /// <summary>
+        /// 
+        /// </summary>
+        EndpointsAwsNvidiaRtxPro6000X2,
+        /// <summary>
+        /// 
+        /// </summary>
+        EndpointsAwsNvidiaRtxPro6000X4,
+        /// <summary>
+        /// 
+        /// </summary>
+        EndpointsAwsNvidiaRtxPro6000X8,
+        /// <summary>
+        /// 
+        /// </summary>
         EndpointsAwsNvidiaT4X1,
         /// <summary>
         /// 
@@ -347,6 +363,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        JobsRtxPro6000Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
+        JobsRtxPro6000x2Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
+        JobsRtxPro6000x4Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
+        JobsRtxPro6000x8Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
         JobsSprx8Minutes,
         /// <summary>
         /// 
@@ -463,6 +495,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        SpacesRtxPro6000Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
+        SpacesRtxPro6000x2Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
+        SpacesRtxPro6000x4Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
+        SpacesRtxPro6000x8Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
         SpacesSprx8Minutes,
         /// <summary>
         /// 
@@ -550,6 +598,10 @@ namespace HuggingFace
                 GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaL40sX1 => "endpoints/aws/nvidia-l40s/x1",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaL40sX4 => "endpoints/aws/nvidia-l40s/x4",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaL40sX8 => "endpoints/aws/nvidia-l40s/x8",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X1 => "endpoints/aws/nvidia-rtx-pro-6000/x1",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X2 => "endpoints/aws/nvidia-rtx-pro-6000/x2",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X4 => "endpoints/aws/nvidia-rtx-pro-6000/x4",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X8 => "endpoints/aws/nvidia-rtx-pro-6000/x8",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaT4X1 => "endpoints/aws/nvidia-t4/x1",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaT4X4 => "endpoints/aws/nvidia-t4/x4",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAzureIntelXeonX1 => "endpoints/azure/intel-xeon/x1",
@@ -598,6 +650,10 @@ namespace HuggingFace
                 GetOrganizationsBillingUsageResponseUsageItemProduct.JobsL40sx8Minutes => "jobs/l40sx8/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.JobsL4x1Minutes => "jobs/l4x1/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.JobsL4x4Minutes => "jobs/l4x4/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000Minutes => "jobs/rtx-pro-6000/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000x2Minutes => "jobs/rtx-pro-6000x2/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000x4Minutes => "jobs/rtx-pro-6000x4/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000x8Minutes => "jobs/rtx-pro-6000x8/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.JobsSprx8Minutes => "jobs/sprx8/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.JobsT4MediumMinutes => "jobs/t4-medium/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.JobsT4SmallMinutes => "jobs/t4-small/minutes",
@@ -627,6 +683,10 @@ namespace HuggingFace
                 GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesL40sx8Minutes => "spaces/l40sx8/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesL4x1Minutes => "spaces/l4x1/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesL4x4Minutes => "spaces/l4x4/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000Minutes => "spaces/rtx-pro-6000/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000x2Minutes => "spaces/rtx-pro-6000x2/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000x4Minutes => "spaces/rtx-pro-6000x4/minutes",
+                GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000x8Minutes => "spaces/rtx-pro-6000x8/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesSprx8Minutes => "spaces/sprx8/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesStorageLargeMinutes => "spaces/storage-large/minutes",
                 GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesStorageMediumMinutes => "spaces/storage-medium/minutes",
@@ -683,6 +743,10 @@ namespace HuggingFace
                 "endpoints/aws/nvidia-l40s/x1" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaL40sX1,
                 "endpoints/aws/nvidia-l40s/x4" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaL40sX4,
                 "endpoints/aws/nvidia-l40s/x8" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaL40sX8,
+                "endpoints/aws/nvidia-rtx-pro-6000/x1" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X1,
+                "endpoints/aws/nvidia-rtx-pro-6000/x2" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X2,
+                "endpoints/aws/nvidia-rtx-pro-6000/x4" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X4,
+                "endpoints/aws/nvidia-rtx-pro-6000/x8" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaRtxPro6000X8,
                 "endpoints/aws/nvidia-t4/x1" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaT4X1,
                 "endpoints/aws/nvidia-t4/x4" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAwsNvidiaT4X4,
                 "endpoints/azure/intel-xeon/x1" => GetOrganizationsBillingUsageResponseUsageItemProduct.EndpointsAzureIntelXeonX1,
@@ -731,6 +795,10 @@ namespace HuggingFace
                 "jobs/l40sx8/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsL40sx8Minutes,
                 "jobs/l4x1/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsL4x1Minutes,
                 "jobs/l4x4/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsL4x4Minutes,
+                "jobs/rtx-pro-6000/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000Minutes,
+                "jobs/rtx-pro-6000x2/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000x2Minutes,
+                "jobs/rtx-pro-6000x4/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000x4Minutes,
+                "jobs/rtx-pro-6000x8/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsRtxPro6000x8Minutes,
                 "jobs/sprx8/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsSprx8Minutes,
                 "jobs/t4-medium/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsT4MediumMinutes,
                 "jobs/t4-small/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.JobsT4SmallMinutes,
@@ -760,6 +828,10 @@ namespace HuggingFace
                 "spaces/l40sx8/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesL40sx8Minutes,
                 "spaces/l4x1/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesL4x1Minutes,
                 "spaces/l4x4/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesL4x4Minutes,
+                "spaces/rtx-pro-6000/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000Minutes,
+                "spaces/rtx-pro-6000x2/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000x2Minutes,
+                "spaces/rtx-pro-6000x4/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000x4Minutes,
+                "spaces/rtx-pro-6000x8/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesRtxPro6000x8Minutes,
                 "spaces/sprx8/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesSprx8Minutes,
                 "spaces/storage-large/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesStorageLargeMinutes,
                 "spaces/storage-medium/minutes" => GetOrganizationsBillingUsageResponseUsageItemProduct.SpacesStorageMediumMinutes,

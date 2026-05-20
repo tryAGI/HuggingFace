@@ -95,6 +95,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RtxPro6000,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x2,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x4,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x8,
+        /// <summary>
+        /// 
+        /// </summary>
         Sprx8,
         /// <summary>
         /// 
@@ -143,6 +159,10 @@ namespace HuggingFace
                 CreateJobsRequestFlavor.L40sx8 => "l40sx8",
                 CreateJobsRequestFlavor.L4x1 => "l4x1",
                 CreateJobsRequestFlavor.L4x4 => "l4x4",
+                CreateJobsRequestFlavor.RtxPro6000 => "rtx-pro-6000",
+                CreateJobsRequestFlavor.RtxPro6000x2 => "rtx-pro-6000x2",
+                CreateJobsRequestFlavor.RtxPro6000x4 => "rtx-pro-6000x4",
+                CreateJobsRequestFlavor.RtxPro6000x8 => "rtx-pro-6000x8",
                 CreateJobsRequestFlavor.Sprx8 => "sprx8",
                 CreateJobsRequestFlavor.T4Medium => "t4-medium",
                 CreateJobsRequestFlavor.T4Small => "t4-small",
@@ -178,6 +198,10 @@ namespace HuggingFace
                 "l40sx8" => CreateJobsRequestFlavor.L40sx8,
                 "l4x1" => CreateJobsRequestFlavor.L4x1,
                 "l4x4" => CreateJobsRequestFlavor.L4x4,
+                "rtx-pro-6000" => CreateJobsRequestFlavor.RtxPro6000,
+                "rtx-pro-6000x2" => CreateJobsRequestFlavor.RtxPro6000x2,
+                "rtx-pro-6000x4" => CreateJobsRequestFlavor.RtxPro6000x4,
+                "rtx-pro-6000x8" => CreateJobsRequestFlavor.RtxPro6000x8,
                 "sprx8" => CreateJobsRequestFlavor.Sprx8,
                 "t4-medium" => CreateJobsRequestFlavor.T4Medium,
                 "t4-small" => CreateJobsRequestFlavor.T4Small,

@@ -95,6 +95,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RtxPro6000,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x2,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x4,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x8,
+        /// <summary>
+        /// 
+        /// </summary>
         Sprx8,
         /// <summary>
         /// 
@@ -143,6 +159,10 @@ namespace HuggingFace
                 CreateJobsCancelResponseFlavor.L40sx8 => "l40sx8",
                 CreateJobsCancelResponseFlavor.L4x1 => "l4x1",
                 CreateJobsCancelResponseFlavor.L4x4 => "l4x4",
+                CreateJobsCancelResponseFlavor.RtxPro6000 => "rtx-pro-6000",
+                CreateJobsCancelResponseFlavor.RtxPro6000x2 => "rtx-pro-6000x2",
+                CreateJobsCancelResponseFlavor.RtxPro6000x4 => "rtx-pro-6000x4",
+                CreateJobsCancelResponseFlavor.RtxPro6000x8 => "rtx-pro-6000x8",
                 CreateJobsCancelResponseFlavor.Sprx8 => "sprx8",
                 CreateJobsCancelResponseFlavor.T4Medium => "t4-medium",
                 CreateJobsCancelResponseFlavor.T4Small => "t4-small",
@@ -178,6 +198,10 @@ namespace HuggingFace
                 "l40sx8" => CreateJobsCancelResponseFlavor.L40sx8,
                 "l4x1" => CreateJobsCancelResponseFlavor.L4x1,
                 "l4x4" => CreateJobsCancelResponseFlavor.L4x4,
+                "rtx-pro-6000" => CreateJobsCancelResponseFlavor.RtxPro6000,
+                "rtx-pro-6000x2" => CreateJobsCancelResponseFlavor.RtxPro6000x2,
+                "rtx-pro-6000x4" => CreateJobsCancelResponseFlavor.RtxPro6000x4,
+                "rtx-pro-6000x8" => CreateJobsCancelResponseFlavor.RtxPro6000x8,
                 "sprx8" => CreateJobsCancelResponseFlavor.Sprx8,
                 "t4-medium" => CreateJobsCancelResponseFlavor.T4Medium,
                 "t4-small" => CreateJobsCancelResponseFlavor.T4Small,

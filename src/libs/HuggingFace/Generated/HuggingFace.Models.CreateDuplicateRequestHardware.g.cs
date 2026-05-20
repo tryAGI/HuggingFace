@@ -95,6 +95,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RtxPro6000,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x2,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x4,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x8,
+        /// <summary>
+        /// 
+        /// </summary>
         Sprx8,
         /// <summary>
         /// 
@@ -143,6 +159,10 @@ namespace HuggingFace
                 CreateDuplicateRequestHardware.L40sx8 => "l40sx8",
                 CreateDuplicateRequestHardware.L4x1 => "l4x1",
                 CreateDuplicateRequestHardware.L4x4 => "l4x4",
+                CreateDuplicateRequestHardware.RtxPro6000 => "rtx-pro-6000",
+                CreateDuplicateRequestHardware.RtxPro6000x2 => "rtx-pro-6000x2",
+                CreateDuplicateRequestHardware.RtxPro6000x4 => "rtx-pro-6000x4",
+                CreateDuplicateRequestHardware.RtxPro6000x8 => "rtx-pro-6000x8",
                 CreateDuplicateRequestHardware.Sprx8 => "sprx8",
                 CreateDuplicateRequestHardware.T4Medium => "t4-medium",
                 CreateDuplicateRequestHardware.T4Small => "t4-small",
@@ -178,6 +198,10 @@ namespace HuggingFace
                 "l40sx8" => CreateDuplicateRequestHardware.L40sx8,
                 "l4x1" => CreateDuplicateRequestHardware.L4x1,
                 "l4x4" => CreateDuplicateRequestHardware.L4x4,
+                "rtx-pro-6000" => CreateDuplicateRequestHardware.RtxPro6000,
+                "rtx-pro-6000x2" => CreateDuplicateRequestHardware.RtxPro6000x2,
+                "rtx-pro-6000x4" => CreateDuplicateRequestHardware.RtxPro6000x4,
+                "rtx-pro-6000x8" => CreateDuplicateRequestHardware.RtxPro6000x8,
                 "sprx8" => CreateDuplicateRequestHardware.Sprx8,
                 "t4-medium" => CreateDuplicateRequestHardware.T4Medium,
                 "t4-small" => CreateDuplicateRequestHardware.T4Small,
