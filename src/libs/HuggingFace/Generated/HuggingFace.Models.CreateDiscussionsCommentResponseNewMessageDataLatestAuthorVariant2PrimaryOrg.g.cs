@@ -136,5 +136,6 @@ namespace HuggingFace
         public CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrg()
         {
         }
+
     }
 }

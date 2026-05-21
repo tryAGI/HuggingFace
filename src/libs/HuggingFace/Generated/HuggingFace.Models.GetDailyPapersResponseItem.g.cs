@@ -123,5 +123,6 @@ namespace HuggingFace
         public GetDailyPapersResponseItem()
         {
         }
+
     }
 }

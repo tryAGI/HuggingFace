@@ -69,5 +69,6 @@ namespace HuggingFace
         public GetSpacesRefsResponse()
         {
         }
+
     }
 }

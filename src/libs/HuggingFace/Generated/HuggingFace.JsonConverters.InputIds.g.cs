@@ -108,7 +108,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (inputIdsVariant1 == null && inputIdsVariant2 == null)
+            {
                 try
                 {
 

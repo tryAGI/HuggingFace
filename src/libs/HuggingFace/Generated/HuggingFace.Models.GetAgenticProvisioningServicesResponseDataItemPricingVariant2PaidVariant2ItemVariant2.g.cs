@@ -77,5 +77,18 @@ namespace HuggingFace
         public GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2 FromStripePrice(string stripePrice)
+        {
+            return new GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2
+            {
+                StripePrice = stripePrice,
+            };
+        }
+
     }
 }

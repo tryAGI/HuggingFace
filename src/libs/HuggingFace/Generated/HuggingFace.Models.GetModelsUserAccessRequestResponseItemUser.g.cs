@@ -137,9 +137,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isInVerifiedOrg")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("verifiedOrgNames")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool IsInVerifiedOrg { get; set; }
+        public required global::System.Collections.Generic.IList<string> VerifiedOrgNames { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -155,7 +155,7 @@ namespace HuggingFace
         /// <param name="fullname"></param>
         /// <param name="isPro"></param>
         /// <param name="user"></param>
-        /// <param name="isInVerifiedOrg"></param>
+        /// <param name="verifiedOrgNames"></param>
         /// <param name="orgs"></param>
         /// <param name="numModels"></param>
         /// <param name="numDatasets"></param>
@@ -180,7 +180,7 @@ namespace HuggingFace
             string fullname,
             bool isPro,
             string user,
-            bool isInVerifiedOrg,
+            global::System.Collections.Generic.IList<string> verifiedOrgNames,
             global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItemUserOrg>? orgs,
             double? numModels,
             double? numDatasets,
@@ -217,7 +217,7 @@ namespace HuggingFace
             this.ReasonToFollow = reasonToFollow;
             this.Type = type;
             this.Email = email;
-            this.IsInVerifiedOrg = isInVerifiedOrg;
+            this.VerifiedOrgNames = verifiedOrgNames ?? throw new global::System.ArgumentNullException(nameof(verifiedOrgNames));
         }
 
         /// <summary>
@@ -226,5 +226,6 @@ namespace HuggingFace
         public GetModelsUserAccessRequestResponseItemUser()
         {
         }
+
     }
 }

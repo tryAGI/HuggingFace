@@ -50,5 +50,6 @@ namespace HuggingFace
         public GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItem()
         {
         }
+
     }
 }

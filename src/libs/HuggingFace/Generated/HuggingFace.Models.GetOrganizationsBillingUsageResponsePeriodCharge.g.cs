@@ -111,5 +111,6 @@ namespace HuggingFace
         public GetOrganizationsBillingUsageResponsePeriodCharge()
         {
         }
+
     }
 }

@@ -3,7 +3,7 @@
 namespace HuggingFace.JsonConverters
 {
     /// <inheritdoc />
-    public class AnyOfJsonConverter<[global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T1, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T2, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T3, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T4, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T5, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T6, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T7, [global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembers(global::System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.PublicProperties)] T8> : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.AnyOf<T1, T2, T3, T4, T5, T6, T7, T8>>
+    public class AnyOfJsonConverter<T1, T2, T3, T4, T5, T6, T7, T8> : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.AnyOf<T1, T2, T3, T4, T5, T6, T7, T8>>
     {
         /// <inheritdoc />
         public override global::HuggingFace.AnyOf<T1, T2, T3, T4, T5, T6, T7, T8> Read(
@@ -287,7 +287,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null)
+            {
                 try
                 {
 
@@ -301,7 +304,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null)
+            {
                 try
                 {
 
@@ -315,7 +321,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null)
+            {
                 try
                 {
 
@@ -329,7 +338,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null)
+            {
                 try
                 {
 
@@ -343,7 +355,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null)
+            {
                 try
                 {
 
@@ -357,7 +372,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null)
+            {
                 try
                 {
 
@@ -371,7 +389,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (value1 == null && value2 == null && value3 == null && value4 == null && value5 == null && value6 == null && value7 == null && value8 == null)
+            {
                 try
                 {
 

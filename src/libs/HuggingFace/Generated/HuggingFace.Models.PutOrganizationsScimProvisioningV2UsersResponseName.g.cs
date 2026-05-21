@@ -60,5 +60,6 @@ namespace HuggingFace
         public PutOrganizationsScimProvisioningV2UsersResponseName()
         {
         }
+
     }
 }

@@ -29,6 +29,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickStreamResponse(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.StreamResponse? value)
+        {
+            value = StreamResponse;
+            return IsStreamResponse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.StreamResponse PickStreamResponse() => IsStreamResponse
+            ? StreamResponse!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'StreamResponse' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ChatCompletionChunk? ChatCompletionChunk { get; init; }
 #else
@@ -46,6 +66,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickChatCompletionChunk(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ChatCompletionChunk? value)
+        {
+            value = ChatCompletionChunk;
+            return IsChatCompletionChunk;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ChatCompletionChunk PickChatCompletionChunk() => IsChatCompletionChunk
+            ? ChatCompletionChunk!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionChunk' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.Chunk? Chunk { get; init; }
 #else
@@ -59,6 +99,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Chunk))]
 #endif
         public bool IsChunk => Chunk != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickChunk(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.Chunk? value)
+        {
+            value = Chunk;
+            return IsChunk;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.Chunk PickChunk() => IsChunk
+            ? Chunk!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Chunk' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace HuggingFace
         {
             StreamResponse = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerStreamResponse FromStreamResponse(global::HuggingFace.StreamResponse? value) => new SagemakerStreamResponse(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static SagemakerStreamResponse FromChatCompletionChunk(global::HuggingFace.ChatCompletionChunk? value) => new SagemakerStreamResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator SagemakerStreamResponse(global::HuggingFace.Chunk value) => new SagemakerStreamResponse((global::HuggingFace.Chunk?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace HuggingFace
         {
             Chunk = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerStreamResponse FromChunk(global::HuggingFace.Chunk? value) => new SagemakerStreamResponse(value);
 
         /// <summary>
         /// 
@@ -157,9 +232,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.StreamResponse?, TResult>? streamResponse = null,
-            global::System.Func<global::HuggingFace.ChatCompletionChunk?, TResult>? chatCompletionChunk = null,
-            global::System.Func<global::HuggingFace.Chunk?, TResult>? chunk = null,
+            global::System.Func<global::HuggingFace.StreamResponse, TResult>? streamResponse = null,
+            global::System.Func<global::HuggingFace.ChatCompletionChunk, TResult>? chatCompletionChunk = null,
+            global::System.Func<global::HuggingFace.Chunk, TResult>? chunk = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +262,39 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.StreamResponse?>? streamResponse = null,
-            global::System.Action<global::HuggingFace.ChatCompletionChunk?>? chatCompletionChunk = null,
-            global::System.Action<global::HuggingFace.Chunk?>? chunk = null,
+            global::System.Action<global::HuggingFace.StreamResponse>? streamResponse = null,
+
+            global::System.Action<global::HuggingFace.ChatCompletionChunk>? chatCompletionChunk = null,
+
+            global::System.Action<global::HuggingFace.Chunk>? chunk = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsStreamResponse)
+            {
+                streamResponse?.Invoke(StreamResponse!);
+            }
+            else if (IsChatCompletionChunk)
+            {
+                chatCompletionChunk?.Invoke(ChatCompletionChunk!);
+            }
+            else if (IsChunk)
+            {
+                chunk?.Invoke(Chunk!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.StreamResponse>? streamResponse = null,
+            global::System.Action<global::HuggingFace.ChatCompletionChunk>? chatCompletionChunk = null,
+            global::System.Action<global::HuggingFace.Chunk>? chunk = null,
             bool validate = true)
         {
             if (validate)

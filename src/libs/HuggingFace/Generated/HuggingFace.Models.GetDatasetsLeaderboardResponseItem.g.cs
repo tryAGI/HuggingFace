@@ -75,6 +75,12 @@ namespace HuggingFace
         public bool? LowerIsBetter { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("num_parameters")]
+        public double? NumParameters { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -93,6 +99,7 @@ namespace HuggingFace
         /// <param name="pullRequest"></param>
         /// <param name="notes"></param>
         /// <param name="lowerIsBetter"></param>
+        /// <param name="numParameters"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -106,7 +113,8 @@ namespace HuggingFace
             global::HuggingFace.GetDatasetsLeaderboardResponseItemSource? source,
             double? pullRequest,
             string? notes,
-            bool? lowerIsBetter)
+            bool? lowerIsBetter,
+            double? numParameters)
         {
             this.Rank = rank;
             this.ModelId = modelId ?? throw new global::System.ArgumentNullException(nameof(modelId));
@@ -118,6 +126,7 @@ namespace HuggingFace
             this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
             this.Notes = notes;
             this.LowerIsBetter = lowerIsBetter;
+            this.NumParameters = numParameters;
         }
 
         /// <summary>
@@ -126,5 +135,6 @@ namespace HuggingFace
         public GetDatasetsLeaderboardResponseItem()
         {
         }
+
     }
 }

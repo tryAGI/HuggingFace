@@ -68,5 +68,6 @@ namespace HuggingFace
         public GetSpacesVariablesResponse2()
         {
         }
+
     }
 }

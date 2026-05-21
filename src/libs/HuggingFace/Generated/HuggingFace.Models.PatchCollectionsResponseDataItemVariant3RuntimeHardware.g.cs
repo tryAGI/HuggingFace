@@ -48,5 +48,6 @@ namespace HuggingFace
         public PatchCollectionsResponseDataItemVariant3RuntimeHardware()
         {
         }
+
     }
 }

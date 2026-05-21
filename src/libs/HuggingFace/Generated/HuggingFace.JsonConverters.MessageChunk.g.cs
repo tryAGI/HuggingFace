@@ -15,103 +15,29 @@ namespace HuggingFace.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
-            var __rawJson = __jsonDocument.RootElement.GetRawText();
-            var __jsonProps = new global::System.Collections.Generic.HashSet<string>();
-            if (__jsonDocument.RootElement.ValueKind == global::System.Text.Json.JsonValueKind.Object)
-            {
-                foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
-                {
-                    __jsonProps.Add(__jsonProp.Name);
-                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
-                    {
-                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
-                        {
-                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
-                        }
-                    }
 
-                }
-            }
-
-            var __score0 = 0;
-            if (__jsonProps.Contains("text")) __score0++;
-            if (__jsonProps.Contains("type")) __score0++;
-            var __score1 = 0;
-            if (__jsonProps.Contains("image_url")) __score1++;
-            if (__jsonProps.Contains("image_url.url")) __score1++;
-            if (__jsonProps.Contains("type")) __score1++;
-            var __bestScore = 0;
-            var __bestIndex = -1;
-            if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
-            if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
+            var readerCopy = reader;
+            var discriminatorTypeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkDiscriminator), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkDiscriminator> ??
+                            throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::HuggingFace.MessageChunkDiscriminator)}");
+            var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
 
             global::HuggingFace.MessageChunkVariant1? text = default;
-            global::HuggingFace.MessageChunkVariant2? imageUrl = default;
-            if (__bestIndex >= 0)
+            if (discriminator?.Type == global::HuggingFace.MessageChunkDiscriminatorType.Text)
             {
-                if (__bestIndex == 0)
-                {
-                    try
-                    {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant1> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageChunkVariant1).Name}");
-                        text = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                    }
-                    catch (global::System.Text.Json.JsonException)
-                    {
-                    }
-                    catch (global::System.InvalidOperationException)
-                    {
-                    }
-                }
-                else if (__bestIndex == 1)
-                {
-                    try
-                    {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant2> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageChunkVariant2).Name}");
-                        imageUrl = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                    }
-                    catch (global::System.Text.Json.JsonException)
-                    {
-                    }
-                    catch (global::System.InvalidOperationException)
-                    {
-                    }
-                }
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant1> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::HuggingFace.MessageChunkVariant1)}");
+                text = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-
-            if (text == null && imageUrl == null)
+            global::HuggingFace.MessageChunkVariant2? imageUrl = default;
+            if (discriminator?.Type == global::HuggingFace.MessageChunkDiscriminatorType.ImageUrl)
             {
-                try
-                {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant1> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageChunkVariant1).Name}");
-                    text = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                }
-                catch (global::System.Text.Json.JsonException)
-                {
-                }
-                catch (global::System.InvalidOperationException)
-                {
-                }
-
-                try
-                {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant2> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.MessageChunkVariant2).Name}");
-                    imageUrl = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                }
-                catch (global::System.Text.Json.JsonException)
-                {
-                }
-                catch (global::System.InvalidOperationException)
-                {
-                }
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.MessageChunkVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.MessageChunkVariant2> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::HuggingFace.MessageChunkVariant2)}");
+                imageUrl = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
 
             var __value = new global::HuggingFace.MessageChunk(
+                discriminator?.Type,
                 text,
 
                 imageUrl

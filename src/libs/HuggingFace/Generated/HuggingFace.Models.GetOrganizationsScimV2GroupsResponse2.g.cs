@@ -88,5 +88,6 @@ namespace HuggingFace
         public GetOrganizationsScimV2GroupsResponse2()
         {
         }
+
     }
 }

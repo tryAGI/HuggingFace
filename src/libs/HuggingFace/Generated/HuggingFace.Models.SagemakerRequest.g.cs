@@ -29,6 +29,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCompatGenerate(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.CompatGenerateRequest? value)
+        {
+            value = CompatGenerate;
+            return IsCompatGenerate;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.CompatGenerateRequest PickCompatGenerate() => IsCompatGenerate
+            ? CompatGenerate!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompatGenerate' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ChatRequest? Chat { get; init; }
 #else
@@ -46,6 +66,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickChat(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ChatRequest? value)
+        {
+            value = Chat;
+            return IsChat;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ChatRequest PickChat() => IsChat
+            ? Chat!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Chat' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.CompletionRequest? Completion { get; init; }
 #else
@@ -59,6 +99,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Completion))]
 #endif
         public bool IsCompletion => Completion != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCompletion(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.CompletionRequest? value)
+        {
+            value = Completion;
+            return IsCompletion;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.CompletionRequest PickCompletion() => IsCompletion
+            ? Completion!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Completion' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace HuggingFace
         {
             CompatGenerate = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerRequest FromCompatGenerate(global::HuggingFace.CompatGenerateRequest? value) => new SagemakerRequest(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static SagemakerRequest FromChat(global::HuggingFace.ChatRequest? value) => new SagemakerRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator SagemakerRequest(global::HuggingFace.CompletionRequest value) => new SagemakerRequest((global::HuggingFace.CompletionRequest?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace HuggingFace
         {
             Completion = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerRequest FromCompletion(global::HuggingFace.CompletionRequest? value) => new SagemakerRequest(value);
 
         /// <summary>
         /// 
@@ -157,9 +232,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.CompatGenerateRequest?, TResult>? compatGenerate = null,
-            global::System.Func<global::HuggingFace.ChatRequest?, TResult>? chat = null,
-            global::System.Func<global::HuggingFace.CompletionRequest?, TResult>? completion = null,
+            global::System.Func<global::HuggingFace.CompatGenerateRequest, TResult>? compatGenerate = null,
+            global::System.Func<global::HuggingFace.ChatRequest, TResult>? chat = null,
+            global::System.Func<global::HuggingFace.CompletionRequest, TResult>? completion = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +262,39 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.CompatGenerateRequest?>? compatGenerate = null,
-            global::System.Action<global::HuggingFace.ChatRequest?>? chat = null,
-            global::System.Action<global::HuggingFace.CompletionRequest?>? completion = null,
+            global::System.Action<global::HuggingFace.CompatGenerateRequest>? compatGenerate = null,
+
+            global::System.Action<global::HuggingFace.ChatRequest>? chat = null,
+
+            global::System.Action<global::HuggingFace.CompletionRequest>? completion = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCompatGenerate)
+            {
+                compatGenerate?.Invoke(CompatGenerate!);
+            }
+            else if (IsChat)
+            {
+                chat?.Invoke(Chat!);
+            }
+            else if (IsCompletion)
+            {
+                completion?.Invoke(Completion!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.CompatGenerateRequest>? compatGenerate = null,
+            global::System.Action<global::HuggingFace.ChatRequest>? chat = null,
+            global::System.Action<global::HuggingFace.CompletionRequest>? completion = null,
             bool validate = true)
         {
             if (validate)

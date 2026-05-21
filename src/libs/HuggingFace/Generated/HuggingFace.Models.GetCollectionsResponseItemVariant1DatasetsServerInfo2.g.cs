@@ -80,5 +80,6 @@ namespace HuggingFace
         public GetCollectionsResponseItemVariant1DatasetsServerInfo2()
         {
         }
+
     }
 }

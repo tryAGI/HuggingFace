@@ -1,0 +1,162 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class GetPapersResponseLinkedDataset
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("author")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Author { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isLikedByUser")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool IsLikedByUser { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("likes")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Likes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datasetsServerInfo")]
+        public global::HuggingFace.GetPapersResponseLinkedDatasetDatasetsServerInfo? DatasetsServerInfo { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Private { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <default>"dataset"</default>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
+        public string RepoType { get; set; } = "dataset";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("downloads")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Downloads { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.GetPapersResponseLinkedDatasetGatedEnum2?>))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.AnyOf<string, global::HuggingFace.GetPapersResponseLinkedDatasetGatedEnum2?> Gated { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lastModified")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime LastModified { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
+        public global::HuggingFace.GetPapersResponseLinkedDatasetResourceGroup? ResourceGroup { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isBenchmark")]
+        public bool? IsBenchmark { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isTraces")]
+        public bool? IsTraces { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetPapersResponseLinkedDataset" /> class.
+        /// </summary>
+        /// <param name="author"></param>
+        /// <param name="id"></param>
+        /// <param name="isLikedByUser"></param>
+        /// <param name="likes"></param>
+        /// <param name="private"></param>
+        /// <param name="downloads"></param>
+        /// <param name="gated"></param>
+        /// <param name="lastModified"></param>
+        /// <param name="datasetsServerInfo"></param>
+        /// <param name="resourceGroup"></param>
+        /// <param name="isBenchmark"></param>
+        /// <param name="isTraces"></param>
+        /// <param name="repoType"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public GetPapersResponseLinkedDataset(
+            string author,
+            string id,
+            bool isLikedByUser,
+            double likes,
+            bool @private,
+            double downloads,
+            global::HuggingFace.AnyOf<string, global::HuggingFace.GetPapersResponseLinkedDatasetGatedEnum2?> gated,
+            global::System.DateTime lastModified,
+            global::HuggingFace.GetPapersResponseLinkedDatasetDatasetsServerInfo? datasetsServerInfo,
+            global::HuggingFace.GetPapersResponseLinkedDatasetResourceGroup? resourceGroup,
+            bool? isBenchmark,
+            bool? isTraces,
+            string repoType = "dataset")
+        {
+            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.IsLikedByUser = isLikedByUser;
+            this.Likes = likes;
+            this.DatasetsServerInfo = datasetsServerInfo;
+            this.Private = @private;
+            this.RepoType = repoType;
+            this.Downloads = downloads;
+            this.Gated = gated;
+            this.LastModified = lastModified;
+            this.ResourceGroup = resourceGroup;
+            this.IsBenchmark = isBenchmark;
+            this.IsTraces = isTraces;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetPapersResponseLinkedDataset" /> class.
+        /// </summary>
+        public GetPapersResponseLinkedDataset()
+        {
+        }
+
+    }
+}

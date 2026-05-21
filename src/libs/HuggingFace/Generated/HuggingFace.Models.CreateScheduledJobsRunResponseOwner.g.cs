@@ -71,5 +71,6 @@ namespace HuggingFace
         public CreateScheduledJobsRunResponseOwner()
         {
         }
+
     }
 }

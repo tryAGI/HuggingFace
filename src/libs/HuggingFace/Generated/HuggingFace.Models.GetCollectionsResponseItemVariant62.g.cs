@@ -142,5 +142,6 @@ namespace HuggingFace
         public GetCollectionsResponseItemVariant62()
         {
         }
+
     }
 }

@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateAgenticProvisioningAccountRequestsRequestOrchestrator()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateAgenticProvisioningAccountRequestsRequestOrchestrator"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateAgenticProvisioningAccountRequestsRequestOrchestrator FromStripe(global::HuggingFace.CreateAgenticProvisioningAccountRequestsRequestOrchestratorStripe stripe)
+        {
+            return new CreateAgenticProvisioningAccountRequestsRequestOrchestrator
+            {
+                Stripe = stripe,
+            };
+        }
+
     }
 }

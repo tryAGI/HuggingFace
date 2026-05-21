@@ -40,5 +40,6 @@ namespace HuggingFace
         public GetDiscussionsResponseVariant1EventVariant5Data()
         {
         }
+
     }
 }

@@ -52,5 +52,6 @@ namespace HuggingFace
         public CreateCollectionsItemsResponseItemVariant6CdnRegion()
         {
         }
+
     }
 }

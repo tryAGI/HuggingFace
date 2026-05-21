@@ -61,5 +61,6 @@ namespace HuggingFace
         public GetWhoamiV2ResponseOrgResourceGroup()
         {
         }
+
     }
 }

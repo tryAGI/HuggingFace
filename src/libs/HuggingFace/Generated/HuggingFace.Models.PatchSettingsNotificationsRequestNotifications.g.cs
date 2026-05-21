@@ -246,5 +246,6 @@ namespace HuggingFace
         public PatchSettingsNotificationsRequestNotifications()
         {
         }
+
     }
 }

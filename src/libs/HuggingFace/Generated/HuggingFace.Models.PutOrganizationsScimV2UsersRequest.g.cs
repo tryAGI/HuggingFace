@@ -93,5 +93,6 @@ namespace HuggingFace
         public PutOrganizationsScimV2UsersRequest()
         {
         }
+
     }
 }

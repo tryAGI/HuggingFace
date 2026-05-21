@@ -143,6 +143,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Collectorvision,
+        /// <summary>
+        /// 
+        /// </summary>
         Colpali,
         /// <summary>
         /// 
@@ -228,6 +232,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Elm,
+        /// <summary>
+        /// 
+        /// </summary>
+        Encoderfile,
         /// <summary>
         /// 
         /// </summary>
@@ -531,6 +539,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Multimolecule,
+        /// <summary>
+        /// 
+        /// </summary>
         Nemo,
         /// <summary>
         /// 
@@ -671,6 +683,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Sapiens2,
+        /// <summary>
+        /// 
+        /// </summary>
         SeedStory,
         /// <summary>
         /// 
@@ -803,6 +819,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Trellis2,
+        /// <summary>
+        /// 
+        /// </summary>
         Ultralytics,
         /// <summary>
         /// 
@@ -919,6 +939,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Clipscope => "clipscope",
                 GetQuicksearchLibrary2.CloudAgents => "cloud-agents",
                 GetQuicksearchLibrary2.Colipri => "colipri",
+                GetQuicksearchLibrary2.Collectorvision => "collectorvision",
                 GetQuicksearchLibrary2.Colpali => "colpali",
                 GetQuicksearchLibrary2.Comet => "comet",
                 GetQuicksearchLibrary2.Cosmos => "cosmos",
@@ -941,6 +962,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Doctr => "doctr",
                 GetQuicksearchLibrary2.Edsnlp => "edsnlp",
                 GetQuicksearchLibrary2.Elm => "elm",
+                GetQuicksearchLibrary2.Encoderfile => "encoderfile",
                 GetQuicksearchLibrary2.Espnet => "espnet",
                 GetQuicksearchLibrary2.Eupe => "eupe",
                 GetQuicksearchLibrary2.F5Tts => "f5-tts",
@@ -1016,6 +1038,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Monkeyocr => "monkeyocr",
                 GetQuicksearchLibrary2.Moshi => "moshi",
                 GetQuicksearchLibrary2.Mtvcraft => "mtvcraft",
+                GetQuicksearchLibrary2.Multimolecule => "multimolecule",
                 GetQuicksearchLibrary2.Nemo => "nemo",
                 GetQuicksearchLibrary2.NvMedtech => "nv-medtech",
                 GetQuicksearchLibrary2.OpenOasis => "open-oasis",
@@ -1051,6 +1074,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Sana => "sana",
                 GetQuicksearchLibrary2.SapRpt1Oss => "sap-rpt-1-oss",
                 GetQuicksearchLibrary2.Sapiens => "sapiens",
+                GetQuicksearchLibrary2.Sapiens2 => "sapiens2",
                 GetQuicksearchLibrary2.SeedStory => "seed-story",
                 GetQuicksearchLibrary2.Seedvr => "seedvr",
                 GetQuicksearchLibrary2.SelfForcing => "self-forcing",
@@ -1084,6 +1108,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Transformers => "transformers",
                 GetQuicksearchLibrary2.TransformersJs => "transformers.js",
                 GetQuicksearchLibrary2.Trellis => "trellis",
+                GetQuicksearchLibrary2.Trellis2 => "trellis2",
                 GetQuicksearchLibrary2.Ultralytics => "ultralytics",
                 GetQuicksearchLibrary2.Uni3dar => "uni-3dar",
                 GetQuicksearchLibrary2.UnitySentis => "unity-sentis",
@@ -1145,6 +1170,7 @@ namespace HuggingFace
                 "clipscope" => GetQuicksearchLibrary2.Clipscope,
                 "cloud-agents" => GetQuicksearchLibrary2.CloudAgents,
                 "colipri" => GetQuicksearchLibrary2.Colipri,
+                "collectorvision" => GetQuicksearchLibrary2.Collectorvision,
                 "colpali" => GetQuicksearchLibrary2.Colpali,
                 "comet" => GetQuicksearchLibrary2.Comet,
                 "cosmos" => GetQuicksearchLibrary2.Cosmos,
@@ -1167,6 +1193,7 @@ namespace HuggingFace
                 "doctr" => GetQuicksearchLibrary2.Doctr,
                 "edsnlp" => GetQuicksearchLibrary2.Edsnlp,
                 "elm" => GetQuicksearchLibrary2.Elm,
+                "encoderfile" => GetQuicksearchLibrary2.Encoderfile,
                 "espnet" => GetQuicksearchLibrary2.Espnet,
                 "eupe" => GetQuicksearchLibrary2.Eupe,
                 "f5-tts" => GetQuicksearchLibrary2.F5Tts,
@@ -1242,6 +1269,7 @@ namespace HuggingFace
                 "monkeyocr" => GetQuicksearchLibrary2.Monkeyocr,
                 "moshi" => GetQuicksearchLibrary2.Moshi,
                 "mtvcraft" => GetQuicksearchLibrary2.Mtvcraft,
+                "multimolecule" => GetQuicksearchLibrary2.Multimolecule,
                 "nemo" => GetQuicksearchLibrary2.Nemo,
                 "nv-medtech" => GetQuicksearchLibrary2.NvMedtech,
                 "open-oasis" => GetQuicksearchLibrary2.OpenOasis,
@@ -1277,6 +1305,7 @@ namespace HuggingFace
                 "sana" => GetQuicksearchLibrary2.Sana,
                 "sap-rpt-1-oss" => GetQuicksearchLibrary2.SapRpt1Oss,
                 "sapiens" => GetQuicksearchLibrary2.Sapiens,
+                "sapiens2" => GetQuicksearchLibrary2.Sapiens2,
                 "seed-story" => GetQuicksearchLibrary2.SeedStory,
                 "seedvr" => GetQuicksearchLibrary2.Seedvr,
                 "self-forcing" => GetQuicksearchLibrary2.SelfForcing,
@@ -1310,6 +1339,7 @@ namespace HuggingFace
                 "transformers" => GetQuicksearchLibrary2.Transformers,
                 "transformers.js" => GetQuicksearchLibrary2.TransformersJs,
                 "trellis" => GetQuicksearchLibrary2.Trellis,
+                "trellis2" => GetQuicksearchLibrary2.Trellis2,
                 "ultralytics" => GetQuicksearchLibrary2.Ultralytics,
                 "uni-3dar" => GetQuicksearchLibrary2.Uni3dar,
                 "unity-sentis" => GetQuicksearchLibrary2.UnitySentis,

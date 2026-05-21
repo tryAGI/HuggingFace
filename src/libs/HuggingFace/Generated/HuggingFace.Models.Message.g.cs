@@ -29,6 +29,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickBody(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.MessageBody? value)
+        {
+            value = Body;
+            return IsBody;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.MessageBody PickBody() => IsBody
+            ? Body!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Body' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageVariant2? MessageVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageVariant2))]
 #endif
         public bool IsMessageVariant2 => MessageVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.MessageVariant2? value)
+        {
+            value = MessageVariant2;
+            return IsMessageVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.MessageVariant2 PickMessageVariant2() => IsMessageVariant2
+            ? MessageVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static Message FromBody(global::HuggingFace.MessageBody? value) => new Message(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Message(global::HuggingFace.MessageVariant2 value) => new Message((global::HuggingFace.MessageVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace HuggingFace
         {
             MessageVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Message FromMessageVariant2(global::HuggingFace.MessageVariant2? value) => new Message(value);
 
         /// <summary>
         /// 
@@ -119,7 +169,7 @@ namespace HuggingFace
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.MessageBody?, TResult>? body = null,
-            global::System.Func<global::HuggingFace.MessageVariant2?, TResult>? messageVariant2 = null,
+            global::System.Func<global::HuggingFace.MessageVariant2, TResult>? messageVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -144,7 +194,31 @@ namespace HuggingFace
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.MessageBody?>? body = null,
-            global::System.Action<global::HuggingFace.MessageVariant2?>? messageVariant2 = null,
+
+            global::System.Action<global::HuggingFace.MessageVariant2>? messageVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsBody)
+            {
+                body?.Invoke(Body!);
+            }
+            else if (IsMessageVariant2)
+            {
+                messageVariant2?.Invoke(MessageVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.MessageBody?>? body = null,
+            global::System.Action<global::HuggingFace.MessageVariant2>? messageVariant2 = null,
             bool validate = true)
         {
             if (validate)

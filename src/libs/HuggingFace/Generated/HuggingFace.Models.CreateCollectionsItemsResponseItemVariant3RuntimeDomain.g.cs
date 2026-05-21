@@ -60,5 +60,6 @@ namespace HuggingFace
         public CreateCollectionsItemsResponseItemVariant3RuntimeDomain()
         {
         }
+
     }
 }

@@ -61,5 +61,6 @@ namespace HuggingFace
         public CreateOrganizationsScimV2GroupsRequest()
         {
         }
+
     }
 }

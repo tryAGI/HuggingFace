@@ -143,6 +143,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Collectorvision,
+        /// <summary>
+        /// 
+        /// </summary>
         Colpali,
         /// <summary>
         /// 
@@ -228,6 +232,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Elm,
+        /// <summary>
+        /// 
+        /// </summary>
+        Encoderfile,
         /// <summary>
         /// 
         /// </summary>
@@ -531,6 +539,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Multimolecule,
+        /// <summary>
+        /// 
+        /// </summary>
         Nemo,
         /// <summary>
         /// 
@@ -671,6 +683,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Sapiens2,
+        /// <summary>
+        /// 
+        /// </summary>
         SeedStory,
         /// <summary>
         /// 
@@ -803,6 +819,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Trellis2,
+        /// <summary>
+        /// 
+        /// </summary>
         Ultralytics,
         /// <summary>
         /// 
@@ -919,6 +939,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Clipscope => "clipscope",
                 CreateQuicksearchRequestLibrary.CloudAgents => "cloud-agents",
                 CreateQuicksearchRequestLibrary.Colipri => "colipri",
+                CreateQuicksearchRequestLibrary.Collectorvision => "collectorvision",
                 CreateQuicksearchRequestLibrary.Colpali => "colpali",
                 CreateQuicksearchRequestLibrary.Comet => "comet",
                 CreateQuicksearchRequestLibrary.Cosmos => "cosmos",
@@ -941,6 +962,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Doctr => "doctr",
                 CreateQuicksearchRequestLibrary.Edsnlp => "edsnlp",
                 CreateQuicksearchRequestLibrary.Elm => "elm",
+                CreateQuicksearchRequestLibrary.Encoderfile => "encoderfile",
                 CreateQuicksearchRequestLibrary.Espnet => "espnet",
                 CreateQuicksearchRequestLibrary.Eupe => "eupe",
                 CreateQuicksearchRequestLibrary.F5Tts => "f5-tts",
@@ -1016,6 +1038,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Monkeyocr => "monkeyocr",
                 CreateQuicksearchRequestLibrary.Moshi => "moshi",
                 CreateQuicksearchRequestLibrary.Mtvcraft => "mtvcraft",
+                CreateQuicksearchRequestLibrary.Multimolecule => "multimolecule",
                 CreateQuicksearchRequestLibrary.Nemo => "nemo",
                 CreateQuicksearchRequestLibrary.NvMedtech => "nv-medtech",
                 CreateQuicksearchRequestLibrary.OpenOasis => "open-oasis",
@@ -1051,6 +1074,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Sana => "sana",
                 CreateQuicksearchRequestLibrary.SapRpt1Oss => "sap-rpt-1-oss",
                 CreateQuicksearchRequestLibrary.Sapiens => "sapiens",
+                CreateQuicksearchRequestLibrary.Sapiens2 => "sapiens2",
                 CreateQuicksearchRequestLibrary.SeedStory => "seed-story",
                 CreateQuicksearchRequestLibrary.Seedvr => "seedvr",
                 CreateQuicksearchRequestLibrary.SelfForcing => "self-forcing",
@@ -1084,6 +1108,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Transformers => "transformers",
                 CreateQuicksearchRequestLibrary.TransformersJs => "transformers.js",
                 CreateQuicksearchRequestLibrary.Trellis => "trellis",
+                CreateQuicksearchRequestLibrary.Trellis2 => "trellis2",
                 CreateQuicksearchRequestLibrary.Ultralytics => "ultralytics",
                 CreateQuicksearchRequestLibrary.Uni3dar => "uni-3dar",
                 CreateQuicksearchRequestLibrary.UnitySentis => "unity-sentis",
@@ -1145,6 +1170,7 @@ namespace HuggingFace
                 "clipscope" => CreateQuicksearchRequestLibrary.Clipscope,
                 "cloud-agents" => CreateQuicksearchRequestLibrary.CloudAgents,
                 "colipri" => CreateQuicksearchRequestLibrary.Colipri,
+                "collectorvision" => CreateQuicksearchRequestLibrary.Collectorvision,
                 "colpali" => CreateQuicksearchRequestLibrary.Colpali,
                 "comet" => CreateQuicksearchRequestLibrary.Comet,
                 "cosmos" => CreateQuicksearchRequestLibrary.Cosmos,
@@ -1167,6 +1193,7 @@ namespace HuggingFace
                 "doctr" => CreateQuicksearchRequestLibrary.Doctr,
                 "edsnlp" => CreateQuicksearchRequestLibrary.Edsnlp,
                 "elm" => CreateQuicksearchRequestLibrary.Elm,
+                "encoderfile" => CreateQuicksearchRequestLibrary.Encoderfile,
                 "espnet" => CreateQuicksearchRequestLibrary.Espnet,
                 "eupe" => CreateQuicksearchRequestLibrary.Eupe,
                 "f5-tts" => CreateQuicksearchRequestLibrary.F5Tts,
@@ -1242,6 +1269,7 @@ namespace HuggingFace
                 "monkeyocr" => CreateQuicksearchRequestLibrary.Monkeyocr,
                 "moshi" => CreateQuicksearchRequestLibrary.Moshi,
                 "mtvcraft" => CreateQuicksearchRequestLibrary.Mtvcraft,
+                "multimolecule" => CreateQuicksearchRequestLibrary.Multimolecule,
                 "nemo" => CreateQuicksearchRequestLibrary.Nemo,
                 "nv-medtech" => CreateQuicksearchRequestLibrary.NvMedtech,
                 "open-oasis" => CreateQuicksearchRequestLibrary.OpenOasis,
@@ -1277,6 +1305,7 @@ namespace HuggingFace
                 "sana" => CreateQuicksearchRequestLibrary.Sana,
                 "sap-rpt-1-oss" => CreateQuicksearchRequestLibrary.SapRpt1Oss,
                 "sapiens" => CreateQuicksearchRequestLibrary.Sapiens,
+                "sapiens2" => CreateQuicksearchRequestLibrary.Sapiens2,
                 "seed-story" => CreateQuicksearchRequestLibrary.SeedStory,
                 "seedvr" => CreateQuicksearchRequestLibrary.Seedvr,
                 "self-forcing" => CreateQuicksearchRequestLibrary.SelfForcing,
@@ -1310,6 +1339,7 @@ namespace HuggingFace
                 "transformers" => CreateQuicksearchRequestLibrary.Transformers,
                 "transformers.js" => CreateQuicksearchRequestLibrary.TransformersJs,
                 "trellis" => CreateQuicksearchRequestLibrary.Trellis,
+                "trellis2" => CreateQuicksearchRequestLibrary.Trellis2,
                 "ultralytics" => CreateQuicksearchRequestLibrary.Ultralytics,
                 "uni-3dar" => CreateQuicksearchRequestLibrary.Uni3dar,
                 "unity-sentis" => CreateQuicksearchRequestLibrary.UnitySentis,

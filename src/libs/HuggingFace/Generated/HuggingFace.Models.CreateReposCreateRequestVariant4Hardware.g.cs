@@ -95,6 +95,22 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RtxPro6000,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x2,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x4,
+        /// <summary>
+        /// 
+        /// </summary>
+        RtxPro6000x8,
+        /// <summary>
+        /// 
+        /// </summary>
         Sprx8,
         /// <summary>
         /// 
@@ -147,6 +163,10 @@ namespace HuggingFace
                 CreateReposCreateRequestVariant4Hardware.L40sx8 => "l40sx8",
                 CreateReposCreateRequestVariant4Hardware.L4x1 => "l4x1",
                 CreateReposCreateRequestVariant4Hardware.L4x4 => "l4x4",
+                CreateReposCreateRequestVariant4Hardware.RtxPro6000 => "rtx-pro-6000",
+                CreateReposCreateRequestVariant4Hardware.RtxPro6000x2 => "rtx-pro-6000x2",
+                CreateReposCreateRequestVariant4Hardware.RtxPro6000x4 => "rtx-pro-6000x4",
+                CreateReposCreateRequestVariant4Hardware.RtxPro6000x8 => "rtx-pro-6000x8",
                 CreateReposCreateRequestVariant4Hardware.Sprx8 => "sprx8",
                 CreateReposCreateRequestVariant4Hardware.T4Medium => "t4-medium",
                 CreateReposCreateRequestVariant4Hardware.T4Small => "t4-small",
@@ -183,6 +203,10 @@ namespace HuggingFace
                 "l40sx8" => CreateReposCreateRequestVariant4Hardware.L40sx8,
                 "l4x1" => CreateReposCreateRequestVariant4Hardware.L4x1,
                 "l4x4" => CreateReposCreateRequestVariant4Hardware.L4x4,
+                "rtx-pro-6000" => CreateReposCreateRequestVariant4Hardware.RtxPro6000,
+                "rtx-pro-6000x2" => CreateReposCreateRequestVariant4Hardware.RtxPro6000x2,
+                "rtx-pro-6000x4" => CreateReposCreateRequestVariant4Hardware.RtxPro6000x4,
+                "rtx-pro-6000x8" => CreateReposCreateRequestVariant4Hardware.RtxPro6000x8,
                 "sprx8" => CreateReposCreateRequestVariant4Hardware.Sprx8,
                 "t4-medium" => CreateReposCreateRequestVariant4Hardware.T4Medium,
                 "t4-small" => CreateReposCreateRequestVariant4Hardware.T4Small,

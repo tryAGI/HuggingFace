@@ -81,5 +81,6 @@ namespace HuggingFace
         public GetDatasetsTagsByTypeResponseItem()
         {
         }
+
     }
 }

@@ -138,7 +138,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (predictInputVariant1 == null && predictInputVariant2 == null && predictInputVariant3 == null)
+            {
                 try
                 {
 
@@ -152,7 +155,10 @@ namespace HuggingFace.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (predictInputVariant1 == null && predictInputVariant2 == null && predictInputVariant3 == null)
+            {
                 try
                 {
 

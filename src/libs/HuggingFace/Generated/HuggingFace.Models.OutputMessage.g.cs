@@ -29,6 +29,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.TextMessage? value)
+        {
+            value = Text;
+            return IsText;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.TextMessage PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolCallMessage? ToolCall { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolCall))]
 #endif
         public bool IsToolCall => ToolCall != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ToolCallMessage? value)
+        {
+            value = ToolCall;
+            return IsToolCall;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolCallMessage PickToolCall() => IsToolCall
+            ? ToolCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCall' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static OutputMessage FromText(global::HuggingFace.TextMessage? value) => new OutputMessage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator OutputMessage(global::HuggingFace.ToolCallMessage value) => new OutputMessage((global::HuggingFace.ToolCallMessage?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace HuggingFace
         {
             ToolCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static OutputMessage FromToolCall(global::HuggingFace.ToolCallMessage? value) => new OutputMessage(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.TextMessage?, TResult>? text = null,
-            global::System.Func<global::HuggingFace.ToolCallMessage?, TResult>? toolCall = null,
+            global::System.Func<global::HuggingFace.TextMessage, TResult>? text = null,
+            global::System.Func<global::HuggingFace.ToolCallMessage, TResult>? toolCall = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.TextMessage?>? text = null,
-            global::System.Action<global::HuggingFace.ToolCallMessage?>? toolCall = null,
+            global::System.Action<global::HuggingFace.TextMessage>? text = null,
+
+            global::System.Action<global::HuggingFace.ToolCallMessage>? toolCall = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsText)
+            {
+                text?.Invoke(Text!);
+            }
+            else if (IsToolCall)
+            {
+                toolCall?.Invoke(ToolCall!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.TextMessage>? text = null,
+            global::System.Action<global::HuggingFace.ToolCallMessage>? toolCall = null,
             bool validate = true)
         {
             if (validate)

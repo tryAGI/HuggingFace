@@ -159,5 +159,6 @@ namespace HuggingFace
         public CreateCollectionsItemsResponseItemVariant2AvailableInferenceProvider2()
         {
         }
+
     }
 }

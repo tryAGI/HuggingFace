@@ -183,5 +183,6 @@ namespace HuggingFace
         public GetDailyPapersResponseItemPaper()
         {
         }
+
     }
 }

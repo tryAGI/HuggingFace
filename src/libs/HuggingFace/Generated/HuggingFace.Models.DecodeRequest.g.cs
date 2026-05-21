@@ -55,5 +55,6 @@ namespace HuggingFace
         public DecodeRequest()
         {
         }
+
     }
 }

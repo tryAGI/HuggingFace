@@ -147,5 +147,6 @@ namespace HuggingFace
         public GetDiscussionsResponseVariant2EventVariant2AuthorVariant2()
         {
         }
+
     }
 }

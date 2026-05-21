@@ -310,5 +310,6 @@ namespace HuggingFace
         public ChatRequest()
         {
         }
+
     }
 }

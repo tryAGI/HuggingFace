@@ -167,5 +167,6 @@ namespace HuggingFace
         public CreateCollectionsResponseItemVariant1()
         {
         }
+
     }
 }

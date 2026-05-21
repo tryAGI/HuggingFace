@@ -56,5 +56,6 @@ namespace HuggingFace
         public ClassifierModel()
         {
         }
+
     }
 }

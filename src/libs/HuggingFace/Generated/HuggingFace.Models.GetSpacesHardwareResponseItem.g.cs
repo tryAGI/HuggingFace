@@ -109,5 +109,6 @@ namespace HuggingFace
         public GetSpacesHardwareResponseItem()
         {
         }
+
     }
 }

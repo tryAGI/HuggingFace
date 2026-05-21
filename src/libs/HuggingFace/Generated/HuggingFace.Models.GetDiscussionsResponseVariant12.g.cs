@@ -168,5 +168,6 @@ namespace HuggingFace
         public GetDiscussionsResponseVariant12()
         {
         }
+
     }
 }

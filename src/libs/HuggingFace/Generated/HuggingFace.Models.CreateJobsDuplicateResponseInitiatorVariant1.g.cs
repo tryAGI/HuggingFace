@@ -71,5 +71,6 @@ namespace HuggingFace
         public CreateJobsDuplicateResponseInitiatorVariant1()
         {
         }
+
     }
 }

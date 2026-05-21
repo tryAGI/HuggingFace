@@ -136,5 +136,6 @@ namespace HuggingFace
         public GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrg()
         {
         }
+
     }
 }

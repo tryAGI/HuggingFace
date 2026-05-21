@@ -29,6 +29,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCompletionVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12>? value)
+        {
+            value = CompletionVariant1;
+            return IsCompletionVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12> PickCompletionVariant1() => IsCompletionVariant1
+            ? CompletionVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>? CompletionVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionVariant2))]
 #endif
         public bool IsCompletionVariant2 => CompletionVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCompletionVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>? value)
+        {
+            value = CompletionVariant2;
+            return IsCompletionVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22> PickCompletionVariant2() => IsCompletionVariant2
+            ? CompletionVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +99,11 @@ namespace HuggingFace
         {
             CompletionVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Completion FromCompletionVariant1(global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12>? value) => new Completion(value);
 
         /// <summary>
         /// 
@@ -81,6 +126,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static Completion FromCompletionVariant2(global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>? value) => new Completion(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public Completion(
             global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12>? completionVariant1,
             global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>? completionVariant2
@@ -93,7 +143,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        public object? Object =>
+        public object? Object1 =>
             CompletionVariant2 as object ??
             CompletionVariant1 as object 
             ;
@@ -143,6 +193,30 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12>?>? completionVariant1 = null,
+
+            global::System.Action<global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>?>? completionVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCompletionVariant1)
+            {
+                completionVariant1?.Invoke(CompletionVariant1!);
+            }
+            else if (IsCompletionVariant2)
+            {
+                completionVariant2?.Invoke(CompletionVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12>?>? completionVariant1 = null,
             global::System.Action<global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22>?>? completionVariant2 = null,
             bool validate = true)

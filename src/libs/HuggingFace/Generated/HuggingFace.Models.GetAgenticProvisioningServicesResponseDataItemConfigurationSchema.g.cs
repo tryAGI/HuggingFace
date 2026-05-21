@@ -50,5 +50,18 @@ namespace HuggingFace
         public GetAgenticProvisioningServicesResponseDataItemConfigurationSchema()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="GetAgenticProvisioningServicesResponseDataItemConfigurationSchema"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static GetAgenticProvisioningServicesResponseDataItemConfigurationSchema FromProperties(object properties)
+        {
+            return new GetAgenticProvisioningServicesResponseDataItemConfigurationSchema
+            {
+                Properties = properties,
+            };
+        }
+
     }
 }

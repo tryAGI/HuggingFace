@@ -65,7 +65,7 @@ namespace HuggingFace
         ///   }<br/>
         /// }<br/>
         /// {<br/>
-        ///   "key": "file", <br/>
+        ///   "key": "file",<br/>
         ///   "value": {<br/>
         ///     "path": "string (REQUIRED)",<br/>
         ///     "content": "string (OPTIONAL - required if oldPath not set)",<br/>
@@ -174,7 +174,7 @@ namespace HuggingFace
         ///   }<br/>
         /// }<br/>
         /// {<br/>
-        ///   "key": "file", <br/>
+        ///   "key": "file",<br/>
         ///   "value": {<br/>
         ///     "path": "string (REQUIRED)",<br/>
         ///     "content": "string (OPTIONAL - required if oldPath not set)",<br/>

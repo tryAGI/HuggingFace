@@ -57,5 +57,6 @@ namespace HuggingFace
         public CreateBlogCommentResponseNewMessageAuthor2()
         {
         }
+
     }
 }

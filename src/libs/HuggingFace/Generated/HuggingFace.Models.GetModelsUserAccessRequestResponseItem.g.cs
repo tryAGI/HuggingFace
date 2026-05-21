@@ -43,6 +43,12 @@ namespace HuggingFace
         public required global::System.DateTime Timestamp { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reviewedAt")]
+        public global::System.DateTime? ReviewedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -56,6 +62,7 @@ namespace HuggingFace
         /// <param name="user"></param>
         /// <param name="grantedBy"></param>
         /// <param name="fields"></param>
+        /// <param name="reviewedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -64,13 +71,15 @@ namespace HuggingFace
             global::System.DateTime timestamp,
             global::HuggingFace.GetModelsUserAccessRequestResponseItemUser? user,
             global::HuggingFace.AnyOf<global::HuggingFace.GetModelsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetModelsUserAccessRequestResponseItemGrantedByVariant2>? grantedBy,
-            global::System.Collections.Generic.Dictionary<string, string>? fields)
+            global::System.Collections.Generic.Dictionary<string, string>? fields,
+            global::System.DateTime? reviewedAt)
         {
             this.User = user;
             this.GrantedBy = grantedBy;
             this.Status = status;
             this.Fields = fields;
             this.Timestamp = timestamp;
+            this.ReviewedAt = reviewedAt;
         }
 
         /// <summary>
@@ -79,5 +88,6 @@ namespace HuggingFace
         public GetModelsUserAccessRequestResponseItem()
         {
         }
+
     }
 }

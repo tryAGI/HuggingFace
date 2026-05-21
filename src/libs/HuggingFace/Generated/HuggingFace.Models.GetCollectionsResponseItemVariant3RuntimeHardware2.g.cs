@@ -48,5 +48,6 @@ namespace HuggingFace
         public GetCollectionsResponseItemVariant3RuntimeHardware2()
         {
         }
+
     }
 }

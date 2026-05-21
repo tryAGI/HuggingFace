@@ -29,6 +29,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickGenerate(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.GenerateResponse? value)
+        {
+            value = Generate;
+            return IsGenerate;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.GenerateResponse PickGenerate() => IsGenerate
+            ? Generate!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Generate' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ChatCompletion? ChatCompletion { get; init; }
 #else
@@ -46,6 +66,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickChatCompletion(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ChatCompletion? value)
+        {
+            value = ChatCompletion;
+            return IsChatCompletion;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ChatCompletion PickChatCompletion() => IsChatCompletion
+            ? ChatCompletion!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletion' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.CompletionFinal? CompletionFinal { get; init; }
 #else
@@ -59,6 +99,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionFinal))]
 #endif
         public bool IsCompletionFinal => CompletionFinal != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCompletionFinal(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.CompletionFinal? value)
+        {
+            value = CompletionFinal;
+            return IsCompletionFinal;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.CompletionFinal PickCompletionFinal() => IsCompletionFinal
+            ? CompletionFinal!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionFinal' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace HuggingFace
         {
             Generate = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerResponse FromGenerate(global::HuggingFace.GenerateResponse? value) => new SagemakerResponse(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static SagemakerResponse FromChatCompletion(global::HuggingFace.ChatCompletion? value) => new SagemakerResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator SagemakerResponse(global::HuggingFace.CompletionFinal value) => new SagemakerResponse((global::HuggingFace.CompletionFinal?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace HuggingFace
         {
             CompletionFinal = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SagemakerResponse FromCompletionFinal(global::HuggingFace.CompletionFinal? value) => new SagemakerResponse(value);
 
         /// <summary>
         /// 
@@ -157,9 +232,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.GenerateResponse?, TResult>? generate = null,
-            global::System.Func<global::HuggingFace.ChatCompletion?, TResult>? chatCompletion = null,
-            global::System.Func<global::HuggingFace.CompletionFinal?, TResult>? completionFinal = null,
+            global::System.Func<global::HuggingFace.GenerateResponse, TResult>? generate = null,
+            global::System.Func<global::HuggingFace.ChatCompletion, TResult>? chatCompletion = null,
+            global::System.Func<global::HuggingFace.CompletionFinal, TResult>? completionFinal = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +262,39 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.GenerateResponse?>? generate = null,
-            global::System.Action<global::HuggingFace.ChatCompletion?>? chatCompletion = null,
-            global::System.Action<global::HuggingFace.CompletionFinal?>? completionFinal = null,
+            global::System.Action<global::HuggingFace.GenerateResponse>? generate = null,
+
+            global::System.Action<global::HuggingFace.ChatCompletion>? chatCompletion = null,
+
+            global::System.Action<global::HuggingFace.CompletionFinal>? completionFinal = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsGenerate)
+            {
+                generate?.Invoke(Generate!);
+            }
+            else if (IsChatCompletion)
+            {
+                chatCompletion?.Invoke(ChatCompletion!);
+            }
+            else if (IsCompletionFinal)
+            {
+                completionFinal?.Invoke(CompletionFinal!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.GenerateResponse>? generate = null,
+            global::System.Action<global::HuggingFace.ChatCompletion>? chatCompletion = null,
+            global::System.Action<global::HuggingFace.CompletionFinal>? completionFinal = null,
             bool validate = true)
         {
             if (validate)

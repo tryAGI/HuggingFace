@@ -12,6 +12,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.MessageChunkDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageChunkVariant1? Text { get; init; }
 #else
@@ -29,6 +34,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.MessageChunkVariant1? value)
+        {
+            value = Text;
+            return IsText;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.MessageChunkVariant1 PickText() => IsText
+            ? Text!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageChunkVariant2? ImageUrl { get; init; }
 #else
@@ -42,6 +67,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ImageUrl))]
 #endif
         public bool IsImageUrl => ImageUrl != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickImageUrl(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.MessageChunkVariant2? value)
+        {
+            value = ImageUrl;
+            return IsImageUrl;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.MessageChunkVariant2 PickImageUrl() => IsImageUrl
+            ? ImageUrl!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ImageUrl' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +104,11 @@ namespace HuggingFace
         {
             Text = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageChunk FromText(global::HuggingFace.MessageChunkVariant1? value) => new MessageChunk(value);
 
         /// <summary>
         /// 
@@ -81,11 +131,19 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static MessageChunk FromImageUrl(global::HuggingFace.MessageChunkVariant2? value) => new MessageChunk(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public MessageChunk(
+            global::HuggingFace.MessageChunkDiscriminatorType? type,
             global::HuggingFace.MessageChunkVariant1? text,
             global::HuggingFace.MessageChunkVariant2? imageUrl
             )
         {
+            Type = type;
+
             Text = text;
             ImageUrl = imageUrl;
         }
@@ -118,8 +176,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.MessageChunkVariant1?, TResult>? text = null,
-            global::System.Func<global::HuggingFace.MessageChunkVariant2?, TResult>? imageUrl = null,
+            global::System.Func<global::HuggingFace.MessageChunkVariant1, TResult>? text = null,
+            global::System.Func<global::HuggingFace.MessageChunkVariant2, TResult>? imageUrl = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +201,32 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.MessageChunkVariant1?>? text = null,
-            global::System.Action<global::HuggingFace.MessageChunkVariant2?>? imageUrl = null,
+            global::System.Action<global::HuggingFace.MessageChunkVariant1>? text = null,
+
+            global::System.Action<global::HuggingFace.MessageChunkVariant2>? imageUrl = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsText)
+            {
+                text?.Invoke(Text!);
+            }
+            else if (IsImageUrl)
+            {
+                imageUrl?.Invoke(ImageUrl!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.MessageChunkVariant1>? text = null,
+            global::System.Action<global::HuggingFace.MessageChunkVariant2>? imageUrl = null,
             bool validate = true)
         {
             if (validate)

@@ -51,5 +51,6 @@ namespace HuggingFace
         public GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1()
         {
         }
+
     }
 }

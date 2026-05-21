@@ -120,5 +120,6 @@ namespace HuggingFace
         public GetDocsSearchFullTextResponseHitFormatted()
         {
         }
+
     }
 }

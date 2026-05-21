@@ -28,6 +28,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickValue1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T1? value)
+        {
+            value = Value1;
+            return IsValue1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public T1 PickValue1() => IsValue1
+            ? Value1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Value1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public T2? Value2 { get; init; }
 #else
@@ -45,6 +65,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickValue2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T2? value)
+        {
+            value = Value2;
+            return IsValue2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public T2 PickValue2() => IsValue2
+            ? Value2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Value2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public T3? Value3 { get; init; }
 #else
@@ -58,6 +98,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
 #endif
         public bool IsValue3 => Value3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickValue3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out T3? value)
+        {
+            value = Value3;
+            return IsValue3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public T3 PickValue3() => IsValue3
+            ? Value3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Value3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -75,6 +135,11 @@ namespace HuggingFace
         {
             Value1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AnyOf<T1, T2, T3> FromValue1(T1? value) => new AnyOf<T1, T2, T3>(value);
 
         /// <summary>
         /// 
@@ -97,6 +162,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static AnyOf<T1, T2, T3> FromValue2(T2? value) => new AnyOf<T1, T2, T3>(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AnyOf<T1, T2, T3>(T3 value) => new AnyOf<T1, T2, T3>((T3?)value);
 
         /// <summary>
@@ -111,6 +181,11 @@ namespace HuggingFace
         {
             Value3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AnyOf<T1, T2, T3> FromValue3(T3? value) => new AnyOf<T1, T2, T3>(value);
 
         /// <summary>
         /// 
@@ -186,6 +261,36 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<T1>? value1 = null,
+
+            global::System.Action<T2>? value2 = null,
+
+            global::System.Action<T3>? value3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsValue1)
+            {
+                value1?.Invoke(Value1!);
+            }
+            else if (IsValue2)
+            {
+                value2?.Invoke(Value2!);
+            }
+            else if (IsValue3)
+            {
+                value3?.Invoke(Value3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<T1>? value1 = null,
             global::System.Action<T2>? value2 = null,
             global::System.Action<T3>? value3 = null,

@@ -44,5 +44,6 @@ namespace HuggingFace
         public StreamOptions()
         {
         }
+
     }
 }

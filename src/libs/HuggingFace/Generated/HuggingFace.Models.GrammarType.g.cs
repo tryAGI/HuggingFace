@@ -12,6 +12,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public global::HuggingFace.GrammarTypeDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GrammarTypeVariant1? Json { get; init; }
 #else
@@ -25,6 +30,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Json))]
 #endif
         public bool IsJson => Json != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickJson(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.GrammarTypeVariant1? value)
+        {
+            value = Json;
+            return IsJson;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.GrammarTypeVariant1 PickJson() => IsJson
+            ? Json!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Json' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -46,6 +71,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickRegex(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.GrammarTypeVariant2? value)
+        {
+            value = Regex;
+            return IsRegex;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.GrammarTypeVariant2 PickRegex() => IsRegex
+            ? Regex!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Regex' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GrammarTypeVariant3? JsonSchema { get; init; }
 #else
@@ -59,6 +104,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonSchema))]
 #endif
         public bool IsJsonSchema => JsonSchema != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickJsonSchema(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.GrammarTypeVariant3? value)
+        {
+            value = JsonSchema;
+            return IsJsonSchema;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.GrammarTypeVariant3 PickJsonSchema() => IsJsonSchema
+            ? JsonSchema!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonSchema' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +141,11 @@ namespace HuggingFace
         {
             Json = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GrammarType FromJson(global::HuggingFace.GrammarTypeVariant1? value) => new GrammarType(value);
 
         /// <summary>
         /// 
@@ -98,6 +168,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static GrammarType FromRegex(global::HuggingFace.GrammarTypeVariant2? value) => new GrammarType(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GrammarType(global::HuggingFace.GrammarTypeVariant3 value) => new GrammarType((global::HuggingFace.GrammarTypeVariant3?)value);
 
         /// <summary>
@@ -116,12 +191,20 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static GrammarType FromJsonSchema(global::HuggingFace.GrammarTypeVariant3? value) => new GrammarType(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public GrammarType(
+            global::HuggingFace.GrammarTypeDiscriminatorType? type,
             global::HuggingFace.GrammarTypeVariant1? json,
             global::HuggingFace.GrammarTypeVariant2? regex,
             global::HuggingFace.GrammarTypeVariant3? jsonSchema
             )
         {
+            Type = type;
+
             Json = json;
             Regex = regex;
             JsonSchema = jsonSchema;
@@ -157,9 +240,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::HuggingFace.GrammarTypeVariant1?, TResult>? json = null,
-            global::System.Func<global::HuggingFace.GrammarTypeVariant2?, TResult>? regex = null,
-            global::System.Func<global::HuggingFace.GrammarTypeVariant3?, TResult>? jsonSchema = null,
+            global::System.Func<global::HuggingFace.GrammarTypeVariant1, TResult>? json = null,
+            global::System.Func<global::HuggingFace.GrammarTypeVariant2, TResult>? regex = null,
+            global::System.Func<global::HuggingFace.GrammarTypeVariant3, TResult>? jsonSchema = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +270,39 @@ namespace HuggingFace
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::HuggingFace.GrammarTypeVariant1?>? json = null,
-            global::System.Action<global::HuggingFace.GrammarTypeVariant2?>? regex = null,
-            global::System.Action<global::HuggingFace.GrammarTypeVariant3?>? jsonSchema = null,
+            global::System.Action<global::HuggingFace.GrammarTypeVariant1>? json = null,
+
+            global::System.Action<global::HuggingFace.GrammarTypeVariant2>? regex = null,
+
+            global::System.Action<global::HuggingFace.GrammarTypeVariant3>? jsonSchema = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsJson)
+            {
+                json?.Invoke(Json!);
+            }
+            else if (IsRegex)
+            {
+                regex?.Invoke(Regex!);
+            }
+            else if (IsJsonSchema)
+            {
+                jsonSchema?.Invoke(JsonSchema!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.GrammarTypeVariant1>? json = null,
+            global::System.Action<global::HuggingFace.GrammarTypeVariant2>? regex = null,
+            global::System.Action<global::HuggingFace.GrammarTypeVariant3>? jsonSchema = null,
             bool validate = true)
         {
             if (validate)

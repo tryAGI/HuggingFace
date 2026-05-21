@@ -119,5 +119,6 @@ namespace HuggingFace
         public PutOrganizationsScimProvisioningV2UsersResponse()
         {
         }
+
     }
 }

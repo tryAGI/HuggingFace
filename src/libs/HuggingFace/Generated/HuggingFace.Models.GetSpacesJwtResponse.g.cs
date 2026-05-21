@@ -76,5 +76,6 @@ namespace HuggingFace
         public GetSpacesJwtResponse()
         {
         }
+
     }
 }

@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateAgenticProvisioningResourcesRequestVariant3PaymentCredentials()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateAgenticProvisioningResourcesRequestVariant3PaymentCredentials"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateAgenticProvisioningResourcesRequestVariant3PaymentCredentials FromStripePaymentToken(string stripePaymentToken)
+        {
+            return new CreateAgenticProvisioningResourcesRequestVariant3PaymentCredentials
+            {
+                StripePaymentToken = stripePaymentToken,
+            };
+        }
+
     }
 }

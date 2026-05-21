@@ -50,5 +50,18 @@ namespace HuggingFace
         public CreateAgenticProvisioningAccountRequestsResponseVariant2RequiresAuth()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateAgenticProvisioningAccountRequestsResponseVariant2RequiresAuth"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateAgenticProvisioningAccountRequestsResponseVariant2RequiresAuth FromRedirect(global::HuggingFace.CreateAgenticProvisioningAccountRequestsResponseVariant2RequiresAuthRedirect redirect)
+        {
+            return new CreateAgenticProvisioningAccountRequestsResponseVariant2RequiresAuth
+            {
+                Redirect = redirect,
+            };
+        }
+
     }
 }

@@ -40,5 +40,6 @@ namespace HuggingFace
         public PutOrganizationsScimV2GroupsRequestMember()
         {
         }
+
     }
 }

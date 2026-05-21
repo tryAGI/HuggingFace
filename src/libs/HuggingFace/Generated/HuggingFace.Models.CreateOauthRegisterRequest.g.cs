@@ -112,5 +112,6 @@ namespace HuggingFace
         public CreateOauthRegisterRequest()
         {
         }
+
     }
 }

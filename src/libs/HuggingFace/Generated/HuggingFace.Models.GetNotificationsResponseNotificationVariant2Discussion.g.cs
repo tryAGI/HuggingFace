@@ -91,5 +91,6 @@ namespace HuggingFace
         public GetNotificationsResponseNotificationVariant2Discussion()
         {
         }
+
     }
 }

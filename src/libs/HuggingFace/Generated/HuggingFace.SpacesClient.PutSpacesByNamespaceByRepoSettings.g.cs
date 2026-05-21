@@ -468,6 +468,9 @@ namespace HuggingFace
         /// <param name="discussionsDisabled"></param>
         /// <param name="discussionsSorting"></param>
         /// <param name="gated"></param>
+        /// <param name="orgMembersGated">
+        /// If true, members of the owning org (except admins) must also go through the gated access-request flow.
+        /// </param>
         /// <param name="gatedNotificationsEmail"></param>
         /// <param name="gatedNotificationsMode"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -481,6 +484,7 @@ namespace HuggingFace
             bool? discussionsDisabled = default,
             global::HuggingFace.PutSpacesSettingsRequestDiscussionsSorting? discussionsSorting = default,
             global::HuggingFace.AnyOf<string, global::HuggingFace.PutSpacesSettingsRequestGatedEnum2?>? gated = default,
+            bool? orgMembersGated = default,
             string? gatedNotificationsEmail = default,
             global::HuggingFace.PutSpacesSettingsRequestGatedNotificationsMode? gatedNotificationsMode = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -493,6 +497,7 @@ namespace HuggingFace
                 DiscussionsDisabled = discussionsDisabled,
                 DiscussionsSorting = discussionsSorting,
                 Gated = gated,
+                OrgMembersGated = orgMembersGated,
                 GatedNotificationsEmail = gatedNotificationsEmail,
                 GatedNotificationsMode = gatedNotificationsMode,
             };

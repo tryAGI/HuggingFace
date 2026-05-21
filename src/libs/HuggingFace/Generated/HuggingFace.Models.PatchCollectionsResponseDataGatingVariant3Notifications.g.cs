@@ -50,5 +50,6 @@ namespace HuggingFace
         public PatchCollectionsResponseDataGatingVariant3Notifications()
         {
         }
+
     }
 }

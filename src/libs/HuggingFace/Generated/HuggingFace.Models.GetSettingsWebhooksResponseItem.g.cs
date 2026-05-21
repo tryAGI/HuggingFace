@@ -116,5 +116,6 @@ namespace HuggingFace
         public GetSettingsWebhooksResponseItem()
         {
         }
+
     }
 }

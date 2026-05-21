@@ -178,5 +178,6 @@ namespace HuggingFace
         public PutScheduledJobsLabelsResponseJobSpec()
         {
         }
+
     }
 }

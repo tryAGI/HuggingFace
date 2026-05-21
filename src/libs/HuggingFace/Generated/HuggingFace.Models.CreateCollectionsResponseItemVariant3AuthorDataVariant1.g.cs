@@ -138,5 +138,6 @@ namespace HuggingFace
         public CreateCollectionsResponseItemVariant3AuthorDataVariant1()
         {
         }
+
     }
 }

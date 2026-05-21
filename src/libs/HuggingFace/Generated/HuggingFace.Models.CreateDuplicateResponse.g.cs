@@ -40,5 +40,6 @@ namespace HuggingFace
         public CreateDuplicateResponse()
         {
         }
+
     }
 }

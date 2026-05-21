@@ -59,5 +59,6 @@ namespace HuggingFace
         public PatchOrganizationsScimV2GroupsRequestOperationVariant2()
         {
         }
+
     }
 }

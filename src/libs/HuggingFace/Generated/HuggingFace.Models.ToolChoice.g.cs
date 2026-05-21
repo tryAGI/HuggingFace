@@ -27,6 +27,26 @@ namespace HuggingFace
         public bool IsToolChoiceVariant1 => ToolChoiceVariant1 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolChoiceVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ToolChoiceVariant1? value)
+        {
+            value = ToolChoiceVariant1;
+            return IsToolChoiceVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolChoiceVariant1 PickToolChoiceVariant1() => IsToolChoiceVariant1
+            ? ToolChoiceVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// Means the model will not call any tool and instead generates a message.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +62,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolChoiceVariant2))]
 #endif
         public bool IsToolChoiceVariant2 => ToolChoiceVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolChoiceVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ToolChoiceVariant2? value)
+        {
+            value = ToolChoiceVariant2;
+            return IsToolChoiceVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolChoiceVariant2 PickToolChoiceVariant2() => IsToolChoiceVariant2
+            ? ToolChoiceVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// Means the model must call one or more tools.
@@ -63,6 +103,26 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickToolChoiceVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ToolChoiceVariant3? value)
+        {
+            value = ToolChoiceVariant3;
+            return IsToolChoiceVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolChoiceVariant3 PickToolChoiceVariant3() => IsToolChoiceVariant3
+            ? ToolChoiceVariant3!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant3' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolChoiceVariant4? ToolChoiceVariant4 { get; init; }
 #else
@@ -76,6 +136,26 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolChoiceVariant4))]
 #endif
         public bool IsToolChoiceVariant4 => ToolChoiceVariant4 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolChoiceVariant4(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::HuggingFace.ToolChoiceVariant4? value)
+        {
+            value = ToolChoiceVariant4;
+            return IsToolChoiceVariant4;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::HuggingFace.ToolChoiceVariant4 PickToolChoiceVariant4() => IsToolChoiceVariant4
+            ? ToolChoiceVariant4!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant4' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -93,6 +173,11 @@ namespace HuggingFace
         {
             ToolChoiceVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolChoice FromToolChoiceVariant1(global::HuggingFace.ToolChoiceVariant1? value) => new ToolChoice(value);
 
         /// <summary>
         /// 
@@ -115,6 +200,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static ToolChoice FromToolChoiceVariant2(global::HuggingFace.ToolChoiceVariant2? value) => new ToolChoice(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant3 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant3?)value);
 
         /// <summary>
@@ -133,6 +223,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        public static ToolChoice FromToolChoiceVariant3(global::HuggingFace.ToolChoiceVariant3? value) => new ToolChoice(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant4 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant4?)value);
 
         /// <summary>
@@ -147,6 +242,11 @@ namespace HuggingFace
         {
             ToolChoiceVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ToolChoice FromToolChoiceVariant4(global::HuggingFace.ToolChoiceVariant4? value) => new ToolChoice(value);
 
         /// <summary>
         /// 
@@ -199,7 +299,7 @@ namespace HuggingFace
             global::System.Func<global::HuggingFace.ToolChoiceVariant1?, TResult>? toolChoiceVariant1 = null,
             global::System.Func<global::HuggingFace.ToolChoiceVariant2?, TResult>? toolChoiceVariant2 = null,
             global::System.Func<global::HuggingFace.ToolChoiceVariant3?, TResult>? toolChoiceVariant3 = null,
-            global::System.Func<global::HuggingFace.ToolChoiceVariant4?, TResult>? toolChoiceVariant4 = null,
+            global::System.Func<global::HuggingFace.ToolChoiceVariant4, TResult>? toolChoiceVariant4 = null,
             bool validate = true)
         {
             if (validate)
@@ -232,9 +332,45 @@ namespace HuggingFace
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.ToolChoiceVariant1?>? toolChoiceVariant1 = null,
+
+            global::System.Action<global::HuggingFace.ToolChoiceVariant2?>? toolChoiceVariant2 = null,
+
+            global::System.Action<global::HuggingFace.ToolChoiceVariant3?>? toolChoiceVariant3 = null,
+
+            global::System.Action<global::HuggingFace.ToolChoiceVariant4>? toolChoiceVariant4 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsToolChoiceVariant1)
+            {
+                toolChoiceVariant1?.Invoke(ToolChoiceVariant1!);
+            }
+            else if (IsToolChoiceVariant2)
+            {
+                toolChoiceVariant2?.Invoke(ToolChoiceVariant2!);
+            }
+            else if (IsToolChoiceVariant3)
+            {
+                toolChoiceVariant3?.Invoke(ToolChoiceVariant3!);
+            }
+            else if (IsToolChoiceVariant4)
+            {
+                toolChoiceVariant4?.Invoke(ToolChoiceVariant4!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::HuggingFace.ToolChoiceVariant1?>? toolChoiceVariant1 = null,
             global::System.Action<global::HuggingFace.ToolChoiceVariant2?>? toolChoiceVariant2 = null,
             global::System.Action<global::HuggingFace.ToolChoiceVariant3?>? toolChoiceVariant3 = null,
-            global::System.Action<global::HuggingFace.ToolChoiceVariant4?>? toolChoiceVariant4 = null,
+            global::System.Action<global::HuggingFace.ToolChoiceVariant4>? toolChoiceVariant4 = null,
             bool validate = true)
         {
             if (validate)

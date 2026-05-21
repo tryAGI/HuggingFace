@@ -50,5 +50,6 @@ namespace HuggingFace
         public CreateCollectionsItemsResponseGatingVariant3Notifications2()
         {
         }
+
     }
 }

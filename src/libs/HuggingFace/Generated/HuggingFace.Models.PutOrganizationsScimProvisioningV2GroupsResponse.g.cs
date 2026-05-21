@@ -89,5 +89,6 @@ namespace HuggingFace
         public PutOrganizationsScimProvisioningV2GroupsResponse()
         {
         }
+
     }
 }
