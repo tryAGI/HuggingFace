@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class SpacesClient
+    public partial class BucketsClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateBucketsByNamespaceByRepoLfsFilesDuplicateSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,139 +21,53 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateBucketsByNamespaceByRepoLfsFilesDuplicateSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirement0,
+            {                s_CreateBucketsByNamespaceByRepoLfsFilesDuplicateSecurityRequirement0,
             };
-        partial void PrepareCreateSpacesByNamespaceByRepoCommitByRevArguments(
+        partial void PrepareCreateBucketsByNamespaceByRepoLfsFilesDuplicateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            ref string rev,
-            object? createPr,
-            object? hotReload,
-            ref global::HuggingFace.CreateSpacesCommitContentType? contentType);
-        partial void PrepareCreateSpacesByNamespaceByRepoCommitByRevRequest(
+            global::HuggingFace.CreateBucketsLfsFilesDuplicateRequest request);
+        partial void PrepareCreateBucketsByNamespaceByRepoLfsFilesDuplicateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            string rev,
-            object? createPr,
-            object? hotReload,
-            global::HuggingFace.CreateSpacesCommitContentType? contentType);
-        partial void ProcessCreateSpacesByNamespaceByRepoCommitByRevResponse(
+            global::HuggingFace.CreateBucketsLfsFilesDuplicateRequest request);
+        partial void ProcessCreateBucketsByNamespaceByRepoLfsFilesDuplicateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateSpacesByNamespaceByRepoCommitByRevResponseContent(
+        partial void ProcessCreateBucketsByNamespaceByRepoLfsFilesDuplicateResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Commit<br/>
-        /// For legacy reason, we support both `application/json` and `application/x-ndjson` but we recommend using `application/x-ndjson` to create a commit.<br/>
-        /// JSON-lines payload:<br/>
-        /// ```json<br/>
-        /// {<br/>
-        ///   "key": "header",<br/>
-        ///   "value": {<br/>
-        ///     "summary": "string (REQUIRED)",<br/>
-        ///     "description": "string (OPTIONAL - defaults to empty string)",<br/>
-        ///     "parentCommit": "string (OPTIONAL - 40-character hex SHA)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// {<br/>
-        ///   "key": "file",<br/>
-        ///   "value": {<br/>
-        ///     "path": "string (REQUIRED)",<br/>
-        ///     "content": "string (OPTIONAL - required if oldPath not set)",<br/>
-        ///     "encoding": "utf-8 | base64 (OPTIONAL - defaults to utf-8)",<br/>
-        ///     "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// {<br/>
-        ///   "key": "deletedEntry",<br/>
-        ///   "value": {<br/>
-        ///     "path": "string (REQUIRED)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// {<br/>
-        ///   "key": "lfsFile",<br/>
-        ///   "value": {<br/>
-        ///     "path": "string (REQUIRED - max 1000 chars)",<br/>
-        ///     "oid": "string (OPTIONAL - required if oldPath not set, 64 hex chars)",<br/>
-        ///     "algo": "sha256 (OPTIONAL - only sha256 supported)",<br/>
-        ///     "size": "number (OPTIONAL - required if oldPath is set)",<br/>
-        ///     "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// ```<br/>
-        /// JSON payload:<br/>
-        /// ```json<br/>
-        /// {<br/>
-        ///   "summary": "string (REQUIRED)",<br/>
-        ///   "description": "string (OPTIONAL - defaults to empty string)",<br/>
-        ///   "parentCommit": "string (OPTIONAL - 40-character hex SHA)"<br/>
-        ///   "files": [<br/>
-        ///     {<br/>
-        ///       "path": "string (REQUIRED)",<br/>
-        ///       "content": "string (OPTIONAL - required if oldPath not set)",<br/>
-        ///       "encoding": "utf-8 | base64 (OPTIONAL - defaults to utf-8)",<br/>
-        ///       "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///     }<br/>
-        ///   ],<br/>
-        ///   "deletedEntries": [<br/>
-        ///     {<br/>
-        ///       "path": "string (REQUIRED)"<br/>
-        ///     }<br/>
-        ///   ],<br/>
-        ///   "lfsFiles": [<br/>
-        ///     {<br/>
-        ///       "path": "string (REQUIRED - max 1000 chars)",<br/>
-        ///       "oid": "string (OPTIONAL - required if oldPath not set, 64 hex chars)",<br/>
-        ///       "algo": "sha256 (OPTIONAL - only sha256 supported)",<br/>
-        ///       "size": "number (OPTIONAL - required if oldPath is set)",<br/>
-        ///       "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///     }<br/>
-        ///   ]<br/>
-        /// }<br/>
-        /// ```
+        /// Duplicate xet files<br/>
+        /// Duplicate xet-stored LFS files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-        /// <param name="rev"></param>
-        /// <param name="createPr">
-        /// Whether to create a pull request from the commit
-        /// </param>
-        /// <param name="hotReload">
-        /// For Spaces, whether to try to hot reload the commit (only for single python files updates)
-        /// </param>
-        /// <param name="contentType">
-        /// `application/x-ndjson` if you to commit by json lines<br/>
-        /// Default Value: application/x-ndjson
-        /// </param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSpacesCommitResponse> CreateSpacesByNamespaceByRepoCommitByRevAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBucketsLfsFilesDuplicateResponse> CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync(
             string @namespace,
             string repo,
-            string rev,
-            object? createPr = default,
-            object? hotReload = default,
-            global::HuggingFace.CreateSpacesCommitContentType? contentType = default,
+
+            global::HuggingFace.CreateBucketsLfsFilesDuplicateRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateSpacesByNamespaceByRepoCommitByRevAsResponseAsync(
+            var __response = await CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsResponseAsync(
                 @namespace: @namespace,
                 repo: repo,
-                rev: rev,
-                createPr: createPr,
-                hotReload: hotReload,
-                contentType: contentType,
+
+                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -161,117 +75,38 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Commit<br/>
-        /// For legacy reason, we support both `application/json` and `application/x-ndjson` but we recommend using `application/x-ndjson` to create a commit.<br/>
-        /// JSON-lines payload:<br/>
-        /// ```json<br/>
-        /// {<br/>
-        ///   "key": "header",<br/>
-        ///   "value": {<br/>
-        ///     "summary": "string (REQUIRED)",<br/>
-        ///     "description": "string (OPTIONAL - defaults to empty string)",<br/>
-        ///     "parentCommit": "string (OPTIONAL - 40-character hex SHA)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// {<br/>
-        ///   "key": "file",<br/>
-        ///   "value": {<br/>
-        ///     "path": "string (REQUIRED)",<br/>
-        ///     "content": "string (OPTIONAL - required if oldPath not set)",<br/>
-        ///     "encoding": "utf-8 | base64 (OPTIONAL - defaults to utf-8)",<br/>
-        ///     "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// {<br/>
-        ///   "key": "deletedEntry",<br/>
-        ///   "value": {<br/>
-        ///     "path": "string (REQUIRED)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// {<br/>
-        ///   "key": "lfsFile",<br/>
-        ///   "value": {<br/>
-        ///     "path": "string (REQUIRED - max 1000 chars)",<br/>
-        ///     "oid": "string (OPTIONAL - required if oldPath not set, 64 hex chars)",<br/>
-        ///     "algo": "sha256 (OPTIONAL - only sha256 supported)",<br/>
-        ///     "size": "number (OPTIONAL - required if oldPath is set)",<br/>
-        ///     "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///   }<br/>
-        /// }<br/>
-        /// ```<br/>
-        /// JSON payload:<br/>
-        /// ```json<br/>
-        /// {<br/>
-        ///   "summary": "string (REQUIRED)",<br/>
-        ///   "description": "string (OPTIONAL - defaults to empty string)",<br/>
-        ///   "parentCommit": "string (OPTIONAL - 40-character hex SHA)"<br/>
-        ///   "files": [<br/>
-        ///     {<br/>
-        ///       "path": "string (REQUIRED)",<br/>
-        ///       "content": "string (OPTIONAL - required if oldPath not set)",<br/>
-        ///       "encoding": "utf-8 | base64 (OPTIONAL - defaults to utf-8)",<br/>
-        ///       "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///     }<br/>
-        ///   ],<br/>
-        ///   "deletedEntries": [<br/>
-        ///     {<br/>
-        ///       "path": "string (REQUIRED)"<br/>
-        ///     }<br/>
-        ///   ],<br/>
-        ///   "lfsFiles": [<br/>
-        ///     {<br/>
-        ///       "path": "string (REQUIRED - max 1000 chars)",<br/>
-        ///       "oid": "string (OPTIONAL - required if oldPath not set, 64 hex chars)",<br/>
-        ///       "algo": "sha256 (OPTIONAL - only sha256 supported)",<br/>
-        ///       "size": "number (OPTIONAL - required if oldPath is set)",<br/>
-        ///       "oldPath": "string (OPTIONAL - for move/rename operations)"<br/>
-        ///     }<br/>
-        ///   ]<br/>
-        /// }<br/>
-        /// ```
+        /// Duplicate xet files<br/>
+        /// Duplicate xet-stored LFS files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-        /// <param name="rev"></param>
-        /// <param name="createPr">
-        /// Whether to create a pull request from the commit
-        /// </param>
-        /// <param name="hotReload">
-        /// For Spaces, whether to try to hot reload the commit (only for single python files updates)
-        /// </param>
-        /// <param name="contentType">
-        /// `application/x-ndjson` if you to commit by json lines<br/>
-        /// Default Value: application/x-ndjson
-        /// </param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSpacesCommitResponse>> CreateSpacesByNamespaceByRepoCommitByRevAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBucketsLfsFilesDuplicateResponse>> CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsResponseAsync(
             string @namespace,
             string repo,
-            string rev,
-            object? createPr = default,
-            object? hotReload = default,
-            global::HuggingFace.CreateSpacesCommitContentType? contentType = default,
+
+            global::HuggingFace.CreateBucketsLfsFilesDuplicateRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateSpacesByNamespaceByRepoCommitByRevArguments(
+            PrepareCreateBucketsByNamespaceByRepoLfsFilesDuplicateArguments(
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 repo: ref repo,
-                rev: ref rev,
-                createPr: createPr,
-                hotReload: hotReload,
-                contentType: ref contentType);
+                request: request);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateSpacesByNamespaceByRepoCommitByRevSecurityRequirements,
-                operationName: "CreateSpacesByNamespaceByRepoCommitByRevAsync");
+                securityRequirements: s_CreateBucketsByNamespaceByRepoLfsFilesDuplicateSecurityRequirements,
+                operationName: "CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -291,12 +126,8 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/spaces/{@namespace}/{repo}/commit/{rev}",
+                                path: $"/api/buckets/{@namespace}/{repo}/lfs-files/duplicate",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("create_pr", createPr?.ToString())
-                                .AddOptionalParameter("hot_reload", hotReload?.ToString())
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -326,12 +157,12 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-
-            if (contentType != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("Content-Type", contentType?.ToValueString() ?? string.Empty);
-            }
-
+                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: __httpRequestContentBody,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "application/json");
+                            __httpRequest.Content = __httpRequestContent;
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -340,15 +171,12 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateSpacesByNamespaceByRepoCommitByRevRequest(
+                PrepareCreateBucketsByNamespaceByRepoLfsFilesDuplicateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     @namespace: @namespace!,
                     repo: repo!,
-                    rev: rev!,
-                    createPr: createPr,
-                    hotReload: hotReload,
-                    contentType: contentType);
+                    request: request);
 
                 return __httpRequest;
             }
@@ -365,9 +193,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createSpacesByNamespaceByRepoCommitByRev",
-                                methodName: "CreateSpacesByNamespaceByRepoCommitByRevAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/commit/{rev}\"",
+                                operationId: "createBucketsByNamespaceByRepoLfsFilesDuplicate",
+                                methodName: "CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/lfs-files/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -399,9 +227,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createSpacesByNamespaceByRepoCommitByRev",
-                                methodName: "CreateSpacesByNamespaceByRepoCommitByRevAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/commit/{rev}\"",
+                                operationId: "createBucketsByNamespaceByRepoLfsFilesDuplicate",
+                                methodName: "CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/lfs-files/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -440,9 +268,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createSpacesByNamespaceByRepoCommitByRev",
-                                methodName: "CreateSpacesByNamespaceByRepoCommitByRevAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/commit/{rev}\"",
+                                operationId: "createBucketsByNamespaceByRepoLfsFilesDuplicate",
+                                methodName: "CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/lfs-files/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -480,7 +308,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateSpacesByNamespaceByRepoCommitByRevResponse(
+                ProcessCreateBucketsByNamespaceByRepoLfsFilesDuplicateResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -488,9 +316,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createSpacesByNamespaceByRepoCommitByRev",
-                                methodName: "CreateSpacesByNamespaceByRepoCommitByRevAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/commit/{rev}\"",
+                                operationId: "createBucketsByNamespaceByRepoLfsFilesDuplicate",
+                                methodName: "CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/lfs-files/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -510,9 +338,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createSpacesByNamespaceByRepoCommitByRev",
-                                methodName: "CreateSpacesByNamespaceByRepoCommitByRevAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/commit/{rev}\"",
+                                operationId: "createBucketsByNamespaceByRepoLfsFilesDuplicate",
+                                methodName: "CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/lfs-files/duplicate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -540,7 +368,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateSpacesByNamespaceByRepoCommitByRevResponseContent(
+                                ProcessCreateBucketsByNamespaceByRepoLfsFilesDuplicateResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -549,9 +377,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.CreateSpacesCommitResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.CreateBucketsLfsFilesDuplicateResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSpacesCommitResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBucketsLfsFilesDuplicateResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -583,9 +411,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.CreateSpacesCommitResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.CreateBucketsLfsFilesDuplicateResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSpacesCommitResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBucketsLfsFilesDuplicateResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -626,6 +454,38 @@ namespace HuggingFace
             {
                 __httpRequest?.Dispose();
             }
+        }
+        /// <summary>
+        /// Duplicate xet files<br/>
+        /// Duplicate xet-stored LFS files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="target"></param>
+        /// <param name="files"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBucketsLfsFilesDuplicateResponse> CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync(
+            string @namespace,
+            string repo,
+            global::HuggingFace.CreateBucketsLfsFilesDuplicateRequestTarget target,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateBucketsLfsFilesDuplicateRequestFile> files,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::HuggingFace.CreateBucketsLfsFilesDuplicateRequest
+            {
+                Target = target,
+                Files = files,
+            };
+
+            return await CreateBucketsByNamespaceByRepoLfsFilesDuplicateAsync(
+                @namespace: @namespace,
+                repo: repo,
+                request: __request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
