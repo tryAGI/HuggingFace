@@ -6,7 +6,7 @@ namespace HuggingFace
     {
         /// <summary>
         /// Duplicate xet files<br/>
-        /// Duplicate xet-stored LFS files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
+        /// Duplicate xet-stored files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -23,7 +23,7 @@ namespace HuggingFace
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Duplicate xet files<br/>
-        /// Duplicate xet-stored LFS files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
+        /// Duplicate xet-stored files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -40,7 +40,7 @@ namespace HuggingFace
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Duplicate xet files<br/>
-        /// Duplicate xet-stored LFS files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
+        /// Duplicate xet-stored files from this repo (source) into another repo (target) by xet hash, without re-uploading file bytes. The caller must then commit the files with their sha256/size as usual.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
