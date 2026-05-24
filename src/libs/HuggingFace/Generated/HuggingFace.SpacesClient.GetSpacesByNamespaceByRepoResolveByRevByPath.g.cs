@@ -418,18 +418,17 @@ namespace HuggingFace
                                     __exception_302 = __ex;
                                 }
 
-                                throw new global::HuggingFace.ApiException<string>(
+
+                                throw global::HuggingFace.ApiException<string>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_302 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_302,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_302,
-                                    ResponseObject = __value_302,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_302,
+                                    responseObject: __value_302,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Not modified
                             if ((int)__response.StatusCode == 304)
@@ -456,18 +455,17 @@ namespace HuggingFace
                                     __exception_304 = __ex;
                                 }
 
-                                throw new global::HuggingFace.ApiException<string>(
+
+                                throw global::HuggingFace.ApiException<string>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_304 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_304,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_304,
-                                    ResponseObject = __value_304,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_304,
+                                    responseObject: __value_304,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Redirection to Xet endpoint
                             if ((int)__response.StatusCode == 307)
@@ -494,18 +492,17 @@ namespace HuggingFace
                                     __exception_307 = __ex;
                                 }
 
-                                throw new global::HuggingFace.ApiException<string>(
+
+                                throw global::HuggingFace.ApiException<string>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_307 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_307,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_307,
-                                    ResponseObject = __value_307,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_307,
+                                    responseObject: __value_307,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -539,17 +536,15 @@ namespace HuggingFace
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::HuggingFace.ApiException(
+                                    throw global::HuggingFace.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -586,17 +581,15 @@ namespace HuggingFace
                                     {
                                     }
 
-                                    throw new global::HuggingFace.ApiException(
+                                    throw global::HuggingFace.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
