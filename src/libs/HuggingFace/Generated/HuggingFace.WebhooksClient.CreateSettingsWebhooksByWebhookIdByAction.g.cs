@@ -111,7 +111,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/settings/webhooks/{webhookId}/{action}",
+                                path: $"/api/settings/webhooks/{webhookId}/{(global::System.Uri.EscapeDataString(action.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -173,7 +173,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createSettingsWebhooksByWebhookIdByAction",
                                 methodName: "CreateSettingsWebhooksByWebhookIdByActionAsync",
-                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{action}\"",
+                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{(global::System.Uri.EscapeDataString(action.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -207,7 +207,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createSettingsWebhooksByWebhookIdByAction",
                                 methodName: "CreateSettingsWebhooksByWebhookIdByActionAsync",
-                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{action}\"",
+                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{(global::System.Uri.EscapeDataString(action.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -248,7 +248,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createSettingsWebhooksByWebhookIdByAction",
                                 methodName: "CreateSettingsWebhooksByWebhookIdByActionAsync",
-                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{action}\"",
+                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{(global::System.Uri.EscapeDataString(action.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -296,7 +296,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createSettingsWebhooksByWebhookIdByAction",
                                 methodName: "CreateSettingsWebhooksByWebhookIdByActionAsync",
-                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{action}\"",
+                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{(global::System.Uri.EscapeDataString(action.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -318,7 +318,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createSettingsWebhooksByWebhookIdByAction",
                                 methodName: "CreateSettingsWebhooksByWebhookIdByActionAsync",
-                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{action}\"",
+                                pathTemplate: "$\"/api/settings/webhooks/{webhookId}/{(global::System.Uri.EscapeDataString(action.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

@@ -126,7 +126,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/spaces/{@namespace}/{repo}/logs/{logType}",
+                                path: $"/api/spaces/{@namespace}/{repo}/logs/{(global::System.Uri.EscapeDataString(logType.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("tail", tail?.ToString())
@@ -193,7 +193,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getSpacesByNamespaceByRepoLogsByLogType",
                                 methodName: "GetSpacesByNamespaceByRepoLogsByLogTypeAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{logType}\"",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{(global::System.Uri.EscapeDataString(logType.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -227,7 +227,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getSpacesByNamespaceByRepoLogsByLogType",
                                 methodName: "GetSpacesByNamespaceByRepoLogsByLogTypeAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{logType}\"",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{(global::System.Uri.EscapeDataString(logType.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -268,7 +268,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getSpacesByNamespaceByRepoLogsByLogType",
                                 methodName: "GetSpacesByNamespaceByRepoLogsByLogTypeAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{logType}\"",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{(global::System.Uri.EscapeDataString(logType.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -316,7 +316,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getSpacesByNamespaceByRepoLogsByLogType",
                                 methodName: "GetSpacesByNamespaceByRepoLogsByLogTypeAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{logType}\"",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{(global::System.Uri.EscapeDataString(logType.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -338,7 +338,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getSpacesByNamespaceByRepoLogsByLogType",
                                 methodName: "GetSpacesByNamespaceByRepoLogsByLogTypeAsync",
-                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{logType}\"",
+                                pathTemplate: "$\"/api/spaces/{@namespace}/{repo}/logs/{(global::System.Uri.EscapeDataString(logType.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

@@ -149,7 +149,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/models/{@namespace}/{repo}/user-access-request/{status}",
+                                path: $"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
@@ -220,7 +220,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
                                 methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{status}\"",
+                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -254,7 +254,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
                                 methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{status}\"",
+                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -295,7 +295,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
                                 methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{status}\"",
+                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -343,7 +343,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
                                 methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{status}\"",
+                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -365,7 +365,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
                                 methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{status}\"",
+                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
