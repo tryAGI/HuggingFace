@@ -140,7 +140,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/{repoType}/{@namespace}/{repo}/discussions/{num}/comment",
+                                path: $"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}/comment",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -211,7 +211,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoDiscussionsByNumComment",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}/comment\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}/comment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -245,7 +245,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoDiscussionsByNumComment",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}/comment\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}/comment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -286,7 +286,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoDiscussionsByNumComment",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}/comment\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}/comment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -334,7 +334,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoDiscussionsByNumComment",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}/comment\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}/comment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -356,7 +356,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoDiscussionsByNumComment",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoDiscussionsByNumCommentAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}/comment\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}/comment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

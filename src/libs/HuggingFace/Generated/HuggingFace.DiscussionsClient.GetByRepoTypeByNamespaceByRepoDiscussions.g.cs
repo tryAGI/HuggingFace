@@ -185,7 +185,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/{repoType}/{@namespace}/{repo}/discussions",
+                                path: $"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("p", p?.ToString())
@@ -262,7 +262,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getByRepoTypeByNamespaceByRepoDiscussions",
                                 methodName: "GetByRepoTypeByNamespaceByRepoDiscussionsAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -296,7 +296,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getByRepoTypeByNamespaceByRepoDiscussions",
                                 methodName: "GetByRepoTypeByNamespaceByRepoDiscussionsAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -337,7 +337,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getByRepoTypeByNamespaceByRepoDiscussions",
                                 methodName: "GetByRepoTypeByNamespaceByRepoDiscussionsAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -385,7 +385,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getByRepoTypeByNamespaceByRepoDiscussions",
                                 methodName: "GetByRepoTypeByNamespaceByRepoDiscussionsAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -407,7 +407,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "getByRepoTypeByNamespaceByRepoDiscussions",
                                 methodName: "GetByRepoTypeByNamespaceByRepoDiscussionsAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

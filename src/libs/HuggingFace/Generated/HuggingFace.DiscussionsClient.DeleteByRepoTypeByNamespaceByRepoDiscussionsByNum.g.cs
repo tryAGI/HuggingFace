@@ -120,7 +120,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/{repoType}/{@namespace}/{repo}/discussions/{num}",
+                                path: $"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -184,7 +184,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "deleteByRepoTypeByNamespaceByRepoDiscussionsByNum",
                                 methodName: "DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -218,7 +218,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "deleteByRepoTypeByNamespaceByRepoDiscussionsByNum",
                                 methodName: "DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -259,7 +259,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "deleteByRepoTypeByNamespaceByRepoDiscussionsByNum",
                                 methodName: "DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -307,7 +307,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "deleteByRepoTypeByNamespaceByRepoDiscussionsByNum",
                                 methodName: "DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -329,7 +329,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "deleteByRepoTypeByNamespaceByRepoDiscussionsByNum",
                                 methodName: "DeleteByRepoTypeByNamespaceByRepoDiscussionsByNumAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/discussions/{num}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/discussions/{num}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

@@ -134,7 +134,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/{repoType}/{@namespace}/{repo}/sql-console/embed",
+                                path: $"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -204,7 +204,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoSqlConsoleEmbed",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -238,7 +238,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoSqlConsoleEmbed",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -279,7 +279,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoSqlConsoleEmbed",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -327,7 +327,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoSqlConsoleEmbed",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -349,7 +349,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createByRepoTypeByNamespaceByRepoSqlConsoleEmbed",
                                 methodName: "CreateByRepoTypeByNamespaceByRepoSqlConsoleEmbedAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

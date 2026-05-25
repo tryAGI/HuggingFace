@@ -169,7 +169,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{perms}",
+                                path: $"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("own", own?.ToString())
@@ -246,7 +246,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createInferenceEndpointsByNamespaceByEndpointAuthCheckByPerms",
                                 methodName: "CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync",
-                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{perms}\"",
+                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -280,7 +280,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createInferenceEndpointsByNamespaceByEndpointAuthCheckByPerms",
                                 methodName: "CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync",
-                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{perms}\"",
+                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -321,7 +321,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createInferenceEndpointsByNamespaceByEndpointAuthCheckByPerms",
                                 methodName: "CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync",
-                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{perms}\"",
+                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -369,7 +369,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createInferenceEndpointsByNamespaceByEndpointAuthCheckByPerms",
                                 methodName: "CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync",
-                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{perms}\"",
+                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -391,7 +391,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createInferenceEndpointsByNamespaceByEndpointAuthCheckByPerms",
                                 methodName: "CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync",
-                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{perms}\"",
+                                pathTemplate: "$\"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

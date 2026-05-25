@@ -142,7 +142,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/{repoType}/{@namespace}/{repo}/sql-console/embed/{id}",
+                                path: $"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -213,7 +213,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "editByRepoTypeByNamespaceByRepoSqlConsoleEmbedById",
                                 methodName: "EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed/{id}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -247,7 +247,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "editByRepoTypeByNamespaceByRepoSqlConsoleEmbedById",
                                 methodName: "EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed/{id}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -288,7 +288,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "editByRepoTypeByNamespaceByRepoSqlConsoleEmbedById",
                                 methodName: "EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed/{id}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -336,7 +336,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "editByRepoTypeByNamespaceByRepoSqlConsoleEmbedById",
                                 methodName: "EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed/{id}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -358,7 +358,7 @@ namespace HuggingFace
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "editByRepoTypeByNamespaceByRepoSqlConsoleEmbedById",
                                 methodName: "EditByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdAsync",
-                                pathTemplate: "$\"/api/{repoType}/{@namespace}/{repo}/sql-console/embed/{id}\"",
+                                pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
