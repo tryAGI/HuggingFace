@@ -207,6 +207,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        RepoAddTrustedPublisher,
+        /// <summary>
+        /// 
+        /// </summary>
         RepoAddVariable,
         /// <summary>
         /// 
@@ -252,6 +256,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         RepoRemoveSecrets,
+        /// <summary>
+        /// 
+        /// </summary>
+        RepoRemoveTrustedPublisher,
         /// <summary>
         /// 
         /// </summary>
@@ -415,6 +423,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgUpdateSettings => "org.update_settings",
                 GetOrganizationsAuditLogExportResponseItemType.RepoAddSecret => "repo.add_secret",
                 GetOrganizationsAuditLogExportResponseItemType.RepoAddSecrets => "repo.add_secrets",
+                GetOrganizationsAuditLogExportResponseItemType.RepoAddTrustedPublisher => "repo.add_trusted_publisher",
                 GetOrganizationsAuditLogExportResponseItemType.RepoAddVariable => "repo.add_variable",
                 GetOrganizationsAuditLogExportResponseItemType.RepoAddVariables => "repo.add_variables",
                 GetOrganizationsAuditLogExportResponseItemType.RepoCreate => "repo.create",
@@ -427,6 +436,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.RepoRemoveDisable => "repo.removeDisable",
                 GetOrganizationsAuditLogExportResponseItemType.RepoRemoveSecret => "repo.remove_secret",
                 GetOrganizationsAuditLogExportResponseItemType.RepoRemoveSecrets => "repo.remove_secrets",
+                GetOrganizationsAuditLogExportResponseItemType.RepoRemoveTrustedPublisher => "repo.remove_trusted_publisher",
                 GetOrganizationsAuditLogExportResponseItemType.RepoRemoveVariable => "repo.remove_variable",
                 GetOrganizationsAuditLogExportResponseItemType.RepoRemoveVariables => "repo.remove_variables",
                 GetOrganizationsAuditLogExportResponseItemType.RepoUpdateResourceGroup => "repo.update_resource_group",
@@ -511,6 +521,7 @@ namespace HuggingFace
                 "org.update_settings" => GetOrganizationsAuditLogExportResponseItemType.OrgUpdateSettings,
                 "repo.add_secret" => GetOrganizationsAuditLogExportResponseItemType.RepoAddSecret,
                 "repo.add_secrets" => GetOrganizationsAuditLogExportResponseItemType.RepoAddSecrets,
+                "repo.add_trusted_publisher" => GetOrganizationsAuditLogExportResponseItemType.RepoAddTrustedPublisher,
                 "repo.add_variable" => GetOrganizationsAuditLogExportResponseItemType.RepoAddVariable,
                 "repo.add_variables" => GetOrganizationsAuditLogExportResponseItemType.RepoAddVariables,
                 "repo.create" => GetOrganizationsAuditLogExportResponseItemType.RepoCreate,
@@ -523,6 +534,7 @@ namespace HuggingFace
                 "repo.removeDisable" => GetOrganizationsAuditLogExportResponseItemType.RepoRemoveDisable,
                 "repo.remove_secret" => GetOrganizationsAuditLogExportResponseItemType.RepoRemoveSecret,
                 "repo.remove_secrets" => GetOrganizationsAuditLogExportResponseItemType.RepoRemoveSecrets,
+                "repo.remove_trusted_publisher" => GetOrganizationsAuditLogExportResponseItemType.RepoRemoveTrustedPublisher,
                 "repo.remove_variable" => GetOrganizationsAuditLogExportResponseItemType.RepoRemoveVariable,
                 "repo.remove_variables" => GetOrganizationsAuditLogExportResponseItemType.RepoRemoveVariables,
                 "repo.update_resource_group" => GetOrganizationsAuditLogExportResponseItemType.RepoUpdateResourceGroup,
