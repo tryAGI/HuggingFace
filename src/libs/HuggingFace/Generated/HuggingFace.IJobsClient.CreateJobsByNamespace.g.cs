@@ -59,6 +59,9 @@ namespace HuggingFace
         /// <param name="volumes">
         /// HuggingFace Buckets or Repos to mount as volumes in the job container.
         /// </param>
+        /// <param name="expose">
+        /// When `enabled`, expose every port the job's container listens on through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.jobs.huggingface.tech`. Any port the container binds to is proxied automatically; you do not need to declare specific ports. Access always requires a HF token with read access to the job's namespace.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -76,6 +79,7 @@ namespace HuggingFace
             int? attempts = default,
             global::System.Collections.Generic.Dictionary<string, string>? labels = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes = default,
+            global::HuggingFace.CreateJobsRequestExpose? expose = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

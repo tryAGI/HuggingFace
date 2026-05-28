@@ -85,6 +85,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? Volumes { get; set; }
 
         /// <summary>
+        /// When `enabled`, expose every port the job's container listens on through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.jobs.huggingface.tech`. Any port the container binds to is proxied automatically; you do not need to declare specific ports. Access always requires a HF token with read access to the job's namespace.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expose")]
+        public global::HuggingFace.CreateJobsRequestExpose? Expose { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -116,6 +122,9 @@ namespace HuggingFace
         /// <param name="volumes">
         /// HuggingFace Buckets or Repos to mount as volumes in the job container.
         /// </param>
+        /// <param name="expose">
+        /// When `enabled`, expose every port the job's container listens on through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.jobs.huggingface.tech`. Any port the container binds to is proxied automatically; you do not need to declare specific ports. Access always requires a HF token with read access to the job's namespace.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -131,7 +140,8 @@ namespace HuggingFace
             int? timeoutSeconds,
             int? attempts,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes)
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes,
+            global::HuggingFace.CreateJobsRequestExpose? expose)
         {
             this.SpaceId = spaceId;
             this.DockerImage = dockerImage;
@@ -145,6 +155,7 @@ namespace HuggingFace
             this.Attempts = attempts;
             this.Labels = labels;
             this.Volumes = volumes;
+            this.Expose = expose;
         }
 
         /// <summary>

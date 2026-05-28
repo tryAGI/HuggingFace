@@ -739,6 +739,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        StableAudio3,
+        /// <summary>
+        /// 
+        /// </summary>
         StableAudioTools,
         /// <summary>
         /// 
@@ -1088,6 +1092,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.SpanMarker => "span-marker",
                 CreateQuicksearchRequestLibrary.Speechbrain => "speechbrain",
                 CreateQuicksearchRequestLibrary.SsrSpeech => "ssr-speech",
+                CreateQuicksearchRequestLibrary.StableAudio3 => "stable-audio-3",
                 CreateQuicksearchRequestLibrary.StableAudioTools => "stable-audio-tools",
                 CreateQuicksearchRequestLibrary.StableBaselines3 => "stable-baselines3",
                 CreateQuicksearchRequestLibrary.Stanza => "stanza",
@@ -1319,6 +1324,7 @@ namespace HuggingFace
                 "span-marker" => CreateQuicksearchRequestLibrary.SpanMarker,
                 "speechbrain" => CreateQuicksearchRequestLibrary.Speechbrain,
                 "ssr-speech" => CreateQuicksearchRequestLibrary.SsrSpeech,
+                "stable-audio-3" => CreateQuicksearchRequestLibrary.StableAudio3,
                 "stable-audio-tools" => CreateQuicksearchRequestLibrary.StableAudioTools,
                 "stable-baselines3" => CreateQuicksearchRequestLibrary.StableBaselines3,
                 "stanza" => CreateQuicksearchRequestLibrary.Stanza,
