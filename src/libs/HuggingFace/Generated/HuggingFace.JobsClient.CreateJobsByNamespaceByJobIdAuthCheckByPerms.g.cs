@@ -7,7 +7,7 @@ namespace HuggingFace
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateJobsByNamespaceSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateJobsByNamespaceByJobIdAuthCheckByPermsSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,47 +21,51 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateJobsByNamespaceSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateJobsByNamespaceByJobIdAuthCheckByPermsSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_CreateJobsByNamespaceSecurityRequirement0,
+            {                s_CreateJobsByNamespaceByJobIdAuthCheckByPermsSecurityRequirement0,
             };
-        partial void PrepareCreateJobsByNamespaceArguments(
+        partial void PrepareCreateJobsByNamespaceByJobIdAuthCheckByPermsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
-            global::HuggingFace.CreateJobsRequest request);
-        partial void PrepareCreateJobsByNamespaceRequest(
+            ref string jobId,
+            ref global::HuggingFace.CreateJobsAuthCheckPerms2 perms);
+        partial void PrepareCreateJobsByNamespaceByJobIdAuthCheckByPermsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
-            global::HuggingFace.CreateJobsRequest request);
-        partial void ProcessCreateJobsByNamespaceResponse(
+            string jobId,
+            global::HuggingFace.CreateJobsAuthCheckPerms2 perms);
+        partial void ProcessCreateJobsByNamespaceByJobIdAuthCheckByPermsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateJobsByNamespaceResponseContent(
+        partial void ProcessCreateJobsByNamespaceByJobIdAuthCheckByPermsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Start a job
+        /// Check access<br/>
+        /// Check if the user has access to jobs in the namespace
         /// </summary>
         /// <param name="namespace"></param>
-        /// <param name="request"></param>
+        /// <param name="jobId"></param>
+        /// <param name="perms"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateJobsResponse> CreateJobsByNamespaceAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateJobsAuthCheckResponse2> CreateJobsByNamespaceByJobIdAuthCheckByPermsAsync(
             string @namespace,
-
-            global::HuggingFace.CreateJobsRequest request,
+            string jobId,
+            global::HuggingFace.CreateJobsAuthCheckPerms2 perms,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateJobsByNamespaceAsResponseAsync(
+            var __response = await CreateJobsByNamespaceByJobIdAuthCheckByPermsAsResponseAsync(
                 @namespace: @namespace,
-
-                request: request,
+                jobId: jobId,
+                perms: perms,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -69,34 +73,35 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Start a job
+        /// Check access<br/>
+        /// Check if the user has access to jobs in the namespace
         /// </summary>
         /// <param name="namespace"></param>
-        /// <param name="request"></param>
+        /// <param name="jobId"></param>
+        /// <param name="perms"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateJobsResponse>> CreateJobsByNamespaceAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateJobsAuthCheckResponse2>> CreateJobsByNamespaceByJobIdAuthCheckByPermsAsResponseAsync(
             string @namespace,
-
-            global::HuggingFace.CreateJobsRequest request,
+            string jobId,
+            global::HuggingFace.CreateJobsAuthCheckPerms2 perms,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateJobsByNamespaceArguments(
+            PrepareCreateJobsByNamespaceByJobIdAuthCheckByPermsArguments(
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
-                request: request);
+                jobId: ref jobId,
+                perms: ref perms);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateJobsByNamespaceSecurityRequirements,
-                operationName: "CreateJobsByNamespaceAsync");
+                securityRequirements: s_CreateJobsByNamespaceByJobIdAuthCheckByPermsSecurityRequirements,
+                operationName: "CreateJobsByNamespaceByJobIdAuthCheckByPermsAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -116,7 +121,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/jobs/{@namespace}",
+                                path: $"/api/jobs/{@namespace}/{jobId}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -147,12 +152,6 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -161,11 +160,12 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateJobsByNamespaceRequest(
+                PrepareCreateJobsByNamespaceByJobIdAuthCheckByPermsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     @namespace: @namespace!,
-                    request: request);
+                    jobId: jobId!,
+                    perms: perms!);
 
                 return __httpRequest;
             }
@@ -182,9 +182,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createJobsByNamespace",
-                                methodName: "CreateJobsByNamespaceAsync",
-                                pathTemplate: "$\"/api/jobs/{@namespace}\"",
+                                operationId: "createJobsByNamespaceByJobIdAuthCheckByPerms",
+                                methodName: "CreateJobsByNamespaceByJobIdAuthCheckByPermsAsync",
+                                pathTemplate: "$\"/api/jobs/{@namespace}/{jobId}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -216,9 +216,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createJobsByNamespace",
-                                methodName: "CreateJobsByNamespaceAsync",
-                                pathTemplate: "$\"/api/jobs/{@namespace}\"",
+                                operationId: "createJobsByNamespaceByJobIdAuthCheckByPerms",
+                                methodName: "CreateJobsByNamespaceByJobIdAuthCheckByPermsAsync",
+                                pathTemplate: "$\"/api/jobs/{@namespace}/{jobId}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -257,9 +257,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createJobsByNamespace",
-                                methodName: "CreateJobsByNamespaceAsync",
-                                pathTemplate: "$\"/api/jobs/{@namespace}\"",
+                                operationId: "createJobsByNamespaceByJobIdAuthCheckByPerms",
+                                methodName: "CreateJobsByNamespaceByJobIdAuthCheckByPermsAsync",
+                                pathTemplate: "$\"/api/jobs/{@namespace}/{jobId}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -297,7 +297,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateJobsByNamespaceResponse(
+                ProcessCreateJobsByNamespaceByJobIdAuthCheckByPermsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -305,9 +305,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createJobsByNamespace",
-                                methodName: "CreateJobsByNamespaceAsync",
-                                pathTemplate: "$\"/api/jobs/{@namespace}\"",
+                                operationId: "createJobsByNamespaceByJobIdAuthCheckByPerms",
+                                methodName: "CreateJobsByNamespaceByJobIdAuthCheckByPermsAsync",
+                                pathTemplate: "$\"/api/jobs/{@namespace}/{jobId}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -327,9 +327,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createJobsByNamespace",
-                                methodName: "CreateJobsByNamespaceAsync",
-                                pathTemplate: "$\"/api/jobs/{@namespace}\"",
+                                operationId: "createJobsByNamespaceByJobIdAuthCheckByPerms",
+                                methodName: "CreateJobsByNamespaceByJobIdAuthCheckByPermsAsync",
+                                pathTemplate: "$\"/api/jobs/{@namespace}/{jobId}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -357,7 +357,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateJobsByNamespaceResponseContent(
+                                ProcessCreateJobsByNamespaceByJobIdAuthCheckByPermsResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -366,9 +366,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.CreateJobsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.CreateJobsAuthCheckResponse2.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateJobsResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateJobsAuthCheckResponse2>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -398,9 +398,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.CreateJobsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.CreateJobsAuthCheckResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateJobsResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateJobsAuthCheckResponse2>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -439,80 +439,6 @@ namespace HuggingFace
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Start a job
-        /// </summary>
-        /// <param name="namespace"></param>
-        /// <param name="spaceId"></param>
-        /// <param name="dockerImage"></param>
-        /// <param name="arguments"></param>
-        /// <param name="command"></param>
-        /// <param name="environment">
-        /// Default Value: {}
-        /// </param>
-        /// <param name="secrets"></param>
-        /// <param name="flavor"></param>
-        /// <param name="arch"></param>
-        /// <param name="timeoutSeconds">
-        /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
-        /// </param>
-        /// <param name="attempts">
-        /// Max number of attempts to make. For example, if you set this to 3, the job will be retried up to 2 times if it fails.<br/>
-        /// Default Value: 1
-        /// </param>
-        /// <param name="labels">
-        /// Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dots, dashes, and underscores.
-        /// </param>
-        /// <param name="volumes">
-        /// HuggingFace Buckets or Repos to mount as volumes in the job container.
-        /// </param>
-        /// <param name="expose">
-        /// When `enabled`, expose every port the job's container listens on through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.jobs.huggingface.tech`. Any port the container binds to is proxied automatically; you do not need to declare specific ports. Access always requires a HF token with read access to the job's namespace.
-        /// </param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateJobsResponse> CreateJobsByNamespaceAsync(
-            string @namespace,
-            global::HuggingFace.CreateJobsRequestFlavor flavor,
-            string? spaceId = default,
-            string? dockerImage = default,
-            global::System.Collections.Generic.IList<string>? arguments = default,
-            global::System.Collections.Generic.IList<string>? command = default,
-            global::System.Collections.Generic.Dictionary<string, string>? environment = default,
-            global::System.Collections.Generic.Dictionary<string, string>? secrets = default,
-            global::HuggingFace.CreateJobsRequestArch? arch = default,
-            int? timeoutSeconds = default,
-            int? attempts = default,
-            global::System.Collections.Generic.Dictionary<string, string>? labels = default,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes = default,
-            global::HuggingFace.CreateJobsRequestExpose? expose = default,
-            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::HuggingFace.CreateJobsRequest
-            {
-                SpaceId = spaceId,
-                DockerImage = dockerImage,
-                Arguments = arguments,
-                Command = command,
-                Environment = environment,
-                Secrets = secrets,
-                Flavor = flavor,
-                Arch = arch,
-                TimeoutSeconds = timeoutSeconds,
-                Attempts = attempts,
-                Labels = labels,
-                Volumes = volumes,
-                Expose = expose,
-            };
-
-            return await CreateJobsByNamespaceAsync(
-                @namespace: @namespace,
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
