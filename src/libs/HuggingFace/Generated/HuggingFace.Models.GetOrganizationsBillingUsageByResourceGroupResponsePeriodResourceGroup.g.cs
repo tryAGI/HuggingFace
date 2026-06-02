@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponseResourceGroup
+    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroup
     {
         /// <summary>
         /// 
@@ -25,21 +25,21 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("storage")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupStorage Storage { get; set; }
+        public required global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage Storage { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inference")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupInference Inference { get; set; }
+        public required global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference Inference { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("compute")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupCompute Compute { get; set; }
+        public required global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupCompute Compute { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -48,7 +48,7 @@ namespace HuggingFace
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponseResourceGroup" /> class.
+        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroup" /> class.
         /// </summary>
         /// <param name="storage"></param>
         /// <param name="inference"></param>
@@ -58,10 +58,10 @@ namespace HuggingFace
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public GetOrganizationsBillingUsageByResourceGroupResponseResourceGroup(
-            global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupStorage storage,
-            global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupInference inference,
-            global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupCompute compute,
+        public GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroup(
+            global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage storage,
+            global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference inference,
+            global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupCompute compute,
             string? id,
             string? name)
         {
@@ -73,9 +73,9 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponseResourceGroup" /> class.
+        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroup" /> class.
         /// </summary>
-        public GetOrganizationsBillingUsageByResourceGroupResponseResourceGroup()
+        public GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroup()
         {
         }
 

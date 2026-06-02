@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupStorage
+    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage
     {
         /// <summary>
         /// 
@@ -29,14 +29,14 @@ namespace HuggingFace
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupStorage" /> class.
+        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage" /> class.
         /// </summary>
         /// <param name="privateGB"></param>
         /// <param name="publicGB"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupStorage(
+        public GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage(
             double privateGB,
             double publicGB)
         {
@@ -45,9 +45,9 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupStorage" /> class.
+        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage" /> class.
         /// </summary>
-        public GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupStorage()
+        public GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage()
         {
         }
 

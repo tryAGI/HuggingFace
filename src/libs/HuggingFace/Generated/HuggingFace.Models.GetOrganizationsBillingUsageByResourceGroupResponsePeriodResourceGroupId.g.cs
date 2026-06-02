@@ -6,7 +6,7 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupName
+    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupId
     {
 
         /// <summary>
