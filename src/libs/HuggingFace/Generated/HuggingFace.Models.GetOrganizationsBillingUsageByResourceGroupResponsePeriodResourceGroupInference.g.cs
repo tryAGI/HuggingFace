@@ -6,14 +6,14 @@ namespace HuggingFace
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupComputeJobs
+    public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference
     {
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("uptimeSec")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("requestCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double UptimeSec { get; set; }
+        public required double RequestCount { get; set; }
 
         /// <summary>
         /// 
@@ -29,25 +29,25 @@ namespace HuggingFace
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupComputeJobs" /> class.
+        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference" /> class.
         /// </summary>
-        /// <param name="uptimeSec"></param>
+        /// <param name="requestCount"></param>
         /// <param name="costCents"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupComputeJobs(
-            double uptimeSec,
+        public GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference(
+            double requestCount,
             double costCents)
         {
-            this.UptimeSec = uptimeSec;
+            this.RequestCount = requestCount;
             this.CostCents = costCents;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupComputeJobs" /> class.
+        /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference" /> class.
         /// </summary>
-        public GetOrganizationsBillingUsageByResourceGroupResponseResourceGroupComputeJobs()
+        public GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference()
         {
         }
 

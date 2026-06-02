@@ -23,6 +23,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isBlockedByMe")]
+        public bool? IsBlockedByMe { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("oauthApp")]
         public global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorOauthApp? OauthApp { get; set; }
 
@@ -37,6 +43,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="isOwner"></param>
         /// <param name="isOrgMember"></param>
+        /// <param name="isBlockedByMe"></param>
         /// <param name="oauthApp"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,10 +51,12 @@ namespace HuggingFace
         public GetDiscussionsResponseVariant2EventVariant7Author(
             bool? isOwner,
             bool? isOrgMember,
+            bool? isBlockedByMe,
             global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorOauthApp? oauthApp)
         {
             this.IsOwner = isOwner;
             this.IsOrgMember = isOrgMember;
+            this.IsBlockedByMe = isBlockedByMe;
             this.OauthApp = oauthApp;
         }
 

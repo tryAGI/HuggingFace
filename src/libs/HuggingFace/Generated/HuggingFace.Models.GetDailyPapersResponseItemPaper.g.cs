@@ -108,6 +108,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ai_summary_model")]
+        public string? AiSummaryModel { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("githubStars")]
         public double? GithubStars { get; set; }
 
@@ -137,6 +143,7 @@ namespace HuggingFace
         /// <param name="githubRepo"></param>
         /// <param name="aiSummary"></param>
         /// <param name="aiKeywords"></param>
+        /// <param name="aiSummaryModel"></param>
         /// <param name="githubStars"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -157,6 +164,7 @@ namespace HuggingFace
             string? githubRepo,
             string? aiSummary,
             global::System.Collections.Generic.IList<string>? aiKeywords,
+            string? aiSummaryModel,
             double? githubStars)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -174,6 +182,7 @@ namespace HuggingFace
             this.GithubRepo = githubRepo;
             this.AiSummary = aiSummary;
             this.AiKeywords = aiKeywords;
+            this.AiSummaryModel = aiSummaryModel;
             this.GithubStars = githubStars;
         }
 

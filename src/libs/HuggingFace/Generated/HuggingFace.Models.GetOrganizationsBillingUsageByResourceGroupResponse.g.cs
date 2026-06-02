@@ -18,9 +18,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroups")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("periods")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroup> ResourceGroups { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriod> Periods { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -32,16 +32,16 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageByResourceGroupResponse" /> class.
         /// </summary>
         /// <param name="currency"></param>
-        /// <param name="resourceGroups"></param>
+        /// <param name="periods"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetOrganizationsBillingUsageByResourceGroupResponse(
             string currency,
-            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponseResourceGroup> resourceGroups)
+            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriod> periods)
         {
             this.Currency = currency ?? throw new global::System.ArgumentNullException(nameof(currency));
-            this.ResourceGroups = resourceGroups ?? throw new global::System.ArgumentNullException(nameof(resourceGroups));
+            this.Periods = periods ?? throw new global::System.ArgumentNullException(nameof(periods));
         }
 
         /// <summary>
