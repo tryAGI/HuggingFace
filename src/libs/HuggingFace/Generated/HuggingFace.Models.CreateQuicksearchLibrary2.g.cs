@@ -459,6 +459,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        MagentaRealtime2,
+        /// <summary>
+        /// 
+        /// </summary>
         Magi1,
         /// <summary>
         /// 
@@ -1022,6 +1026,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Lvface => "lvface",
                 CreateQuicksearchLibrary2.Lyra20 => "lyra-2.0",
                 CreateQuicksearchLibrary2.MagentaRealtime => "magenta-realtime",
+                CreateQuicksearchLibrary2.MagentaRealtime2 => "magenta-realtime-2",
                 CreateQuicksearchLibrary2.Magi1 => "magi-1",
                 CreateQuicksearchLibrary2.MambaSsm => "mamba-ssm",
                 CreateQuicksearchLibrary2.Manas1 => "manas-1",
@@ -1254,6 +1259,7 @@ namespace HuggingFace
                 "lvface" => CreateQuicksearchLibrary2.Lvface,
                 "lyra-2.0" => CreateQuicksearchLibrary2.Lyra20,
                 "magenta-realtime" => CreateQuicksearchLibrary2.MagentaRealtime,
+                "magenta-realtime-2" => CreateQuicksearchLibrary2.MagentaRealtime2,
                 "magi-1" => CreateQuicksearchLibrary2.Magi1,
                 "mamba-ssm" => CreateQuicksearchLibrary2.MambaSsm,
                 "manas-1" => CreateQuicksearchLibrary2.Manas1,
