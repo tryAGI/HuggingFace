@@ -24,6 +24,13 @@ namespace HuggingFace
         public required global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role?, string> Role { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1ScopeJsonConverter))]
+        public global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Scope? Scope { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -33,16 +40,19 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateOrganizationsResourceGroupsRequestAutoJoinVariant1" /> class.
         /// </summary>
         /// <param name="role"></param>
+        /// <param name="scope"></param>
         /// <param name="enabled"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateOrganizationsResourceGroupsRequestAutoJoinVariant1(
             global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role?, string> role,
+            global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Scope? scope,
             string enabled = "True")
         {
             this.Enabled = enabled;
             this.Role = role;
+            this.Scope = scope;
         }
 
         /// <summary>
