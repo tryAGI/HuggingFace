@@ -447,6 +447,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        LongcatVideoAvatar15,
+        /// <summary>
+        /// 
+        /// </summary>
         Lvface,
         /// <summary>
         /// 
@@ -1023,6 +1027,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.LitertLm => "litert-lm",
                 CreateQuicksearchLibrary2.Liveportrait => "liveportrait",
                 CreateQuicksearchLibrary2.LlamaCppPython => "llama-cpp-python",
+                CreateQuicksearchLibrary2.LongcatVideoAvatar15 => "longcat-video-avatar-1.5",
                 CreateQuicksearchLibrary2.Lvface => "lvface",
                 CreateQuicksearchLibrary2.Lyra20 => "lyra-2.0",
                 CreateQuicksearchLibrary2.MagentaRealtime => "magenta-realtime",
@@ -1256,6 +1261,7 @@ namespace HuggingFace
                 "litert-lm" => CreateQuicksearchLibrary2.LitertLm,
                 "liveportrait" => CreateQuicksearchLibrary2.Liveportrait,
                 "llama-cpp-python" => CreateQuicksearchLibrary2.LlamaCppPython,
+                "longcat-video-avatar-1.5" => CreateQuicksearchLibrary2.LongcatVideoAvatar15,
                 "lvface" => CreateQuicksearchLibrary2.Lvface,
                 "lyra-2.0" => CreateQuicksearchLibrary2.Lyra20,
                 "magenta-realtime" => CreateQuicksearchLibrary2.MagentaRealtime,
