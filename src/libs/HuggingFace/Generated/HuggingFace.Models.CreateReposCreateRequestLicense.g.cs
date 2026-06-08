@@ -299,6 +299,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Openmdw11,
+        /// <summary>
+        /// 
+        /// </summary>
         Openrail,
         /// <summary>
         /// 
@@ -422,6 +426,7 @@ namespace HuggingFace
                 CreateReposCreateRequestLicense.OdcBy => "odc-by",
                 CreateReposCreateRequestLicense.Ofl11 => "ofl-1.1",
                 CreateReposCreateRequestLicense.Openmdw10 => "openmdw-1.0",
+                CreateReposCreateRequestLicense.Openmdw11 => "openmdw-1.1",
                 CreateReposCreateRequestLicense.Openrail => "openrail",
                 CreateReposCreateRequestLicense.OpenrailPlusPlus => "openrail++",
                 CreateReposCreateRequestLicense.Osl30 => "osl-3.0",
@@ -514,6 +519,7 @@ namespace HuggingFace
                 "odc-by" => CreateReposCreateRequestLicense.OdcBy,
                 "ofl-1.1" => CreateReposCreateRequestLicense.Ofl11,
                 "openmdw-1.0" => CreateReposCreateRequestLicense.Openmdw10,
+                "openmdw-1.1" => CreateReposCreateRequestLicense.Openmdw11,
                 "openrail" => CreateReposCreateRequestLicense.Openrail,
                 "openrail++" => CreateReposCreateRequestLicense.OpenrailPlusPlus,
                 "osl-3.0" => CreateReposCreateRequestLicense.Osl30,
