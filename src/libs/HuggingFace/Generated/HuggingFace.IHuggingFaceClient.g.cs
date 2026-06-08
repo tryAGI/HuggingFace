@@ -53,6 +53,11 @@ namespace HuggingFace
         public AgenticProvisioningClient AgenticProvisioning { get; }
 
         /// <summary>
+        /// Agents. The following endpoints provide information about AI agents using the Hub.
+        /// </summary>
+        public AgentsClient Agents { get; }
+
+        /// <summary>
         /// Auth. The following endpoints get information about your currently used user based on the passed token.
         /// </summary>
         public AuthClient Auth { get; }

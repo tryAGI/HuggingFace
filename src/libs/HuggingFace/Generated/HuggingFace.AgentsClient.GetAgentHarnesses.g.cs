@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class OrgsClient
+    public partial class AgentsClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetAgentHarnessesSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,55 +21,36 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetAgentHarnessesSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirement0,
+            {                s_GetAgentHarnessesSecurityRequirement0,
             };
-        partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupArguments(
+        partial void PrepareGetAgentHarnessesArguments(
+            global::System.Net.Http.HttpClient httpClient);
+        partial void PrepareGetAgentHarnessesRequest(
             global::System.Net.Http.HttpClient httpClient,
-            ref string name,
-            ref global::System.DateTime? startDate,
-            ref global::System.DateTime? endDate);
-        partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string name,
-            global::System.DateTime? startDate,
-            global::System.DateTime? endDate);
-        partial void ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponse(
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+        partial void ProcessGetAgentHarnessesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponseContent(
+        partial void ProcessGetAgentHarnessesResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
+        /// Get agent harnesses<br/>
+        /// Get the registry of AI agents / harnesses known to the Hub, along with the standard environment variables used to detect them. Clients use this registry to identify which agent they are running in when reporting Hub activity.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="startDate">
-        /// Default Value: 2026-06-01T00:00:00.000Z
-        /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-06-08T13:19:16.519Z
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse> GetOrganizationsByNameBillingUsageByResourceGroupAsync(
-            string name,
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetAgentHarnessesResponse> GetAgentHarnessesAsync(
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetOrganizationsByNameBillingUsageByResourceGroupAsResponseAsync(
-                name: name,
-                startDate: startDate,
-                endDate: endDate,
+            var __response = await GetAgentHarnessesAsResponseAsync(
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -77,39 +58,26 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
+        /// Get agent harnesses<br/>
+        /// Get the registry of AI agents / harnesses known to the Hub, along with the standard environment variables used to detect them. Clients use this registry to identify which agent they are running in when reporting Hub activity.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="startDate">
-        /// Default Value: 2026-06-01T00:00:00.000Z
-        /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-06-08T13:19:16.519Z
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>> GetOrganizationsByNameBillingUsageByResourceGroupAsResponseAsync(
-            string name,
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetAgentHarnessesResponse>> GetAgentHarnessesAsResponseAsync(
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetOrganizationsByNameBillingUsageByResourceGroupArguments(
-                httpClient: HttpClient,
-                name: ref name,
-                startDate: ref startDate,
-                endDate: ref endDate);
+            PrepareGetAgentHarnessesArguments(
+                httpClient: HttpClient);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirements,
-                operationName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync");
+                securityRequirements: s_GetAgentHarnessesSecurityRequirements,
+                operationName: "GetAgentHarnessesAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -129,12 +97,8 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/organizations/{name}/billing/usage-by-resource-group",
+                                path: "/api/agent-harnesses",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -172,12 +136,9 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
+                PrepareGetAgentHarnessesRequest(
                     httpClient: HttpClient,
-                    httpRequestMessage: __httpRequest,
-                    name: name!,
-                    startDate: startDate,
-                    endDate: endDate);
+                    httpRequestMessage: __httpRequest);
 
                 return __httpRequest;
             }
@@ -194,9 +155,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getAgentHarnesses",
+                                methodName: "GetAgentHarnessesAsync",
+                                pathTemplate: "\"/api/agent-harnesses\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -228,9 +189,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getAgentHarnesses",
+                                methodName: "GetAgentHarnessesAsync",
+                                pathTemplate: "\"/api/agent-harnesses\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -269,9 +230,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getAgentHarnesses",
+                                methodName: "GetAgentHarnessesAsync",
+                                pathTemplate: "\"/api/agent-harnesses\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -309,7 +270,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponse(
+                ProcessGetAgentHarnessesResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -317,9 +278,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getAgentHarnesses",
+                                methodName: "GetAgentHarnessesAsync",
+                                pathTemplate: "\"/api/agent-harnesses\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -339,9 +300,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getAgentHarnesses",
+                                methodName: "GetAgentHarnessesAsync",
+                                pathTemplate: "\"/api/agent-harnesses\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -369,7 +330,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponseContent(
+                                ProcessGetAgentHarnessesResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -378,9 +339,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.GetAgentHarnessesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetAgentHarnessesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -410,9 +371,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.GetAgentHarnessesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetAgentHarnessesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

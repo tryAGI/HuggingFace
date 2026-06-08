@@ -52,6 +52,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        /// Agents. The following endpoints provide information about AI agents using the Hub.
+        /// </summary>
+        public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Auth. The following endpoints get information about your currently used user based on the passed token.
         /// </summary>
         public AuthClient Auth => new AuthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
