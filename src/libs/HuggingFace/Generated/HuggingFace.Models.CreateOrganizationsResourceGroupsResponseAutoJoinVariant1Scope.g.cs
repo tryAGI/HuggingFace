@@ -15,7 +15,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Internal,
+        ReadPlus,
     }
 
     /// <summary>
@@ -31,7 +31,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope.All => "all",
-                CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope.Internal => "internal",
+                CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope.ReadPlus => "read_plus",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -43,7 +43,7 @@ namespace HuggingFace
             return value switch
             {
                 "all" => CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope.All,
-                "internal" => CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope.Internal,
+                "read_plus" => CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope.ReadPlus,
                 _ => null,
             };
         }

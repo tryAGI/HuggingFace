@@ -123,6 +123,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Chexmix,
+        /// <summary>
+        /// 
+        /// </summary>
         ChronosForecasting,
         /// <summary>
         /// 
@@ -946,6 +950,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Chaossim => "chaossim",
                 GetQuicksearchLibrary2.ChatTts => "chat_tts",
                 GetQuicksearchLibrary2.Chatterbox => "chatterbox",
+                GetQuicksearchLibrary2.Chexmix => "chexmix",
                 GetQuicksearchLibrary2.ChronosForecasting => "chronos-forecasting",
                 GetQuicksearchLibrary2.Clara => "clara",
                 GetQuicksearchLibrary2.Clipscope => "clipscope",
@@ -1180,6 +1185,7 @@ namespace HuggingFace
                 "chaossim" => GetQuicksearchLibrary2.Chaossim,
                 "chat_tts" => GetQuicksearchLibrary2.ChatTts,
                 "chatterbox" => GetQuicksearchLibrary2.Chatterbox,
+                "chexmix" => GetQuicksearchLibrary2.Chexmix,
                 "chronos-forecasting" => GetQuicksearchLibrary2.ChronosForecasting,
                 "clara" => GetQuicksearchLibrary2.Clara,
                 "clipscope" => GetQuicksearchLibrary2.Clipscope,

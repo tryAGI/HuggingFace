@@ -468,7 +468,7 @@ namespace HuggingFace
         /// HuggingFace Buckets or Repos to mount as volumes in the job container.
         /// </param>
         /// <param name="expose">
-        /// When `enabled`, expose every port the job's container listens on through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.jobs.huggingface.tech`. Any port the container binds to is proxied automatically; you do not need to declare specific ports. Access always requires a HF token with read access to the job's namespace.
+        /// Ports to expose publicly through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.&lt;jobs-public-domain&gt;`. Access always requires a HF token with read access to the job's namespace.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
