@@ -4,15 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// When `enabled`, expose every port the job's container listens on through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.jobs.huggingface.tech`. Any port the container binds to is proxied automatically; you do not need to declare specific ports. Access always requires a HF token with read access to the job's namespace.
+    /// Ports to expose publicly through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.&lt;jobs-public-domain&gt;`. Access always requires a HF token with read access to the job's namespace.
     /// </summary>
     public sealed partial class CreateSettingsWebhooksRequestJobExpose
     {
         /// <summary>
-        /// Default Value: false
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
-        public bool? Enabled { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("ports")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<int> Ports { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -23,16 +24,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSettingsWebhooksRequestJobExpose" /> class.
         /// </summary>
-        /// <param name="enabled">
-        /// Default Value: false
-        /// </param>
+        /// <param name="ports"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateSettingsWebhooksRequestJobExpose(
-            bool? enabled)
+            global::System.Collections.Generic.IList<int> ports)
         {
-            this.Enabled = enabled;
+            this.Ports = ports ?? throw new global::System.ArgumentNullException(nameof(ports));
         }
 
         /// <summary>

@@ -123,6 +123,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Chexmix,
+        /// <summary>
+        /// 
+        /// </summary>
         ChronosForecasting,
         /// <summary>
         /// 
@@ -946,6 +950,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Chaossim => "chaossim",
                 CreateQuicksearchRequestLibrary.ChatTts => "chat_tts",
                 CreateQuicksearchRequestLibrary.Chatterbox => "chatterbox",
+                CreateQuicksearchRequestLibrary.Chexmix => "chexmix",
                 CreateQuicksearchRequestLibrary.ChronosForecasting => "chronos-forecasting",
                 CreateQuicksearchRequestLibrary.Clara => "clara",
                 CreateQuicksearchRequestLibrary.Clipscope => "clipscope",
@@ -1180,6 +1185,7 @@ namespace HuggingFace
                 "chaossim" => CreateQuicksearchRequestLibrary.Chaossim,
                 "chat_tts" => CreateQuicksearchRequestLibrary.ChatTts,
                 "chatterbox" => CreateQuicksearchRequestLibrary.Chatterbox,
+                "chexmix" => CreateQuicksearchRequestLibrary.Chexmix,
                 "chronos-forecasting" => CreateQuicksearchRequestLibrary.ChronosForecasting,
                 "clara" => CreateQuicksearchRequestLibrary.Clara,
                 "clipscope" => CreateQuicksearchRequestLibrary.Clipscope,
