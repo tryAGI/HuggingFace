@@ -7,7 +7,7 @@ namespace HuggingFace
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,33 +21,33 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirement0,
+            {                s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirement0,
             };
-        partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupArguments(
+        partial void PrepareGetOrganizationsByNameBillingUsageByInferenceSessionArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
             ref global::System.DateTime? startDate,
             ref global::System.DateTime? endDate);
-        partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
+        partial void PrepareGetOrganizationsByNameBillingUsageByInferenceSessionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
             global::System.DateTime? startDate,
             global::System.DateTime? endDate);
-        partial void ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponse(
+        partial void ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponseContent(
+        partial void ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
+        /// Get org inference usage by session<br/>
+        /// Get org inference-provider usage broken down per session id, as a time-series of monthly periods.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="startDate">
@@ -59,14 +59,14 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse> GetOrganizationsByNameBillingUsageByResourceGroupAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse> GetOrganizationsByNameBillingUsageByInferenceSessionAsync(
             string name,
             global::System.DateTime? startDate = default,
             global::System.DateTime? endDate = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetOrganizationsByNameBillingUsageByResourceGroupAsResponseAsync(
+            var __response = await GetOrganizationsByNameBillingUsageByInferenceSessionAsResponseAsync(
                 name: name,
                 startDate: startDate,
                 endDate: endDate,
@@ -77,8 +77,8 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
+        /// Get org inference usage by session<br/>
+        /// Get org inference-provider usage broken down per session id, as a time-series of monthly periods.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="startDate">
@@ -90,7 +90,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>> GetOrganizationsByNameBillingUsageByResourceGroupAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse>> GetOrganizationsByNameBillingUsageByInferenceSessionAsResponseAsync(
             string name,
             global::System.DateTime? startDate = default,
             global::System.DateTime? endDate = default,
@@ -99,7 +99,7 @@ namespace HuggingFace
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetOrganizationsByNameBillingUsageByResourceGroupArguments(
+            PrepareGetOrganizationsByNameBillingUsageByInferenceSessionArguments(
                 httpClient: HttpClient,
                 name: ref name,
                 startDate: ref startDate,
@@ -108,8 +108,8 @@ namespace HuggingFace
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirements,
-                operationName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync");
+                securityRequirements: s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirements,
+                operationName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -129,7 +129,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/organizations/{name}/billing/usage-by-resource-group",
+                                path: $"/api/organizations/{name}/billing/usage-by-inference-session",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -172,7 +172,7 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
+                PrepareGetOrganizationsByNameBillingUsageByInferenceSessionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     name: name!,
@@ -194,9 +194,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
+                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -228,9 +228,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
+                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -269,9 +269,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
+                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -309,7 +309,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponse(
+                ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -317,9 +317,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
+                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -339,9 +339,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
+                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -369,7 +369,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponseContent(
+                                ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -378,9 +378,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -410,9 +410,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
