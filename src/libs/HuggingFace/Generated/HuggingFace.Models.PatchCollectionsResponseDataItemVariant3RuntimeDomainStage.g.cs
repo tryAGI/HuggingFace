@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Misconfigured,
+        /// <summary>
+        /// 
+        /// </summary>
         Pending,
         /// <summary>
         /// 
@@ -39,6 +43,7 @@ namespace HuggingFace
             return value switch
             {
                 PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.ExpiredChallenge => "EXPIRED_CHALLENGE",
+                PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.Misconfigured => "MISCONFIGURED",
                 PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.Pending => "PENDING",
                 PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.PendingChallenge => "PENDING_CHALLENGE",
                 PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.Ready => "READY",
@@ -53,6 +58,7 @@ namespace HuggingFace
             return value switch
             {
                 "EXPIRED_CHALLENGE" => PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.ExpiredChallenge,
+                "MISCONFIGURED" => PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.Misconfigured,
                 "PENDING" => PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.Pending,
                 "PENDING_CHALLENGE" => PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.PendingChallenge,
                 "READY" => PatchCollectionsResponseDataItemVariant3RuntimeDomainStage.Ready,

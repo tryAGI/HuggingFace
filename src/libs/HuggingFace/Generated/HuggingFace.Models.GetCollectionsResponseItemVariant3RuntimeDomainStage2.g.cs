@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Misconfigured,
+        /// <summary>
+        /// 
+        /// </summary>
         Pending,
         /// <summary>
         /// 
@@ -39,6 +43,7 @@ namespace HuggingFace
             return value switch
             {
                 GetCollectionsResponseItemVariant3RuntimeDomainStage2.ExpiredChallenge => "EXPIRED_CHALLENGE",
+                GetCollectionsResponseItemVariant3RuntimeDomainStage2.Misconfigured => "MISCONFIGURED",
                 GetCollectionsResponseItemVariant3RuntimeDomainStage2.Pending => "PENDING",
                 GetCollectionsResponseItemVariant3RuntimeDomainStage2.PendingChallenge => "PENDING_CHALLENGE",
                 GetCollectionsResponseItemVariant3RuntimeDomainStage2.Ready => "READY",
@@ -53,6 +58,7 @@ namespace HuggingFace
             return value switch
             {
                 "EXPIRED_CHALLENGE" => GetCollectionsResponseItemVariant3RuntimeDomainStage2.ExpiredChallenge,
+                "MISCONFIGURED" => GetCollectionsResponseItemVariant3RuntimeDomainStage2.Misconfigured,
                 "PENDING" => GetCollectionsResponseItemVariant3RuntimeDomainStage2.Pending,
                 "PENDING_CHALLENGE" => GetCollectionsResponseItemVariant3RuntimeDomainStage2.PendingChallenge,
                 "READY" => GetCollectionsResponseItemVariant3RuntimeDomainStage2.Ready,

@@ -89,6 +89,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        /// Container Registry. The following endpoints back the HuggingFace container registry, e.g. `docker login` token minting.
+        /// </summary>
+        public ContainerClient Container => new ContainerClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Datasets. Get information from all datasets on the Hub.
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
@@ -239,6 +248,15 @@ namespace HuggingFace
         /// | `active` | Boolean for provisioning status |.
         /// </summary>
         public ScimClient Scim => new ScimClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Service Accounts. The following endpoints manage service accounts and their tokens.
+        /// </summary>
+        public ServiceAccountsClient ServiceAccounts => new ServiceAccountsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,

@@ -74,6 +74,11 @@ namespace HuggingFace
         public CollectionsClient Collections { get; }
 
         /// <summary>
+        /// Container Registry. The following endpoints back the HuggingFace container registry, e.g. `docker login` token minting.
+        /// </summary>
+        public ContainerClient Container { get; }
+
+        /// <summary>
         /// Datasets. Get information from all datasets on the Hub.
         /// </summary>
         public DatasetsClient Datasets { get; }
@@ -168,6 +173,11 @@ namespace HuggingFace
         /// | `active` | Boolean for provisioning status |.
         /// </summary>
         public ScimClient Scim { get; }
+
+        /// <summary>
+        /// Service Accounts. The following endpoints manage service accounts and their tokens.
+        /// </summary>
+        public ServiceAccountsClient ServiceAccounts { get; }
 
         /// <summary>
         /// Spaces. Get information from all Spaces on the Hub.
