@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class OrgsClient
+    public partial class ContainerClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetRegistryTokenSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,55 +21,50 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetRegistryTokenSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirement0,
+            {                s_GetRegistryTokenSecurityRequirement0,
             };
-        partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupArguments(
+        partial void PrepareGetRegistryTokenArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string name,
-            ref global::System.DateTime? startDate,
-            ref global::System.DateTime? endDate);
-        partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
+            ref string service,
+            ref global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? scope);
+        partial void PrepareGetRegistryTokenRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string name,
-            global::System.DateTime? startDate,
-            global::System.DateTime? endDate);
-        partial void ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponse(
+            string service,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? scope);
+        partial void ProcessGetRegistryTokenResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponseContent(
+        partial void ProcessGetRegistryTokenResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
+        /// Registry token<br/>
+        /// Mints a short-lived EdDSA JWT for the HuggingFace container registry, verifiable via the JWK at `/api/keys/jwt`.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="startDate">
-        /// Default Value: 2026-06-01T00:00:00.000Z
+        /// <param name="service">
+        /// Registry service identifier — placed in the JWT `aud` claim.
         /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-06-10T21:43:23.082Z
+        /// <param name="scope">
+        /// Docker Distribution scope(s), e.g. `repository:org/img:push,pull`. May be repeated.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse> GetOrganizationsByNameBillingUsageByResourceGroupAsync(
-            string name,
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetRegistryTokenResponse> GetRegistryTokenAsync(
+            string service,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? scope = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetOrganizationsByNameBillingUsageByResourceGroupAsResponseAsync(
-                name: name,
-                startDate: startDate,
-                endDate: endDate,
+            var __response = await GetRegistryTokenAsResponseAsync(
+                service: service,
+                scope: scope,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -77,39 +72,36 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
+        /// Registry token<br/>
+        /// Mints a short-lived EdDSA JWT for the HuggingFace container registry, verifiable via the JWK at `/api/keys/jwt`.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="startDate">
-        /// Default Value: 2026-06-01T00:00:00.000Z
+        /// <param name="service">
+        /// Registry service identifier — placed in the JWT `aud` claim.
         /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-06-10T21:43:23.082Z
+        /// <param name="scope">
+        /// Docker Distribution scope(s), e.g. `repository:org/img:push,pull`. May be repeated.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>> GetOrganizationsByNameBillingUsageByResourceGroupAsResponseAsync(
-            string name,
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetRegistryTokenResponse>> GetRegistryTokenAsResponseAsync(
+            string service,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? scope = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetOrganizationsByNameBillingUsageByResourceGroupArguments(
+            PrepareGetRegistryTokenArguments(
                 httpClient: HttpClient,
-                name: ref name,
-                startDate: ref startDate,
-                endDate: ref endDate);
+                service: ref service,
+                scope: ref scope);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetOrganizationsByNameBillingUsageByResourceGroupSecurityRequirements,
-                operationName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync");
+                securityRequirements: s_GetRegistryTokenSecurityRequirements,
+                operationName: "GetRegistryTokenAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -129,11 +121,11 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/organizations/{name}/billing/usage-by-resource-group",
+                                path: "/api/registry/token",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddRequiredParameter("service", service)
+                                .AddOptionalParameter("scope", scope?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -172,12 +164,11 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
+                PrepareGetRegistryTokenRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name!,
-                    startDate: startDate,
-                    endDate: endDate);
+                    service: service!,
+                    scope: scope);
 
                 return __httpRequest;
             }
@@ -194,9 +185,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getRegistryToken",
+                                methodName: "GetRegistryTokenAsync",
+                                pathTemplate: "\"/api/registry/token\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -228,9 +219,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getRegistryToken",
+                                methodName: "GetRegistryTokenAsync",
+                                pathTemplate: "\"/api/registry/token\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -269,9 +260,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getRegistryToken",
+                                methodName: "GetRegistryTokenAsync",
+                                pathTemplate: "\"/api/registry/token\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -309,7 +300,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponse(
+                ProcessGetRegistryTokenResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -317,9 +308,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getRegistryToken",
+                                methodName: "GetRegistryTokenAsync",
+                                pathTemplate: "\"/api/registry/token\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -339,9 +330,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByResourceGroup",
-                                methodName: "GetOrganizationsByNameBillingUsageByResourceGroupAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
+                                operationId: "getRegistryToken",
+                                methodName: "GetRegistryTokenAsync",
+                                pathTemplate: "\"/api/registry/token\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -369,7 +360,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponseContent(
+                                ProcessGetRegistryTokenResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -378,9 +369,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.GetRegistryTokenResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetRegistryTokenResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -410,9 +401,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.GetRegistryTokenResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetRegistryTokenResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

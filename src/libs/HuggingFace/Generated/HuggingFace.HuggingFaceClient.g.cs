@@ -89,6 +89,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        /// Container Registry. The following endpoints back the HuggingFace container registry, e.g. `docker login` token minting.
+        /// </summary>
+        public ContainerClient Container => new ContainerClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Datasets. Get information from all datasets on the Hub.
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
