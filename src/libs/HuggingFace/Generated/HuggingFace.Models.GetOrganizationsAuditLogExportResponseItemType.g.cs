@@ -159,6 +159,30 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        OrgServiceAccountCreate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountDelete,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenCreate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenDelete,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenRotate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenUpdate,
+        /// <summary>
+        /// 
+        /// </summary>
         OrgSsoJoin,
         /// <summary>
         /// 
@@ -411,6 +435,12 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgRename => "org.rename",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRestore => "org.restore",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRotateToken => "org.rotate_token",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountCreate => "org.service_account.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete => "org.service_account.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate => "org.service_account.token.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete => "org.service_account.token.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate => "org.service_account.token.rotate",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate => "org.service_account.token.update",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSsoJoin => "org.sso_join",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSsoLogin => "org.sso_login",
                 GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequest => "org.token_approval.authorization_request",
@@ -509,6 +539,12 @@ namespace HuggingFace
                 "org.rename" => GetOrganizationsAuditLogExportResponseItemType.OrgRename,
                 "org.restore" => GetOrganizationsAuditLogExportResponseItemType.OrgRestore,
                 "org.rotate_token" => GetOrganizationsAuditLogExportResponseItemType.OrgRotateToken,
+                "org.service_account.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountCreate,
+                "org.service_account.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete,
+                "org.service_account.token.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate,
+                "org.service_account.token.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete,
+                "org.service_account.token.rotate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate,
+                "org.service_account.token.update" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate,
                 "org.sso_join" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoJoin,
                 "org.sso_login" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoLogin,
                 "org.token_approval.authorization_request" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequest,
