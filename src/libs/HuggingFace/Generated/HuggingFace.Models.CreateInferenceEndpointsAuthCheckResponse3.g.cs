@@ -23,6 +23,12 @@ namespace HuggingFace
         public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser3 User { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -33,15 +39,18 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="user"></param>
+        /// <param name="resourceGroupId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateInferenceEndpointsAuthCheckResponse3(
             global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace3 @namespace,
-            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser3 user)
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser3 user,
+            string? resourceGroupId)
         {
             this.Namespace = @namespace ?? throw new global::System.ArgumentNullException(nameof(@namespace));
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.ResourceGroupId = resourceGroupId;
         }
 
         /// <summary>

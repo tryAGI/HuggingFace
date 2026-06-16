@@ -147,6 +147,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Openenv,
+        /// <summary>
+        /// 
+        /// </summary>
         Optimum,
         /// <summary>
         /// 
@@ -296,6 +300,7 @@ namespace HuggingFace
                 GetDocsSearchProduct.MicrosoftAzure => "microsoft-azure",
                 GetDocsSearchProduct.MlFor3dCourse => "ml-for-3d-course",
                 GetDocsSearchProduct.MlGamesCourse => "ml-games-course",
+                GetDocsSearchProduct.Openenv => "openenv",
                 GetDocsSearchProduct.Optimum => "optimum",
                 GetDocsSearchProduct.OptimumExecutorch => "optimum-executorch",
                 GetDocsSearchProduct.OptimumHabana => "optimum-habana",
@@ -366,6 +371,7 @@ namespace HuggingFace
                 "microsoft-azure" => GetDocsSearchProduct.MicrosoftAzure,
                 "ml-for-3d-course" => GetDocsSearchProduct.MlFor3dCourse,
                 "ml-games-course" => GetDocsSearchProduct.MlGamesCourse,
+                "openenv" => GetDocsSearchProduct.Openenv,
                 "optimum" => GetDocsSearchProduct.Optimum,
                 "optimum-executorch" => GetDocsSearchProduct.OptimumExecutorch,
                 "optimum-habana" => GetDocsSearchProduct.OptimumHabana,

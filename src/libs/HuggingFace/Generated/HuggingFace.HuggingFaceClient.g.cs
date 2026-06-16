@@ -52,6 +52,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        /// Agents. The following endpoints provide information about AI agents using the Hub.
+        /// </summary>
+        public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Auth. The following endpoints get information about your currently used user based on the passed token.
         /// </summary>
         public AuthClient Auth => new AuthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
@@ -74,6 +83,15 @@ namespace HuggingFace
         /// You can learn more about it in the Collections [guide](https://huggingface.co/docs/hub/collections). Collections can also be managed using the Python client (see [guide](https://huggingface.co/docs/huggingface_hub/main/en/guides/collections)).
         /// </summary>
         public CollectionsClient Collections => new CollectionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Container Registry. The following endpoints back the HuggingFace container registry, e.g. `docker login` token minting.
+        /// </summary>
+        public ContainerClient Container => new ContainerClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -230,6 +248,15 @@ namespace HuggingFace
         /// | `active` | Boolean for provisioning status |.
         /// </summary>
         public ScimClient Scim => new ScimClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Service Accounts. The following endpoints manage service accounts and their tokens.
+        /// </summary>
+        public ServiceAccountsClient ServiceAccounts => new ServiceAccountsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,

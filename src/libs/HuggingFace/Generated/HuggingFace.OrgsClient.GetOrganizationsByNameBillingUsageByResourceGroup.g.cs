@@ -28,14 +28,14 @@ namespace HuggingFace
         partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            ref global::System.DateTime startDate,
-            ref global::System.DateTime endDate);
+            ref global::System.DateTime? startDate,
+            ref global::System.DateTime? endDate);
         partial void PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            global::System.DateTime startDate,
-            global::System.DateTime endDate);
+            global::System.DateTime? startDate,
+            global::System.DateTime? endDate);
         partial void ProcessGetOrganizationsByNameBillingUsageByResourceGroupResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -47,18 +47,22 @@ namespace HuggingFace
 
         /// <summary>
         /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group for a given period (max 3 months)
+        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
+        /// <param name="startDate">
+        /// Default Value: 2026-06-01T00:00:00.000Z
+        /// </param>
+        /// <param name="endDate">
+        /// Default Value: 2026-06-16T17:00:44.320Z
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse> GetOrganizationsByNameBillingUsageByResourceGroupAsync(
             string name,
-            global::System.DateTime startDate,
-            global::System.DateTime endDate,
+            global::System.DateTime? startDate = default,
+            global::System.DateTime? endDate = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -74,18 +78,22 @@ namespace HuggingFace
         }
         /// <summary>
         /// Get org usage by resource group<br/>
-        /// Get org usage breakdown per resource group for a given period (max 3 months)
+        /// Get org usage breakdown per resource group, returned as a time-series of monthly periods. Window is [startDate, endDate], defaults to the current month. Both dates must fall within the last 12 months. Storage values are the peak observed within each monthly period.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
+        /// <param name="startDate">
+        /// Default Value: 2026-06-01T00:00:00.000Z
+        /// </param>
+        /// <param name="endDate">
+        /// Default Value: 2026-06-16T17:00:44.320Z
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse>> GetOrganizationsByNameBillingUsageByResourceGroupAsResponseAsync(
             string name,
-            global::System.DateTime startDate,
-            global::System.DateTime endDate,
+            global::System.DateTime? startDate = default,
+            global::System.DateTime? endDate = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -124,8 +132,8 @@ namespace HuggingFace
                                 path: $"/api/organizations/{name}/billing/usage-by-resource-group",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddRequiredParameter("startDate", startDate.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddRequiredParameter("endDate", endDate.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -168,8 +176,8 @@ namespace HuggingFace
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     name: name!,
-                    startDate: startDate!,
-                    endDate: endDate!);
+                    startDate: startDate,
+                    endDate: endDate);
 
                 return __httpRequest;
             }

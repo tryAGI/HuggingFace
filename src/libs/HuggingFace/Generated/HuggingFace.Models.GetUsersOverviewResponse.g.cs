@@ -124,6 +124,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("primaryOrgAvatarUrl")]
+        public string? PrimaryOrgAvatarUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <default>"user"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "user";
@@ -163,6 +169,7 @@ namespace HuggingFace
         /// <param name="details"></param>
         /// <param name="isFollowing"></param>
         /// <param name="reasonToFollow"></param>
+        /// <param name="primaryOrgAvatarUrl"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -187,6 +194,7 @@ namespace HuggingFace
             string? details,
             bool? isFollowing,
             string? reasonToFollow,
+            string? primaryOrgAvatarUrl,
             string type = "user")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -207,6 +215,7 @@ namespace HuggingFace
             this.Details = details;
             this.IsFollowing = isFollowing;
             this.ReasonToFollow = reasonToFollow;
+            this.PrimaryOrgAvatarUrl = primaryOrgAvatarUrl;
             this.Type = type;
             this.CreatedAt = createdAt;
         }

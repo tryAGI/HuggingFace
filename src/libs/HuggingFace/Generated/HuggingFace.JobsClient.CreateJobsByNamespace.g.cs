@@ -467,6 +467,12 @@ namespace HuggingFace
         /// <param name="volumes">
         /// HuggingFace Buckets or Repos to mount as volumes in the job container.
         /// </param>
+        /// <param name="expose">
+        /// Ports to expose publicly through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.&lt;jobs-public-domain&gt;`. Access always requires a HF token with read access to the job's namespace.
+        /// </param>
+        /// <param name="ssh">
+        /// When `enabled`, the job's container is reachable over SSH at `ssh &lt;job_id&gt;@ssh.hf.jobs`. Only the job's owner is allowed in, authenticated by an SSH public key registered on the Hub.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -484,6 +490,8 @@ namespace HuggingFace
             int? attempts = default,
             global::System.Collections.Generic.Dictionary<string, string>? labels = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes = default,
+            global::HuggingFace.CreateJobsRequestExpose? expose = default,
+            global::HuggingFace.CreateJobsRequestSsh? ssh = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -501,6 +509,8 @@ namespace HuggingFace
                 Attempts = attempts,
                 Labels = labels,
                 Volumes = volumes,
+                Expose = expose,
+                Ssh = ssh,
             };
 
             return await CreateJobsByNamespaceAsync(

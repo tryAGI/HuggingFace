@@ -159,6 +159,122 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        OrgServiceAccountCreate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountDelete,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenCreate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenDelete,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenRotate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountTokenUpdate,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsInferenceProviders,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsInferenceProvidersKeysAdd,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsInferenceProvidersKeysRemove,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsInferenceProvidersUsage,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsNetwork,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsNetworkAuthEnforcementDisable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsNetworkAuthEnforcementEnable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsNetworkIpRestrictionDisable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsNetworkIpRestrictionEnable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsProfile,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsPublisherGating,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsRegions,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsResourceGroups,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSecurity2faDisable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSecurity2faEnable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSecurityAutoJoinDisable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSecurityAutoJoinEnable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSecurityMembersPrivacyDisable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSecurityMembersPrivacyEnable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSecurityRepoVisibility,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSso,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSsoDisable,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgSettingsSsoEnable,
+        /// <summary>
+        /// 
+        /// </summary>
         OrgSsoJoin,
         /// <summary>
         /// 
@@ -411,6 +527,35 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgRename => "org.rename",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRestore => "org.restore",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRotateToken => "org.rotate_token",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountCreate => "org.service_account.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete => "org.service_account.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate => "org.service_account.token.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete => "org.service_account.token.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate => "org.service_account.token.rotate",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate => "org.service_account.token.update",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders => "org.settings.inference_providers",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd => "org.settings.inference_providers.keys.add",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysRemove => "org.settings.inference_providers.keys.remove",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersUsage => "org.settings.inference_providers.usage",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetwork => "org.settings.network",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkAuthEnforcementDisable => "org.settings.network.auth_enforcement.disable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkAuthEnforcementEnable => "org.settings.network.auth_enforcement.enable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkIpRestrictionDisable => "org.settings.network.ip_restriction.disable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkIpRestrictionEnable => "org.settings.network.ip_restriction.enable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsProfile => "org.settings.profile",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsPublisherGating => "org.settings.publisher_gating",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsRegions => "org.settings.regions",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsResourceGroups => "org.settings.resource_groups",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurity2faDisable => "org.settings.security.2fa.disable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurity2faEnable => "org.settings.security.2fa.enable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityAutoJoinDisable => "org.settings.security.auto_join.disable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityAutoJoinEnable => "org.settings.security.auto_join.enable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityMembersPrivacyDisable => "org.settings.security.members_privacy.disable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityMembersPrivacyEnable => "org.settings.security.members_privacy.enable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityRepoVisibility => "org.settings.security.repo_visibility",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSso => "org.settings.sso",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoDisable => "org.settings.sso.disable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoEnable => "org.settings.sso.enable",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSsoJoin => "org.sso_join",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSsoLogin => "org.sso_login",
                 GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequest => "org.token_approval.authorization_request",
@@ -509,6 +654,35 @@ namespace HuggingFace
                 "org.rename" => GetOrganizationsAuditLogExportResponseItemType.OrgRename,
                 "org.restore" => GetOrganizationsAuditLogExportResponseItemType.OrgRestore,
                 "org.rotate_token" => GetOrganizationsAuditLogExportResponseItemType.OrgRotateToken,
+                "org.service_account.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountCreate,
+                "org.service_account.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete,
+                "org.service_account.token.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate,
+                "org.service_account.token.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete,
+                "org.service_account.token.rotate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate,
+                "org.service_account.token.update" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate,
+                "org.settings.inference_providers" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders,
+                "org.settings.inference_providers.keys.add" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd,
+                "org.settings.inference_providers.keys.remove" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysRemove,
+                "org.settings.inference_providers.usage" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersUsage,
+                "org.settings.network" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetwork,
+                "org.settings.network.auth_enforcement.disable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkAuthEnforcementDisable,
+                "org.settings.network.auth_enforcement.enable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkAuthEnforcementEnable,
+                "org.settings.network.ip_restriction.disable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkIpRestrictionDisable,
+                "org.settings.network.ip_restriction.enable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsNetworkIpRestrictionEnable,
+                "org.settings.profile" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsProfile,
+                "org.settings.publisher_gating" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsPublisherGating,
+                "org.settings.regions" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsRegions,
+                "org.settings.resource_groups" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsResourceGroups,
+                "org.settings.security.2fa.disable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurity2faDisable,
+                "org.settings.security.2fa.enable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurity2faEnable,
+                "org.settings.security.auto_join.disable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityAutoJoinDisable,
+                "org.settings.security.auto_join.enable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityAutoJoinEnable,
+                "org.settings.security.members_privacy.disable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityMembersPrivacyDisable,
+                "org.settings.security.members_privacy.enable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityMembersPrivacyEnable,
+                "org.settings.security.repo_visibility" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSecurityRepoVisibility,
+                "org.settings.sso" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSso,
+                "org.settings.sso.disable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoDisable,
+                "org.settings.sso.enable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoEnable,
                 "org.sso_join" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoJoin,
                 "org.sso_login" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoLogin,
                 "org.token_approval.authorization_request" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequest,

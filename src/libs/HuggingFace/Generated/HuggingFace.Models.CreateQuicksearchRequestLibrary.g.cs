@@ -123,6 +123,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Chexmix,
+        /// <summary>
+        /// 
+        /// </summary>
         ChronosForecasting,
         /// <summary>
         /// 
@@ -447,6 +451,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        LongcatVideoAvatar15,
+        /// <summary>
+        /// 
+        /// </summary>
         Lvface,
         /// <summary>
         /// 
@@ -456,6 +464,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         MagentaRealtime,
+        /// <summary>
+        /// 
+        /// </summary>
+        MagentaRealtime2,
         /// <summary>
         /// 
         /// </summary>
@@ -739,6 +751,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        StableAudio3,
+        /// <summary>
+        /// 
+        /// </summary>
         StableAudioTools,
         /// <summary>
         /// 
@@ -934,6 +950,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Chaossim => "chaossim",
                 CreateQuicksearchRequestLibrary.ChatTts => "chat_tts",
                 CreateQuicksearchRequestLibrary.Chatterbox => "chatterbox",
+                CreateQuicksearchRequestLibrary.Chexmix => "chexmix",
                 CreateQuicksearchRequestLibrary.ChronosForecasting => "chronos-forecasting",
                 CreateQuicksearchRequestLibrary.Clara => "clara",
                 CreateQuicksearchRequestLibrary.Clipscope => "clipscope",
@@ -1015,9 +1032,11 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.LitertLm => "litert-lm",
                 CreateQuicksearchRequestLibrary.Liveportrait => "liveportrait",
                 CreateQuicksearchRequestLibrary.LlamaCppPython => "llama-cpp-python",
+                CreateQuicksearchRequestLibrary.LongcatVideoAvatar15 => "longcat-video-avatar-1.5",
                 CreateQuicksearchRequestLibrary.Lvface => "lvface",
                 CreateQuicksearchRequestLibrary.Lyra20 => "lyra-2.0",
                 CreateQuicksearchRequestLibrary.MagentaRealtime => "magenta-realtime",
+                CreateQuicksearchRequestLibrary.MagentaRealtime2 => "magenta-realtime-2",
                 CreateQuicksearchRequestLibrary.Magi1 => "magi-1",
                 CreateQuicksearchRequestLibrary.MambaSsm => "mamba-ssm",
                 CreateQuicksearchRequestLibrary.Manas1 => "manas-1",
@@ -1088,6 +1107,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.SpanMarker => "span-marker",
                 CreateQuicksearchRequestLibrary.Speechbrain => "speechbrain",
                 CreateQuicksearchRequestLibrary.SsrSpeech => "ssr-speech",
+                CreateQuicksearchRequestLibrary.StableAudio3 => "stable-audio-3",
                 CreateQuicksearchRequestLibrary.StableAudioTools => "stable-audio-tools",
                 CreateQuicksearchRequestLibrary.StableBaselines3 => "stable-baselines3",
                 CreateQuicksearchRequestLibrary.Stanza => "stanza",
@@ -1165,6 +1185,7 @@ namespace HuggingFace
                 "chaossim" => CreateQuicksearchRequestLibrary.Chaossim,
                 "chat_tts" => CreateQuicksearchRequestLibrary.ChatTts,
                 "chatterbox" => CreateQuicksearchRequestLibrary.Chatterbox,
+                "chexmix" => CreateQuicksearchRequestLibrary.Chexmix,
                 "chronos-forecasting" => CreateQuicksearchRequestLibrary.ChronosForecasting,
                 "clara" => CreateQuicksearchRequestLibrary.Clara,
                 "clipscope" => CreateQuicksearchRequestLibrary.Clipscope,
@@ -1246,9 +1267,11 @@ namespace HuggingFace
                 "litert-lm" => CreateQuicksearchRequestLibrary.LitertLm,
                 "liveportrait" => CreateQuicksearchRequestLibrary.Liveportrait,
                 "llama-cpp-python" => CreateQuicksearchRequestLibrary.LlamaCppPython,
+                "longcat-video-avatar-1.5" => CreateQuicksearchRequestLibrary.LongcatVideoAvatar15,
                 "lvface" => CreateQuicksearchRequestLibrary.Lvface,
                 "lyra-2.0" => CreateQuicksearchRequestLibrary.Lyra20,
                 "magenta-realtime" => CreateQuicksearchRequestLibrary.MagentaRealtime,
+                "magenta-realtime-2" => CreateQuicksearchRequestLibrary.MagentaRealtime2,
                 "magi-1" => CreateQuicksearchRequestLibrary.Magi1,
                 "mamba-ssm" => CreateQuicksearchRequestLibrary.MambaSsm,
                 "manas-1" => CreateQuicksearchRequestLibrary.Manas1,
@@ -1319,6 +1342,7 @@ namespace HuggingFace
                 "span-marker" => CreateQuicksearchRequestLibrary.SpanMarker,
                 "speechbrain" => CreateQuicksearchRequestLibrary.Speechbrain,
                 "ssr-speech" => CreateQuicksearchRequestLibrary.SsrSpeech,
+                "stable-audio-3" => CreateQuicksearchRequestLibrary.StableAudio3,
                 "stable-audio-tools" => CreateQuicksearchRequestLibrary.StableAudioTools,
                 "stable-baselines3" => CreateQuicksearchRequestLibrary.StableBaselines3,
                 "stanza" => CreateQuicksearchRequestLibrary.Stanza,

@@ -32,7 +32,9 @@ namespace HuggingFace
             ref string path,
             ref int? limit,
             ref string? cursor,
-            object? recursive);
+            object? recursive,
+            ref global::HuggingFace.GetBucketsTreeSort? sort,
+            ref global::HuggingFace.GetBucketsTreeDirection? direction);
         partial void PrepareGetBucketsByNamespaceByRepoTreeByPathRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -41,7 +43,9 @@ namespace HuggingFace
             string path,
             int? limit,
             string? cursor,
-            object? recursive);
+            object? recursive,
+            global::HuggingFace.GetBucketsTreeSort? sort,
+            global::HuggingFace.GetBucketsTreeDirection? direction);
         partial void ProcessGetBucketsByNamespaceByRepoTreeByPathResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -69,6 +73,13 @@ namespace HuggingFace
         /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="sort">
+        /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
+        /// Default Value: path
+        /// </param>
+        /// <param name="direction">
+        /// Sort direction. Defaults to `asc` for `path` and `desc` for `uploadedAt`.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -79,6 +90,8 @@ namespace HuggingFace
             int? limit = default,
             string? cursor = default,
             object? recursive = default,
+            global::HuggingFace.GetBucketsTreeSort? sort = default,
+            global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -89,6 +102,8 @@ namespace HuggingFace
                 limit: limit,
                 cursor: cursor,
                 recursive: recursive,
+                sort: sort,
+                direction: direction,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -113,6 +128,13 @@ namespace HuggingFace
         /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="sort">
+        /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
+        /// Default Value: path
+        /// </param>
+        /// <param name="direction">
+        /// Sort direction. Defaults to `asc` for `path` and `desc` for `uploadedAt`.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -123,6 +145,8 @@ namespace HuggingFace
             int? limit = default,
             string? cursor = default,
             object? recursive = default,
+            global::HuggingFace.GetBucketsTreeSort? sort = default,
+            global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -135,7 +159,9 @@ namespace HuggingFace
                 path: ref path,
                 limit: ref limit,
                 cursor: ref cursor,
-                recursive: recursive);
+                recursive: recursive,
+                sort: ref sort,
+                direction: ref direction);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -167,6 +193,8 @@ namespace HuggingFace
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
                                 .AddOptionalParameter("recursive", recursive?.ToString())
+                                .AddOptionalParameter("sort", sort?.ToValueString())
+                                .AddOptionalParameter("direction", direction?.ToValueString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -213,7 +241,9 @@ namespace HuggingFace
                     path: path!,
                     limit: limit,
                     cursor: cursor,
-                    recursive: recursive);
+                    recursive: recursive,
+                    sort: sort,
+                    direction: direction);
 
                 return __httpRequest;
             }

@@ -22,6 +22,13 @@ namespace HuggingFace
         /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="sort">
+        /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
+        /// Default Value: path
+        /// </param>
+        /// <param name="direction">
+        /// Sort direction. Defaults to `asc` for `path` and `desc` for `uploadedAt`.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -32,6 +39,8 @@ namespace HuggingFace
             int? limit = default,
             string? cursor = default,
             object? recursive = default,
+            global::HuggingFace.GetBucketsTreeSort? sort = default,
+            global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -52,6 +61,13 @@ namespace HuggingFace
         /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="sort">
+        /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
+        /// Default Value: path
+        /// </param>
+        /// <param name="direction">
+        /// Sort direction. Defaults to `asc` for `path` and `desc` for `uploadedAt`.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -62,6 +78,8 @@ namespace HuggingFace
             int? limit = default,
             string? cursor = default,
             object? recursive = default,
+            global::HuggingFace.GetBucketsTreeSort? sort = default,
+            global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

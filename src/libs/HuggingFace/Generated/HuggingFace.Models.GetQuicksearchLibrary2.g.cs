@@ -123,6 +123,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Chexmix,
+        /// <summary>
+        /// 
+        /// </summary>
         ChronosForecasting,
         /// <summary>
         /// 
@@ -447,6 +451,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        LongcatVideoAvatar15,
+        /// <summary>
+        /// 
+        /// </summary>
         Lvface,
         /// <summary>
         /// 
@@ -456,6 +464,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         MagentaRealtime,
+        /// <summary>
+        /// 
+        /// </summary>
+        MagentaRealtime2,
         /// <summary>
         /// 
         /// </summary>
@@ -739,6 +751,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        StableAudio3,
+        /// <summary>
+        /// 
+        /// </summary>
         StableAudioTools,
         /// <summary>
         /// 
@@ -934,6 +950,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Chaossim => "chaossim",
                 GetQuicksearchLibrary2.ChatTts => "chat_tts",
                 GetQuicksearchLibrary2.Chatterbox => "chatterbox",
+                GetQuicksearchLibrary2.Chexmix => "chexmix",
                 GetQuicksearchLibrary2.ChronosForecasting => "chronos-forecasting",
                 GetQuicksearchLibrary2.Clara => "clara",
                 GetQuicksearchLibrary2.Clipscope => "clipscope",
@@ -1015,9 +1032,11 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.LitertLm => "litert-lm",
                 GetQuicksearchLibrary2.Liveportrait => "liveportrait",
                 GetQuicksearchLibrary2.LlamaCppPython => "llama-cpp-python",
+                GetQuicksearchLibrary2.LongcatVideoAvatar15 => "longcat-video-avatar-1.5",
                 GetQuicksearchLibrary2.Lvface => "lvface",
                 GetQuicksearchLibrary2.Lyra20 => "lyra-2.0",
                 GetQuicksearchLibrary2.MagentaRealtime => "magenta-realtime",
+                GetQuicksearchLibrary2.MagentaRealtime2 => "magenta-realtime-2",
                 GetQuicksearchLibrary2.Magi1 => "magi-1",
                 GetQuicksearchLibrary2.MambaSsm => "mamba-ssm",
                 GetQuicksearchLibrary2.Manas1 => "manas-1",
@@ -1088,6 +1107,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.SpanMarker => "span-marker",
                 GetQuicksearchLibrary2.Speechbrain => "speechbrain",
                 GetQuicksearchLibrary2.SsrSpeech => "ssr-speech",
+                GetQuicksearchLibrary2.StableAudio3 => "stable-audio-3",
                 GetQuicksearchLibrary2.StableAudioTools => "stable-audio-tools",
                 GetQuicksearchLibrary2.StableBaselines3 => "stable-baselines3",
                 GetQuicksearchLibrary2.Stanza => "stanza",
@@ -1165,6 +1185,7 @@ namespace HuggingFace
                 "chaossim" => GetQuicksearchLibrary2.Chaossim,
                 "chat_tts" => GetQuicksearchLibrary2.ChatTts,
                 "chatterbox" => GetQuicksearchLibrary2.Chatterbox,
+                "chexmix" => GetQuicksearchLibrary2.Chexmix,
                 "chronos-forecasting" => GetQuicksearchLibrary2.ChronosForecasting,
                 "clara" => GetQuicksearchLibrary2.Clara,
                 "clipscope" => GetQuicksearchLibrary2.Clipscope,
@@ -1246,9 +1267,11 @@ namespace HuggingFace
                 "litert-lm" => GetQuicksearchLibrary2.LitertLm,
                 "liveportrait" => GetQuicksearchLibrary2.Liveportrait,
                 "llama-cpp-python" => GetQuicksearchLibrary2.LlamaCppPython,
+                "longcat-video-avatar-1.5" => GetQuicksearchLibrary2.LongcatVideoAvatar15,
                 "lvface" => GetQuicksearchLibrary2.Lvface,
                 "lyra-2.0" => GetQuicksearchLibrary2.Lyra20,
                 "magenta-realtime" => GetQuicksearchLibrary2.MagentaRealtime,
+                "magenta-realtime-2" => GetQuicksearchLibrary2.MagentaRealtime2,
                 "magi-1" => GetQuicksearchLibrary2.Magi1,
                 "mamba-ssm" => GetQuicksearchLibrary2.MambaSsm,
                 "manas-1" => GetQuicksearchLibrary2.Manas1,
@@ -1319,6 +1342,7 @@ namespace HuggingFace
                 "span-marker" => GetQuicksearchLibrary2.SpanMarker,
                 "speechbrain" => GetQuicksearchLibrary2.Speechbrain,
                 "ssr-speech" => GetQuicksearchLibrary2.SsrSpeech,
+                "stable-audio-3" => GetQuicksearchLibrary2.StableAudio3,
                 "stable-audio-tools" => GetQuicksearchLibrary2.StableAudioTools,
                 "stable-baselines3" => GetQuicksearchLibrary2.StableBaselines3,
                 "stanza" => GetQuicksearchLibrary2.Stanza,
