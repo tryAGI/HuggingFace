@@ -1,11 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# OpenAPI spec: https://huggingface.co/.well-known/openapi.json (+ TGI + TEI specs)
+install_autosdk_cli() {
+  dotnet tool update --global autosdk.cli --prerelease >/dev/null 2>&1 || \
+    dotnet tool install --global autosdk.cli --prerelease
+}
 
-dotnet tool install --global autosdk.cli --prerelease
+fetch_spec() {
+  curl "$@" \
+    --fail --silent --show-error --location \
+    --retry 5 --retry-delay 10 --retry-all-errors \
+    --connect-timeout 30 --max-time 300
+}
+
+# OpenAPI spec: https://huggingface.co/.well-known/openapi.json (+ TGI + TEI specs)
+install_autosdk_cli
 rm -rf Generated
-curl --fail --silent --show-error -L -o openapi.json.tmp https://huggingface.co/.well-known/openapi.json && mv openapi.json.tmp openapi.json || echo "Warning: Failed to download openapi.json, using existing file"
+fetch_spec --fail --silent --show-error -L -o openapi.json.tmp https://huggingface.co/.well-known/openapi.json && mv openapi.json.tmp openapi.json || echo "Warning: Failed to download openapi.json, using existing file"
 
 # Fix enum values that break C# code generation (embedded quotes, emojis)
 python3 << 'PYEOF'
@@ -71,7 +82,7 @@ autosdk generate openapi.json \
   --security-scheme Http:Header:Bearer
 
 # Generate Inference API client from TGI (Text Generation Inference) spec
-curl --fail --silent --show-error -L -o tgi-openapi.json \
+fetch_spec --fail --silent --show-error -L -o tgi-openapi.json \
   https://raw.githubusercontent.com/huggingface/text-generation-inference/main/docs/openapi.json
 
 # Fix OpenAPI 3.1 features in TGI spec that AutoSDK's 3.0 parser can't handle
@@ -112,7 +123,7 @@ autosdk generate tgi-openapi.json \
 rm tgi-openapi.json
 
 # Generate Embeddings API client from TEI (Text Embeddings Inference) spec
-curl --fail --silent --show-error -L -o tei-openapi.json \
+fetch_spec --fail --silent --show-error -L -o tei-openapi.json \
   https://raw.githubusercontent.com/huggingface/text-embeddings-inference/main/docs/openapi.json
 autosdk generate tei-openapi.json \
   --namespace HuggingFace \
