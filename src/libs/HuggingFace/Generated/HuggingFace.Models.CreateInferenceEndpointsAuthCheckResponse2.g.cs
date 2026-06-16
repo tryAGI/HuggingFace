@@ -30,6 +30,12 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<string> PatternRestrictions { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -41,17 +47,20 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="user"></param>
         /// <param name="patternRestrictions"></param>
+        /// <param name="resourceGroupId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateInferenceEndpointsAuthCheckResponse2(
             global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace2 @namespace,
             global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser2 user,
-            global::System.Collections.Generic.IList<string> patternRestrictions)
+            global::System.Collections.Generic.IList<string> patternRestrictions,
+            string? resourceGroupId)
         {
             this.Namespace = @namespace ?? throw new global::System.ArgumentNullException(nameof(@namespace));
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
             this.PatternRestrictions = patternRestrictions ?? throw new global::System.ArgumentNullException(nameof(patternRestrictions));
+            this.ResourceGroupId = resourceGroupId;
         }
 
         /// <summary>
