@@ -42,6 +42,12 @@ namespace HuggingFace
         public global::System.DateTime? Mtime { get; set; }
 
         /// <summary>
+        /// Sub-millisecond remainder of mtime, in nanoseconds (0–999_999)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mtimeNanos")]
+        public int? MtimeNanos { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uploadedAt")]
@@ -71,6 +77,9 @@ namespace HuggingFace
         /// Not defined for directories
         /// </param>
         /// <param name="mtime"></param>
+        /// <param name="mtimeNanos">
+        /// Sub-millisecond remainder of mtime, in nanoseconds (0–999_999)
+        /// </param>
         /// <param name="contentType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -82,6 +91,7 @@ namespace HuggingFace
             int? size,
             string? xetHash,
             global::System.DateTime? mtime,
+            int? mtimeNanos,
             string? contentType)
         {
             this.Type = type;
@@ -89,6 +99,7 @@ namespace HuggingFace
             this.Size = size;
             this.XetHash = xetHash;
             this.Mtime = mtime;
+            this.MtimeNanos = mtimeNanos;
             this.UploadedAt = uploadedAt;
             this.ContentType = contentType;
         }

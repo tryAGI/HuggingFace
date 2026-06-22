@@ -28,12 +28,16 @@ namespace HuggingFace
         partial void PrepareGetJobsByNamespaceArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
-            ref string? label);
+            ref global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? label,
+            ref global::HuggingFace.AnyOf<global::HuggingFace.GetJobsStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsStageItem>>? stage,
+            ref string? cursor);
         partial void PrepareGetJobsByNamespaceRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
-            string? label);
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? label,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetJobsStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsStageItem>>? stage,
+            string? cursor);
         partial void ProcessGetJobsByNamespaceResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -49,20 +53,30 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="label">
-        /// Filter jobs by label. Format: 'key=value' (e.g., 'environment=production').
+        /// Filter jobs by label. Format: 'key=value' (e.g., 'environment=production'). Repeat the parameter to filter by several labels.
+        /// </param>
+        /// <param name="stage">
+        /// Filter jobs by status stage. Repeat the parameter to filter by several stages.
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor obtained from the `rel="next"` link of a previous response's `Link` header.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseItem>> GetJobsByNamespaceAsync(
             string @namespace,
-            string? label = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? label = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetJobsStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsStageItem>>? stage = default,
+            string? cursor = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetJobsByNamespaceAsResponseAsync(
                 @namespace: @namespace,
                 label: label,
+                stage: stage,
+                cursor: cursor,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -75,14 +89,22 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="label">
-        /// Filter jobs by label. Format: 'key=value' (e.g., 'environment=production').
+        /// Filter jobs by label. Format: 'key=value' (e.g., 'environment=production'). Repeat the parameter to filter by several labels.
+        /// </param>
+        /// <param name="stage">
+        /// Filter jobs by status stage. Repeat the parameter to filter by several stages.
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor obtained from the `rel="next"` link of a previous response's `Link` header.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseItem>>> GetJobsByNamespaceAsResponseAsync(
             string @namespace,
-            string? label = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? label = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetJobsStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsStageItem>>? stage = default,
+            string? cursor = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -91,7 +113,9 @@ namespace HuggingFace
             PrepareGetJobsByNamespaceArguments(
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
-                label: ref label);
+                label: ref label,
+                stage: ref stage,
+                cursor: ref cursor);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -120,7 +144,9 @@ namespace HuggingFace
                                 path: $"/api/jobs/{@namespace}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("label", label)
+                                .AddOptionalParameter("label", label?.ToString())
+                                .AddOptionalParameter("stage", stage?.ToString())
+                                .AddOptionalParameter("cursor", cursor)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -163,7 +189,9 @@ namespace HuggingFace
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     @namespace: @namespace!,
-                    label: label);
+                    label: label,
+                    stage: stage,
+                    cursor: cursor);
 
                 return __httpRequest;
             }

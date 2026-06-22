@@ -99,6 +99,12 @@ namespace HuggingFace
         public double? PricingOutput { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("freeUntil")]
+        public global::System.DateTime? FreeUntil { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -120,6 +126,7 @@ namespace HuggingFace
         /// <param name="features"></param>
         /// <param name="tokensPerSecond"></param>
         /// <param name="pricingOutput"></param>
+        /// <param name="freeUntil"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -136,7 +143,8 @@ namespace HuggingFace
             string? adapterWeightsPath,
             global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderFeatures2? features,
             double? tokensPerSecond,
-            double? pricingOutput)
+            double? pricingOutput,
+            global::System.DateTime? freeUntil)
         {
             this.Provider = provider;
             this.ProviderStatus = providerStatus;
@@ -151,6 +159,7 @@ namespace HuggingFace
             this.IsModelAuthor = isModelAuthor;
             this.TokensPerSecond = tokensPerSecond;
             this.PricingOutput = pricingOutput;
+            this.FreeUntil = freeUntil;
         }
 
         /// <summary>

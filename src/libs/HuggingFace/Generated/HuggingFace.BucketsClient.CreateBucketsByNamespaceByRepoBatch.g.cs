@@ -49,8 +49,8 @@ namespace HuggingFace
         /// All add/copy operations must come before all delete operations.<br/>
         /// JSON-lines payload:<br/>
         /// ```json<br/>
-        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"contentType":"..."}' +<br/>
-        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"..."}' +<br/>
+        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
+        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
         /// 	'{"type":"deleteFile","path":"..."}'<br/>
         /// ```
         /// </summary>
@@ -80,8 +80,8 @@ namespace HuggingFace
         /// All add/copy operations must come before all delete operations.<br/>
         /// JSON-lines payload:<br/>
         /// ```json<br/>
-        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"contentType":"..."}' +<br/>
-        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"..."}' +<br/>
+        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
+        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
         /// 	'{"type":"deleteFile","path":"..."}'<br/>
         /// ```
         /// </summary>
