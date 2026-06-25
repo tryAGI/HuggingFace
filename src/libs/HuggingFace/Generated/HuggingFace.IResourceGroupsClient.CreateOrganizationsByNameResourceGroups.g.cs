@@ -5,9 +5,9 @@ namespace HuggingFace
     public partial interface IResourceGroupsClient
     {
         /// <summary>
-        /// Create a resource group<br/>
+        /// Create resource group<br/>
         /// Create a new resource group in the organization.<br/>
-        /// Requires the org to be Enterprise
+        /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="request"></param>
@@ -21,9 +21,9 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a resource group<br/>
+        /// Create resource group<br/>
         /// Create a new resource group in the organization.<br/>
-        /// Requires the org to be Enterprise
+        /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="request"></param>
@@ -37,9 +37,9 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a resource group<br/>
+        /// Create resource group<br/>
         /// Create a new resource group in the organization.<br/>
-        /// Requires the org to be Enterprise
+        /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="requestName"></param>
