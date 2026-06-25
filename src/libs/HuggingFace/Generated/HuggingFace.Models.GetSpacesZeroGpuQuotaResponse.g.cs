@@ -35,6 +35,12 @@ namespace HuggingFace
         public double? OverquotaUsed { get; set; }
 
         /// <summary>
+        /// Execution (runs) accounting, or omitted for visitors without a runs limit
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("runs")]
+        public global::HuggingFace.GetSpacesZeroGpuQuotaResponseRuns? Runs { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -55,6 +61,9 @@ namespace HuggingFace
         /// <param name="overquotaUsed">
         /// Overquota (paid) GPU-seconds consumed
         /// </param>
+        /// <param name="runs">
+        /// Execution (runs) accounting, or omitted for visitors without a runs limit
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -62,12 +71,14 @@ namespace HuggingFace
             double @base,
             double current,
             global::System.DateTime? resetsAt,
-            double? overquotaUsed)
+            double? overquotaUsed,
+            global::HuggingFace.GetSpacesZeroGpuQuotaResponseRuns? runs)
         {
             this.Base = @base;
             this.Current = current;
             this.ResetsAt = resetsAt;
             this.OverquotaUsed = overquotaUsed;
+            this.Runs = runs;
         }
 
         /// <summary>

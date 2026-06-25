@@ -53,6 +53,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetAgenticProvisioningServicesResponseDataItemScopeJsonConverter))]
+        public global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemScope? Scope { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("kyc")]
         public global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKyc? Kyc { get; set; }
 
@@ -66,7 +73,13 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowed_updates")]
-        public global::System.Collections.Generic.IList<string>? AllowedUpdates { get; set; }
+        public global::System.Collections.Generic.IList<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemAllowedUpdate>? AllowedUpdates { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("constraints")]
+        public global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemConstraints? Constraints { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -83,9 +96,11 @@ namespace HuggingFace
         /// <param name="pricing"></param>
         /// <param name="kind"></param>
         /// <param name="group"></param>
+        /// <param name="scope"></param>
         /// <param name="kyc"></param>
         /// <param name="configurationSchema"></param>
         /// <param name="allowedUpdates"></param>
+        /// <param name="constraints"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -96,9 +111,11 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3> pricing,
             global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKind? kind,
             string? group,
+            global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemScope? scope,
             global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKyc? kyc,
             global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemConfigurationSchema? configurationSchema,
-            global::System.Collections.Generic.IList<string>? allowedUpdates)
+            global::System.Collections.Generic.IList<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemAllowedUpdate>? allowedUpdates,
+            global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemConstraints? constraints)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
@@ -106,9 +123,11 @@ namespace HuggingFace
             this.Kind = kind;
             this.Pricing = pricing;
             this.Group = group;
+            this.Scope = scope;
             this.Kyc = kyc;
             this.ConfigurationSchema = configurationSchema;
             this.AllowedUpdates = allowedUpdates;
+            this.Constraints = constraints;
         }
 
         /// <summary>
