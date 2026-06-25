@@ -7,7 +7,7 @@ namespace HuggingFace
         /// <summary>
         /// Get resource groups<br/>
         /// Retrieve accessible resource groups. Get all resource groups the user has access to.<br/>
-        /// Requires the org to be Enterprise
+        /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -20,7 +20,7 @@ namespace HuggingFace
         /// <summary>
         /// Get resource groups<br/>
         /// Retrieve accessible resource groups. Get all resource groups the user has access to.<br/>
-        /// Requires the org to be Enterprise
+        /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
