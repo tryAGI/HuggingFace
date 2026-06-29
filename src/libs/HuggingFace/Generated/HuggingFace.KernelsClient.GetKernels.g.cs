@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class OrgsClient
+    public partial class KernelsClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetKernelsSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,55 +21,123 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetKernelsSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirement0,
+            {                s_GetKernelsSecurityRequirement0,
             };
-        partial void PrepareGetOrganizationsByNameBillingUsageByInferenceSessionArguments(
+        partial void PrepareGetKernelsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string name,
-            ref global::System.DateTime? startDate,
-            ref global::System.DateTime? endDate);
-        partial void PrepareGetOrganizationsByNameBillingUsageByInferenceSessionRequest(
+            ref string? search,
+            ref global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? author,
+            ref global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? id,
+            ref global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? arxivIds,
+            ref global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? filter,
+            ref global::HuggingFace.GetKernelsSort? sort,
+            ref global::HuggingFace.GetKernelsDirection? direction,
+            ref int? limit,
+            ref string? cursor,
+            ref bool? full,
+            ref bool? gated,
+            ref global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsExpand2?, global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsExpandItem>>? expand);
+        partial void PrepareGetKernelsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string name,
-            global::System.DateTime? startDate,
-            global::System.DateTime? endDate);
-        partial void ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponse(
+            string? search,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? author,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? id,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? arxivIds,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? filter,
+            global::HuggingFace.GetKernelsSort? sort,
+            global::HuggingFace.GetKernelsDirection? direction,
+            int? limit,
+            string? cursor,
+            bool? full,
+            bool? gated,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsExpand2?, global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsExpandItem>>? expand);
+        partial void ProcessGetKernelsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponseContent(
+        partial void ProcessGetKernelsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get session inference usage<br/>
-        /// Get org inference-provider usage broken down per session id, as a time-series of monthly periods.
+        /// List kernels<br/>
+        /// List kernels with optional filtering, sorting, and pagination
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="startDate">
-        /// Default Value: 2026-06-01T00:00:00.000Z
+        /// <param name="search">
+        /// Filter by search term
         /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-06-29T18:05:09.197Z
+        /// <param name="author">
+        /// Filter by author
+        /// </param>
+        /// <param name="id">
+        /// Filter by ID
+        /// </param>
+        /// <param name="arxivIds">
+        /// Filter by Arxiv ID
+        /// </param>
+        /// <param name="filter">
+        /// Filter by tags
+        /// </param>
+        /// <param name="sort">
+        /// Sort field (e.g. downloads, likes, lastModified, trendingScore)<br/>
+        /// Default Value: trendingScore
+        /// </param>
+        /// <param name="direction">
+        /// Sort direction: 1 for ascending, -1 for descending<br/>
+        /// Default Value: -1
+        /// </param>
+        /// <param name="limit">
+        /// Maximum number of results to return<br/>
+        /// Default Value: 1000
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from Link header
+        /// </param>
+        /// <param name="full">
+        /// Return full kernel info including author, sha, lastModified, files, gated
+        /// </param>
+        /// <param name="gated">
+        /// Filter by gated
+        /// </param>
+        /// <param name="expand">
+        /// Display specific fields in the response
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse> GetOrganizationsByNameBillingUsageByInferenceSessionAsync(
-            string name,
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>> GetKernelsAsync(
+            string? search = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? author = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? id = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? arxivIds = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? filter = default,
+            global::HuggingFace.GetKernelsSort? sort = default,
+            global::HuggingFace.GetKernelsDirection? direction = default,
+            int? limit = default,
+            string? cursor = default,
+            bool? full = default,
+            bool? gated = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsExpand2?, global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsExpandItem>>? expand = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetOrganizationsByNameBillingUsageByInferenceSessionAsResponseAsync(
-                name: name,
-                startDate: startDate,
-                endDate: endDate,
+            var __response = await GetKernelsAsResponseAsync(
+                search: search,
+                author: author,
+                id: id,
+                arxivIds: arxivIds,
+                filter: filter,
+                sort: sort,
+                direction: direction,
+                limit: limit,
+                cursor: cursor,
+                full: full,
+                gated: gated,
+                expand: expand,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -77,39 +145,89 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get session inference usage<br/>
-        /// Get org inference-provider usage broken down per session id, as a time-series of monthly periods.
+        /// List kernels<br/>
+        /// List kernels with optional filtering, sorting, and pagination
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="startDate">
-        /// Default Value: 2026-06-01T00:00:00.000Z
+        /// <param name="search">
+        /// Filter by search term
         /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-06-29T18:05:09.197Z
+        /// <param name="author">
+        /// Filter by author
+        /// </param>
+        /// <param name="id">
+        /// Filter by ID
+        /// </param>
+        /// <param name="arxivIds">
+        /// Filter by Arxiv ID
+        /// </param>
+        /// <param name="filter">
+        /// Filter by tags
+        /// </param>
+        /// <param name="sort">
+        /// Sort field (e.g. downloads, likes, lastModified, trendingScore)<br/>
+        /// Default Value: trendingScore
+        /// </param>
+        /// <param name="direction">
+        /// Sort direction: 1 for ascending, -1 for descending<br/>
+        /// Default Value: -1
+        /// </param>
+        /// <param name="limit">
+        /// Maximum number of results to return<br/>
+        /// Default Value: 1000
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from Link header
+        /// </param>
+        /// <param name="full">
+        /// Return full kernel info including author, sha, lastModified, files, gated
+        /// </param>
+        /// <param name="gated">
+        /// Filter by gated
+        /// </param>
+        /// <param name="expand">
+        /// Display specific fields in the response
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse>> GetOrganizationsByNameBillingUsageByInferenceSessionAsResponseAsync(
-            string name,
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>>> GetKernelsAsResponseAsync(
+            string? search = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? author = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? id = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? arxivIds = default,
+            global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>? filter = default,
+            global::HuggingFace.GetKernelsSort? sort = default,
+            global::HuggingFace.GetKernelsDirection? direction = default,
+            int? limit = default,
+            string? cursor = default,
+            bool? full = default,
+            bool? gated = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsExpand2?, global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsExpandItem>>? expand = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetOrganizationsByNameBillingUsageByInferenceSessionArguments(
+            PrepareGetKernelsArguments(
                 httpClient: HttpClient,
-                name: ref name,
-                startDate: ref startDate,
-                endDate: ref endDate);
+                search: ref search,
+                author: ref author,
+                id: ref id,
+                arxivIds: ref arxivIds,
+                filter: ref filter,
+                sort: ref sort,
+                direction: ref direction,
+                limit: ref limit,
+                cursor: ref cursor,
+                full: ref full,
+                gated: ref gated,
+                expand: ref expand);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetOrganizationsByNameBillingUsageByInferenceSessionSecurityRequirements,
-                operationName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync");
+                securityRequirements: s_GetKernelsSecurityRequirements,
+                operationName: "GetKernelsAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -129,11 +247,21 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/organizations/{name}/billing/usage-by-inference-session",
+                                path: "/api/kernels",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("search", search)
+                                .AddOptionalParameter("author", author?.ToString())
+                                .AddOptionalParameter("id", id?.ToString())
+                                .AddOptionalParameter("arxivIds", arxivIds?.ToString())
+                                .AddOptionalParameter("filter", filter?.ToString())
+                                .AddOptionalParameter("sort", sort?.ToValueString())
+                                .AddOptionalParameter("direction", direction?.ToValueString())
+                                .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("full", full?.ToString().ToLowerInvariant())
+                                .AddOptionalParameter("gated", gated?.ToString().ToLowerInvariant())
+                                .AddOptionalParameter("expand", expand?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -172,12 +300,21 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetOrganizationsByNameBillingUsageByInferenceSessionRequest(
+                PrepareGetKernelsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name!,
-                    startDate: startDate,
-                    endDate: endDate);
+                    search: search,
+                    author: author,
+                    id: id,
+                    arxivIds: arxivIds,
+                    filter: filter,
+                    sort: sort,
+                    direction: direction,
+                    limit: limit,
+                    cursor: cursor,
+                    full: full,
+                    gated: gated,
+                    expand: expand);
 
                 return __httpRequest;
             }
@@ -194,9 +331,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
-                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
+                                operationId: "getKernels",
+                                methodName: "GetKernelsAsync",
+                                pathTemplate: "\"/api/kernels\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -228,9 +365,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
-                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
+                                operationId: "getKernels",
+                                methodName: "GetKernelsAsync",
+                                pathTemplate: "\"/api/kernels\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -269,9 +406,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
-                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
+                                operationId: "getKernels",
+                                methodName: "GetKernelsAsync",
+                                pathTemplate: "\"/api/kernels\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -309,7 +446,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponse(
+                ProcessGetKernelsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -317,9 +454,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
-                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
+                                operationId: "getKernels",
+                                methodName: "GetKernelsAsync",
+                                pathTemplate: "\"/api/kernels\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -339,9 +476,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getOrganizationsByNameBillingUsageByInferenceSession",
-                                methodName: "GetOrganizationsByNameBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-inference-session\"",
+                                operationId: "getKernels",
+                                methodName: "GetKernelsAsync",
+                                pathTemplate: "\"/api/kernels\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -369,7 +506,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetOrganizationsByNameBillingUsageByInferenceSessionResponseContent(
+                                ProcessGetKernelsResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -378,9 +515,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>), JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -410,9 +547,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsBillingUsageByInferenceSessionResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

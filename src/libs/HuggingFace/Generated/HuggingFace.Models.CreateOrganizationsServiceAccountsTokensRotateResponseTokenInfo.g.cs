@@ -33,8 +33,7 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last4")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Last4 { get; set; }
+        public string? Last4 { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -56,12 +55,12 @@ namespace HuggingFace
             string id,
             string displayName,
             string createdAt,
-            string last4)
+            string? last4)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
-            this.Last4 = last4 ?? throw new global::System.ArgumentNullException(nameof(last4));
+            this.Last4 = last4;
         }
 
         /// <summary>
