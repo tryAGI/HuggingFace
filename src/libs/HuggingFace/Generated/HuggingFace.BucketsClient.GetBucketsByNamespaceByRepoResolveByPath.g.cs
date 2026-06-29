@@ -52,7 +52,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Retrieve information about a file in a bucket<br/>
+        /// Get file metadata<br/>
         /// Returns file metadata including size, hash, and links to XET authentication
         /// </summary>
         /// <param name="namespace"></param>
@@ -92,7 +92,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Retrieve information about a file in a bucket<br/>
+        /// Get file metadata<br/>
         /// Returns file metadata including size, hash, and links to XET authentication
         /// </summary>
         /// <param name="namespace"></param>

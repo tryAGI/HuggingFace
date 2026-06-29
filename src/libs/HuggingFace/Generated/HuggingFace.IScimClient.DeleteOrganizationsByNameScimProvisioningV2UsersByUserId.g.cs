@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Delete a SCIM provisioning user<br/>
+        /// Delete SCIM user<br/>
         /// Removes a user from the organization and deletes any pending invitations for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>
@@ -19,7 +19,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Delete a SCIM provisioning user<br/>
+        /// Delete SCIM user<br/>
         /// Removes a user from the organization and deletes any pending invitations for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>

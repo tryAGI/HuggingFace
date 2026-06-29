@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IDatasetsClient
     {
         /// <summary>
-        /// Get the leaderboard for a dataset<br/>
+        /// Get dataset leaderboard<br/>
         /// Returns the evaluation results ranked by score for a dataset/task
         /// </summary>
         /// <param name="namespace"></param>
@@ -27,7 +27,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get the leaderboard for a dataset<br/>
+        /// Get dataset leaderboard<br/>
         /// Returns the evaluation results ranked by score for a dataset/task
         /// </summary>
         /// <param name="namespace"></param>

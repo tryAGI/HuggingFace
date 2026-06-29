@@ -699,6 +699,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Scail2,
+        /// <summary>
+        /// 
+        /// </summary>
         SeedStory,
         /// <summary>
         /// 
@@ -836,6 +840,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Trellis2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Tunejury,
         /// <summary>
         /// 
         /// </summary>
@@ -1094,6 +1102,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.SapRpt1Oss => "sap-rpt-1-oss",
                 CreateQuicksearchLibrary2.Sapiens => "sapiens",
                 CreateQuicksearchLibrary2.Sapiens2 => "sapiens2",
+                CreateQuicksearchLibrary2.Scail2 => "scail-2",
                 CreateQuicksearchLibrary2.SeedStory => "seed-story",
                 CreateQuicksearchLibrary2.Seedvr => "seedvr",
                 CreateQuicksearchLibrary2.SelfForcing => "self-forcing",
@@ -1129,6 +1138,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.TransformersJs => "transformers.js",
                 CreateQuicksearchLibrary2.Trellis => "trellis",
                 CreateQuicksearchLibrary2.Trellis2 => "trellis2",
+                CreateQuicksearchLibrary2.Tunejury => "tunejury",
                 CreateQuicksearchLibrary2.Ultralytics => "ultralytics",
                 CreateQuicksearchLibrary2.Uni3dar => "uni-3dar",
                 CreateQuicksearchLibrary2.UnitySentis => "unity-sentis",
@@ -1329,6 +1339,7 @@ namespace HuggingFace
                 "sap-rpt-1-oss" => CreateQuicksearchLibrary2.SapRpt1Oss,
                 "sapiens" => CreateQuicksearchLibrary2.Sapiens,
                 "sapiens2" => CreateQuicksearchLibrary2.Sapiens2,
+                "scail-2" => CreateQuicksearchLibrary2.Scail2,
                 "seed-story" => CreateQuicksearchLibrary2.SeedStory,
                 "seedvr" => CreateQuicksearchLibrary2.Seedvr,
                 "self-forcing" => CreateQuicksearchLibrary2.SelfForcing,
@@ -1364,6 +1375,7 @@ namespace HuggingFace
                 "transformers.js" => CreateQuicksearchLibrary2.TransformersJs,
                 "trellis" => CreateQuicksearchLibrary2.Trellis,
                 "trellis2" => CreateQuicksearchLibrary2.Trellis2,
+                "tunejury" => CreateQuicksearchLibrary2.Tunejury,
                 "ultralytics" => CreateQuicksearchLibrary2.Ultralytics,
                 "uni-3dar" => CreateQuicksearchLibrary2.Uni3dar,
                 "unity-sentis" => CreateQuicksearchLibrary2.UnitySentis,

@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IDatasetsClient
     {
         /// <summary>
-        /// Handle access requests in batch<br/>
+        /// Batch handle access requests<br/>
         /// Accept or reject up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
@@ -22,7 +22,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Handle access requests in batch<br/>
+        /// Batch handle access requests<br/>
         /// Accept or reject up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Handle access requests in batch<br/>
+        /// Batch handle access requests<br/>
         /// Accept or reject up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>

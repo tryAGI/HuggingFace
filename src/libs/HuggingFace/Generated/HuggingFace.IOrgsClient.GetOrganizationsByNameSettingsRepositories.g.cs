@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IOrgsClient
     {
         /// <summary>
-        /// List organization repositories with storage info
+        /// List organization repositories
         /// </summary>
         /// <param name="name"></param>
         /// <param name="search">
@@ -38,7 +38,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// List organization repositories with storage info
+        /// List organization repositories
         /// </summary>
         /// <param name="name"></param>
         /// <param name="search">

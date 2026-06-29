@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update an attribute of a SCIM provisioning user<br/>
+        /// Update SCIM user<br/>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
         /// </summary>
         /// <param name="name"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update an attribute of a SCIM provisioning user<br/>
+        /// Update SCIM user<br/>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
         /// </summary>
         /// <param name="name"></param>
@@ -452,7 +452,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update an attribute of a SCIM provisioning user<br/>
+        /// Update SCIM user<br/>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
         /// </summary>
         /// <param name="name"></param>

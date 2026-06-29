@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update a SCIM provisioning user<br/>
+        /// Update a SCIM user<br/>
         /// Updates a provisioned user's invitation for non-managed organizations. User profile fields are not editable via SCIM for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update a SCIM provisioning user<br/>
+        /// Update a SCIM user<br/>
         /// Updates a provisioned user's invitation for non-managed organizations. User profile fields are not editable via SCIM for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>
@@ -489,7 +489,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update a SCIM provisioning user<br/>
+        /// Update a SCIM user<br/>
         /// Updates a provisioned user's invitation for non-managed organizations. User profile fields are not editable via SCIM for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>

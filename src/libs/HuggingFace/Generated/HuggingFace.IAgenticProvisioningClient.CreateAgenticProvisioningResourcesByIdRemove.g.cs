@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IAgenticProvisioningClient
     {
         /// <summary>
-        /// Remove / de-provision a resource
+        /// Remove resource
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -16,7 +16,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Remove / de-provision a resource
+        /// Remove resource
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

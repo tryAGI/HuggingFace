@@ -699,6 +699,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Scail2,
+        /// <summary>
+        /// 
+        /// </summary>
         SeedStory,
         /// <summary>
         /// 
@@ -836,6 +840,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Trellis2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Tunejury,
         /// <summary>
         /// 
         /// </summary>
@@ -1094,6 +1102,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.SapRpt1Oss => "sap-rpt-1-oss",
                 CreateQuicksearchRequestLibrary.Sapiens => "sapiens",
                 CreateQuicksearchRequestLibrary.Sapiens2 => "sapiens2",
+                CreateQuicksearchRequestLibrary.Scail2 => "scail-2",
                 CreateQuicksearchRequestLibrary.SeedStory => "seed-story",
                 CreateQuicksearchRequestLibrary.Seedvr => "seedvr",
                 CreateQuicksearchRequestLibrary.SelfForcing => "self-forcing",
@@ -1129,6 +1138,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.TransformersJs => "transformers.js",
                 CreateQuicksearchRequestLibrary.Trellis => "trellis",
                 CreateQuicksearchRequestLibrary.Trellis2 => "trellis2",
+                CreateQuicksearchRequestLibrary.Tunejury => "tunejury",
                 CreateQuicksearchRequestLibrary.Ultralytics => "ultralytics",
                 CreateQuicksearchRequestLibrary.Uni3dar => "uni-3dar",
                 CreateQuicksearchRequestLibrary.UnitySentis => "unity-sentis",
@@ -1329,6 +1339,7 @@ namespace HuggingFace
                 "sap-rpt-1-oss" => CreateQuicksearchRequestLibrary.SapRpt1Oss,
                 "sapiens" => CreateQuicksearchRequestLibrary.Sapiens,
                 "sapiens2" => CreateQuicksearchRequestLibrary.Sapiens2,
+                "scail-2" => CreateQuicksearchRequestLibrary.Scail2,
                 "seed-story" => CreateQuicksearchRequestLibrary.SeedStory,
                 "seedvr" => CreateQuicksearchRequestLibrary.Seedvr,
                 "self-forcing" => CreateQuicksearchRequestLibrary.SelfForcing,
@@ -1364,6 +1375,7 @@ namespace HuggingFace
                 "transformers.js" => CreateQuicksearchRequestLibrary.TransformersJs,
                 "trellis" => CreateQuicksearchRequestLibrary.Trellis,
                 "trellis2" => CreateQuicksearchRequestLibrary.Trellis2,
+                "tunejury" => CreateQuicksearchRequestLibrary.Tunejury,
                 "ultralytics" => CreateQuicksearchRequestLibrary.Ultralytics,
                 "uni-3dar" => CreateQuicksearchRequestLibrary.Uni3dar,
                 "unity-sentis" => CreateQuicksearchRequestLibrary.UnitySentis,

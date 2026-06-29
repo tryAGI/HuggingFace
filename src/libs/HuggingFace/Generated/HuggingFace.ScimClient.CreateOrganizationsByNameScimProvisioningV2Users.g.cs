@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Create a SCIM provisioning user invitation<br/>
+        /// Create SCIM invitation<br/>
         /// Creates an invitation for a user to join the organization. The user must have an existing Hugging Face account.
         /// </summary>
         /// <param name="name"></param>
@@ -70,7 +70,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Create a SCIM provisioning user invitation<br/>
+        /// Create SCIM invitation<br/>
         /// Creates an invitation for a user to join the organization. The user must have an existing Hugging Face account.
         /// </summary>
         /// <param name="name"></param>
@@ -443,7 +443,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Create a SCIM provisioning user invitation<br/>
+        /// Create SCIM invitation<br/>
         /// Creates an invitation for a user to join the organization. The user must have an existing Hugging Face account.
         /// </summary>
         /// <param name="name"></param>

@@ -42,7 +42,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Create a self-authenticated deep link to the user's billing dashboard
+        /// Create deep link
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -64,7 +64,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Create a self-authenticated deep link to the user's billing dashboard
+        /// Create deep link
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -469,7 +469,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Create a self-authenticated deep link to the user's billing dashboard
+        /// Create deep link
         /// </summary>
         /// <param name="purpose"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

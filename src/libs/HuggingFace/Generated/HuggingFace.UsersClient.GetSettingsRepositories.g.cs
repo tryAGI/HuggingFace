@@ -50,7 +50,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// List user repositories with storage info
+        /// List user repositories
         /// </summary>
         /// <param name="search">
         /// Filter repositories by name (case-insensitive substring match)
@@ -94,7 +94,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// List user repositories with storage info
+        /// List user repositories
         /// </summary>
         /// <param name="search">
         /// Filter repositories by name (case-insensitive substring match)

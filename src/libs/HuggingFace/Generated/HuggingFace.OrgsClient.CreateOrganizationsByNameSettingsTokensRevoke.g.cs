@@ -39,7 +39,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Revoke a member's access token from the organization<br/>
+        /// Revoke member token<br/>
         /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. Requires the raw token value. Enterprise only.
         /// </summary>
         /// <param name="name"></param>
@@ -63,7 +63,7 @@ namespace HuggingFace
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// Revoke a member's access token from the organization<br/>
+        /// Revoke member token<br/>
         /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. Requires the raw token value. Enterprise only.
         /// </summary>
         /// <param name="name"></param>
@@ -420,7 +420,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Revoke a member's access token from the organization<br/>
+        /// Revoke member token<br/>
         /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. Requires the raw token value. Enterprise only.
         /// </summary>
         /// <param name="name"></param>
