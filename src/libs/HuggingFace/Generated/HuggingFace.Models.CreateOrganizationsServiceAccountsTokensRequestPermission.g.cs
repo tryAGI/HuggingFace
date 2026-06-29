@@ -39,6 +39,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        OrgServiceAccountsRead,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountsWrite,
+        /// <summary>
+        /// 
+        /// </summary>
         OrgWrite,
         /// <summary>
         /// 
@@ -73,6 +81,8 @@ namespace HuggingFace
                 CreateOrganizationsServiceAccountsTokensRequestPermission.InferenceServerlessWrite => "inference.serverless.write",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.JobWrite => "job.write",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.OrgRead => "org.read",
+                CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsRead => "org.serviceAccounts.read",
+                CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite => "org.serviceAccounts.write",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.OrgWrite => "org.write",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.RepoContentRead => "repo.content.read",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.RepoWrite => "repo.write",
@@ -94,6 +104,8 @@ namespace HuggingFace
                 "inference.serverless.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.InferenceServerlessWrite,
                 "job.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.JobWrite,
                 "org.read" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgRead,
+                "org.serviceAccounts.read" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsRead,
+                "org.serviceAccounts.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite,
                 "org.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgWrite,
                 "repo.content.read" => CreateOrganizationsServiceAccountsTokensRequestPermission.RepoContentRead,
                 "repo.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.RepoWrite,

@@ -39,6 +39,14 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        OrgServiceAccountsRead,
+        /// <summary>
+        /// 
+        /// </summary>
+        OrgServiceAccountsWrite,
+        /// <summary>
+        /// 
+        /// </summary>
         OrgWrite,
         /// <summary>
         /// 
@@ -73,6 +81,8 @@ namespace HuggingFace
                 PatchOrganizationsServiceAccountsTokensRequestPermission.InferenceServerlessWrite => "inference.serverless.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.JobWrite => "job.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.OrgRead => "org.read",
+                PatchOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsRead => "org.serviceAccounts.read",
+                PatchOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite => "org.serviceAccounts.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.OrgWrite => "org.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.RepoContentRead => "repo.content.read",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.RepoWrite => "repo.write",
@@ -94,6 +104,8 @@ namespace HuggingFace
                 "inference.serverless.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.InferenceServerlessWrite,
                 "job.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.JobWrite,
                 "org.read" => PatchOrganizationsServiceAccountsTokensRequestPermission.OrgRead,
+                "org.serviceAccounts.read" => PatchOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsRead,
+                "org.serviceAccounts.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite,
                 "org.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.OrgWrite,
                 "repo.content.read" => PatchOrganizationsServiceAccountsTokensRequestPermission.RepoContentRead,
                 "repo.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.RepoWrite,
