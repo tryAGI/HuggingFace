@@ -50,7 +50,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get the leaderboard for a dataset<br/>
+        /// Get dataset leaderboard<br/>
         /// Returns the evaluation results ranked by score for a dataset/task
         /// </summary>
         /// <param name="namespace"></param>
@@ -85,7 +85,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get the leaderboard for a dataset<br/>
+        /// Get dataset leaderboard<br/>
         /// Returns the evaluation results ranked by score for a dataset/task
         /// </summary>
         /// <param name="namespace"></param>

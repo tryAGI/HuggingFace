@@ -42,7 +42,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Create an Agentic Provisioning account request
+        /// Create account request
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -64,7 +64,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Create an Agentic Provisioning account request
+        /// Create account request
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -469,7 +469,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Create an Agentic Provisioning account request
+        /// Create account request
         /// </summary>
         /// <param name="id"></param>
         /// <param name="object"></param>

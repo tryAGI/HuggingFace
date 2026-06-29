@@ -42,7 +42,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Remove / de-provision a resource
+        /// Remove resource
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -62,7 +62,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Remove / de-provision a resource
+        /// Remove resource
         /// </summary>
         /// <param name="id"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

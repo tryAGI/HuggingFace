@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IAgenticProvisioningClient
     {
         /// <summary>
-        /// Update a resource's service (e.g. plan upgrade)
+        /// Update resource service
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -19,7 +19,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a resource's service (e.g. plan upgrade)
+        /// Update resource service
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a resource's service (e.g. plan upgrade)
+        /// Update resource service
         /// </summary>
         /// <param name="id"></param>
         /// <param name="serviceId"></param>

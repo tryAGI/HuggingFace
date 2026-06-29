@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IUsersClient
     {
         /// <summary>
-        /// List user repositories with storage info
+        /// List user repositories
         /// </summary>
         /// <param name="search">
         /// Filter repositories by name (case-insensitive substring match)
@@ -36,7 +36,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// List user repositories with storage info
+        /// List user repositories
         /// </summary>
         /// <param name="search">
         /// Filter repositories by name (case-insensitive substring match)

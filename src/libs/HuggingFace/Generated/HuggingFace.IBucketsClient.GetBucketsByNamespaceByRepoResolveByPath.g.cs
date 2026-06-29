@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IBucketsClient
     {
         /// <summary>
-        /// Retrieve information about a file in a bucket<br/>
+        /// Get file metadata<br/>
         /// Returns file metadata including size, hash, and links to XET authentication
         /// </summary>
         /// <param name="namespace"></param>
@@ -31,7 +31,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Retrieve information about a file in a bucket<br/>
+        /// Get file metadata<br/>
         /// Returns file metadata including size, hash, and links to XET authentication
         /// </summary>
         /// <param name="namespace"></param>

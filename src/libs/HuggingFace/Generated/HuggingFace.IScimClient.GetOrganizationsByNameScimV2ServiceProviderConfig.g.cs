@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Get SCIM Service Provider Configuration<br/>
+        /// Get SCIM Configuration<br/>
         /// Returns the SCIM 2.0 Service Provider configuration, describing the server's capabilities and supported authentication schemes.
         /// </summary>
         /// <param name="name"></param>
@@ -17,7 +17,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get SCIM Service Provider Configuration<br/>
+        /// Get SCIM Configuration<br/>
         /// Returns the SCIM 2.0 Service Provider configuration, describing the server's capabilities and supported authentication schemes.
         /// </summary>
         /// <param name="name"></param>

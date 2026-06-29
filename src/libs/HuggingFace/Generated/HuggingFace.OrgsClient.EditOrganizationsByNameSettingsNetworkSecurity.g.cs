@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update network security settings<br/>
+        /// Update network security<br/>
         /// Update the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>
@@ -70,7 +70,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update network security settings<br/>
+        /// Update network security<br/>
         /// Update the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>
@@ -443,7 +443,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update network security settings<br/>
+        /// Update network security<br/>
         /// Update the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>

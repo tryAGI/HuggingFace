@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update a resource's service (e.g. plan upgrade)
+        /// Update resource service
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -69,7 +69,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update a resource's service (e.g. plan upgrade)
+        /// Update resource service
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
@@ -478,7 +478,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update a resource's service (e.g. plan upgrade)
+        /// Update resource service
         /// </summary>
         /// <param name="id"></param>
         /// <param name="serviceId"></param>

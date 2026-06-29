@@ -699,6 +699,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Scail2,
+        /// <summary>
+        /// 
+        /// </summary>
         SeedStory,
         /// <summary>
         /// 
@@ -836,6 +840,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Trellis2,
+        /// <summary>
+        /// 
+        /// </summary>
+        Tunejury,
         /// <summary>
         /// 
         /// </summary>
@@ -1094,6 +1102,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.SapRpt1Oss => "sap-rpt-1-oss",
                 GetQuicksearchLibrary2.Sapiens => "sapiens",
                 GetQuicksearchLibrary2.Sapiens2 => "sapiens2",
+                GetQuicksearchLibrary2.Scail2 => "scail-2",
                 GetQuicksearchLibrary2.SeedStory => "seed-story",
                 GetQuicksearchLibrary2.Seedvr => "seedvr",
                 GetQuicksearchLibrary2.SelfForcing => "self-forcing",
@@ -1129,6 +1138,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.TransformersJs => "transformers.js",
                 GetQuicksearchLibrary2.Trellis => "trellis",
                 GetQuicksearchLibrary2.Trellis2 => "trellis2",
+                GetQuicksearchLibrary2.Tunejury => "tunejury",
                 GetQuicksearchLibrary2.Ultralytics => "ultralytics",
                 GetQuicksearchLibrary2.Uni3dar => "uni-3dar",
                 GetQuicksearchLibrary2.UnitySentis => "unity-sentis",
@@ -1329,6 +1339,7 @@ namespace HuggingFace
                 "sap-rpt-1-oss" => GetQuicksearchLibrary2.SapRpt1Oss,
                 "sapiens" => GetQuicksearchLibrary2.Sapiens,
                 "sapiens2" => GetQuicksearchLibrary2.Sapiens2,
+                "scail-2" => GetQuicksearchLibrary2.Scail2,
                 "seed-story" => GetQuicksearchLibrary2.SeedStory,
                 "seedvr" => GetQuicksearchLibrary2.Seedvr,
                 "self-forcing" => GetQuicksearchLibrary2.SelfForcing,
@@ -1364,6 +1375,7 @@ namespace HuggingFace
                 "transformers.js" => GetQuicksearchLibrary2.TransformersJs,
                 "trellis" => GetQuicksearchLibrary2.Trellis,
                 "trellis2" => GetQuicksearchLibrary2.Trellis2,
+                "tunejury" => GetQuicksearchLibrary2.Tunejury,
                 "ultralytics" => GetQuicksearchLibrary2.Ultralytics,
                 "uni-3dar" => GetQuicksearchLibrary2.Uni3dar,
                 "unity-sentis" => GetQuicksearchLibrary2.UnitySentis,

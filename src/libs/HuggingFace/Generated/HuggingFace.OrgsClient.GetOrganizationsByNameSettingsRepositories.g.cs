@@ -52,7 +52,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// List organization repositories with storage info
+        /// List organization repositories
         /// </summary>
         /// <param name="name"></param>
         /// <param name="search">
@@ -99,7 +99,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// List organization repositories with storage info
+        /// List organization repositories
         /// </summary>
         /// <param name="name"></param>
         /// <param name="search">

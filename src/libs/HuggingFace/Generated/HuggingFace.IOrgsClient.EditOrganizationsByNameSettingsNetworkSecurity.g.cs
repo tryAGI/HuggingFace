@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IOrgsClient
     {
         /// <summary>
-        /// Update network security settings<br/>
+        /// Update network security<br/>
         /// Update the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>
@@ -20,7 +20,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update network security settings<br/>
+        /// Update network security<br/>
         /// Update the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>
@@ -35,7 +35,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update network security settings<br/>
+        /// Update network security<br/>
         /// Update the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>

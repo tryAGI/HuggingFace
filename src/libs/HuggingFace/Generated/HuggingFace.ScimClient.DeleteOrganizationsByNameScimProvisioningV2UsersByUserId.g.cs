@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Delete a SCIM provisioning user<br/>
+        /// Delete SCIM user<br/>
         /// Removes a user from the organization and deletes any pending invitations for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>
@@ -68,7 +68,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Delete a SCIM provisioning user<br/>
+        /// Delete SCIM user<br/>
         /// Removes a user from the organization and deletes any pending invitations for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>

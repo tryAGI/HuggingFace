@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Update an attribute of a SCIM provisioning user<br/>
+        /// Update SCIM user<br/>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
         /// </summary>
         /// <param name="name"></param>
@@ -22,7 +22,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update an attribute of a SCIM provisioning user<br/>
+        /// Update SCIM user<br/>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
         /// </summary>
         /// <param name="name"></param>
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update an attribute of a SCIM provisioning user<br/>
+        /// Update SCIM user<br/>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
         /// </summary>
         /// <param name="name"></param>

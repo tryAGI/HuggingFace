@@ -5,14 +5,14 @@ namespace HuggingFace
     public partial interface IUsersClient
     {
         /// <summary>
-        /// Get user inference usage by session<br/>
+        /// Get session inference usage<br/>
         /// Get user inference-provider usage broken down per session id
         /// </summary>
         /// <param name="startDate">
         /// Default Value: 2026-06-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-06-29T00:02:53.806Z
+        /// Default Value: 2026-06-29T13:07:44.135Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -23,14 +23,14 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get user inference usage by session<br/>
+        /// Get session inference usage<br/>
         /// Get user inference-provider usage broken down per session id
         /// </summary>
         /// <param name="startDate">
         /// Default Value: 2026-06-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-06-29T00:02:53.806Z
+        /// Default Value: 2026-06-29T13:07:44.135Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
