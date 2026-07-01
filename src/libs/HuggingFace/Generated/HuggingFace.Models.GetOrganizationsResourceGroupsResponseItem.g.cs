@@ -45,9 +45,9 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("repos")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemRepo> Repos { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2>> Resources { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -61,7 +61,7 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="users"></param>
-        /// <param name="repos"></param>
+        /// <param name="resources"></param>
         /// <param name="description"></param>
         /// <param name="autoJoin"></param>
 #if NET7_0_OR_GREATER
@@ -71,7 +71,7 @@ namespace HuggingFace
             string id,
             string name,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUser> users,
-            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemRepo> repos,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2>> resources,
             string? description,
             global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant2>? autoJoin)
         {
@@ -80,7 +80,7 @@ namespace HuggingFace
             this.Description = description;
             this.AutoJoin = autoJoin;
             this.Users = users ?? throw new global::System.ArgumentNullException(nameof(users));
-            this.Repos = repos ?? throw new global::System.ArgumentNullException(nameof(repos));
+            this.Resources = resources ?? throw new global::System.ArgumentNullException(nameof(resources));
         }
 
         /// <summary>

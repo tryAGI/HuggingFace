@@ -41,6 +41,12 @@ namespace HuggingFace
         public bool? Private { get; set; }
 
         /// <summary>
+        /// Assign the collection to a resource group of the owning organization. Only valid for organization-owned collections.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -56,6 +62,9 @@ namespace HuggingFace
         /// <param name="private">
         /// If not provided, the collection will be public. This field will respect the organization's visibility setting.
         /// </param>
+        /// <param name="resourceGroupId">
+        /// Assign the collection to a resource group of the owning organization. Only valid for organization-owned collections.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -64,13 +73,15 @@ namespace HuggingFace
             string @namespace,
             string? description,
             global::HuggingFace.CreateCollectionsRequestItem? item,
-            bool? @private)
+            bool? @private,
+            string? resourceGroupId)
         {
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Description = description;
             this.Namespace = @namespace ?? throw new global::System.ArgumentNullException(nameof(@namespace));
             this.Item = item;
             this.Private = @private;
+            this.ResourceGroupId = resourceGroupId;
         }
 
         /// <summary>

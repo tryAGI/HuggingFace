@@ -75,6 +75,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        CollectionUpdateResourceGroup,
+        /// <summary>
+        /// 
+        /// </summary>
         JobsCancel,
         /// <summary>
         /// 
@@ -506,6 +510,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscriptionPlan => "billing.update_subscription_plan",
                 GetOrganizationsAuditLogExportResponseItemType.CollectionCreate => "collection.create",
                 GetOrganizationsAuditLogExportResponseItemType.CollectionDelete => "collection.delete",
+                GetOrganizationsAuditLogExportResponseItemType.CollectionUpdateResourceGroup => "collection.update_resource_group",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCancel => "jobs.cancel",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCreate => "jobs.create",
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels => "jobs.update_labels",
@@ -633,6 +638,7 @@ namespace HuggingFace
                 "billing.update_subscription_plan" => GetOrganizationsAuditLogExportResponseItemType.BillingUpdateSubscriptionPlan,
                 "collection.create" => GetOrganizationsAuditLogExportResponseItemType.CollectionCreate,
                 "collection.delete" => GetOrganizationsAuditLogExportResponseItemType.CollectionDelete,
+                "collection.update_resource_group" => GetOrganizationsAuditLogExportResponseItemType.CollectionUpdateResourceGroup,
                 "jobs.cancel" => GetOrganizationsAuditLogExportResponseItemType.JobsCancel,
                 "jobs.create" => GetOrganizationsAuditLogExportResponseItemType.JobsCreate,
                 "jobs.update_labels" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels,
