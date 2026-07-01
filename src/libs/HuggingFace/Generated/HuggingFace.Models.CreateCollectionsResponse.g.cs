@@ -97,6 +97,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
+        public global::HuggingFace.CreateCollectionsResponseResourceGroup? ResourceGroup { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.CreateCollectionsResponseItem, global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsResponseItemVariant1, global::HuggingFace.CreateCollectionsResponseItemVariant2, global::HuggingFace.CreateCollectionsResponseItemVariant3, global::HuggingFace.CreateCollectionsResponseItemVariant4, global::HuggingFace.CreateCollectionsResponseItemVariant5, global::HuggingFace.CreateCollectionsResponseItemVariant6>?>> Items { get; set; }
@@ -123,6 +129,7 @@ namespace HuggingFace
         /// <param name="isUpvotedByUser"></param>
         /// <param name="items"></param>
         /// <param name="description"></param>
+        /// <param name="resourceGroup"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -139,7 +146,8 @@ namespace HuggingFace
             string shareUrl,
             bool isUpvotedByUser,
             global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.CreateCollectionsResponseItem, global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsResponseItemVariant1, global::HuggingFace.CreateCollectionsResponseItemVariant2, global::HuggingFace.CreateCollectionsResponseItemVariant3, global::HuggingFace.CreateCollectionsResponseItemVariant4, global::HuggingFace.CreateCollectionsResponseItemVariant5, global::HuggingFace.CreateCollectionsResponseItemVariant6>?>> items,
-            string? description)
+            string? description,
+            global::HuggingFace.CreateCollectionsResponseResourceGroup? resourceGroup)
         {
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
@@ -153,6 +161,7 @@ namespace HuggingFace
             this.Upvotes = upvotes;
             this.ShareUrl = shareUrl ?? throw new global::System.ArgumentNullException(nameof(shareUrl));
             this.IsUpvotedByUser = isUpvotedByUser;
+            this.ResourceGroup = resourceGroup;
             this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
         }
 

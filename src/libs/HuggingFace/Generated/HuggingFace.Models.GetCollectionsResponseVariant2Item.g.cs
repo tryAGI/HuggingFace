@@ -32,6 +32,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
+        public global::HuggingFace.GetCollectionsResponseVariant2ItemResourceGroup? ResourceGroup { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -49,6 +55,7 @@ namespace HuggingFace
         /// <param name="private"></param>
         /// <param name="upvotes"></param>
         /// <param name="name"></param>
+        /// <param name="resourceGroup"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -56,11 +63,13 @@ namespace HuggingFace
             string title,
             bool @private,
             double upvotes,
-            string name)
+            string name,
+            global::HuggingFace.GetCollectionsResponseVariant2ItemResourceGroup? resourceGroup)
         {
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Private = @private;
             this.Upvotes = upvotes;
+            this.ResourceGroup = resourceGroup;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
         }
 

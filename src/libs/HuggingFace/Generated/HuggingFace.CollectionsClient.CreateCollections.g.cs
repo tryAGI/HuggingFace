@@ -478,6 +478,9 @@ namespace HuggingFace
         /// <param name="private">
         /// If not provided, the collection will be public. This field will respect the organization's visibility setting.
         /// </param>
+        /// <param name="resourceGroupId">
+        /// Assign the collection to a resource group of the owning organization. Only valid for organization-owned collections.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -487,6 +490,7 @@ namespace HuggingFace
             string? description = default,
             global::HuggingFace.CreateCollectionsRequestItem? item = default,
             bool? @private = default,
+            string? resourceGroupId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -497,6 +501,7 @@ namespace HuggingFace
                 Namespace = @namespace,
                 Item = item,
                 Private = @private,
+                ResourceGroupId = resourceGroupId,
             };
 
             return await CreateCollectionsAsync(
