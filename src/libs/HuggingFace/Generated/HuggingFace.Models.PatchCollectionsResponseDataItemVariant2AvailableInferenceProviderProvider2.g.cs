@@ -15,15 +15,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        BlackForestLabs,
-        /// <summary>
-        /// 
-        /// </summary>
         Cerebras,
-        /// <summary>
-        /// 
-        /// </summary>
-        Clarifai,
         /// <summary>
         /// 
         /// </summary>
@@ -55,23 +47,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Hyperbolic,
-        /// <summary>
-        /// 
-        /// </summary>
-        Nebius,
-        /// <summary>
-        /// 
-        /// </summary>
         Novita,
         /// <summary>
         /// 
         /// </summary>
         Nscale,
-        /// <summary>
-        /// 
-        /// </summary>
-        Nvidia,
         /// <summary>
         /// 
         /// </summary>
@@ -88,10 +68,6 @@ namespace HuggingFace
         /// 
         /// </summary>
         Replicate,
-        /// <summary>
-        /// 
-        /// </summary>
-        Sambanova,
         /// <summary>
         /// 
         /// </summary>
@@ -123,9 +99,7 @@ namespace HuggingFace
             return value switch
             {
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Baseten => "baseten",
-                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.BlackForestLabs => "black-forest-labs",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Cerebras => "cerebras",
-                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Clarifai => "clarifai",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Cohere => "cohere",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Deepinfra => "deepinfra",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.FalAi => "fal-ai",
@@ -133,16 +107,12 @@ namespace HuggingFace
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.FireworksAi => "fireworks-ai",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Groq => "groq",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.HfInference => "hf-inference",
-                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Hyperbolic => "hyperbolic",
-                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Nebius => "nebius",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Novita => "novita",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Nscale => "nscale",
-                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Nvidia => "nvidia",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Openai => "openai",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Ovhcloud => "ovhcloud",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Publicai => "publicai",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Replicate => "replicate",
-                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Sambanova => "sambanova",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Scaleway => "scaleway",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Together => "together",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Wavespeed => "wavespeed",
@@ -158,9 +128,7 @@ namespace HuggingFace
             return value switch
             {
                 "baseten" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Baseten,
-                "black-forest-labs" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.BlackForestLabs,
                 "cerebras" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Cerebras,
-                "clarifai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Clarifai,
                 "cohere" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Cohere,
                 "deepinfra" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Deepinfra,
                 "fal-ai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.FalAi,
@@ -168,16 +136,12 @@ namespace HuggingFace
                 "fireworks-ai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.FireworksAi,
                 "groq" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Groq,
                 "hf-inference" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.HfInference,
-                "hyperbolic" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Hyperbolic,
-                "nebius" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Nebius,
                 "novita" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Novita,
                 "nscale" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Nscale,
-                "nvidia" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Nvidia,
                 "openai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Openai,
                 "ovhcloud" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Ovhcloud,
                 "publicai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Publicai,
                 "replicate" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Replicate,
-                "sambanova" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Sambanova,
                 "scaleway" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Scaleway,
                 "together" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Together,
                 "wavespeed" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2.Wavespeed,

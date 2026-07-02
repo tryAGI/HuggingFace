@@ -15,15 +15,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        BlackForestLabs,
-        /// <summary>
-        /// 
-        /// </summary>
         Cerebras,
-        /// <summary>
-        /// 
-        /// </summary>
-        Clarifai,
         /// <summary>
         /// 
         /// </summary>
@@ -55,23 +47,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Hyperbolic,
-        /// <summary>
-        /// 
-        /// </summary>
-        Nebius,
-        /// <summary>
-        /// 
-        /// </summary>
         Novita,
         /// <summary>
         /// 
         /// </summary>
         Nscale,
-        /// <summary>
-        /// 
-        /// </summary>
-        Nvidia,
         /// <summary>
         /// 
         /// </summary>
@@ -88,10 +68,6 @@ namespace HuggingFace
         /// 
         /// </summary>
         Replicate,
-        /// <summary>
-        /// 
-        /// </summary>
-        Sambanova,
         /// <summary>
         /// 
         /// </summary>
@@ -123,9 +99,7 @@ namespace HuggingFace
             return value switch
             {
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Baseten => "baseten",
-                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.BlackForestLabs => "black-forest-labs",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Cerebras => "cerebras",
-                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Clarifai => "clarifai",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Cohere => "cohere",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Deepinfra => "deepinfra",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.FalAi => "fal-ai",
@@ -133,16 +107,12 @@ namespace HuggingFace
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.FireworksAi => "fireworks-ai",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Groq => "groq",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.HfInference => "hf-inference",
-                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Hyperbolic => "hyperbolic",
-                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nebius => "nebius",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Novita => "novita",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nscale => "nscale",
-                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nvidia => "nvidia",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Openai => "openai",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Ovhcloud => "ovhcloud",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Publicai => "publicai",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Replicate => "replicate",
-                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Sambanova => "sambanova",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Scaleway => "scaleway",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Together => "together",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Wavespeed => "wavespeed",
@@ -158,9 +128,7 @@ namespace HuggingFace
             return value switch
             {
                 "baseten" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Baseten,
-                "black-forest-labs" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.BlackForestLabs,
                 "cerebras" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Cerebras,
-                "clarifai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Clarifai,
                 "cohere" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Cohere,
                 "deepinfra" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Deepinfra,
                 "fal-ai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.FalAi,
@@ -168,16 +136,12 @@ namespace HuggingFace
                 "fireworks-ai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.FireworksAi,
                 "groq" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Groq,
                 "hf-inference" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.HfInference,
-                "hyperbolic" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Hyperbolic,
-                "nebius" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nebius,
                 "novita" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Novita,
                 "nscale" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nscale,
-                "nvidia" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nvidia,
                 "openai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Openai,
                 "ovhcloud" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Ovhcloud,
                 "publicai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Publicai,
                 "replicate" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Replicate,
-                "sambanova" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Sambanova,
                 "scaleway" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Scaleway,
                 "together" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Together,
                 "wavespeed" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Wavespeed,
