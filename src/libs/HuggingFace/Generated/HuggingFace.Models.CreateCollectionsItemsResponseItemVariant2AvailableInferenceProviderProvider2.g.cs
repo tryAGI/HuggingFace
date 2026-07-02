@@ -15,15 +15,7 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        BlackForestLabs,
-        /// <summary>
-        /// 
-        /// </summary>
         Cerebras,
-        /// <summary>
-        /// 
-        /// </summary>
-        Clarifai,
         /// <summary>
         /// 
         /// </summary>
@@ -55,23 +47,11 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
-        Hyperbolic,
-        /// <summary>
-        /// 
-        /// </summary>
-        Nebius,
-        /// <summary>
-        /// 
-        /// </summary>
         Novita,
         /// <summary>
         /// 
         /// </summary>
         Nscale,
-        /// <summary>
-        /// 
-        /// </summary>
-        Nvidia,
         /// <summary>
         /// 
         /// </summary>
@@ -88,10 +68,6 @@ namespace HuggingFace
         /// 
         /// </summary>
         Replicate,
-        /// <summary>
-        /// 
-        /// </summary>
-        Sambanova,
         /// <summary>
         /// 
         /// </summary>
@@ -123,9 +99,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Baseten => "baseten",
-                CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.BlackForestLabs => "black-forest-labs",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Cerebras => "cerebras",
-                CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Clarifai => "clarifai",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Cohere => "cohere",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Deepinfra => "deepinfra",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.FalAi => "fal-ai",
@@ -133,16 +107,12 @@ namespace HuggingFace
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.FireworksAi => "fireworks-ai",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Groq => "groq",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.HfInference => "hf-inference",
-                CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Hyperbolic => "hyperbolic",
-                CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Nebius => "nebius",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Novita => "novita",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Nscale => "nscale",
-                CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Nvidia => "nvidia",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Openai => "openai",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Ovhcloud => "ovhcloud",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Publicai => "publicai",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Replicate => "replicate",
-                CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Sambanova => "sambanova",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Scaleway => "scaleway",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Together => "together",
                 CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Wavespeed => "wavespeed",
@@ -158,9 +128,7 @@ namespace HuggingFace
             return value switch
             {
                 "baseten" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Baseten,
-                "black-forest-labs" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.BlackForestLabs,
                 "cerebras" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Cerebras,
-                "clarifai" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Clarifai,
                 "cohere" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Cohere,
                 "deepinfra" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Deepinfra,
                 "fal-ai" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.FalAi,
@@ -168,16 +136,12 @@ namespace HuggingFace
                 "fireworks-ai" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.FireworksAi,
                 "groq" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Groq,
                 "hf-inference" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.HfInference,
-                "hyperbolic" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Hyperbolic,
-                "nebius" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Nebius,
                 "novita" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Novita,
                 "nscale" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Nscale,
-                "nvidia" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Nvidia,
                 "openai" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Openai,
                 "ovhcloud" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Ovhcloud,
                 "publicai" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Publicai,
                 "replicate" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Replicate,
-                "sambanova" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Sambanova,
                 "scaleway" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Scaleway,
                 "together" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Together,
                 "wavespeed" => CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2.Wavespeed,

@@ -27,9 +27,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("highRateLimits")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<bool?, string> HighRateLimits { get; set; }
+        public required bool HighRateLimits { get; set; }
 
         /// <summary>
         /// 
@@ -73,7 +72,7 @@ namespace HuggingFace
         public GetOrganizationsSettingsNetworkSecurityResponse(
             global::HuggingFace.AnyOf<bool?, string> enforceAuth,
             bool enforceIpRestriction,
-            global::HuggingFace.AnyOf<bool?, string> highRateLimits,
+            bool highRateLimits,
             global::System.Collections.Generic.IList<string> ipRanges,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseBlockedContent> blockedContents,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseAllowedContent> allowedContents)
