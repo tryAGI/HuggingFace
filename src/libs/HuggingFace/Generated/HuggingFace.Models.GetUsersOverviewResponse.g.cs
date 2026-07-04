@@ -106,6 +106,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("numFollowingOrgs")]
+        public double? NumFollowingOrgs { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
         public string? Details { get; set; }
 
@@ -166,6 +172,7 @@ namespace HuggingFace
         /// <param name="numLikes"></param>
         /// <param name="numFollowers"></param>
         /// <param name="numFollowing"></param>
+        /// <param name="numFollowingOrgs"></param>
         /// <param name="details"></param>
         /// <param name="isFollowing"></param>
         /// <param name="reasonToFollow"></param>
@@ -191,6 +198,7 @@ namespace HuggingFace
             double? numLikes,
             double? numFollowers,
             double? numFollowing,
+            double? numFollowingOrgs,
             string? details,
             bool? isFollowing,
             string? reasonToFollow,
@@ -212,6 +220,7 @@ namespace HuggingFace
             this.NumLikes = numLikes;
             this.NumFollowers = numFollowers;
             this.NumFollowing = numFollowing;
+            this.NumFollowingOrgs = numFollowingOrgs;
             this.Details = details;
             this.IsFollowing = isFollowing;
             this.ReasonToFollow = reasonToFollow;
