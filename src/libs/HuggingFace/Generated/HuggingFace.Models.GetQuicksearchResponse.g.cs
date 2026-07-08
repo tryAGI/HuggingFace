@@ -114,6 +114,20 @@ namespace HuggingFace
         public required double BucketsCount { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("kernels")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseKernel> Kernels { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("kernelsCount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double KernelsCount { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -137,6 +151,8 @@ namespace HuggingFace
         /// <param name="collectionsCount"></param>
         /// <param name="buckets"></param>
         /// <param name="bucketsCount"></param>
+        /// <param name="kernels"></param>
+        /// <param name="kernelsCount"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -155,7 +171,9 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseCollection> collections,
             double collectionsCount,
             global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseBucket> buckets,
-            double bucketsCount)
+            double bucketsCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseKernel> kernels,
+            double kernelsCount)
         {
             this.Datasets = datasets ?? throw new global::System.ArgumentNullException(nameof(datasets));
             this.DatasetsCount = datasetsCount;
@@ -172,6 +190,8 @@ namespace HuggingFace
             this.CollectionsCount = collectionsCount;
             this.Buckets = buckets ?? throw new global::System.ArgumentNullException(nameof(buckets));
             this.BucketsCount = bucketsCount;
+            this.Kernels = kernels ?? throw new global::System.ArgumentNullException(nameof(kernels));
+            this.KernelsCount = kernelsCount;
         }
 
         /// <summary>

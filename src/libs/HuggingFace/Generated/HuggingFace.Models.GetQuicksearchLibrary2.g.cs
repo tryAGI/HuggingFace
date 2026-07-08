@@ -279,6 +279,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Flextab,
+        /// <summary>
+        /// 
+        /// </summary>
         Fme,
         /// <summary>
         /// 
@@ -572,6 +576,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         OpenClip,
+        /// <summary>
+        /// 
+        /// </summary>
+        Openasr,
         /// <summary>
         /// 
         /// </summary>
@@ -1001,6 +1009,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Fasttext => "fasttext",
                 GetQuicksearchLibrary2.Fixer => "fixer",
                 GetQuicksearchLibrary2.Flair => "flair",
+                GetQuicksearchLibrary2.Flextab => "flextab",
                 GetQuicksearchLibrary2.Fme => "fme",
                 GetQuicksearchLibrary2.GemmaCpp => "gemma.cpp",
                 GetQuicksearchLibrary2.Genmo => "genmo",
@@ -1075,6 +1084,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.OpenOasis => "open-oasis",
                 GetQuicksearchLibrary2.OpenSora => "open-sora",
                 GetQuicksearchLibrary2.OpenClip => "open_clip",
+                GetQuicksearchLibrary2.Openasr => "openasr",
                 GetQuicksearchLibrary2.Openpeerllm => "openpeerllm",
                 GetQuicksearchLibrary2.Outetts => "outetts",
                 GetQuicksearchLibrary2.Paddlenlp => "paddlenlp",
@@ -1239,6 +1249,7 @@ namespace HuggingFace
                 "fasttext" => GetQuicksearchLibrary2.Fasttext,
                 "fixer" => GetQuicksearchLibrary2.Fixer,
                 "flair" => GetQuicksearchLibrary2.Flair,
+                "flextab" => GetQuicksearchLibrary2.Flextab,
                 "fme" => GetQuicksearchLibrary2.Fme,
                 "gemma.cpp" => GetQuicksearchLibrary2.GemmaCpp,
                 "genmo" => GetQuicksearchLibrary2.Genmo,
@@ -1313,6 +1324,7 @@ namespace HuggingFace
                 "open-oasis" => GetQuicksearchLibrary2.OpenOasis,
                 "open-sora" => GetQuicksearchLibrary2.OpenSora,
                 "open_clip" => GetQuicksearchLibrary2.OpenClip,
+                "openasr" => GetQuicksearchLibrary2.Openasr,
                 "openpeerllm" => GetQuicksearchLibrary2.Openpeerllm,
                 "outetts" => GetQuicksearchLibrary2.Outetts,
                 "paddlenlp" => GetQuicksearchLibrary2.Paddlenlp,
