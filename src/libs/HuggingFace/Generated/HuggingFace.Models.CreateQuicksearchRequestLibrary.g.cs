@@ -279,6 +279,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Flextab,
+        /// <summary>
+        /// 
+        /// </summary>
         Fme,
         /// <summary>
         /// 
@@ -572,6 +576,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         OpenClip,
+        /// <summary>
+        /// 
+        /// </summary>
+        Openasr,
         /// <summary>
         /// 
         /// </summary>
@@ -1001,6 +1009,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Fasttext => "fasttext",
                 CreateQuicksearchRequestLibrary.Fixer => "fixer",
                 CreateQuicksearchRequestLibrary.Flair => "flair",
+                CreateQuicksearchRequestLibrary.Flextab => "flextab",
                 CreateQuicksearchRequestLibrary.Fme => "fme",
                 CreateQuicksearchRequestLibrary.GemmaCpp => "gemma.cpp",
                 CreateQuicksearchRequestLibrary.Genmo => "genmo",
@@ -1075,6 +1084,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.OpenOasis => "open-oasis",
                 CreateQuicksearchRequestLibrary.OpenSora => "open-sora",
                 CreateQuicksearchRequestLibrary.OpenClip => "open_clip",
+                CreateQuicksearchRequestLibrary.Openasr => "openasr",
                 CreateQuicksearchRequestLibrary.Openpeerllm => "openpeerllm",
                 CreateQuicksearchRequestLibrary.Outetts => "outetts",
                 CreateQuicksearchRequestLibrary.Paddlenlp => "paddlenlp",
@@ -1239,6 +1249,7 @@ namespace HuggingFace
                 "fasttext" => CreateQuicksearchRequestLibrary.Fasttext,
                 "fixer" => CreateQuicksearchRequestLibrary.Fixer,
                 "flair" => CreateQuicksearchRequestLibrary.Flair,
+                "flextab" => CreateQuicksearchRequestLibrary.Flextab,
                 "fme" => CreateQuicksearchRequestLibrary.Fme,
                 "gemma.cpp" => CreateQuicksearchRequestLibrary.GemmaCpp,
                 "genmo" => CreateQuicksearchRequestLibrary.Genmo,
@@ -1313,6 +1324,7 @@ namespace HuggingFace
                 "open-oasis" => CreateQuicksearchRequestLibrary.OpenOasis,
                 "open-sora" => CreateQuicksearchRequestLibrary.OpenSora,
                 "open_clip" => CreateQuicksearchRequestLibrary.OpenClip,
+                "openasr" => CreateQuicksearchRequestLibrary.Openasr,
                 "openpeerllm" => CreateQuicksearchRequestLibrary.Openpeerllm,
                 "outetts" => CreateQuicksearchRequestLibrary.Outetts,
                 "paddlenlp" => CreateQuicksearchRequestLibrary.Paddlenlp,

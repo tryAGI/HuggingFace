@@ -23,6 +23,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Kernel,
+        /// <summary>
+        /// 
+        /// </summary>
         Model,
         /// <summary>
         /// 
@@ -57,6 +61,7 @@ namespace HuggingFace
                 CreateQuicksearchTypeVariant1Item.Bucket => "bucket",
                 CreateQuicksearchTypeVariant1Item.Collection => "collection",
                 CreateQuicksearchTypeVariant1Item.Dataset => "dataset",
+                CreateQuicksearchTypeVariant1Item.Kernel => "kernel",
                 CreateQuicksearchTypeVariant1Item.Model => "model",
                 CreateQuicksearchTypeVariant1Item.Org => "org",
                 CreateQuicksearchTypeVariant1Item.Paper => "paper",
@@ -75,6 +80,7 @@ namespace HuggingFace
                 "bucket" => CreateQuicksearchTypeVariant1Item.Bucket,
                 "collection" => CreateQuicksearchTypeVariant1Item.Collection,
                 "dataset" => CreateQuicksearchTypeVariant1Item.Dataset,
+                "kernel" => CreateQuicksearchTypeVariant1Item.Kernel,
                 "model" => CreateQuicksearchTypeVariant1Item.Model,
                 "org" => CreateQuicksearchTypeVariant1Item.Org,
                 "paper" => CreateQuicksearchTypeVariant1Item.Paper,

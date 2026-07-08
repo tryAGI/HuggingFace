@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class UsersClient
+    public partial class SpacesClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetSettingsBillingUsageByInferenceSessionSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetSpacesTemplatesSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,50 +21,36 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetSettingsBillingUsageByInferenceSessionSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetSpacesTemplatesSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetSettingsBillingUsageByInferenceSessionSecurityRequirement0,
+            {                s_GetSpacesTemplatesSecurityRequirement0,
             };
-        partial void PrepareGetSettingsBillingUsageByInferenceSessionArguments(
+        partial void PrepareGetSpacesTemplatesArguments(
+            global::System.Net.Http.HttpClient httpClient);
+        partial void PrepareGetSpacesTemplatesRequest(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.DateTime? startDate,
-            ref global::System.DateTime? endDate);
-        partial void PrepareGetSettingsBillingUsageByInferenceSessionRequest(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.DateTime? startDate,
-            global::System.DateTime? endDate);
-        partial void ProcessGetSettingsBillingUsageByInferenceSessionResponse(
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+        partial void ProcessGetSpacesTemplatesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetSettingsBillingUsageByInferenceSessionResponseContent(
+        partial void ProcessGetSpacesTemplatesResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get session inference usage<br/>
-        /// Get user inference-provider usage broken down per session id
+        /// List Space templates<br/>
+        /// Returns the catalog of official Space templates. The `repoId` of a template can be passed as `template` when creating a Space through the create-repo endpoint.
         /// </summary>
-        /// <param name="startDate">
-        /// Default Value: 2026-07-01T00:00:00.000Z
-        /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-07-08T09:24:58.427Z
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse> GetSettingsBillingUsageByInferenceSessionAsync(
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetSpacesTemplatesResponse> GetSpacesTemplatesAsync(
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetSettingsBillingUsageByInferenceSessionAsResponseAsync(
-                startDate: startDate,
-                endDate: endDate,
+            var __response = await GetSpacesTemplatesAsResponseAsync(
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -72,36 +58,26 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get session inference usage<br/>
-        /// Get user inference-provider usage broken down per session id
+        /// List Space templates<br/>
+        /// Returns the catalog of official Space templates. The `repoId` of a template can be passed as `template` when creating a Space through the create-repo endpoint.
         /// </summary>
-        /// <param name="startDate">
-        /// Default Value: 2026-07-01T00:00:00.000Z
-        /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-07-08T09:24:58.427Z
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>> GetSettingsBillingUsageByInferenceSessionAsResponseAsync(
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSpacesTemplatesResponse>> GetSpacesTemplatesAsResponseAsync(
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetSettingsBillingUsageByInferenceSessionArguments(
-                httpClient: HttpClient,
-                startDate: ref startDate,
-                endDate: ref endDate);
+            PrepareGetSpacesTemplatesArguments(
+                httpClient: HttpClient);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetSettingsBillingUsageByInferenceSessionSecurityRequirements,
-                operationName: "GetSettingsBillingUsageByInferenceSessionAsync");
+                securityRequirements: s_GetSpacesTemplatesSecurityRequirements,
+                operationName: "GetSpacesTemplatesAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -121,12 +97,8 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: "/api/settings/billing/usage-by-inference-session",
+                                path: "/api/spaces/templates",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -164,11 +136,9 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetSettingsBillingUsageByInferenceSessionRequest(
+                PrepareGetSpacesTemplatesRequest(
                     httpClient: HttpClient,
-                    httpRequestMessage: __httpRequest,
-                    startDate: startDate,
-                    endDate: endDate);
+                    httpRequestMessage: __httpRequest);
 
                 return __httpRequest;
             }
@@ -185,9 +155,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getSpacesTemplates",
+                                methodName: "GetSpacesTemplatesAsync",
+                                pathTemplate: "\"/api/spaces/templates\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -219,9 +189,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getSpacesTemplates",
+                                methodName: "GetSpacesTemplatesAsync",
+                                pathTemplate: "\"/api/spaces/templates\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -260,9 +230,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getSpacesTemplates",
+                                methodName: "GetSpacesTemplatesAsync",
+                                pathTemplate: "\"/api/spaces/templates\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -300,7 +270,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetSettingsBillingUsageByInferenceSessionResponse(
+                ProcessGetSpacesTemplatesResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -308,9 +278,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getSpacesTemplates",
+                                methodName: "GetSpacesTemplatesAsync",
+                                pathTemplate: "\"/api/spaces/templates\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -330,9 +300,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getSpacesTemplates",
+                                methodName: "GetSpacesTemplatesAsync",
+                                pathTemplate: "\"/api/spaces/templates\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -360,7 +330,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetSettingsBillingUsageByInferenceSessionResponseContent(
+                                ProcessGetSpacesTemplatesResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -369,9 +339,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.GetSpacesTemplatesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSpacesTemplatesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -401,9 +371,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.GetSpacesTemplatesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSpacesTemplatesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
