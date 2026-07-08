@@ -60,7 +60,7 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Volume>? Volumes { get; set; }
 
         /// <summary>
-        /// 
+        /// The Space SDK. `static` is free for everyone. `gradio` and `docker` run on compute: on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sdk")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateReposCreateRequestVariant4SdkJsonConverter))]
@@ -88,7 +88,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateReposCreateRequestVariant4" /> class.
         /// </summary>
-        /// <param name="sdk"></param>
+        /// <param name="sdk">
+        /// The Space SDK. `static` is free for everyone. `gradio` and `docker` run on compute: on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).
+        /// </param>
         /// <param name="template"></param>
         /// <param name="shortDescription"></param>
         /// <param name="hardware">

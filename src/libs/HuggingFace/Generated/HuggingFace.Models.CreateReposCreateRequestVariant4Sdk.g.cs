@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    /// The Space SDK. `static` is free for everyone. `gradio` and `docker` run on compute: on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).
     /// </summary>
     public enum CreateReposCreateRequestVariant4Sdk
     {
         /// <summary>
-        /// 
+        /// on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).
         /// </summary>
         Docker,
         /// <summary>
-        /// 
+        /// on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).
         /// </summary>
         Gradio,
         /// <summary>
-        /// 
+        /// on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).
         /// </summary>
         Static,
     }
