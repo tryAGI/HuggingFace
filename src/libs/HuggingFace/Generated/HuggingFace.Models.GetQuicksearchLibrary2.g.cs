@@ -539,6 +539,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Mobilint,
+        /// <summary>
+        /// 
+        /// </summary>
         Model2vec,
         /// <summary>
         /// 
@@ -823,6 +827,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        TimeeTs,
+        /// <summary>
+        /// 
+        /// </summary>
         Timesfm,
         /// <summary>
         /// 
@@ -832,6 +840,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         Tirex,
+        /// <summary>
+        /// 
+        /// </summary>
+        Tirex2,
         /// <summary>
         /// 
         /// </summary>
@@ -1074,6 +1086,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.MlcLlm => "mlc-llm",
                 GetQuicksearchLibrary2.Mlx => "mlx",
                 GetQuicksearchLibrary2.MlxImage => "mlx-image",
+                GetQuicksearchLibrary2.Mobilint => "mobilint",
                 GetQuicksearchLibrary2.Model2vec => "model2vec",
                 GetQuicksearchLibrary2.Monkeyocr => "monkeyocr",
                 GetQuicksearchLibrary2.Moshi => "moshi",
@@ -1145,9 +1158,11 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Terratorch => "terratorch",
                 GetQuicksearchLibrary2.TfKeras => "tf-keras",
                 GetQuicksearchLibrary2.TicClip => "tic-clip",
+                GetQuicksearchLibrary2.TimeeTs => "timee-ts",
                 GetQuicksearchLibrary2.Timesfm => "timesfm",
                 GetQuicksearchLibrary2.Timm => "timm",
                 GetQuicksearchLibrary2.Tirex => "tirex",
+                GetQuicksearchLibrary2.Tirex2 => "tirex-2",
                 GetQuicksearchLibrary2.Torchgeo => "torchgeo",
                 GetQuicksearchLibrary2.Transformers => "transformers",
                 GetQuicksearchLibrary2.TransformersJs => "transformers.js",
@@ -1314,6 +1329,7 @@ namespace HuggingFace
                 "mlc-llm" => GetQuicksearchLibrary2.MlcLlm,
                 "mlx" => GetQuicksearchLibrary2.Mlx,
                 "mlx-image" => GetQuicksearchLibrary2.MlxImage,
+                "mobilint" => GetQuicksearchLibrary2.Mobilint,
                 "model2vec" => GetQuicksearchLibrary2.Model2vec,
                 "monkeyocr" => GetQuicksearchLibrary2.Monkeyocr,
                 "moshi" => GetQuicksearchLibrary2.Moshi,
@@ -1385,9 +1401,11 @@ namespace HuggingFace
                 "terratorch" => GetQuicksearchLibrary2.Terratorch,
                 "tf-keras" => GetQuicksearchLibrary2.TfKeras,
                 "tic-clip" => GetQuicksearchLibrary2.TicClip,
+                "timee-ts" => GetQuicksearchLibrary2.TimeeTs,
                 "timesfm" => GetQuicksearchLibrary2.Timesfm,
                 "timm" => GetQuicksearchLibrary2.Timm,
                 "tirex" => GetQuicksearchLibrary2.Tirex,
+                "tirex-2" => GetQuicksearchLibrary2.Tirex2,
                 "torchgeo" => GetQuicksearchLibrary2.Torchgeo,
                 "transformers" => GetQuicksearchLibrary2.Transformers,
                 "transformers.js" => GetQuicksearchLibrary2.TransformersJs,
