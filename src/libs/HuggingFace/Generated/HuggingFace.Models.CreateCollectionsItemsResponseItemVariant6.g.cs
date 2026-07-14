@@ -66,6 +66,18 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("adminTags")]
+        public global::System.Collections.Generic.IList<string>? AdminTags { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("disabled")]
+        public global::HuggingFace.CreateCollectionsItemsResponseItemVariant6Disabled? Disabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cdnRegions")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegion> CdnRegions { get; set; }
@@ -104,6 +116,8 @@ namespace HuggingFace
         /// </param>
         /// <param name="cdnRegions"></param>
         /// <param name="private"></param>
+        /// <param name="adminTags"></param>
+        /// <param name="disabled"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="repoType"></param>
         /// <param name="type"></param>
@@ -119,6 +133,8 @@ namespace HuggingFace
             double totalFiles,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegion> cdnRegions,
             bool? @private,
+            global::System.Collections.Generic.IList<string>? adminTags,
+            global::HuggingFace.CreateCollectionsItemsResponseItemVariant6Disabled? disabled,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant6ResourceGroup? resourceGroup,
             string repoType = "bucket",
             string type = "bucket")
@@ -131,6 +147,8 @@ namespace HuggingFace
             this.Size = size;
             this.TotalFiles = totalFiles;
             this.RepoType = repoType;
+            this.AdminTags = adminTags;
+            this.Disabled = disabled;
             this.CdnRegions = cdnRegions ?? throw new global::System.ArgumentNullException(nameof(cdnRegions));
             this.ResourceGroup = resourceGroup;
             this.Type = type;
