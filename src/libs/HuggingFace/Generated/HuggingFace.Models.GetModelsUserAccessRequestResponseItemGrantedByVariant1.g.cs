@@ -70,6 +70,18 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("numBuckets")]
+        public double? NumBuckets { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("numKernels")]
+        public double? NumKernels { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numDiscussions")]
         public double? NumDiscussions { get; set; }
 
@@ -164,6 +176,8 @@ namespace HuggingFace
         /// <param name="numModels"></param>
         /// <param name="numDatasets"></param>
         /// <param name="numSpaces"></param>
+        /// <param name="numBuckets"></param>
+        /// <param name="numKernels"></param>
         /// <param name="numDiscussions"></param>
         /// <param name="numPapers"></param>
         /// <param name="numUpvotes"></param>
@@ -190,6 +204,8 @@ namespace HuggingFace
             double? numModels,
             double? numDatasets,
             double? numSpaces,
+            double? numBuckets,
+            double? numKernels,
             double? numDiscussions,
             double? numPapers,
             double? numUpvotes,
@@ -213,6 +229,8 @@ namespace HuggingFace
             this.NumModels = numModels;
             this.NumDatasets = numDatasets;
             this.NumSpaces = numSpaces;
+            this.NumBuckets = numBuckets;
+            this.NumKernels = numKernels;
             this.NumDiscussions = numDiscussions;
             this.NumPapers = numPapers;
             this.NumUpvotes = numUpvotes;
