@@ -52,6 +52,13 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseAllowedContent> AllowedContents { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("keepReposMetadataVisible")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool KeepReposMetadataVisible { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -66,6 +73,7 @@ namespace HuggingFace
         /// <param name="ipRanges"></param>
         /// <param name="blockedContents"></param>
         /// <param name="allowedContents"></param>
+        /// <param name="keepReposMetadataVisible"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -75,7 +83,8 @@ namespace HuggingFace
             bool highRateLimits,
             global::System.Collections.Generic.IList<string> ipRanges,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseBlockedContent> blockedContents,
-            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseAllowedContent> allowedContents)
+            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseAllowedContent> allowedContents,
+            bool keepReposMetadataVisible)
         {
             this.EnforceAuth = enforceAuth;
             this.EnforceIpRestriction = enforceIpRestriction;
@@ -83,6 +92,7 @@ namespace HuggingFace
             this.IpRanges = ipRanges ?? throw new global::System.ArgumentNullException(nameof(ipRanges));
             this.BlockedContents = blockedContents ?? throw new global::System.ArgumentNullException(nameof(blockedContents));
             this.AllowedContents = allowedContents ?? throw new global::System.ArgumentNullException(nameof(allowedContents));
+            this.KeepReposMetadataVisible = keepReposMetadataVisible;
         }
 
         /// <summary>

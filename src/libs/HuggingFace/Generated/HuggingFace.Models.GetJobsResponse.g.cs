@@ -112,6 +112,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseVolume>? Volumes { get; set; }
 
         /// <summary>
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expose")]
+        public global::HuggingFace.GetJobsResponseExpose? Expose { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <default>"job"</default>
@@ -184,6 +190,9 @@ namespace HuggingFace
         /// <param name="finishedAt"></param>
         /// <param name="durations"></param>
         /// <param name="volumes"></param>
+        /// <param name="expose">
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </param>
         /// <param name="initiator"></param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
@@ -211,6 +220,7 @@ namespace HuggingFace
             global::System.DateTime? finishedAt,
             global::HuggingFace.GetJobsResponseDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseVolume>? volumes,
+            global::HuggingFace.GetJobsResponseExpose? expose,
             global::HuggingFace.AnyOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
@@ -233,6 +243,7 @@ namespace HuggingFace
             this.FinishedAt = finishedAt;
             this.Durations = durations;
             this.Volumes = volumes;
+            this.Expose = expose;
             this.Type = type;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.Initiator = initiator;

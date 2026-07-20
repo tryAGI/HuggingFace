@@ -60,7 +60,7 @@ namespace HuggingFace
         /// HuggingFace Buckets or Repos to mount as volumes in the job container.
         /// </param>
         /// <param name="expose">
-        /// Ports to expose publicly through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.&lt;jobs-public-domain&gt;`. Access always requires a HF token with read access to the job's namespace.
+        /// Ports to expose publicly through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.&lt;jobs-public-domain&gt;`. Access requires a HF token with read access to the job's namespace, except for ports also listed in `portsPublic`.
         /// </param>
         /// <param name="ssh">
         /// When `enabled`, the job's container is reachable over SSH at `ssh &lt;job_id&gt;@ssh.hf.jobs`. Only the job's owner is allowed in, authenticated by an SSH public key registered on the Hub.

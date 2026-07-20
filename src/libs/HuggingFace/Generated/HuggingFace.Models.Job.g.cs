@@ -138,6 +138,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.JobVolume>? Volumes { get; set; }
 
         /// <summary>
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expose")]
+        public global::HuggingFace.JobExpose? Expose { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -166,6 +172,9 @@ namespace HuggingFace
         /// <param name="finishedAt"></param>
         /// <param name="durations"></param>
         /// <param name="volumes"></param>
+        /// <param name="expose">
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -189,7 +198,8 @@ namespace HuggingFace
             global::System.DateTime? startedAt,
             global::System.DateTime? finishedAt,
             global::HuggingFace.JobDurations? durations,
-            global::System.Collections.Generic.IList<global::HuggingFace.JobVolume>? volumes)
+            global::System.Collections.Generic.IList<global::HuggingFace.JobVolume>? volumes,
+            global::HuggingFace.JobExpose? expose)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
@@ -211,6 +221,7 @@ namespace HuggingFace
             this.FinishedAt = finishedAt;
             this.Durations = durations;
             this.Volumes = volumes;
+            this.Expose = expose;
         }
 
         /// <summary>

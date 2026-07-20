@@ -87,6 +87,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        JobsUpdateExpose,
+        /// <summary>
+        /// 
+        /// </summary>
         JobsUpdateLabels,
         /// <summary>
         /// 
@@ -513,6 +517,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.CollectionUpdateResourceGroup => "collection.update_resource_group",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCancel => "jobs.cancel",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCreate => "jobs.create",
+                GetOrganizationsAuditLogExportResponseItemType.JobsUpdateExpose => "jobs.update_expose",
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels => "jobs.update_labels",
                 GetOrganizationsAuditLogExportResponseItemType.OauthToken => "oauth.token",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
@@ -641,6 +646,7 @@ namespace HuggingFace
                 "collection.update_resource_group" => GetOrganizationsAuditLogExportResponseItemType.CollectionUpdateResourceGroup,
                 "jobs.cancel" => GetOrganizationsAuditLogExportResponseItemType.JobsCancel,
                 "jobs.create" => GetOrganizationsAuditLogExportResponseItemType.JobsCreate,
+                "jobs.update_expose" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateExpose,
                 "jobs.update_labels" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels,
                 "oauth.token" => GetOrganizationsAuditLogExportResponseItemType.OauthToken,
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
