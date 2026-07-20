@@ -112,6 +112,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsDuplicateResponseVolume>? Volumes { get; set; }
 
         /// <summary>
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expose")]
+        public global::HuggingFace.CreateJobsDuplicateResponseExpose? Expose { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <default>"job"</default>
@@ -184,6 +190,9 @@ namespace HuggingFace
         /// <param name="finishedAt"></param>
         /// <param name="durations"></param>
         /// <param name="volumes"></param>
+        /// <param name="expose">
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </param>
         /// <param name="initiator"></param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
@@ -211,6 +220,7 @@ namespace HuggingFace
             global::System.DateTime? finishedAt,
             global::HuggingFace.CreateJobsDuplicateResponseDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsDuplicateResponseVolume>? volumes,
+            global::HuggingFace.CreateJobsDuplicateResponseExpose? expose,
             global::HuggingFace.AnyOf<global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant1, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant2, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant3, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
@@ -233,6 +243,7 @@ namespace HuggingFace
             this.FinishedAt = finishedAt;
             this.Durations = durations;
             this.Volumes = volumes;
+            this.Expose = expose;
             this.Type = type;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.Initiator = initiator;

@@ -45,6 +45,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>? AllowedContents { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("keepReposMetadataVisible")]
+        public bool? KeepReposMetadataVisible { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -59,6 +65,7 @@ namespace HuggingFace
         /// <param name="ipRanges"></param>
         /// <param name="blockedContents"></param>
         /// <param name="allowedContents"></param>
+        /// <param name="keepReposMetadataVisible"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -68,7 +75,8 @@ namespace HuggingFace
             bool? highRateLimits,
             global::System.Collections.Generic.IList<string>? ipRanges,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContent>? blockedContents,
-            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>? allowedContents)
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>? allowedContents,
+            bool? keepReposMetadataVisible)
         {
             this.EnforceAuth = enforceAuth;
             this.EnforceIpRestriction = enforceIpRestriction;
@@ -76,6 +84,7 @@ namespace HuggingFace
             this.IpRanges = ipRanges;
             this.BlockedContents = blockedContents;
             this.AllowedContents = allowedContents;
+            this.KeepReposMetadataVisible = keepReposMetadataVisible;
         }
 
         /// <summary>

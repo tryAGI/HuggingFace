@@ -91,6 +91,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateScheduledJobsScheduleResponseJobSpecVolume>? Volumes { get; set; }
 
         /// <summary>
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expose")]
+        public global::HuggingFace.CreateScheduledJobsScheduleResponseJobSpecExpose? Expose { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
@@ -130,6 +136,9 @@ namespace HuggingFace
         /// <param name="finishedAt"></param>
         /// <param name="durations"></param>
         /// <param name="volumes"></param>
+        /// <param name="expose">
+        /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
+        /// </param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
         /// <param name="hfToken"></param>
@@ -150,6 +159,7 @@ namespace HuggingFace
             global::System.DateTime? finishedAt,
             global::HuggingFace.CreateScheduledJobsScheduleResponseJobSpecDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateScheduledJobsScheduleResponseJobSpecVolume>? volumes,
+            global::HuggingFace.CreateScheduledJobsScheduleResponseJobSpecExpose? expose,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::HuggingFace.CreateScheduledJobsScheduleResponseJobSpecHfToken? hfToken)
@@ -167,6 +177,7 @@ namespace HuggingFace
             this.FinishedAt = finishedAt;
             this.Durations = durations;
             this.Volumes = volumes;
+            this.Expose = expose;
             this.Secrets = secrets;
             this.Labels = labels;
             this.HfToken = hfToken;
