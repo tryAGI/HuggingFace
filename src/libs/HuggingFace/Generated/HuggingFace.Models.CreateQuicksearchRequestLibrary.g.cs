@@ -107,6 +107,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Ccpfn,
+        /// <summary>
+        /// 
+        /// </summary>
         Champ,
         /// <summary>
         /// 
@@ -978,6 +982,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Cancertathomev2 => "cancertathomev2",
                 CreateQuicksearchRequestLibrary.CartesiaMlx => "cartesia_mlx",
                 CreateQuicksearchRequestLibrary.CartesiaPytorch => "cartesia_pytorch",
+                CreateQuicksearchRequestLibrary.Ccpfn => "ccpfn",
                 CreateQuicksearchRequestLibrary.Champ => "champ",
                 CreateQuicksearchRequestLibrary.Chaossim => "chaossim",
                 CreateQuicksearchRequestLibrary.ChatTts => "chat_tts",
@@ -1221,6 +1226,7 @@ namespace HuggingFace
                 "cancertathomev2" => CreateQuicksearchRequestLibrary.Cancertathomev2,
                 "cartesia_mlx" => CreateQuicksearchRequestLibrary.CartesiaMlx,
                 "cartesia_pytorch" => CreateQuicksearchRequestLibrary.CartesiaPytorch,
+                "ccpfn" => CreateQuicksearchRequestLibrary.Ccpfn,
                 "champ" => CreateQuicksearchRequestLibrary.Champ,
                 "chaossim" => CreateQuicksearchRequestLibrary.Chaossim,
                 "chat_tts" => CreateQuicksearchRequestLibrary.ChatTts,
