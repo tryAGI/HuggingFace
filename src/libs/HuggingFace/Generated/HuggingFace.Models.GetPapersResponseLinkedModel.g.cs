@@ -111,6 +111,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<string>? WidgetOutputUrls { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isPreRelease")]
+        public string? IsPreRelease { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -133,6 +139,7 @@ namespace HuggingFace
         /// <param name="numParameters"></param>
         /// <param name="authorData"></param>
         /// <param name="widgetOutputUrls"></param>
+        /// <param name="isPreRelease"></param>
         /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -152,6 +159,7 @@ namespace HuggingFace
             double? numParameters,
             global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseLinkedModelAuthorDataVariant1, global::HuggingFace.GetPapersResponseLinkedModelAuthorDataVariant2>? authorData,
             global::System.Collections.Generic.IList<string>? widgetOutputUrls,
+            string? isPreRelease,
             string repoType = "model")
         {
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
@@ -169,6 +177,7 @@ namespace HuggingFace
             this.NumParameters = numParameters;
             this.AuthorData = authorData;
             this.WidgetOutputUrls = widgetOutputUrls;
+            this.IsPreRelease = isPreRelease;
         }
 
         /// <summary>
