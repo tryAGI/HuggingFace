@@ -113,6 +113,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isPreRelease")]
+        public string? IsPreRelease { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <default>"model"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "model";
@@ -140,6 +146,7 @@ namespace HuggingFace
         /// <param name="numParameters"></param>
         /// <param name="authorData"></param>
         /// <param name="widgetOutputUrls"></param>
+        /// <param name="isPreRelease"></param>
         /// <param name="repoType"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -160,6 +167,7 @@ namespace HuggingFace
             double? numParameters,
             global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>? authorData,
             global::System.Collections.Generic.IList<string>? widgetOutputUrls,
+            string? isPreRelease,
             string repoType = "model",
             string type = "model")
         {
@@ -178,6 +186,7 @@ namespace HuggingFace
             this.NumParameters = numParameters;
             this.AuthorData = authorData;
             this.WidgetOutputUrls = widgetOutputUrls;
+            this.IsPreRelease = isPreRelease;
             this.Type = type;
         }
 

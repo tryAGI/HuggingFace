@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace HuggingFace
@@ -64,20 +62,6 @@ namespace HuggingFace
         [global::System.Text.Json.Serialization.JsonPropertyName("roleInOrg")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOauthUserinfoResponseOrgRoleInOrg?, string>))]
         public global::HuggingFace.AnyOf<global::HuggingFace.CreateOauthUserinfoResponseOrgRoleInOrg?, string>? RoleInOrg { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("pendingSSO")]
-        [global::System.Obsolete("This property marked as deprecated.")]
-        public bool? PendingSSO { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("missingMFA")]
-        [global::System.Obsolete("This property marked as deprecated.")]
-        public bool? MissingMFA { get; set; }
 
         /// <summary>
         /// Current security restrictions for accessing data in this organization with current authentication method
