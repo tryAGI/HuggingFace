@@ -19,7 +19,8 @@ namespace HuggingFace
         /// Author entry on the paper being claimed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("claimAuthorId")]
-        public string? ClaimAuthorId { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string ClaimAuthorId { get; set; }
 
         /// <summary>
         /// HF user who should receive the claim.
@@ -50,11 +51,11 @@ namespace HuggingFace
 #endif
         public CreateSettingsPapersClaimRequest(
             string paperId,
-            string? claimAuthorId,
+            string claimAuthorId,
             string? targetUserId)
         {
             this.PaperId = paperId ?? throw new global::System.ArgumentNullException(nameof(paperId));
-            this.ClaimAuthorId = claimAuthorId;
+            this.ClaimAuthorId = claimAuthorId ?? throw new global::System.ArgumentNullException(nameof(claimAuthorId));
             this.TargetUserId = targetUserId;
         }
 

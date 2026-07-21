@@ -448,7 +448,7 @@ namespace HuggingFace
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsPapersClaimResponse> CreateSettingsPapersClaimAsync(
             string paperId,
-            string? claimAuthorId = default,
+            string claimAuthorId,
             string? targetUserId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

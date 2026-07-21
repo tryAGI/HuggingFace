@@ -153,6 +153,12 @@ namespace HuggingFace
         public bool? LockedOut { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repo_release")]
+        public bool? RepoRelease { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -185,6 +191,7 @@ namespace HuggingFace
         /// <param name="productUpdatesAfter"></param>
         /// <param name="apiInferenceSunset"></param>
         /// <param name="lockedOut"></param>
+        /// <param name="repoRelease"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -212,7 +219,8 @@ namespace HuggingFace
             bool? webPostsParticipating,
             global::System.DateTime? productUpdatesAfter,
             bool? apiInferenceSunset,
-            bool? lockedOut)
+            bool? lockedOut,
+            bool? repoRelease)
         {
             this.Announcements = announcements;
             this.ArxivPaperActivity = arxivPaperActivity;
@@ -238,6 +246,7 @@ namespace HuggingFace
             this.ProductUpdatesAfter = productUpdatesAfter;
             this.ApiInferenceSunset = apiInferenceSunset;
             this.LockedOut = lockedOut;
+            this.RepoRelease = repoRelease;
         }
 
         /// <summary>
