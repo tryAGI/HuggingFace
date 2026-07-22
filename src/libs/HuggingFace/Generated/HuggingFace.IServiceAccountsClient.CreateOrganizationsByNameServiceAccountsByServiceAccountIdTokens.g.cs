@@ -49,7 +49,15 @@ namespace HuggingFace
         /// Default Value: API Token
         /// </param>
         /// <param name="permissions">
-        /// Fine-grained permissions for this token
+        /// Org-wide permissions for this token<br/>
+        /// Default Value: []
+        /// </param>
+        /// <param name="repoIds">
+        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.
+        /// </param>
+        /// <param name="repoPermissions">
+        /// Permissions granted on the selected `repoIds`.<br/>
+        /// Default Value: []
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -57,8 +65,10 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsServiceAccountsTokensResponse> CreateOrganizationsByNameServiceAccountsByServiceAccountIdTokensAsync(
             string name,
             string serviceAccountId,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission> permissions,
             string? displayName = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission>? permissions = default,
+            global::System.Collections.Generic.IList<string>? repoIds = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

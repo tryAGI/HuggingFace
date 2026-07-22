@@ -36,6 +36,20 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<string>? Permissions { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoIds")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> RepoIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoPermissions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> RepoPermissions { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -47,6 +61,8 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="displayName"></param>
         /// <param name="createdAt"></param>
+        /// <param name="repoIds"></param>
+        /// <param name="repoPermissions"></param>
         /// <param name="permissions"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,12 +71,16 @@ namespace HuggingFace
             string id,
             string displayName,
             string createdAt,
+            global::System.Collections.Generic.IList<string> repoIds,
+            global::System.Collections.Generic.IList<string> repoPermissions,
             global::System.Collections.Generic.IList<string>? permissions)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
             this.Permissions = permissions;
+            this.RepoIds = repoIds ?? throw new global::System.ArgumentNullException(nameof(repoIds));
+            this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
         }
 
         /// <summary>

@@ -15,10 +15,22 @@ namespace HuggingFace
         public string? DisplayName { get; set; }
 
         /// <summary>
-        /// Fine-grained permissions for this token
+        /// Org-wide permissions for this token
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permissions")]
         public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>? Permissions { get; set; }
+
+        /// <summary>
+        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoIds")]
+        public global::System.Collections.Generic.IList<string>? RepoIds { get; set; }
+
+        /// <summary>
+        /// Permissions granted on the selected `repoIds`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoPermissions")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>? RepoPermissions { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -33,17 +45,27 @@ namespace HuggingFace
         /// New display name for the token
         /// </param>
         /// <param name="permissions">
-        /// Fine-grained permissions for this token
+        /// Org-wide permissions for this token
+        /// </param>
+        /// <param name="repoIds">
+        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.
+        /// </param>
+        /// <param name="repoPermissions">
+        /// Permissions granted on the selected `repoIds`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchOrganizationsServiceAccountsTokensRequest(
             string? displayName,
-            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>? permissions)
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>? permissions,
+            global::System.Collections.Generic.IList<string>? repoIds,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions)
         {
             this.DisplayName = displayName;
             this.Permissions = permissions;
+            this.RepoIds = repoIds;
+            this.RepoPermissions = repoPermissions;
         }
 
         /// <summary>
