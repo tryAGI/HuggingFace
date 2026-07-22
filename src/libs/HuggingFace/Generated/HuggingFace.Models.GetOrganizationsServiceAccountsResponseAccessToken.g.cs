@@ -53,7 +53,22 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permissions")]
-        public global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission>? Permissions { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission> Permissions { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoIds")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> RepoIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("repoPermissions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission> RepoPermissions { get; set; }
 
         /// <summary>
         /// 
@@ -74,9 +89,11 @@ namespace HuggingFace
         /// <param name="displayName"></param>
         /// <param name="createdAt"></param>
         /// <param name="role"></param>
+        /// <param name="permissions"></param>
+        /// <param name="repoIds"></param>
+        /// <param name="repoPermissions"></param>
         /// <param name="lastUsedAt"></param>
         /// <param name="expiration"></param>
-        /// <param name="permissions"></param>
         /// <param name="last4"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -86,9 +103,11 @@ namespace HuggingFace
             string displayName,
             global::System.DateTime createdAt,
             global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRole role,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission> permissions,
+            global::System.Collections.Generic.IList<string> repoIds,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission> repoPermissions,
             global::System.DateTime? lastUsedAt,
             global::System.DateTime? expiration,
-            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission>? permissions,
             string? last4)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -97,7 +116,9 @@ namespace HuggingFace
             this.LastUsedAt = lastUsedAt;
             this.Expiration = expiration;
             this.Role = role;
-            this.Permissions = permissions;
+            this.Permissions = permissions ?? throw new global::System.ArgumentNullException(nameof(permissions));
+            this.RepoIds = repoIds ?? throw new global::System.ArgumentNullException(nameof(repoIds));
+            this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
             this.Last4 = last4;
         }
 

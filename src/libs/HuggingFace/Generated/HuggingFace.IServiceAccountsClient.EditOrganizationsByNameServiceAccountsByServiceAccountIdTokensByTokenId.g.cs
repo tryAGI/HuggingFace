@@ -53,7 +53,13 @@ namespace HuggingFace
         /// New display name for the token
         /// </param>
         /// <param name="permissions">
-        /// Fine-grained permissions for this token
+        /// Org-wide permissions for this token
+        /// </param>
+        /// <param name="repoIds">
+        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.
+        /// </param>
+        /// <param name="repoPermissions">
+        /// Permissions granted on the selected `repoIds`.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -64,6 +70,8 @@ namespace HuggingFace
             string tokenId,
             string? displayName = default,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>? permissions = default,
+            global::System.Collections.Generic.IList<string>? repoIds = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
