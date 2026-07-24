@@ -23,6 +23,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Deploy,
+        /// <summary>
+        /// 
+        /// </summary>
         Doi,
         /// <summary>
         /// 
@@ -65,6 +69,7 @@ namespace HuggingFace
                 GetModelsTagsByTypeResponseItemType.Arxiv => "arxiv",
                 GetModelsTagsByTypeResponseItemType.Bucket => "bucket",
                 GetModelsTagsByTypeResponseItemType.Dataset => "dataset",
+                GetModelsTagsByTypeResponseItemType.Deploy => "deploy",
                 GetModelsTagsByTypeResponseItemType.Doi => "doi",
                 GetModelsTagsByTypeResponseItemType.Language => "language",
                 GetModelsTagsByTypeResponseItemType.Library => "library",
@@ -85,6 +90,7 @@ namespace HuggingFace
                 "arxiv" => GetModelsTagsByTypeResponseItemType.Arxiv,
                 "bucket" => GetModelsTagsByTypeResponseItemType.Bucket,
                 "dataset" => GetModelsTagsByTypeResponseItemType.Dataset,
+                "deploy" => GetModelsTagsByTypeResponseItemType.Deploy,
                 "doi" => GetModelsTagsByTypeResponseItemType.Doi,
                 "language" => GetModelsTagsByTypeResponseItemType.Language,
                 "library" => GetModelsTagsByTypeResponseItemType.Library,
