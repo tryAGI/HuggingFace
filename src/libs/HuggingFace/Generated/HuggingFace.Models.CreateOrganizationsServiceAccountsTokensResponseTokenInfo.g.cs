@@ -50,6 +50,13 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<string> RepoPermissions { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpointPatterns")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> EndpointPatterns { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -63,6 +70,7 @@ namespace HuggingFace
         /// <param name="createdAt"></param>
         /// <param name="repoIds"></param>
         /// <param name="repoPermissions"></param>
+        /// <param name="endpointPatterns"></param>
         /// <param name="permissions"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -73,6 +81,7 @@ namespace HuggingFace
             string createdAt,
             global::System.Collections.Generic.IList<string> repoIds,
             global::System.Collections.Generic.IList<string> repoPermissions,
+            global::System.Collections.Generic.IList<string> endpointPatterns,
             global::System.Collections.Generic.IList<string>? permissions)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -81,6 +90,7 @@ namespace HuggingFace
             this.Permissions = permissions;
             this.RepoIds = repoIds ?? throw new global::System.ArgumentNullException(nameof(repoIds));
             this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
+            this.EndpointPatterns = endpointPatterns ?? throw new global::System.ArgumentNullException(nameof(endpointPatterns));
         }
 
         /// <summary>

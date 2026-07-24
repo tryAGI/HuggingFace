@@ -73,6 +73,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpointPatterns")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> EndpointPatterns { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last4")]
         public string? Last4 { get; set; }
 
@@ -92,6 +99,7 @@ namespace HuggingFace
         /// <param name="permissions"></param>
         /// <param name="repoIds"></param>
         /// <param name="repoPermissions"></param>
+        /// <param name="endpointPatterns"></param>
         /// <param name="lastUsedAt"></param>
         /// <param name="expiration"></param>
         /// <param name="last4"></param>
@@ -106,6 +114,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission> permissions,
             global::System.Collections.Generic.IList<string> repoIds,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission> repoPermissions,
+            global::System.Collections.Generic.IList<string> endpointPatterns,
             global::System.DateTime? lastUsedAt,
             global::System.DateTime? expiration,
             string? last4)
@@ -119,6 +128,7 @@ namespace HuggingFace
             this.Permissions = permissions ?? throw new global::System.ArgumentNullException(nameof(permissions));
             this.RepoIds = repoIds ?? throw new global::System.ArgumentNullException(nameof(repoIds));
             this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
+            this.EndpointPatterns = endpointPatterns ?? throw new global::System.ArgumentNullException(nameof(endpointPatterns));
             this.Last4 = last4;
         }
 

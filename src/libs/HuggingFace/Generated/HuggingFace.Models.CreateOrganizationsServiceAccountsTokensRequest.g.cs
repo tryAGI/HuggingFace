@@ -36,6 +36,13 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? RepoPermissions { get; set; }
 
         /// <summary>
+        /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.<br/>
+        /// Default Value: []
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpointPatterns")]
+        public global::System.Collections.Generic.IList<string>? EndpointPatterns { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -59,6 +66,10 @@ namespace HuggingFace
         /// Permissions granted on the selected `repoIds`.<br/>
         /// Default Value: []
         /// </param>
+        /// <param name="endpointPatterns">
+        /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.<br/>
+        /// Default Value: []
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -66,12 +77,14 @@ namespace HuggingFace
             string? displayName,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission>? permissions,
             global::System.Collections.Generic.IList<string>? repoIds,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions)
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions,
+            global::System.Collections.Generic.IList<string>? endpointPatterns)
         {
             this.DisplayName = displayName;
             this.Permissions = permissions;
             this.RepoIds = repoIds;
             this.RepoPermissions = repoPermissions;
+            this.EndpointPatterns = endpointPatterns;
         }
 
         /// <summary>
