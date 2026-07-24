@@ -571,6 +571,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Ninfer,
+        /// <summary>
+        /// 
+        /// </summary>
         NvMedtech,
         /// <summary>
         /// 
@@ -1098,6 +1102,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Mtvcraft => "mtvcraft",
                 CreateQuicksearchLibrary2.Multimolecule => "multimolecule",
                 CreateQuicksearchLibrary2.Nemo => "nemo",
+                CreateQuicksearchLibrary2.Ninfer => "ninfer",
                 CreateQuicksearchLibrary2.NvMedtech => "nv-medtech",
                 CreateQuicksearchLibrary2.OpenOasis => "open-oasis",
                 CreateQuicksearchLibrary2.OpenSora => "open-sora",
@@ -1342,6 +1347,7 @@ namespace HuggingFace
                 "mtvcraft" => CreateQuicksearchLibrary2.Mtvcraft,
                 "multimolecule" => CreateQuicksearchLibrary2.Multimolecule,
                 "nemo" => CreateQuicksearchLibrary2.Nemo,
+                "ninfer" => CreateQuicksearchLibrary2.Ninfer,
                 "nv-medtech" => CreateQuicksearchLibrary2.NvMedtech,
                 "open-oasis" => CreateQuicksearchLibrary2.OpenOasis,
                 "open-sora" => CreateQuicksearchLibrary2.OpenSora,
