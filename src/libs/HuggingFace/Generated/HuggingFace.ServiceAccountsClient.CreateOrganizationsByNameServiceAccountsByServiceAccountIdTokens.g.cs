@@ -472,6 +472,10 @@ namespace HuggingFace
         /// Permissions granted on the selected `repoIds`.<br/>
         /// Default Value: []
         /// </param>
+        /// <param name="endpointPatterns">
+        /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.<br/>
+        /// Default Value: []
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -482,6 +486,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission>? permissions = default,
             global::System.Collections.Generic.IList<string>? repoIds = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions = default,
+            global::System.Collections.Generic.IList<string>? endpointPatterns = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -491,6 +496,7 @@ namespace HuggingFace
                 Permissions = permissions,
                 RepoIds = repoIds,
                 RepoPermissions = repoPermissions,
+                EndpointPatterns = endpointPatterns,
             };
 
             return await CreateOrganizationsByNameServiceAccountsByServiceAccountIdTokensAsync(
