@@ -473,6 +473,7 @@ namespace HuggingFace
         /// <param name="ssh">
         /// When `enabled`, the job's container is reachable over SSH at `ssh &lt;job_id&gt;@ssh.hf.jobs`. Only the job's owner is allowed in, authenticated by an SSH public key registered on the Hub.
         /// </param>
+        /// <param name="resourceGroupId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -492,6 +493,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVolume>? volumes = default,
             global::HuggingFace.CreateJobsRequestExpose? expose = default,
             global::HuggingFace.CreateJobsRequestSsh? ssh = default,
+            string? resourceGroupId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -511,6 +513,7 @@ namespace HuggingFace
                 Volumes = volumes,
                 Expose = expose,
                 Ssh = ssh,
+                ResourceGroupId = resourceGroupId,
             };
 
             return await CreateJobsByNamespaceAsync(

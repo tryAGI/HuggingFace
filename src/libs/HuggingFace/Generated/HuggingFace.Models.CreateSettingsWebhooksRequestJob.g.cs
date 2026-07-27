@@ -97,6 +97,12 @@ namespace HuggingFace
         public global::HuggingFace.CreateSettingsWebhooksRequestJobSsh? Ssh { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -134,6 +140,7 @@ namespace HuggingFace
         /// <param name="ssh">
         /// When `enabled`, the job's container is reachable over SSH at `ssh &lt;job_id&gt;@ssh.hf.jobs`. Only the job's owner is allowed in, authenticated by an SSH public key registered on the Hub.
         /// </param>
+        /// <param name="resourceGroupId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -151,7 +158,8 @@ namespace HuggingFace
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestJobVolume>? volumes,
             global::HuggingFace.CreateSettingsWebhooksRequestJobExpose? expose,
-            global::HuggingFace.CreateSettingsWebhooksRequestJobSsh? ssh)
+            global::HuggingFace.CreateSettingsWebhooksRequestJobSsh? ssh,
+            string? resourceGroupId)
         {
             this.SpaceId = spaceId;
             this.DockerImage = dockerImage;
@@ -167,6 +175,7 @@ namespace HuggingFace
             this.Volumes = volumes;
             this.Expose = expose;
             this.Ssh = ssh;
+            this.ResourceGroupId = resourceGroupId;
         }
 
         /// <summary>

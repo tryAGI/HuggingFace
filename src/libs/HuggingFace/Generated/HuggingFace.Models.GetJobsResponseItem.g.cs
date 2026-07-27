@@ -84,6 +84,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retry")]
         public double? Retry { get; set; }
 
@@ -130,6 +136,12 @@ namespace HuggingFace
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetJobsResponseItemOwner Owner { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
+        public global::HuggingFace.GetJobsResponseItemResourceGroup? ResourceGroup { get; set; }
 
         /// <summary>
         /// 
@@ -185,6 +197,7 @@ namespace HuggingFace
         /// <param name="command"></param>
         /// <param name="arguments"></param>
         /// <param name="arch"></param>
+        /// <param name="resourceGroupId"></param>
         /// <param name="retry"></param>
         /// <param name="startedAt"></param>
         /// <param name="finishedAt"></param>
@@ -193,6 +206,7 @@ namespace HuggingFace
         /// <param name="expose">
         /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
         /// </param>
+        /// <param name="resourceGroup"></param>
         /// <param name="initiator"></param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
@@ -215,12 +229,14 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? command,
             global::System.Collections.Generic.IList<string>? arguments,
             global::HuggingFace.GetJobsResponseItemArch? arch,
+            string? resourceGroupId,
             double? retry,
             global::System.DateTime? startedAt,
             global::System.DateTime? finishedAt,
             global::HuggingFace.GetJobsResponseItemDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseItemVolume>? volumes,
             global::HuggingFace.GetJobsResponseItemExpose? expose,
+            global::HuggingFace.GetJobsResponseItemResourceGroup? resourceGroup,
             global::HuggingFace.AnyOf<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
@@ -238,6 +254,7 @@ namespace HuggingFace
             this.Arch = arch;
             this.Flavor = flavor;
             this.CreatedBy = createdBy ?? throw new global::System.ArgumentNullException(nameof(createdBy));
+            this.ResourceGroupId = resourceGroupId;
             this.Retry = retry;
             this.StartedAt = startedAt;
             this.FinishedAt = finishedAt;
@@ -246,6 +263,7 @@ namespace HuggingFace
             this.Expose = expose;
             this.Type = type;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
+            this.ResourceGroup = resourceGroup;
             this.Initiator = initiator;
             this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.Secrets = secrets;

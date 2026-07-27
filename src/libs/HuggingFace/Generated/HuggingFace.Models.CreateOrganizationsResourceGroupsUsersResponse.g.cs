@@ -47,7 +47,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant2>> Resources { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant2, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant3, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant4, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant5>> Resources { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -71,7 +71,7 @@ namespace HuggingFace
             string id,
             string name,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUser> users,
-            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant2>> resources,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant2, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant3, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant4, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant5>> resources,
             string? description,
             global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseAutoJoinVariant2>? autoJoin)
         {
