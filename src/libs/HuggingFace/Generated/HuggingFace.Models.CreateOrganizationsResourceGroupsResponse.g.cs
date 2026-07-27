@@ -47,7 +47,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant2>> Resources { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant5>> Resources { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -71,7 +71,7 @@ namespace HuggingFace
             string id,
             string name,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsResponseUser> users,
-            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant2>> resources,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant5>> resources,
             string? description,
             global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsResponseAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseAutoJoinVariant2>? autoJoin)
         {

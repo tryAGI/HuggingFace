@@ -110,6 +110,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retry")]
         public double? Retry { get; set; }
 
@@ -167,6 +173,7 @@ namespace HuggingFace
         /// <param name="arguments"></param>
         /// <param name="arch"></param>
         /// <param name="tags"></param>
+        /// <param name="resourceGroupId"></param>
         /// <param name="retry"></param>
         /// <param name="startedAt"></param>
         /// <param name="finishedAt"></param>
@@ -194,6 +201,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? arguments,
             global::HuggingFace.JobArch? arch,
             global::System.Collections.Generic.IList<string>? tags,
+            string? resourceGroupId,
             double? retry,
             global::System.DateTime? startedAt,
             global::System.DateTime? finishedAt,
@@ -216,6 +224,7 @@ namespace HuggingFace
             this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.CreatedBy = createdBy ?? throw new global::System.ArgumentNullException(nameof(createdBy));
             this.Tags = tags;
+            this.ResourceGroupId = resourceGroupId;
             this.Retry = retry;
             this.StartedAt = startedAt;
             this.FinishedAt = finishedAt;

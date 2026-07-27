@@ -63,6 +63,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retry")]
         public double? Retry { get; set; }
 
@@ -99,6 +105,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
+        public global::HuggingFace.GetScheduledJobsResponseItemJobSpecResourceGroup? ResourceGroup { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
         public global::System.Collections.Generic.IList<string>? Secrets { get; set; }
 
@@ -131,6 +143,7 @@ namespace HuggingFace
         /// <param name="command"></param>
         /// <param name="arguments"></param>
         /// <param name="arch"></param>
+        /// <param name="resourceGroupId"></param>
         /// <param name="retry"></param>
         /// <param name="startedAt"></param>
         /// <param name="finishedAt"></param>
@@ -139,6 +152,7 @@ namespace HuggingFace
         /// <param name="expose">
         /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
         /// </param>
+        /// <param name="resourceGroup"></param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
         /// <param name="hfToken"></param>
@@ -154,12 +168,14 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? command,
             global::System.Collections.Generic.IList<string>? arguments,
             global::HuggingFace.GetScheduledJobsResponseItemJobSpecArch? arch,
+            string? resourceGroupId,
             double? retry,
             global::System.DateTime? startedAt,
             global::System.DateTime? finishedAt,
             global::HuggingFace.GetScheduledJobsResponseItemJobSpecDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.GetScheduledJobsResponseItemJobSpecVolume>? volumes,
             global::HuggingFace.GetScheduledJobsResponseItemJobSpecExpose? expose,
+            global::HuggingFace.GetScheduledJobsResponseItemJobSpecResourceGroup? resourceGroup,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::HuggingFace.GetScheduledJobsResponseItemJobSpecHfToken? hfToken)
@@ -172,12 +188,14 @@ namespace HuggingFace
             this.Arguments = arguments;
             this.Arch = arch;
             this.Flavor = flavor;
+            this.ResourceGroupId = resourceGroupId;
             this.Retry = retry;
             this.StartedAt = startedAt;
             this.FinishedAt = finishedAt;
             this.Durations = durations;
             this.Volumes = volumes;
             this.Expose = expose;
+            this.ResourceGroup = resourceGroup;
             this.Secrets = secrets;
             this.Labels = labels;
             this.HfToken = hfToken;
