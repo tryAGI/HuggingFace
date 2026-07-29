@@ -25,6 +25,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("addedBy")]
         public string? AddedBy { get; set; }
 
@@ -38,6 +44,7 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateOrganizationsResourceGroupsSettingsResponseResourceVariant5" /> class.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="name"></param>
         /// <param name="addedBy"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -45,11 +52,13 @@ namespace HuggingFace
 #endif
         public CreateOrganizationsResourceGroupsSettingsResponseResourceVariant5(
             string id,
+            string? name,
             string? addedBy,
             string type = "scheduled-job")
         {
             this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Name = name;
             this.AddedBy = addedBy;
         }
 

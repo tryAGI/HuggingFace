@@ -411,6 +411,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Kerasformers,
+        /// <summary>
+        /// 
+        /// </summary>
         Kernels,
         /// <summary>
         /// 
@@ -463,6 +467,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Ltx,
+        /// <summary>
+        /// 
+        /// </summary>
         Lvface,
         /// <summary>
         /// 
@@ -508,6 +516,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         MeshAnything,
+        /// <summary>
+        /// 
+        /// </summary>
+        Mflux,
         /// <summary>
         /// 
         /// </summary>
@@ -1062,6 +1074,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.K2 => "k2",
                 CreateQuicksearchLibrary2.Keras => "keras",
                 CreateQuicksearchLibrary2.KerasHub => "keras-hub",
+                CreateQuicksearchLibrary2.Kerasformers => "kerasformers",
                 CreateQuicksearchLibrary2.Kernels => "kernels",
                 CreateQuicksearchLibrary2.KimiAudio => "kimi-audio",
                 CreateQuicksearchLibrary2.Kittentts => "kittentts",
@@ -1075,6 +1088,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Liveportrait => "liveportrait",
                 CreateQuicksearchLibrary2.LlamaCppPython => "llama-cpp-python",
                 CreateQuicksearchLibrary2.LongcatVideoAvatar15 => "longcat-video-avatar-1.5",
+                CreateQuicksearchLibrary2.Ltx => "ltx",
                 CreateQuicksearchLibrary2.Lvface => "lvface",
                 CreateQuicksearchLibrary2.Lyra20 => "lyra-2.0",
                 CreateQuicksearchLibrary2.MagentaRealtime => "magenta-realtime",
@@ -1087,6 +1101,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Medvae => "medvae",
                 CreateQuicksearchLibrary2.Merlin => "merlin",
                 CreateQuicksearchLibrary2.MeshAnything => "mesh-anything",
+                CreateQuicksearchLibrary2.Mflux => "mflux",
                 CreateQuicksearchLibrary2.Mindspore => "mindspore",
                 CreateQuicksearchLibrary2.MiniOmni2 => "mini-omni2",
                 CreateQuicksearchLibrary2.Mitie => "mitie",
@@ -1307,6 +1322,7 @@ namespace HuggingFace
                 "k2" => CreateQuicksearchLibrary2.K2,
                 "keras" => CreateQuicksearchLibrary2.Keras,
                 "keras-hub" => CreateQuicksearchLibrary2.KerasHub,
+                "kerasformers" => CreateQuicksearchLibrary2.Kerasformers,
                 "kernels" => CreateQuicksearchLibrary2.Kernels,
                 "kimi-audio" => CreateQuicksearchLibrary2.KimiAudio,
                 "kittentts" => CreateQuicksearchLibrary2.Kittentts,
@@ -1320,6 +1336,7 @@ namespace HuggingFace
                 "liveportrait" => CreateQuicksearchLibrary2.Liveportrait,
                 "llama-cpp-python" => CreateQuicksearchLibrary2.LlamaCppPython,
                 "longcat-video-avatar-1.5" => CreateQuicksearchLibrary2.LongcatVideoAvatar15,
+                "ltx" => CreateQuicksearchLibrary2.Ltx,
                 "lvface" => CreateQuicksearchLibrary2.Lvface,
                 "lyra-2.0" => CreateQuicksearchLibrary2.Lyra20,
                 "magenta-realtime" => CreateQuicksearchLibrary2.MagentaRealtime,
@@ -1332,6 +1349,7 @@ namespace HuggingFace
                 "medvae" => CreateQuicksearchLibrary2.Medvae,
                 "merlin" => CreateQuicksearchLibrary2.Merlin,
                 "mesh-anything" => CreateQuicksearchLibrary2.MeshAnything,
+                "mflux" => CreateQuicksearchLibrary2.Mflux,
                 "mindspore" => CreateQuicksearchLibrary2.Mindspore,
                 "mini-omni2" => CreateQuicksearchLibrary2.MiniOmni2,
                 "mitie" => CreateQuicksearchLibrary2.Mitie,

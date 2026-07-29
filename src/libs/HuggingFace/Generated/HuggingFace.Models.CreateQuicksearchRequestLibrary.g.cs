@@ -411,6 +411,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Kerasformers,
+        /// <summary>
+        /// 
+        /// </summary>
         Kernels,
         /// <summary>
         /// 
@@ -463,6 +467,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Ltx,
+        /// <summary>
+        /// 
+        /// </summary>
         Lvface,
         /// <summary>
         /// 
@@ -508,6 +516,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         MeshAnything,
+        /// <summary>
+        /// 
+        /// </summary>
+        Mflux,
         /// <summary>
         /// 
         /// </summary>
@@ -1062,6 +1074,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.K2 => "k2",
                 CreateQuicksearchRequestLibrary.Keras => "keras",
                 CreateQuicksearchRequestLibrary.KerasHub => "keras-hub",
+                CreateQuicksearchRequestLibrary.Kerasformers => "kerasformers",
                 CreateQuicksearchRequestLibrary.Kernels => "kernels",
                 CreateQuicksearchRequestLibrary.KimiAudio => "kimi-audio",
                 CreateQuicksearchRequestLibrary.Kittentts => "kittentts",
@@ -1075,6 +1088,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Liveportrait => "liveportrait",
                 CreateQuicksearchRequestLibrary.LlamaCppPython => "llama-cpp-python",
                 CreateQuicksearchRequestLibrary.LongcatVideoAvatar15 => "longcat-video-avatar-1.5",
+                CreateQuicksearchRequestLibrary.Ltx => "ltx",
                 CreateQuicksearchRequestLibrary.Lvface => "lvface",
                 CreateQuicksearchRequestLibrary.Lyra20 => "lyra-2.0",
                 CreateQuicksearchRequestLibrary.MagentaRealtime => "magenta-realtime",
@@ -1087,6 +1101,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Medvae => "medvae",
                 CreateQuicksearchRequestLibrary.Merlin => "merlin",
                 CreateQuicksearchRequestLibrary.MeshAnything => "mesh-anything",
+                CreateQuicksearchRequestLibrary.Mflux => "mflux",
                 CreateQuicksearchRequestLibrary.Mindspore => "mindspore",
                 CreateQuicksearchRequestLibrary.MiniOmni2 => "mini-omni2",
                 CreateQuicksearchRequestLibrary.Mitie => "mitie",
@@ -1307,6 +1322,7 @@ namespace HuggingFace
                 "k2" => CreateQuicksearchRequestLibrary.K2,
                 "keras" => CreateQuicksearchRequestLibrary.Keras,
                 "keras-hub" => CreateQuicksearchRequestLibrary.KerasHub,
+                "kerasformers" => CreateQuicksearchRequestLibrary.Kerasformers,
                 "kernels" => CreateQuicksearchRequestLibrary.Kernels,
                 "kimi-audio" => CreateQuicksearchRequestLibrary.KimiAudio,
                 "kittentts" => CreateQuicksearchRequestLibrary.Kittentts,
@@ -1320,6 +1336,7 @@ namespace HuggingFace
                 "liveportrait" => CreateQuicksearchRequestLibrary.Liveportrait,
                 "llama-cpp-python" => CreateQuicksearchRequestLibrary.LlamaCppPython,
                 "longcat-video-avatar-1.5" => CreateQuicksearchRequestLibrary.LongcatVideoAvatar15,
+                "ltx" => CreateQuicksearchRequestLibrary.Ltx,
                 "lvface" => CreateQuicksearchRequestLibrary.Lvface,
                 "lyra-2.0" => CreateQuicksearchRequestLibrary.Lyra20,
                 "magenta-realtime" => CreateQuicksearchRequestLibrary.MagentaRealtime,
@@ -1332,6 +1349,7 @@ namespace HuggingFace
                 "medvae" => CreateQuicksearchRequestLibrary.Medvae,
                 "merlin" => CreateQuicksearchRequestLibrary.Merlin,
                 "mesh-anything" => CreateQuicksearchRequestLibrary.MeshAnything,
+                "mflux" => CreateQuicksearchRequestLibrary.Mflux,
                 "mindspore" => CreateQuicksearchRequestLibrary.Mindspore,
                 "mini-omni2" => CreateQuicksearchRequestLibrary.MiniOmni2,
                 "mitie" => CreateQuicksearchRequestLibrary.Mitie,
