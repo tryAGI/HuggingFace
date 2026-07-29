@@ -49,10 +49,11 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItem> Watched { get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the webhook has a secret (the secret itself is never returned)
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("secret")]
-        public string? Secret { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("hasSecret")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool HasSecret { get; set; }
 
         /// <summary>
         /// 
@@ -79,11 +80,13 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="disabled"></param>
         /// <param name="watched"></param>
+        /// <param name="hasSecret">
+        /// Whether the webhook has a secret (the secret itself is never returned)
+        /// </param>
         /// <param name="domains"></param>
         /// <param name="url"></param>
         /// <param name="job"></param>
         /// <param name="jobSourceId"></param>
-        /// <param name="secret"></param>
         /// <param name="lastTriggerAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -92,11 +95,11 @@ namespace HuggingFace
             string id,
             global::HuggingFace.AnyOf<bool?, string> disabled,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItem> watched,
+            bool hasSecret,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain> domains,
             string? url,
             global::HuggingFace.CreateSettingsWebhooksResponseWebhookJob? job,
             string? jobSourceId,
-            string? secret,
             global::System.DateTime? lastTriggerAt)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -105,7 +108,7 @@ namespace HuggingFace
             this.JobSourceId = jobSourceId;
             this.Disabled = disabled;
             this.Watched = watched ?? throw new global::System.ArgumentNullException(nameof(watched));
-            this.Secret = secret;
+            this.HasSecret = hasSecret;
             this.Domains = domains ?? throw new global::System.ArgumentNullException(nameof(domains));
             this.LastTriggerAt = lastTriggerAt;
         }
