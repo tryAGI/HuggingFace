@@ -587,6 +587,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Nobg,
+        /// <summary>
+        /// 
+        /// </summary>
         NvMedtech,
         /// <summary>
         /// 
@@ -1118,6 +1122,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Multimolecule => "multimolecule",
                 GetQuicksearchLibrary2.Nemo => "nemo",
                 GetQuicksearchLibrary2.Ninfer => "ninfer",
+                GetQuicksearchLibrary2.Nobg => "nobg",
                 GetQuicksearchLibrary2.NvMedtech => "nv-medtech",
                 GetQuicksearchLibrary2.OpenOasis => "open-oasis",
                 GetQuicksearchLibrary2.OpenSora => "open-sora",
@@ -1366,6 +1371,7 @@ namespace HuggingFace
                 "multimolecule" => GetQuicksearchLibrary2.Multimolecule,
                 "nemo" => GetQuicksearchLibrary2.Nemo,
                 "ninfer" => GetQuicksearchLibrary2.Ninfer,
+                "nobg" => GetQuicksearchLibrary2.Nobg,
                 "nv-medtech" => GetQuicksearchLibrary2.NvMedtech,
                 "open-oasis" => GetQuicksearchLibrary2.OpenOasis,
                 "open-sora" => GetQuicksearchLibrary2.OpenSora,
