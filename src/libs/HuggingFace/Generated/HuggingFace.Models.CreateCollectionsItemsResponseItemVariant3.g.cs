@@ -116,6 +116,13 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("disabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Disabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("originRepo")]
         public global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepo? OriginRepo { get; set; }
 
@@ -213,6 +220,7 @@ namespace HuggingFace
         /// <param name="private"></param>
         /// <param name="title"></param>
         /// <param name="runtime"></param>
+        /// <param name="disabled"></param>
         /// <param name="tags"></param>
         /// <param name="featured"></param>
         /// <param name="visibility"></param>
@@ -244,6 +252,7 @@ namespace HuggingFace
             bool @private,
             string title,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Runtime runtime,
+            bool disabled,
             global::System.Collections.Generic.IList<string> tags,
             bool featured,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Visibility visibility,
@@ -274,6 +283,7 @@ namespace HuggingFace
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Sdk = sdk;
             this.Runtime = runtime ?? throw new global::System.ArgumentNullException(nameof(runtime));
+            this.Disabled = disabled;
             this.OriginRepo = originRepo;
             this.AiShortDescription = aiShortDescription;
             this.AiCategory = aiCategory;
