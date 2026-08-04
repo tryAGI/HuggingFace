@@ -160,6 +160,12 @@ namespace HuggingFace
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
+        /// The user's hardware items, unless the user set them as private
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hardwareItems")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.GetUsersOverviewResponseHardwareItem>? HardwareItems { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -191,6 +197,9 @@ namespace HuggingFace
         /// <param name="isFollowing"></param>
         /// <param name="reasonToFollow"></param>
         /// <param name="primaryOrgAvatarUrl"></param>
+        /// <param name="hardwareItems">
+        /// The user's hardware items, unless the user set them as private
+        /// </param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -219,6 +228,7 @@ namespace HuggingFace
             bool? isFollowing,
             string? reasonToFollow,
             string? primaryOrgAvatarUrl,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetUsersOverviewResponseHardwareItem>? hardwareItems,
             string type = "user")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -245,6 +255,7 @@ namespace HuggingFace
             this.PrimaryOrgAvatarUrl = primaryOrgAvatarUrl;
             this.Type = type;
             this.CreatedAt = createdAt;
+            this.HardwareItems = hardwareItems;
         }
 
         /// <summary>
