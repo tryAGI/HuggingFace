@@ -53,6 +53,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("job_status")]
+        public bool? JobStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("launch_autonlp")]
         public bool? LaunchAutonlp { get; set; }
 
@@ -174,6 +180,7 @@ namespace HuggingFace
         /// <param name="discussionsWatched"></param>
         /// <param name="gatedUserAccessRequest"></param>
         /// <param name="inferenceEndpointStatus"></param>
+        /// <param name="jobStatus"></param>
         /// <param name="launchAutonlp"></param>
         /// <param name="launchSpaces"></param>
         /// <param name="launchPrepaidCredits"></param>
@@ -203,6 +210,7 @@ namespace HuggingFace
             bool? discussionsWatched,
             bool? gatedUserAccessRequest,
             bool? inferenceEndpointStatus,
+            bool? jobStatus,
             bool? launchAutonlp,
             bool? launchSpaces,
             bool? launchPrepaidCredits,
@@ -229,6 +237,7 @@ namespace HuggingFace
             this.DiscussionsWatched = discussionsWatched;
             this.GatedUserAccessRequest = gatedUserAccessRequest;
             this.InferenceEndpointStatus = inferenceEndpointStatus;
+            this.JobStatus = jobStatus;
             this.LaunchAutonlp = launchAutonlp;
             this.LaunchSpaces = launchSpaces;
             this.LaunchPrepaidCredits = launchPrepaidCredits;
