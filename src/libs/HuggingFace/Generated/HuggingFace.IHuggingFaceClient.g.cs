@@ -190,6 +190,11 @@ namespace HuggingFace
         public SqlConsoleClient SqlConsole { get; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public TokensClient Tokens { get; }
+
+        /// <summary>
         /// Users. User accounts are the base authoring entity on the Hub.
         /// </summary>
         public UsersClient Users { get; }

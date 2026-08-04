@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class UsersClient
+    public partial class TokensClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetSettingsBillingUsageByInferenceSessionSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateCredentialsRevokeSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,87 +21,69 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetSettingsBillingUsageByInferenceSessionSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateCredentialsRevokeSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetSettingsBillingUsageByInferenceSessionSecurityRequirement0,
+            {                s_CreateCredentialsRevokeSecurityRequirement0,
             };
-        partial void PrepareGetSettingsBillingUsageByInferenceSessionArguments(
+        partial void PrepareCreateCredentialsRevokeArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.DateTime? startDate,
-            ref global::System.DateTime? endDate);
-        partial void PrepareGetSettingsBillingUsageByInferenceSessionRequest(
+            global::HuggingFace.CreateCredentialsRevokeRequest request);
+        partial void PrepareCreateCredentialsRevokeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.DateTime? startDate,
-            global::System.DateTime? endDate);
-        partial void ProcessGetSettingsBillingUsageByInferenceSessionResponse(
+            global::HuggingFace.CreateCredentialsRevokeRequest request);
+        partial void ProcessCreateCredentialsRevokeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetSettingsBillingUsageByInferenceSessionResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Get session inference usage<br/>
-        /// Get user inference-provider usage broken down per session id
+        /// Revoke leaked tokens<br/>
+        /// Publicly invalidate leaked Hugging Face access tokens. Possession of the raw token value is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated, the owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.
         /// </summary>
-        /// <param name="startDate">
-        /// Default Value: 2026-08-01T00:00:00.000Z
-        /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-08-04T08:26:05.750Z
-        /// </param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse> GetSettingsBillingUsageByInferenceSessionAsync(
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task CreateCredentialsRevokeAsync(
+
+            global::HuggingFace.CreateCredentialsRevokeRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetSettingsBillingUsageByInferenceSessionAsResponseAsync(
-                startDate: startDate,
-                endDate: endDate,
+            await CreateCredentialsRevokeAsResponseAsync(
+
+                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
-
-            return __response.Body;
         }
         /// <summary>
-        /// Get session inference usage<br/>
-        /// Get user inference-provider usage broken down per session id
+        /// Revoke leaked tokens<br/>
+        /// Publicly invalidate leaked Hugging Face access tokens. Possession of the raw token value is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated, the owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.
         /// </summary>
-        /// <param name="startDate">
-        /// Default Value: 2026-08-01T00:00:00.000Z
-        /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-08-04T08:26:05.750Z
-        /// </param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>> GetSettingsBillingUsageByInferenceSessionAsResponseAsync(
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse> CreateCredentialsRevokeAsResponseAsync(
+
+            global::HuggingFace.CreateCredentialsRevokeRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetSettingsBillingUsageByInferenceSessionArguments(
+            PrepareCreateCredentialsRevokeArguments(
                 httpClient: HttpClient,
-                startDate: ref startDate,
-                endDate: ref endDate);
+                request: request);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetSettingsBillingUsageByInferenceSessionSecurityRequirements,
-                operationName: "GetSettingsBillingUsageByInferenceSessionAsync");
+                securityRequirements: s_CreateCredentialsRevokeSecurityRequirements,
+                operationName: "CreateCredentialsRevokeAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -121,19 +103,15 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: "/api/settings/billing/usage-by-inference-session",
+                                path: "/api/credentials/revoke",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Get,
+                    method: global::System.Net.Http.HttpMethod.Post,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -156,6 +134,12 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
+                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: __httpRequestContentBody,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "application/json");
+                            __httpRequest.Content = __httpRequestContent;
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -164,11 +148,10 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetSettingsBillingUsageByInferenceSessionRequest(
+                PrepareCreateCredentialsRevokeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    startDate: startDate,
-                    endDate: endDate);
+                    request: request);
 
                 return __httpRequest;
             }
@@ -185,10 +168,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
-                                httpMethod: "GET",
+                                operationId: "createCredentialsRevoke",
+                                methodName: "CreateCredentialsRevokeAsync",
+                                pathTemplate: "\"/api/credentials/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -219,10 +202,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
-                                httpMethod: "GET",
+                                operationId: "createCredentialsRevoke",
+                                methodName: "CreateCredentialsRevokeAsync",
+                                pathTemplate: "\"/api/credentials/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -260,10 +243,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
-                                httpMethod: "GET",
+                                operationId: "createCredentialsRevoke",
+                                methodName: "CreateCredentialsRevokeAsync",
+                                pathTemplate: "\"/api/credentials/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -300,7 +283,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetSettingsBillingUsageByInferenceSessionResponse(
+                ProcessCreateCredentialsRevokeResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -308,10 +291,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
-                                httpMethod: "GET",
+                                operationId: "createCredentialsRevoke",
+                                methodName: "CreateCredentialsRevokeAsync",
+                                pathTemplate: "\"/api/credentials/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -330,10 +313,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
-                                httpMethod: "GET",
+                                operationId: "createCredentialsRevoke",
+                                methodName: "CreateCredentialsRevokeAsync",
+                                pathTemplate: "\"/api/credentials/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -360,22 +343,15 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetSettingsBillingUsageByInferenceSessionResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>(
+                return new global::HuggingFace.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -395,19 +371,10 @@ namespace HuggingFace
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
-
-                                    var __value = await global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -442,6 +409,31 @@ namespace HuggingFace
             {
                 __httpRequest?.Dispose();
             }
+        }
+        /// <summary>
+        /// Revoke leaked tokens<br/>
+        /// Publicly invalidate leaked Hugging Face access tokens. Possession of the raw token value is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated, the owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.
+        /// </summary>
+        /// <param name="credentials">
+        /// Raw access token values to invalidate, at most 1000.
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task CreateCredentialsRevokeAsync(
+            global::System.Collections.Generic.IList<string> credentials,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::HuggingFace.CreateCredentialsRevokeRequest
+            {
+                Credentials = credentials,
+            };
+
+            await CreateCredentialsRevokeAsync(
+                request: __request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
