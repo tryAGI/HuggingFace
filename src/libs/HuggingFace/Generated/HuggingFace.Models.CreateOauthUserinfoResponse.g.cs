@@ -58,6 +58,12 @@ namespace HuggingFace
         public bool? EmailVerified { get; set; }
 
         /// <summary>
+        /// The user's hardware items, if the `profile` scope is granted and the user did not set them as private
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hardwareItems")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.CreateOauthUserinfoResponseHardwareItem>? HardwareItems { get; set; }
+
+        /// <summary>
         /// Whether the user is a Pro user
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPro")]
@@ -121,6 +127,9 @@ namespace HuggingFace
         /// <param name="emailVerified">
         /// Whether the email is verified
         /// </param>
+        /// <param name="hardwareItems">
+        /// The user's hardware items, if the `profile` scope is granted and the user did not set them as private
+        /// </param>
         /// <param name="canPay">
         /// Whether the user has access to billing. You should check `canPay` first.
         /// </param>
@@ -141,6 +150,7 @@ namespace HuggingFace
             string? website,
             string? email,
             bool? emailVerified,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOauthUserinfoResponseHardwareItem>? hardwareItems,
             bool? canPay,
             global::HuggingFace.CreateOauthUserinfoResponseBillingMode? billingMode)
         {
@@ -152,6 +162,7 @@ namespace HuggingFace
             this.Website = website;
             this.Email = email;
             this.EmailVerified = emailVerified;
+            this.HardwareItems = hardwareItems;
             this.IsPro = isPro;
             this.CanPay = canPay;
             this.BillingMode = billingMode;
