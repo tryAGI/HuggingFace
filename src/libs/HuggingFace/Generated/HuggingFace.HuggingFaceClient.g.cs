@@ -281,6 +281,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        /// 
+        /// </summary>
+        public TokensClient Tokens => new TokensClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Users. User accounts are the base authoring entity on the Hub.
         /// </summary>
         public UsersClient Users => new UsersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
