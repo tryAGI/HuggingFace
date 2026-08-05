@@ -43,6 +43,13 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<string>? EndpointPatterns { get; set; }
 
         /// <summary>
+        /// Exempt this token from the org's Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skipNetworkSecurity")]
+        public bool? SkipNetworkSecurity { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -70,6 +77,10 @@ namespace HuggingFace
         /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.<br/>
         /// Default Value: []
         /// </param>
+        /// <param name="skipNetworkSecurity">
+        /// Exempt this token from the org's Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.<br/>
+        /// Default Value: false
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -78,13 +89,15 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission>? permissions,
             global::System.Collections.Generic.IList<string>? repoIds,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions,
-            global::System.Collections.Generic.IList<string>? endpointPatterns)
+            global::System.Collections.Generic.IList<string>? endpointPatterns,
+            bool? skipNetworkSecurity)
         {
             this.DisplayName = displayName;
             this.Permissions = permissions;
             this.RepoIds = repoIds;
             this.RepoPermissions = repoPermissions;
             this.EndpointPatterns = endpointPatterns;
+            this.SkipNetworkSecurity = skipNetworkSecurity;
         }
 
         /// <summary>

@@ -51,6 +51,13 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<string> EndpointPatterns { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skipNetworkSecurity")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool SkipNetworkSecurity { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -65,6 +72,7 @@ namespace HuggingFace
         /// <param name="repoIds"></param>
         /// <param name="repoPermissions"></param>
         /// <param name="endpointPatterns"></param>
+        /// <param name="skipNetworkSecurity"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -74,7 +82,8 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string> permissions,
             global::System.Collections.Generic.IList<string> repoIds,
             global::System.Collections.Generic.IList<string> repoPermissions,
-            global::System.Collections.Generic.IList<string> endpointPatterns)
+            global::System.Collections.Generic.IList<string> endpointPatterns,
+            bool skipNetworkSecurity)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
@@ -82,6 +91,7 @@ namespace HuggingFace
             this.RepoIds = repoIds ?? throw new global::System.ArgumentNullException(nameof(repoIds));
             this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
             this.EndpointPatterns = endpointPatterns ?? throw new global::System.ArgumentNullException(nameof(endpointPatterns));
+            this.SkipNetworkSecurity = skipNetworkSecurity;
         }
 
         /// <summary>

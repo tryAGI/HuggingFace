@@ -84,6 +84,12 @@ namespace HuggingFace
         public string? Last4 { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skipNetworkSecurity")]
+        public bool? SkipNetworkSecurity { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -103,6 +109,7 @@ namespace HuggingFace
         /// <param name="lastUsedAt"></param>
         /// <param name="expiration"></param>
         /// <param name="last4"></param>
+        /// <param name="skipNetworkSecurity"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -117,7 +124,8 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string> endpointPatterns,
             global::System.DateTime? lastUsedAt,
             global::System.DateTime? expiration,
-            string? last4)
+            string? last4,
+            bool? skipNetworkSecurity)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
@@ -130,6 +138,7 @@ namespace HuggingFace
             this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
             this.EndpointPatterns = endpointPatterns ?? throw new global::System.ArgumentNullException(nameof(endpointPatterns));
             this.Last4 = last4;
+            this.SkipNetworkSecurity = skipNetworkSecurity;
         }
 
         /// <summary>
