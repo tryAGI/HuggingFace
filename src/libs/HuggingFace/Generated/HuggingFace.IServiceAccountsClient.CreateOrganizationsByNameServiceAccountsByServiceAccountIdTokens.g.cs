@@ -63,6 +63,10 @@ namespace HuggingFace
         /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.<br/>
         /// Default Value: []
         /// </param>
+        /// <param name="skipNetworkSecurity">
+        /// Exempt this token from the org's Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -74,6 +78,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? repoIds = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions = default,
             global::System.Collections.Generic.IList<string>? endpointPatterns = default,
+            bool? skipNetworkSecurity = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
