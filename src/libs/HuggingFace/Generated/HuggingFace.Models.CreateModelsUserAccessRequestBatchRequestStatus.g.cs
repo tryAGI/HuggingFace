@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Pending,
+        /// <summary>
+        /// 
+        /// </summary>
         Rejected,
     }
 
@@ -31,6 +35,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateModelsUserAccessRequestBatchRequestStatus.Accepted => "accepted",
+                CreateModelsUserAccessRequestBatchRequestStatus.Pending => "pending",
                 CreateModelsUserAccessRequestBatchRequestStatus.Rejected => "rejected",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -43,6 +48,7 @@ namespace HuggingFace
             return value switch
             {
                 "accepted" => CreateModelsUserAccessRequestBatchRequestStatus.Accepted,
+                "pending" => CreateModelsUserAccessRequestBatchRequestStatus.Pending,
                 "rejected" => CreateModelsUserAccessRequestBatchRequestStatus.Rejected,
                 _ => null,
             };
