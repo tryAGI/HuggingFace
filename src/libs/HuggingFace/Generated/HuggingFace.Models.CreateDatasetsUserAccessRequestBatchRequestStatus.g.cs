@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        Pending,
+        /// <summary>
+        /// 
+        /// </summary>
         Rejected,
     }
 
@@ -31,6 +35,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateDatasetsUserAccessRequestBatchRequestStatus.Accepted => "accepted",
+                CreateDatasetsUserAccessRequestBatchRequestStatus.Pending => "pending",
                 CreateDatasetsUserAccessRequestBatchRequestStatus.Rejected => "rejected",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -43,6 +48,7 @@ namespace HuggingFace
             return value switch
             {
                 "accepted" => CreateDatasetsUserAccessRequestBatchRequestStatus.Accepted,
+                "pending" => CreateDatasetsUserAccessRequestBatchRequestStatus.Pending,
                 "rejected" => CreateDatasetsUserAccessRequestBatchRequestStatus.Rejected,
                 _ => null,
             };

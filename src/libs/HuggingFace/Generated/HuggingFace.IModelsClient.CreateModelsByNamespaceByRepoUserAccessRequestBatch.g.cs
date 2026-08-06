@@ -6,7 +6,7 @@ namespace HuggingFace
     {
         /// <summary>
         /// Batch handle access requests<br/>
-        /// Accept or reject up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
+        /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -23,7 +23,7 @@ namespace HuggingFace
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Batch handle access requests<br/>
-        /// Accept or reject up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
+        /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -40,7 +40,7 @@ namespace HuggingFace
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Batch handle access requests<br/>
-        /// Accept or reject up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
+        /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
