@@ -7,7 +7,7 @@ namespace HuggingFace
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateOrganizationsByNameSettingsTokensRevokeSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateOrganizationsByNameSettingsTokensByTokenIdRevokeSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,77 +21,72 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateOrganizationsByNameSettingsTokensRevokeSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateOrganizationsByNameSettingsTokensByTokenIdRevokeSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_CreateOrganizationsByNameSettingsTokensRevokeSecurityRequirement0,
+            {                s_CreateOrganizationsByNameSettingsTokensByTokenIdRevokeSecurityRequirement0,
             };
-        partial void PrepareCreateOrganizationsByNameSettingsTokensRevokeArguments(
+        partial void PrepareCreateOrganizationsByNameSettingsTokensByTokenIdRevokeArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request);
-        partial void PrepareCreateOrganizationsByNameSettingsTokensRevokeRequest(
+            ref string tokenId);
+        partial void PrepareCreateOrganizationsByNameSettingsTokensByTokenIdRevokeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request);
-        partial void ProcessCreateOrganizationsByNameSettingsTokensRevokeResponse(
+            string tokenId);
+        partial void ProcessCreateOrganizationsByNameSettingsTokensByTokenIdRevokeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
         /// Revoke member token<br/>
-        /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. Requires the raw token value. Enterprise only.
+        /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. The token id is the one displayed in the org token settings page or through the tokens listing API endpoint. Enterprise only.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="request"></param>
+        /// <param name="tokenId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task CreateOrganizationsByNameSettingsTokensRevokeAsync(
+        public async global::System.Threading.Tasks.Task CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsync(
             string name,
-
-            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request,
+            string tokenId,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            await CreateOrganizationsByNameSettingsTokensRevokeAsResponseAsync(
+            await CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsResponseAsync(
                 name: name,
-
-                request: request,
+                tokenId: tokenId,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
         }
         /// <summary>
         /// Revoke member token<br/>
-        /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. Requires the raw token value. Enterprise only.
+        /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. The token id is the one displayed in the org token settings page or through the tokens listing API endpoint. Enterprise only.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="request"></param>
+        /// <param name="tokenId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse> CreateOrganizationsByNameSettingsTokensRevokeAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse> CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsResponseAsync(
             string name,
-
-            global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest request,
+            string tokenId,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateOrganizationsByNameSettingsTokensRevokeArguments(
+            PrepareCreateOrganizationsByNameSettingsTokensByTokenIdRevokeArguments(
                 httpClient: HttpClient,
                 name: ref name,
-                request: request);
+                tokenId: ref tokenId);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateOrganizationsByNameSettingsTokensRevokeSecurityRequirements,
-                operationName: "CreateOrganizationsByNameSettingsTokensRevokeAsync");
+                securityRequirements: s_CreateOrganizationsByNameSettingsTokensByTokenIdRevokeSecurityRequirements,
+                operationName: "CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -111,7 +106,7 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/organizations/{name}/settings/tokens/revoke",
+                                path: $"/api/organizations/{name}/settings/tokens/{tokenId}/revoke",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -142,12 +137,6 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -156,11 +145,11 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateOrganizationsByNameSettingsTokensRevokeRequest(
+                PrepareCreateOrganizationsByNameSettingsTokensByTokenIdRevokeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     name: name!,
-                    request: request);
+                    tokenId: tokenId!);
 
                 return __httpRequest;
             }
@@ -177,9 +166,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createOrganizationsByNameSettingsTokensRevoke",
-                                methodName: "CreateOrganizationsByNameSettingsTokensRevokeAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/revoke\"",
+                                operationId: "createOrganizationsByNameSettingsTokensByTokenIdRevoke",
+                                methodName: "CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/{tokenId}/revoke\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -211,9 +200,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createOrganizationsByNameSettingsTokensRevoke",
-                                methodName: "CreateOrganizationsByNameSettingsTokensRevokeAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/revoke\"",
+                                operationId: "createOrganizationsByNameSettingsTokensByTokenIdRevoke",
+                                methodName: "CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/{tokenId}/revoke\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -252,9 +241,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createOrganizationsByNameSettingsTokensRevoke",
-                                methodName: "CreateOrganizationsByNameSettingsTokensRevokeAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/revoke\"",
+                                operationId: "createOrganizationsByNameSettingsTokensByTokenIdRevoke",
+                                methodName: "CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/{tokenId}/revoke\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -292,7 +281,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateOrganizationsByNameSettingsTokensRevokeResponse(
+                ProcessCreateOrganizationsByNameSettingsTokensByTokenIdRevokeResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -300,9 +289,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createOrganizationsByNameSettingsTokensRevoke",
-                                methodName: "CreateOrganizationsByNameSettingsTokensRevokeAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/revoke\"",
+                                operationId: "createOrganizationsByNameSettingsTokensByTokenIdRevoke",
+                                methodName: "CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/{tokenId}/revoke\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -322,9 +311,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createOrganizationsByNameSettingsTokensRevoke",
-                                methodName: "CreateOrganizationsByNameSettingsTokensRevokeAsync",
-                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/revoke\"",
+                                operationId: "createOrganizationsByNameSettingsTokensByTokenIdRevoke",
+                                methodName: "CreateOrganizationsByNameSettingsTokensByTokenIdRevokeAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens/{tokenId}/revoke\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -418,32 +407,6 @@ namespace HuggingFace
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Revoke member token<br/>
-        /// An org admin can revoke a token's access to the org. The token itself isn't deleted, it still works outside the org. Requires the raw token value. Enterprise only.
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="token"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task CreateOrganizationsByNameSettingsTokensRevokeAsync(
-            string name,
-            string token,
-            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::HuggingFace.CreateOrganizationsSettingsTokensRevokeRequest
-            {
-                Token = token,
-            };
-
-            await CreateOrganizationsByNameSettingsTokensRevokeAsync(
-                name: name,
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

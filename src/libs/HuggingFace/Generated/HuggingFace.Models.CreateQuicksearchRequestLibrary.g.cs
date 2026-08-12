@@ -531,6 +531,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        MinimaxH3,
+        /// <summary>
+        /// 
+        /// </summary>
         Mitie,
         /// <summary>
         /// 
@@ -1108,6 +1112,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Mflux => "mflux",
                 CreateQuicksearchRequestLibrary.Mindspore => "mindspore",
                 CreateQuicksearchRequestLibrary.MiniOmni2 => "mini-omni2",
+                CreateQuicksearchRequestLibrary.MinimaxH3 => "minimax-h3",
                 CreateQuicksearchRequestLibrary.Mitie => "mitie",
                 CreateQuicksearchRequestLibrary.MlAgents => "ml-agents",
                 CreateQuicksearchRequestLibrary.MlSharp => "ml-sharp",
@@ -1357,6 +1362,7 @@ namespace HuggingFace
                 "mflux" => CreateQuicksearchRequestLibrary.Mflux,
                 "mindspore" => CreateQuicksearchRequestLibrary.Mindspore,
                 "mini-omni2" => CreateQuicksearchRequestLibrary.MiniOmni2,
+                "minimax-h3" => CreateQuicksearchRequestLibrary.MinimaxH3,
                 "mitie" => CreateQuicksearchRequestLibrary.Mitie,
                 "ml-agents" => CreateQuicksearchRequestLibrary.MlAgents,
                 "ml-sharp" => CreateQuicksearchRequestLibrary.MlSharp,
