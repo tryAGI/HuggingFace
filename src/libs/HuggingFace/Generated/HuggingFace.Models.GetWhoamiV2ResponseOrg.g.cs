@@ -79,8 +79,8 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("roleInOrg")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetWhoamiV2ResponseOrgRoleInOrg?, string>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.GetWhoamiV2ResponseOrgRoleInOrg?, string>? RoleInOrg { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetWhoamiV2ResponseOrgRoleInOrgJsonConverter))]
+        public global::HuggingFace.GetWhoamiV2ResponseOrgRoleInOrg? RoleInOrg { get; set; }
 
         /// <summary>
         /// Current security restrictions for accessing data in this organization with current authentication method
@@ -131,7 +131,7 @@ namespace HuggingFace
             global::HuggingFace.GetWhoamiV2ResponseOrgBillingMode? billingMode,
             double? periodEnd,
             global::HuggingFace.GetWhoamiV2ResponseOrgPlan? plan,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetWhoamiV2ResponseOrgRoleInOrg?, string>? roleInOrg,
+            global::HuggingFace.GetWhoamiV2ResponseOrgRoleInOrg? roleInOrg,
             global::System.Collections.Generic.IList<global::HuggingFace.GetWhoamiV2ResponseOrgSecurityRestriction>? securityRestrictions,
             global::System.Collections.Generic.IList<global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroup>? resourceGroups,
             string type = "org")

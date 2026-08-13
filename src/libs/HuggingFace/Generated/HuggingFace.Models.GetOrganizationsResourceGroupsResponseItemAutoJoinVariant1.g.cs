@@ -19,9 +19,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role?, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1RoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role?, string> Role { get; set; }
+        public required global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role Role { get; set; }
 
         /// <summary>
         /// 
@@ -46,7 +46,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1(
-            global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role?, string> role,
+            global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role role,
             global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Scope? scope,
             string enabled = "True")
         {
@@ -60,6 +60,18 @@ namespace HuggingFace
         /// </summary>
         public GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1()
         {
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1 FromRole(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role role)
+        {
+            return new GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1
+            {
+                Role = role,
+            };
         }
 
     }

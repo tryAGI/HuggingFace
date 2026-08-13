@@ -478,7 +478,7 @@ namespace HuggingFace
             string name,
             string resourceGroupId,
             string username,
-            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole?, string> role,
+            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole role,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
