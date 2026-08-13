@@ -19,9 +19,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role?, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1RoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role?, string> Role { get; set; }
+        public required global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role Role { get; set; }
 
         /// <summary>
         /// 
@@ -47,7 +47,7 @@ namespace HuggingFace
 #endif
         public CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1(
             string enabled,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role?, string> role,
+            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role role,
             global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Scope? scope)
         {
             this.Enabled = enabled;

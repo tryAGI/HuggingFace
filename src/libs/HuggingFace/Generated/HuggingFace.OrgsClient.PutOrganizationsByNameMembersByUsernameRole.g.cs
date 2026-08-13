@@ -442,7 +442,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task PutOrganizationsByNameMembersByUsernameRoleAsync(
             string name,
             string username,
-            global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsMembersRoleRequestRole?, string> role,
+            global::HuggingFace.PutOrganizationsMembersRoleRequestRole role,
             global::System.Collections.Generic.IList<global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroup>? resourceGroups = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

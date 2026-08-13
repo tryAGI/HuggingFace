@@ -12,9 +12,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole?, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsUsersRequestRoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole?, string> Role { get; set; }
+        public required global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole Role { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -30,7 +30,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchOrganizationsResourceGroupsUsersRequest(
-            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole?, string> role)
+            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole role)
         {
             this.Role = role;
         }

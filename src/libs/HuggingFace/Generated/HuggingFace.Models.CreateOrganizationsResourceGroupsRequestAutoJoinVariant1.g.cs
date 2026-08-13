@@ -19,9 +19,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role?, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1RoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role?, string> Role { get; set; }
+        public required global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role Role { get; set; }
 
         /// <summary>
         /// 
@@ -46,7 +46,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateOrganizationsResourceGroupsRequestAutoJoinVariant1(
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role?, string> role,
+            global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role role,
             global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Scope? scope,
             string enabled = "True")
         {
@@ -60,6 +60,18 @@ namespace HuggingFace
         /// </summary>
         public CreateOrganizationsResourceGroupsRequestAutoJoinVariant1()
         {
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateOrganizationsResourceGroupsRequestAutoJoinVariant1"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateOrganizationsResourceGroupsRequestAutoJoinVariant1 FromRole(global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role role)
+        {
+            return new CreateOrganizationsResourceGroupsRequestAutoJoinVariant1
+            {
+                Role = role,
+            };
         }
 
     }

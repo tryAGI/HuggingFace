@@ -19,9 +19,9 @@ namespace HuggingFace
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role?, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1RoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role?, string> Role { get; set; }
+        public required global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role Role { get; set; }
 
         /// <summary>
         /// 
@@ -46,7 +46,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1(
-            global::HuggingFace.AnyOf<global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role?, string> role,
+            global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role role,
             global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Scope? scope,
             string enabled = "True")
         {
@@ -60,6 +60,18 @@ namespace HuggingFace
         /// </summary>
         public DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1()
         {
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1 FromRole(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role role)
+        {
+            return new DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1
+            {
+                Role = role,
+            };
         }
 
     }
