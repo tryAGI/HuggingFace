@@ -16,6 +16,10 @@ namespace HuggingFace
         /// 
         /// </summary>
         NoSubscription,
+        /// <summary>
+        /// 
+        /// </summary>
+        ResourceGroupLimit,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace HuggingFace
             {
                 GetJobsResponseItemStatusCancelReason.NoCredits => "NO_CREDITS",
                 GetJobsResponseItemStatusCancelReason.NoSubscription => "NO_SUBSCRIPTION",
+                GetJobsResponseItemStatusCancelReason.ResourceGroupLimit => "RESOURCE_GROUP_LIMIT",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace HuggingFace
             {
                 "NO_CREDITS" => GetJobsResponseItemStatusCancelReason.NoCredits,
                 "NO_SUBSCRIPTION" => GetJobsResponseItemStatusCancelReason.NoSubscription,
+                "RESOURCE_GROUP_LIMIT" => GetJobsResponseItemStatusCancelReason.ResourceGroupLimit,
                 _ => null,
             };
         }

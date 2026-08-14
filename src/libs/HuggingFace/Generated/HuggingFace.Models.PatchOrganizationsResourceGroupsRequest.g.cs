@@ -21,6 +21,12 @@ namespace HuggingFace
         public string? Description { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spendLimits")]
+        public global::HuggingFace.PatchOrganizationsResourceGroupsRequestSpendLimits? SpendLimits { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -31,15 +37,18 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name"></param>
         /// <param name="description"></param>
+        /// <param name="spendLimits"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchOrganizationsResourceGroupsRequest(
             string? name,
-            string? description)
+            string? description,
+            global::HuggingFace.PatchOrganizationsResourceGroupsRequestSpendLimits? spendLimits)
         {
             this.Name = name;
             this.Description = description;
+            this.SpendLimits = spendLimits;
         }
 
         /// <summary>

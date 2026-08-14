@@ -38,6 +38,12 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spendLimits")]
+        public global::HuggingFace.PatchOrganizationsResourceGroupsResponseSpendLimits? SpendLimits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsResourceGroupsResponseUser> Users { get; set; }
@@ -64,6 +70,7 @@ namespace HuggingFace
         /// <param name="resources"></param>
         /// <param name="description"></param>
         /// <param name="autoJoin"></param>
+        /// <param name="spendLimits"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -73,12 +80,14 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsResourceGroupsResponseUser> users,
             global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant5>> resources,
             string? description,
-            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant2>? autoJoin)
+            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant2>? autoJoin,
+            global::HuggingFace.PatchOrganizationsResourceGroupsResponseSpendLimits? spendLimits)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.AutoJoin = autoJoin;
+            this.SpendLimits = spendLimits;
             this.Users = users ?? throw new global::System.ArgumentNullException(nameof(users));
             this.Resources = resources ?? throw new global::System.ArgumentNullException(nameof(resources));
         }
