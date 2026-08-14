@@ -1,6 +1,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace HuggingFace
 {
     public partial class DatasetsClient
@@ -31,6 +33,7 @@ namespace HuggingFace
             ref string repo,
             object? write,
             ref global::System.DateTime? expiration,
+            ref int? expiresIn,
             object? encrypted,
             object? inferenceApi,
             object? includeProStatus,
@@ -42,6 +45,7 @@ namespace HuggingFace
             string repo,
             object? write,
             global::System.DateTime? expiration,
+            int? expiresIn,
             object? encrypted,
             object? inferenceApi,
             object? includeProStatus,
@@ -62,10 +66,17 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="write"></param>
-        /// <param name="expiration"></param>
+        /// <param name="expiration">
+        /// Requested expiration datetime, capped at the default (10 minutes with write, 24 hours for spaces, 1 hour otherwise). Use expires_in instead.
+        /// </param>
+        /// <param name="expiresIn">
+        /// Requested lifetime in seconds, capped at the default (600s with write, 86400s for spaces, 3600s otherwise)
+        /// </param>
         /// <param name="encrypted"></param>
         /// <param name="inferenceApi"></param>
-        /// <param name="includeProStatus"></param>
+        /// <param name="includeProStatus">
+        /// Use billing_details instead.
+        /// </param>
         /// <param name="billingDetails"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -75,6 +86,7 @@ namespace HuggingFace
             string repo,
             object? write = default,
             global::System.DateTime? expiration = default,
+            int? expiresIn = default,
             object? encrypted = default,
             object? inferenceApi = default,
             object? includeProStatus = default,
@@ -87,6 +99,7 @@ namespace HuggingFace
                 repo: repo,
                 write: write,
                 expiration: expiration,
+                expiresIn: expiresIn,
                 encrypted: encrypted,
                 inferenceApi: inferenceApi,
                 includeProStatus: includeProStatus,
@@ -104,10 +117,17 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="write"></param>
-        /// <param name="expiration"></param>
+        /// <param name="expiration">
+        /// Requested expiration datetime, capped at the default (10 minutes with write, 24 hours for spaces, 1 hour otherwise). Use expires_in instead.
+        /// </param>
+        /// <param name="expiresIn">
+        /// Requested lifetime in seconds, capped at the default (600s with write, 86400s for spaces, 3600s otherwise)
+        /// </param>
         /// <param name="encrypted"></param>
         /// <param name="inferenceApi"></param>
-        /// <param name="includeProStatus"></param>
+        /// <param name="includeProStatus">
+        /// Use billing_details instead.
+        /// </param>
         /// <param name="billingDetails"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -117,6 +137,7 @@ namespace HuggingFace
             string repo,
             object? write = default,
             global::System.DateTime? expiration = default,
+            int? expiresIn = default,
             object? encrypted = default,
             object? inferenceApi = default,
             object? includeProStatus = default,
@@ -132,6 +153,7 @@ namespace HuggingFace
                 repo: ref repo,
                 write: write,
                 expiration: ref expiration,
+                expiresIn: ref expiresIn,
                 encrypted: encrypted,
                 inferenceApi: inferenceApi,
                 includeProStatus: includeProStatus,
@@ -166,6 +188,7 @@ namespace HuggingFace
                             __pathBuilder
                                 .AddOptionalParameter("write", write?.ToString())
                                 .AddOptionalParameter("expiration", expiration?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("expires_in", expiresIn?.ToString())
                                 .AddOptionalParameter("encrypted", encrypted?.ToString())
                                 .AddOptionalParameter("inference_api", inferenceApi?.ToString())
                                 .AddOptionalParameter("include_pro_status", includeProStatus?.ToString())
@@ -215,6 +238,7 @@ namespace HuggingFace
                     repo: repo!,
                     write: write,
                     expiration: expiration,
+                    expiresIn: expiresIn,
                     encrypted: encrypted,
                     inferenceApi: inferenceApi,
                     includeProStatus: includeProStatus,

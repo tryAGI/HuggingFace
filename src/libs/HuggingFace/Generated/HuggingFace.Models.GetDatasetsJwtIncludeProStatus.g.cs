@@ -4,8 +4,9 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    /// Use billing_details instead.
     /// </summary>
+    [global::System.Obsolete("This model marked as deprecated.")]
     public sealed partial class GetDatasetsJwtIncludeProStatus
     {
 
