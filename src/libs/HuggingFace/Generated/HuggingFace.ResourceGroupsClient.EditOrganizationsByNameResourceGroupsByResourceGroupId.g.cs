@@ -47,7 +47,8 @@ namespace HuggingFace
 
         /// <summary>
         /// Update resource group<br/>
-        /// Update the name and/or description of a resource group.<br/>
+        /// Update the name, description and/or monthly spend limits (in cents, `null` to remove) of a resource group.<br/>
+        /// `spendLimits.total` caps the group's combined spend across every product; the per-product limits cap each product on top of it.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -77,7 +78,8 @@ namespace HuggingFace
         }
         /// <summary>
         /// Update resource group<br/>
-        /// Update the name and/or description of a resource group.<br/>
+        /// Update the name, description and/or monthly spend limits (in cents, `null` to remove) of a resource group.<br/>
+        /// `spendLimits.total` caps the group's combined spend across every product; the per-product limits cap each product on top of it.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -455,13 +457,15 @@ namespace HuggingFace
         }
         /// <summary>
         /// Update resource group<br/>
-        /// Update the name and/or description of a resource group.<br/>
+        /// Update the name, description and/or monthly spend limits (in cents, `null` to remove) of a resource group.<br/>
+        /// `spendLimits.total` caps the group's combined spend across every product; the per-product limits cap each product on top of it.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="resourceGroupId"></param>
         /// <param name="requestName"></param>
         /// <param name="description"></param>
+        /// <param name="spendLimits"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -470,6 +474,7 @@ namespace HuggingFace
             string resourceGroupId,
             string? requestName = default,
             string? description = default,
+            global::HuggingFace.PatchOrganizationsResourceGroupsRequestSpendLimits? spendLimits = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -477,6 +482,7 @@ namespace HuggingFace
             {
                 Name = requestName,
                 Description = description,
+                SpendLimits = spendLimits,
             };
 
             return await EditOrganizationsByNameResourceGroupsByResourceGroupIdAsync(
