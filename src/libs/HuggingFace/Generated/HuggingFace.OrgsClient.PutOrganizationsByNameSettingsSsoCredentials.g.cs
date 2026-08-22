@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class ModelsClient
+    public partial class OrgsClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_PutOrganizationsByNameSettingsSsoCredentialsSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,75 +21,48 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_PutOrganizationsByNameSettingsSsoCredentialsSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirement0,
+            {                s_PutOrganizationsByNameSettingsSsoCredentialsSecurityRequirement0,
             };
-        partial void PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusArguments(
+        partial void PreparePutOrganizationsByNameSettingsSsoCredentialsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string @namespace,
-            ref string repo,
-            ref global::HuggingFace.GetModelsUserAccessRequestStatus status,
-            ref int? limit,
-            ref global::System.DateTime? after,
-            ref global::System.DateTime? before,
-            ref string? q);
-        partial void PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusRequest(
+            ref string name,
+            global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant1, global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant2> request);
+        partial void PreparePutOrganizationsByNameSettingsSsoCredentialsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string @namespace,
-            string repo,
-            global::HuggingFace.GetModelsUserAccessRequestStatus status,
-            int? limit,
-            global::System.DateTime? after,
-            global::System.DateTime? before,
-            string? q);
-        partial void ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponse(
+            string name,
+            global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant1, global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant2> request);
+        partial void ProcessPutOrganizationsByNameSettingsSsoCredentialsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponseContent(
+        partial void ProcessPutOrganizationsByNameSettingsSsoCredentialsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// List access requests<br/>
-        /// List access requests for a gated repository
+        /// Rotate SSO credentials<br/>
+        /// Update SSO credentials of the organization's SSO configuration. SSO stays enabled and does not need to be re-tested, so rotation causes no downtime. Requires a paid plan.
         /// </summary>
-        /// <param name="namespace"></param>
-        /// <param name="repo"></param>
-        /// <param name="status"></param>
-        /// <param name="limit">
-        /// Default Value: 1000
-        /// </param>
-        /// <param name="after"></param>
-        /// <param name="before"></param>
-        /// <param name="q">
-        /// Search requests by requester username, fullname, email, email domain or verified organization
-        /// </param>
+        /// <param name="name"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>> GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync(
-            string @namespace,
-            string repo,
-            global::HuggingFace.GetModelsUserAccessRequestStatus status,
-            int? limit = default,
-            global::System.DateTime? after = default,
-            global::System.DateTime? before = default,
-            string? q = default,
+        public async global::System.Threading.Tasks.Task<string> PutOrganizationsByNameSettingsSsoCredentialsAsync(
+            string name,
+
+            global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant1, global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant2> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetModelsByNamespaceByRepoUserAccessRequestByStatusAsResponseAsync(
-                @namespace: @namespace,
-                repo: repo,
-                status: status,
-                limit: limit,
-                after: after,
-                before: before,
-                q: q,
+            var __response = await PutOrganizationsByNameSettingsSsoCredentialsAsResponseAsync(
+                name: name,
+
+                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -97,51 +70,33 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// List access requests<br/>
-        /// List access requests for a gated repository
+        /// Rotate SSO credentials<br/>
+        /// Update SSO credentials of the organization's SSO configuration. SSO stays enabled and does not need to be re-tested, so rotation causes no downtime. Requires a paid plan.
         /// </summary>
-        /// <param name="namespace"></param>
-        /// <param name="repo"></param>
-        /// <param name="status"></param>
-        /// <param name="limit">
-        /// Default Value: 1000
-        /// </param>
-        /// <param name="after"></param>
-        /// <param name="before"></param>
-        /// <param name="q">
-        /// Search requests by requester username, fullname, email, email domain or verified organization
-        /// </param>
+        /// <param name="name"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>> GetModelsByNamespaceByRepoUserAccessRequestByStatusAsResponseAsync(
-            string @namespace,
-            string repo,
-            global::HuggingFace.GetModelsUserAccessRequestStatus status,
-            int? limit = default,
-            global::System.DateTime? after = default,
-            global::System.DateTime? before = default,
-            string? q = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<string>> PutOrganizationsByNameSettingsSsoCredentialsAsResponseAsync(
+            string name,
+
+            global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant1, global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant2> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusArguments(
+            PreparePutOrganizationsByNameSettingsSsoCredentialsArguments(
                 httpClient: HttpClient,
-                @namespace: ref @namespace,
-                repo: ref repo,
-                status: ref status,
-                limit: ref limit,
-                after: ref after,
-                before: ref before,
-                q: ref q);
+                name: ref name,
+                request: request);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirements,
-                operationName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync");
+                securityRequirements: s_PutOrganizationsByNameSettingsSsoCredentialsSecurityRequirements,
+                operationName: "PutOrganizationsByNameSettingsSsoCredentialsAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -161,21 +116,15 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}",
+                                path: $"/api/organizations/{name}/settings/sso/credentials",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("after", after?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("before", before?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("q", q)
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Get,
+                    method: global::System.Net.Http.HttpMethod.Put,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -198,6 +147,12 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
+                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: __httpRequestContentBody,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "application/json");
+                            __httpRequest.Content = __httpRequestContent;
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -206,16 +161,11 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusRequest(
+                PreparePutOrganizationsByNameSettingsSsoCredentialsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace!,
-                    repo: repo!,
-                    status: status!,
-                    limit: limit,
-                    after: after,
-                    before: before,
-                    q: q);
+                    name: name!,
+                    request: request);
 
                 return __httpRequest;
             }
@@ -232,10 +182,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
-                                httpMethod: "GET",
+                                operationId: "putOrganizationsByNameSettingsSsoCredentials",
+                                methodName: "PutOrganizationsByNameSettingsSsoCredentialsAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/sso/credentials\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -266,10 +216,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
-                                httpMethod: "GET",
+                                operationId: "putOrganizationsByNameSettingsSsoCredentials",
+                                methodName: "PutOrganizationsByNameSettingsSsoCredentialsAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/sso/credentials\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -307,10 +257,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
-                                httpMethod: "GET",
+                                operationId: "putOrganizationsByNameSettingsSsoCredentials",
+                                methodName: "PutOrganizationsByNameSettingsSsoCredentialsAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/sso/credentials\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -347,7 +297,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponse(
+                ProcessPutOrganizationsByNameSettingsSsoCredentialsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -355,10 +305,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
-                                httpMethod: "GET",
+                                operationId: "putOrganizationsByNameSettingsSsoCredentials",
+                                methodName: "PutOrganizationsByNameSettingsSsoCredentialsAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/sso/credentials\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -377,10 +327,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
-                                httpMethod: "GET",
+                                operationId: "putOrganizationsByNameSettingsSsoCredentials",
+                                methodName: "PutOrganizationsByNameSettingsSsoCredentialsAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/sso/credentials\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -407,7 +357,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponseContent(
+                                ProcessPutOrganizationsByNameSettingsSsoCredentialsResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -416,13 +366,11 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<string>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        body: __content);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -442,19 +390,17 @@ namespace HuggingFace
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                                    var __content = await __response.Content.ReadAsStringAsync(
                 #if NET5_0_OR_GREATER
                                         __effectiveCancellationToken
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<string>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        body: __content);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -489,6 +435,29 @@ namespace HuggingFace
             {
                 __httpRequest?.Dispose();
             }
+        }
+        /// <summary>
+        /// Rotate SSO credentials<br/>
+        /// Update SSO credentials of the organization's SSO configuration. SSO stays enabled and does not need to be re-tested, so rotation causes no downtime. Requires a paid plan.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<string> PutOrganizationsByNameSettingsSsoCredentialsAsync(
+            string name,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::HuggingFace.AnyOf<global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant1, global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant2>
+            {
+            };
+
+            return await PutOrganizationsByNameSettingsSsoCredentialsAsync(
+                name: name,
+                request: __request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

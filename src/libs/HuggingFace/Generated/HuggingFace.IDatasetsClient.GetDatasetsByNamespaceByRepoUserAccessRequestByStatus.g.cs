@@ -16,6 +16,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="after"></param>
         /// <param name="before"></param>
+        /// <param name="q">
+        /// Search requests by requester username, fullname, email, email domain or verified organization
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -26,6 +29,7 @@ namespace HuggingFace
             int? limit = default,
             global::System.DateTime? after = default,
             global::System.DateTime? before = default,
+            string? q = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -40,6 +44,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="after"></param>
         /// <param name="before"></param>
+        /// <param name="q">
+        /// Search requests by requester username, fullname, email, email domain or verified organization
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -50,6 +57,7 @@ namespace HuggingFace
             int? limit = default,
             global::System.DateTime? after = default,
             global::System.DateTime? before = default,
+            string? q = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
