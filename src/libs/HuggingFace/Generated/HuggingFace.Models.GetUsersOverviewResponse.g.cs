@@ -146,6 +146,12 @@ namespace HuggingFace
         public string? PrimaryOrgAvatarUrl { get; set; }
 
         /// <summary>
+        /// Set when the user is a service account
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serviceAccount")]
+        public global::HuggingFace.GetUsersOverviewResponseServiceAccount? ServiceAccount { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <default>"user"</default>
@@ -197,6 +203,9 @@ namespace HuggingFace
         /// <param name="isFollowing"></param>
         /// <param name="reasonToFollow"></param>
         /// <param name="primaryOrgAvatarUrl"></param>
+        /// <param name="serviceAccount">
+        /// Set when the user is a service account
+        /// </param>
         /// <param name="hardwareItems">
         /// The user's hardware items, unless the user set them as private
         /// </param>
@@ -228,6 +237,7 @@ namespace HuggingFace
             bool? isFollowing,
             string? reasonToFollow,
             string? primaryOrgAvatarUrl,
+            global::HuggingFace.GetUsersOverviewResponseServiceAccount? serviceAccount,
             global::System.Collections.Generic.IList<global::HuggingFace.GetUsersOverviewResponseHardwareItem>? hardwareItems,
             string type = "user")
         {
@@ -253,6 +263,7 @@ namespace HuggingFace
             this.IsFollowing = isFollowing;
             this.ReasonToFollow = reasonToFollow;
             this.PrimaryOrgAvatarUrl = primaryOrgAvatarUrl;
+            this.ServiceAccount = serviceAccount;
             this.Type = type;
             this.CreatedAt = createdAt;
             this.HardwareItems = hardwareItems;

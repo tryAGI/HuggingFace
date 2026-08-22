@@ -35,6 +35,10 @@ namespace HuggingFace
         /// <summary>
         /// 
         /// </summary>
+        OrgAuditLogWrite,
+        /// <summary>
+        /// 
+        /// </summary>
         OrgRead,
         /// <summary>
         /// 
@@ -80,6 +84,7 @@ namespace HuggingFace
                 CreateOrganizationsServiceAccountsTokensRequestPermission.InferenceEndpointsWrite => "inference.endpoints.write",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.InferenceServerlessWrite => "inference.serverless.write",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.JobWrite => "job.write",
+                CreateOrganizationsServiceAccountsTokensRequestPermission.OrgAuditLogWrite => "org.auditLog.write",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.OrgRead => "org.read",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsRead => "org.serviceAccounts.read",
                 CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite => "org.serviceAccounts.write",
@@ -103,6 +108,7 @@ namespace HuggingFace
                 "inference.endpoints.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.InferenceEndpointsWrite,
                 "inference.serverless.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.InferenceServerlessWrite,
                 "job.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.JobWrite,
+                "org.auditLog.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgAuditLogWrite,
                 "org.read" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgRead,
                 "org.serviceAccounts.read" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsRead,
                 "org.serviceAccounts.write" => CreateOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite,

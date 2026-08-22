@@ -146,6 +146,12 @@ namespace HuggingFace
         public string? PrimaryOrgAvatarUrl { get; set; }
 
         /// <summary>
+        /// Set when the user is a service account
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serviceAccount")]
+        public global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUserServiceAccount? ServiceAccount { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <default>"user"</default>
@@ -197,6 +203,9 @@ namespace HuggingFace
         /// <param name="isFollowing"></param>
         /// <param name="reasonToFollow"></param>
         /// <param name="primaryOrgAvatarUrl"></param>
+        /// <param name="serviceAccount">
+        /// Set when the user is a service account
+        /// </param>
         /// <param name="email"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -226,6 +235,7 @@ namespace HuggingFace
             bool? isFollowing,
             string? reasonToFollow,
             string? primaryOrgAvatarUrl,
+            global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUserServiceAccount? serviceAccount,
             string? email,
             string type = "user")
         {
@@ -251,6 +261,7 @@ namespace HuggingFace
             this.IsFollowing = isFollowing;
             this.ReasonToFollow = reasonToFollow;
             this.PrimaryOrgAvatarUrl = primaryOrgAvatarUrl;
+            this.ServiceAccount = serviceAccount;
             this.Type = type;
             this.Email = email;
             this.VerifiedOrgNames = verifiedOrgNames ?? throw new global::System.ArgumentNullException(nameof(verifiedOrgNames));

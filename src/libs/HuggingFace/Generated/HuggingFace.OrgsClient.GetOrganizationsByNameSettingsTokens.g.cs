@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class ModelsClient
+    public partial class OrgsClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetOrganizationsByNameSettingsTokensSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,74 +21,62 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetOrganizationsByNameSettingsTokensSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirement0,
+            {                s_GetOrganizationsByNameSettingsTokensSecurityRequirement0,
             };
-        partial void PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusArguments(
+        partial void PrepareGetOrganizationsByNameSettingsTokensArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string @namespace,
-            ref string repo,
-            ref global::HuggingFace.GetModelsUserAccessRequestStatus status,
+            ref string name,
+            ref string? cursor,
             ref int? limit,
-            ref global::System.DateTime? after,
-            ref global::System.DateTime? before,
             ref string? q);
-        partial void PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusRequest(
+        partial void PrepareGetOrganizationsByNameSettingsTokensRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string @namespace,
-            string repo,
-            global::HuggingFace.GetModelsUserAccessRequestStatus status,
+            string name,
+            string? cursor,
             int? limit,
-            global::System.DateTime? after,
-            global::System.DateTime? before,
             string? q);
-        partial void ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponse(
+        partial void ProcessGetOrganizationsByNameSettingsTokensResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponseContent(
+        partial void ProcessGetOrganizationsByNameSettingsTokensResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// List access requests<br/>
-        /// List access requests for a gated repository
+        /// List member access tokens<br/>
+        /// List the access tokens of the organization's members. Team or Enterprise only.
         /// </summary>
-        /// <param name="namespace"></param>
-        /// <param name="repo"></param>
-        /// <param name="status"></param>
-        /// <param name="limit">
-        /// Default Value: 1000
+        /// <param name="name"></param>
+        /// <param name="cursor">
+        /// Pagination cursor from the `Link` header
         /// </param>
-        /// <param name="after"></param>
-        /// <param name="before"></param>
+        /// <param name="limit">
+        /// Default Value: 100
+        /// </param>
         /// <param name="q">
-        /// Search requests by requester username, fullname, email, email domain or verified organization
+        /// Filter on `owner:`, `role:`, `status:` and `token:` (last 4 characters), negatable with `-`. Pass `status:all` to include revoked tokens.<br/>
+        /// Default Value: -status:revoked
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>> GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync(
-            string @namespace,
-            string repo,
-            global::HuggingFace.GetModelsUserAccessRequestStatus status,
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>> GetOrganizationsByNameSettingsTokensAsync(
+            string name,
+            string? cursor = default,
             int? limit = default,
-            global::System.DateTime? after = default,
-            global::System.DateTime? before = default,
             string? q = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetModelsByNamespaceByRepoUserAccessRequestByStatusAsResponseAsync(
-                @namespace: @namespace,
-                repo: repo,
-                status: status,
+            var __response = await GetOrganizationsByNameSettingsTokensAsResponseAsync(
+                name: name,
+                cursor: cursor,
                 limit: limit,
-                after: after,
-                before: before,
                 q: q,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -97,51 +85,45 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// List access requests<br/>
-        /// List access requests for a gated repository
+        /// List member access tokens<br/>
+        /// List the access tokens of the organization's members. Team or Enterprise only.
         /// </summary>
-        /// <param name="namespace"></param>
-        /// <param name="repo"></param>
-        /// <param name="status"></param>
-        /// <param name="limit">
-        /// Default Value: 1000
+        /// <param name="name"></param>
+        /// <param name="cursor">
+        /// Pagination cursor from the `Link` header
         /// </param>
-        /// <param name="after"></param>
-        /// <param name="before"></param>
+        /// <param name="limit">
+        /// Default Value: 100
+        /// </param>
         /// <param name="q">
-        /// Search requests by requester username, fullname, email, email domain or verified organization
+        /// Filter on `owner:`, `role:`, `status:` and `token:` (last 4 characters), negatable with `-`. Pass `status:all` to include revoked tokens.<br/>
+        /// Default Value: -status:revoked
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>> GetModelsByNamespaceByRepoUserAccessRequestByStatusAsResponseAsync(
-            string @namespace,
-            string repo,
-            global::HuggingFace.GetModelsUserAccessRequestStatus status,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>>> GetOrganizationsByNameSettingsTokensAsResponseAsync(
+            string name,
+            string? cursor = default,
             int? limit = default,
-            global::System.DateTime? after = default,
-            global::System.DateTime? before = default,
             string? q = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusArguments(
+            PrepareGetOrganizationsByNameSettingsTokensArguments(
                 httpClient: HttpClient,
-                @namespace: ref @namespace,
-                repo: ref repo,
-                status: ref status,
+                name: ref name,
+                cursor: ref cursor,
                 limit: ref limit,
-                after: ref after,
-                before: ref before,
                 q: ref q);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetModelsByNamespaceByRepoUserAccessRequestByStatusSecurityRequirements,
-                operationName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync");
+                securityRequirements: s_GetOrganizationsByNameSettingsTokensSecurityRequirements,
+                operationName: "GetOrganizationsByNameSettingsTokensAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -161,12 +143,11 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: $"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}",
+                                path: $"/api/organizations/{name}/settings/tokens",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
+                                .AddOptionalParameter("cursor", cursor)
                                 .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("after", after?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("before", before?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("q", q)
                                 ;
                             var __path = __pathBuilder.ToString();
@@ -206,15 +187,12 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetModelsByNamespaceByRepoUserAccessRequestByStatusRequest(
+                PrepareGetOrganizationsByNameSettingsTokensRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace!,
-                    repo: repo!,
-                    status: status!,
+                    name: name!,
+                    cursor: cursor,
                     limit: limit,
-                    after: after,
-                    before: before,
                     q: q);
 
                 return __httpRequest;
@@ -232,9 +210,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
+                                operationId: "getOrganizationsByNameSettingsTokens",
+                                methodName: "GetOrganizationsByNameSettingsTokensAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -266,9 +244,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
+                                operationId: "getOrganizationsByNameSettingsTokens",
+                                methodName: "GetOrganizationsByNameSettingsTokensAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -307,9 +285,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
+                                operationId: "getOrganizationsByNameSettingsTokens",
+                                methodName: "GetOrganizationsByNameSettingsTokensAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -347,7 +325,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponse(
+                ProcessGetOrganizationsByNameSettingsTokensResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -355,9 +333,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
+                                operationId: "getOrganizationsByNameSettingsTokens",
+                                methodName: "GetOrganizationsByNameSettingsTokensAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -377,9 +355,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getModelsByNamespaceByRepoUserAccessRequestByStatus",
-                                methodName: "GetModelsByNamespaceByRepoUserAccessRequestByStatusAsync",
-                                pathTemplate: "$\"/api/models/{@namespace}/{repo}/user-access-request/{(global::System.Uri.EscapeDataString(status.ToValueString()))}\"",
+                                operationId: "getOrganizationsByNameSettingsTokens",
+                                methodName: "GetOrganizationsByNameSettingsTokensAsync",
+                                pathTemplate: "$\"/api/organizations/{name}/settings/tokens\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -407,7 +385,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetModelsByNamespaceByRepoUserAccessRequestByStatusResponseContent(
+                                ProcessGetOrganizationsByNameSettingsTokensResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -416,9 +394,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext) ??
+                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>), JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -448,9 +426,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = (global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetModelsUserAccessRequestResponseItem>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsSettingsTokensResponseItem>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

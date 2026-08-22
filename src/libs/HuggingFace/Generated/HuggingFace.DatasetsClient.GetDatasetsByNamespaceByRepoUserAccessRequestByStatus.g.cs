@@ -32,7 +32,8 @@ namespace HuggingFace
             ref global::HuggingFace.GetDatasetsUserAccessRequestStatus status,
             ref int? limit,
             ref global::System.DateTime? after,
-            ref global::System.DateTime? before);
+            ref global::System.DateTime? before,
+            ref string? q);
         partial void PrepareGetDatasetsByNamespaceByRepoUserAccessRequestByStatusRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -41,7 +42,8 @@ namespace HuggingFace
             global::HuggingFace.GetDatasetsUserAccessRequestStatus status,
             int? limit,
             global::System.DateTime? after,
-            global::System.DateTime? before);
+            global::System.DateTime? before,
+            string? q);
         partial void ProcessGetDatasetsByNamespaceByRepoUserAccessRequestByStatusResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,6 +65,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="after"></param>
         /// <param name="before"></param>
+        /// <param name="q">
+        /// Search requests by requester username, fullname, email, email domain or verified organization
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -73,6 +78,7 @@ namespace HuggingFace
             int? limit = default,
             global::System.DateTime? after = default,
             global::System.DateTime? before = default,
+            string? q = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -83,6 +89,7 @@ namespace HuggingFace
                 limit: limit,
                 after: after,
                 before: before,
+                q: q,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -101,6 +108,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="after"></param>
         /// <param name="before"></param>
+        /// <param name="q">
+        /// Search requests by requester username, fullname, email, email domain or verified organization
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -111,6 +121,7 @@ namespace HuggingFace
             int? limit = default,
             global::System.DateTime? after = default,
             global::System.DateTime? before = default,
+            string? q = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -123,7 +134,8 @@ namespace HuggingFace
                 status: ref status,
                 limit: ref limit,
                 after: ref after,
-                before: ref before);
+                before: ref before,
+                q: ref q);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -155,6 +167,7 @@ namespace HuggingFace
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("after", after?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("before", before?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("q", q)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -201,7 +214,8 @@ namespace HuggingFace
                     status: status!,
                     limit: limit,
                     after: after,
-                    before: before);
+                    before: before,
+                    q: q);
 
                 return __httpRequest;
             }
