@@ -10,11 +10,11 @@ namespace HuggingFace
     public enum CreateModelsCommitContentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationJson,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationXNdjson,
     }

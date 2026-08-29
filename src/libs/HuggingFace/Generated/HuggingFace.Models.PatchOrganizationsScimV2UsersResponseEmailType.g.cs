@@ -9,7 +9,7 @@ namespace HuggingFace
     public enum PatchOrganizationsScimV2UsersResponseEmailType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Work,
     }

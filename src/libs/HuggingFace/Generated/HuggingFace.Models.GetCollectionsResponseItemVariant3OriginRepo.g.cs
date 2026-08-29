@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetCollectionsResponseItemVariant3OriginRepo
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2>))]
@@ -17,7 +17,7 @@ namespace HuggingFace
         public required global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2> Author { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]

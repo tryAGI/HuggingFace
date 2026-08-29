@@ -10,11 +10,11 @@ namespace HuggingFace
     public enum GetBucketsTreeSort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Path,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UploadedAt,
     }

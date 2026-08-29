@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningDeepLinksRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"dashboard"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("purpose")]

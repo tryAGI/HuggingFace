@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesResponseVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"pending"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         public string Status { get; set; } = "pending";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

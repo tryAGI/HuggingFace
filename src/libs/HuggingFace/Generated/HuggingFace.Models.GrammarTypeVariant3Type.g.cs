@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GrammarTypeVariant3Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JsonSchema,
     }

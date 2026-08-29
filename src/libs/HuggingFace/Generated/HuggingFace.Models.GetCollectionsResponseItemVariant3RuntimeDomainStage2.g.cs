@@ -4,28 +4,28 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetCollectionsResponseItemVariant3RuntimeDomainStage2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExpiredChallenge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Misconfigured,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PendingChallenge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ready,
     }

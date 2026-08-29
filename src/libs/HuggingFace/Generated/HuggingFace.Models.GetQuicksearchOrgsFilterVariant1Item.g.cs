@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetQuicksearchOrgsFilterVariant1Item
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Own,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unwatched,
     }

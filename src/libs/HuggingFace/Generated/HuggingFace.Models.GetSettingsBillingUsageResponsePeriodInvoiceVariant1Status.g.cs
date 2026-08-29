@@ -4,32 +4,32 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetSettingsBillingUsageResponsePeriodInvoiceVariant1Status
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Draft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Open,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Paid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uncollectible,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unpaid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Void,
     }

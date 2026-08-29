@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetCollectionsResponseVariant1ItemGatingVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"auto"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("mode")]

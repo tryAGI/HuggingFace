@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesRequestVariant3PaymentCredentials
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"stripe_payment_token"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "stripe_payment_token";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stripe_payment_token")]
         [global::System.Text.Json.Serialization.JsonRequired]

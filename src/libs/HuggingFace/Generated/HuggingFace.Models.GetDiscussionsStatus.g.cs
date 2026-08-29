@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum GetDiscussionsStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Closed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Open,
     }

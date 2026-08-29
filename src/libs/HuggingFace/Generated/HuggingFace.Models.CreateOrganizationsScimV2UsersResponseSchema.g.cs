@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateOrganizationsScimV2UsersResponseSchema
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Urn_ietf_params_scim_schemas_core_20_User,
     }

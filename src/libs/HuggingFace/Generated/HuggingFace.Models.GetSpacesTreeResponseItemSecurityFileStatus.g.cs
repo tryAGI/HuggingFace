@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSpacesTreeResponseItemSecurityFileStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetSpacesTreeResponseItemSecurityFileStatusStatusJsonConverter))]
@@ -17,33 +17,33 @@ namespace HuggingFace
         public required global::HuggingFace.GetSpacesTreeResponseItemSecurityFileStatusStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jFrogScan")]
         public global::HuggingFace.GetSpacesTreeResponseItemSecurityFileStatusJFrogScan? JFrogScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("protectAiScan")]
         public global::HuggingFace.GetSpacesTreeResponseItemSecurityFileStatusProtectAiScan? ProtectAiScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avScan")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetSpacesTreeResponseItemSecurityFileStatusAvScan AvScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pickleImportScan")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetSpacesTreeResponseItemSecurityFileStatusPickleImportScan PickleImportScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("virusTotalScan")]
         public global::HuggingFace.GetSpacesTreeResponseItemSecurityFileStatusVirusTotalScan? VirusTotalScan { get; set; }

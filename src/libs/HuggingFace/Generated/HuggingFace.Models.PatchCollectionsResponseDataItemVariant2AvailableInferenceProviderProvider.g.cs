@@ -4,84 +4,84 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Baseten,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cerebras,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cohere,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deepinfra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FalAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeatherlessAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FireworksAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Groq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HfInference,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Novita,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nscale,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ovhcloud,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Publicai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Replicate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scaleway,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Together,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wavespeed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZaiOrg,
     }

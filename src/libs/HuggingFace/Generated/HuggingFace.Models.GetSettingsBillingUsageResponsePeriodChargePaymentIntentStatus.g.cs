@@ -4,36 +4,36 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetSettingsBillingUsageResponsePeriodChargePaymentIntentStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Canceled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Processing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequiresAction,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequiresCapture,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequiresConfirmation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequiresPaymentMethod,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Succeeded,
     }

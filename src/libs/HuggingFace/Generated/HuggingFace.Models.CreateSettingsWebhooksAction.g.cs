@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateSettingsWebhooksAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enable,
     }

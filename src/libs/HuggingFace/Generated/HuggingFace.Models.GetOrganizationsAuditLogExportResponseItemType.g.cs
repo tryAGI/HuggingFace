@@ -4,472 +4,472 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetOrganizationsAuditLogExportResponseItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingAwsAdd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingAwsRemove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingCancelSubscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingCreateCustomer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingGcpAdd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingGcpRemove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingMarketplaceApprove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingRemovePaymentMethod,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingRenewSubscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingStartSubscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingUnCancelSubscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingUpdatePaymentMethod,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingUpdateSubscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BillingUpdateSubscriptionPlan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CollectionCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CollectionDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CollectionUpdateResourceGroup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JobsCancel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JobsCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JobsUpdateExpose,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JobsUpdateLabels,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OauthToken,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgAddUser,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgChangeRole,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgInviteAccept,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgInviteEmail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgInviteUser,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgJoinAutomatic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgJoinFromDomain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgLeave,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgRemoveUser,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgRename,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgRestore,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgRotateToken,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgServiceAccountCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgServiceAccountDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgServiceAccountTokenCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgServiceAccountTokenDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgServiceAccountTokenRotate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgServiceAccountTokenUpdate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsInferenceProviders,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsInferenceProvidersKeysAdd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsInferenceProvidersKeysRemove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsInferenceProvidersUsage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsNetwork,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsNetworkAuthEnforcementDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsNetworkAuthEnforcementEnable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsNetworkIpRestrictionDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsNetworkIpRestrictionEnable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsProfile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsPublisherGating,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsRegions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsResourceGroups,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSecurity2faDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSecurity2faEnable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSecurityAutoJoinDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSecurityAutoJoinEnable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSecurityMembersPrivacyDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSecurityMembersPrivacyEnable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSecurityRepoVisibility,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSso,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSsoDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSettingsSsoEnable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSsoJoin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgSsoLogin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgTokenApprovalAuthorizationRequest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgTokenApprovalAuthorizationRequestAuthorized,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgTokenApprovalAuthorizationRequestDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgTokenApprovalAuthorizationRequestRevoked,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgTokenApprovalDisabled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgTokenApprovalEnabled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgUpdateJoinSettings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrgUpdateSettings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoAddSecret,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoAddSecrets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoAddTrustedPublisher,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoAddVariable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoAddVariables,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoDeleteDoi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoDeleteLfsFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoDuplication,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoMove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoRemoveDisable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoRemoveSecret,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoRemoveSecrets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoRemoveTrustedPublisher,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoRemoveVariable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoRemoveVariables,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoUpdateResourceGroup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoUpdateSecret,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoUpdateSettings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoUpdateVariable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroupAddUsers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroupChangeRole,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroupCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroupDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroupRemoveUsers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroupSettings,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledJobCreate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledJobDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledJobResume,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledJobRun,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledJobSuspend,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledJobUpdateLabels,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScheduledJobUpdateSchedule,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpacesAddStorage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpacesRemoveStorage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpacesRemoveVolumes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpacesSetVolumes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpacesUpdateHardware,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpacesUpdateSleepTime,
     }

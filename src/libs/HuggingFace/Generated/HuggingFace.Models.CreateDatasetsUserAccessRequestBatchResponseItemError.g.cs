@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateDatasetsUserAccessRequestBatchResponseItemError
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RequestNotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserNotFound,
     }

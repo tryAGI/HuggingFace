@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesRequestVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"platform"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("service_id")]

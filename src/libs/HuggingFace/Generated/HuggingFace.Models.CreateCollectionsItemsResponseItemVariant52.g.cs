@@ -4,32 +4,32 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateCollectionsItemsResponseItemVariant52
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Slug { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastUpdated")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime LastUpdated { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant22>))]
@@ -37,14 +37,14 @@ namespace HuggingFace
         public required global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant22> Owner { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Title { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5Theme2JsonConverter))]
@@ -52,42 +52,42 @@ namespace HuggingFace
         public required global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Theme2 Theme { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("upvotes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Upvotes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isUpvotedByUser")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsUpvotedByUser { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("shareUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ShareUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numberItems")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double NumberItems { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"collection"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]

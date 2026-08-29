@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct MessageContent : global::System.IEquatable<MessageContent>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? MessageContentVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageContentVariant1))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsMessageContentVariant1 => MessageContentVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMessageContentVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickMessageContentVariant1() => IsMessageContentVariant1
             ? MessageContentVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageContentVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>? MessageContentVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageContentVariant2))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsMessageContentVariant2 => MessageContentVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMessageContentVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk> PickMessageContentVariant2() => IsMessageContentVariant2
             ? MessageContentVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageContentVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MessageContent(string value) => new MessageContent((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(MessageContent @this) => @this.MessageContentVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MessageContent(string? value)
         {
@@ -101,12 +101,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MessageContent FromMessageContentVariant1(string? value) => new MessageContent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MessageContent(
             string? messageContentVariant1,
@@ -118,23 +118,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             MessageContentVariant2 as object ??
-            MessageContentVariant1 as object 
+            MessageContentVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             MessageContentVariant1?.ToString() ??
-            MessageContentVariant2?.ToString() 
+            MessageContentVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -142,7 +142,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<string, TResult>? messageContentVariant1 = null,
@@ -167,7 +167,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<string>? messageContentVariant1 = null,
@@ -191,7 +191,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<string>? messageContentVariant1 = null,
@@ -214,7 +214,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -235,18 +235,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(MessageContent other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(MessageContentVariant1, other.MessageContentVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?>.Default.Equals(MessageContentVariant2, other.MessageContentVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk>?>.Default.Equals(MessageContentVariant2, other.MessageContentVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(MessageContent obj1, MessageContent obj2)
         {
@@ -254,7 +254,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(MessageContent obj1, MessageContent obj2)
         {
@@ -262,7 +262,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

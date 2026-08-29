@@ -4,52 +4,52 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetModelsTagsByTypeResponseItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arxiv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bucket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deploy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Doi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Language,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Library,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         License,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PipelineTag,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Region,
     }

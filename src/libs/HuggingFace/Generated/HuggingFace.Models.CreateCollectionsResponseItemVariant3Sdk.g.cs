@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateCollectionsResponseItemVariant3Sdk
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Docker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gradio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Static,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Streamlit,
     }

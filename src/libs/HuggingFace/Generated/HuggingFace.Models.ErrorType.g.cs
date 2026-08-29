@@ -4,32 +4,32 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ErrorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Backend,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Empty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Overloaded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokenizer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unhealthy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Validation,
     }

@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct TokenizeInput : global::System.IEquatable<TokenizeInput>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? TokenizeInputVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TokenizeInputVariant1))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsTokenizeInputVariant1 => TokenizeInputVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTokenizeInputVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickTokenizeInputVariant1() => IsTokenizeInputVariant1
             ? TokenizeInputVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TokenizeInputVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? TokenizeInputVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TokenizeInputVariant2))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsTokenizeInputVariant2 => TokenizeInputVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTokenizeInputVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<string> PickTokenizeInputVariant2() => IsTokenizeInputVariant2
             ? TokenizeInputVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TokenizeInputVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator TokenizeInput(string value) => new TokenizeInput((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(TokenizeInput @this) => @this.TokenizeInputVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TokenizeInput(string? value)
         {
@@ -101,12 +101,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static TokenizeInput FromTokenizeInputVariant1(string? value) => new TokenizeInput(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TokenizeInput(
             string? tokenizeInputVariant1,
@@ -118,23 +118,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             TokenizeInputVariant2 as object ??
-            TokenizeInputVariant1 as object 
+            TokenizeInputVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             TokenizeInputVariant1?.ToString() ??
-            TokenizeInputVariant2?.ToString() 
+            TokenizeInputVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -142,7 +142,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<string, TResult>? tokenizeInputVariant1 = null,
@@ -167,7 +167,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<string>? tokenizeInputVariant1 = null,
@@ -191,7 +191,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<string>? tokenizeInputVariant1 = null,
@@ -214,7 +214,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -235,18 +235,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(TokenizeInput other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(TokenizeInputVariant1, other.TokenizeInputVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(TokenizeInputVariant2, other.TokenizeInputVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(TokenizeInputVariant2, other.TokenizeInputVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(TokenizeInput obj1, TokenizeInput obj2)
         {
@@ -254,7 +254,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(TokenizeInput obj1, TokenizeInput obj2)
         {
@@ -262,7 +262,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

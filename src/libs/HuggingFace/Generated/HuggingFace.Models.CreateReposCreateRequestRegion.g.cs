@@ -9,11 +9,11 @@ namespace HuggingFace
     public enum CreateReposCreateRequestRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Us,
     }

@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetModelsCommitsExpandItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Formatted,
     }

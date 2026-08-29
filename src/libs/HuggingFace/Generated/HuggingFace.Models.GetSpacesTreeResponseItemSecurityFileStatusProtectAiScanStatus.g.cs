@@ -4,36 +4,36 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetSpacesTreeResponseItemSecurityFileStatusProtectAiScanStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Caution,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Queued,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Safe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Suspicious,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unsafe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unscanned,
     }

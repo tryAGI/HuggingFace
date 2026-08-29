@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDiscussionsStorageRepoType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datasets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernels,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Models,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spaces,
     }

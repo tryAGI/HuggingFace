@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"free"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]

@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class CreateJobsDuplicateResponseExpose
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ports")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,76 +4,76 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDatasetsTagsByTypeResponseItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnnotationsCreators,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arxiv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Benchmark,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Doi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Format,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Language,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LanguageCreators,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Library,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         License,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Modality,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multilinguality,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Region,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SizeCategories,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SourceDatasets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaskCategories,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TaskIds,
     }

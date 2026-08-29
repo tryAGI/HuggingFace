@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDatasetsPathsInfoResponseItemSecurityFileStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateDatasetsPathsInfoResponseItemSecurityFileStatusStatusJsonConverter))]
@@ -17,33 +17,33 @@ namespace HuggingFace
         public required global::HuggingFace.CreateDatasetsPathsInfoResponseItemSecurityFileStatusStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jFrogScan")]
         public global::HuggingFace.CreateDatasetsPathsInfoResponseItemSecurityFileStatusJFrogScan? JFrogScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("protectAiScan")]
         public global::HuggingFace.CreateDatasetsPathsInfoResponseItemSecurityFileStatusProtectAiScan? ProtectAiScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avScan")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.CreateDatasetsPathsInfoResponseItemSecurityFileStatusAvScan AvScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pickleImportScan")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.CreateDatasetsPathsInfoResponseItemSecurityFileStatusPickleImportScan PickleImportScan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("virusTotalScan")]
         public global::HuggingFace.CreateDatasetsPathsInfoResponseItemSecurityFileStatusVirusTotalScan? VirusTotalScan { get; set; }

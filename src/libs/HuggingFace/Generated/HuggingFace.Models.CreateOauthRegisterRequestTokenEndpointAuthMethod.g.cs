@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateOauthRegisterRequestTokenEndpointAuthMethod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClientSecretBasic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClientSecretPost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

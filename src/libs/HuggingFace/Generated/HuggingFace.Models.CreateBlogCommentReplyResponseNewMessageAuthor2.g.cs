@@ -4,30 +4,30 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateBlogCommentReplyResponseNewMessageAuthor2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isOwner")]
         public bool? IsOwner { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isOrgMember")]
         public bool? IsOrgMember { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isBlockedByMe")]
         public bool? IsBlockedByMe { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("oauthApp")]
         public global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorOauthApp2? OauthApp { get; set; }

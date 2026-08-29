@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetCollectionsResponseGatingVariant3
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"manual"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
         public string Mode { get; set; } = "manual";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("notifications")]
         [global::System.Text.Json.Serialization.JsonRequired]

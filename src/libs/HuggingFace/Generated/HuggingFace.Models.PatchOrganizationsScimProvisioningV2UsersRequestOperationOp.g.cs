@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum PatchOrganizationsScimProvisioningV2UsersRequestOperationOp
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Add,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Remove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Replace,
     }

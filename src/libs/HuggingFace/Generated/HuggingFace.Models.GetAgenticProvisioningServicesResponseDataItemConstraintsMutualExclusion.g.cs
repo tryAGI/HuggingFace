@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningServicesResponseDataItemConstraintsMutualExclusion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"True"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowed_updates")]

@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetSettingsBillingUsageResponsePeriodInvoiceVariant1CollectionMethod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChargeAutomatically,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SendInvoice,
     }

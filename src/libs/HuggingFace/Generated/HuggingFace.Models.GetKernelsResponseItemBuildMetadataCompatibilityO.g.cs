@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetKernelsResponseItemBuildMetadataCompatibilityO
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Linux,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Macos,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Windows,
     }

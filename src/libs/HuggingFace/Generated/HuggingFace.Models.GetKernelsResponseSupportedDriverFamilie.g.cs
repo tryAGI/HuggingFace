@@ -4,28 +4,28 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetKernelsResponseSupportedDriverFamilie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cpu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cuda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rocm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xpu,
     }

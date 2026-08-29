@@ -4,252 +4,252 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDocsSearchProduct
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Accelerate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentsCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Argilla,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Autotrain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bitsandbytes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatUi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cli,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputerVisionCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContextCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cookbook,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DatasetViewer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datasets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepRlCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Diffusers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DiffusionCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Distilabel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Evaluate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleCloud,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gradio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hub,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HuggingfaceJs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HuggingfaceHub,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InferenceEndpoints,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InferenceProviders,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernels,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Leaderboards,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lerobot,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lighteval,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlmCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         McpCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MicrosoftAzure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlFor3dCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlGamesCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openenv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Optimum,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OptimumExecutorch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OptimumHabana,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OptimumIntel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OptimumNeuron,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OptimumTpu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Peft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReachyMini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoboticsCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Safetensors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sagemaker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SentenceTransformers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Setfit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Simulate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SmolCourse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Smolagents,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tasks,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tei,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tgi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Timm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokenizers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trackio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transformers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransformersJs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xet,
     }

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateOrganizationsServiceAccountsTokensResponse
     {
@@ -16,7 +16,7 @@ namespace HuggingFace
         public required string Token { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokenInfo")]
         [global::System.Text.Json.Serialization.JsonRequired]

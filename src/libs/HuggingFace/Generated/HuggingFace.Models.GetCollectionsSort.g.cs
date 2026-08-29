@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum GetCollectionsSort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LastModified,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Upvotes,
     }

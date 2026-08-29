@@ -4,18 +4,18 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetCollectionsResponseItemVariant3RuntimeHardware
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("current")]
         public global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareCurrent2? Current { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested")]
         public global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareRequested2? Requested { get; set; }

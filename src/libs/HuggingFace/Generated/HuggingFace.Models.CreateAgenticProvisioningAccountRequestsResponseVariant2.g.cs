@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningAccountRequestsResponseVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"requires_auth"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "requires_auth";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requires_auth")]
         [global::System.Text.Json.Serialization.JsonRequired]

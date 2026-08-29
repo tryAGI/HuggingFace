@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchOrganizationsScimV2UsersResponseName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("givenName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string GivenName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("familyName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string FamilyName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("formatted")]
         [global::System.Text.Json.Serialization.JsonRequired]

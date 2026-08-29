@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateJobsResponseStatusCancelReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoCredits,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoSubscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroupLimit,
     }

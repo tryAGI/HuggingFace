@@ -42,7 +42,7 @@ namespace HuggingFace
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
@@ -190,7 +190,7 @@ namespace HuggingFace
         public SqlConsoleClient SqlConsole { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TokensClient Tokens { get; }
 

@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupComputeSpaces
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uptimeSec")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UptimeSec { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("costCents")]
         [global::System.Text.Json.Serialization.JsonRequired]

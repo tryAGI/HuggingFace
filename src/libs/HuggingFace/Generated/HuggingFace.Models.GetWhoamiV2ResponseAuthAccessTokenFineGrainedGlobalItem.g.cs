@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWhoamiV2ResponseAuthAccessTokenFineGrainedGlobalItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DiscussionWrite,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PostWrite,
     }

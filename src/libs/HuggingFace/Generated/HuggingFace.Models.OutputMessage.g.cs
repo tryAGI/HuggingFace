@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct OutputMessage : global::System.IEquatable<OutputMessage>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.TextMessage? Text { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Text))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsText => Text != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickText(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.TextMessage PickText() => IsText
             ? Text!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolCallMessage? ToolCall { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolCall))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsToolCall => ToolCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolCall(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ToolCallMessage PickToolCall() => IsToolCall
             ? ToolCall!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCall' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator OutputMessage(global::HuggingFace.TextMessage value) => new OutputMessage((global::HuggingFace.TextMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.TextMessage?(OutputMessage @this) => @this.Text;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OutputMessage(global::HuggingFace.TextMessage? value)
         {
@@ -101,22 +101,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static OutputMessage FromText(global::HuggingFace.TextMessage? value) => new OutputMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator OutputMessage(global::HuggingFace.ToolCallMessage value) => new OutputMessage((global::HuggingFace.ToolCallMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ToolCallMessage?(OutputMessage @this) => @this.ToolCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OutputMessage(global::HuggingFace.ToolCallMessage? value)
         {
@@ -124,12 +124,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static OutputMessage FromToolCall(global::HuggingFace.ToolCallMessage? value) => new OutputMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OutputMessage(
             global::HuggingFace.TextMessage? text,
@@ -141,23 +141,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ToolCall as object ??
-            Text as object 
+            Text as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Text?.ToString() ??
-            ToolCall?.ToString() 
+            ToolCall?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.TextMessage, TResult>? text = null,
@@ -190,7 +190,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.TextMessage>? text = null,
@@ -214,7 +214,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::HuggingFace.TextMessage>? text = null,
@@ -237,7 +237,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(OutputMessage other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.TextMessage?>.Default.Equals(Text, other.Text) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolCallMessage?>.Default.Equals(ToolCall, other.ToolCall) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolCallMessage?>.Default.Equals(ToolCall, other.ToolCall)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(OutputMessage obj1, OutputMessage obj2)
         {
@@ -277,7 +277,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(OutputMessage obj1, OutputMessage obj2)
         {
@@ -285,7 +285,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

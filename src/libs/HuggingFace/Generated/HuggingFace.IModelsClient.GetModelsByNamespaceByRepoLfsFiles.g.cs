@@ -11,8 +11,14 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="cursor"></param>
+        /// <param name="direction">
+        /// Default Value: desc
+        /// </param>
         /// <param name="limit">
         /// Default Value: 1000
+        /// </param>
+        /// <param name="sort">
+        /// Default Value: size
         /// </param>
         /// <param name="xet"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -22,7 +28,9 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string? cursor = default,
+            global::HuggingFace.GetModelsLfsFilesDirection? direction = default,
             int? limit = default,
+            global::HuggingFace.GetModelsLfsFilesSort? sort = default,
             object? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -33,8 +41,14 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="cursor"></param>
+        /// <param name="direction">
+        /// Default Value: desc
+        /// </param>
         /// <param name="limit">
         /// Default Value: 1000
+        /// </param>
+        /// <param name="sort">
+        /// Default Value: size
         /// </param>
         /// <param name="xet"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -44,7 +58,9 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string? cursor = default,
+            global::HuggingFace.GetModelsLfsFilesDirection? direction = default,
             int? limit = default,
+            global::HuggingFace.GetModelsLfsFilesSort? sort = default,
             object? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

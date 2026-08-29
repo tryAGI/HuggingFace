@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum FinishReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EosToken,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Length,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StopSequence,
     }

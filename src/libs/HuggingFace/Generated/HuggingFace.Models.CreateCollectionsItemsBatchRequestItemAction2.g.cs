@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateCollectionsItemsBatchRequestItemAction2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Update,
     }

@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct AnyOf<T1, T2, T3, T4> : global::System.IEquatable<AnyOf<T1, T2, T3, T4>>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public T1? Value1 { get; init; }
@@ -18,7 +18,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
@@ -26,7 +26,7 @@ namespace HuggingFace
         public bool IsValue1 => Value1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickValue1(
 #if NET6_0_OR_GREATER
@@ -39,14 +39,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public T1 PickValue1() => IsValue1
             ? Value1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Value1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public T2? Value2 { get; init; }
@@ -55,7 +55,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
@@ -63,7 +63,7 @@ namespace HuggingFace
         public bool IsValue2 => Value2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickValue2(
 #if NET6_0_OR_GREATER
@@ -76,14 +76,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public T2 PickValue2() => IsValue2
             ? Value2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Value2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public T3? Value3 { get; init; }
@@ -92,7 +92,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
@@ -100,7 +100,7 @@ namespace HuggingFace
         public bool IsValue3 => Value3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickValue3(
 #if NET6_0_OR_GREATER
@@ -113,14 +113,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public T3 PickValue3() => IsValue3
             ? Value3!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Value3' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public T4? Value4 { get; init; }
@@ -129,7 +129,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value4))]
@@ -137,7 +137,7 @@ namespace HuggingFace
         public bool IsValue4 => Value4 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickValue4(
 #if NET6_0_OR_GREATER
@@ -150,23 +150,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public T4 PickValue4() => IsValue4
             ? Value4!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Value4' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4>(T1 value) => new AnyOf<T1, T2, T3, T4>((T1?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator T1?(AnyOf<T1, T2, T3, T4> @this) => @this.Value1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnyOf(T1? value)
         {
@@ -174,22 +174,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AnyOf<T1, T2, T3, T4> FromValue1(T1? value) => new AnyOf<T1, T2, T3, T4>(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4>(T2 value) => new AnyOf<T1, T2, T3, T4>((T2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator T2?(AnyOf<T1, T2, T3, T4> @this) => @this.Value2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnyOf(T2? value)
         {
@@ -197,22 +197,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AnyOf<T1, T2, T3, T4> FromValue2(T2? value) => new AnyOf<T1, T2, T3, T4>(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4>(T3 value) => new AnyOf<T1, T2, T3, T4>((T3?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator T3?(AnyOf<T1, T2, T3, T4> @this) => @this.Value3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnyOf(T3? value)
         {
@@ -220,22 +220,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AnyOf<T1, T2, T3, T4> FromValue3(T3? value) => new AnyOf<T1, T2, T3, T4>(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4>(T4 value) => new AnyOf<T1, T2, T3, T4>((T4?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator T4?(AnyOf<T1, T2, T3, T4> @this) => @this.Value4;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnyOf(T4? value)
         {
@@ -243,12 +243,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AnyOf<T1, T2, T3, T4> FromValue4(T4? value) => new AnyOf<T1, T2, T3, T4>(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnyOf(
             T1? value1,
@@ -264,27 +264,27 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Value4 as object ??
             Value3 as object ??
             Value2 as object ??
-            Value1 as object 
+            Value1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Value1?.ToString() ??
             Value2?.ToString() ??
             Value3?.ToString() ??
-            Value4?.ToString() 
+            Value4?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -292,7 +292,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<T1, TResult>? value1 = null,
@@ -327,7 +327,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<T1>? value1 = null,
@@ -363,7 +363,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<T1>? value1 = null,
@@ -396,7 +396,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -421,7 +421,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(AnyOf<T1, T2, T3, T4> other)
         {
@@ -429,12 +429,12 @@ namespace HuggingFace
                 global::System.Collections.Generic.EqualityComparer<T1?>.Default.Equals(Value1, other.Value1) &&
                 global::System.Collections.Generic.EqualityComparer<T2?>.Default.Equals(Value2, other.Value2) &&
                 global::System.Collections.Generic.EqualityComparer<T3?>.Default.Equals(Value3, other.Value3) &&
-                global::System.Collections.Generic.EqualityComparer<T4?>.Default.Equals(Value4, other.Value4) 
+                global::System.Collections.Generic.EqualityComparer<T4?>.Default.Equals(Value4, other.Value4)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(AnyOf<T1, T2, T3, T4> obj1, AnyOf<T1, T2, T3, T4> obj2)
         {
@@ -442,7 +442,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(AnyOf<T1, T2, T3, T4> obj1, AnyOf<T1, T2, T3, T4> obj2)
         {
@@ -450,7 +450,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

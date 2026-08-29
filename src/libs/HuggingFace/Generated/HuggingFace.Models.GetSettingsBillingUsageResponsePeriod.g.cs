@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSettingsBillingUsageResponsePeriod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EntityId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetSettingsBillingUsageResponsePeriodEntityTypeJsonConverter))]
@@ -31,35 +31,35 @@ namespace HuggingFace
         public required global::HuggingFace.GetSettingsBillingUsageResponsePeriodEntityType EntityType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EntityName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("periodStart")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime PeriodStart { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("periodEnd")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime PeriodEnd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("invoice")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSettingsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetSettingsBillingUsageResponsePeriodInvoiceVariant2>))]
         public global::HuggingFace.AnyOf<global::HuggingFace.GetSettingsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetSettingsBillingUsageResponsePeriodInvoiceVariant2>? Invoice { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("charges")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetSettingsBillingUsageResponsePeriodCharge>? Charges { get; set; }

@@ -10,11 +10,11 @@ namespace HuggingFace
     public enum CreateAgenticProvisioningResourcesRequestVariant2ConfigurationVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

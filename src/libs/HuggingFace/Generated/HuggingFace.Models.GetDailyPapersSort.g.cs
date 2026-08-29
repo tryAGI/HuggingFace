@@ -9,11 +9,11 @@ namespace HuggingFace
     public enum GetDailyPapersSort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublishedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trending,
     }

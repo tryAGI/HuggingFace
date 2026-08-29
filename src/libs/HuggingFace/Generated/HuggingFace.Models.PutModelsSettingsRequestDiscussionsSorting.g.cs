@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PutModelsSettingsRequestDiscussionsSorting
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reactions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RecentlyCreated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trending,
     }

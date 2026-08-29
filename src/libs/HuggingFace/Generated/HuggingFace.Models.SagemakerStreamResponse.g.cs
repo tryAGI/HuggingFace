@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct SagemakerStreamResponse : global::System.IEquatable<SagemakerStreamResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.StreamResponse? StreamResponse { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(StreamResponse))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsStreamResponse => StreamResponse != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickStreamResponse(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.StreamResponse PickStreamResponse() => IsStreamResponse
             ? StreamResponse!
             : throw new global::System.InvalidOperationException($"Expected union variant 'StreamResponse' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ChatCompletionChunk? ChatCompletionChunk { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletionChunk))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsChatCompletionChunk => ChatCompletionChunk != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickChatCompletionChunk(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ChatCompletionChunk PickChatCompletionChunk() => IsChatCompletionChunk
             ? ChatCompletionChunk!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionChunk' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.Chunk? Chunk { get; init; }
@@ -93,7 +93,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Chunk))]
@@ -101,7 +101,7 @@ namespace HuggingFace
         public bool IsChunk => Chunk != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickChunk(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.Chunk PickChunk() => IsChunk
             ? Chunk!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Chunk' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SagemakerStreamResponse(global::HuggingFace.StreamResponse value) => new SagemakerStreamResponse((global::HuggingFace.StreamResponse?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.StreamResponse?(SagemakerStreamResponse @this) => @this.StreamResponse;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerStreamResponse(global::HuggingFace.StreamResponse? value)
         {
@@ -138,22 +138,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SagemakerStreamResponse FromStreamResponse(global::HuggingFace.StreamResponse? value) => new SagemakerStreamResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SagemakerStreamResponse(global::HuggingFace.ChatCompletionChunk value) => new SagemakerStreamResponse((global::HuggingFace.ChatCompletionChunk?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ChatCompletionChunk?(SagemakerStreamResponse @this) => @this.ChatCompletionChunk;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerStreamResponse(global::HuggingFace.ChatCompletionChunk? value)
         {
@@ -161,22 +161,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SagemakerStreamResponse FromChatCompletionChunk(global::HuggingFace.ChatCompletionChunk? value) => new SagemakerStreamResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SagemakerStreamResponse(global::HuggingFace.Chunk value) => new SagemakerStreamResponse((global::HuggingFace.Chunk?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.Chunk?(SagemakerStreamResponse @this) => @this.Chunk;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerStreamResponse(global::HuggingFace.Chunk? value)
         {
@@ -184,12 +184,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SagemakerStreamResponse FromChunk(global::HuggingFace.Chunk? value) => new SagemakerStreamResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerStreamResponse(
             global::HuggingFace.StreamResponse? streamResponse,
@@ -203,25 +203,25 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Chunk as object ??
             ChatCompletionChunk as object ??
-            StreamResponse as object 
+            StreamResponse as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             StreamResponse?.ToString() ??
             ChatCompletionChunk?.ToString() ??
-            Chunk?.ToString() 
+            Chunk?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.StreamResponse, TResult>? streamResponse = null,
@@ -259,7 +259,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.StreamResponse>? streamResponse = null,
@@ -289,7 +289,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::HuggingFace.StreamResponse>? streamResponse = null,
@@ -317,7 +317,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(SagemakerStreamResponse other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.StreamResponse?>.Default.Equals(StreamResponse, other.StreamResponse) &&
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ChatCompletionChunk?>.Default.Equals(ChatCompletionChunk, other.ChatCompletionChunk) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.Chunk?>.Default.Equals(Chunk, other.Chunk) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.Chunk?>.Default.Equals(Chunk, other.Chunk)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(SagemakerStreamResponse obj1, SagemakerStreamResponse obj2)
         {
@@ -360,7 +360,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(SagemakerStreamResponse obj1, SagemakerStreamResponse obj2)
         {
@@ -368,7 +368,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

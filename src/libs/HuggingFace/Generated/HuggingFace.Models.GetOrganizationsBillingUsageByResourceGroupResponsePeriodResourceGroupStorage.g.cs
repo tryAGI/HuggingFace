@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupStorage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("privateGB")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double PrivateGB { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("publicGB")]
         [global::System.Text.Json.Serialization.JsonRequired]

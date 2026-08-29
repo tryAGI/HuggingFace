@@ -9,11 +9,11 @@ namespace HuggingFace
     public enum CreateOauthUserinfoResponseBillingMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Postpaid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prepaid,
     }

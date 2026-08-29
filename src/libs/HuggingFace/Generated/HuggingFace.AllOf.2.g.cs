@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct AllOf<T1, T2> : global::System.IEquatable<AllOf<T1, T2>>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public T1? Value1 { get; init; }
@@ -18,7 +18,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
@@ -26,7 +26,7 @@ namespace HuggingFace
         public bool IsValue1 => Value1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickValue1(
 #if NET6_0_OR_GREATER
@@ -39,14 +39,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public T1 PickValue1() => IsValue1
             ? Value1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Value1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public T2? Value2 { get; init; }
@@ -55,7 +55,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
@@ -63,7 +63,7 @@ namespace HuggingFace
         public bool IsValue2 => Value2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickValue2(
 #if NET6_0_OR_GREATER
@@ -76,23 +76,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public T2 PickValue2() => IsValue2
             ? Value2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Value2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AllOf<T1, T2>(T1 value) => new AllOf<T1, T2>((T1?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator T1?(AllOf<T1, T2> @this) => @this.Value1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AllOf(T1? value)
         {
@@ -100,22 +100,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AllOf<T1, T2> FromValue1(T1? value) => new AllOf<T1, T2>(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AllOf<T1, T2>(T2 value) => new AllOf<T1, T2>((T2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator T2?(AllOf<T1, T2> @this) => @this.Value2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AllOf(T2? value)
         {
@@ -123,12 +123,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AllOf<T1, T2> FromValue2(T2? value) => new AllOf<T1, T2>(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AllOf(
             T1? value1,
@@ -140,19 +140,19 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Value2 as object ??
-            Value1 as object 
+            Value1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Value1?.ToString() ??
-            Value2?.ToString() 
+            Value2?.ToString()
             ;
 
         private static bool RequiresValue<TValue>()
@@ -170,7 +170,7 @@ namespace HuggingFace
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -178,7 +178,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<T1, TResult>? value1 = null,
@@ -203,7 +203,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<T1>? value1 = null,
@@ -227,7 +227,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<T1>? value1 = null,
@@ -250,7 +250,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -271,18 +271,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(AllOf<T1, T2> other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<T1?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<T2?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<T2?>.Default.Equals(Value2, other.Value2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(AllOf<T1, T2> obj1, AllOf<T1, T2> obj2)
         {
@@ -290,7 +290,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(AllOf<T1, T2> obj1, AllOf<T1, T2> obj2)
         {
@@ -298,7 +298,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -65,13 +65,14 @@ namespace HuggingFace
         /// <returns>The current <see cref="PathBuilder"/> instance.</returns>
         public PathBuilder AddRequiredParameter(
             string name,
-            global::System.Collections.Generic.IEnumerable<string> value,
+            global::System.Collections.Generic.IEnumerable<string?> value,
             string delimiter = ",",
             bool explode = false)
         {
+            var nonNullValues = global::System.Linq.Enumerable.OfType<string>(value);
             if (explode)
             {
-                foreach (var item in value)
+                foreach (var item in nonNullValues)
                 {
                     AddRequiredParameter($"{name}", item);
                 }
@@ -79,7 +80,7 @@ namespace HuggingFace
                 return this;
             }
 
-            AddRequiredParameter(name, string.Join(delimiter, value));
+            AddRequiredParameter(name, string.Join(delimiter, nonNullValues));
 
             return this;
         }
@@ -138,7 +139,7 @@ namespace HuggingFace
         /// <returns>The current <see cref="PathBuilder"/> instance.</returns>
         public PathBuilder AddOptionalParameter(
             string name,
-            global::System.Collections.Generic.IEnumerable<string>? value,
+            global::System.Collections.Generic.IEnumerable<string?>? value,
             string delimiter = ",",
             bool explode = false)
         {
@@ -266,32 +267,32 @@ namespace HuggingFace
     }
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class EndPointAuthorization
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string Type { get; set; } = string.Empty;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string SchemeId { get; set; } = string.Empty;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string Location { get; set; } = string.Empty;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string Value { get; set; } = string.Empty;
     }

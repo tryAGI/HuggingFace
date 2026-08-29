@@ -4,32 +4,32 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateCollectionsItemsResponseTheme
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Green,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Indigo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Orange,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pink,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Purple,
     }

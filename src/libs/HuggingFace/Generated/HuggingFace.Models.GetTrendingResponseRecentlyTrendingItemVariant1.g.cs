@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetTrendingResponseRecentlyTrendingItemVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"dataset"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
         public string RepoType { get; set; } = "dataset";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoData")]
         [global::System.Text.Json.Serialization.JsonRequired]

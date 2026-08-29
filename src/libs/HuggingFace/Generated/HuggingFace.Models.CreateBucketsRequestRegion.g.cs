@@ -9,11 +9,11 @@ namespace HuggingFace
     public enum CreateBucketsRequestRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Us,
     }

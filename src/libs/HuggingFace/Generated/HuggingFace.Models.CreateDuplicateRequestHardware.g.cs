@@ -4,124 +4,124 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateDuplicateRequestHardware
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         A100Large,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         A100x4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         A100x8,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         A10gLarge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         A10gLargex2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         A10gLargex4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         A10gSmall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CpuBasic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CpuPerformance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CpuUpgrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CpuXl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         H200,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         H200x2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         H200x4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         H200x8,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inf2x6,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         L40sx1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         L40sx4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         L40sx8,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         L4x1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         L4x4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RtxPro6000,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RtxPro6000x2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RtxPro6000x4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RtxPro6000x8,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sprx8,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         T4Medium,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         T4Small,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZeroA10g,
     }

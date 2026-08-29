@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateDuplicateRepoType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spaces,
     }

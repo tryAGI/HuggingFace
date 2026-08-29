@@ -4,240 +4,240 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetCollectionsResponseItemVariant2AvailableInferenceProviderTask2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnyToAny,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioTextToText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioToAudio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutomaticSpeechRecognition,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Conversational,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DepthEstimation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DocumentQuestionAnswering,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeatureExtraction,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FillMask,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GraphMl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageFeatureExtraction,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageSegmentation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageTextToImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageTextToText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageTextToVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageTo3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageToImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageToText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageToVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KeypointDetection,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaskGeneration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MultipleChoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ObjectDetection,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QuestionAnswering,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReinforcementLearning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Robotics,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SentenceSimilarity,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Summarization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TableQuestionAnswering,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TableToText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TabularClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TabularRegression,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TabularToText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextGeneration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextRanking,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextRetrieval,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextTo3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextToAudio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextToImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextToSpeech,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextToVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TimeSeriesForecasting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TokenClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Translation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnconditionalImageGeneration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoTextToText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoToVideo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VisualDocumentRetrieval,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VisualQuestionAnswering,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VoiceActivityDetection,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZeroShotClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZeroShotImageClassification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZeroShotObjectDetection,
     }

@@ -9,11 +9,11 @@ namespace HuggingFace
     public enum CreateNotificationsMarkAsReadReadStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unread,
     }

@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateOauthRegisterResponseGrantType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuthorizationCode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RefreshToken,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Urn_ietf_params_oauth_grantType_deviceCode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Urn_ietf_params_oauth_grantType_tokenExchange,
     }

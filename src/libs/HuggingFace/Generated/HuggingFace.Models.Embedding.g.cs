@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct Embedding : global::System.IEquatable<Embedding>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<float>? EmbeddingVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingVariant1))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsEmbeddingVariant1 => EmbeddingVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEmbeddingVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<float> PickEmbeddingVariant1() => IsEmbeddingVariant1
             ? EmbeddingVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? EmbeddingVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingVariant2))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsEmbeddingVariant2 => EmbeddingVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEmbeddingVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickEmbeddingVariant2() => IsEmbeddingVariant2
             ? EmbeddingVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Embedding(string value) => new Embedding((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(Embedding @this) => @this.EmbeddingVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Embedding(string? value)
         {
@@ -101,12 +101,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Embedding FromEmbeddingVariant2(string? value) => new Embedding(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Embedding(
             global::System.Collections.Generic.IList<float>? embeddingVariant1,
@@ -118,23 +118,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             EmbeddingVariant2 as object ??
-            EmbeddingVariant1 as object 
+            EmbeddingVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             EmbeddingVariant1?.ToString() ??
-            EmbeddingVariant2?.ToString() 
+            EmbeddingVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -142,7 +142,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::System.Collections.Generic.IList<float>, TResult>? embeddingVariant1 = null,
@@ -167,7 +167,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::System.Collections.Generic.IList<float>>? embeddingVariant1 = null,
@@ -191,7 +191,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::System.Collections.Generic.IList<float>>? embeddingVariant1 = null,
@@ -214,7 +214,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -235,18 +235,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(Embedding other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<float>?>.Default.Equals(EmbeddingVariant1, other.EmbeddingVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(EmbeddingVariant2, other.EmbeddingVariant2) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(EmbeddingVariant2, other.EmbeddingVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(Embedding obj1, Embedding obj2)
         {
@@ -254,7 +254,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(Embedding obj1, Embedding obj2)
         {
@@ -262,7 +262,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {
