@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchCollectionsResponseDataItemVariant6CdnRegion2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2JsonConverter))]
@@ -17,7 +17,7 @@ namespace HuggingFace
         public required global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2 Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("region")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6CdnRegionRegion2JsonConverter))]

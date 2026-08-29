@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateScheduledJobsRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jobSpec")]
         [global::System.Text.Json.Serialization.JsonRequired]

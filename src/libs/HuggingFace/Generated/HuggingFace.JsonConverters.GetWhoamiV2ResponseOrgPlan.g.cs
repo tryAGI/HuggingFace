@@ -20,7 +20,7 @@ namespace HuggingFace.JsonConverters
                     {
                         return global::HuggingFace.GetWhoamiV2ResponseOrgPlanExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

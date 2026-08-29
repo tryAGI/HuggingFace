@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetDiscussionsResponseVariant1EventVariant1DataReaction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reaction")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetDiscussionsResponseVariant1EventVariant1DataReactionReactionJsonConverter))]
@@ -17,14 +17,14 @@ namespace HuggingFace
         public required global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataReactionReaction Reaction { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> Users { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("count")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetJobsHardwareResponseItemAcceleratorManufacturer
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aws,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nvidia,
     }

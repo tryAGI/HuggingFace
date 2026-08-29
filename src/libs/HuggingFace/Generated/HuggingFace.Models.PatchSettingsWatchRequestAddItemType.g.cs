@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchSettingsWatchRequestAddItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Repo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

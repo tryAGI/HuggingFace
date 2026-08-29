@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetCollectionsResponseVariant1ItemItemVariant2AvailableInferenceProviderModelStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Live,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Staging,
     }

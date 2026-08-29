@@ -9,40 +9,40 @@ namespace HuggingFace
     public sealed partial class GetDailyPapersResponseItemPaper
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authors")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.GetDailyPapersResponseItemPaperAuthor> Authors { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mediaUrls")]
         public global::System.Collections.Generic.IList<string>? MediaUrls { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("publishedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime PublishedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("submittedOnDailyAt")]
         public global::System.DateTime? SubmittedOnDailyAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -55,64 +55,64 @@ namespace HuggingFace
         public global::HuggingFace.GetDailyPapersResponseItemPaperSubmittedOnDailyBy? SubmittedOnDailyBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Summary { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("upvotes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Upvotes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("withdrawnAt")]
         public global::System.DateTime? WithdrawnAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("discussionId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DiscussionId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projectPage")]
         public string? ProjectPage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("githubRepo")]
         public string? GithubRepo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ai_summary")]
         public string? AiSummary { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ai_keywords")]
         public global::System.Collections.Generic.IList<string>? AiKeywords { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ai_summary_model")]
         public string? AiSummaryModel { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("githubStars")]
         public double? GithubStars { get; set; }

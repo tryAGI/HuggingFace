@@ -20,7 +20,7 @@ namespace HuggingFace.JsonConverters
                     {
                         return global::HuggingFace.CreateCollectionsResponseItemVariant1GatedEnum2Extensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

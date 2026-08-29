@@ -20,7 +20,7 @@ namespace HuggingFace.JsonConverters
                     {
                         return global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibilityExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

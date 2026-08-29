@@ -4,28 +4,28 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetQuicksearchReposFilterVariant1Item
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GrantedAccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Own,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OwnOrgs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SkipDisabled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SkipGated,
     }

@@ -4,28 +4,28 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetOauthUserinfoResponseOrgSecurityRestriction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mfa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sso,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TokenPolicy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TokenRevoked,
     }

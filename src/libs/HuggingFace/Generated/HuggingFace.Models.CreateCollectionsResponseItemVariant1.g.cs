@@ -4,67 +4,67 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateCollectionsResponseItemVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Author { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isLikedByUser")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsLikedByUser { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("likes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Likes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetsServerInfo")]
         public global::HuggingFace.CreateCollectionsResponseItemVariant1DatasetsServerInfo? DatasetsServerInfo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Private { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"dataset"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
         public string RepoType { get; set; } = "dataset";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("downloads")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Downloads { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.CreateCollectionsResponseItemVariant1GatedEnum2?>))]
@@ -72,32 +72,32 @@ namespace HuggingFace
         public required global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCollectionsResponseItemVariant1GatedEnum2?> Gated { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastModified")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime LastModified { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
         public global::HuggingFace.CreateCollectionsResponseItemVariant1ResourceGroup? ResourceGroup { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isBenchmark")]
         public bool? IsBenchmark { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isTraces")]
         public bool? IsTraces { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"dataset"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]

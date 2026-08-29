@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateJobsDuplicateResponseHfTokenTokenRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FineGrained,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Read,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Write,
     }

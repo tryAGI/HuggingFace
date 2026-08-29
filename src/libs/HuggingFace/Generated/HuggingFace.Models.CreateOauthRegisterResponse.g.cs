@@ -4,64 +4,64 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateOauthRegisterResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ClientId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_secret")]
         public string? ClientSecret { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_id_issued_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double ClientIdIssuedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_secret_expires_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double ClientSecretExpiresAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("redirect_uris")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> RedirectUris { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_name")]
         public string? ClientName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_uri")]
         public string? ClientUri { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("logo_uri")]
         public string? LogoUri { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -75,26 +75,26 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateOauthRegisterResponseGrantType> GrantTypes { get; set; } = default!;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contacts")]
         public global::System.Collections.Generic.IList<string>? Contacts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("token_endpoint_auth_method")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOauthRegisterResponseTokenEndpointAuthMethodJsonConverter))]
         public global::HuggingFace.CreateOauthRegisterResponseTokenEndpointAuthMethod? TokenEndpointAuthMethod { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("software_id")]
         public string? SoftwareId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("software_version")]
         public string? SoftwareVersion { get; set; }

@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSettingsBillingUsageResponsePeriodInvoiceVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"no-invoice"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "no-invoice";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"no-invoice"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]

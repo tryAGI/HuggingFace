@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GenerateRequest
     {
@@ -17,7 +17,7 @@ namespace HuggingFace
         public required string Inputs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameters")]
         public global::HuggingFace.GenerateParameters? Parameters { get; set; }

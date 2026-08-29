@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetCollectionsResponseGatingVariant3NotificationsMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RealTime,
     }

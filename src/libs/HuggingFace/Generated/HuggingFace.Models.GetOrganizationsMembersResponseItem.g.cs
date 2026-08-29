@@ -4,73 +4,73 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsMembersResponseItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatarUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AvatarUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fullname")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Fullname { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPro")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsPro { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string User { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"user"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "user";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isFollowing")]
         public bool? IsFollowing { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsMembersResponseItemRoleJsonConverter))]
         public global::HuggingFace.GetOrganizationsMembersResponseItemRole? Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroups")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroup>? ResourceGroups { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("twoFaEnabled")]
         public bool? TwoFaEnabled { get; set; }
@@ -82,7 +82,7 @@ namespace HuggingFace
         public string? VerifiedEmail { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isExternalCollaborator")]
         public bool? IsExternalCollaborator { get; set; }

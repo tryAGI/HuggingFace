@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgPlan2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Academia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enterprise,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Plus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Team,
     }

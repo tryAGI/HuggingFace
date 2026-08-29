@@ -4,156 +4,162 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetUsersOverviewResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("orgs")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetUsersOverviewResponseOrg>? Orgs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatarUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AvatarUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fullname")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Fullname { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPro")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsPro { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string User { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numModels")]
         public double? NumModels { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numDatasets")]
         public double? NumDatasets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numSpaces")]
         public double? NumSpaces { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numBuckets")]
         public double? NumBuckets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numKernels")]
         public double? NumKernels { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numDiscussions")]
         public double? NumDiscussions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numPapers")]
         public double? NumPapers { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numUpvotes")]
         public double? NumUpvotes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numLikes")]
         public double? NumLikes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numFollowers")]
         public double? NumFollowers { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numFollowing")]
         public double? NumFollowing { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numFollowingOrgs")]
         public double? NumFollowingOrgs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
         public string? Details { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isFollowing")]
         public bool? IsFollowing { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasonToFollow")]
         public string? ReasonToFollow { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("primaryOrgAvatarUrl")]
         public string? PrimaryOrgAvatarUrl { get; set; }
 
         /// <summary>
-        /// 
+        /// Set when the user is a service account
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("serviceAccount")]
+        public global::HuggingFace.GetUsersOverviewResponseServiceAccount? ServiceAccount { get; set; }
+
+        /// <summary>
+        ///
         /// </summary>
         /// <default>"user"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "user";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -197,6 +203,9 @@ namespace HuggingFace
         /// <param name="isFollowing"></param>
         /// <param name="reasonToFollow"></param>
         /// <param name="primaryOrgAvatarUrl"></param>
+        /// <param name="serviceAccount">
+        /// Set when the user is a service account
+        /// </param>
         /// <param name="hardwareItems">
         /// The user's hardware items, unless the user set them as private
         /// </param>
@@ -228,6 +237,7 @@ namespace HuggingFace
             bool? isFollowing,
             string? reasonToFollow,
             string? primaryOrgAvatarUrl,
+            global::HuggingFace.GetUsersOverviewResponseServiceAccount? serviceAccount,
             global::System.Collections.Generic.IList<global::HuggingFace.GetUsersOverviewResponseHardwareItem>? hardwareItems,
             string type = "user")
         {
@@ -253,6 +263,7 @@ namespace HuggingFace
             this.IsFollowing = isFollowing;
             this.ReasonToFollow = reasonToFollow;
             this.PrimaryOrgAvatarUrl = primaryOrgAvatarUrl;
+            this.ServiceAccount = serviceAccount;
             this.Type = type;
             this.CreatedAt = createdAt;
             this.HardwareItems = hardwareItems;

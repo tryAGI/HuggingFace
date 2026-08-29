@@ -4,18 +4,18 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningAccountRequestsRequestOrchestratorStripe
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
         public string? Organization { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("account")]
         [global::System.Text.Json.Serialization.JsonRequired]

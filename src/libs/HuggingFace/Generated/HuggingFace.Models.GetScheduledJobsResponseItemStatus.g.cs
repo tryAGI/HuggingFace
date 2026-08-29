@@ -4,18 +4,18 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetScheduledJobsResponseItemStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastJob")]
         public global::HuggingFace.GetScheduledJobsResponseItemStatusLastJob2? LastJob { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nextJobRunAt")]
         [global::System.Text.Json.Serialization.JsonRequired]

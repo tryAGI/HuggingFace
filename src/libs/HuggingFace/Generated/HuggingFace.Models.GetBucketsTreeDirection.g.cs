@@ -9,11 +9,11 @@ namespace HuggingFace
     public enum GetBucketsTreeDirection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

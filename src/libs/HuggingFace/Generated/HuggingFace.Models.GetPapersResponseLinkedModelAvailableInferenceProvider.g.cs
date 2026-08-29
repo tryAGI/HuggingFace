@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetPapersResponseLinkedModelAvailableInferenceProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderJsonConverter))]
@@ -17,7 +17,7 @@ namespace HuggingFace
         public required global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("providerStatus")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatusJsonConverter))]
@@ -25,7 +25,7 @@ namespace HuggingFace
         public required global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus ProviderStatus { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelStatus")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderModelStatusJsonConverter))]
@@ -33,14 +33,14 @@ namespace HuggingFace
         public required global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderModelStatus ModelStatus { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("providerId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProviderId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("task")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderTaskJsonConverter))]
@@ -48,58 +48,58 @@ namespace HuggingFace
         public required global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderTask Task { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("adapterType")]
         public string? AdapterType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("adapterWeightsPath")]
         public string? AdapterWeightsPath { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("features")]
         public global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderFeatures? Features { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isCheapestPricingOutput")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsCheapestPricingOutput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isFastestThroughput")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsFastestThroughput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isModelAuthor")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsModelAuthor { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokensPerSecond")]
         public double? TokensPerSecond { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pricingOutput")]
         public double? PricingOutput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("freeUntil")]
         public global::System.DateTime? FreeUntil { get; set; }

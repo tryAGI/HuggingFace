@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateCollectionsResponseItemVariant6CdnRegionRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Us,
     }

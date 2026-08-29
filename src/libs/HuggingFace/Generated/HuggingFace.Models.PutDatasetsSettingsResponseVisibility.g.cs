@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum PutDatasetsSettingsResponseVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Protected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningResourcesResponseVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"complete"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         public string Status { get; set; } = "complete";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("complete")]
         [global::System.Text.Json.Serialization.JsonRequired]

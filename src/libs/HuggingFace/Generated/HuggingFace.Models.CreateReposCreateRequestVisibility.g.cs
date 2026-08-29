@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum CreateReposCreateRequestVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Protected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }

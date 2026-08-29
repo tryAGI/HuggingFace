@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct SagemakerResponse : global::System.IEquatable<SagemakerResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.GenerateResponse? Generate { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Generate))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsGenerate => Generate != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGenerate(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.GenerateResponse PickGenerate() => IsGenerate
             ? Generate!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Generate' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ChatCompletion? ChatCompletion { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletion))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsChatCompletion => ChatCompletion != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickChatCompletion(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ChatCompletion PickChatCompletion() => IsChatCompletion
             ? ChatCompletion!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletion' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.CompletionFinal? CompletionFinal { get; init; }
@@ -93,7 +93,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionFinal))]
@@ -101,7 +101,7 @@ namespace HuggingFace
         public bool IsCompletionFinal => CompletionFinal != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCompletionFinal(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.CompletionFinal PickCompletionFinal() => IsCompletionFinal
             ? CompletionFinal!
             : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionFinal' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SagemakerResponse(global::HuggingFace.GenerateResponse value) => new SagemakerResponse((global::HuggingFace.GenerateResponse?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.GenerateResponse?(SagemakerResponse @this) => @this.Generate;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerResponse(global::HuggingFace.GenerateResponse? value)
         {
@@ -138,22 +138,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SagemakerResponse FromGenerate(global::HuggingFace.GenerateResponse? value) => new SagemakerResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SagemakerResponse(global::HuggingFace.ChatCompletion value) => new SagemakerResponse((global::HuggingFace.ChatCompletion?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ChatCompletion?(SagemakerResponse @this) => @this.ChatCompletion;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerResponse(global::HuggingFace.ChatCompletion? value)
         {
@@ -161,22 +161,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SagemakerResponse FromChatCompletion(global::HuggingFace.ChatCompletion? value) => new SagemakerResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SagemakerResponse(global::HuggingFace.CompletionFinal value) => new SagemakerResponse((global::HuggingFace.CompletionFinal?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.CompletionFinal?(SagemakerResponse @this) => @this.CompletionFinal;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerResponse(global::HuggingFace.CompletionFinal? value)
         {
@@ -184,12 +184,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SagemakerResponse FromCompletionFinal(global::HuggingFace.CompletionFinal? value) => new SagemakerResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SagemakerResponse(
             global::HuggingFace.GenerateResponse? generate,
@@ -203,25 +203,25 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             CompletionFinal as object ??
             ChatCompletion as object ??
-            Generate as object 
+            Generate as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Generate?.ToString() ??
             ChatCompletion?.ToString() ??
-            CompletionFinal?.ToString() 
+            CompletionFinal?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.GenerateResponse, TResult>? generate = null,
@@ -259,7 +259,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.GenerateResponse>? generate = null,
@@ -289,7 +289,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::HuggingFace.GenerateResponse>? generate = null,
@@ -317,7 +317,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(SagemakerResponse other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.GenerateResponse?>.Default.Equals(Generate, other.Generate) &&
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ChatCompletion?>.Default.Equals(ChatCompletion, other.ChatCompletion) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.CompletionFinal?>.Default.Equals(CompletionFinal, other.CompletionFinal) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.CompletionFinal?>.Default.Equals(CompletionFinal, other.CompletionFinal)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(SagemakerResponse obj1, SagemakerResponse obj2)
         {
@@ -360,7 +360,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(SagemakerResponse obj1, SagemakerResponse obj2)
         {
@@ -368,7 +368,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

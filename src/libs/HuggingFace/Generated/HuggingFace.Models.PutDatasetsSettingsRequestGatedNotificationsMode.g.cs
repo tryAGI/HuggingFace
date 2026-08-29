@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PutDatasetsSettingsRequestGatedNotificationsMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RealTime,
     }

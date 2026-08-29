@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct PredictResponse : global::System.IEquatable<PredictResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? PredictResponseVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictResponseVariant1))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsPredictResponseVariant1 => PredictResponseVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPredictResponseVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<global::HuggingFace.Prediction> PickPredictResponseVariant1() => IsPredictResponseVariant1
             ? PredictResponseVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PredictResponseVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? PredictResponseVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PredictResponseVariant2))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsPredictResponseVariant2 => PredictResponseVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPredictResponseVariant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>> PickPredictResponseVariant2() => IsPredictResponseVariant2
             ? PredictResponseVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PredictResponseVariant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PredictResponse(
             global::System.Collections.Generic.IList<global::HuggingFace.Prediction>? predictResponseVariant1,
@@ -96,23 +96,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             PredictResponseVariant2 as object ??
-            PredictResponseVariant1 as object 
+            PredictResponseVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             PredictResponseVariant1?.ToString() ??
-            PredictResponseVariant2?.ToString() 
+            PredictResponseVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -120,7 +120,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>, TResult>? predictResponseVariant1 = null,
@@ -145,7 +145,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? predictResponseVariant1 = null,
@@ -169,7 +169,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>? predictResponseVariant1 = null,
@@ -192,7 +192,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -213,18 +213,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(PredictResponse other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>?>.Default.Equals(PredictResponseVariant1, other.PredictResponseVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?>.Default.Equals(PredictResponseVariant2, other.PredictResponseVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>>?>.Default.Equals(PredictResponseVariant2, other.PredictResponseVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(PredictResponse obj1, PredictResponse obj2)
         {
@@ -232,7 +232,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(PredictResponse obj1, PredictResponse obj2)
         {
@@ -240,7 +240,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

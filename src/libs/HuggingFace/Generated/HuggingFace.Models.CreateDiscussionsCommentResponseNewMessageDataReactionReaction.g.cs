@@ -4,56 +4,56 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateDiscussionsCommentResponseNewMessageDataReactionReaction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Brain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eyes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fire,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Handshake,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Heart,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hugs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mindblown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Plus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rocket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thumbsup,
     }

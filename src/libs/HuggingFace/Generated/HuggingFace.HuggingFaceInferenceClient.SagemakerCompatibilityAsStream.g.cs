@@ -94,6 +94,10 @@ namespace HuggingFace
                 __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
+                __httpRequest.Headers.TryAddWithoutValidation(
+                    "Accept",
+                    "text/event-stream");
+
             foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
@@ -108,7 +112,7 @@ namespace HuggingFace
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

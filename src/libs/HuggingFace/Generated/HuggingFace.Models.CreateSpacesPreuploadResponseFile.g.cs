@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateSpacesPreuploadResponseFile
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Path { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uploadMode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateSpacesPreuploadResponseFileUploadModeJsonConverter))]
@@ -24,7 +24,7 @@ namespace HuggingFace
         public required global::HuggingFace.CreateSpacesPreuploadResponseFileUploadMode UploadMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("shouldIgnore")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,33 +4,33 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateOauthDeviceResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("device_code")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DeviceCode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user_code")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string UserCode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("verification_uri")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string VerificationUri { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("expires_in")]
         [global::System.Text.Json.Serialization.JsonRequired]

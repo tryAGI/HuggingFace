@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWhoamiV2ResponseOrgBillingMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Postpaid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prepaid,
     }

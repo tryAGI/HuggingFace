@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant3ComponentOptionVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"paid"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "paid";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paid")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3ComponentOptionVariant2PaidVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3ComponentOptionVariant2PaidVariant2>))]
@@ -24,13 +24,13 @@ namespace HuggingFace
         public required global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3ComponentOptionVariant2PaidVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3ComponentOptionVariant2PaidVariant2> Paid { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("default")]
         public bool? Default { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parent_service_ids")]
         public global::System.Collections.Generic.IList<string>? ParentServiceIds { get; set; }

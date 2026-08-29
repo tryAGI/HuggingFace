@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateScheduledJobsRunResponse2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"Another job is already running at the same time, set `concurrency` to allow multiple instances of scheduled jobs to run concurrently"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]

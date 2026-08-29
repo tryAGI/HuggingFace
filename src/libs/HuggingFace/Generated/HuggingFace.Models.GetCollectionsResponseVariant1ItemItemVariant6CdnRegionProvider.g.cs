@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetCollectionsResponseVariant1ItemItemVariant6CdnRegionProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aws,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gcp,
     }

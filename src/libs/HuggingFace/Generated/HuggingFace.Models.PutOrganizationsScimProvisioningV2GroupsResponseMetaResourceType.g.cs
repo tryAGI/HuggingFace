@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PutOrganizationsScimProvisioningV2GroupsResponseMetaResourceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Group,
     }

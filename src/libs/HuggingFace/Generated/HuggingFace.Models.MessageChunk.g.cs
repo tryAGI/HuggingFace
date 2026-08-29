@@ -5,17 +5,17 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct MessageChunk : global::System.IEquatable<MessageChunk>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.MessageChunkDiscriminatorType? Type { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageChunkVariant1? Text { get; init; }
@@ -24,7 +24,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Text))]
@@ -32,7 +32,7 @@ namespace HuggingFace
         public bool IsText => Text != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickText(
 #if NET6_0_OR_GREATER
@@ -45,14 +45,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.MessageChunkVariant1 PickText() => IsText
             ? Text!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.MessageChunkVariant2? ImageUrl { get; init; }
@@ -61,7 +61,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ImageUrl))]
@@ -69,7 +69,7 @@ namespace HuggingFace
         public bool IsImageUrl => ImageUrl != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickImageUrl(
 #if NET6_0_OR_GREATER
@@ -82,23 +82,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.MessageChunkVariant2 PickImageUrl() => IsImageUrl
             ? ImageUrl!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ImageUrl' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MessageChunk(global::HuggingFace.MessageChunkVariant1 value) => new MessageChunk((global::HuggingFace.MessageChunkVariant1?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.MessageChunkVariant1?(MessageChunk @this) => @this.Text;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MessageChunk(global::HuggingFace.MessageChunkVariant1? value)
         {
@@ -106,22 +106,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MessageChunk FromText(global::HuggingFace.MessageChunkVariant1? value) => new MessageChunk(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MessageChunk(global::HuggingFace.MessageChunkVariant2 value) => new MessageChunk((global::HuggingFace.MessageChunkVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.MessageChunkVariant2?(MessageChunk @this) => @this.ImageUrl;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MessageChunk(global::HuggingFace.MessageChunkVariant2? value)
         {
@@ -129,12 +129,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MessageChunk FromImageUrl(global::HuggingFace.MessageChunkVariant2? value) => new MessageChunk(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MessageChunk(
             global::HuggingFace.MessageChunkDiscriminatorType? type,
@@ -149,23 +149,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ImageUrl as object ??
-            Text as object 
+            Text as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Text?.ToString() ??
-            ImageUrl?.ToString() 
+            ImageUrl?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -173,7 +173,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.MessageChunkVariant1, TResult>? text = null,
@@ -198,7 +198,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.MessageChunkVariant1>? text = null,
@@ -222,7 +222,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::HuggingFace.MessageChunkVariant1>? text = null,
@@ -245,7 +245,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -266,18 +266,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(MessageChunk other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.MessageChunkVariant1?>.Default.Equals(Text, other.Text) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.MessageChunkVariant2?>.Default.Equals(ImageUrl, other.ImageUrl) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.MessageChunkVariant2?>.Default.Equals(ImageUrl, other.ImageUrl)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(MessageChunk obj1, MessageChunk obj2)
         {
@@ -285,7 +285,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(MessageChunk obj1, MessageChunk obj2)
         {
@@ -293,7 +293,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TextMessage
     {
@@ -25,7 +25,7 @@ namespace HuggingFace
         public required string Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tool_call_id")]
         public string? ToolCallId { get; set; }

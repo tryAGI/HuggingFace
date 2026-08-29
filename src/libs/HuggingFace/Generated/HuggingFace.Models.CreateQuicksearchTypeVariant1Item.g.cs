@@ -4,44 +4,44 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateQuicksearchTypeVariant1Item
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bucket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Collection,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Paper,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Space,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

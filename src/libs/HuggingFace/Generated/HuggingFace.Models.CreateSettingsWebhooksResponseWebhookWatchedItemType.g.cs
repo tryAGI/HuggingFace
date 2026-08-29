@@ -4,36 +4,36 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateSettingsWebhooksResponseWebhookWatchedItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bucket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Space,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

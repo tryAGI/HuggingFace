@@ -4,28 +4,28 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateModelsResourceGroupResponseType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bucket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Space,
     }

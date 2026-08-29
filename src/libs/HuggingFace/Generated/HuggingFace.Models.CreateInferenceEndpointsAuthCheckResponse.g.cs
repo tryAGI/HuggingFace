@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateInferenceEndpointsAuthCheckResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("namespace")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace Namespace { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser User { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
         public string? ResourceGroupId { get; set; }

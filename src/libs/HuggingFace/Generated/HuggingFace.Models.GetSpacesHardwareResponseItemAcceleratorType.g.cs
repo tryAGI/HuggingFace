@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetSpacesHardwareResponseItemAcceleratorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neuron,
     }

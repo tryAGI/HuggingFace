@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateSqlConsoleEmbedRepoType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datasets,
     }

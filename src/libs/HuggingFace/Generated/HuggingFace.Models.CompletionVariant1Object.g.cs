@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CompletionVariant1Object
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextCompletion,
     }

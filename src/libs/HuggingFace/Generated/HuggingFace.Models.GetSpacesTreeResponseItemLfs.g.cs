@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSpacesTreeResponseItemLfs
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("oid")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Oid { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Size { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pointerSize")]
         [global::System.Text.Json.Serialization.JsonRequired]

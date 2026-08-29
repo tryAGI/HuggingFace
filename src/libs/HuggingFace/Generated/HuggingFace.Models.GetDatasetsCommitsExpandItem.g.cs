@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDatasetsCommitsExpandItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Formatted,
     }

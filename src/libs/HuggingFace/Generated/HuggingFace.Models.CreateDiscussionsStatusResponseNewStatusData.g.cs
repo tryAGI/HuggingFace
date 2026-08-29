@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDiscussionsStatusResponseNewStatusData
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateDiscussionsStatusResponseNewStatusDataStatusJsonConverter))]
@@ -17,7 +17,7 @@ namespace HuggingFace
         public required global::HuggingFace.CreateDiscussionsStatusResponseNewStatusDataStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reason")]
         public string? Reason { get; set; }

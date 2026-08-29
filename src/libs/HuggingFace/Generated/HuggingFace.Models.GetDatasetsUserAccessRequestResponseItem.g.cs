@@ -4,25 +4,25 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetDatasetsUserAccessRequestResponseItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         public global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUser? User { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("grantedBy")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>))]
         public global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>? GrantedBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetDatasetsUserAccessRequestResponseItemStatusJsonConverter))]
@@ -30,20 +30,20 @@ namespace HuggingFace
         public required global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fields")]
         public global::System.Collections.Generic.Dictionary<string, string>? Fields { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime Timestamp { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reviewedAt")]
         public global::System.DateTime? ReviewedAt { get; set; }

@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateBucketsLfsFilesDuplicateRequestTargetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Space,
     }

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchOrganizationsScimProvisioningV2UsersRequestOperation
     {
@@ -17,14 +17,14 @@ namespace HuggingFace
         public required global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp Op { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PatchOrganizationsScimProvisioningV2UsersRequestOperationPathJsonConverter))]
         public global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath? Path { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]

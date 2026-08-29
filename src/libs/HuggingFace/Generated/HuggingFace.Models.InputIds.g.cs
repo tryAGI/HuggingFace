@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct InputIds : global::System.IEquatable<InputIds>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<int>? InputIdsVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputIdsVariant1))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsInputIdsVariant1 => InputIdsVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickInputIdsVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<int> PickInputIdsVariant1() => IsInputIdsVariant1
             ? InputIdsVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputIdsVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>? InputIdsVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputIdsVariant2))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsInputIdsVariant2 => InputIdsVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickInputIdsVariant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>> PickInputIdsVariant2() => IsInputIdsVariant2
             ? InputIdsVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputIdsVariant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputIds(
             global::System.Collections.Generic.IList<int>? inputIdsVariant1,
@@ -96,23 +96,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             InputIdsVariant2 as object ??
-            InputIdsVariant1 as object 
+            InputIdsVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             InputIdsVariant1?.ToString() ??
-            InputIdsVariant2?.ToString() 
+            InputIdsVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -120,7 +120,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::System.Collections.Generic.IList<int>, TResult>? inputIdsVariant1 = null,
@@ -145,7 +145,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::System.Collections.Generic.IList<int>>? inputIdsVariant1 = null,
@@ -169,7 +169,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::System.Collections.Generic.IList<int>>? inputIdsVariant1 = null,
@@ -192,7 +192,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -213,18 +213,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(InputIds other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<int>?>.Default.Equals(InputIdsVariant1, other.InputIdsVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>?>.Default.Equals(InputIdsVariant2, other.InputIdsVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>?>.Default.Equals(InputIdsVariant2, other.InputIdsVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(InputIds obj1, InputIds obj2)
         {
@@ -232,7 +232,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(InputIds obj1, InputIds obj2)
         {
@@ -240,7 +240,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

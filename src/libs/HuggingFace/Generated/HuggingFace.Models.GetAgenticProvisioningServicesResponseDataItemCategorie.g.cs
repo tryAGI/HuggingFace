@@ -4,72 +4,72 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetAgenticProvisioningServicesResponseDataItemCategorie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Analytics,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auth,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cache,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cdn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ci,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Compute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Database,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeatureFlags,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Messaging,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Notification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Observability,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Payments,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Search,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Storage,
     }

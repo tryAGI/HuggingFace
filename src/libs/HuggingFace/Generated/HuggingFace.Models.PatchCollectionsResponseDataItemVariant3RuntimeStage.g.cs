@@ -4,60 +4,60 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchCollectionsResponseDataItemVariant3RuntimeStage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AppStarting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Building,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BuildError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConfigError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deleting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoAppFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Paused,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Running,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunningAppStarting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunningBuilding,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RuntimeError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sleeping,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stopped,
     }

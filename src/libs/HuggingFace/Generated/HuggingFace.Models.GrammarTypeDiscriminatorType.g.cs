@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GrammarTypeDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JsonSchema,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regex,
     }

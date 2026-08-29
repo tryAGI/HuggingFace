@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDiscussionsResponseVariant1Collection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CommunityBlogs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Discussions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PaperDiscussions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SocialPosts,
     }

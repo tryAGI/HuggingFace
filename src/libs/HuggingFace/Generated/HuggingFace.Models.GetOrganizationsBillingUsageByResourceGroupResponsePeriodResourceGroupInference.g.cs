@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsBillingUsageByResourceGroupResponsePeriodResourceGroupInference
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requestCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double RequestCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("costCents")]
         [global::System.Text.Json.Serialization.JsonRequired]

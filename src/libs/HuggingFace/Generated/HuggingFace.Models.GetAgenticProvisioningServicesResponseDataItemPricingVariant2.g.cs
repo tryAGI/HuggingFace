@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"paid"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "paid";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paid")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant1Variant2>?, global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2PaidVariant2ItemVariant2>>>))]

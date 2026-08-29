@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetKernelsResponseItemBuildMetadataCompatibilityArchItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aarch64,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arm64,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         X8664,
     }

@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDatasetsTreeResponseItemSecurityFileStatusAvScanPickleImportSafety
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dangerous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Innocuous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Suspicious,
     }

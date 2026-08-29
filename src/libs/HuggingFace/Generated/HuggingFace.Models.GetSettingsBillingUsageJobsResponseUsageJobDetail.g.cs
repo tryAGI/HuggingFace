@@ -4,47 +4,47 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSettingsBillingUsageJobsResponseUsageJobDetail
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jobId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string JobId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hardwareFlavor")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HardwareFlavor { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalMinutes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double TotalMinutes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalCostMicroUsd")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double TotalCostMicroUsd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("startedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime StartedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completedAt")]
         public global::System.DateTime? CompletedAt { get; set; }

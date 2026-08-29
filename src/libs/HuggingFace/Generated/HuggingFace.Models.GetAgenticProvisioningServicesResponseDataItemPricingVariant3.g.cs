@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant3
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"component"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "component";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("component")]
         [global::System.Text.Json.Serialization.JsonRequired]

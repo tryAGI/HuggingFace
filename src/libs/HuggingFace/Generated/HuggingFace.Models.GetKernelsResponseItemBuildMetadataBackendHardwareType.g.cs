@@ -4,256 +4,256 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetKernelsResponseItemBuildMetadataBackendHardwareType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x100,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x100Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x100a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x100f,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x103,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x103Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x103a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x110,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x110Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x110a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x120,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x120Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x120a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x120f,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x121,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x121Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x121a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x130,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x130Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x130a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x130f,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x50,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x50Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x52,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x52Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x60,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x60Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x61,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x61Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x62,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x62Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x70,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x70Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x72,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x72Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x75,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x75Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x80,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x80Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x86,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x86Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x87,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x87Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x89,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x89Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x90,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x90Plusptx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x90a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1030,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1100,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1101,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1102,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1150,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1151,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1200,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx1201,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx900,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx906,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx908,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx90a,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx942,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfx950,
     }

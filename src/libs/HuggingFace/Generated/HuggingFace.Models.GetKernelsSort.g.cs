@@ -10,31 +10,31 @@ namespace HuggingFace
     public enum GetKernelsSort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Downloads,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Id2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LastModified,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Likes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Likes30d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TrendingScore,
     }

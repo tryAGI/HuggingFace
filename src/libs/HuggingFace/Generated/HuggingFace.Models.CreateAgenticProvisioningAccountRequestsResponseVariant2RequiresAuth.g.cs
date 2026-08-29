@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningAccountRequestsResponseVariant2RequiresAuth
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"redirect"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "redirect";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("redirect")]
         [global::System.Text.Json.Serialization.JsonRequired]

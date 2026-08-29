@@ -9,11 +9,11 @@ namespace HuggingFace
     public enum DeleteNotificationsReadStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unread,
     }

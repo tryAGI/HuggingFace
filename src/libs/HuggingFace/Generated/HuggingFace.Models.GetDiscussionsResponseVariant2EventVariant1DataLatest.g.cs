@@ -4,33 +4,33 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetDiscussionsResponseVariant2EventVariant1DataLatest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("raw")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Raw { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("html")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Html { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2>))]

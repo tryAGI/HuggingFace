@@ -4,48 +4,48 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetCollectionsResponseItemVariant1DatasetsServerInfoFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentTraces,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arrow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audiofolder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Csv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Imagefolder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OptimizedParquet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Parquet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Webdataset,
     }

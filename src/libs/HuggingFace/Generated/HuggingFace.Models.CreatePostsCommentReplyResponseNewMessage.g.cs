@@ -4,40 +4,40 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreatePostsCommentReplyResponseNewMessage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AllOfJsonConverter<global::HuggingFace.AnyOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthor>))]
         public global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthor>? Author { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"comment"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "comment";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonRequired]

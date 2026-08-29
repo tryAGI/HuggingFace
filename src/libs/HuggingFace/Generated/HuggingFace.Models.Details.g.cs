@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Details
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("best_of_sequences")]
         public global::System.Collections.Generic.IList<global::HuggingFace.BestOfSequence>? BestOfSequences { get; set; }
@@ -32,7 +32,7 @@ namespace HuggingFace
         public required int GeneratedTokens { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prefill")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -46,14 +46,14 @@ namespace HuggingFace
         public long? Seed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokens")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.Token> Tokens { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("top_tokens")]
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Token>>? TopTokens { get; set; }

@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ChatCompletionDelta : global::System.IEquatable<ChatCompletionDelta>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.TextMessage? TextMessage { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TextMessage))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsTextMessage => TextMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTextMessage(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.TextMessage PickTextMessage() => IsTextMessage
             ? TextMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolCallDelta? ToolCall { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolCall))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsToolCall => ToolCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolCall(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ToolCallDelta PickToolCall() => IsToolCall
             ? ToolCall!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCall' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionDelta(global::HuggingFace.TextMessage value) => new ChatCompletionDelta((global::HuggingFace.TextMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.TextMessage?(ChatCompletionDelta @this) => @this.TextMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionDelta(global::HuggingFace.TextMessage? value)
         {
@@ -101,22 +101,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionDelta FromTextMessage(global::HuggingFace.TextMessage? value) => new ChatCompletionDelta(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionDelta(global::HuggingFace.ToolCallDelta value) => new ChatCompletionDelta((global::HuggingFace.ToolCallDelta?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ToolCallDelta?(ChatCompletionDelta @this) => @this.ToolCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionDelta(global::HuggingFace.ToolCallDelta? value)
         {
@@ -124,12 +124,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionDelta FromToolCall(global::HuggingFace.ToolCallDelta? value) => new ChatCompletionDelta(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionDelta(
             global::HuggingFace.TextMessage? textMessage,
@@ -141,23 +141,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ToolCall as object ??
-            TextMessage as object 
+            TextMessage as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             TextMessage?.ToString() ??
-            ToolCall?.ToString() 
+            ToolCall?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.TextMessage, TResult>? textMessage = null,
@@ -190,7 +190,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.TextMessage>? textMessage = null,
@@ -214,7 +214,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::HuggingFace.TextMessage>? textMessage = null,
@@ -237,7 +237,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ChatCompletionDelta other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.TextMessage?>.Default.Equals(TextMessage, other.TextMessage) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolCallDelta?>.Default.Equals(ToolCall, other.ToolCall) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolCallDelta?>.Default.Equals(ToolCall, other.ToolCall)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ChatCompletionDelta obj1, ChatCompletionDelta obj2)
         {
@@ -277,7 +277,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ChatCompletionDelta obj1, ChatCompletionDelta obj2)
         {
@@ -285,7 +285,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

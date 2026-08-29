@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetSettingsWebhooksResponseItemDomain
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Discussion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Repo,
     }

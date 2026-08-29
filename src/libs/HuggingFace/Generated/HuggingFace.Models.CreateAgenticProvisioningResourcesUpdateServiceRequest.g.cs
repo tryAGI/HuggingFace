@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesUpdateServiceRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("service_id")]
         public string? ServiceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configuration")]
         public global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequestConfiguration? Configuration { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("payment_credentials")]
         public global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequestPaymentCredentials? PaymentCredentials { get; set; }

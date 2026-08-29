@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum GetNotificationsMention
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mentions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Participating,
     }

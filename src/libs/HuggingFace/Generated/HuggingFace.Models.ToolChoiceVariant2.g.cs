@@ -9,7 +9,7 @@ namespace HuggingFace
     public enum ToolChoiceVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

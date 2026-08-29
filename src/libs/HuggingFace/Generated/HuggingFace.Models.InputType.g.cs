@@ -5,12 +5,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct InputType : global::System.IEquatable<InputType>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? InputTypeVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputTypeVariant1))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsInputTypeVariant1 => InputTypeVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickInputTypeVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickInputTypeVariant1() => IsInputTypeVariant1
             ? InputTypeVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputTypeVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<int>? InputTypeVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputTypeVariant2))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsInputTypeVariant2 => InputTypeVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickInputTypeVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<int> PickInputTypeVariant2() => IsInputTypeVariant2
             ? InputTypeVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputTypeVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputType(string value) => new InputType((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(InputType @this) => @this.InputTypeVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputType(string? value)
         {
@@ -101,12 +101,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputType FromInputTypeVariant1(string? value) => new InputType(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputType(
             string? inputTypeVariant1,
@@ -118,23 +118,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             InputTypeVariant2 as object ??
-            InputTypeVariant1 as object 
+            InputTypeVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             InputTypeVariant1?.ToString() ??
-            InputTypeVariant2?.ToString() 
+            InputTypeVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -142,7 +142,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<string, TResult>? inputTypeVariant1 = null,
@@ -167,7 +167,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<string>? inputTypeVariant1 = null,
@@ -191,7 +191,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<string>? inputTypeVariant1 = null,
@@ -214,7 +214,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -235,18 +235,18 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(InputType other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(InputTypeVariant1, other.InputTypeVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<int>?>.Default.Equals(InputTypeVariant2, other.InputTypeVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<int>?>.Default.Equals(InputTypeVariant2, other.InputTypeVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(InputType obj1, InputType obj2)
         {
@@ -254,7 +254,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(InputType obj1, InputType obj2)
         {
@@ -262,7 +262,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -4,39 +4,39 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchCollectionsResponseDataItemVariant62
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Author { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
         public bool? Private { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -57,39 +57,39 @@ namespace HuggingFace
         public required double TotalFiles { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"bucket"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
         public string RepoType { get; set; } = "bucket";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("adminTags")]
         public global::System.Collections.Generic.IList<string>? AdminTags { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("disabled")]
         public global::HuggingFace.PatchCollectionsResponseDataItemVariant6Disabled2? Disabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cdnRegions")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegion2> CdnRegions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
         public global::HuggingFace.PatchCollectionsResponseDataItemVariant6ResourceGroup2? ResourceGroup { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"bucket"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]

@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDiscussionsResponseVariant2Status
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Closed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Draft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Merged,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Open,
     }

@@ -14,7 +14,7 @@ namespace HuggingFace
         /// </summary>
         Storage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpdatedAt,
     }

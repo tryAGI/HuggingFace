@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Docker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gradio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Static,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Streamlit,
     }

@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningServicesResponseDataItemAllowedUpdate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("service")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Service { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("direction")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetAgenticProvisioningServicesResponseDataItemAllowedUpdateDirectionJsonConverter))]

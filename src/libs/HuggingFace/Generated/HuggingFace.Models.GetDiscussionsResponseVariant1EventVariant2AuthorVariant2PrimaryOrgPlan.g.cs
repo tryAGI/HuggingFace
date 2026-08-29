@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetDiscussionsResponseVariant1EventVariant2AuthorVariant2PrimaryOrgPlan
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Academia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enterprise,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Plus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Team,
     }

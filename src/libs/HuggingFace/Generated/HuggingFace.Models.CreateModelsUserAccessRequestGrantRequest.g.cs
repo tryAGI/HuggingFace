@@ -9,13 +9,13 @@ namespace HuggingFace
     public sealed partial class CreateModelsUserAccessRequestGrantRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
         public string? UserId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         public string? User { get; set; }

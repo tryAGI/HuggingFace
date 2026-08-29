@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningResourcesResponseVariant3
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"removed"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         public string Status { get; set; } = "removed";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

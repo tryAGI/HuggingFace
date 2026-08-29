@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetBucketsResponseItemCdnRegionProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Aws,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gcp,
     }

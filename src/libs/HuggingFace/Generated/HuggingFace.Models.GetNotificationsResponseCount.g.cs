@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetNotificationsResponseCount
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("view")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double View { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unread")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Unread { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("all")]
         [global::System.Text.Json.Serialization.JsonRequired]

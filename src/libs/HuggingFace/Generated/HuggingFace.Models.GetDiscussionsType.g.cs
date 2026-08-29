@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum GetDiscussionsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Discussion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PullRequest,
     }

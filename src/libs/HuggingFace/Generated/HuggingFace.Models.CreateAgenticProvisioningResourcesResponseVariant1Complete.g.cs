@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesResponseVariant1Complete
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("access_configuration")]
         [global::System.Text.Json.Serialization.JsonRequired]

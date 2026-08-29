@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateModelsUserAccessRequestHandleRequest
     {
@@ -21,7 +21,7 @@ namespace HuggingFace
         public string? User { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestStatusJsonConverter))]
@@ -29,7 +29,7 @@ namespace HuggingFace
         public required global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rejectionReason")]
         public string? RejectionReason { get; set; }

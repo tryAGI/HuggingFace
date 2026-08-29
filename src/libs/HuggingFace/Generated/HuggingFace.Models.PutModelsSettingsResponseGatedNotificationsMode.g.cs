@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PutModelsSettingsResponseGatedNotificationsMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RealTime,
     }

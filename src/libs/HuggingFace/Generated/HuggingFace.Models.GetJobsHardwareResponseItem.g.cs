@@ -4,67 +4,67 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetJobsHardwareResponseItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prettyName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PrettyName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cpu")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Cpu { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ram")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Ram { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ephemeralStorage")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EphemeralStorage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accelerator")]
         public global::HuggingFace.GetJobsHardwareResponseItemAccelerator2? Accelerator { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unitCostMicroUSD")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UnitCostMicroUSD { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unitCostUSD")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UnitCostUSD { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unitLabel")]
         [global::System.Text.Json.Serialization.JsonRequired]

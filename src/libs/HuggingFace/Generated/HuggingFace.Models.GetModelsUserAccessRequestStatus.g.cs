@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetModelsUserAccessRequestStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Accepted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rejected,
     }

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetUsersOverviewResponseHardwareItem
     {
@@ -30,7 +30,7 @@ namespace HuggingFace
         public required double Num { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPrimary")]
         public string? IsPrimary { get; set; }

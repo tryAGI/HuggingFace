@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateBlogCommentReplyResponseNewMessageAuthorOauthAppImageData2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("emoji")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Emoji { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("colorFrom")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ColorFrom { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("colorTo")]
         [global::System.Text.Json.Serialization.JsonRequired]

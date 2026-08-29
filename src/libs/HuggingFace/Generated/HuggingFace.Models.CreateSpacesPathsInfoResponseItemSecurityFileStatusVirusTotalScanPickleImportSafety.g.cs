@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateSpacesPathsInfoResponseItemSecurityFileStatusVirusTotalScanPickleImportSafety
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dangerous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Innocuous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Suspicious,
     }

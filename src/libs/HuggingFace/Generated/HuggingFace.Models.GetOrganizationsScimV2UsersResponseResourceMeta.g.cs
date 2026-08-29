@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsScimV2UsersResponseResourceMeta
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsScimV2UsersResponseResourceMetaResourceTypeJsonConverter))]
         public global::HuggingFace.GetOrganizationsScimV2UsersResponseResourceMetaResourceType ResourceType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("location")]
         [global::System.Text.Json.Serialization.JsonRequired]

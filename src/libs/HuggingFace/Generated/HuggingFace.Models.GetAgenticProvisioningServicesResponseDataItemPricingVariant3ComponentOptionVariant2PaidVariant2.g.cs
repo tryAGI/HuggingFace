@@ -4,38 +4,38 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAgenticProvisioningServicesResponseDataItemPricingVariant3ComponentOptionVariant2PaidVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"stripe_price"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "stripe_price";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stripe_price")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string StripePrice { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("freeform")]
         public string? Freeform { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configuration")]
         public object? Configuration { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_default")]
         public bool? IsDefault { get; set; }

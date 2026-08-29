@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PutOrganizationsScimV2UsersRequestName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("givenName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string GivenName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("familyName")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,75 +4,75 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsScimV2ServiceProviderConfigResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("schemas")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> Schemas { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("documentationUri")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DocumentationUri { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("patch")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponsePatch Patch { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bulk")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponseBulk Bulk { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filter")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponseFilter Filter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("changePassword")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponseChangePassword ChangePassword { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sort")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponseSort Sort { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("etag")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponseEtag Etag { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authenticationSchemes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsScimV2ServiceProviderConfigResponseAuthenticationScheme> AuthenticationSchemes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchCollectionsResponseDataItemVariant1DatasetsServerInfoViewer2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Viewer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ViewerPartial,
     }

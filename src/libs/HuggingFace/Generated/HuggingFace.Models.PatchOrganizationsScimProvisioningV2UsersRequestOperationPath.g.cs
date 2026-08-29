@@ -4,32 +4,32 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchOrganizationsScimProvisioningV2UsersRequestOperationPath
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmailstypeEqworkValue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExternalId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NameFamilyName,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NameGivenName,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserName,
     }

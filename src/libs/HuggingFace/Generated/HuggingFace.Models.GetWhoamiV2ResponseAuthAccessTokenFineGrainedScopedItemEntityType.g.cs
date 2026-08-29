@@ -4,48 +4,48 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bucket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Collection,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dataset,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OauthApp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Org,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Space,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

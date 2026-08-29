@@ -4,30 +4,30 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateScheduledJobsRequestJobSpec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spaceId")]
         public string? SpaceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dockerImage")]
         public string? DockerImage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("arguments")]
         public global::System.Collections.Generic.IList<string>? Arguments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("command")]
         public global::System.Collections.Generic.IList<string>? Command { get; set; }
@@ -39,13 +39,13 @@ namespace HuggingFace
         public global::System.Collections.Generic.Dictionary<string, string>? Environment { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
         public global::System.Collections.Generic.Dictionary<string, string>? Secrets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("flavor")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateScheduledJobsRequestJobSpecFlavorJsonConverter))]
@@ -53,7 +53,7 @@ namespace HuggingFace
         public required global::HuggingFace.CreateScheduledJobsRequestJobSpecFlavor Flavor { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("arch")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateScheduledJobsRequestJobSpecArchJsonConverter))]
@@ -97,7 +97,7 @@ namespace HuggingFace
         public global::HuggingFace.CreateScheduledJobsRequestJobSpecSsh? Ssh { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
         public string? ResourceGroupId { get; set; }

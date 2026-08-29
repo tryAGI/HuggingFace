@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateDatasetsPreuploadResponseFileUploadMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lfs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regular,
     }

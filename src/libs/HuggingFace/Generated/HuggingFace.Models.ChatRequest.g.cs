@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatRequest
     {
@@ -105,13 +105,13 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<string>? Stop { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stream")]
         public bool? Stream { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stream_options")]
         public global::HuggingFace.StreamOptions? StreamOptions { get; set; }

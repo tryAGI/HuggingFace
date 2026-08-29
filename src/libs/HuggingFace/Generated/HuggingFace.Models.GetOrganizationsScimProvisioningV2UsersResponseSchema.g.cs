@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetOrganizationsScimProvisioningV2UsersResponseSchema
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Urn_ietf_params_scim_api_messages_20_ListResponse,
     }

@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateBucketsPathsInfoResponseItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Directory,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
     }

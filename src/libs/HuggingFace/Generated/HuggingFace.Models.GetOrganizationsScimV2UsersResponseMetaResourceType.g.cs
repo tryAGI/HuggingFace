@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetOrganizationsScimV2UsersResponseMetaResourceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

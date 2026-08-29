@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenAICompatRequest
     {
@@ -24,7 +24,7 @@ namespace HuggingFace
         public global::HuggingFace.EncodingFormat? EncodingFormat { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.InputJsonConverter))]

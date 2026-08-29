@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateOrganizationsServiceAccountsTokensRequestRepoPermission
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoContentRead,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepoWrite,
     }

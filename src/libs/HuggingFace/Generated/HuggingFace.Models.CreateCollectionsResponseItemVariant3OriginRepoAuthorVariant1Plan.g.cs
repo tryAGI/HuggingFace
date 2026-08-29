@@ -4,24 +4,24 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateCollectionsResponseItemVariant3OriginRepoAuthorVariant1Plan
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Academia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enterprise,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Plus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Team,
     }

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateOauthUserinfoResponse
     {
@@ -84,7 +84,7 @@ namespace HuggingFace
         public global::HuggingFace.CreateOauthUserinfoResponseBillingMode? BillingMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("orgs")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ToolCallDelta
     {
@@ -17,7 +17,7 @@ namespace HuggingFace
         public required string Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tool_calls")]
         [global::System.Text.Json.Serialization.JsonRequired]

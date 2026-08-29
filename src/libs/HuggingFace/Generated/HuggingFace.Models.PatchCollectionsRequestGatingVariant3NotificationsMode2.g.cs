@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchCollectionsRequestGatingVariant3NotificationsMode2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bulk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RealTime,
     }

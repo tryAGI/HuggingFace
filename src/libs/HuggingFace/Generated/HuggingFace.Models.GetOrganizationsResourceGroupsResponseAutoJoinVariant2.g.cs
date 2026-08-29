@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsResourceGroupsResponseAutoJoinVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"False"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]

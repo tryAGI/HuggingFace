@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOauthUserinfoResponseOrg
     {
@@ -37,27 +37,27 @@ namespace HuggingFace
         public required string PreferredUsername { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("plan")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOauthUserinfoResponseOrgPlanJsonConverter))]
         public global::HuggingFace.GetOauthUserinfoResponseOrgPlan? Plan { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("canPay")]
         public bool? CanPay { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("billingMode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOauthUserinfoResponseOrgBillingModeJsonConverter))]
         public global::HuggingFace.GetOauthUserinfoResponseOrgBillingMode? BillingMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("roleInOrg")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOauthUserinfoResponseOrgRoleInOrgJsonConverter))]
@@ -70,7 +70,7 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.GetOauthUserinfoResponseOrgSecurityRestriction>? SecurityRestrictions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroups")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetOauthUserinfoResponseOrgResourceGroup>? ResourceGroups { get; set; }

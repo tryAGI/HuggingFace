@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetPapersField2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Comments,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SubmissionDeadline,
     }

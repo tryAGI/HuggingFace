@@ -9,21 +9,21 @@ namespace HuggingFace
     public sealed partial class CreateAgenticProvisioningResourcesResponseVariant3
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"error"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         public string Status { get; set; } = "error";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]

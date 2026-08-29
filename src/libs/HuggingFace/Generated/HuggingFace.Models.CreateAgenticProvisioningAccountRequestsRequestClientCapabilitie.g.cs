@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateAgenticProvisioningAccountRequestsRequestClientCapabilitie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Browser,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sms,
     }

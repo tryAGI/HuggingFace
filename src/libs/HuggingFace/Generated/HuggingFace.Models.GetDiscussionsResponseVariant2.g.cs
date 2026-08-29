@@ -4,57 +4,57 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetDiscussionsResponseVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("num")]
         public double? Num { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>))]
         public global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>? Author { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("org")]
         public global::HuggingFace.GetDiscussionsResponseVariant2Org? Org { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repo")]
         public global::HuggingFace.RepoId? Repo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Title { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         public global::System.DateTime? CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetDiscussionsResponseVariant2StatusJsonConverter))]
@@ -62,35 +62,35 @@ namespace HuggingFace
         public required global::HuggingFace.GetDiscussionsResponseVariant2Status Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("events")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8>> Events { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pinned")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Pinned { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("locked")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Locked { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"discussions"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("collection")]
         public string Collection { get; set; } = "discussions";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"True"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPullRequest")]
@@ -105,7 +105,7 @@ namespace HuggingFace
         public required global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string> FilesWithConflicts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("changes")]
         [global::System.Text.Json.Serialization.JsonRequired]

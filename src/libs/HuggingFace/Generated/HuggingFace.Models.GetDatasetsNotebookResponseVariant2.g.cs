@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetDatasetsNotebookResponseVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"True"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("notInCache")]

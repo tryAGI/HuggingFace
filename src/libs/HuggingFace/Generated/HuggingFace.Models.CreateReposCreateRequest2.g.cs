@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateReposCreateRequest2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
         public string? Organization { get; set; }
@@ -36,13 +36,13 @@ namespace HuggingFace
         public global::HuggingFace.CreateReposCreateRequestLicense? License { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("license_name")]
         public string? LicenseName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("license_link")]
         public string? LicenseLink { get; set; }
@@ -61,13 +61,13 @@ namespace HuggingFace
         public global::HuggingFace.CreateReposCreateRequestVisibility? Visibility { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
         public string? ResourceGroupId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("files")]
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestFile>? Files { get; set; }

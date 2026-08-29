@@ -4,32 +4,32 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateBlogCommentResponseNewMessageDataHiddenReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Abuse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GraphicContent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LowQuality,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OffTopic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Resolved,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spam,
     }

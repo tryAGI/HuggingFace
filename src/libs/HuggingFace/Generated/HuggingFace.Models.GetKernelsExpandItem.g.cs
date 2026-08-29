@@ -4,80 +4,80 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetKernelsExpandItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArxivIds,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Author,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BuildMetadata,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CardData,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disabled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Downloads,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DownloadsAllTime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Files,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LastModified,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Likes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceGroup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sha,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SupportedDriverFamilies,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tags,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TrendingScore,
     }

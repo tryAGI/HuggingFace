@@ -4,70 +4,70 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetJobsResponseItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spaceId")]
         public string? SpaceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dockerImage")]
         public string? DockerImage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timeout")]
         public double? Timeout { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.Dictionary<string, string> Environment { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("command")]
         public global::System.Collections.Generic.IList<string>? Command { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("arguments")]
         public global::System.Collections.Generic.IList<string>? Arguments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("arch")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetJobsResponseItemArchJsonConverter))]
         public global::HuggingFace.GetJobsResponseItemArch? Arch { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("flavor")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetJobsResponseItemFlavorJsonConverter))]
@@ -75,44 +75,44 @@ namespace HuggingFace
         public required global::HuggingFace.GetJobsResponseItemFlavor Flavor { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdBy")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetJobsResponseItemCreatedBy CreatedBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
         public string? ResourceGroupId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retry")]
         public double? Retry { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("startedAt")]
         public global::System.DateTime? StartedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("finishedAt")]
         public global::System.DateTime? FinishedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("durations")]
         public global::HuggingFace.GetJobsResponseItemDurations? Durations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("volumes")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseItemVolume>? Volumes { get; set; }
@@ -124,53 +124,53 @@ namespace HuggingFace
         public global::HuggingFace.GetJobsResponseItemExpose? Expose { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"job"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "job";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetJobsResponseItemOwner Owner { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
         public global::HuggingFace.GetJobsResponseItemResourceGroup? ResourceGroup { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("initiator")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>))]
         public global::HuggingFace.AnyOf<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>? Initiator { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetJobsResponseItemStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
         public global::System.Collections.Generic.IList<string>? Secrets { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
         public global::System.Collections.Generic.Dictionary<string, string>? Labels { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hfToken")]
         public global::HuggingFace.GetJobsResponseItemHfToken? HfToken { get; set; }

@@ -4,25 +4,25 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateReposCreateRequestVariant4
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"space"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "space";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("template")]
         public string? Template { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("short_description")]
         public string? ShortDescription { get; set; }
@@ -47,7 +47,7 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant4Variable>? Variables { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sleepTimeSeconds")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, string>))]
@@ -68,13 +68,13 @@ namespace HuggingFace
         public required global::HuggingFace.CreateReposCreateRequestVariant4Sdk Sdk { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sdkVersion")]
         public string? SdkVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("devModeEnabled")]
         public bool? DevModeEnabled { get; set; }

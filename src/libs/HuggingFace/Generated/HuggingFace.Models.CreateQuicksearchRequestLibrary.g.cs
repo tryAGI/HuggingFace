@@ -4,968 +4,992 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateQuicksearchRequestLibrary
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x3dtopiaXl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PaddleOCR,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Acestep,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AdapterTransformers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Allennlp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anemoi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Araclip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asteroid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audiocraft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audioseal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AviationNer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BagelMot,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bboxmaskpose,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ben2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bertopic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BigVision,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bionemo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Birder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Birefnet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bm25s,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boltzgen,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancertathomev2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CartesiaMlx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CartesiaPytorch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ccpfn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Champ,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chaossim,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chatterbox,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chexmix,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChronosForecasting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Clara,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Clipscope,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CloudAgents,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Colipri,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Collectorvision,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Colpali,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Comet,
         /// <summary>
-        /// 
+        ///
+        /// </summary>
+        Cortiq,
+        /// <summary>
+        ///
         /// </summary>
         Cosmos,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cosyvoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cotracker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CxrFoundation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deepforest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DepthAnythingV2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DepthPro,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DermFoundation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DescribeAnything,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DiaTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dia2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DiffInterpretationTuning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Diffree,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Diffusers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DiffusionSingleFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Diffusionkit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DockingAtHome,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Doctr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Edsnlp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Elm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Encoderfile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Espnet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eupe,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         F5Tts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fairseq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fastai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fastprint,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fasttext,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fixer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Flair,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Flextab,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fme,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GemmaCpp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Genmo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GeometryCrafter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gliner,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gliner2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GlmTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GlyphByt5,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GraniteLibrary,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HabibiTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hallo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hermes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hezar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Holomotion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Htrflow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HunyuanDit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hunyuan3d2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HunyuanworldVoyager,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HyWorld2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HyWorldplay,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageMatchingModels,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Imstoucan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IndexTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InfiniteYou,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Infinitetalk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Intellifold,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsingDecoding,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         K2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Keras,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KerasHub,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kerasformers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kernels,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KimiAudio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kittentts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kronos,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lagernvs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lerobot,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lightglue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LightningIr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Litert,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LitertLm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Liveportrait,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlamaCppPython,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LongcatVideoAvatar15,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ltx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lvface,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lyra20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MagentaRealtime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MagentaRealtime2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Magi1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MambaSsm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manas1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mars5Tts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Matanyone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Medvae,
         /// <summary>
-        /// 
+        ///
+        /// </summary>
+        Memra,
+        /// <summary>
+        ///
         /// </summary>
         Merlin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MeshAnything,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mflux,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mindspore,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MiniOmni2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MinimaxH3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mitie,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlAgents,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlSharp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlcLlm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mlx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MlxImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mobilint,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model2vec,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Monkeyocr,
         /// <summary>
-        /// 
+        ///
+        /// </summary>
+        MontrealForcedAligner,
+        /// <summary>
+        ///
         /// </summary>
         Moshi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mtvcraft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multimolecule,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nemo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ninfer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nobg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NvMedtech,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenOasis,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenSora,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenClip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openasr,
         /// <summary>
-        /// 
+        ///
+        /// </summary>
+        Opendde,
+        /// <summary>
+        ///
         /// </summary>
         Openpeerllm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Outetts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Paddlenlp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Peft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PerceptionEncoder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhantomWan,
         /// <summary>
-        /// 
+        ///
+        /// </summary>
+        Piper,
+        /// <summary>
+        ///
         /// </summary>
         PocketTts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PrunaAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pxia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PyFeat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PyannoteAudio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pythae,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Quantumpeer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Qwen3Tts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Recurrentgemma,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Refiners,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Relik,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Renderformer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reverb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rkllm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RoboOrchardLab,
         /// <summary>
-        /// 
+        ///
+        /// </summary>
+        RouteePowertrain,
+        /// <summary>
+        ///
         /// </summary>
         Rwkv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Saelens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sam3dBody,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sam3dObjects,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sam2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Same,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SampleFactory,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sana,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SapRpt1Oss,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sapiens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sapiens2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scail2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SeedStory,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Seedvr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SelfForcing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SentenceTransformers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Setfit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Skala,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sklearn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Soloaudio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Songbloom,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spacy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanMarker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Speechbrain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SsrSpeech,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StableAudio3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StableAudioTools,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StableBaselines3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stanza,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Supertonic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swarmformer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SynthefyMigas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tabpfn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TencentSongGeneration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tensorflowtts,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tensorrt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Terratorch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TfKeras,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TicClip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TimeeTs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Timesfm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Timm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tirex,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tirex2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Torchgeo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transformers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TransformersJs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trellis,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trellis2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tunejury,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ultralytics,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uni3dar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnitySentis,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Univa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VfiMamba,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vibevoice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Videoprism,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoxFun,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vismatch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voicecraft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Voxcpm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vui,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wan22,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wham,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Whisperkit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Yolov10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Yolov26,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zonos,
     }
@@ -1020,6 +1044,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Collectorvision => "collectorvision",
                 CreateQuicksearchRequestLibrary.Colpali => "colpali",
                 CreateQuicksearchRequestLibrary.Comet => "comet",
+                CreateQuicksearchRequestLibrary.Cortiq => "cortiq",
                 CreateQuicksearchRequestLibrary.Cosmos => "cosmos",
                 CreateQuicksearchRequestLibrary.Cosyvoice => "cosyvoice",
                 CreateQuicksearchRequestLibrary.Cotracker => "cotracker",
@@ -1107,6 +1132,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Mars5Tts => "mars5-tts",
                 CreateQuicksearchRequestLibrary.Matanyone => "matanyone",
                 CreateQuicksearchRequestLibrary.Medvae => "medvae",
+                CreateQuicksearchRequestLibrary.Memra => "memra",
                 CreateQuicksearchRequestLibrary.Merlin => "merlin",
                 CreateQuicksearchRequestLibrary.MeshAnything => "mesh-anything",
                 CreateQuicksearchRequestLibrary.Mflux => "mflux",
@@ -1122,6 +1148,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Mobilint => "mobilint",
                 CreateQuicksearchRequestLibrary.Model2vec => "model2vec",
                 CreateQuicksearchRequestLibrary.Monkeyocr => "monkeyocr",
+                CreateQuicksearchRequestLibrary.MontrealForcedAligner => "montreal-forced-aligner",
                 CreateQuicksearchRequestLibrary.Moshi => "moshi",
                 CreateQuicksearchRequestLibrary.Mtvcraft => "mtvcraft",
                 CreateQuicksearchRequestLibrary.Multimolecule => "multimolecule",
@@ -1133,12 +1160,14 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.OpenSora => "open-sora",
                 CreateQuicksearchRequestLibrary.OpenClip => "open_clip",
                 CreateQuicksearchRequestLibrary.Openasr => "openasr",
+                CreateQuicksearchRequestLibrary.Opendde => "opendde",
                 CreateQuicksearchRequestLibrary.Openpeerllm => "openpeerllm",
                 CreateQuicksearchRequestLibrary.Outetts => "outetts",
                 CreateQuicksearchRequestLibrary.Paddlenlp => "paddlenlp",
                 CreateQuicksearchRequestLibrary.Peft => "peft",
                 CreateQuicksearchRequestLibrary.PerceptionEncoder => "perception-encoder",
                 CreateQuicksearchRequestLibrary.PhantomWan => "phantom-wan",
+                CreateQuicksearchRequestLibrary.Piper => "piper",
                 CreateQuicksearchRequestLibrary.PocketTts => "pocket-tts",
                 CreateQuicksearchRequestLibrary.PrunaAi => "pruna-ai",
                 CreateQuicksearchRequestLibrary.Pxia => "pxia",
@@ -1154,6 +1183,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Reverb => "reverb",
                 CreateQuicksearchRequestLibrary.Rkllm => "rkllm",
                 CreateQuicksearchRequestLibrary.RoboOrchardLab => "robo-orchard-lab",
+                CreateQuicksearchRequestLibrary.RouteePowertrain => "routee-powertrain",
                 CreateQuicksearchRequestLibrary.Rwkv => "rwkv",
                 CreateQuicksearchRequestLibrary.Saelens => "saelens",
                 CreateQuicksearchRequestLibrary.Sam3dBody => "sam-3d-body",
@@ -1270,6 +1300,7 @@ namespace HuggingFace
                 "collectorvision" => CreateQuicksearchRequestLibrary.Collectorvision,
                 "colpali" => CreateQuicksearchRequestLibrary.Colpali,
                 "comet" => CreateQuicksearchRequestLibrary.Comet,
+                "cortiq" => CreateQuicksearchRequestLibrary.Cortiq,
                 "cosmos" => CreateQuicksearchRequestLibrary.Cosmos,
                 "cosyvoice" => CreateQuicksearchRequestLibrary.Cosyvoice,
                 "cotracker" => CreateQuicksearchRequestLibrary.Cotracker,
@@ -1357,6 +1388,7 @@ namespace HuggingFace
                 "mars5-tts" => CreateQuicksearchRequestLibrary.Mars5Tts,
                 "matanyone" => CreateQuicksearchRequestLibrary.Matanyone,
                 "medvae" => CreateQuicksearchRequestLibrary.Medvae,
+                "memra" => CreateQuicksearchRequestLibrary.Memra,
                 "merlin" => CreateQuicksearchRequestLibrary.Merlin,
                 "mesh-anything" => CreateQuicksearchRequestLibrary.MeshAnything,
                 "mflux" => CreateQuicksearchRequestLibrary.Mflux,
@@ -1372,6 +1404,7 @@ namespace HuggingFace
                 "mobilint" => CreateQuicksearchRequestLibrary.Mobilint,
                 "model2vec" => CreateQuicksearchRequestLibrary.Model2vec,
                 "monkeyocr" => CreateQuicksearchRequestLibrary.Monkeyocr,
+                "montreal-forced-aligner" => CreateQuicksearchRequestLibrary.MontrealForcedAligner,
                 "moshi" => CreateQuicksearchRequestLibrary.Moshi,
                 "mtvcraft" => CreateQuicksearchRequestLibrary.Mtvcraft,
                 "multimolecule" => CreateQuicksearchRequestLibrary.Multimolecule,
@@ -1383,12 +1416,14 @@ namespace HuggingFace
                 "open-sora" => CreateQuicksearchRequestLibrary.OpenSora,
                 "open_clip" => CreateQuicksearchRequestLibrary.OpenClip,
                 "openasr" => CreateQuicksearchRequestLibrary.Openasr,
+                "opendde" => CreateQuicksearchRequestLibrary.Opendde,
                 "openpeerllm" => CreateQuicksearchRequestLibrary.Openpeerllm,
                 "outetts" => CreateQuicksearchRequestLibrary.Outetts,
                 "paddlenlp" => CreateQuicksearchRequestLibrary.Paddlenlp,
                 "peft" => CreateQuicksearchRequestLibrary.Peft,
                 "perception-encoder" => CreateQuicksearchRequestLibrary.PerceptionEncoder,
                 "phantom-wan" => CreateQuicksearchRequestLibrary.PhantomWan,
+                "piper" => CreateQuicksearchRequestLibrary.Piper,
                 "pocket-tts" => CreateQuicksearchRequestLibrary.PocketTts,
                 "pruna-ai" => CreateQuicksearchRequestLibrary.PrunaAi,
                 "pxia" => CreateQuicksearchRequestLibrary.Pxia,
@@ -1404,6 +1439,7 @@ namespace HuggingFace
                 "reverb" => CreateQuicksearchRequestLibrary.Reverb,
                 "rkllm" => CreateQuicksearchRequestLibrary.Rkllm,
                 "robo-orchard-lab" => CreateQuicksearchRequestLibrary.RoboOrchardLab,
+                "routee-powertrain" => CreateQuicksearchRequestLibrary.RouteePowertrain,
                 "rwkv" => CreateQuicksearchRequestLibrary.Rwkv,
                 "saelens" => CreateQuicksearchRequestLibrary.Saelens,
                 "sam-3d-body" => CreateQuicksearchRequestLibrary.Sam3dBody,

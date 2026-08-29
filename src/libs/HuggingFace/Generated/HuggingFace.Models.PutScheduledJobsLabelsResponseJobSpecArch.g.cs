@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PutScheduledJobsLabelsResponseJobSpecArch
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amd64,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arm64,
     }

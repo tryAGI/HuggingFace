@@ -9,335 +9,335 @@ namespace HuggingFace
     public enum CreateReposCreateRequestLicense
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Afl30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agpl30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apache20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AppleAmlr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AppleAscl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Artistic20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BigcodeOpenrailM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BigscienceBloomRail10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BigscienceOpenrailM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bsd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bsd2Clause,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bsd3Clause,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bsd3ClauseClear,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bsl10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CUda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBy20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBy25,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBy30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBy40,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNc20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNc30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNc40,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNcNd30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNcNd40,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNcSa20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNcSa30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNcSa40,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcByNd40,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBySa30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CcBySa40,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cc010,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CdlaPermissive10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CdlaPermissive20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CdlaSharing10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreativemlOpenrailM,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepfloydIfLicense,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ecl20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Epl10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Epl20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Etalab20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eupl11,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eupl12,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FairNoncommercialResearchLicense,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemma,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gfdl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpl20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpl30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Grok2Community,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HResearch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IntelResearch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Isc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lgpl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lgpl21,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lgpl30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LgplLr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama31,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama32,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama33,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llama4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lppl13c,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mit,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mpl20,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MsPl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ncsa,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Odbl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OdcBy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ofl11,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openmdw10,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openmdw11,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openrail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenrailPlusPlus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Osl30,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pddl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Postgresql,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unknown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unlicense,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wtfpl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zlib,
     }

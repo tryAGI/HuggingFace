@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateOrganizationsResourceGroupsRequestAutoJoinVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"True"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
         public string Enabled { get; set; } = "True";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1RoleJsonConverter))]
@@ -24,7 +24,7 @@ namespace HuggingFace
         public required global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1ScopeJsonConverter))]

@@ -4,61 +4,61 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsBillingUsageResponsePeriodCharge
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dueDate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime DueDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usageAtChargeTimeMicroUSD")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UsageAtChargeTimeMicroUSD { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("amountCents")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double AmountCents { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("billedThrough")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsBillingUsageResponsePeriodChargeBilledThroughJsonConverter))]
         public global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodChargeBilledThrough BilledThrough { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paymentIntentId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PaymentIntentId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paymentIntentStatus")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsBillingUsageResponsePeriodChargePaymentIntentStatusJsonConverter))]

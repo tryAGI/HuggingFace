@@ -4,13 +4,13 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesRequestVariant2Configuration
     {
         /// <summary>
         /// The name of the repository (defaults to a random name if not provided)<br/>
-        /// Default Value: oDacacvE
+        /// Default Value: HjFTKYwt
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
@@ -34,7 +34,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="name">
         /// The name of the repository (defaults to a random name if not provided)<br/>
-        /// Default Value: oDacacvE
+        /// Default Value: HjFTKYwt
         /// </param>
         /// <param name="visibility">
         /// The visibility of the repository (defaults to private)<br/>

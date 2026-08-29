@@ -10,11 +10,11 @@ namespace HuggingFace
     public enum CreateSpacesCommitContentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationJson,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationXNdjson,
     }

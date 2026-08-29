@@ -19,7 +19,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolChoiceVariant1))]
@@ -27,7 +27,7 @@ namespace HuggingFace
         public bool IsToolChoiceVariant1 => ToolChoiceVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolChoiceVariant1(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ToolChoiceVariant1 PickToolChoiceVariant1() => IsToolChoiceVariant1
             ? ToolChoiceVariant1!.Value
@@ -56,7 +56,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolChoiceVariant2))]
@@ -64,7 +64,7 @@ namespace HuggingFace
         public bool IsToolChoiceVariant2 => ToolChoiceVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolChoiceVariant2(
 #if NET6_0_OR_GREATER
@@ -77,7 +77,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ToolChoiceVariant2 PickToolChoiceVariant2() => IsToolChoiceVariant2
             ? ToolChoiceVariant2!.Value
@@ -93,7 +93,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolChoiceVariant3))]
@@ -101,7 +101,7 @@ namespace HuggingFace
         public bool IsToolChoiceVariant3 => ToolChoiceVariant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolChoiceVariant3(
 #if NET6_0_OR_GREATER
@@ -114,14 +114,14 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ToolChoiceVariant3 PickToolChoiceVariant3() => IsToolChoiceVariant3
             ? ToolChoiceVariant3!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant3' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::HuggingFace.ToolChoiceVariant4? ToolChoiceVariant4 { get; init; }
@@ -130,7 +130,7 @@ namespace HuggingFace
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolChoiceVariant4))]
@@ -138,7 +138,7 @@ namespace HuggingFace
         public bool IsToolChoiceVariant4 => ToolChoiceVariant4 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolChoiceVariant4(
 #if NET6_0_OR_GREATER
@@ -151,23 +151,23 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::HuggingFace.ToolChoiceVariant4 PickToolChoiceVariant4() => IsToolChoiceVariant4
             ? ToolChoiceVariant4!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant4' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant1 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant1?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ToolChoiceVariant1?(ToolChoice @this) => @this.ToolChoiceVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolChoice(global::HuggingFace.ToolChoiceVariant1? value)
         {
@@ -175,22 +175,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolChoice FromToolChoiceVariant1(global::HuggingFace.ToolChoiceVariant1? value) => new ToolChoice(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant2 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ToolChoiceVariant2?(ToolChoice @this) => @this.ToolChoiceVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolChoice(global::HuggingFace.ToolChoiceVariant2? value)
         {
@@ -198,22 +198,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolChoice FromToolChoiceVariant2(global::HuggingFace.ToolChoiceVariant2? value) => new ToolChoice(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant3 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant3?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ToolChoiceVariant3?(ToolChoice @this) => @this.ToolChoiceVariant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolChoice(global::HuggingFace.ToolChoiceVariant3? value)
         {
@@ -221,22 +221,22 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolChoice FromToolChoiceVariant3(global::HuggingFace.ToolChoiceVariant3? value) => new ToolChoice(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ToolChoice(global::HuggingFace.ToolChoiceVariant4 value) => new ToolChoice((global::HuggingFace.ToolChoiceVariant4?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::HuggingFace.ToolChoiceVariant4?(ToolChoice @this) => @this.ToolChoiceVariant4;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolChoice(global::HuggingFace.ToolChoiceVariant4? value)
         {
@@ -244,12 +244,12 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ToolChoice FromToolChoiceVariant4(global::HuggingFace.ToolChoiceVariant4? value) => new ToolChoice(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ToolChoice(
             global::HuggingFace.ToolChoiceVariant1? toolChoiceVariant1,
@@ -265,27 +265,27 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ToolChoiceVariant4 as object ??
             ToolChoiceVariant3 as object ??
             ToolChoiceVariant2 as object ??
-            ToolChoiceVariant1 as object 
+            ToolChoiceVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ToolChoiceVariant1?.ToValueString() ??
             ToolChoiceVariant2?.ToValueString() ??
             ToolChoiceVariant3?.ToValueString() ??
-            ToolChoiceVariant4?.ToString() 
+            ToolChoiceVariant4?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -293,7 +293,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::HuggingFace.ToolChoiceVariant1?, TResult>? toolChoiceVariant1 = null,
@@ -328,7 +328,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::HuggingFace.ToolChoiceVariant1?>? toolChoiceVariant1 = null,
@@ -364,7 +364,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::HuggingFace.ToolChoiceVariant1?>? toolChoiceVariant1 = null,
@@ -397,7 +397,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -422,7 +422,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ToolChoice other)
         {
@@ -430,12 +430,12 @@ namespace HuggingFace
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolChoiceVariant1?>.Default.Equals(ToolChoiceVariant1, other.ToolChoiceVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolChoiceVariant2?>.Default.Equals(ToolChoiceVariant2, other.ToolChoiceVariant2) &&
                 global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolChoiceVariant3?>.Default.Equals(ToolChoiceVariant3, other.ToolChoiceVariant3) &&
-                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolChoiceVariant4?>.Default.Equals(ToolChoiceVariant4, other.ToolChoiceVariant4) 
+                global::System.Collections.Generic.EqualityComparer<global::HuggingFace.ToolChoiceVariant4?>.Default.Equals(ToolChoiceVariant4, other.ToolChoiceVariant4)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ToolChoice obj1, ToolChoice obj2)
         {
@@ -443,7 +443,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ToolChoice obj1, ToolChoice obj2)
         {
@@ -451,7 +451,7 @@ namespace HuggingFace
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

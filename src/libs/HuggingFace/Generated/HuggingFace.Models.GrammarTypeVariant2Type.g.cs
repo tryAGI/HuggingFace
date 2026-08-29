@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GrammarTypeVariant2Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regex,
     }

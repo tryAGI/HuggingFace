@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetBucketsTreeResponseItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Directory,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
     }

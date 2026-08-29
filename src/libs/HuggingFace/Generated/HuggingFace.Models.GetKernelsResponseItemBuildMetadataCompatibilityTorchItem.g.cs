@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetKernelsResponseItemBuildMetadataCompatibilityTorchItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x210,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x28,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x29,
     }

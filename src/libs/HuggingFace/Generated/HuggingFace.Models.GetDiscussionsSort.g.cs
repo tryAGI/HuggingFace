@@ -9,15 +9,15 @@ namespace HuggingFace
     public enum GetDiscussionsSort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reactions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RecentlyCreated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trending,
     }

@@ -4,40 +4,40 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"stripe"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "stripe";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("amountDueCents")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double AmountDueCents { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalCents")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double TotalCents { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1StatusJsonConverter))]
@@ -45,14 +45,14 @@ namespace HuggingFace
         public required global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1Status Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dueDate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime DueDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("collectionMethod")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1CollectionMethodJsonConverter))]

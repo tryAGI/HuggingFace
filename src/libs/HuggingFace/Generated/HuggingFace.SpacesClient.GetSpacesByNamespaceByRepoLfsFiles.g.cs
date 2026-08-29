@@ -30,7 +30,9 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string? cursor,
+            ref global::HuggingFace.GetSpacesLfsFilesDirection? direction,
             ref int? limit,
+            ref global::HuggingFace.GetSpacesLfsFilesSort? sort,
             object? xet);
         partial void PrepareGetSpacesByNamespaceByRepoLfsFilesRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -38,7 +40,9 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string? cursor,
+            global::HuggingFace.GetSpacesLfsFilesDirection? direction,
             int? limit,
+            global::HuggingFace.GetSpacesLfsFilesSort? sort,
             object? xet);
         partial void ProcessGetSpacesByNamespaceByRepoLfsFilesResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -56,8 +60,14 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="cursor"></param>
+        /// <param name="direction">
+        /// Default Value: desc
+        /// </param>
         /// <param name="limit">
         /// Default Value: 1000
+        /// </param>
+        /// <param name="sort">
+        /// Default Value: size
         /// </param>
         /// <param name="xet"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -67,7 +77,9 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string? cursor = default,
+            global::HuggingFace.GetSpacesLfsFilesDirection? direction = default,
             int? limit = default,
+            global::HuggingFace.GetSpacesLfsFilesSort? sort = default,
             object? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -76,7 +88,9 @@ namespace HuggingFace
                 @namespace: @namespace,
                 repo: repo,
                 cursor: cursor,
+                direction: direction,
                 limit: limit,
+                sort: sort,
                 xet: xet,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -91,8 +105,14 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="cursor"></param>
+        /// <param name="direction">
+        /// Default Value: desc
+        /// </param>
         /// <param name="limit">
         /// Default Value: 1000
+        /// </param>
+        /// <param name="sort">
+        /// Default Value: size
         /// </param>
         /// <param name="xet"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -102,7 +122,9 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string? cursor = default,
+            global::HuggingFace.GetSpacesLfsFilesDirection? direction = default,
             int? limit = default,
+            global::HuggingFace.GetSpacesLfsFilesSort? sort = default,
             object? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -114,7 +136,9 @@ namespace HuggingFace
                 @namespace: ref @namespace,
                 repo: ref repo,
                 cursor: ref cursor,
+                direction: ref direction,
                 limit: ref limit,
+                sort: ref sort,
                 xet: xet);
 
 
@@ -145,7 +169,9 @@ namespace HuggingFace
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("direction", direction?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("sort", sort?.ToValueString())
                                 .AddOptionalParameter("xet", xet?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
@@ -175,7 +201,7 @@ namespace HuggingFace
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
@@ -191,7 +217,9 @@ namespace HuggingFace
                     @namespace: @namespace!,
                     repo: repo!,
                     cursor: cursor,
+                    direction: direction,
                     limit: limit,
+                    sort: sort,
                     xet: xet);
 
                 return __httpRequest;

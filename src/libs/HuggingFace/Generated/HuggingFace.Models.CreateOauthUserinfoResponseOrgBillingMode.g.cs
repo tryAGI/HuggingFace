@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateOauthUserinfoResponseOrgBillingMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Postpaid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prepaid,
     }

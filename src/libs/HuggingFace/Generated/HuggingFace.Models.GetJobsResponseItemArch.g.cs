@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetJobsResponseItemArch
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Amd64,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Arm64,
     }

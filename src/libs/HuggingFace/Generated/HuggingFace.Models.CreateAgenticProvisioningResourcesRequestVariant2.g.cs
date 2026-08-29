@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningResourcesRequestVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"bucket"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("service_id")]
         public string ServiceId { get; set; } = "bucket";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configuration")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,56 +4,56 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Argilla,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dask,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datadesigner,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Datasets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Distilabel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duckdb,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fiftyone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lance,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mlcroissant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pandas,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Polars,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Webdataset,
     }

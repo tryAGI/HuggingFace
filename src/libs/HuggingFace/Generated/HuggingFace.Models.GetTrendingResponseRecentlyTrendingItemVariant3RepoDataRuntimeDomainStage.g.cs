@@ -4,28 +4,28 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExpiredChallenge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Misconfigured,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PendingChallenge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ready,
     }

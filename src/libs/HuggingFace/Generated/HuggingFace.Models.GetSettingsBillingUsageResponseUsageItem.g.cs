@@ -4,25 +4,25 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSettingsBillingUsageResponseUsageItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EntityId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("label")]
         public string? Label { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("product")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetSettingsBillingUsageResponseUsageItemProductJsonConverter))]
@@ -30,59 +30,59 @@ namespace HuggingFace
         public required global::HuggingFace.GetSettingsBillingUsageResponseUsageItemProduct Product { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("quantity")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Quantity { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("startedAt")]
         public global::System.DateTime? StartedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stoppedAt")]
         public global::System.DateTime? StoppedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("freeGrant")]
         public bool? FreeGrant { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("productPrettyName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProductPrettyName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unitLabel")]
         public string? UnitLabel { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalCostMicroUSD")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double TotalCostMicroUSD { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unitCostMicroUSD")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UnitCostMicroUSD { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("active")]
         [global::System.Text.Json.Serialization.JsonRequired]

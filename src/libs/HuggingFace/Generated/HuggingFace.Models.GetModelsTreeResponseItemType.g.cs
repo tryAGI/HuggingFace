@@ -4,20 +4,20 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetModelsTreeResponseItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Directory,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unknown,
     }

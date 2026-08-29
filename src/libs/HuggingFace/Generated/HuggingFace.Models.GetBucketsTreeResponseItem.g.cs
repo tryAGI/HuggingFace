@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetBucketsTreeResponseItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetBucketsTreeResponseItemTypeJsonConverter))]
@@ -17,14 +17,14 @@ namespace HuggingFace
         public required global::HuggingFace.GetBucketsTreeResponseItemType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Path { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("size")]
         public int? Size { get; set; }
@@ -36,7 +36,7 @@ namespace HuggingFace
         public string? XetHash { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mtime")]
         public global::System.DateTime? Mtime { get; set; }
@@ -48,14 +48,14 @@ namespace HuggingFace
         public int? MtimeNanos { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("uploadedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UploadedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contentType")]
         public string? ContentType { get; set; }

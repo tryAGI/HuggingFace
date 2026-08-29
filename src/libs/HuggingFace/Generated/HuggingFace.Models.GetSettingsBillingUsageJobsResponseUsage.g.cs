@@ -4,40 +4,40 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetSettingsBillingUsageJobsResponseUsage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usedMicroUsd")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UsedMicroUsd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("totalMinutes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double TotalMinutes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("periodStart")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime PeriodStart { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("periodEnd")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime PeriodEnd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jobDetails")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -10,7 +10,7 @@ namespace HuggingFace
     public enum GetSettingsRepositoriesDirection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>

@@ -9,14 +9,14 @@ namespace HuggingFace
     public sealed partial class CreateOauthDeviceRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ClientId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
         public string? Scope { get; set; }

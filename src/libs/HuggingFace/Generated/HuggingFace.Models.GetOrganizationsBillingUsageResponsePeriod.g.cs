@@ -4,26 +4,26 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetOrganizationsBillingUsageResponsePeriod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EntityId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsBillingUsageResponsePeriodEntityTypeJsonConverter))]
@@ -31,35 +31,35 @@ namespace HuggingFace
         public required global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodEntityType EntityType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EntityName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("periodStart")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime PeriodStart { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("periodEnd")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime PeriodEnd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("invoice")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>))]
         public global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>? Invoice { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("charges")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodCharge>? Charges { get; set; }

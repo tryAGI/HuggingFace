@@ -4,46 +4,46 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetNotificationsResponseNotificationVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"paper"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "paper";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("read")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Read { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("discussionEventId")]
         public string? DiscussionEventId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paper")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetNotificationsResponseNotificationVariant1Paper Paper { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paperDiscussion")]
         [global::System.Text.Json.Serialization.JsonRequired]

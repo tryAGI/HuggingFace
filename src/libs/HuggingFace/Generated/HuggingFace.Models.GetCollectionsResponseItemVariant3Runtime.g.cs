@@ -4,12 +4,12 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetCollectionsResponseItemVariant3Runtime
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stage")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeStageJsonConverter))]
@@ -17,51 +17,51 @@ namespace HuggingFace
         public required global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeStage Stage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hardware")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardware Hardware { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("errorMessage")]
         public string? ErrorMessage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gcTimeout")]
         public double? GcTimeout { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("replicas")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeReplicas Replicas { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("devMode")]
         public bool? DevMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("domains")]
         public global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeDomain>? Domains { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sha")]
         public string? Sha { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hotReloading")]
         public global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHotReloading? HotReloading { get; set; }

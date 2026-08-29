@@ -4,16 +4,16 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetAgenticProvisioningServicesResponseDataItemScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Account,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
     }

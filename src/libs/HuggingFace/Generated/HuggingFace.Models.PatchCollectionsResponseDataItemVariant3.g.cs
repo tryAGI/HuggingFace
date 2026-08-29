@@ -4,187 +4,187 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchCollectionsResponseDataItemVariant3
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Author { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("colorFrom")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ColorFrom { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("colorTo")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ColorTo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("emoji")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Emoji { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isLikedByUser")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsLikedByUser { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastModified")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime LastModified { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("likes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Likes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pinned")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Pinned { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Private { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"space"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
         public string RepoType { get; set; } = "space";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Title { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sdk")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3SdkJsonConverter))]
         public global::HuggingFace.PatchCollectionsResponseDataItemVariant3Sdk? Sdk { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("runtime")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::HuggingFace.PatchCollectionsResponseDataItemVariant3Runtime Runtime { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("disabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Disabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("originRepo")]
         public global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepo? OriginRepo { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ai_short_description")]
         public string? AiShortDescription { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ai_category")]
         public string? AiCategory { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trendingScore")]
         public double? TrendingScore { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
         public global::HuggingFace.PatchCollectionsResponseDataItemVariant3ResourceGroup? ResourceGroup { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> Tags { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authorData")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2>))]
         public global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2>? AuthorData { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("shortDescription")]
         public string? ShortDescription { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("semanticRelevancyScore")]
         public double? SemanticRelevancyScore { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featured")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Featured { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3VisibilityJsonConverter))]
@@ -192,7 +192,7 @@ namespace HuggingFace
         public required global::HuggingFace.PatchCollectionsResponseDataItemVariant3Visibility Visibility { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"space"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]

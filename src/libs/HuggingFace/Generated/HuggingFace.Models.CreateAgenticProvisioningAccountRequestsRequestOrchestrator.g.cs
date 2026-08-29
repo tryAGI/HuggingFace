@@ -4,19 +4,19 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAgenticProvisioningAccountRequestsRequestOrchestrator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <default>"stripe"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "stripe";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stripe")]
         [global::System.Text.Json.Serialization.JsonRequired]
