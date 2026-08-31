@@ -27,6 +27,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Webgpu,
+        /// <summary>
+        ///
+        /// </summary>
         Xpu,
     }
 
@@ -46,6 +50,7 @@ namespace HuggingFace
                 GetKernelsResponseItemBuildMetadataBackendType.Cuda => "cuda",
                 GetKernelsResponseItemBuildMetadataBackendType.Metal => "metal",
                 GetKernelsResponseItemBuildMetadataBackendType.Rocm => "rocm",
+                GetKernelsResponseItemBuildMetadataBackendType.Webgpu => "webgpu",
                 GetKernelsResponseItemBuildMetadataBackendType.Xpu => "xpu",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -61,6 +66,7 @@ namespace HuggingFace
                 "cuda" => GetKernelsResponseItemBuildMetadataBackendType.Cuda,
                 "metal" => GetKernelsResponseItemBuildMetadataBackendType.Metal,
                 "rocm" => GetKernelsResponseItemBuildMetadataBackendType.Rocm,
+                "webgpu" => GetKernelsResponseItemBuildMetadataBackendType.Webgpu,
                 "xpu" => GetKernelsResponseItemBuildMetadataBackendType.Xpu,
                 _ => null,
             };
