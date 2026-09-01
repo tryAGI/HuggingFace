@@ -166,8 +166,15 @@ namespace HuggingFace
                                 path: "/api/collections",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("item", item?.ToString())
-                                .AddOptionalParameter("owner", owner?.ToString())
+                                .AddOptionalParameter("item", item?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("owner", owner?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x?.ToString()! },
+                validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("q", q)
                                 .AddOptionalParameter("sort", sort?.ToValueString())
                                 .AddOptionalParameter("cursor", cursor)

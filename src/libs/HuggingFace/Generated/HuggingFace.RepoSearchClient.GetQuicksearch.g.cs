@@ -250,9 +250,18 @@ namespace HuggingFace
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("lang", lang?.ToString())
                                 .AddOptionalParameter("library", library?.ToString())
-                                .AddOptionalParameter("type", type?.ToString())
-                                .AddOptionalParameter("orgsFilter", orgsFilter?.ToString())
-                                .AddOptionalParameter("reposFilter", reposFilter?.ToString())
+                                .AddOptionalParameter("type", type?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("orgsFilter", orgsFilter?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("reposFilter", reposFilter?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("pipelines", pipelines?.ToString())
                                 .AddOptionalParameter("exclude", exclude, delimiter: ",", explode: true)
                                 .AddOptionalParameter("namespace", @namespace)
