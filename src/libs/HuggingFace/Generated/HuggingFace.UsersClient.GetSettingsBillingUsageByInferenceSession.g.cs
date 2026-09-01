@@ -48,10 +48,10 @@ namespace HuggingFace
         /// Get user inference-provider usage broken down per session id
         /// </summary>
         /// <param name="startDate">
-        /// Default Value: 2026-08-01T00:00:00.000Z
+        /// Default Value: 2026-09-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-08-31T19:39:14.468Z
+        /// Default Value: 2026-09-01T11:48:41.074Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -76,10 +76,10 @@ namespace HuggingFace
         /// Get user inference-provider usage broken down per session id
         /// </summary>
         /// <param name="startDate">
-        /// Default Value: 2026-08-01T00:00:00.000Z
+        /// Default Value: 2026-09-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-08-31T19:39:14.468Z
+        /// Default Value: 2026-09-01T11:48:41.074Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
