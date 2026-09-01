@@ -415,10 +415,6 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        Kerasformers,
-        /// <summary>
-        ///
-        /// </summary>
         Kernels,
         /// <summary>
         ///
@@ -791,6 +787,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Shadow,
+        /// <summary>
+        ///
+        /// </summary>
         Skala,
         /// <summary>
         ///
@@ -991,6 +991,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Zeromodels,
+        /// <summary>
+        ///
+        /// </summary>
         Zonos,
     }
 
@@ -1107,7 +1111,6 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.K2 => "k2",
                 CreateQuicksearchRequestLibrary.Keras => "keras",
                 CreateQuicksearchRequestLibrary.KerasHub => "keras-hub",
-                CreateQuicksearchRequestLibrary.Kerasformers => "kerasformers",
                 CreateQuicksearchRequestLibrary.Kernels => "kernels",
                 CreateQuicksearchRequestLibrary.KimiAudio => "kimi-audio",
                 CreateQuicksearchRequestLibrary.Kittentts => "kittentts",
@@ -1201,6 +1204,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.SelfForcing => "self-forcing",
                 CreateQuicksearchRequestLibrary.SentenceTransformers => "sentence-transformers",
                 CreateQuicksearchRequestLibrary.Setfit => "setfit",
+                CreateQuicksearchRequestLibrary.Shadow => "shadow",
                 CreateQuicksearchRequestLibrary.Skala => "skala",
                 CreateQuicksearchRequestLibrary.Sklearn => "sklearn",
                 CreateQuicksearchRequestLibrary.Soloaudio => "soloaudio",
@@ -1251,6 +1255,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Whisperkit => "whisperkit",
                 CreateQuicksearchRequestLibrary.Yolov10 => "yolov10",
                 CreateQuicksearchRequestLibrary.Yolov26 => "yolov26",
+                CreateQuicksearchRequestLibrary.Zeromodels => "zeromodels",
                 CreateQuicksearchRequestLibrary.Zonos => "zonos",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -1363,7 +1368,6 @@ namespace HuggingFace
                 "k2" => CreateQuicksearchRequestLibrary.K2,
                 "keras" => CreateQuicksearchRequestLibrary.Keras,
                 "keras-hub" => CreateQuicksearchRequestLibrary.KerasHub,
-                "kerasformers" => CreateQuicksearchRequestLibrary.Kerasformers,
                 "kernels" => CreateQuicksearchRequestLibrary.Kernels,
                 "kimi-audio" => CreateQuicksearchRequestLibrary.KimiAudio,
                 "kittentts" => CreateQuicksearchRequestLibrary.Kittentts,
@@ -1457,6 +1461,7 @@ namespace HuggingFace
                 "self-forcing" => CreateQuicksearchRequestLibrary.SelfForcing,
                 "sentence-transformers" => CreateQuicksearchRequestLibrary.SentenceTransformers,
                 "setfit" => CreateQuicksearchRequestLibrary.Setfit,
+                "shadow" => CreateQuicksearchRequestLibrary.Shadow,
                 "skala" => CreateQuicksearchRequestLibrary.Skala,
                 "sklearn" => CreateQuicksearchRequestLibrary.Sklearn,
                 "soloaudio" => CreateQuicksearchRequestLibrary.Soloaudio,
@@ -1507,6 +1512,7 @@ namespace HuggingFace
                 "whisperkit" => CreateQuicksearchRequestLibrary.Whisperkit,
                 "yolov10" => CreateQuicksearchRequestLibrary.Yolov10,
                 "yolov26" => CreateQuicksearchRequestLibrary.Yolov26,
+                "zeromodels" => CreateQuicksearchRequestLibrary.Zeromodels,
                 "zonos" => CreateQuicksearchRequestLibrary.Zonos,
                 _ => null,
             };
