@@ -144,8 +144,14 @@ namespace HuggingFace
                                 path: $"/api/jobs/{@namespace}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("label", label?.ToString())
-                                .AddOptionalParameter("stage", stage?.ToString())
+                                .AddOptionalParameter("label", label?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("stage", stage?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x?.ToValueString() },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
+                validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("cursor", cursor)
                                 ;
                             var __path = __pathBuilder.ToString();
