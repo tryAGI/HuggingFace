@@ -103,6 +103,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgAuditLogExport,
+        /// <summary>
+        ///
+        /// </summary>
         OrgChangeRole,
         /// <summary>
         ///
@@ -144,6 +148,10 @@ namespace HuggingFace
         ///
         /// </summary>
         OrgRename,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgRepoAnalyticsExport,
         /// <summary>
         ///
         /// </summary>
@@ -509,6 +517,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels => "jobs.update_labels",
                 GetOrganizationsAuditLogExportResponseItemType.OauthToken => "oauth.token",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
+                GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport => "org.audit_log.export",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole => "org.change_role",
                 GetOrganizationsAuditLogExportResponseItemType.OrgCreate => "org.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgDelete => "org.delete",
@@ -520,6 +529,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgLeave => "org.leave",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRemoveUser => "org.remove_user",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRename => "org.rename",
+                GetOrganizationsAuditLogExportResponseItemType.OrgRepoAnalyticsExport => "org.repo_analytics.export",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRestore => "org.restore",
                 GetOrganizationsAuditLogExportResponseItemType.OrgRotateToken => "org.rotate_token",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountCreate => "org.service_account.create",
@@ -635,6 +645,7 @@ namespace HuggingFace
                 "jobs.update_labels" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels,
                 "oauth.token" => GetOrganizationsAuditLogExportResponseItemType.OauthToken,
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
+                "org.audit_log.export" => GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport,
                 "org.change_role" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole,
                 "org.create" => GetOrganizationsAuditLogExportResponseItemType.OrgCreate,
                 "org.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgDelete,
@@ -646,6 +657,7 @@ namespace HuggingFace
                 "org.leave" => GetOrganizationsAuditLogExportResponseItemType.OrgLeave,
                 "org.remove_user" => GetOrganizationsAuditLogExportResponseItemType.OrgRemoveUser,
                 "org.rename" => GetOrganizationsAuditLogExportResponseItemType.OrgRename,
+                "org.repo_analytics.export" => GetOrganizationsAuditLogExportResponseItemType.OrgRepoAnalyticsExport,
                 "org.restore" => GetOrganizationsAuditLogExportResponseItemType.OrgRestore,
                 "org.rotate_token" => GetOrganizationsAuditLogExportResponseItemType.OrgRotateToken,
                 "org.service_account.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountCreate,

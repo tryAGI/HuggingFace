@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class RepoSearchClient
+    public partial class BlogsClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetQuicksearchSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_CreateBlogByNamespaceBySlugResourceGroupSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,125 +21,53 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetQuicksearchSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_CreateBlogByNamespaceBySlugResourceGroupSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetQuicksearchSecurityRequirement0,
+            {                s_CreateBlogByNamespaceBySlugResourceGroupSecurityRequirement0,
             };
-        partial void PrepareGetQuicksearchArguments(
+        partial void PrepareCreateBlogByNamespaceBySlugResourceGroupArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? q,
-            ref int? limit,
-            ref global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLang2?, string>? lang,
-            ref global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLibrary2?, string>? library,
-            ref global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchTypeVariant1Item>, global::System.Collections.Generic.IList<string>>? type,
-            ref global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchOrgsFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? orgsFilter,
-            ref global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchReposFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? reposFilter,
-            ref global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines,
-            global::System.Collections.Generic.IList<string>? exclude,
-            ref string? @namespace,
-            ref global::HuggingFace.AnyOf<bool?, object>? includeInvitees,
-            ref string? repoName,
-            ref global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchRepoType2?, string>? repoType,
-            ref string? discussionId,
-            ref string? discussionCollectionName,
-            global::System.Collections.Generic.IList<string>? spacesTags);
-        partial void PrepareGetQuicksearchRequest(
+            ref string @namespace,
+            ref string slug,
+            global::HuggingFace.CreateBlogResourceGroupRequest request);
+        partial void PrepareCreateBlogByNamespaceBySlugResourceGroupRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? q,
-            int? limit,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLang2?, string>? lang,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLibrary2?, string>? library,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchTypeVariant1Item>, global::System.Collections.Generic.IList<string>>? type,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchOrgsFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? orgsFilter,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchReposFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? reposFilter,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines,
-            global::System.Collections.Generic.IList<string>? exclude,
-            string? @namespace,
-            global::HuggingFace.AnyOf<bool?, object>? includeInvitees,
-            string? repoName,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchRepoType2?, string>? repoType,
-            string? discussionId,
-            string? discussionCollectionName,
-            global::System.Collections.Generic.IList<string>? spacesTags);
-        partial void ProcessGetQuicksearchResponse(
+            string @namespace,
+            string slug,
+            global::HuggingFace.CreateBlogResourceGroupRequest request);
+        partial void ProcessCreateBlogByNamespaceBySlugResourceGroupResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetQuicksearchResponseContent(
+        partial void ProcessCreateBlogByNamespaceBySlugResourceGroupResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Quick search<br/>
-        /// Quick search for models, datasets, spaces, orgs, users, papers, collections, and buckets
+        /// Set blog resource group<br/>
+        /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
-        /// <param name="q"></param>
-        /// <param name="limit"></param>
-        /// <param name="lang"></param>
-        /// <param name="library"></param>
-        /// <param name="type"></param>
-        /// <param name="orgsFilter"></param>
-        /// <param name="reposFilter"></param>
-        /// <param name="pipelines">
-        /// Comma-separated or array of pipeline types
-        /// </param>
-        /// <param name="exclude">
-        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, kernels/repo, blog/blogSlug<br/>
-        /// Default Value: []
-        /// </param>
-        /// <param name="namespace">
-        /// Namespace to filter by
-        /// </param>
-        /// <param name="includeInvitees">
-        /// Default Value: false
-        /// </param>
-        /// <param name="repoName"></param>
-        /// <param name="repoType"></param>
-        /// <param name="discussionId"></param>
-        /// <param name="discussionCollectionName"></param>
-        /// <param name="spacesTags"></param>
+        /// <param name="namespace"></param>
+        /// <param name="slug"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetQuicksearchResponse> GetQuicksearchAsync(
-            string? q = default,
-            int? limit = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLang2?, string>? lang = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLibrary2?, string>? library = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchTypeVariant1Item>, global::System.Collections.Generic.IList<string>>? type = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchOrgsFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? orgsFilter = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchReposFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? reposFilter = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines = default,
-            global::System.Collections.Generic.IList<string>? exclude = default,
-            string? @namespace = default,
-            global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
-            string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchRepoType2?, string>? repoType = default,
-            string? discussionId = default,
-            string? discussionCollectionName = default,
-            global::System.Collections.Generic.IList<string>? spacesTags = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogResourceGroupResponse> CreateBlogByNamespaceBySlugResourceGroupAsync(
+            string @namespace,
+            string slug,
+
+            global::HuggingFace.CreateBlogResourceGroupRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetQuicksearchAsResponseAsync(
-                q: q,
-                limit: limit,
-                lang: lang,
-                library: library,
-                type: type,
-                orgsFilter: orgsFilter,
-                reposFilter: reposFilter,
-                pipelines: pipelines,
-                exclude: exclude,
+            var __response = await CreateBlogByNamespaceBySlugResourceGroupAsResponseAsync(
                 @namespace: @namespace,
-                includeInvitees: includeInvitees,
-                repoName: repoName,
-                repoType: repoType,
-                discussionId: discussionId,
-                discussionCollectionName: discussionCollectionName,
-                spacesTags: spacesTags,
+                slug: slug,
+
+                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -147,83 +75,38 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Quick search<br/>
-        /// Quick search for models, datasets, spaces, orgs, users, papers, collections, and buckets
+        /// Set blog resource group<br/>
+        /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
-        /// <param name="q"></param>
-        /// <param name="limit"></param>
-        /// <param name="lang"></param>
-        /// <param name="library"></param>
-        /// <param name="type"></param>
-        /// <param name="orgsFilter"></param>
-        /// <param name="reposFilter"></param>
-        /// <param name="pipelines">
-        /// Comma-separated or array of pipeline types
-        /// </param>
-        /// <param name="exclude">
-        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, kernels/repo, blog/blogSlug<br/>
-        /// Default Value: []
-        /// </param>
-        /// <param name="namespace">
-        /// Namespace to filter by
-        /// </param>
-        /// <param name="includeInvitees">
-        /// Default Value: false
-        /// </param>
-        /// <param name="repoName"></param>
-        /// <param name="repoType"></param>
-        /// <param name="discussionId"></param>
-        /// <param name="discussionCollectionName"></param>
-        /// <param name="spacesTags"></param>
+        /// <param name="namespace"></param>
+        /// <param name="slug"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetQuicksearchResponse>> GetQuicksearchAsResponseAsync(
-            string? q = default,
-            int? limit = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLang2?, string>? lang = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchLibrary2?, string>? library = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchTypeVariant1Item>, global::System.Collections.Generic.IList<string>>? type = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchOrgsFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? orgsFilter = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchReposFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? reposFilter = default,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines = default,
-            global::System.Collections.Generic.IList<string>? exclude = default,
-            string? @namespace = default,
-            global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
-            string? repoName = default,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchRepoType2?, string>? repoType = default,
-            string? discussionId = default,
-            string? discussionCollectionName = default,
-            global::System.Collections.Generic.IList<string>? spacesTags = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogResourceGroupResponse>> CreateBlogByNamespaceBySlugResourceGroupAsResponseAsync(
+            string @namespace,
+            string slug,
+
+            global::HuggingFace.CreateBlogResourceGroupRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetQuicksearchArguments(
+            PrepareCreateBlogByNamespaceBySlugResourceGroupArguments(
                 httpClient: HttpClient,
-                q: ref q,
-                limit: ref limit,
-                lang: ref lang,
-                library: ref library,
-                type: ref type,
-                orgsFilter: ref orgsFilter,
-                reposFilter: ref reposFilter,
-                pipelines: ref pipelines,
-                exclude: exclude,
                 @namespace: ref @namespace,
-                includeInvitees: ref includeInvitees,
-                repoName: ref repoName,
-                repoType: ref repoType,
-                discussionId: ref discussionId,
-                discussionCollectionName: ref discussionCollectionName,
-                spacesTags: spacesTags);
+                slug: ref slug,
+                request: request);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetQuicksearchSecurityRequirements,
-                operationName: "GetQuicksearchAsync");
+                securityRequirements: s_CreateBlogByNamespaceBySlugResourceGroupSecurityRequirements,
+                operationName: "CreateBlogByNamespaceBySlugResourceGroupAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -243,42 +126,15 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: "/api/quicksearch",
+                                path: $"/api/blog/{@namespace}/{slug}/resource-group",
                                 baseUri: HttpClient.BaseAddress);
-                            __pathBuilder
-                                .AddOptionalParameter("q", q)
-                                .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("lang", lang?.ToString())
-                                .AddOptionalParameter("library", library?.ToString())
-                                .AddOptionalParameter("type", type?.Match(
-                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
-                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
-                validate: false), delimiter: ",", explode: true)
-                                .AddOptionalParameter("orgsFilter", orgsFilter?.Match(
-                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
-                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
-                validate: false), delimiter: ",", explode: true)
-                                .AddOptionalParameter("reposFilter", reposFilter?.Match(
-                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
-                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
-                validate: false), delimiter: ",", explode: true)
-                                .AddOptionalParameter("pipelines", pipelines?.ToString())
-                                .AddOptionalParameter("exclude", exclude, delimiter: ",", explode: true)
-                                .AddOptionalParameter("namespace", @namespace)
-                                .AddOptionalParameter("includeInvitees", includeInvitees?.ToString())
-                                .AddOptionalParameter("repoName", repoName)
-                                .AddOptionalParameter("repoType", repoType?.ToString())
-                                .AddOptionalParameter("discussionId", discussionId)
-                                .AddOptionalParameter("discussionCollectionName", discussionCollectionName)
-                                .AddOptionalParameter("spacesTags", spacesTags, delimiter: ",", explode: true)
-                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Get,
+                    method: global::System.Net.Http.HttpMethod.Post,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -301,6 +157,12 @@ namespace HuggingFace
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: __httpRequestContentBody,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "application/json");
+                            __httpRequest.Content = __httpRequestContent;
                 global::HuggingFace.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -309,25 +171,12 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetQuicksearchRequest(
+                PrepareCreateBlogByNamespaceBySlugResourceGroupRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    q: q,
-                    limit: limit,
-                    lang: lang,
-                    library: library,
-                    type: type,
-                    orgsFilter: orgsFilter,
-                    reposFilter: reposFilter,
-                    pipelines: pipelines,
-                    exclude: exclude,
-                    @namespace: @namespace,
-                    includeInvitees: includeInvitees,
-                    repoName: repoName,
-                    repoType: repoType,
-                    discussionId: discussionId,
-                    discussionCollectionName: discussionCollectionName,
-                    spacesTags: spacesTags);
+                    @namespace: @namespace!,
+                    slug: slug!,
+                    request: request);
 
                 return __httpRequest;
             }
@@ -344,10 +193,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getQuicksearch",
-                                methodName: "GetQuicksearchAsync",
-                                pathTemplate: "\"/api/quicksearch\"",
-                                httpMethod: "GET",
+                                operationId: "createBlogByNamespaceBySlugResourceGroup",
+                                methodName: "CreateBlogByNamespaceBySlugResourceGroupAsync",
+                                pathTemplate: "$\"/api/blog/{@namespace}/{slug}/resource-group\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -378,10 +227,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getQuicksearch",
-                                methodName: "GetQuicksearchAsync",
-                                pathTemplate: "\"/api/quicksearch\"",
-                                httpMethod: "GET",
+                                operationId: "createBlogByNamespaceBySlugResourceGroup",
+                                methodName: "CreateBlogByNamespaceBySlugResourceGroupAsync",
+                                pathTemplate: "$\"/api/blog/{@namespace}/{slug}/resource-group\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -419,10 +268,10 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getQuicksearch",
-                                methodName: "GetQuicksearchAsync",
-                                pathTemplate: "\"/api/quicksearch\"",
-                                httpMethod: "GET",
+                                operationId: "createBlogByNamespaceBySlugResourceGroup",
+                                methodName: "CreateBlogByNamespaceBySlugResourceGroupAsync",
+                                pathTemplate: "$\"/api/blog/{@namespace}/{slug}/resource-group\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -459,7 +308,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetQuicksearchResponse(
+                ProcessCreateBlogByNamespaceBySlugResourceGroupResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -467,10 +316,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getQuicksearch",
-                                methodName: "GetQuicksearchAsync",
-                                pathTemplate: "\"/api/quicksearch\"",
-                                httpMethod: "GET",
+                                operationId: "createBlogByNamespaceBySlugResourceGroup",
+                                methodName: "CreateBlogByNamespaceBySlugResourceGroupAsync",
+                                pathTemplate: "$\"/api/blog/{@namespace}/{slug}/resource-group\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -489,10 +338,10 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getQuicksearch",
-                                methodName: "GetQuicksearchAsync",
-                                pathTemplate: "\"/api/quicksearch\"",
-                                httpMethod: "GET",
+                                operationId: "createBlogByNamespaceBySlugResourceGroup",
+                                methodName: "CreateBlogByNamespaceBySlugResourceGroupAsync",
+                                pathTemplate: "$\"/api/blog/{@namespace}/{slug}/resource-group\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -519,7 +368,7 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetQuicksearchResponseContent(
+                                ProcessCreateBlogByNamespaceBySlugResourceGroupResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -528,9 +377,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetQuicksearchResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.CreateBlogResourceGroupResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetQuicksearchResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogResourceGroupResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -560,9 +409,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.GetQuicksearchResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.CreateBlogResourceGroupResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetQuicksearchResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogResourceGroupResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -601,6 +450,37 @@ namespace HuggingFace
             {
                 __httpRequest?.Dispose();
             }
+        }
+        /// <summary>
+        /// Set blog resource group<br/>
+        /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="slug"></param>
+        /// <param name="resourceGroupId">
+        /// The resource group to assign the blog to. If null, the blog is removed from any resource group.
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogResourceGroupResponse> CreateBlogByNamespaceBySlugResourceGroupAsync(
+            string @namespace,
+            string slug,
+            string? resourceGroupId = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::HuggingFace.CreateBlogResourceGroupRequest
+            {
+                ResourceGroupId = resourceGroupId,
+            };
+
+            return await CreateBlogByNamespaceBySlugResourceGroupAsync(
+                @namespace: @namespace,
+                slug: slug,
+                request: __request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

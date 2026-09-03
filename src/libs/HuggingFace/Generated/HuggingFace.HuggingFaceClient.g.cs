@@ -77,6 +77,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        ///
+        /// </summary>
+        public BlogsClient Blogs => new BlogsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
         /// Buckets. Git-free storage buckets for files, powered by Xet. Buckets provide simple file storage without git versioning.
         /// </summary>
         public BucketsClient Buckets => new BucketsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
