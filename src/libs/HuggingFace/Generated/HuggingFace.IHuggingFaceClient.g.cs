@@ -63,6 +63,11 @@ namespace HuggingFace
         public AuthClient Auth { get; }
 
         /// <summary>
+        ///
+        /// </summary>
+        public BlogsClient Blogs { get; }
+
+        /// <summary>
         /// Buckets. Git-free storage buckets for files, powered by Xet. Buckets provide simple file storage without git versioning.
         /// </summary>
         public BucketsClient Buckets { get; }

@@ -11,6 +11,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Blog,
+        /// <summary>
+        ///
+        /// </summary>
         Bucket,
         /// <summary>
         ///
@@ -58,6 +62,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                GetQuicksearchTypeVariant1Item.Blog => "blog",
                 GetQuicksearchTypeVariant1Item.Bucket => "bucket",
                 GetQuicksearchTypeVariant1Item.Collection => "collection",
                 GetQuicksearchTypeVariant1Item.Dataset => "dataset",
@@ -77,6 +82,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                "blog" => GetQuicksearchTypeVariant1Item.Blog,
                 "bucket" => GetQuicksearchTypeVariant1Item.Bucket,
                 "collection" => GetQuicksearchTypeVariant1Item.Collection,
                 "dataset" => GetQuicksearchTypeVariant1Item.Dataset,

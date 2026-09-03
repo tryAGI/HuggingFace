@@ -128,6 +128,20 @@ namespace HuggingFace
         public required double KernelsCount { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("blogs")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseBlog> Blogs { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("blogsCount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double BlogsCount { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -153,6 +167,8 @@ namespace HuggingFace
         /// <param name="bucketsCount"></param>
         /// <param name="kernels"></param>
         /// <param name="kernelsCount"></param>
+        /// <param name="blogs"></param>
+        /// <param name="blogsCount"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -173,7 +189,9 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseBucket> buckets,
             double bucketsCount,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseKernel> kernels,
-            double kernelsCount)
+            double kernelsCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseBlog> blogs,
+            double blogsCount)
         {
             this.Datasets = datasets ?? throw new global::System.ArgumentNullException(nameof(datasets));
             this.DatasetsCount = datasetsCount;
@@ -192,6 +210,8 @@ namespace HuggingFace
             this.BucketsCount = bucketsCount;
             this.Kernels = kernels ?? throw new global::System.ArgumentNullException(nameof(kernels));
             this.KernelsCount = kernelsCount;
+            this.Blogs = blogs ?? throw new global::System.ArgumentNullException(nameof(blogs));
+            this.BlogsCount = blogsCount;
         }
 
         /// <summary>
