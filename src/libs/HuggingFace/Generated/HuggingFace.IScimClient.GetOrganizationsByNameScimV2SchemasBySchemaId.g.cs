@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Get SCIM Schema by ID<br/>
+        /// Get SCIM schema<br/>
         /// Returns a single SCIM 2.0 schema definition by its schema URI.
         /// </summary>
         /// <param name="name"></param>
@@ -19,7 +19,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get SCIM Schema by ID<br/>
+        /// Get SCIM schema<br/>
         /// Returns a single SCIM 2.0 schema definition by its schema URI.
         /// </summary>
         /// <param name="name"></param>

@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IDiscussionsClient
     {
         /// <summary>
-        /// Merge a pull request
+        /// Merge pull request
         /// </summary>
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>
@@ -25,7 +25,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Merge a pull request
+        /// Merge pull request
         /// </summary>
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>
@@ -45,7 +45,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Merge a pull request
+        /// Merge pull request
         /// </summary>
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>

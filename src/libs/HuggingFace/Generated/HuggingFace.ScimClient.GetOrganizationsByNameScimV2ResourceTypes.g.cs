@@ -42,7 +42,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get SCIM Resource Types<br/>
+        /// SCIM resource types<br/>
         /// Returns the list of SCIM 2.0 resource types supported by this server (User and Group).
         /// </summary>
         /// <param name="name"></param>
@@ -63,7 +63,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get SCIM Resource Types<br/>
+        /// SCIM resource types<br/>
         /// Returns the list of SCIM 2.0 resource types supported by this server (User and Group).
         /// </summary>
         /// <param name="name"></param>

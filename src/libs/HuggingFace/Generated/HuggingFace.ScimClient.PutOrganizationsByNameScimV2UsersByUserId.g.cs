@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update a SCIM user<br/>
+        /// Update SCIM user<br/>
         /// Updates a provisioned user, you'll need to provide all their information fresh - just like setting them up for the first time. Any details you don't include will be automatically removed, so make sure to include everything they need to keep their account running smoothly. Setting `active` to `false` will deprovision the user from the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update a SCIM user<br/>
+        /// Update SCIM user<br/>
         /// Updates a provisioned user, you'll need to provide all their information fresh - just like setting them up for the first time. Any details you don't include will be automatically removed, so make sure to include everything they need to keep their account running smoothly. Setting `active` to `false` will deprovision the user from the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -489,7 +489,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update a SCIM user<br/>
+        /// Update SCIM user<br/>
         /// Updates a provisioned user, you'll need to provide all their information fresh - just like setting them up for the first time. Any details you don't include will be automatically removed, so make sure to include everything they need to keep their account running smoothly. Setting `active` to `false` will deprovision the user from the organization.
         /// </summary>
         /// <param name="name"></param>

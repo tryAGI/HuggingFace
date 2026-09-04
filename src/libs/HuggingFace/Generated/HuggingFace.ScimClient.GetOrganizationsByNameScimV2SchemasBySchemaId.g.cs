@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get SCIM Schema by ID<br/>
+        /// Get SCIM schema<br/>
         /// Returns a single SCIM 2.0 schema definition by its schema URI.
         /// </summary>
         /// <param name="name"></param>
@@ -68,7 +68,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get SCIM Schema by ID<br/>
+        /// Get SCIM schema<br/>
         /// Returns a single SCIM 2.0 schema definition by its schema URI.
         /// </summary>
         /// <param name="name"></param>

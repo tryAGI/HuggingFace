@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Update a SCIM group<br/>
+        /// Update SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -22,7 +22,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a SCIM group<br/>
+        /// Update SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a SCIM group<br/>
+        /// Update SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>

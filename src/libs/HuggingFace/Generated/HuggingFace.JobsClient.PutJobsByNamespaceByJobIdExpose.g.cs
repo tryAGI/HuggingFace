@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update job exposed ports<br/>
+        /// Job exposed ports<br/>
         /// Replace the exposed ports of a running job, applied live (no re-run). Ports listed in `portsPublic` are reachable without any authentication.
         /// </summary>
         /// <param name="namespace"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update job exposed ports<br/>
+        /// Job exposed ports<br/>
         /// Replace the exposed ports of a running job, applied live (no re-run). Ports listed in `portsPublic` are reachable without any authentication.
         /// </summary>
         /// <param name="namespace"></param>
@@ -452,7 +452,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update job exposed ports<br/>
+        /// Job exposed ports<br/>
         /// Replace the exposed ports of a running job, applied live (no re-run). Ports listed in `portsPublic` are reachable without any authentication.
         /// </summary>
         /// <param name="namespace"></param>

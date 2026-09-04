@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Set collection resource group<br/>
+        /// Collection resource group<br/>
         /// Assign, move, or unassign an organization-owned collection to a resource group. Pass null to unassign. User-owned collections are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Set collection resource group<br/>
+        /// Collection resource group<br/>
         /// Assign, move, or unassign an organization-owned collection to a resource group. Pass null to unassign. User-owned collections are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
@@ -452,7 +452,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Set collection resource group<br/>
+        /// Collection resource group<br/>
         /// Assign, move, or unassign an organization-owned collection to a resource group. Pass null to unassign. User-owned collections are not eligible.
         /// </summary>
         /// <param name="namespace"></param>

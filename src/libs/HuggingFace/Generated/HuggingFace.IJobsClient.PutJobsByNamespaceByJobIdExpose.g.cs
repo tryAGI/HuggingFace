@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IJobsClient
     {
         /// <summary>
-        /// Update job exposed ports<br/>
+        /// Job exposed ports<br/>
         /// Replace the exposed ports of a running job, applied live (no re-run). Ports listed in `portsPublic` are reachable without any authentication.
         /// </summary>
         /// <param name="namespace"></param>
@@ -22,7 +22,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update job exposed ports<br/>
+        /// Job exposed ports<br/>
         /// Replace the exposed ports of a running job, applied live (no re-run). Ports listed in `portsPublic` are reachable without any authentication.
         /// </summary>
         /// <param name="namespace"></param>
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update job exposed ports<br/>
+        /// Job exposed ports<br/>
         /// Replace the exposed ports of a running job, applied live (no re-run). Ports listed in `portsPublic` are reachable without any authentication.
         /// </summary>
         /// <param name="namespace"></param>

@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Create a new comment
+        /// Create comment
         /// </summary>
         /// <param name="username"></param>
         /// <param name="postSlug"></param>
@@ -74,7 +74,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Create a new comment
+        /// Create comment
         /// </summary>
         /// <param name="username"></param>
         /// <param name="postSlug"></param>
@@ -450,7 +450,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Create a new comment
+        /// Create comment
         /// </summary>
         /// <param name="username"></param>
         /// <param name="postSlug"></param>

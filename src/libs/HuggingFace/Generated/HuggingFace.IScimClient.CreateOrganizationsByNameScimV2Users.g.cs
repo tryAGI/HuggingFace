@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Create a SCIM user<br/>
+        /// Create SCIM user<br/>
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>
@@ -20,7 +20,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a SCIM user<br/>
+        /// Create SCIM user<br/>
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>
@@ -35,7 +35,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a SCIM user<br/>
+        /// Create SCIM user<br/>
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>

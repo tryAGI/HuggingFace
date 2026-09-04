@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IBlogsClient
     {
         /// <summary>
-        /// Get blog resource group
+        /// Blog resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
@@ -18,7 +18,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get blog resource group
+        /// Blog resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>

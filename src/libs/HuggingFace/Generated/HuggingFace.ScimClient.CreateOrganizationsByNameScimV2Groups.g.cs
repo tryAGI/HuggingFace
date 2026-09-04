@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Create a SCIM group<br/>
+        /// Create SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -70,7 +70,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Create a SCIM group<br/>
+        /// Create SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -480,7 +480,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Create a SCIM group<br/>
+        /// Create SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>

@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update scheduled job labels<br/>
+        /// Scheduled job labels<br/>
         /// Replace user-provided labels on a scheduled job
         /// </summary>
         /// <param name="namespace"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update scheduled job labels<br/>
+        /// Scheduled job labels<br/>
         /// Replace user-provided labels on a scheduled job
         /// </summary>
         /// <param name="namespace"></param>
@@ -452,7 +452,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update scheduled job labels<br/>
+        /// Scheduled job labels<br/>
         /// Replace user-provided labels on a scheduled job
         /// </summary>
         /// <param name="namespace"></param>

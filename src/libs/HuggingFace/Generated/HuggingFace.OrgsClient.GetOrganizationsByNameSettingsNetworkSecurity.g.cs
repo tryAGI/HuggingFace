@@ -42,7 +42,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get network security settings<br/>
+        /// Network security settings<br/>
         /// Get the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>
@@ -63,7 +63,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get network security settings<br/>
+        /// Network security settings<br/>
         /// Get the network security settings for an organization.
         /// </summary>
         /// <param name="name"></param>

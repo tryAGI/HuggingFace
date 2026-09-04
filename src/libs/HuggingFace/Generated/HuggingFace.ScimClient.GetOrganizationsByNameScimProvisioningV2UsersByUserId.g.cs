@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get a SCIM provisioning user<br/>
+        /// SCIM provisioning user<br/>
         /// Retrieves a SCIM user by their ID for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>
@@ -68,7 +68,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get a SCIM provisioning user<br/>
+        /// SCIM provisioning user<br/>
         /// Retrieves a SCIM user by their ID for non-managed organizations.
         /// </summary>
         /// <param name="name"></param>

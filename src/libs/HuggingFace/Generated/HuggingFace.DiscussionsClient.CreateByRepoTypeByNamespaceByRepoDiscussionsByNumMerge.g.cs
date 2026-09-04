@@ -45,7 +45,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Merge a pull request
+        /// Merge pull request
         /// </summary>
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>
@@ -77,7 +77,7 @@ namespace HuggingFace
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// Merge a pull request
+        /// Merge pull request
         /// </summary>
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>
@@ -445,7 +445,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Merge a pull request
+        /// Merge pull request
         /// </summary>
         /// <param name="repoType"></param>
         /// <param name="namespace"></param>

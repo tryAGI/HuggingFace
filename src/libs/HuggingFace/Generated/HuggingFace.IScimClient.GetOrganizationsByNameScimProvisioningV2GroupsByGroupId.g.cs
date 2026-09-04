@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Get a SCIM group<br/>
+        /// Get SCIM group<br/>
         /// Retrieves a group by its ID. If you provide the `excludedAttributes` parameter, the `members` attribute is not returned.
         /// </summary>
         /// <param name="name"></param>
@@ -21,7 +21,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get a SCIM group<br/>
+        /// Get SCIM group<br/>
         /// Retrieves a group by its ID. If you provide the `excludedAttributes` parameter, the `members` attribute is not returned.
         /// </summary>
         /// <param name="name"></param>

@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IDiscussionsClient
     {
         /// <summary>
-        /// Create a new comment
+        /// Create comment
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
@@ -23,7 +23,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a new comment
+        /// Create comment
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
@@ -41,7 +41,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a new comment
+        /// Create comment
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>

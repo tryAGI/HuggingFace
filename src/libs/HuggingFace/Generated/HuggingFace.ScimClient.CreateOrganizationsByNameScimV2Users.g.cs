@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Create a SCIM user<br/>
+        /// Create SCIM user<br/>
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>
@@ -70,7 +70,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Create a SCIM user<br/>
+        /// Create SCIM user<br/>
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>
@@ -480,7 +480,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Create a SCIM user<br/>
+        /// Create SCIM user<br/>
         /// Creates a new user in the organization. If the user already exists, only `active` field will be updated to provision the user.
         /// </summary>
         /// <param name="name"></param>

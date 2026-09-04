@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Update a SCIM group<br/>
+        /// Update SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Update a SCIM group<br/>
+        /// Update SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -452,7 +452,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Update a SCIM group<br/>
+        /// Update SCIM group<br/>
         /// Updates a group by its ID. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>

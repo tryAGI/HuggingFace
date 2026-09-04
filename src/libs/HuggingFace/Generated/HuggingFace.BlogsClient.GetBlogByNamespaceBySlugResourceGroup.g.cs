@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get blog resource group
+        /// Blog resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
@@ -67,7 +67,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get blog resource group
+        /// Blog resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>

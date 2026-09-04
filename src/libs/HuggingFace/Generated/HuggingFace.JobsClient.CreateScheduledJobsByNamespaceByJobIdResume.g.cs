@@ -39,7 +39,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Resume a scheduled job
+        /// Resume scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobId"></param>
@@ -60,7 +60,7 @@ namespace HuggingFace
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// Resume a scheduled job
+        /// Resume scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobId"></param>

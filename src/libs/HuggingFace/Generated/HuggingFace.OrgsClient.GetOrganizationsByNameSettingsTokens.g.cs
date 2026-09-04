@@ -48,7 +48,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// List member access tokens<br/>
+        /// Member access tokens<br/>
         /// List the access tokens of the organization's members. Team or Enterprise only.
         /// </summary>
         /// <param name="name"></param>
@@ -85,7 +85,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// List member access tokens<br/>
+        /// Member access tokens<br/>
         /// List the access tokens of the organization's members. Team or Enterprise only.
         /// </summary>
         /// <param name="name"></param>

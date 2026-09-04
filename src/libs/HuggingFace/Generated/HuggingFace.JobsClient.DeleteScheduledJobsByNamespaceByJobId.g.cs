@@ -39,7 +39,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Delete a scheduled job
+        /// Delete scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobId"></param>
@@ -60,7 +60,7 @@ namespace HuggingFace
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete a scheduled job
+        /// Delete scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobId"></param>
