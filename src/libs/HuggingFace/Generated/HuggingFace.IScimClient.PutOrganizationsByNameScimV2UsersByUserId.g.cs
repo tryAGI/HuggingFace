@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Update a SCIM user<br/>
+        /// Update SCIM user<br/>
         /// Updates a provisioned user, you'll need to provide all their information fresh - just like setting them up for the first time. Any details you don't include will be automatically removed, so make sure to include everything they need to keep their account running smoothly. Setting `active` to `false` will deprovision the user from the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -22,7 +22,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a SCIM user<br/>
+        /// Update SCIM user<br/>
         /// Updates a provisioned user, you'll need to provide all their information fresh - just like setting them up for the first time. Any details you don't include will be automatically removed, so make sure to include everything they need to keep their account running smoothly. Setting `active` to `false` will deprovision the user from the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a SCIM user<br/>
+        /// Update SCIM user<br/>
         /// Updates a provisioned user, you'll need to provide all their information fresh - just like setting them up for the first time. Any details you don't include will be automatically removed, so make sure to include everything they need to keep their account running smoothly. Setting `active` to `false` will deprovision the user from the organization.
         /// </summary>
         /// <param name="name"></param>

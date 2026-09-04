@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Create a SCIM group<br/>
+        /// Create SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -20,7 +20,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a SCIM group<br/>
+        /// Create SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>
@@ -35,7 +35,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a SCIM group<br/>
+        /// Create SCIM group<br/>
         /// Creates a new group in the organization. The group name must be unique within the organization.
         /// </summary>
         /// <param name="name"></param>

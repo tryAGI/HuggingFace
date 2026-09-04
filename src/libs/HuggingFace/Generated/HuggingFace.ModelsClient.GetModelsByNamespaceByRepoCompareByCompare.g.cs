@@ -48,7 +48,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get a compare rev
+        /// Get compare rev
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -79,7 +79,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get a compare rev
+        /// Get compare rev
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>

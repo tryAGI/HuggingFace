@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Delete a SCIM group
+        /// Delete SCIM group
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>
@@ -18,7 +18,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Delete a SCIM group
+        /// Delete SCIM group
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>

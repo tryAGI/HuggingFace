@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Create a scheduled job
+        /// Create scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="request"></param>
@@ -69,7 +69,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Create a scheduled job
+        /// Create scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="request"></param>
@@ -441,7 +441,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Create a scheduled job
+        /// Create scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobSpec"></param>

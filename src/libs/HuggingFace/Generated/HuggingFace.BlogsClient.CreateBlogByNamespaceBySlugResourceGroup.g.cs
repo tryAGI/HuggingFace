@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Set blog resource group<br/>
+        /// Blog resource group<br/>
         /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
@@ -75,7 +75,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Set blog resource group<br/>
+        /// Blog resource group<br/>
         /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
@@ -452,7 +452,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Set blog resource group<br/>
+        /// Blog resource group<br/>
         /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
         /// <param name="namespace"></param>

@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IOauthClient
     {
         /// <summary>
-        /// Register a new OAuth app
+        /// Register OAuth app
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -17,7 +17,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Register a new OAuth app
+        /// Register OAuth app
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -29,7 +29,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Register a new OAuth app
+        /// Register OAuth app
         /// </summary>
         /// <param name="redirectUris"></param>
         /// <param name="clientName"></param>

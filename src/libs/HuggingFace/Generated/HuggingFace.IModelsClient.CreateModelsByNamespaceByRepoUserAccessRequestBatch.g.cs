@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IModelsClient
     {
         /// <summary>
-        /// Batch handle access requests<br/>
+        /// Batch access requests<br/>
         /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
@@ -22,7 +22,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Batch handle access requests<br/>
+        /// Batch access requests<br/>
         /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Batch handle access requests<br/>
+        /// Batch access requests<br/>
         /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>

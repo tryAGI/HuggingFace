@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface ICollectionsClient
     {
         /// <summary>
-        /// Get collection resource group
+        /// Collection resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
@@ -20,7 +20,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get collection resource group
+        /// Collection resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>

@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IOrgsClient
     {
         /// <summary>
-        /// Export the audit log<br/>
+        /// Export audit log<br/>
         /// Export the audit log events in JSON format for a Team or Enterprise organization. The export is limited to the last 100,000 events.
         /// </summary>
         /// <param name="name"></param>
@@ -19,7 +19,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Export the audit log<br/>
+        /// Export audit log<br/>
         /// Export the audit log events in JSON format for a Team or Enterprise organization. The export is limited to the last 100,000 events.
         /// </summary>
         /// <param name="name"></param>

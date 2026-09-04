@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get a SCIM user<br/>
+        /// Get SCIM user<br/>
         /// Retrieves a SCIM user by their ID.
         /// </summary>
         /// <param name="name"></param>
@@ -68,7 +68,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get a SCIM user<br/>
+        /// Get SCIM user<br/>
         /// Retrieves a SCIM user by their ID.
         /// </summary>
         /// <param name="name"></param>

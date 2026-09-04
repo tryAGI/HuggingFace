@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get collection resource group
+        /// Collection resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>
@@ -72,7 +72,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get collection resource group
+        /// Collection resource group
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="slug"></param>

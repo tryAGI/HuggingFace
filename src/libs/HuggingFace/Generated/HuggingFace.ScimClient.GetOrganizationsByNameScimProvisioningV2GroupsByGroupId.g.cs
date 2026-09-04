@@ -46,7 +46,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Get a SCIM group<br/>
+        /// Get SCIM group<br/>
         /// Retrieves a group by its ID. If you provide the `excludedAttributes` parameter, the `members` attribute is not returned.
         /// </summary>
         /// <param name="name"></param>
@@ -73,7 +73,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Get a SCIM group<br/>
+        /// Get SCIM group<br/>
         /// Retrieves a group by its ID. If you provide the `excludedAttributes` parameter, the `members` attribute is not returned.
         /// </summary>
         /// <param name="name"></param>

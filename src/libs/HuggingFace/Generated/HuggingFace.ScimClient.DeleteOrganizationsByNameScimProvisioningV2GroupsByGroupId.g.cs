@@ -44,7 +44,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Delete a SCIM group
+        /// Delete SCIM group
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>
@@ -67,7 +67,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Delete a SCIM group
+        /// Delete SCIM group
         /// </summary>
         /// <param name="name"></param>
         /// <param name="groupId"></param>

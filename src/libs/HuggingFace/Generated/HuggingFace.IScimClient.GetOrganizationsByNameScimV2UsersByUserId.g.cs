@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Get a SCIM user<br/>
+        /// Get SCIM user<br/>
         /// Retrieves a SCIM user by their ID.
         /// </summary>
         /// <param name="name"></param>
@@ -19,7 +19,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get a SCIM user<br/>
+        /// Get SCIM user<br/>
         /// Retrieves a SCIM user by their ID.
         /// </summary>
         /// <param name="name"></param>

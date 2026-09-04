@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IScimClient
     {
         /// <summary>
-        /// Get SCIM Resource Types<br/>
+        /// SCIM resource types<br/>
         /// Returns the list of SCIM 2.0 resource types supported by this server (User and Group).
         /// </summary>
         /// <param name="name"></param>
@@ -17,7 +17,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get SCIM Resource Types<br/>
+        /// SCIM resource types<br/>
         /// Returns the list of SCIM 2.0 resource types supported by this server (User and Group).
         /// </summary>
         /// <param name="name"></param>

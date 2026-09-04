@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IBlogsClient
     {
         /// <summary>
-        /// Set blog resource group<br/>
+        /// Blog resource group<br/>
         /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
@@ -22,7 +22,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Set blog resource group<br/>
+        /// Blog resource group<br/>
         /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Set blog resource group<br/>
+        /// Blog resource group<br/>
         /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
         /// <param name="namespace"></param>

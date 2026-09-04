@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IOrgsClient
     {
         /// <summary>
-        /// List member access tokens<br/>
+        /// Member access tokens<br/>
         /// List the access tokens of the organization's members. Team or Enterprise only.
         /// </summary>
         /// <param name="name"></param>
@@ -30,7 +30,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// List member access tokens<br/>
+        /// Member access tokens<br/>
         /// List the access tokens of the organization's members. Team or Enterprise only.
         /// </summary>
         /// <param name="name"></param>

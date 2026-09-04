@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface ISpacesClient
     {
         /// <summary>
-        /// Get a compare rev
+        /// Get compare rev
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -24,7 +24,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get a compare rev
+        /// Get compare rev
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>

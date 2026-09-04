@@ -42,7 +42,7 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Register a new OAuth app
+        /// Register OAuth app
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -64,7 +64,7 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Register a new OAuth app
+        /// Register OAuth app
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -432,7 +432,7 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Register a new OAuth app
+        /// Register OAuth app
         /// </summary>
         /// <param name="redirectUris"></param>
         /// <param name="clientName"></param>

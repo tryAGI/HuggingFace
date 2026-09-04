@@ -5,7 +5,7 @@ namespace HuggingFace
     public partial interface IJobsClient
     {
         /// <summary>
-        /// Create a scheduled job
+        /// Create scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="request"></param>
@@ -19,7 +19,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a scheduled job
+        /// Create scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a scheduled job
+        /// Create scheduled job
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="jobSpec"></param>
