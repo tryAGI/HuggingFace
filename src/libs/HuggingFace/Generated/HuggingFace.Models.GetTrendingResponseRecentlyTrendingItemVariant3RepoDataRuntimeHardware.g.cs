@@ -12,13 +12,13 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("current")]
-        public global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2? Current { get; set; }
+        public global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent? Current { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested")]
-        public global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested2? Requested { get; set; }
+        public global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested? Requested { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -35,8 +35,8 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardware(
-            global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2? current,
-            global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested2? requested)
+            global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent? current,
+            global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested? requested)
         {
             this.Current = current;
             this.Requested = requested;

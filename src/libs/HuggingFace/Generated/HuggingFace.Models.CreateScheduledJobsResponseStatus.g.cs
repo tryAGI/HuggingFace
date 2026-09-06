@@ -12,7 +12,7 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lastJob")]
-        public global::HuggingFace.CreateScheduledJobsResponseStatusLastJob2? LastJob { get; set; }
+        public global::HuggingFace.CreateScheduledJobsResponseStatusLastJob? LastJob { get; set; }
 
         /// <summary>
         ///
@@ -37,7 +37,7 @@ namespace HuggingFace
 #endif
         public CreateScheduledJobsResponseStatus(
             global::System.DateTime nextJobRunAt,
-            global::HuggingFace.CreateScheduledJobsResponseStatusLastJob2? lastJob)
+            global::HuggingFace.CreateScheduledJobsResponseStatusLastJob? lastJob)
         {
             this.LastJob = lastJob;
             this.NextJobRunAt = nextJobRunAt;
