@@ -12,13 +12,13 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("current")]
-        public global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareCurrent2? Current { get; set; }
+        public global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareCurrent? Current { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested")]
-        public global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareRequested2? Requested { get; set; }
+        public global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareRequested? Requested { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -35,8 +35,8 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsResponseItemVariant3RuntimeHardware(
-            global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareCurrent2? current,
-            global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareRequested2? requested)
+            global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareCurrent? current,
+            global::HuggingFace.CreateCollectionsResponseItemVariant3RuntimeHardwareRequested? requested)
         {
             this.Current = current;
             this.Requested = requested;

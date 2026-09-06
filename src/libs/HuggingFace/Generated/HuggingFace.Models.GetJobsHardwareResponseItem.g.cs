@@ -47,7 +47,7 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accelerator")]
-        public global::HuggingFace.GetJobsHardwareResponseItemAccelerator2? Accelerator { get; set; }
+        public global::HuggingFace.GetJobsHardwareResponseItemAccelerator? Accelerator { get; set; }
 
         /// <summary>
         ///
@@ -100,7 +100,7 @@ namespace HuggingFace
             double unitCostMicroUSD,
             double unitCostUSD,
             string unitLabel,
-            global::HuggingFace.GetJobsHardwareResponseItemAccelerator2? accelerator)
+            global::HuggingFace.GetJobsHardwareResponseItemAccelerator? accelerator)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.PrettyName = prettyName ?? throw new global::System.ArgumentNullException(nameof(prettyName));
