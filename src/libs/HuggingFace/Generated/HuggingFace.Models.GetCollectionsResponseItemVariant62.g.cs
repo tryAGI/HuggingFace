@@ -11,6 +11,25 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public global::HuggingFace.GetCollectionsResponseItemVariant6Note2? Note { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
+        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Position { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Author { get; set; }
@@ -104,6 +123,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetCollectionsResponseItemVariant62" /> class.
         /// </summary>
+        /// <param name="position"></param>
         /// <param name="author"></param>
         /// <param name="id"></param>
         /// <param name="createdAt"></param>
@@ -115,6 +135,8 @@ namespace HuggingFace
         /// The total number of files in the bucket
         /// </param>
         /// <param name="cdnRegions"></param>
+        /// <param name="note"></param>
+        /// <param name="gallery"></param>
         /// <param name="private"></param>
         /// <param name="adminTags"></param>
         /// <param name="disabled"></param>
@@ -125,6 +147,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetCollectionsResponseItemVariant62(
+            double position,
             string author,
             string id,
             global::System.DateTime createdAt,
@@ -132,6 +155,8 @@ namespace HuggingFace
             double size,
             double totalFiles,
             global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegion2> cdnRegions,
+            global::HuggingFace.GetCollectionsResponseItemVariant6Note2? note,
+            global::System.Collections.Generic.IList<string>? gallery,
             bool? @private,
             global::System.Collections.Generic.IList<string>? adminTags,
             global::HuggingFace.GetCollectionsResponseItemVariant6Disabled2? disabled,
@@ -139,6 +164,9 @@ namespace HuggingFace
             string repoType = "bucket",
             string type = "bucket")
         {
+            this.Note = note;
+            this.Gallery = gallery;
+            this.Position = position;
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Private = @private;

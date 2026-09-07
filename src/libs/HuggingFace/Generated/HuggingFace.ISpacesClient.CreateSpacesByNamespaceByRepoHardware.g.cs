@@ -50,7 +50,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             global::HuggingFace.CreateSpacesHardwareRequestFlavor flavor,
-            global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds = default,
+            global::HuggingFace.AnyOf<int?, double?>? sleepTimeSeconds = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

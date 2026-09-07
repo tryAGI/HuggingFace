@@ -94,8 +94,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string rev,
-            object? createPr = default,
-            object? hotReload = default,
+            string? createPr = default,
+            string? hotReload = default,
             global::HuggingFace.CreateModelsCommitContentType? contentType = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -189,8 +189,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string rev,
-            object? createPr = default,
-            object? hotReload = default,
+            string? createPr = default,
+            string? hotReload = default,
             global::HuggingFace.CreateModelsCommitContentType? contentType = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

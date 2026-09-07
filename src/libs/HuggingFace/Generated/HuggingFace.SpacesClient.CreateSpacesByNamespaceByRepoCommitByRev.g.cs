@@ -30,8 +30,8 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string rev,
-            object? createPr,
-            object? hotReload,
+            ref string? createPr,
+            ref string? hotReload,
             ref global::HuggingFace.CreateSpacesCommitContentType? contentType);
         partial void PrepareCreateSpacesByNamespaceByRepoCommitByRevRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -39,8 +39,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string rev,
-            object? createPr,
-            object? hotReload,
+            string? createPr,
+            string? hotReload,
             global::HuggingFace.CreateSpacesCommitContentType? contentType);
         partial void ProcessCreateSpacesByNamespaceByRepoCommitByRevResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -141,8 +141,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string rev,
-            object? createPr = default,
-            object? hotReload = default,
+            string? createPr = default,
+            string? hotReload = default,
             global::HuggingFace.CreateSpacesCommitContentType? contentType = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -250,8 +250,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string rev,
-            object? createPr = default,
-            object? hotReload = default,
+            string? createPr = default,
+            string? hotReload = default,
             global::HuggingFace.CreateSpacesCommitContentType? contentType = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -263,8 +263,8 @@ namespace HuggingFace
                 @namespace: ref @namespace,
                 repo: ref repo,
                 rev: ref rev,
-                createPr: createPr,
-                hotReload: hotReload,
+                createPr: ref createPr,
+                hotReload: ref hotReload,
                 contentType: ref contentType);
 
 
@@ -294,8 +294,8 @@ namespace HuggingFace
                                 path: $"/api/spaces/{@namespace}/{repo}/commit/{rev}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("create_pr", createPr?.ToString())
-                                .AddOptionalParameter("hot_reload", hotReload?.ToString())
+                                .AddOptionalParameter("create_pr", createPr)
+                                .AddOptionalParameter("hot_reload", hotReload)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

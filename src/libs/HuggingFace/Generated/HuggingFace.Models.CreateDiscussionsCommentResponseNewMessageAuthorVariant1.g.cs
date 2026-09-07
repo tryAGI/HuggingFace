@@ -11,6 +11,30 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isOwner")]
+        public bool? IsOwner { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isOrgMember")]
+        public bool? IsOrgMember { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isBlockedByMe")]
+        public bool? IsBlockedByMe { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("oauthApp")]
+        public global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1OauthApp? OauthApp { get; set; }
+
+        /// <summary>
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
@@ -92,13 +116,19 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateDiscussionsCommentResponseNewMessageAuthorVariant1" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="avatarUrl"></param>
         /// <param name="fullname"></param>
         /// <param name="name"></param>
         /// <param name="isHf"></param>
         /// <param name="isHfAdmin"></param>
         /// <param name="isMod"></param>
+        /// <param name="isOwner"></param>
+        /// <param name="isOrgMember"></param>
+        /// <param name="isBlockedByMe"></param>
+        /// <param name="oauthApp"></param>
         /// <param name="followerCount"></param>
         /// <param name="plan"></param>
         /// <param name="isUserFollowing"></param>
@@ -114,11 +144,19 @@ namespace HuggingFace
             bool isHf,
             bool isHfAdmin,
             bool isMod,
+            bool? isOwner,
+            bool? isOrgMember,
+            bool? isBlockedByMe,
+            global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1OauthApp? oauthApp,
             double? followerCount,
             global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1Plan? plan,
             bool? isUserFollowing,
             string type = "org")
         {
+            this.IsOwner = isOwner;
+            this.IsOrgMember = isOrgMember;
+            this.IsBlockedByMe = isBlockedByMe;
+            this.OauthApp = oauthApp;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));

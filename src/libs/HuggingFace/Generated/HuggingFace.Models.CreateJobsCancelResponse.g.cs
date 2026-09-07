@@ -147,8 +147,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("initiator")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>? Initiator { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>? Initiator { get; set; }
 
         /// <summary>
         ///
@@ -237,7 +237,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsCancelResponseVolume>? volumes,
             global::HuggingFace.CreateJobsCancelResponseExpose? expose,
             global::HuggingFace.CreateJobsCancelResponseResourceGroup? resourceGroup,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>? initiator,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::HuggingFace.CreateJobsCancelResponseHfToken? hfToken,

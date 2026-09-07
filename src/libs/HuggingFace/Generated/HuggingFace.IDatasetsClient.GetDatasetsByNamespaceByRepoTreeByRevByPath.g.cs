@@ -15,12 +15,10 @@ namespace HuggingFace
         /// Wildcard path parameter
         /// </param>
         /// <param name="expand">
-        /// If true, returns returns associated commit data for each entry and security scanner metadata.<br/>
-        /// Default Value: false
+        /// If true, returns returns associated commit data for each entry and security scanner metadata.
         /// </param>
         /// <param name="recursive">
-        /// If true, returns the tree recursively.<br/>
-        /// Default Value: false
+        /// If true, returns the tree recursively.
         /// </param>
         /// <param name="limit">
         /// 1.000 by default, 100 by default for expand=true
@@ -34,8 +32,8 @@ namespace HuggingFace
             string repo,
             string rev,
             string path,
-            object? expand = default,
-            object? recursive = default,
+            string? expand = default,
+            string? recursive = default,
             int? limit = default,
             string? cursor = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -51,12 +49,10 @@ namespace HuggingFace
         /// Wildcard path parameter
         /// </param>
         /// <param name="expand">
-        /// If true, returns returns associated commit data for each entry and security scanner metadata.<br/>
-        /// Default Value: false
+        /// If true, returns returns associated commit data for each entry and security scanner metadata.
         /// </param>
         /// <param name="recursive">
-        /// If true, returns the tree recursively.<br/>
-        /// Default Value: false
+        /// If true, returns the tree recursively.
         /// </param>
         /// <param name="limit">
         /// 1.000 by default, 100 by default for expand=true
@@ -70,8 +66,8 @@ namespace HuggingFace
             string repo,
             string rev,
             string path,
-            object? expand = default,
-            object? recursive = default,
+            string? expand = default,
+            string? recursive = default,
             int? limit = default,
             string? cursor = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,

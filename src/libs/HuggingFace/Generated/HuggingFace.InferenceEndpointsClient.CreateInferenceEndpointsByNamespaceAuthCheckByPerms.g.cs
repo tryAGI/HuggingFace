@@ -29,10 +29,10 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms perms,
-            object? own,
-            object? isCreator,
+            ref string? own,
+            ref string? isCreator,
             ref string? creatorId,
-            object? incurCost,
+            ref string? incurCost,
             ref string? resourceGroupId,
             ref string? repoId);
         partial void PrepareCreateInferenceEndpointsByNamespaceAuthCheckByPermsRequest(
@@ -40,10 +40,10 @@ namespace HuggingFace
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms perms,
-            object? own,
-            object? isCreator,
+            string? own,
+            string? isCreator,
             string? creatorId,
-            object? incurCost,
+            string? incurCost,
             string? resourceGroupId,
             string? repoId);
         partial void ProcessCreateInferenceEndpointsByNamespaceAuthCheckByPermsResponse(
@@ -73,10 +73,10 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse> CreateInferenceEndpointsByNamespaceAuthCheckByPermsAsync(
             string @namespace,
             global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms perms,
-            object? own = default,
-            object? isCreator = default,
+            string? own = default,
+            string? isCreator = default,
             string? creatorId = default,
-            object? incurCost = default,
+            string? incurCost = default,
             string? resourceGroupId = default,
             string? repoId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -115,10 +115,10 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse>> CreateInferenceEndpointsByNamespaceAuthCheckByPermsAsResponseAsync(
             string @namespace,
             global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms perms,
-            object? own = default,
-            object? isCreator = default,
+            string? own = default,
+            string? isCreator = default,
             string? creatorId = default,
-            object? incurCost = default,
+            string? incurCost = default,
             string? resourceGroupId = default,
             string? repoId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -130,10 +130,10 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 perms: ref perms,
-                own: own,
-                isCreator: isCreator,
+                own: ref own,
+                isCreator: ref isCreator,
                 creatorId: ref creatorId,
-                incurCost: incurCost,
+                incurCost: ref incurCost,
                 resourceGroupId: ref resourceGroupId,
                 repoId: ref repoId);
 
@@ -164,10 +164,10 @@ namespace HuggingFace
                                 path: $"/api/inference-endpoints/{@namespace}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("own", own?.ToString())
-                                .AddOptionalParameter("is_creator", isCreator?.ToString())
+                                .AddOptionalParameter("own", own)
+                                .AddOptionalParameter("is_creator", isCreator)
                                 .AddOptionalParameter("creator_id", creatorId)
-                                .AddOptionalParameter("incur_cost", incurCost?.ToString())
+                                .AddOptionalParameter("incur_cost", incurCost)
                                 .AddOptionalParameter("resource_group_id", resourceGroupId)
                                 .AddOptionalParameter("repo_id", repoId)
                                 ;

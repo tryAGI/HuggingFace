@@ -33,7 +33,7 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPrimary")]
-        public string? IsPrimary { get; set; }
+        public bool? IsPrimary { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -61,7 +61,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string> sku,
             double mem,
             double num,
-            string? isPrimary)
+            bool? isPrimary)
         {
             this.Sku = sku ?? throw new global::System.ArgumentNullException(nameof(sku));
             this.Mem = mem;

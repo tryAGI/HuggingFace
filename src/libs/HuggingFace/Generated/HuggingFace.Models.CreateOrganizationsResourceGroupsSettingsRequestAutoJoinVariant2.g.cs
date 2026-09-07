@@ -12,8 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Enabled { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, string> Enabled { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,7 +30,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2(
-            string enabled)
+            global::HuggingFace.AnyOf<bool?, string> enabled)
         {
             this.Enabled = enabled;
         }

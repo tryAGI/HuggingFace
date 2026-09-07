@@ -51,7 +51,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.OneOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsync(
             string id,
 
             global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequest request,
@@ -76,7 +76,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsResponseAsync(
             string id,
 
             global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequest request,
@@ -403,9 +403,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.OneOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -435,9 +435,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.OneOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -487,7 +487,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AnyOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.OneOf<global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant1, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant2, global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceResponseVariant3>> CreateAgenticProvisioningResourcesByIdUpdateServiceAsync(
             string id,
             string? serviceId = default,
             global::HuggingFace.CreateAgenticProvisioningResourcesUpdateServiceRequestConfiguration? configuration = default,

@@ -31,7 +31,7 @@ namespace HuggingFace
         public required global::HuggingFace.GetNotificationsResponseNotificationVariant2DiscussionStatus Status { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -63,7 +63,9 @@ namespace HuggingFace
         /// <param name="num"></param>
         /// <param name="title"></param>
         /// <param name="status"></param>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="isPullRequest"></param>
         /// <param name="participating"></param>
 #if NET7_0_OR_GREATER

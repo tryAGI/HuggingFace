@@ -29,7 +29,7 @@ namespace HuggingFace
         public global::HuggingFace.PutScheduledJobsLabelsResponseJobSpecHfTokenTokenRole? TokenRole { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokenId")]
         public string? TokenId { get; set; }
@@ -52,7 +52,9 @@ namespace HuggingFace
         /// <param name="ownerName"></param>
         /// <param name="orgName"></param>
         /// <param name="tokenRole"></param>
-        /// <param name="tokenId"></param>
+        /// <param name="tokenId">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="settingsUrl"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

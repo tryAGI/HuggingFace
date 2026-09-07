@@ -12,9 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant22>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant22>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant22> Author { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant22> Author { get; set; }
 
         /// <summary>
         ///
@@ -38,7 +38,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsItemsResponseItemVariant3OriginRepo2(
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant22> author,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant22> author,
             string name)
         {
             this.Author = author;

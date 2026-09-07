@@ -28,12 +28,12 @@ namespace HuggingFace
         partial void PrepareGetOrganizationsByNameAvatarArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            object? redirect);
+            ref string? redirect);
         partial void PrepareGetOrganizationsByNameAvatarRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            object? redirect);
+            string? redirect);
         partial void ProcessGetOrganizationsByNameAvatarResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -57,7 +57,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.GetOrganizationsAvatarResponse> GetOrganizationsByNameAvatarAsync(
             string name,
-            object? redirect = default,
+            string? redirect = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -84,7 +84,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetOrganizationsAvatarResponse>> GetOrganizationsByNameAvatarAsResponseAsync(
             string name,
-            object? redirect = default,
+            string? redirect = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -93,7 +93,7 @@ namespace HuggingFace
             PrepareGetOrganizationsByNameAvatarArguments(
                 httpClient: HttpClient,
                 name: ref name,
-                redirect: redirect);
+                redirect: ref redirect);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -122,7 +122,7 @@ namespace HuggingFace
                                 path: $"/api/organizations/{name}/avatar",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("redirect", redirect?.ToString())
+                                .AddOptionalParameter("redirect", redirect)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

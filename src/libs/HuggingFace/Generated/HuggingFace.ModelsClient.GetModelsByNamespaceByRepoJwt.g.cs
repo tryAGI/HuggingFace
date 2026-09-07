@@ -31,25 +31,25 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            object? write,
+            ref string? write,
             ref global::System.DateTime? expiration,
             ref int? expiresIn,
-            object? encrypted,
-            object? inferenceApi,
-            object? includeProStatus,
-            object? billingDetails);
+            ref string? encrypted,
+            ref string? inferenceApi,
+            ref string? includeProStatus,
+            ref string? billingDetails);
         partial void PrepareGetModelsByNamespaceByRepoJwtRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            object? write,
+            string? write,
             global::System.DateTime? expiration,
             int? expiresIn,
-            object? encrypted,
-            object? inferenceApi,
-            object? includeProStatus,
-            object? billingDetails);
+            string? encrypted,
+            string? inferenceApi,
+            string? includeProStatus,
+            string? billingDetails);
         partial void ProcessGetModelsByNamespaceByRepoJwtResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -84,13 +84,13 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::HuggingFace.GetModelsJwtResponse> GetModelsByNamespaceByRepoJwtAsync(
             string @namespace,
             string repo,
-            object? write = default,
+            string? write = default,
             global::System.DateTime? expiration = default,
             int? expiresIn = default,
-            object? encrypted = default,
-            object? inferenceApi = default,
-            object? includeProStatus = default,
-            object? billingDetails = default,
+            string? encrypted = default,
+            string? inferenceApi = default,
+            string? includeProStatus = default,
+            string? billingDetails = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -135,13 +135,13 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetModelsJwtResponse>> GetModelsByNamespaceByRepoJwtAsResponseAsync(
             string @namespace,
             string repo,
-            object? write = default,
+            string? write = default,
             global::System.DateTime? expiration = default,
             int? expiresIn = default,
-            object? encrypted = default,
-            object? inferenceApi = default,
-            object? includeProStatus = default,
-            object? billingDetails = default,
+            string? encrypted = default,
+            string? inferenceApi = default,
+            string? includeProStatus = default,
+            string? billingDetails = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -151,13 +151,13 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 repo: ref repo,
-                write: write,
+                write: ref write,
                 expiration: ref expiration,
                 expiresIn: ref expiresIn,
-                encrypted: encrypted,
-                inferenceApi: inferenceApi,
-                includeProStatus: includeProStatus,
-                billingDetails: billingDetails);
+                encrypted: ref encrypted,
+                inferenceApi: ref inferenceApi,
+                includeProStatus: ref includeProStatus,
+                billingDetails: ref billingDetails);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -186,13 +186,13 @@ namespace HuggingFace
                                 path: $"/api/models/{@namespace}/{repo}/jwt",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("write", write?.ToString())
+                                .AddOptionalParameter("write", write)
                                 .AddOptionalParameter("expiration", expiration?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("expires_in", expiresIn?.ToString())
-                                .AddOptionalParameter("encrypted", encrypted?.ToString())
-                                .AddOptionalParameter("inference_api", inferenceApi?.ToString())
-                                .AddOptionalParameter("include_pro_status", includeProStatus?.ToString())
-                                .AddOptionalParameter("billing_details", billingDetails?.ToString())
+                                .AddOptionalParameter("encrypted", encrypted)
+                                .AddOptionalParameter("inference_api", inferenceApi)
+                                .AddOptionalParameter("include_pro_status", includeProStatus)
+                                .AddOptionalParameter("billing_details", billingDetails)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

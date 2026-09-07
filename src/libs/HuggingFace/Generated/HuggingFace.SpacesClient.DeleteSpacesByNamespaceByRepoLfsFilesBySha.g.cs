@@ -30,14 +30,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string sha,
-            object? rewriteHistory);
+            ref string? rewriteHistory);
         partial void PrepareDeleteSpacesByNamespaceByRepoLfsFilesByShaRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
             string sha,
-            object? rewriteHistory);
+            string? rewriteHistory);
         partial void ProcessDeleteSpacesByNamespaceByRepoLfsFilesByShaResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -49,9 +49,7 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="sha"></param>
-        /// <param name="rewriteHistory">
-        /// Default Value: true
-        /// </param>
+        /// <param name="rewriteHistory"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -59,7 +57,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string sha,
-            object? rewriteHistory = default,
+            string? rewriteHistory = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -79,9 +77,7 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="sha"></param>
-        /// <param name="rewriteHistory">
-        /// Default Value: true
-        /// </param>
+        /// <param name="rewriteHistory"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -89,7 +85,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string sha,
-            object? rewriteHistory = default,
+            string? rewriteHistory = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -100,7 +96,7 @@ namespace HuggingFace
                 @namespace: ref @namespace,
                 repo: ref repo,
                 sha: ref sha,
-                rewriteHistory: rewriteHistory);
+                rewriteHistory: ref rewriteHistory);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -129,7 +125,7 @@ namespace HuggingFace
                                 path: $"/api/spaces/{@namespace}/{repo}/lfs-files/{sha}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("rewriteHistory", rewriteHistory?.ToString())
+                                .AddOptionalParameter("rewriteHistory", rewriteHistory)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

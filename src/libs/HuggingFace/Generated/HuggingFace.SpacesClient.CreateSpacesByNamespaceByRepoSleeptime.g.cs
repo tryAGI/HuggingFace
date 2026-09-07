@@ -438,7 +438,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task CreateSpacesByNamespaceByRepoSleeptimeAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.AnyOf<int?, string> seconds,
+            global::HuggingFace.AnyOf<int?, double?> seconds,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

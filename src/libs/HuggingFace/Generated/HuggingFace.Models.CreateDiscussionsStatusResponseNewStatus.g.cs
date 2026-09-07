@@ -26,8 +26,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AllOfJsonConverter<global::HuggingFace.AnyOf<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>?, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthor>))]
-        public global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>?, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthor>? Author { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>? Author { get; set; }
 
         /// <summary>
         ///
@@ -64,7 +64,7 @@ namespace HuggingFace
             string id,
             global::System.DateTime createdAt,
             global::HuggingFace.CreateDiscussionsStatusResponseNewStatusData data,
-            global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>?, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthor>? author,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>? author,
             string type = "status-change")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

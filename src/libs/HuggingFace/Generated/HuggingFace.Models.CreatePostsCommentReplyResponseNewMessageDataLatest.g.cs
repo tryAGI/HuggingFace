@@ -33,8 +33,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>? Author { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>? Author { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -56,7 +56,7 @@ namespace HuggingFace
             string raw,
             string html,
             global::System.DateTime updatedAt,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>? author)
+            global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>? author)
         {
             this.Raw = raw ?? throw new global::System.ArgumentNullException(nameof(raw));
             this.Html = html ?? throw new global::System.ArgumentNullException(nameof(html));

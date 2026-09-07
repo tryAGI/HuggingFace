@@ -67,9 +67,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.GetPapersResponseLinkedDatasetGatedEnum2?>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetPapersResponseLinkedDatasetGated?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.GetPapersResponseLinkedDatasetGatedEnum2?> Gated { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetPapersResponseLinkedDatasetGated?> Gated { get; set; }
 
         /// <summary>
         ///
@@ -128,7 +128,7 @@ namespace HuggingFace
             double likes,
             bool @private,
             double downloads,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.GetPapersResponseLinkedDatasetGatedEnum2?> gated,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetPapersResponseLinkedDatasetGated?> gated,
             global::System.DateTime lastModified,
             global::HuggingFace.GetPapersResponseLinkedDatasetDatasetsServerInfo? datasetsServerInfo,
             global::HuggingFace.GetPapersResponseLinkedDatasetResourceGroup? resourceGroup,

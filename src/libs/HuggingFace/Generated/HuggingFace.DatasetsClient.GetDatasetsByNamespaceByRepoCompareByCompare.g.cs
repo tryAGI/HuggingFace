@@ -30,14 +30,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string compare,
-            object? raw);
+            ref string? raw);
         partial void PrepareGetDatasetsByNamespaceByRepoCompareByCompareRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
             string compare,
-            object? raw);
+            string? raw);
         partial void ProcessGetDatasetsByNamespaceByRepoCompareByCompareResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -53,9 +53,7 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="compare"></param>
-        /// <param name="raw">
-        /// Default Value: false
-        /// </param>
+        /// <param name="raw"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -63,7 +61,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string compare,
-            object? raw = default,
+            string? raw = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -84,9 +82,7 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="compare"></param>
-        /// <param name="raw">
-        /// Default Value: false
-        /// </param>
+        /// <param name="raw"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -94,7 +90,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string compare,
-            object? raw = default,
+            string? raw = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -105,7 +101,7 @@ namespace HuggingFace
                 @namespace: ref @namespace,
                 repo: ref repo,
                 compare: ref compare,
-                raw: raw);
+                raw: ref raw);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -134,7 +130,7 @@ namespace HuggingFace
                                 path: $"/api/datasets/{@namespace}/{repo}/compare/{compare}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("raw", raw?.ToString())
+                                .AddOptionalParameter("raw", raw)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

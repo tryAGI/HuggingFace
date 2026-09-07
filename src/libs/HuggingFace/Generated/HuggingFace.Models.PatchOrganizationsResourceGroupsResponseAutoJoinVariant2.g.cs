@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        /// <default>"False"</default>
+        /// <default>false</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
-        public string Enabled { get; set; } = "False";
+        public bool Enabled { get; set; } = false;
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,7 +29,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchOrganizationsResourceGroupsResponseAutoJoinVariant2(
-            string enabled = "False")
+            bool enabled = false)
         {
             this.Enabled = enabled;
         }

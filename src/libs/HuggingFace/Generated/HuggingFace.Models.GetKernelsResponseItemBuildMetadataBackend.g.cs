@@ -27,7 +27,7 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("noArchs")]
-        public string? NoArchs { get; set; }
+        public bool? NoArchs { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -47,7 +47,7 @@ namespace HuggingFace
         public GetKernelsResponseItemBuildMetadataBackend(
             global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendType type,
             global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType> hardwareTypes,
-            string? noArchs)
+            bool? noArchs)
         {
             this.Type = type;
             this.HardwareTypes = hardwareTypes ?? throw new global::System.ArgumentNullException(nameof(hardwareTypes));

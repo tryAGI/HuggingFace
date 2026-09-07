@@ -19,8 +19,7 @@ namespace HuggingFace
         /// Pagination cursor
         /// </param>
         /// <param name="recursive">
-        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
-        /// Default Value: true
+        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.
         /// </param>
         /// <param name="sort">
         /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
@@ -38,7 +37,7 @@ namespace HuggingFace
             string path,
             int? limit = default,
             string? cursor = default,
-            object? recursive = default,
+            string? recursive = default,
             global::HuggingFace.GetBucketsTreeSort? sort = default,
             global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -58,8 +57,7 @@ namespace HuggingFace
         /// Pagination cursor
         /// </param>
         /// <param name="recursive">
-        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
-        /// Default Value: true
+        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.
         /// </param>
         /// <param name="sort">
         /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
@@ -77,7 +75,7 @@ namespace HuggingFace
             string path,
             int? limit = default,
             string? cursor = default,
-            object? recursive = default,
+            string? recursive = default,
             global::HuggingFace.GetBucketsTreeSort? sort = default,
             global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,

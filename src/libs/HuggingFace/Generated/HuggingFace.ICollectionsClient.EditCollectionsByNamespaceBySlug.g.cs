@@ -58,7 +58,7 @@ namespace HuggingFace
             global::HuggingFace.PatchCollectionsRequestTheme2? theme = default,
             string? title = default,
             string? description = default,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.PatchCollectionsRequestGatingVariant22, global::HuggingFace.PatchCollectionsRequestGatingVariant32>? gating = default,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant22, global::HuggingFace.PatchCollectionsRequestGatingVariant32>? gating = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

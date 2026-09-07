@@ -44,7 +44,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem> watched,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain> domains,
             string? url = default,
-            global::HuggingFace.CreateSettingsWebhooksRequestJob? job = default,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2>? job = default,
             string? jobSourceId = default,
             string? secret = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,

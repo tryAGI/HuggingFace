@@ -25,9 +25,7 @@ namespace HuggingFace
         /// <param name="namespace">
         /// Namespace to filter by
         /// </param>
-        /// <param name="includeInvitees">
-        /// Default Value: false
-        /// </param>
+        /// <param name="includeInvitees"></param>
         /// <param name="repoName"></param>
         /// <param name="repoType"></param>
         /// <param name="discussionId"></param>
@@ -47,7 +45,7 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines = default,
             global::System.Collections.Generic.IList<string>? exclude = default,
             string? @namespace = default,
-            global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
+            string? includeInvitees = default,
             string? repoName = default,
             global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchRepoType2?, string>? repoType = default,
             string? discussionId = default,
@@ -76,9 +74,7 @@ namespace HuggingFace
         /// <param name="namespace">
         /// Namespace to filter by
         /// </param>
-        /// <param name="includeInvitees">
-        /// Default Value: false
-        /// </param>
+        /// <param name="includeInvitees"></param>
         /// <param name="repoName"></param>
         /// <param name="repoType"></param>
         /// <param name="discussionId"></param>
@@ -98,7 +94,7 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines = default,
             global::System.Collections.Generic.IList<string>? exclude = default,
             string? @namespace = default,
-            global::HuggingFace.AnyOf<bool?, object>? includeInvitees = default,
+            string? includeInvitees = default,
             string? repoName = default,
             global::HuggingFace.AnyOf<global::HuggingFace.GetQuicksearchRepoType2?, string>? repoType = default,
             string? discussionId = default,

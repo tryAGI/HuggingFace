@@ -33,7 +33,7 @@ namespace HuggingFace
             ref global::HuggingFace.GetDatasetsLfsFilesDirection? direction,
             ref int? limit,
             ref global::HuggingFace.GetDatasetsLfsFilesSort? sort,
-            object? xet);
+            ref string? xet);
         partial void PrepareGetDatasetsByNamespaceByRepoLfsFilesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -43,7 +43,7 @@ namespace HuggingFace
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction,
             int? limit,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort,
-            object? xet);
+            string? xet);
         partial void ProcessGetDatasetsByNamespaceByRepoLfsFilesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -80,7 +80,7 @@ namespace HuggingFace
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,
-            object? xet = default,
+            string? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -125,7 +125,7 @@ namespace HuggingFace
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,
-            object? xet = default,
+            string? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -139,7 +139,7 @@ namespace HuggingFace
                 direction: ref direction,
                 limit: ref limit,
                 sort: ref sort,
-                xet: xet);
+                xet: ref xet);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -172,7 +172,7 @@ namespace HuggingFace
                                 .AddOptionalParameter("direction", direction?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("sort", sort?.ToValueString())
-                                .AddOptionalParameter("xet", xet?.ToString())
+                                .AddOptionalParameter("xet", xet)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

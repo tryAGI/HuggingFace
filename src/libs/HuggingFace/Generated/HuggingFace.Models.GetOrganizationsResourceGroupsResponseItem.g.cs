@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class GetOrganizationsResourceGroupsResponseItem
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -53,7 +53,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant3, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant4, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant5>> Resources { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant3, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant4, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant5>> Resources { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -64,7 +64,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetOrganizationsResourceGroupsResponseItem" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="name"></param>
         /// <param name="users"></param>
         /// <param name="resources"></param>
@@ -78,7 +80,7 @@ namespace HuggingFace
             string id,
             string name,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUser> users,
-            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant3, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant4, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant5>> resources,
+            global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant3, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant4, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant5>> resources,
             string? description,
             global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant2>? autoJoin,
             global::HuggingFace.GetOrganizationsResourceGroupsResponseItemSpendLimits? spendLimits)

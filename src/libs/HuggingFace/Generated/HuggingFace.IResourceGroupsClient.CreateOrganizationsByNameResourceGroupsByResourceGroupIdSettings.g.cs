@@ -54,7 +54,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse> CreateOrganizationsByNameResourceGroupsByResourceGroupIdSettingsAsync(
             string name,
             string resourceGroupId,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>? autoJoin = default,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>? autoJoin = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

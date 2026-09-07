@@ -31,13 +31,13 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::HuggingFace.GetDatasetsJwtResponse> GetDatasetsByNamespaceByRepoJwtAsync(
             string @namespace,
             string repo,
-            object? write = default,
+            string? write = default,
             global::System.DateTime? expiration = default,
             int? expiresIn = default,
-            object? encrypted = default,
-            object? inferenceApi = default,
-            object? includeProStatus = default,
-            object? billingDetails = default,
+            string? encrypted = default,
+            string? inferenceApi = default,
+            string? includeProStatus = default,
+            string? billingDetails = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -65,13 +65,13 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetDatasetsJwtResponse>> GetDatasetsByNamespaceByRepoJwtAsResponseAsync(
             string @namespace,
             string repo,
-            object? write = default,
+            string? write = default,
             global::System.DateTime? expiration = default,
             int? expiresIn = default,
-            object? encrypted = default,
-            object? inferenceApi = default,
-            object? includeProStatus = default,
-            object? billingDetails = default,
+            string? encrypted = default,
+            string? inferenceApi = default,
+            string? includeProStatus = default,
+            string? billingDetails = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

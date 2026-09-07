@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateReposCreateResponse> CreateReposCreateAsync(
 
-            global::HuggingFace.AllOf<global::HuggingFace.CreateReposCreateRequest2, global::HuggingFace.AnyOf<global::HuggingFace.CreateReposCreateRequestVariant1, global::HuggingFace.CreateReposCreateRequestVariant22, global::HuggingFace.CreateReposCreateRequestVariant3, global::HuggingFace.CreateReposCreateRequestVariant4>?> request,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateReposCreateRequestVariant1, global::HuggingFace.CreateReposCreateRequestVariant2, global::HuggingFace.CreateReposCreateRequestVariant3, global::HuggingFace.CreateReposCreateRequestVariant4> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -25,7 +25,7 @@ namespace HuggingFace
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateReposCreateResponse>> CreateReposCreateAsResponseAsync(
 
-            global::HuggingFace.AllOf<global::HuggingFace.CreateReposCreateRequest2, global::HuggingFace.AnyOf<global::HuggingFace.CreateReposCreateRequestVariant1, global::HuggingFace.CreateReposCreateRequestVariant22, global::HuggingFace.CreateReposCreateRequestVariant3, global::HuggingFace.CreateReposCreateRequestVariant4>?> request,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateReposCreateRequestVariant1, global::HuggingFace.CreateReposCreateRequestVariant2, global::HuggingFace.CreateReposCreateRequestVariant3, global::HuggingFace.CreateReposCreateRequestVariant4> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

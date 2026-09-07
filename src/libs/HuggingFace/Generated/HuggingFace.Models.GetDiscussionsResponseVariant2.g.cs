@@ -11,6 +11,12 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("diffUrl")]
+        public string? DiffUrl { get; set; }
+
+        /// <summary>
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
@@ -25,8 +31,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>? Author { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>? Author { get; set; }
 
         /// <summary>
         ///
@@ -66,7 +72,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("events")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8>> Events { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8>> Events { get; set; }
 
         /// <summary>
         ///
@@ -92,17 +98,17 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        /// <default>"True"</default>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPullRequest")]
-        public string IsPullRequest { get; set; } = "True";
+        public bool IsPullRequest { get; set; } = true;
 
         /// <summary>
         /// The list of files with conflicts. `true` means there are conflicts but we cannot list them.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filesWithConflicts")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, bool?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string> FilesWithConflicts { get; set; }
+        public required global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?> FilesWithConflicts { get; set; }
 
         /// <summary>
         ///
@@ -120,7 +126,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDiscussionsResponseVariant2" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="title"></param>
         /// <param name="status"></param>
         /// <param name="events"></param>
@@ -130,6 +138,7 @@ namespace HuggingFace
         /// The list of files with conflicts. `true` means there are conflicts but we cannot list them.
         /// </param>
         /// <param name="changes"></param>
+        /// <param name="diffUrl"></param>
         /// <param name="num"></param>
         /// <param name="author"></param>
         /// <param name="org"></param>
@@ -144,19 +153,21 @@ namespace HuggingFace
             string id,
             string title,
             global::HuggingFace.GetDiscussionsResponseVariant2Status status,
-            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8>> events,
+            global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8>> events,
             bool pinned,
             bool locked,
-            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string> filesWithConflicts,
+            global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?> filesWithConflicts,
             global::HuggingFace.GetDiscussionsResponseVariant2Changes changes,
+            string? diffUrl,
             double? num,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>? author,
+            global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2AuthorVariant2>? author,
             global::HuggingFace.GetDiscussionsResponseVariant2Org? org,
             global::HuggingFace.RepoId? repo,
             global::System.DateTime? createdAt,
             string collection = "discussions",
-            string isPullRequest = "True")
+            bool isPullRequest = true)
         {
+            this.DiffUrl = diffUrl;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Num = num;
             this.Author = author;

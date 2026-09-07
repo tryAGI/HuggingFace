@@ -20,9 +20,8 @@ namespace HuggingFace
         /// Expand the response with the last commit and security file status
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("expand")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<object, bool?>))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<object, bool?> Expand { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>))]
+        public global::HuggingFace.AnyOf<string, bool?>? Expand { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -42,7 +41,7 @@ namespace HuggingFace
 #endif
         public CreateSpacesPathsInfoRequest(
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string> paths,
-            global::HuggingFace.AnyOf<object, bool?> expand)
+            global::HuggingFace.AnyOf<string, bool?>? expand)
         {
             this.Paths = paths;
             this.Expand = expand;

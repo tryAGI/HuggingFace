@@ -12,8 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jobSpec")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant1, global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateScheduledJobsRequestJobSpec JobSpec { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant1, global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant2> JobSpec { get; set; }
 
         /// <summary>
         /// CRON schedule expression (e.g., '0 9 * * 1' for 9 AM every Monday).
@@ -61,12 +62,12 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateScheduledJobsRequest(
-            global::HuggingFace.CreateScheduledJobsRequestJobSpec jobSpec,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant1, global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant2> jobSpec,
             string schedule,
             bool? suspend,
             bool? concurrency)
         {
-            this.JobSpec = jobSpec ?? throw new global::System.ArgumentNullException(nameof(jobSpec));
+            this.JobSpec = jobSpec;
             this.Schedule = schedule ?? throw new global::System.ArgumentNullException(nameof(schedule));
             this.Suspend = suspend;
             this.Concurrency = concurrency;

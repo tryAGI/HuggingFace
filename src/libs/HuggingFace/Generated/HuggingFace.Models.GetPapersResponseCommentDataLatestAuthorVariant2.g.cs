@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class GetPapersResponseCommentDataLatestAuthorVariant2
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -98,7 +98,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetPapersResponseCommentDataLatestAuthorVariant2" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="avatarUrl"></param>
         /// <param name="fullname"></param>
         /// <param name="name"></param>

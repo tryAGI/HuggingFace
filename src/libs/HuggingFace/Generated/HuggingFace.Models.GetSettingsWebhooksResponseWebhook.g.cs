@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class GetSettingsWebhooksResponseWebhook
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -25,7 +25,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("job")]
-        public global::HuggingFace.GetSettingsWebhooksResponseWebhookJob? Job { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant1, global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant1, global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant2>? Job { get; set; }
 
         /// <summary>
         ///
@@ -77,7 +78,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetSettingsWebhooksResponseWebhook" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="disabled"></param>
         /// <param name="watched"></param>
         /// <param name="hasSecret">
@@ -98,7 +101,7 @@ namespace HuggingFace
             bool hasSecret,
             global::System.Collections.Generic.IList<global::HuggingFace.GetSettingsWebhooksResponseWebhookDomain> domains,
             string? url,
-            global::HuggingFace.GetSettingsWebhooksResponseWebhookJob? job,
+            global::HuggingFace.OneOf<global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant1, global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant2>? job,
             string? jobSourceId,
             global::System.DateTime? lastTriggerAt)
         {

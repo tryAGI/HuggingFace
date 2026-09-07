@@ -58,7 +58,7 @@ namespace HuggingFace
             string repo,
             string rev,
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string> paths,
-            global::HuggingFace.AnyOf<object, bool?> expand,
+            global::HuggingFace.AnyOf<string, bool?>? expand = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

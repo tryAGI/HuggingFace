@@ -11,6 +11,25 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Note? Note { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
+        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Position { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Author { get; set; }
@@ -81,9 +100,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2GatedEnum2?>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2GatedEnum2?> Gated { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated?> Gated { get; set; }
 
         /// <summary>
         ///
@@ -101,8 +120,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authorData")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>? AuthorData { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>? AuthorData { get; set; }
 
         /// <summary>
         ///
@@ -114,7 +133,7 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isPreRelease")]
-        public string? IsPreRelease { get; set; }
+        public bool? IsPreRelease { get; set; }
 
         /// <summary>
         ///
@@ -132,6 +151,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsResponseItemVariant2" /> class.
         /// </summary>
+        /// <param name="position"></param>
         /// <param name="author"></param>
         /// <param name="downloads"></param>
         /// <param name="id"></param>
@@ -141,6 +161,8 @@ namespace HuggingFace
         /// <param name="likes"></param>
         /// <param name="private"></param>
         /// <param name="gated"></param>
+        /// <param name="note"></param>
+        /// <param name="gallery"></param>
         /// <param name="pipelineTag"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="numParameters"></param>
@@ -153,6 +175,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsItemsResponseItemVariant2(
+            double position,
             string author,
             double downloads,
             string id,
@@ -161,16 +184,21 @@ namespace HuggingFace
             global::System.DateTime lastModified,
             double likes,
             bool @private,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2GatedEnum2?> gated,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated?> gated,
+            global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Note? note,
+            global::System.Collections.Generic.IList<string>? gallery,
             string? pipelineTag,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant2ResourceGroup? resourceGroup,
             double? numParameters,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>? authorData,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>? authorData,
             global::System.Collections.Generic.IList<string>? widgetOutputUrls,
-            string? isPreRelease,
+            bool? isPreRelease,
             string repoType = "model",
             string type = "model")
         {
+            this.Note = note;
+            this.Gallery = gallery;
+            this.Position = position;
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Downloads = downloads;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        /// <default>"True"</default>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("notInCache")]
-        public string NotInCache { get; set; } = "True";
+        public bool NotInCache { get; set; } = true;
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,7 +29,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetModelsNotebookResponseVariant2(
-            string notInCache = "True")
+            bool notInCache = true)
         {
             this.NotInCache = notInCache;
         }

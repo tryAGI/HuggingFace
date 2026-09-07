@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class GetOrganizationsSettingsTokensResponseItem
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -77,7 +77,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetOrganizationsSettingsTokensResponseItem" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="displayName">
         /// Name the owner gave the token. Provided when the organization requires administrator approval of member tokens
         /// </param>

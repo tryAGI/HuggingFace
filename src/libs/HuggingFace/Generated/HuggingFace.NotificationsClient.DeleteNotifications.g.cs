@@ -36,7 +36,7 @@ namespace HuggingFace
             ref string? articleId,
             ref global::HuggingFace.DeleteNotificationsMention? mention,
             ref global::System.DateTime? lastUpdate,
-            object? applyToAll,
+            ref string? applyToAll,
             global::HuggingFace.DeleteNotificationsRequest request);
         partial void PrepareDeleteNotificationsRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -50,7 +50,7 @@ namespace HuggingFace
             string? articleId,
             global::HuggingFace.DeleteNotificationsMention? mention,
             global::System.DateTime? lastUpdate,
-            object? applyToAll,
+            string? applyToAll,
             global::HuggingFace.DeleteNotificationsRequest request);
         partial void ProcessDeleteNotificationsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -75,9 +75,7 @@ namespace HuggingFace
         /// Default Value: all
         /// </param>
         /// <param name="lastUpdate"></param>
-        /// <param name="applyToAll">
-        /// Default Value: false
-        /// </param>
+        /// <param name="applyToAll"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -94,7 +92,7 @@ namespace HuggingFace
             string? articleId = default,
             global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
-            object? applyToAll = default,
+            string? applyToAll = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -134,9 +132,7 @@ namespace HuggingFace
         /// Default Value: all
         /// </param>
         /// <param name="lastUpdate"></param>
-        /// <param name="applyToAll">
-        /// Default Value: false
-        /// </param>
+        /// <param name="applyToAll"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -153,7 +149,7 @@ namespace HuggingFace
             string? articleId = default,
             global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
-            object? applyToAll = default,
+            string? applyToAll = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -172,7 +168,7 @@ namespace HuggingFace
                 articleId: ref articleId,
                 mention: ref mention,
                 lastUpdate: ref lastUpdate,
-                applyToAll: applyToAll,
+                applyToAll: ref applyToAll,
                 request: request);
 
 
@@ -211,7 +207,7 @@ namespace HuggingFace
                                 .AddOptionalParameter("articleId", articleId)
                                 .AddOptionalParameter("mention", mention?.ToValueString())
                                 .AddOptionalParameter("lastUpdate", lastUpdate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("applyToAll", applyToAll?.ToString())
+                                .AddOptionalParameter("applyToAll", applyToAll)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -547,9 +543,7 @@ namespace HuggingFace
         /// Default Value: all
         /// </param>
         /// <param name="lastUpdate"></param>
-        /// <param name="applyToAll">
-        /// Default Value: false
-        /// </param>
+        /// <param name="applyToAll"></param>
         /// <param name="discussionIds"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -564,7 +558,7 @@ namespace HuggingFace
             string? articleId = default,
             global::HuggingFace.DeleteNotificationsMention? mention = default,
             global::System.DateTime? lastUpdate = default,
-            object? applyToAll = default,
+            string? applyToAll = default,
             global::System.Collections.Generic.IList<string>? discussionIds = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

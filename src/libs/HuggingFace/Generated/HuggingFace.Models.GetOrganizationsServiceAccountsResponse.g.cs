@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class GetOrganizationsServiceAccountsResponse
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -64,7 +64,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetOrganizationsServiceAccountsResponse" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="user"></param>
         /// <param name="name"></param>
         /// <param name="email"></param>
