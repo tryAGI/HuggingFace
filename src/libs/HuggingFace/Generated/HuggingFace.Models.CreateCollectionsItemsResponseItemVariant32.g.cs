@@ -11,6 +11,25 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Note2? Note { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
+        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Position { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Author { get; set; }
@@ -161,8 +180,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authorData")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant22>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant22>? AuthorData { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant22>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant22>? AuthorData { get; set; }
 
         /// <summary>
         ///
@@ -207,6 +226,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsResponseItemVariant32" /> class.
         /// </summary>
+        /// <param name="position"></param>
         /// <param name="author"></param>
         /// <param name="colorFrom"></param>
         /// <param name="colorTo"></param>
@@ -224,6 +244,8 @@ namespace HuggingFace
         /// <param name="tags"></param>
         /// <param name="featured"></param>
         /// <param name="visibility"></param>
+        /// <param name="note"></param>
+        /// <param name="gallery"></param>
         /// <param name="sdk"></param>
         /// <param name="originRepo"></param>
         /// <param name="aiShortDescription"></param>
@@ -239,6 +261,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsItemsResponseItemVariant32(
+            double position,
             string author,
             string colorFrom,
             string colorTo,
@@ -256,18 +279,23 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string> tags,
             bool featured,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Visibility2 visibility,
+            global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Note2? note,
+            global::System.Collections.Generic.IList<string>? gallery,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Sdk2? sdk,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepo2? originRepo,
             string? aiShortDescription,
             string? aiCategory,
             double? trendingScore,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant3ResourceGroup2? resourceGroup,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant22>? authorData,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant22>? authorData,
             string? shortDescription,
             double? semanticRelevancyScore,
             string repoType = "space",
             string type = "space")
         {
+            this.Note = note;
+            this.Gallery = gallery;
+            this.Position = position;
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.ColorFrom = colorFrom ?? throw new global::System.ArgumentNullException(nameof(colorFrom));
             this.ColorTo = colorTo ?? throw new global::System.ArgumentNullException(nameof(colorTo));

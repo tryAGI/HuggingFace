@@ -50,7 +50,7 @@ namespace HuggingFace
         public bool? IsFollowing { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -100,7 +100,9 @@ namespace HuggingFace
         /// <param name="fullname"></param>
         /// <param name="isPro"></param>
         /// <param name="user"></param>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="isFollowing"></param>
         /// <param name="role"></param>
         /// <param name="resourceGroups"></param>

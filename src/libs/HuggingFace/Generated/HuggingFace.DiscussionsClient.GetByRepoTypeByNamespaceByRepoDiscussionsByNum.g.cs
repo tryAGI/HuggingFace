@@ -57,7 +57,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
             global::HuggingFace.GetDiscussionsRepoType2 repoType,
             string @namespace,
             string repo,
@@ -86,7 +86,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsResponseAsync(
             global::HuggingFace.GetDiscussionsRepoType2 repoType,
             string @namespace,
             string repo,
@@ -373,9 +373,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -405,9 +405,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

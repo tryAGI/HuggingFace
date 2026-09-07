@@ -32,7 +32,7 @@ namespace HuggingFace
             ref string path,
             ref int? limit,
             ref string? cursor,
-            object? recursive,
+            ref string? recursive,
             ref global::HuggingFace.GetBucketsTreeSort? sort,
             ref global::HuggingFace.GetBucketsTreeDirection? direction);
         partial void PrepareGetBucketsByNamespaceByRepoTreeByPathRequest(
@@ -43,7 +43,7 @@ namespace HuggingFace
             string path,
             int? limit,
             string? cursor,
-            object? recursive,
+            string? recursive,
             global::HuggingFace.GetBucketsTreeSort? sort,
             global::HuggingFace.GetBucketsTreeDirection? direction);
         partial void ProcessGetBucketsByNamespaceByRepoTreeByPathResponse(
@@ -70,8 +70,7 @@ namespace HuggingFace
         /// Pagination cursor
         /// </param>
         /// <param name="recursive">
-        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
-        /// Default Value: true
+        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.
         /// </param>
         /// <param name="sort">
         /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
@@ -89,7 +88,7 @@ namespace HuggingFace
             string path,
             int? limit = default,
             string? cursor = default,
-            object? recursive = default,
+            string? recursive = default,
             global::HuggingFace.GetBucketsTreeSort? sort = default,
             global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -125,8 +124,7 @@ namespace HuggingFace
         /// Pagination cursor
         /// </param>
         /// <param name="recursive">
-        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.<br/>
-        /// Default Value: true
+        /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.
         /// </param>
         /// <param name="sort">
         /// Sort order. `path` (default) sorts lexicographically; `uploadedAt` sorts by most recent upload first. In recursive mode `uploadedAt` is only supported at the bucket root (no path prefix). In non-recursive mode, only supported at root or exact folder prefixes.<br/>
@@ -144,7 +142,7 @@ namespace HuggingFace
             string path,
             int? limit = default,
             string? cursor = default,
-            object? recursive = default,
+            string? recursive = default,
             global::HuggingFace.GetBucketsTreeSort? sort = default,
             global::HuggingFace.GetBucketsTreeDirection? direction = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -159,7 +157,7 @@ namespace HuggingFace
                 path: ref path,
                 limit: ref limit,
                 cursor: ref cursor,
-                recursive: recursive,
+                recursive: ref recursive,
                 sort: ref sort,
                 direction: ref direction);
 
@@ -192,7 +190,7 @@ namespace HuggingFace
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
-                                .AddOptionalParameter("recursive", recursive?.ToString())
+                                .AddOptionalParameter("recursive", recursive)
                                 .AddOptionalParameter("sort", sort?.ToValueString())
                                 .AddOptionalParameter("direction", direction?.ToValueString())
                                 ;

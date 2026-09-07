@@ -12,8 +12,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("autoJoin")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>? AutoJoin { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>? AutoJoin { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,7 +29,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateOrganizationsResourceGroupsSettingsRequest(
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>? autoJoin)
+            global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>? autoJoin)
         {
             this.AutoJoin = autoJoin;
         }

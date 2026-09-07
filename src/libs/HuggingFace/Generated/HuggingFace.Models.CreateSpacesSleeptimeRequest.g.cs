@@ -12,9 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seconds")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, string>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<int?, string> Seconds { get; set; }
+        public required global::HuggingFace.AnyOf<int?, double?> Seconds { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -30,7 +30,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateSpacesSleeptimeRequest(
-            global::HuggingFace.AnyOf<int?, string> seconds)
+            global::HuggingFace.AnyOf<int?, double?> seconds)
         {
             this.Seconds = seconds;
         }

@@ -31,8 +31,8 @@ namespace HuggingFace
             ref string repo,
             ref string rev,
             ref string path,
-            object? expand,
-            object? recursive,
+            ref string? expand,
+            ref string? recursive,
             ref int? limit,
             ref string? cursor);
         partial void PrepareGetSpacesByNamespaceByRepoTreeByRevByPathRequest(
@@ -42,8 +42,8 @@ namespace HuggingFace
             string repo,
             string rev,
             string path,
-            object? expand,
-            object? recursive,
+            string? expand,
+            string? recursive,
             int? limit,
             string? cursor);
         partial void ProcessGetSpacesByNamespaceByRepoTreeByRevByPathResponse(
@@ -66,12 +66,10 @@ namespace HuggingFace
         /// Wildcard path parameter
         /// </param>
         /// <param name="expand">
-        /// If true, returns returns associated commit data for each entry and security scanner metadata.<br/>
-        /// Default Value: false
+        /// If true, returns returns associated commit data for each entry and security scanner metadata.
         /// </param>
         /// <param name="recursive">
-        /// If true, returns the tree recursively.<br/>
-        /// Default Value: false
+        /// If true, returns the tree recursively.
         /// </param>
         /// <param name="limit">
         /// 1.000 by default, 100 by default for expand=true
@@ -85,8 +83,8 @@ namespace HuggingFace
             string repo,
             string rev,
             string path,
-            object? expand = default,
-            object? recursive = default,
+            string? expand = default,
+            string? recursive = default,
             int? limit = default,
             string? cursor = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -118,12 +116,10 @@ namespace HuggingFace
         /// Wildcard path parameter
         /// </param>
         /// <param name="expand">
-        /// If true, returns returns associated commit data for each entry and security scanner metadata.<br/>
-        /// Default Value: false
+        /// If true, returns returns associated commit data for each entry and security scanner metadata.
         /// </param>
         /// <param name="recursive">
-        /// If true, returns the tree recursively.<br/>
-        /// Default Value: false
+        /// If true, returns the tree recursively.
         /// </param>
         /// <param name="limit">
         /// 1.000 by default, 100 by default for expand=true
@@ -137,8 +133,8 @@ namespace HuggingFace
             string repo,
             string rev,
             string path,
-            object? expand = default,
-            object? recursive = default,
+            string? expand = default,
+            string? recursive = default,
             int? limit = default,
             string? cursor = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -152,8 +148,8 @@ namespace HuggingFace
                 repo: ref repo,
                 rev: ref rev,
                 path: ref path,
-                expand: expand,
-                recursive: recursive,
+                expand: ref expand,
+                recursive: ref recursive,
                 limit: ref limit,
                 cursor: ref cursor);
 
@@ -184,8 +180,8 @@ namespace HuggingFace
                                 path: $"/api/spaces/{@namespace}/{repo}/tree/{rev}/{path}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("expand", expand?.ToString())
-                                .AddOptionalParameter("recursive", recursive?.ToString())
+                                .AddOptionalParameter("expand", expand)
+                                .AddOptionalParameter("recursive", recursive)
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
                                 ;

@@ -23,7 +23,7 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<global::HuggingFace.GetNotificationsResponseNotificationVariant1PaperDiscussionParticipatingItem> Participating { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("paperId")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -40,7 +40,9 @@ namespace HuggingFace
         /// </summary>
         /// <param name="id"></param>
         /// <param name="participating"></param>
-        /// <param name="paperId"></param>
+        /// <param name="paperId">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

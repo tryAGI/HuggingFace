@@ -14,7 +14,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
             global::HuggingFace.GetDiscussionsRepoType2 repoType,
             string @namespace,
             string repo,
@@ -31,7 +31,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetDiscussionsResponseVariant12, global::HuggingFace.GetDiscussionsResponseVariant2>?, global::HuggingFace.GetDiscussionsResponse3>>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsResponseAsync(
             global::HuggingFace.GetDiscussionsRepoType2 repoType,
             string @namespace,
             string repo,

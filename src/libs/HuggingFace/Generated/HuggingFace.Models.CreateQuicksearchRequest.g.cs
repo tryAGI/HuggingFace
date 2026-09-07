@@ -67,8 +67,7 @@ namespace HuggingFace
         /// Default Value: []
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> Exclude { get; set; }
+        public global::System.Collections.Generic.IList<string>? Exclude { get; set; }
 
         /// <summary>
         /// Namespace to filter by
@@ -77,11 +76,10 @@ namespace HuggingFace
         public string? Namespace { get; set; }
 
         /// <summary>
-        /// Default Value: false
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeInvitees")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, object>))]
-        public global::HuggingFace.AnyOf<bool?, object>? IncludeInvitees { get; set; }
+        public string? IncludeInvitees { get; set; }
 
         /// <summary>
         ///
@@ -123,10 +121,6 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateQuicksearchRequest" /> class.
         /// </summary>
-        /// <param name="exclude">
-        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, kernels/repo, blog/blogSlug<br/>
-        /// Default Value: []
-        /// </param>
         /// <param name="q"></param>
         /// <param name="limit"></param>
         /// <param name="lang"></param>
@@ -137,12 +131,14 @@ namespace HuggingFace
         /// <param name="pipelines">
         /// Comma-separated or array of pipeline types
         /// </param>
+        /// <param name="exclude">
+        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, kernels/repo, blog/blogSlug<br/>
+        /// Default Value: []
+        /// </param>
         /// <param name="namespace">
         /// Namespace to filter by
         /// </param>
-        /// <param name="includeInvitees">
-        /// Default Value: false
-        /// </param>
+        /// <param name="includeInvitees"></param>
         /// <param name="repoName"></param>
         /// <param name="repoType"></param>
         /// <param name="discussionId"></param>
@@ -152,7 +148,6 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateQuicksearchRequest(
-            global::System.Collections.Generic.IList<string> exclude,
             string? q,
             int? limit,
             global::HuggingFace.AnyOf<global::HuggingFace.CreateQuicksearchRequestLang?, string>? lang,
@@ -161,8 +156,9 @@ namespace HuggingFace
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchRequestOrgsFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? orgsFilter,
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchRequestReposFilterVariant1Item>, global::System.Collections.Generic.IList<string>>? reposFilter,
             global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchRequestPipelinesVariant1Item>, global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?>? pipelines,
+            global::System.Collections.Generic.IList<string>? exclude,
             string? @namespace,
-            global::HuggingFace.AnyOf<bool?, object>? includeInvitees,
+            string? includeInvitees,
             string? repoName,
             global::HuggingFace.AnyOf<global::HuggingFace.CreateQuicksearchRequestRepoType?, string>? repoType,
             string? discussionId,
@@ -177,7 +173,7 @@ namespace HuggingFace
             this.OrgsFilter = orgsFilter;
             this.ReposFilter = reposFilter;
             this.Pipelines = pipelines;
-            this.Exclude = exclude ?? throw new global::System.ArgumentNullException(nameof(exclude));
+            this.Exclude = exclude;
             this.Namespace = @namespace;
             this.IncludeInvitees = includeInvitees;
             this.RepoName = repoName;

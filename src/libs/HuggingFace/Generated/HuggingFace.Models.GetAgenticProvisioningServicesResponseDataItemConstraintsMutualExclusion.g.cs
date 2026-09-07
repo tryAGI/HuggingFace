@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        /// <default>"True"</default>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowed_updates")]
-        public string AllowedUpdates { get; set; } = "True";
+        public bool AllowedUpdates { get; set; } = true;
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,7 +29,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetAgenticProvisioningServicesResponseDataItemConstraintsMutualExclusion(
-            string allowedUpdates = "True")
+            bool allowedUpdates = true)
         {
             this.AllowedUpdates = allowedUpdates;
         }

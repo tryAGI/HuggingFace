@@ -13,7 +13,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("notifications")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetNotificationsResponseNotificationVariant1, global::HuggingFace.GetNotificationsResponseNotificationVariant2, global::HuggingFace.GetNotificationsResponseNotificationVariant3, global::HuggingFace.GetNotificationsResponseNotificationVariant4>> Notifications { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetNotificationsResponseNotificationVariant1, global::HuggingFace.GetNotificationsResponseNotificationVariant2, global::HuggingFace.GetNotificationsResponseNotificationVariant3, global::HuggingFace.GetNotificationsResponseNotificationVariant4>> Notifications { get; set; }
 
         /// <summary>
         ///
@@ -45,7 +45,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetNotificationsResponse(
-            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetNotificationsResponseNotificationVariant1, global::HuggingFace.GetNotificationsResponseNotificationVariant2, global::HuggingFace.GetNotificationsResponseNotificationVariant3, global::HuggingFace.GetNotificationsResponseNotificationVariant4>> notifications,
+            global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetNotificationsResponseNotificationVariant1, global::HuggingFace.GetNotificationsResponseNotificationVariant2, global::HuggingFace.GetNotificationsResponseNotificationVariant3, global::HuggingFace.GetNotificationsResponseNotificationVariant4>> notifications,
             global::HuggingFace.GetNotificationsResponseCount count,
             double start)
         {

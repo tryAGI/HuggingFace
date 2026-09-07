@@ -12,9 +12,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="taskId"></param>
         /// <param name="maxParams"></param>
-        /// <param name="baseModel">
-        /// Default Value: true
-        /// </param>
+        /// <param name="baseModel"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -23,7 +21,7 @@ namespace HuggingFace
             string repo,
             string? taskId = default,
             string? maxParams = default,
-            object? baseModel = default,
+            string? baseModel = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -34,9 +32,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="taskId"></param>
         /// <param name="maxParams"></param>
-        /// <param name="baseModel">
-        /// Default Value: true
-        /// </param>
+        /// <param name="baseModel"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -45,7 +41,7 @@ namespace HuggingFace
             string repo,
             string? taskId = default,
             string? maxParams = default,
-            object? baseModel = default,
+            string? baseModel = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

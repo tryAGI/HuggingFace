@@ -11,6 +11,25 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Note? Note { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
+        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Position { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Author { get; set; }
@@ -67,9 +86,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1GatedEnum2?>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1GatedEnum2?> Gated { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated?> Gated { get; set; }
 
         /// <summary>
         ///
@@ -112,6 +131,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsResponseItemVariant1" /> class.
         /// </summary>
+        /// <param name="position"></param>
         /// <param name="author"></param>
         /// <param name="id"></param>
         /// <param name="isLikedByUser"></param>
@@ -120,6 +140,8 @@ namespace HuggingFace
         /// <param name="downloads"></param>
         /// <param name="gated"></param>
         /// <param name="lastModified"></param>
+        /// <param name="note"></param>
+        /// <param name="gallery"></param>
         /// <param name="datasetsServerInfo"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="isBenchmark"></param>
@@ -130,14 +152,17 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsItemsResponseItemVariant1(
+            double position,
             string author,
             string id,
             bool isLikedByUser,
             double likes,
             bool @private,
             double downloads,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1GatedEnum2?> gated,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated?> gated,
             global::System.DateTime lastModified,
+            global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Note? note,
+            global::System.Collections.Generic.IList<string>? gallery,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfo? datasetsServerInfo,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant1ResourceGroup? resourceGroup,
             bool? isBenchmark,
@@ -145,6 +170,9 @@ namespace HuggingFace
             string repoType = "dataset",
             string type = "dataset")
         {
+            this.Note = note;
+            this.Gallery = gallery;
+            this.Position = position;
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.IsLikedByUser = isLikedByUser;

@@ -32,7 +32,7 @@ namespace HuggingFace
             ref string? q,
             ref global::HuggingFace.GetCollectionsSort? sort,
             ref string? cursor,
-            object? expand,
+            ref string? expand,
             ref double? limit);
         partial void PrepareGetCollectionsRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -42,7 +42,7 @@ namespace HuggingFace
             string? q,
             global::HuggingFace.GetCollectionsSort? sort,
             string? cursor,
-            object? expand,
+            string? expand,
             double? limit);
         partial void ProcessGetCollectionsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -63,9 +63,7 @@ namespace HuggingFace
         /// Default Value: trending
         /// </param>
         /// <param name="cursor"></param>
-        /// <param name="expand">
-        /// Default Value: true
-        /// </param>
+        /// <param name="expand"></param>
         /// <param name="limit">
         /// Default Value: 10
         /// </param>
@@ -78,7 +76,7 @@ namespace HuggingFace
             string? q = default,
             global::HuggingFace.GetCollectionsSort? sort = default,
             string? cursor = default,
-            object? expand = default,
+            string? expand = default,
             double? limit = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -107,9 +105,7 @@ namespace HuggingFace
         /// Default Value: trending
         /// </param>
         /// <param name="cursor"></param>
-        /// <param name="expand">
-        /// Default Value: true
-        /// </param>
+        /// <param name="expand"></param>
         /// <param name="limit">
         /// Default Value: 10
         /// </param>
@@ -122,7 +118,7 @@ namespace HuggingFace
             string? q = default,
             global::HuggingFace.GetCollectionsSort? sort = default,
             string? cursor = default,
-            object? expand = default,
+            string? expand = default,
             double? limit = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -136,7 +132,7 @@ namespace HuggingFace
                 q: ref q,
                 sort: ref sort,
                 cursor: ref cursor,
-                expand: expand,
+                expand: ref expand,
                 limit: ref limit);
 
 
@@ -178,7 +174,7 @@ namespace HuggingFace
                                 .AddOptionalParameter("q", q)
                                 .AddOptionalParameter("sort", sort?.ToValueString())
                                 .AddOptionalParameter("cursor", cursor)
-                                .AddOptionalParameter("expand", expand?.ToString())
+                                .AddOptionalParameter("expand", expand)
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();

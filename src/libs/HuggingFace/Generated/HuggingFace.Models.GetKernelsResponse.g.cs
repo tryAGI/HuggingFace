@@ -75,9 +75,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.GetKernelsResponseGatedEnum2?>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetKernelsResponseGated?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.GetKernelsResponseGatedEnum2?> Gated { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetKernelsResponseGated?> Gated { get; set; }
 
         /// <summary>
         ///
@@ -89,8 +89,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authorData")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>? AuthorData { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>? AuthorData { get; set; }
 
         /// <summary>
         ///
@@ -146,9 +146,9 @@ namespace HuggingFace
             double likes,
             bool @private,
             string sha,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.GetKernelsResponseGatedEnum2?> gated,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetKernelsResponseGated?> gated,
             global::HuggingFace.GetKernelsResponseResourceGroup? resourceGroup,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>? authorData,
+            global::HuggingFace.OneOf<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>? authorData,
             global::System.Collections.Generic.IList<string>? files,
             global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseSupportedDriverFamilie>? supportedDriverFamilies,
             bool? trustedPublisher,

@@ -12,9 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2> Author { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2> Author { get; set; }
 
         /// <summary>
         ///
@@ -38,7 +38,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetCollectionsResponseItemVariant3OriginRepo(
-            global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2> author,
+            global::HuggingFace.OneOf<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2> author,
             string name)
         {
             this.Author = author;

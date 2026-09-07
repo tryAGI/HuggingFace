@@ -20,8 +20,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sleepTimeSeconds")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, string>))]
-        public global::HuggingFace.AnyOf<int?, string>? SleepTimeSeconds { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>))]
+        public global::HuggingFace.AnyOf<int?, double?>? SleepTimeSeconds { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,7 +39,7 @@ namespace HuggingFace
 #endif
         public CreateSpacesHardwareRequest(
             global::HuggingFace.CreateSpacesHardwareRequestFlavor flavor,
-            global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds)
+            global::HuggingFace.AnyOf<int?, double?>? sleepTimeSeconds)
         {
             this.Flavor = flavor;
             this.SleepTimeSeconds = sleepTimeSeconds;

@@ -31,7 +31,7 @@ namespace HuggingFace
             ref string repo,
             ref string? taskId,
             ref string? maxParams,
-            object? baseModel);
+            ref string? baseModel);
         partial void PrepareGetDatasetsByNamespaceByRepoLeaderboardRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -39,7 +39,7 @@ namespace HuggingFace
             string repo,
             string? taskId,
             string? maxParams,
-            object? baseModel);
+            string? baseModel);
         partial void ProcessGetDatasetsByNamespaceByRepoLeaderboardResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -57,9 +57,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="taskId"></param>
         /// <param name="maxParams"></param>
-        /// <param name="baseModel">
-        /// Default Value: true
-        /// </param>
+        /// <param name="baseModel"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -68,7 +66,7 @@ namespace HuggingFace
             string repo,
             string? taskId = default,
             string? maxParams = default,
-            object? baseModel = default,
+            string? baseModel = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -92,9 +90,7 @@ namespace HuggingFace
         /// <param name="repo"></param>
         /// <param name="taskId"></param>
         /// <param name="maxParams"></param>
-        /// <param name="baseModel">
-        /// Default Value: true
-        /// </param>
+        /// <param name="baseModel"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -103,7 +99,7 @@ namespace HuggingFace
             string repo,
             string? taskId = default,
             string? maxParams = default,
-            object? baseModel = default,
+            string? baseModel = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -115,7 +111,7 @@ namespace HuggingFace
                 repo: ref repo,
                 taskId: ref taskId,
                 maxParams: ref maxParams,
-                baseModel: baseModel);
+                baseModel: ref baseModel);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -146,7 +142,7 @@ namespace HuggingFace
                             __pathBuilder
                                 .AddOptionalParameter("task_id", taskId)
                                 .AddOptionalParameter("max_params", maxParams)
-                                .AddOptionalParameter("base_model", baseModel?.ToString())
+                                .AddOptionalParameter("base_model", baseModel)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

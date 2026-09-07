@@ -11,9 +11,9 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        /// <default>"True"</default>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
-        public string Enabled { get; set; } = "True";
+        public bool Enabled { get; set; } = true;
 
         /// <summary>
         ///
@@ -48,7 +48,7 @@ namespace HuggingFace
         public CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1(
             global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role role,
             global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Scope? scope,
-            string enabled = "True")
+            bool enabled = true)
         {
             this.Enabled = enabled;
             this.Role = role;

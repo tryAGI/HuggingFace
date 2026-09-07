@@ -31,7 +31,7 @@ namespace HuggingFace
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,
-            object? xet = default,
+            string? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -61,7 +61,7 @@ namespace HuggingFace
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,
-            object? xet = default,
+            string? xet = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

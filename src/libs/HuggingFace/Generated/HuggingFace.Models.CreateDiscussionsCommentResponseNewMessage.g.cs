@@ -26,8 +26,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AllOfJsonConverter<global::HuggingFace.AnyOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthor>))]
-        public global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthor>? Author { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>? Author { get; set; }
 
         /// <summary>
         ///
@@ -64,7 +64,7 @@ namespace HuggingFace
             string id,
             global::System.DateTime createdAt,
             global::HuggingFace.CreateDiscussionsCommentResponseNewMessageData data,
-            global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthor>? author,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>? author,
             string type = "comment")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

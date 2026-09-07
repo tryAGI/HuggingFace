@@ -147,8 +147,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("initiator")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>? Initiator { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>? Initiator { get; set; }
 
         /// <summary>
         ///
@@ -237,7 +237,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseVolume>? volumes,
             global::HuggingFace.GetJobsResponseExpose? expose,
             global::HuggingFace.GetJobsResponseResourceGroup? resourceGroup,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>? initiator,
+            global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::HuggingFace.GetJobsResponseHfToken? hfToken,

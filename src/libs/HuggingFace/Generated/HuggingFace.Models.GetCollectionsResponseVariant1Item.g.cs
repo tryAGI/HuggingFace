@@ -39,17 +39,17 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gating")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.AnyOf<string, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant3>?>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant3>?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant3>?> Gating { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant3>?> Gating { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant2>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant2> Owner { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant2> Owner { get; set; }
 
         /// <summary>
         ///
@@ -91,7 +91,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.GetCollectionsResponseVariant1ItemItem, global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant4, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant5, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6>?>> Items { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant4, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant5, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6>> Items { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -121,13 +121,13 @@ namespace HuggingFace
             string slug,
             string title,
             global::System.DateTime lastUpdated,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant3>?> gating,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant2> owner,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant3>?> gating,
+            global::HuggingFace.OneOf<global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant2> owner,
             global::HuggingFace.GetCollectionsResponseVariant1ItemTheme theme,
             bool @private,
             double upvotes,
             bool isUpvotedByUser,
-            global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.GetCollectionsResponseVariant1ItemItem, global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant4, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant5, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6>?>> items,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant4, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant5, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6>> items,
             string? description,
             global::HuggingFace.GetCollectionsResponseVariant1ItemResourceGroup? resourceGroup)
         {

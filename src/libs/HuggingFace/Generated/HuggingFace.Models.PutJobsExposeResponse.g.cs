@@ -147,8 +147,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("initiator")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>? Initiator { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>? Initiator { get; set; }
 
         /// <summary>
         ///
@@ -237,7 +237,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.PutJobsExposeResponseVolume>? volumes,
             global::HuggingFace.PutJobsExposeResponseExpose? expose,
             global::HuggingFace.PutJobsExposeResponseResourceGroup? resourceGroup,
-            global::HuggingFace.AnyOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>? initiator,
+            global::HuggingFace.OneOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
             global::HuggingFace.PutJobsExposeResponseHfToken? hfToken,

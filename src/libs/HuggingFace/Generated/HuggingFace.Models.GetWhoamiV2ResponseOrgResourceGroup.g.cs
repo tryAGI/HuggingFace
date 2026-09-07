@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class GetWhoamiV2ResponseOrgResourceGroup
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -39,7 +39,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWhoamiV2ResponseOrgResourceGroup" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="name"></param>
         /// <param name="role"></param>
 #if NET7_0_OR_GREATER

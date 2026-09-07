@@ -23,7 +23,7 @@ namespace HuggingFace
         public required string Url { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -40,7 +40,9 @@ namespace HuggingFace
         /// </summary>
         /// <param name="error"></param>
         /// <param name="url"></param>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

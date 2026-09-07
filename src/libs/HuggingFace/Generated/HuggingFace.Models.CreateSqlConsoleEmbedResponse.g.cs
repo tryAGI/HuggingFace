@@ -9,14 +9,14 @@ namespace HuggingFace
     public sealed partial class CreateSqlConsoleEmbedResponse
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoId")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -44,7 +44,7 @@ namespace HuggingFace
         public required string Title { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -91,12 +91,18 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSqlConsoleEmbedResponse" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="repoId"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
+        /// <param name="repoId">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="views"></param>
         /// <param name="sql"></param>
         /// <param name="title"></param>
-        /// <param name="userId"></param>
+        /// <param name="userId">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="createdAt"></param>
         /// <param name="slug"></param>
         /// <param name="private"></param>

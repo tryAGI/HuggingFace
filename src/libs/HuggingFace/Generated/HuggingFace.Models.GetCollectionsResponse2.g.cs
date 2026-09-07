@@ -39,17 +39,17 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gating")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.AnyOf<string, global::HuggingFace.GetCollectionsResponseGatingVariant22, global::HuggingFace.GetCollectionsResponseGatingVariant32>?>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant22, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant32>?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.GetCollectionsResponseGatingVariant22, global::HuggingFace.GetCollectionsResponseGatingVariant32>?> Gating { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant22, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant32>?> Gating { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22> Owner { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22> Owner { get; set; }
 
         /// <summary>
         ///
@@ -105,7 +105,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.GetCollectionsResponseItem2, global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseItemVariant12, global::HuggingFace.GetCollectionsResponseItemVariant22, global::HuggingFace.GetCollectionsResponseItemVariant32, global::HuggingFace.GetCollectionsResponseItemVariant42, global::HuggingFace.GetCollectionsResponseItemVariant52, global::HuggingFace.GetCollectionsResponseItemVariant62>?>> Items { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseItemVariant12, global::HuggingFace.GetCollectionsResponseItemVariant22, global::HuggingFace.GetCollectionsResponseItemVariant32, global::HuggingFace.GetCollectionsResponseItemVariant42, global::HuggingFace.GetCollectionsResponseItemVariant52, global::HuggingFace.GetCollectionsResponseItemVariant62>> Items { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -137,15 +137,15 @@ namespace HuggingFace
             string slug,
             string title,
             global::System.DateTime lastUpdated,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.GetCollectionsResponseGatingVariant22, global::HuggingFace.GetCollectionsResponseGatingVariant32>?> gating,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22> owner,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant22, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant32>?> gating,
+            global::HuggingFace.OneOf<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22> owner,
             double position,
             global::HuggingFace.GetCollectionsResponseTheme2 theme,
             bool @private,
             double upvotes,
             string shareUrl,
             bool isUpvotedByUser,
-            global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.GetCollectionsResponseItem2, global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseItemVariant12, global::HuggingFace.GetCollectionsResponseItemVariant22, global::HuggingFace.GetCollectionsResponseItemVariant32, global::HuggingFace.GetCollectionsResponseItemVariant42, global::HuggingFace.GetCollectionsResponseItemVariant52, global::HuggingFace.GetCollectionsResponseItemVariant62>?>> items,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.GetCollectionsResponseItemVariant12, global::HuggingFace.GetCollectionsResponseItemVariant22, global::HuggingFace.GetCollectionsResponseItemVariant32, global::HuggingFace.GetCollectionsResponseItemVariant42, global::HuggingFace.GetCollectionsResponseItemVariant52, global::HuggingFace.GetCollectionsResponseItemVariant62>> items,
             string? description,
             global::HuggingFace.GetCollectionsResponseResourceGroup2? resourceGroup)
         {

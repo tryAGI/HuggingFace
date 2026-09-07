@@ -8,7 +8,9 @@ namespace HuggingFace
         /// Get user usage<br/>
         /// Get user usage for a given period
         /// </summary>
-        /// <param name="periodId"></param>
+        /// <param name="periodId">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -20,7 +22,9 @@ namespace HuggingFace
         /// Get user usage<br/>
         /// Get user usage for a given period
         /// </summary>
-        /// <param name="periodId"></param>
+        /// <param name="periodId">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>

@@ -38,8 +38,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gated")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.PutDatasetsSettingsResponseGatedEnum2?>))]
-        public global::HuggingFace.AnyOf<string, global::HuggingFace.PutDatasetsSettingsResponseGatedEnum2?>? Gated { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>))]
+        public global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>? Gated { get; set; }
 
         /// <summary>
         /// If true, members of the owning org (except admins) must also go through the gated access-request flow.
@@ -89,7 +89,7 @@ namespace HuggingFace
             global::HuggingFace.PutDatasetsSettingsResponseVisibility? visibility,
             bool? discussionsDisabled,
             global::HuggingFace.PutDatasetsSettingsResponseDiscussionsSorting? discussionsSorting,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.PutDatasetsSettingsResponseGatedEnum2?>? gated,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>? gated,
             bool? orgMembersGated,
             string? gatedNotificationsEmail,
             global::HuggingFace.PutDatasetsSettingsResponseGatedNotificationsMode? gatedNotificationsMode)

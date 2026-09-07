@@ -31,6 +31,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Aneforge,
+        /// <summary>
+        ///
+        /// </summary>
         Anemoi,
         /// <summary>
         ///
@@ -1015,6 +1019,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Acestep => "acestep",
                 GetQuicksearchLibrary2.AdapterTransformers => "adapter-transformers",
                 GetQuicksearchLibrary2.Allennlp => "allennlp",
+                GetQuicksearchLibrary2.Aneforge => "aneforge",
                 GetQuicksearchLibrary2.Anemoi => "anemoi",
                 GetQuicksearchLibrary2.Araclip => "araclip",
                 GetQuicksearchLibrary2.Asteroid => "asteroid",
@@ -1272,6 +1277,7 @@ namespace HuggingFace
                 "acestep" => GetQuicksearchLibrary2.Acestep,
                 "adapter-transformers" => GetQuicksearchLibrary2.AdapterTransformers,
                 "allennlp" => GetQuicksearchLibrary2.Allennlp,
+                "aneforge" => GetQuicksearchLibrary2.Aneforge,
                 "anemoi" => GetQuicksearchLibrary2.Anemoi,
                 "araclip" => GetQuicksearchLibrary2.Araclip,
                 "asteroid" => GetQuicksearchLibrary2.Asteroid,

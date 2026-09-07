@@ -53,7 +53,7 @@ namespace HuggingFace
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.CreateScheduledJobsResponse> CreateScheduledJobsByNamespaceAsync(
             string @namespace,
-            global::HuggingFace.CreateScheduledJobsRequestJobSpec jobSpec,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant1, global::HuggingFace.CreateScheduledJobsRequestJobSpecVariant2> jobSpec,
             string schedule,
             bool? suspend = default,
             bool? concurrency = default,

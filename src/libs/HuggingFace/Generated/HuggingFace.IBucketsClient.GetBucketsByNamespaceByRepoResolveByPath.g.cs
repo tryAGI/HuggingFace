@@ -25,8 +25,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string path,
-            object? noContentDisposition = default,
-            object? download = default,
+            string? noContentDisposition = default,
+            string? download = default,
             string? accept = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -51,8 +51,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string path,
-            object? noContentDisposition = default,
-            object? download = default,
+            string? noContentDisposition = default,
+            string? download = default,
             string? accept = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

@@ -26,8 +26,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AllOfJsonConverter<global::HuggingFace.AnyOf<global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthor>))]
-        public global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthor>? Author { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant2>? Author { get; set; }
 
         /// <summary>
         ///
@@ -64,7 +64,7 @@ namespace HuggingFace
             string id,
             global::System.DateTime createdAt,
             global::HuggingFace.CreatePapersCommentResponseNewMessageData data,
-            global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant2>?, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthor>? author,
+            global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant2>? author,
             string type = "comment")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

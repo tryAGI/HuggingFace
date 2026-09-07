@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class CreateJobsDuplicateResponseOwner
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -46,7 +46,9 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateJobsDuplicateResponseOwner" /> class.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="name"></param>
         /// <param name="type"></param>
         /// <param name="avatarUrl"></param>

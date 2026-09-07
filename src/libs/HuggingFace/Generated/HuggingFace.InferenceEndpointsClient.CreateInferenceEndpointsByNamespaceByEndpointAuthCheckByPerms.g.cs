@@ -30,10 +30,10 @@ namespace HuggingFace
             ref string @namespace,
             ref string endpoint,
             ref global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2 perms,
-            object? own,
-            object? isCreator,
+            ref string? own,
+            ref string? isCreator,
             ref string? creatorId,
-            object? incurCost,
+            ref string? incurCost,
             ref string? resourceGroupId,
             ref string? repoId);
         partial void PrepareCreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsRequest(
@@ -42,10 +42,10 @@ namespace HuggingFace
             string @namespace,
             string endpoint,
             global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2 perms,
-            object? own,
-            object? isCreator,
+            string? own,
+            string? isCreator,
             string? creatorId,
-            object? incurCost,
+            string? incurCost,
             string? resourceGroupId,
             string? repoId);
         partial void ProcessCreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsResponse(
@@ -77,10 +77,10 @@ namespace HuggingFace
             string @namespace,
             string endpoint,
             global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2 perms,
-            object? own = default,
-            object? isCreator = default,
+            string? own = default,
+            string? isCreator = default,
             string? creatorId = default,
-            object? incurCost = default,
+            string? incurCost = default,
             string? resourceGroupId = default,
             string? repoId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -122,10 +122,10 @@ namespace HuggingFace
             string @namespace,
             string endpoint,
             global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2 perms,
-            object? own = default,
-            object? isCreator = default,
+            string? own = default,
+            string? isCreator = default,
             string? creatorId = default,
-            object? incurCost = default,
+            string? incurCost = default,
             string? resourceGroupId = default,
             string? repoId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -138,10 +138,10 @@ namespace HuggingFace
                 @namespace: ref @namespace,
                 endpoint: ref endpoint,
                 perms: ref perms,
-                own: own,
-                isCreator: isCreator,
+                own: ref own,
+                isCreator: ref isCreator,
                 creatorId: ref creatorId,
-                incurCost: incurCost,
+                incurCost: ref incurCost,
                 resourceGroupId: ref resourceGroupId,
                 repoId: ref repoId);
 
@@ -172,10 +172,10 @@ namespace HuggingFace
                                 path: $"/api/inference-endpoints/{@namespace}/{endpoint}/auth-check/{(global::System.Uri.EscapeDataString(perms.ToValueString()))}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("own", own?.ToString())
-                                .AddOptionalParameter("is_creator", isCreator?.ToString())
+                                .AddOptionalParameter("own", own)
+                                .AddOptionalParameter("is_creator", isCreator)
                                 .AddOptionalParameter("creator_id", creatorId)
-                                .AddOptionalParameter("incur_cost", incurCost?.ToString())
+                                .AddOptionalParameter("incur_cost", incurCost)
                                 .AddOptionalParameter("resource_group_id", resourceGroupId)
                                 .AddOptionalParameter("repo_id", repoId)
                                 ;

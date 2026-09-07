@@ -491,7 +491,7 @@ namespace HuggingFace
             global::HuggingFace.CreateDuplicateRequestVisibility? visibility = default,
             string? resourceGroupId = default,
             global::HuggingFace.CreateDuplicateRequestHardware? hardware = default,
-            global::HuggingFace.AnyOf<int?, string>? sleepTimeSeconds = default,
+            global::HuggingFace.AnyOf<int?, double?>? sleepTimeSeconds = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestSecret>? secrets = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVariable>? variables = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDuplicateRequestVolume>? volumes = default,

@@ -9,14 +9,14 @@ namespace HuggingFace
     public sealed partial class GetOrganizationsBillingUsageResponsePeriod
     {
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        ///
+        /// A hex string of 24 characters representing an ObjectId.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entityId")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -55,8 +55,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("invoice")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>))]
-        public global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>? Invoice { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>? Invoice { get; set; }
 
         /// <summary>
         ///
@@ -73,8 +73,12 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetOrganizationsBillingUsageResponsePeriod" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="entityId"></param>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
+        /// <param name="entityId">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
         /// <param name="entityType"></param>
         /// <param name="entityName"></param>
         /// <param name="periodStart"></param>
@@ -91,7 +95,7 @@ namespace HuggingFace
             string entityName,
             global::System.DateTime periodStart,
             global::System.DateTime periodEnd,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>? invoice,
+            global::HuggingFace.OneOf<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant1, global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodInvoiceVariant2>? invoice,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsBillingUsageResponsePeriodCharge>? charges)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

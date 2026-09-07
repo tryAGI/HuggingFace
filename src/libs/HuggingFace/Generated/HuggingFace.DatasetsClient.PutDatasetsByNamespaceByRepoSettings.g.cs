@@ -479,7 +479,7 @@ namespace HuggingFace
             global::HuggingFace.PutDatasetsSettingsRequestVisibility? visibility = default,
             bool? discussionsDisabled = default,
             global::HuggingFace.PutDatasetsSettingsRequestDiscussionsSorting? discussionsSorting = default,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.PutDatasetsSettingsRequestGatedEnum2?>? gated = default,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutDatasetsSettingsRequestGated?>? gated = default,
             bool? orgMembersGated = default,
             string? gatedNotificationsEmail = default,
             global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode? gatedNotificationsMode = default,

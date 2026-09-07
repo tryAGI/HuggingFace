@@ -11,6 +11,25 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Note? Note { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
+        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Position { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Slug { get; set; }
@@ -32,9 +51,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2> Owner { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2> Owner { get; set; }
 
         /// <summary>
         ///
@@ -102,6 +121,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsResponseItemVariant5" /> class.
         /// </summary>
+        /// <param name="position"></param>
         /// <param name="slug"></param>
         /// <param name="lastUpdated"></param>
         /// <param name="owner"></param>
@@ -112,15 +132,18 @@ namespace HuggingFace
         /// <param name="shareUrl"></param>
         /// <param name="id"></param>
         /// <param name="numberItems"></param>
+        /// <param name="note"></param>
+        /// <param name="gallery"></param>
         /// <param name="description"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsItemsResponseItemVariant5(
+            double position,
             string slug,
             global::System.DateTime lastUpdated,
-            global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2> owner,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2> owner,
             string title,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Theme theme,
             double upvotes,
@@ -128,9 +151,14 @@ namespace HuggingFace
             string shareUrl,
             string id,
             double numberItems,
+            global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Note? note,
+            global::System.Collections.Generic.IList<string>? gallery,
             string? description,
             string type = "collection")
         {
+            this.Note = note;
+            this.Gallery = gallery;
+            this.Position = position;
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.LastUpdated = lastUpdated;
             this.Description = description;

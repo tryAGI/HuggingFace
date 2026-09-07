@@ -30,8 +30,8 @@ namespace HuggingFace
             ref string @namespace,
             ref string repo,
             ref string path,
-            object? noContentDisposition,
-            object? download,
+            ref string? noContentDisposition,
+            ref string? download,
             ref string? accept);
         partial void PrepareGetBucketsByNamespaceByRepoResolveByPathRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -39,8 +39,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string path,
-            object? noContentDisposition,
-            object? download,
+            string? noContentDisposition,
+            string? download,
             string? accept);
         partial void ProcessGetBucketsByNamespaceByRepoResolveByPathResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -72,8 +72,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string path,
-            object? noContentDisposition = default,
-            object? download = default,
+            string? noContentDisposition = default,
+            string? download = default,
             string? accept = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -112,8 +112,8 @@ namespace HuggingFace
             string @namespace,
             string repo,
             string path,
-            object? noContentDisposition = default,
-            object? download = default,
+            string? noContentDisposition = default,
+            string? download = default,
             string? accept = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -125,8 +125,8 @@ namespace HuggingFace
                 @namespace: ref @namespace,
                 repo: ref repo,
                 path: ref path,
-                noContentDisposition: noContentDisposition,
-                download: download,
+                noContentDisposition: ref noContentDisposition,
+                download: ref download,
                 accept: ref accept);
 
 
@@ -156,8 +156,8 @@ namespace HuggingFace
                                 path: $"/buckets/{@namespace}/{repo}/resolve/{path}",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("noContentDisposition", noContentDisposition?.ToString())
-                                .AddOptionalParameter("download", download?.ToString())
+                                .AddOptionalParameter("noContentDisposition", noContentDisposition)
+                                .AddOptionalParameter("download", download)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(

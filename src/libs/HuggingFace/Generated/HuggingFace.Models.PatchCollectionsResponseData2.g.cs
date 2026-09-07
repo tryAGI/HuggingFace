@@ -39,17 +39,17 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gating")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.AnyOf<string, global::HuggingFace.PatchCollectionsResponseDataGatingVariant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant32>?>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant32>?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.PatchCollectionsResponseDataGatingVariant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant32>?> Gating { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant32>?> Gating { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22> Owner { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22> Owner { get; set; }
 
         /// <summary>
         ///
@@ -105,7 +105,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.PatchCollectionsResponseDataItem2, global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataItemVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant22, global::HuggingFace.PatchCollectionsResponseDataItemVariant32, global::HuggingFace.PatchCollectionsResponseDataItemVariant42, global::HuggingFace.PatchCollectionsResponseDataItemVariant52, global::HuggingFace.PatchCollectionsResponseDataItemVariant62>?>> Items { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataItemVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant22, global::HuggingFace.PatchCollectionsResponseDataItemVariant32, global::HuggingFace.PatchCollectionsResponseDataItemVariant42, global::HuggingFace.PatchCollectionsResponseDataItemVariant52, global::HuggingFace.PatchCollectionsResponseDataItemVariant62>> Items { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -137,15 +137,15 @@ namespace HuggingFace
             string slug,
             string title,
             global::System.DateTime lastUpdated,
-            global::HuggingFace.AnyOf<string, global::HuggingFace.AnyOf<string, global::HuggingFace.PatchCollectionsResponseDataGatingVariant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant32>?> gating,
-            global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22> owner,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant32>?> gating,
+            global::HuggingFace.OneOf<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22> owner,
             double position,
             global::HuggingFace.PatchCollectionsResponseDataTheme2 theme,
             bool @private,
             double upvotes,
             string shareUrl,
             bool isUpvotedByUser,
-            global::System.Collections.Generic.IList<global::HuggingFace.AllOf<global::HuggingFace.PatchCollectionsResponseDataItem2, global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataItemVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant22, global::HuggingFace.PatchCollectionsResponseDataItemVariant32, global::HuggingFace.PatchCollectionsResponseDataItemVariant42, global::HuggingFace.PatchCollectionsResponseDataItemVariant52, global::HuggingFace.PatchCollectionsResponseDataItemVariant62>?>> items,
+            global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataItemVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant22, global::HuggingFace.PatchCollectionsResponseDataItemVariant32, global::HuggingFace.PatchCollectionsResponseDataItemVariant42, global::HuggingFace.PatchCollectionsResponseDataItemVariant52, global::HuggingFace.PatchCollectionsResponseDataItemVariant62>> items,
             string? description,
             global::HuggingFace.PatchCollectionsResponseDataResourceGroup2? resourceGroup)
         {

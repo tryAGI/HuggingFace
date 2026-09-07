@@ -11,6 +11,70 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Name { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
+        public string? Organization { get; set; }
+
+        /// <summary>
+        /// The region where the repository is hosted.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("region")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateReposCreateRequestVariant3RegionJsonConverter))]
+        public global::HuggingFace.CreateReposCreateRequestVariant3Region? Region { get; set; }
+
+        /// <summary>
+        /// The license of the repository. You can select 'Other' if your license is not in the list
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("license")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateReposCreateRequestVariant3LicenseJsonConverter))]
+        public global::HuggingFace.CreateReposCreateRequestVariant3License? License { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("license_name")]
+        public string? LicenseName { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("license_link")]
+        public string? LicenseLink { get; set; }
+
+        /// <summary>
+        /// Repository visibility. Defaults to public. Cannot be specified along with visibility.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("private")]
+        public bool? Private { get; set; }
+
+        /// <summary>
+        /// Repository visibility. `protected` is only supported for Spaces. Cannot be specified along with private.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateReposCreateRequestVariant3VisibilityJsonConverter))]
+        public global::HuggingFace.CreateReposCreateRequestVariant3Visibility? Visibility { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
+        public string? ResourceGroupId { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("files")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant3File>? Files { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         /// <default>"kernel"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "kernel";
@@ -24,13 +88,51 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateReposCreateRequestVariant3" /> class.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="organization"></param>
+        /// <param name="region">
+        /// The region where the repository is hosted.
+        /// </param>
+        /// <param name="license">
+        /// The license of the repository. You can select 'Other' if your license is not in the list
+        /// </param>
+        /// <param name="licenseName"></param>
+        /// <param name="licenseLink"></param>
+        /// <param name="private">
+        /// Repository visibility. Defaults to public. Cannot be specified along with visibility.
+        /// </param>
+        /// <param name="visibility">
+        /// Repository visibility. `protected` is only supported for Spaces. Cannot be specified along with private.
+        /// </param>
+        /// <param name="resourceGroupId"></param>
+        /// <param name="files"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateReposCreateRequestVariant3(
+            string name,
+            string? organization,
+            global::HuggingFace.CreateReposCreateRequestVariant3Region? region,
+            global::HuggingFace.CreateReposCreateRequestVariant3License? license,
+            string? licenseName,
+            string? licenseLink,
+            bool? @private,
+            global::HuggingFace.CreateReposCreateRequestVariant3Visibility? visibility,
+            string? resourceGroupId,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateReposCreateRequestVariant3File>? files,
             string type = "kernel")
         {
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Organization = organization;
+            this.Region = region;
+            this.License = license;
+            this.LicenseName = licenseName;
+            this.LicenseLink = licenseLink;
+            this.Private = @private;
+            this.Visibility = visibility;
+            this.ResourceGroupId = resourceGroupId;
+            this.Files = files;
             this.Type = type;
         }
 
@@ -39,6 +141,18 @@ namespace HuggingFace
         /// </summary>
         public CreateReposCreateRequestVariant3()
         {
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="CreateReposCreateRequestVariant3"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static CreateReposCreateRequestVariant3 FromName(string name)
+        {
+            return new CreateReposCreateRequestVariant3
+            {
+                Name = name,
+            };
         }
 
     }

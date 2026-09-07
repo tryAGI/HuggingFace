@@ -40,9 +40,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pricing")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3>))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3> Pricing { get; set; }
+        public required global::HuggingFace.OneOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3> Pricing { get; set; }
 
         /// <summary>
         ///
@@ -108,7 +108,7 @@ namespace HuggingFace
             string id,
             string description,
             global::System.Collections.Generic.IList<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemCategorie> categories,
-            global::HuggingFace.AnyOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3> pricing,
+            global::HuggingFace.OneOf<global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant1, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant2, global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemPricingVariant3> pricing,
             global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemKind? kind,
             string? group,
             global::HuggingFace.GetAgenticProvisioningServicesResponseDataItemScope? scope,

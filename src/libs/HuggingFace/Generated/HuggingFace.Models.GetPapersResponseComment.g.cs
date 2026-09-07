@@ -26,8 +26,8 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AllOfJsonConverter<global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseCommentAuthorVariant1, global::HuggingFace.GetPapersResponseCommentAuthorVariant2>?, global::HuggingFace.GetPapersResponseCommentAuthor>))]
-        public global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseCommentAuthorVariant1, global::HuggingFace.GetPapersResponseCommentAuthorVariant2>?, global::HuggingFace.GetPapersResponseCommentAuthor>? Author { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetPapersResponseCommentAuthorVariant1, global::HuggingFace.GetPapersResponseCommentAuthorVariant2>))]
+        public global::HuggingFace.OneOf<global::HuggingFace.GetPapersResponseCommentAuthorVariant1, global::HuggingFace.GetPapersResponseCommentAuthorVariant2>? Author { get; set; }
 
         /// <summary>
         ///
@@ -64,7 +64,7 @@ namespace HuggingFace
             string id,
             global::System.DateTime createdAt,
             global::HuggingFace.GetPapersResponseCommentData data,
-            global::HuggingFace.AllOf<global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseCommentAuthorVariant1, global::HuggingFace.GetPapersResponseCommentAuthorVariant2>?, global::HuggingFace.GetPapersResponseCommentAuthor>? author,
+            global::HuggingFace.OneOf<global::HuggingFace.GetPapersResponseCommentAuthorVariant1, global::HuggingFace.GetPapersResponseCommentAuthorVariant2>? author,
             string type = "comment")
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

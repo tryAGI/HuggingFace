@@ -14,9 +14,7 @@ namespace HuggingFace
         /// Default Value: trending
         /// </param>
         /// <param name="cursor"></param>
-        /// <param name="expand">
-        /// Default Value: true
-        /// </param>
+        /// <param name="expand"></param>
         /// <param name="limit">
         /// Default Value: 10
         /// </param>
@@ -29,7 +27,7 @@ namespace HuggingFace
             string? q = default,
             global::HuggingFace.GetCollectionsSort? sort = default,
             string? cursor = default,
-            object? expand = default,
+            string? expand = default,
             double? limit = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -43,9 +41,7 @@ namespace HuggingFace
         /// Default Value: trending
         /// </param>
         /// <param name="cursor"></param>
-        /// <param name="expand">
-        /// Default Value: true
-        /// </param>
+        /// <param name="expand"></param>
         /// <param name="limit">
         /// Default Value: 10
         /// </param>
@@ -58,7 +54,7 @@ namespace HuggingFace
             string? q = default,
             global::HuggingFace.GetCollectionsSort? sort = default,
             string? cursor = default,
-            object? expand = default,
+            string? expand = default,
             double? limit = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

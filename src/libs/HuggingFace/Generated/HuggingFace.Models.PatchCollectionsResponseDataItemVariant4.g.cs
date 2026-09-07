@@ -11,6 +11,25 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public global::HuggingFace.PatchCollectionsResponseDataItemVariant4Note? Note { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gallery")]
+        public global::System.Collections.Generic.IList<string>? Gallery { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double Position { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
@@ -64,10 +83,13 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchCollectionsResponseDataItemVariant4" /> class.
         /// </summary>
+        /// <param name="position"></param>
         /// <param name="id"></param>
         /// <param name="title"></param>
         /// <param name="upvotes"></param>
         /// <param name="publishedAt"></param>
+        /// <param name="note"></param>
+        /// <param name="gallery"></param>
         /// <param name="thumbnailUrl"></param>
         /// <param name="isUpvotedByUser"></param>
         /// <param name="type"></param>
@@ -75,14 +97,20 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchCollectionsResponseDataItemVariant4(
+            double position,
             string id,
             string title,
             double upvotes,
             global::System.DateTime publishedAt,
+            global::HuggingFace.PatchCollectionsResponseDataItemVariant4Note? note,
+            global::System.Collections.Generic.IList<string>? gallery,
             string? thumbnailUrl,
             bool? isUpvotedByUser,
             string type = "paper")
         {
+            this.Note = note;
+            this.Gallery = gallery;
+            this.Position = position;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.Upvotes = upvotes;

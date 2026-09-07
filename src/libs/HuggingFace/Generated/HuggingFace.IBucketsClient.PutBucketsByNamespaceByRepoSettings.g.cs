@@ -49,8 +49,8 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::HuggingFace.PutBucketsSettingsResponse> PutBucketsByNamespaceByRepoSettingsAsync(
             string @namespace,
             string repo,
-            global::System.Collections.Generic.IList<global::HuggingFace.PutBucketsSettingsRequestCdnRegion> cdnRegions,
-            global::HuggingFace.AnyOf<bool?, object>? @private = default,
+            string? @private = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.PutBucketsSettingsRequestCdnRegion>? cdnRegions = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

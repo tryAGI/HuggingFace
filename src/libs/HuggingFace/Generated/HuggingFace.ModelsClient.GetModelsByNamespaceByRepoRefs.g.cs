@@ -29,13 +29,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            object? includePrs);
+            ref string? includePrs);
         partial void PrepareGetModelsByNamespaceByRepoRefsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            object? includePrs);
+            string? includePrs);
         partial void ProcessGetModelsByNamespaceByRepoRefsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -50,16 +50,14 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-        /// <param name="includePrs">
-        /// Default Value: false
-        /// </param>
+        /// <param name="includePrs"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.GetModelsRefsResponse> GetModelsByNamespaceByRepoRefsAsync(
             string @namespace,
             string repo,
-            object? includePrs = default,
+            string? includePrs = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -78,16 +76,14 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-        /// <param name="includePrs">
-        /// Default Value: false
-        /// </param>
+        /// <param name="includePrs"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetModelsRefsResponse>> GetModelsByNamespaceByRepoRefsAsResponseAsync(
             string @namespace,
             string repo,
-            object? includePrs = default,
+            string? includePrs = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -97,7 +93,7 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 repo: ref repo,
-                includePrs: includePrs);
+                includePrs: ref includePrs);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -126,7 +122,7 @@ namespace HuggingFace
                                 path: $"/api/models/{@namespace}/{repo}/refs",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("include_prs", includePrs?.ToString())
+                                .AddOptionalParameter("include_prs", includePrs)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
