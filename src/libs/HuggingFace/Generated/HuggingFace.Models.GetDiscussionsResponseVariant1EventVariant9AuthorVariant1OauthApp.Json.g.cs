@@ -2,7 +2,7 @@
 
 namespace HuggingFace
 {
-    public readonly partial struct OneOf<T1, T2, T3, T4, T5, T6, T7, T8>
+    public sealed partial class GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -47,20 +47,20 @@ namespace HuggingFace
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>? FromJson(
+        public static global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>),
-                jsonSerializerContext) as global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>?;
+                typeof(global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp),
+                jsonSerializerContext) as global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp;
         }
 
         /// <summary>
         /// Deserializes a JSON string using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>? FromJson(
+        public static global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp? FromJson(
             string json)
         {
             return FromJson(
@@ -75,7 +75,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>? FromJson(
+        public static global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -86,7 +86,7 @@ namespace HuggingFace
                     global::HuggingFace.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp>(
                 json,
                 jsonSerializerOptions);
         }
@@ -94,20 +94,20 @@ namespace HuggingFace
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>),
-                jsonSerializerContext).ConfigureAwait(false)) as global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>?;
+                typeof(global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp),
+                jsonSerializerContext).ConfigureAwait(false)) as global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp;
         }
 
         /// <summary>
         /// Deserializes a JSON stream using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream)
         {
             return FromJsonStreamAsync(
@@ -122,7 +122,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -133,7 +133,7 @@ namespace HuggingFace
                     global::HuggingFace.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HuggingFace.OneOf<T1, T2, T3, T4, T5, T6, T7, T8>?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1OauthApp?>(
                 jsonStream,
                 jsonSerializerOptions);
         }
