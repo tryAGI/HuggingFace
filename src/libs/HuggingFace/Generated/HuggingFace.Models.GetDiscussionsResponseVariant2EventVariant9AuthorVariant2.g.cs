@@ -1,0 +1,190 @@
+
+#nullable enable
+
+namespace HuggingFace
+{
+    /// <summary>
+    ///
+    /// </summary>
+    public sealed partial class GetDiscussionsResponseVariant2EventVariant9AuthorVariant2
+    {
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isOwner")]
+        public bool? IsOwner { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isOrgMember")]
+        public bool? IsOrgMember { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isBlockedByMe")]
+        public bool? IsBlockedByMe { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("oauthApp")]
+        public global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2OauthApp? OauthApp { get; set; }
+
+        /// <summary>
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Id { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("avatarUrl")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AvatarUrl { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fullname")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Fullname { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Name { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isHf")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool IsHf { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isHfAdmin")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool IsHfAdmin { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isMod")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool IsMod { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("followerCount")]
+        public double? FollowerCount { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <default>"user"</default>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = "user";
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isPro")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool IsPro { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isUserFollowing")]
+        public bool? IsUserFollowing { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("primaryOrg")]
+        public global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrg? PrimaryOrg { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetDiscussionsResponseVariant2EventVariant9AuthorVariant2" /> class.
+        /// </summary>
+        /// <param name="id">
+        /// A hex string of 24 characters representing an ObjectId.
+        /// </param>
+        /// <param name="avatarUrl"></param>
+        /// <param name="fullname"></param>
+        /// <param name="name"></param>
+        /// <param name="isHf"></param>
+        /// <param name="isHfAdmin"></param>
+        /// <param name="isMod"></param>
+        /// <param name="isPro"></param>
+        /// <param name="isOwner"></param>
+        /// <param name="isOrgMember"></param>
+        /// <param name="isBlockedByMe"></param>
+        /// <param name="oauthApp"></param>
+        /// <param name="followerCount"></param>
+        /// <param name="isUserFollowing"></param>
+        /// <param name="primaryOrg"></param>
+        /// <param name="type"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public GetDiscussionsResponseVariant2EventVariant9AuthorVariant2(
+            string id,
+            string avatarUrl,
+            string fullname,
+            string name,
+            bool isHf,
+            bool isHfAdmin,
+            bool isMod,
+            bool isPro,
+            bool? isOwner,
+            bool? isOrgMember,
+            bool? isBlockedByMe,
+            global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2OauthApp? oauthApp,
+            double? followerCount,
+            bool? isUserFollowing,
+            global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrg? primaryOrg,
+            string type = "user")
+        {
+            this.IsOwner = isOwner;
+            this.IsOrgMember = isOrgMember;
+            this.IsBlockedByMe = isBlockedByMe;
+            this.OauthApp = oauthApp;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
+            this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.IsHf = isHf;
+            this.IsHfAdmin = isHfAdmin;
+            this.IsMod = isMod;
+            this.FollowerCount = followerCount;
+            this.Type = type;
+            this.IsPro = isPro;
+            this.IsUserFollowing = isUserFollowing;
+            this.PrimaryOrg = primaryOrg;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetDiscussionsResponseVariant2EventVariant9AuthorVariant2" /> class.
+        /// </summary>
+        public GetDiscussionsResponseVariant2EventVariant9AuthorVariant2()
+        {
+        }
+
+    }
+}
