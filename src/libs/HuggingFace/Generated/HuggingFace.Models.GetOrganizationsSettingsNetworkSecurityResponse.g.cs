@@ -12,9 +12,15 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enforceAuth")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.AnyOf<bool?, string> EnforceAuth { get; set; }
+        public required bool EnforceAuth { get; set; }
+
+        /// <summary>
+        /// Whether the declared ipRanges match the admin-validated CIDR ranges
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("areCidrRangesApproved")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AreCidrRangesApproved { get; set; }
 
         /// <summary>
         ///
@@ -68,6 +74,9 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetOrganizationsSettingsNetworkSecurityResponse" /> class.
         /// </summary>
         /// <param name="enforceAuth"></param>
+        /// <param name="areCidrRangesApproved">
+        /// Whether the declared ipRanges match the admin-validated CIDR ranges
+        /// </param>
         /// <param name="enforceIpRestriction"></param>
         /// <param name="highRateLimits"></param>
         /// <param name="ipRanges"></param>
@@ -78,7 +87,8 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetOrganizationsSettingsNetworkSecurityResponse(
-            global::HuggingFace.AnyOf<bool?, string> enforceAuth,
+            bool enforceAuth,
+            bool areCidrRangesApproved,
             bool enforceIpRestriction,
             bool highRateLimits,
             global::System.Collections.Generic.IList<string> ipRanges,
@@ -87,6 +97,7 @@ namespace HuggingFace
             bool keepReposMetadataVisible)
         {
             this.EnforceAuth = enforceAuth;
+            this.AreCidrRangesApproved = areCidrRangesApproved;
             this.EnforceIpRestriction = enforceIpRestriction;
             this.HighRateLimits = highRateLimits;
             this.IpRanges = ipRanges ?? throw new global::System.ArgumentNullException(nameof(ipRanges));
