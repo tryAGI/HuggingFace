@@ -150,6 +150,12 @@ namespace HuggingFace
         public global::HuggingFace.JobExpose? Expose { get; set; }
 
         /// <summary>
+        /// Network group the job belongs to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network")]
+        public global::HuggingFace.JobNetwork? Network { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -182,6 +188,9 @@ namespace HuggingFace
         /// <param name="expose">
         /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
         /// </param>
+        /// <param name="network">
+        /// Network group the job belongs to.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -207,7 +216,8 @@ namespace HuggingFace
             global::System.DateTime? finishedAt,
             global::HuggingFace.JobDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.JobVolume>? volumes,
-            global::HuggingFace.JobExpose? expose)
+            global::HuggingFace.JobExpose? expose,
+            global::HuggingFace.JobNetwork? network)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
@@ -231,6 +241,7 @@ namespace HuggingFace
             this.Durations = durations;
             this.Volumes = volumes;
             this.Expose = expose;
+            this.Network = network;
         }
 
         /// <summary>

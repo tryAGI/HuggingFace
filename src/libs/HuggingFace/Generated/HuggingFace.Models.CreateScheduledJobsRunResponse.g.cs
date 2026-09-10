@@ -124,6 +124,12 @@ namespace HuggingFace
         public global::HuggingFace.CreateScheduledJobsRunResponseExpose? Expose { get; set; }
 
         /// <summary>
+        /// Network group the job belongs to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network")]
+        public global::HuggingFace.CreateScheduledJobsRunResponseNetwork? Network { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         /// <default>"job"</default>
@@ -206,6 +212,9 @@ namespace HuggingFace
         /// <param name="expose">
         /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
         /// </param>
+        /// <param name="network">
+        /// Network group the job belongs to.
+        /// </param>
         /// <param name="resourceGroup"></param>
         /// <param name="initiator"></param>
         /// <param name="secrets"></param>
@@ -236,6 +245,7 @@ namespace HuggingFace
             global::HuggingFace.CreateScheduledJobsRunResponseDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateScheduledJobsRunResponseVolume>? volumes,
             global::HuggingFace.CreateScheduledJobsRunResponseExpose? expose,
+            global::HuggingFace.CreateScheduledJobsRunResponseNetwork? network,
             global::HuggingFace.CreateScheduledJobsRunResponseResourceGroup? resourceGroup,
             global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
@@ -261,6 +271,7 @@ namespace HuggingFace
             this.Durations = durations;
             this.Volumes = volumes;
             this.Expose = expose;
+            this.Network = network;
             this.Type = type;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.ResourceGroup = resourceGroup;

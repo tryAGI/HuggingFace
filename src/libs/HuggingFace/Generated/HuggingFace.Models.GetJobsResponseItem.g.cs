@@ -124,6 +124,12 @@ namespace HuggingFace
         public global::HuggingFace.GetJobsResponseItemExpose? Expose { get; set; }
 
         /// <summary>
+        /// Network group the job belongs to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network")]
+        public global::HuggingFace.GetJobsResponseItemNetwork? Network { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         /// <default>"job"</default>
@@ -206,6 +212,9 @@ namespace HuggingFace
         /// <param name="expose">
         /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
         /// </param>
+        /// <param name="network">
+        /// Network group the job belongs to.
+        /// </param>
         /// <param name="resourceGroup"></param>
         /// <param name="initiator"></param>
         /// <param name="secrets"></param>
@@ -236,6 +245,7 @@ namespace HuggingFace
             global::HuggingFace.GetJobsResponseItemDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseItemVolume>? volumes,
             global::HuggingFace.GetJobsResponseItemExpose? expose,
+            global::HuggingFace.GetJobsResponseItemNetwork? network,
             global::HuggingFace.GetJobsResponseItemResourceGroup? resourceGroup,
             global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
@@ -261,6 +271,7 @@ namespace HuggingFace
             this.Durations = durations;
             this.Volumes = volumes;
             this.Expose = expose;
+            this.Network = network;
             this.Type = type;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.ResourceGroup = resourceGroup;
