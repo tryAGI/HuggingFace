@@ -124,6 +124,12 @@ namespace HuggingFace
         public global::HuggingFace.GetJobsResponseExpose? Expose { get; set; }
 
         /// <summary>
+        /// Network group the job belongs to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network")]
+        public global::HuggingFace.GetJobsResponseNetwork? Network { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         /// <default>"job"</default>
@@ -206,6 +212,9 @@ namespace HuggingFace
         /// <param name="expose">
         /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
         /// </param>
+        /// <param name="network">
+        /// Network group the job belongs to.
+        /// </param>
         /// <param name="resourceGroup"></param>
         /// <param name="initiator"></param>
         /// <param name="secrets"></param>
@@ -236,6 +245,7 @@ namespace HuggingFace
             global::HuggingFace.GetJobsResponseDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.GetJobsResponseVolume>? volumes,
             global::HuggingFace.GetJobsResponseExpose? expose,
+            global::HuggingFace.GetJobsResponseNetwork? network,
             global::HuggingFace.GetJobsResponseResourceGroup? resourceGroup,
             global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>? initiator,
             global::System.Collections.Generic.IList<string>? secrets,
@@ -261,6 +271,7 @@ namespace HuggingFace
             this.Durations = durations;
             this.Volumes = volumes;
             this.Expose = expose;
+            this.Network = network;
             this.Type = type;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.ResourceGroup = resourceGroup;

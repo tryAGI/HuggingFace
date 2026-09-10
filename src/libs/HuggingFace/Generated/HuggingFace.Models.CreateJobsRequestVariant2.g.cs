@@ -98,6 +98,12 @@ namespace HuggingFace
         public global::HuggingFace.CreateJobsRequestVariant2Ssh? Ssh { get; set; }
 
         /// <summary>
+        /// Opt-in network group. Jobs of the same owner and resource group sharing a group are placed together and reach each other on every port. Two environment variables are set in the container: `HF_NETWORK_GROUP_HOSTNAME`, a hostname resolving to every member of the group, and `HF_NETWORK_GROUP_PREFIX`, to which an alias is appended to get that alias' hostname.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network")]
+        public global::HuggingFace.CreateJobsRequestVariant2Network? Network { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
@@ -141,6 +147,9 @@ namespace HuggingFace
         /// <param name="ssh">
         /// When `enabled`, the job's container is reachable over SSH at `ssh &lt;job_id&gt;@ssh.hf.jobs`. Only the job's owner is allowed in, authenticated by an SSH public key registered on the Hub.
         /// </param>
+        /// <param name="network">
+        /// Opt-in network group. Jobs of the same owner and resource group sharing a group are placed together and reach each other on every port. Two environment variables are set in the container: `HF_NETWORK_GROUP_HOSTNAME`, a hostname resolving to every member of the group, and `HF_NETWORK_GROUP_PREFIX`, to which an alias is appended to get that alias' hostname.
+        /// </param>
         /// <param name="resourceGroupId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -160,6 +169,7 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateJobsRequestVariant2Volume>? volumes,
             global::HuggingFace.CreateJobsRequestVariant2Expose? expose,
             global::HuggingFace.CreateJobsRequestVariant2Ssh? ssh,
+            global::HuggingFace.CreateJobsRequestVariant2Network? network,
             string? resourceGroupId)
         {
             this.SpaceId = spaceId;
@@ -176,6 +186,7 @@ namespace HuggingFace
             this.Volumes = volumes;
             this.Expose = expose;
             this.Ssh = ssh;
+            this.Network = network;
             this.ResourceGroupId = resourceGroupId;
         }
 

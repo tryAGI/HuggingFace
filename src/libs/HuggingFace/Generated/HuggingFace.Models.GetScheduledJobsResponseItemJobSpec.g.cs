@@ -103,6 +103,12 @@ namespace HuggingFace
         public global::HuggingFace.GetScheduledJobsResponseItemJobSpecExpose? Expose { get; set; }
 
         /// <summary>
+        /// Network group the job belongs to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network")]
+        public global::HuggingFace.GetScheduledJobsResponseItemJobSpecNetwork? Network { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroup")]
@@ -152,6 +158,9 @@ namespace HuggingFace
         /// <param name="expose">
         /// Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).
         /// </param>
+        /// <param name="network">
+        /// Network group the job belongs to.
+        /// </param>
         /// <param name="resourceGroup"></param>
         /// <param name="secrets"></param>
         /// <param name="labels"></param>
@@ -175,6 +184,7 @@ namespace HuggingFace
             global::HuggingFace.GetScheduledJobsResponseItemJobSpecDurations? durations,
             global::System.Collections.Generic.IList<global::HuggingFace.GetScheduledJobsResponseItemJobSpecVolume>? volumes,
             global::HuggingFace.GetScheduledJobsResponseItemJobSpecExpose? expose,
+            global::HuggingFace.GetScheduledJobsResponseItemJobSpecNetwork? network,
             global::HuggingFace.GetScheduledJobsResponseItemJobSpecResourceGroup? resourceGroup,
             global::System.Collections.Generic.IList<string>? secrets,
             global::System.Collections.Generic.Dictionary<string, string>? labels,
@@ -195,6 +205,7 @@ namespace HuggingFace
             this.Durations = durations;
             this.Volumes = volumes;
             this.Expose = expose;
+            this.Network = network;
             this.ResourceGroup = resourceGroup;
             this.Secrets = secrets;
             this.Labels = labels;
