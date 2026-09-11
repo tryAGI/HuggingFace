@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class CreateDatasetsUserAccessRequestGrantRequest
     {
         /// <summary>
-        /// A hex string of 24 characters representing an ObjectId.
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
         public string? UserId { get; set; }
@@ -29,9 +29,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateDatasetsUserAccessRequestGrantRequest" /> class.
         /// </summary>
-        /// <param name="userId">
-        /// A hex string of 24 characters representing an ObjectId.
-        /// </param>
+        /// <param name="userId"></param>
         /// <param name="user"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
