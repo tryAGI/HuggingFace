@@ -104,6 +104,11 @@ namespace HuggingFace
         public InferenceEndpointsClient InferenceEndpoints { get; }
 
         /// <summary>
+        /// Inference Providers. Run inference from one of our inference providers.
+        /// </summary>
+        public InferenceProvidersClient InferenceProviders { get; }
+
+        /// <summary>
         /// Jobs. The following endpoints manage jobs.
         /// </summary>
         public JobsClient Jobs { get; }

@@ -16,7 +16,7 @@ namespace HuggingFace
         public global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction Action { get; set; }
 
         /// <summary>
-        /// A hex string of 24 characters representing an ObjectId.
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -38,9 +38,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsItemsBatchRequestItem" /> class.
         /// </summary>
-        /// <param name="id">
-        /// A hex string of 24 characters representing an ObjectId.
-        /// </param>
+        /// <param name="id"></param>
         /// <param name="data"></param>
         /// <param name="action"></param>
 #if NET7_0_OR_GREATER

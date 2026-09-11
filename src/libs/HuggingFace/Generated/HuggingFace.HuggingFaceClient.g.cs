@@ -150,6 +150,15 @@ namespace HuggingFace
         };
 
         /// <summary>
+        /// Inference Providers. Run inference from one of our inference providers.
+        /// </summary>
+        public InferenceProvidersClient InferenceProviders => new InferenceProvidersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
         /// Jobs. The following endpoints manage jobs.
         /// </summary>
         public JobsClient Jobs => new JobsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
