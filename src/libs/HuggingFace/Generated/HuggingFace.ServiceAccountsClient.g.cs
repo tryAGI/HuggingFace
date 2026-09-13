@@ -35,7 +35,7 @@ namespace HuggingFace
         /// <inheritdoc/>
         public global::HuggingFace.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::HuggingFace.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::HuggingFace.ServiceAccountsSourceGenerationContext.Default);
 
         /// <summary>
         ///
