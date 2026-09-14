@@ -39,6 +39,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Harbor,
+        /// <summary>
+        ///
+        /// </summary>
         Lance,
         /// <summary>
         ///
@@ -47,11 +51,23 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        NemoGym,
+        /// <summary>
+        ///
+        /// </summary>
+        Openenv,
+        /// <summary>
+        ///
+        /// </summary>
         Pandas,
         /// <summary>
         ///
         /// </summary>
         Polars,
+        /// <summary>
+        ///
+        /// </summary>
+        Verifiers,
         /// <summary>
         ///
         /// </summary>
@@ -77,10 +93,14 @@ namespace HuggingFace
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Distilabel => "distilabel",
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Duckdb => "duckdb",
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Fiftyone => "fiftyone",
+                CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Harbor => "harbor",
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Lance => "lance",
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Mlcroissant => "mlcroissant",
+                CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.NemoGym => "nemo-gym",
+                CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Openenv => "openenv",
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Pandas => "pandas",
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Polars => "polars",
+                CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Verifiers => "verifiers",
                 CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Webdataset => "webdataset",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -99,10 +119,14 @@ namespace HuggingFace
                 "distilabel" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Distilabel,
                 "duckdb" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Duckdb,
                 "fiftyone" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Fiftyone,
+                "harbor" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Harbor,
                 "lance" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Lance,
                 "mlcroissant" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Mlcroissant,
+                "nemo-gym" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.NemoGym,
+                "openenv" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Openenv,
                 "pandas" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Pandas,
                 "polars" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Polars,
+                "verifiers" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Verifiers,
                 "webdataset" => CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2.Webdataset,
                 _ => null,
             };
