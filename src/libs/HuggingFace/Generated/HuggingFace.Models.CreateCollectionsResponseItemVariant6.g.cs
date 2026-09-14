@@ -55,7 +55,7 @@ namespace HuggingFace
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        ///
+        /// Moves on every successful change to the bucket's files. Poll it to know when to re-list instead of re-listing every path.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -127,7 +127,9 @@ namespace HuggingFace
         /// <param name="author"></param>
         /// <param name="id"></param>
         /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
+        /// <param name="updatedAt">
+        /// Moves on every successful change to the bucket's files. Poll it to know when to re-list instead of re-listing every path.
+        /// </param>
         /// <param name="size">
         /// The amount of storage used by the bucket in bytes
         /// </param>
