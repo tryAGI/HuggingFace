@@ -50,15 +50,6 @@ namespace HuggingFace
 
 
         /// <summary>
-        /// Agentic Provisioning. The following endpoints are for use with Agentic Provisioning Protocol.
-        /// </summary>
-        public AgenticProvisioningClient AgenticProvisioning => new AgenticProvisioningClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
         /// Agents. The following endpoints provide information about AI agents using the Hub.
         /// </summary>
         public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
