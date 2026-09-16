@@ -3,11 +3,11 @@
 
 namespace HuggingFace
 {
-    public partial class UsersClient
+    public partial class BucketsClient
     {
 
 
-        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetSettingsBillingUsageByInferenceSessionSecurityRequirement0 =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement s_GetBucketsByNamespaceByRepoEventsSecurityRequirement0 =
             new global::HuggingFace.EndPointSecurityRequirement
             {
                 Authorizations = new global::HuggingFace.EndPointAuthorizationRequirement[]
@@ -21,87 +21,108 @@ namespace HuggingFace
                     },
                 },
             };
-        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetSettingsBillingUsageByInferenceSessionSecurityRequirements =
+        private static readonly global::HuggingFace.EndPointSecurityRequirement[] s_GetBucketsByNamespaceByRepoEventsSecurityRequirements =
             new global::HuggingFace.EndPointSecurityRequirement[]
-            {                s_GetSettingsBillingUsageByInferenceSessionSecurityRequirement0,
+            {                s_GetBucketsByNamespaceByRepoEventsSecurityRequirement0,
             };
-        partial void PrepareGetSettingsBillingUsageByInferenceSessionArguments(
+        partial void PrepareGetBucketsByNamespaceByRepoEventsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.DateTime? startDate,
-            ref global::System.DateTime? endDate);
-        partial void PrepareGetSettingsBillingUsageByInferenceSessionRequest(
+            ref string @namespace,
+            ref string repo,
+            ref string? cursor,
+            ref global::System.DateTime? since);
+        partial void PrepareGetBucketsByNamespaceByRepoEventsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.DateTime? startDate,
-            global::System.DateTime? endDate);
-        partial void ProcessGetSettingsBillingUsageByInferenceSessionResponse(
+            string @namespace,
+            string repo,
+            string? cursor,
+            global::System.DateTime? since);
+        partial void ProcessGetBucketsByNamespaceByRepoEventsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetSettingsBillingUsageByInferenceSessionResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Session inference usage<br/>
-        /// Get user inference-provider usage broken down per session id
+        /// Follow changes<br/>
+        /// Server-sent events (`Accept: text/event-stream`) of the bucket's file changes, so clients can stop polling `/tree`.<br/>
+        /// Events:<br/>
+        /// - `ready`: `{"cursor"}` — replay (if any) is done, live changes follow. `cursor` may be absent if the feed has seen no change yet.<br/>
+        /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?}], "dirs": [...]}` — a batch of changes coalesced over ~200ms; `dirs` are the distinct parent directories of the changed paths (`""` for the root). An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`); `mtime`/`mtimeNanos` are `null` when a re-upload cleared them. `xetHash` is omitted without content read access.<br/>
+        /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list.<br/>
+        /// - `reconnect`: `{"cursor"}` — sent after 20 minutes or when the server shuts down (deploys), then the stream ends; reconnect with that cursor. Treat any other end of the stream the same way: reconnect with the last cursor you received.<br/>
+        /// A `: ping` comment is sent every 30s. Resume with `?cursor=` (exclusive) or `?since=` (inclusive); without either, only live changes are sent.
         /// </summary>
-        /// <param name="startDate">
-        /// Default Value: 2026-09-01T00:00:00.000Z
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="cursor">
+        /// Opaque cursor from a previous `ready`/`changes` event; resume after it
         /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-09-16T09:52:11.682Z
+        /// <param name="since">
+        /// Resume from this instant instead of a cursor (e.g. the bucket's `updatedAt` you last saw)
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse> GetSettingsBillingUsageByInferenceSessionAsync(
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task GetBucketsByNamespaceByRepoEventsAsync(
+            string @namespace,
+            string repo,
+            string? cursor = default,
+            global::System.DateTime? since = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetSettingsBillingUsageByInferenceSessionAsResponseAsync(
-                startDate: startDate,
-                endDate: endDate,
+            await GetBucketsByNamespaceByRepoEventsAsResponseAsync(
+                @namespace: @namespace,
+                repo: repo,
+                cursor: cursor,
+                since: since,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
-
-            return __response.Body;
         }
         /// <summary>
-        /// Session inference usage<br/>
-        /// Get user inference-provider usage broken down per session id
+        /// Follow changes<br/>
+        /// Server-sent events (`Accept: text/event-stream`) of the bucket's file changes, so clients can stop polling `/tree`.<br/>
+        /// Events:<br/>
+        /// - `ready`: `{"cursor"}` — replay (if any) is done, live changes follow. `cursor` may be absent if the feed has seen no change yet.<br/>
+        /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?}], "dirs": [...]}` — a batch of changes coalesced over ~200ms; `dirs` are the distinct parent directories of the changed paths (`""` for the root). An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`); `mtime`/`mtimeNanos` are `null` when a re-upload cleared them. `xetHash` is omitted without content read access.<br/>
+        /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list.<br/>
+        /// - `reconnect`: `{"cursor"}` — sent after 20 minutes or when the server shuts down (deploys), then the stream ends; reconnect with that cursor. Treat any other end of the stream the same way: reconnect with the last cursor you received.<br/>
+        /// A `: ping` comment is sent every 30s. Resume with `?cursor=` (exclusive) or `?since=` (inclusive); without either, only live changes are sent.
         /// </summary>
-        /// <param name="startDate">
-        /// Default Value: 2026-09-01T00:00:00.000Z
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="cursor">
+        /// Opaque cursor from a previous `ready`/`changes` event; resume after it
         /// </param>
-        /// <param name="endDate">
-        /// Default Value: 2026-09-16T09:52:11.682Z
+        /// <param name="since">
+        /// Resume from this instant instead of a cursor (e.g. the bucket's `updatedAt` you last saw)
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>> GetSettingsBillingUsageByInferenceSessionAsResponseAsync(
-            global::System.DateTime? startDate = default,
-            global::System.DateTime? endDate = default,
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse> GetBucketsByNamespaceByRepoEventsAsResponseAsync(
+            string @namespace,
+            string repo,
+            string? cursor = default,
+            global::System.DateTime? since = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetSettingsBillingUsageByInferenceSessionArguments(
+            PrepareGetBucketsByNamespaceByRepoEventsArguments(
                 httpClient: HttpClient,
-                startDate: ref startDate,
-                endDate: ref endDate);
+                @namespace: ref @namespace,
+                repo: ref repo,
+                cursor: ref cursor,
+                since: ref since);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetSettingsBillingUsageByInferenceSessionSecurityRequirements,
-                operationName: "GetSettingsBillingUsageByInferenceSessionAsync");
+                securityRequirements: s_GetBucketsByNamespaceByRepoEventsSecurityRequirements,
+                operationName: "GetBucketsByNamespaceByRepoEventsAsync");
 
             using var __timeoutCancellationTokenSource = global::HuggingFace.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -121,11 +142,11 @@ namespace HuggingFace
             {
 
                             var __pathBuilder = new global::HuggingFace.PathBuilder(
-                                path: "/api/settings/billing/usage-by-inference-session",
+                                path: $"/api/buckets/{@namespace}/{repo}/events",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("startDate", startDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("endDate", endDate?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("since", since?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -164,11 +185,13 @@ namespace HuggingFace
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetSettingsBillingUsageByInferenceSessionRequest(
+                PrepareGetBucketsByNamespaceByRepoEventsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    startDate: startDate,
-                    endDate: endDate);
+                    @namespace: @namespace!,
+                    repo: repo!,
+                    cursor: cursor,
+                    since: since);
 
                 return __httpRequest;
             }
@@ -185,9 +208,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getBucketsByNamespaceByRepoEvents",
+                                methodName: "GetBucketsByNamespaceByRepoEventsAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/events\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -219,9 +242,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getBucketsByNamespaceByRepoEvents",
+                                methodName: "GetBucketsByNamespaceByRepoEventsAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/events\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -260,9 +283,9 @@ namespace HuggingFace
                         await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getBucketsByNamespaceByRepoEvents",
+                                methodName: "GetBucketsByNamespaceByRepoEventsAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/events\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -300,7 +323,7 @@ namespace HuggingFace
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetSettingsBillingUsageByInferenceSessionResponse(
+                ProcessGetBucketsByNamespaceByRepoEventsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -308,9 +331,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getBucketsByNamespaceByRepoEvents",
+                                methodName: "GetBucketsByNamespaceByRepoEventsAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/events\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -330,9 +353,9 @@ namespace HuggingFace
                     await global::HuggingFace.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::HuggingFace.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getSettingsBillingUsageByInferenceSession",
-                                methodName: "GetSettingsBillingUsageByInferenceSessionAsync",
-                                pathTemplate: "\"/api/settings/billing/usage-by-inference-session\"",
+                                operationId: "getBucketsByNamespaceByRepoEvents",
+                                methodName: "GetBucketsByNamespaceByRepoEventsAsync",
+                                pathTemplate: "$\"/api/buckets/{@namespace}/{repo}/events\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -347,6 +370,43 @@ namespace HuggingFace
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Live follow is not served by this instance, or not caught up yet; retry after `Retry-After` seconds
+                            if ((int)__response.StatusCode == 503)
+                            {
+                                string? __content_503 = null;
+                                global::System.Exception? __exception_503 = null;
+                                global::HuggingFace.GetBucketsEventsResponse? __value_503 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_503 = global::HuggingFace.GetBucketsEventsResponse.FromJson(__content_503, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_503 = global::HuggingFace.GetBucketsEventsResponse.FromJson(__content_503, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_503 = __ex;
+                                }
+
+
+                                throw global::HuggingFace.ApiException<global::HuggingFace.GetBucketsEventsResponse>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_503 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_503,
+                                    responseBody: __content_503,
+                                    responseObject: __value_503,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -360,22 +420,15 @@ namespace HuggingFace
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetSettingsBillingUsageByInferenceSessionResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>(
+                return new global::HuggingFace.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -395,19 +448,10 @@ namespace HuggingFace
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
-
-                                    var __value = await global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
