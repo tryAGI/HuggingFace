@@ -118,6 +118,12 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isEnvironment")]
+        public bool? IsEnvironment { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         /// <default>"dataset"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string Type { get; set; } = "dataset";
@@ -146,6 +152,7 @@ namespace HuggingFace
         /// <param name="resourceGroup"></param>
         /// <param name="isBenchmark"></param>
         /// <param name="isTraces"></param>
+        /// <param name="isEnvironment"></param>
         /// <param name="repoType"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -167,6 +174,7 @@ namespace HuggingFace
             global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant1ResourceGroup? resourceGroup,
             bool? isBenchmark,
             bool? isTraces,
+            bool? isEnvironment,
             string repoType = "dataset",
             string type = "dataset")
         {
@@ -186,6 +194,7 @@ namespace HuggingFace
             this.ResourceGroup = resourceGroup;
             this.IsBenchmark = isBenchmark;
             this.IsTraces = isTraces;
+            this.IsEnvironment = isEnvironment;
             this.Type = type;
         }
 
