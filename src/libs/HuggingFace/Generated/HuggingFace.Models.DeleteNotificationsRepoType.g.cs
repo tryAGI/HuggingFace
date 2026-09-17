@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -43,6 +47,7 @@ namespace HuggingFace
             return value switch
             {
                 DeleteNotificationsRepoType.Bucket => "bucket",
+                DeleteNotificationsRepoType.Container => "container",
                 DeleteNotificationsRepoType.Dataset => "dataset",
                 DeleteNotificationsRepoType.Kernel => "kernel",
                 DeleteNotificationsRepoType.Model => "model",
@@ -58,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => DeleteNotificationsRepoType.Bucket,
+                "container" => DeleteNotificationsRepoType.Container,
                 "dataset" => DeleteNotificationsRepoType.Dataset,
                 "kernel" => DeleteNotificationsRepoType.Kernel,
                 "model" => DeleteNotificationsRepoType.Model,

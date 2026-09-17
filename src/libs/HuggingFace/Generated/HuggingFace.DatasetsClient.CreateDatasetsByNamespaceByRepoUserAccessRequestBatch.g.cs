@@ -47,7 +47,7 @@ namespace HuggingFace
 
         /// <summary>
         /// Batch access requests<br/>
-        /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
+        /// Accept, reject, reset or set back to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason` or `resetReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -76,7 +76,7 @@ namespace HuggingFace
         }
         /// <summary>
         /// Batch access requests<br/>
-        /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
+        /// Accept, reject, reset or set back to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason` or `resetReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -453,12 +453,13 @@ namespace HuggingFace
         }
         /// <summary>
         /// Batch access requests<br/>
-        /// Accept, reject or reset to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason`) is applied to every request in the list.
+        /// Accept, reject, reset or set back to pending up to 100 access requests for a single gated repository in one call. The same `status` (and optional `rejectionReason` or `resetReason`) is applied to every request in the list.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="status"></param>
         /// <param name="rejectionReason"></param>
+        /// <param name="resetReason"></param>
         /// <param name="requests"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -469,6 +470,7 @@ namespace HuggingFace
             global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestStatus status,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequest> requests,
             string? rejectionReason = default,
+            string? resetReason = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -476,6 +478,7 @@ namespace HuggingFace
             {
                 Status = status,
                 RejectionReason = rejectionReason,
+                ResetReason = resetReason,
                 Requests = requests,
             };
 

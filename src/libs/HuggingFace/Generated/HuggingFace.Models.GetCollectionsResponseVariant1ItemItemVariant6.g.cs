@@ -78,9 +78,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        /// <default>"bucket"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
-        public string RepoType { get; set; } = "bucket";
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetCollectionsResponseVariant1ItemItemVariant6RepoTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6RepoType RepoType { get; set; }
 
         /// <summary>
         ///
@@ -136,6 +137,7 @@ namespace HuggingFace
         /// <param name="totalFiles">
         /// The total number of files in the bucket
         /// </param>
+        /// <param name="repoType"></param>
         /// <param name="cdnRegions"></param>
         /// <param name="note"></param>
         /// <param name="gallery"></param>
@@ -143,7 +145,6 @@ namespace HuggingFace
         /// <param name="adminTags"></param>
         /// <param name="disabled"></param>
         /// <param name="resourceGroup"></param>
-        /// <param name="repoType"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -156,6 +157,7 @@ namespace HuggingFace
             global::System.DateTime updatedAt,
             double size,
             double totalFiles,
+            global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6RepoType repoType,
             global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6CdnRegion> cdnRegions,
             global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6Note? note,
             global::System.Collections.Generic.IList<string>? gallery,
@@ -163,7 +165,6 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<string>? adminTags,
             global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6Disabled? disabled,
             global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6ResourceGroup? resourceGroup,
-            string repoType = "bucket",
             string type = "bucket")
         {
             this.Note = note;

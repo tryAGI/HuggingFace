@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -43,6 +47,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateReposMoveRequestType.Bucket => "bucket",
+                CreateReposMoveRequestType.Container => "container",
                 CreateReposMoveRequestType.Dataset => "dataset",
                 CreateReposMoveRequestType.Kernel => "kernel",
                 CreateReposMoveRequestType.Model => "model",
@@ -58,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => CreateReposMoveRequestType.Bucket,
+                "container" => CreateReposMoveRequestType.Container,
                 "dataset" => CreateReposMoveRequestType.Dataset,
                 "kernel" => CreateReposMoveRequestType.Kernel,
                 "model" => CreateReposMoveRequestType.Model,

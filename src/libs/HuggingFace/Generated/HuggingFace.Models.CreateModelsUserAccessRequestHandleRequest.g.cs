@@ -35,6 +35,12 @@ namespace HuggingFace
         public string? RejectionReason { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resetReason")]
+        public string? ResetReason { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -51,6 +57,7 @@ namespace HuggingFace
         /// Either userId or user must be provided
         /// </param>
         /// <param name="rejectionReason"></param>
+        /// <param name="resetReason"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -58,12 +65,14 @@ namespace HuggingFace
             global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus status,
             string? userId,
             string? user,
-            string? rejectionReason)
+            string? rejectionReason,
+            string? resetReason)
         {
             this.UserId = userId;
             this.User = user;
             this.Status = status;
             this.RejectionReason = rejectionReason;
+            this.ResetReason = resetReason;
         }
 
         /// <summary>

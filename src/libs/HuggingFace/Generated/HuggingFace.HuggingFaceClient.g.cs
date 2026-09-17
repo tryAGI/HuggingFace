@@ -96,9 +96,9 @@ namespace HuggingFace
         };
 
         /// <summary>
-        /// Container Registry. The following endpoints back the HuggingFace container registry, e.g. `docker login` token minting.
+        /// Containers. Container image repositories, usable with the Hugging Face container registry (`docker push` / `docker pull`). Backed by bucket storage: the file endpoints mirror the bucket ones. Also includes the registry token endpoint used by `docker login`.
         /// </summary>
-        public ContainerClient Container => new ContainerClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        public ContainersClient Containers => new ContainersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContextProvider = JsonSerializerContextProvider,

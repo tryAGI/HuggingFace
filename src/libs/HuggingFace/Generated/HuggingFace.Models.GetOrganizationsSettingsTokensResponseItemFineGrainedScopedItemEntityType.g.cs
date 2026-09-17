@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -64,6 +68,7 @@ namespace HuggingFace
             {
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Bucket => "bucket",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Collection => "collection",
+                GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Container => "container",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Dataset => "dataset",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Kernel => "kernel",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Model => "model",
@@ -84,6 +89,7 @@ namespace HuggingFace
             {
                 "bucket" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Bucket,
                 "collection" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Collection,
+                "container" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Container,
                 "dataset" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Dataset,
                 "kernel" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Kernel,
                 "model" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemEntityType.Model,

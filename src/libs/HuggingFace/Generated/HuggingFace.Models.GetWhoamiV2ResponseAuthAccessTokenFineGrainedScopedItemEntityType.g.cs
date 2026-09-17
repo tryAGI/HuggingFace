@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -64,6 +68,7 @@ namespace HuggingFace
             {
                 GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Bucket => "bucket",
                 GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Collection => "collection",
+                GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Container => "container",
                 GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Dataset => "dataset",
                 GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Kernel => "kernel",
                 GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Model => "model",
@@ -84,6 +89,7 @@ namespace HuggingFace
             {
                 "bucket" => GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Bucket,
                 "collection" => GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Collection,
+                "container" => GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Container,
                 "dataset" => GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Dataset,
                 "kernel" => GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Kernel,
                 "model" => GetWhoamiV2ResponseAuthAccessTokenFineGrainedScopedItemEntityType.Model,

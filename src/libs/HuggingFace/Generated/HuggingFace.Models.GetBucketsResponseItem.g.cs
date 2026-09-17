@@ -59,9 +59,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        /// <default>"bucket"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoType")]
-        public string RepoType { get; set; } = "bucket";
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetBucketsResponseItemRepoTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.GetBucketsResponseItemRepoType RepoType { get; set; }
 
         /// <summary>
         ///
@@ -109,12 +110,12 @@ namespace HuggingFace
         /// <param name="totalFiles">
         /// The total number of files in the bucket
         /// </param>
+        /// <param name="repoType"></param>
         /// <param name="cdnRegions"></param>
         /// <param name="private"></param>
         /// <param name="adminTags"></param>
         /// <param name="disabled"></param>
         /// <param name="resourceGroup"></param>
-        /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -125,12 +126,12 @@ namespace HuggingFace
             global::System.DateTime updatedAt,
             double size,
             double totalFiles,
+            global::HuggingFace.GetBucketsResponseItemRepoType repoType,
             global::System.Collections.Generic.IList<global::HuggingFace.GetBucketsResponseItemCdnRegion> cdnRegions,
             bool? @private,
             global::System.Collections.Generic.IList<string>? adminTags,
             global::HuggingFace.GetBucketsResponseItemDisabled? disabled,
-            global::HuggingFace.GetBucketsResponseItemResourceGroup? resourceGroup,
-            string repoType = "bucket")
+            global::HuggingFace.GetBucketsResponseItemResourceGroup? resourceGroup)
         {
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));

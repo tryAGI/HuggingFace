@@ -25,6 +25,12 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resetReason")]
+        public string? ResetReason { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequest> Requests { get; set; }
@@ -41,16 +47,19 @@ namespace HuggingFace
         /// <param name="status"></param>
         /// <param name="requests"></param>
         /// <param name="rejectionReason"></param>
+        /// <param name="resetReason"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateDatasetsUserAccessRequestBatchRequest(
             global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestStatus status,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequest> requests,
-            string? rejectionReason)
+            string? rejectionReason,
+            string? resetReason)
         {
             this.Status = status;
             this.RejectionReason = rejectionReason;
+            this.ResetReason = resetReason;
             this.Requests = requests ?? throw new global::System.ArgumentNullException(nameof(requests));
         }
 

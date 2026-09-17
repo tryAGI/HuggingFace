@@ -60,6 +60,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseRepoType), TypeInfoPropertyName = "GetBucketsResponseRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseDisabled))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetBucketsResponseCdnRegion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseCdnRegion))]
@@ -73,6 +74,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutBucketsSettingsResponseCdnRegionRegion), TypeInfoPropertyName = "PutBucketsSettingsResponseCdnRegionRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetBucketsResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseItemRepoType), TypeInfoPropertyName = "GetBucketsResponseItemRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseItemDisabled))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetBucketsResponseItemCdnRegion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseItemCdnRegion))]
@@ -109,10 +111,12 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsTreeSort?), TypeInfoPropertyName = "NullableGetBucketsTreeSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsTreeDirection?), TypeInfoPropertyName = "NullableGetBucketsTreeDirection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsResourceGroupResponseType?), TypeInfoPropertyName = "NullableCreateBucketsResourceGroupResponseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseRepoType?), TypeInfoPropertyName = "NullableGetBucketsResponseRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseCdnRegionProvider?), TypeInfoPropertyName = "NullableGetBucketsResponseCdnRegionProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseCdnRegionRegion?), TypeInfoPropertyName = "NullableGetBucketsResponseCdnRegionRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutBucketsSettingsResponseCdnRegionProvider?), TypeInfoPropertyName = "NullablePutBucketsSettingsResponseCdnRegionProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutBucketsSettingsResponseCdnRegionRegion?), TypeInfoPropertyName = "NullablePutBucketsSettingsResponseCdnRegionRegion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseItemRepoType?), TypeInfoPropertyName = "NullableGetBucketsResponseItemRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseItemCdnRegionProvider?), TypeInfoPropertyName = "NullableGetBucketsResponseItemCdnRegionProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsResponseItemCdnRegionRegion?), TypeInfoPropertyName = "NullableGetBucketsResponseItemCdnRegionRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetBucketsTreeResponseItemType?), TypeInfoPropertyName = "NullableGetBucketsTreeResponseItemType2")]
@@ -189,6 +193,7 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
@@ -274,6 +279,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBucketsResourceGroupResponseType?)
 
+                    || typeToConvert == typeof(global::HuggingFace.GetBucketsResponseRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetBucketsResponseRepoType?)
+
                     || typeToConvert == typeof(global::HuggingFace.GetBucketsResponseCdnRegionProvider)
 
                     || typeToConvert == typeof(global::HuggingFace.GetBucketsResponseCdnRegionProvider?)
@@ -289,6 +298,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PutBucketsSettingsResponseCdnRegionRegion)
 
                     || typeToConvert == typeof(global::HuggingFace.PutBucketsSettingsResponseCdnRegionRegion?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetBucketsResponseItemRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetBucketsResponseItemRepoType?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetBucketsResponseItemCdnRegionProvider)
 
@@ -401,6 +414,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateBucketsResourceGroupResponseTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.GetBucketsResponseRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetBucketsResponseRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetBucketsResponseRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetBucketsResponseRepoTypeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.GetBucketsResponseCdnRegionProvider))
                 {
                     return new global::HuggingFace.JsonConverters.GetBucketsResponseCdnRegionProviderJsonConverter();
@@ -439,6 +462,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PutBucketsSettingsResponseCdnRegionRegion?))
                 {
                     return new global::HuggingFace.JsonConverters.PutBucketsSettingsResponseCdnRegionRegionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetBucketsResponseItemRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetBucketsResponseItemRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetBucketsResponseItemRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetBucketsResponseItemRepoTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetBucketsResponseItemCdnRegionProvider))

@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -43,6 +47,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateNotificationsMarkAsReadRepoType.Bucket => "bucket",
+                CreateNotificationsMarkAsReadRepoType.Container => "container",
                 CreateNotificationsMarkAsReadRepoType.Dataset => "dataset",
                 CreateNotificationsMarkAsReadRepoType.Kernel => "kernel",
                 CreateNotificationsMarkAsReadRepoType.Model => "model",
@@ -58,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => CreateNotificationsMarkAsReadRepoType.Bucket,
+                "container" => CreateNotificationsMarkAsReadRepoType.Container,
                 "dataset" => CreateNotificationsMarkAsReadRepoType.Dataset,
                 "kernel" => CreateNotificationsMarkAsReadRepoType.Kernel,
                 "model" => CreateNotificationsMarkAsReadRepoType.Model,
