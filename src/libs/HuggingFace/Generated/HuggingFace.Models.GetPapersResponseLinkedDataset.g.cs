@@ -97,6 +97,12 @@ namespace HuggingFace
         public bool? IsTraces { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isEnvironment")]
+        public bool? IsEnvironment { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -117,6 +123,7 @@ namespace HuggingFace
         /// <param name="resourceGroup"></param>
         /// <param name="isBenchmark"></param>
         /// <param name="isTraces"></param>
+        /// <param name="isEnvironment"></param>
         /// <param name="repoType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -134,6 +141,7 @@ namespace HuggingFace
             global::HuggingFace.GetPapersResponseLinkedDatasetResourceGroup? resourceGroup,
             bool? isBenchmark,
             bool? isTraces,
+            bool? isEnvironment,
             string repoType = "dataset")
         {
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
@@ -149,6 +157,7 @@ namespace HuggingFace
             this.ResourceGroup = resourceGroup;
             this.IsBenchmark = isBenchmark;
             this.IsTraces = isTraces;
+            this.IsEnvironment = isEnvironment;
         }
 
         /// <summary>
