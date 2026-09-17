@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -43,6 +47,7 @@ namespace HuggingFace
             return value switch
             {
                 PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Bucket => "bucket",
+                PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Container => "container",
                 PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Dataset => "dataset",
                 PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Kernel => "kernel",
                 PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Model => "model",
@@ -58,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Bucket,
+                "container" => PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Container,
                 "dataset" => PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Dataset,
                 "kernel" => PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Kernel,
                 "model" => PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource.Model,

@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -43,6 +47,7 @@ namespace HuggingFace
             return value switch
             {
                 GetSearchFullTextTypeItem.Bucket => "bucket",
+                GetSearchFullTextTypeItem.Container => "container",
                 GetSearchFullTextTypeItem.Dataset => "dataset",
                 GetSearchFullTextTypeItem.Kernel => "kernel",
                 GetSearchFullTextTypeItem.Model => "model",
@@ -58,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => GetSearchFullTextTypeItem.Bucket,
+                "container" => GetSearchFullTextTypeItem.Container,
                 "dataset" => GetSearchFullTextTypeItem.Dataset,
                 "kernel" => GetSearchFullTextTypeItem.Kernel,
                 "model" => GetSearchFullTextTypeItem.Model,

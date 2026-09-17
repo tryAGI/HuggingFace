@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -43,6 +47,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Bucket => "bucket",
+                CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Container => "container",
                 CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Dataset => "dataset",
                 CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Kernel => "kernel",
                 CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Model => "model",
@@ -58,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Bucket,
+                "container" => CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Container,
                 "dataset" => CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Dataset,
                 "kernel" => CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Kernel,
                 "model" => CreateOrganizationsResourceGroupsResponseResourceVariant1Type.Model,

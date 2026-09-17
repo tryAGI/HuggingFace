@@ -1,0 +1,60 @@
+#nullable enable
+
+namespace HuggingFace
+{
+    public partial interface IContainersClient
+    {
+        /// <summary>
+        /// Get file metadata<br/>
+        /// Returns file metadata including size, hash, and links to XET authentication
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="path">
+        /// Wildcard path parameter
+        /// </param>
+        /// <param name="noContentDisposition"></param>
+        /// <param name="download"></param>
+        /// <param name="accept">
+        /// Returns json information about the XET file info
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetContainersResolveResponse> GetContainersByNamespaceByRepoResolveByPathAsync(
+            string @namespace,
+            string repo,
+            string path,
+            string? noContentDisposition = default,
+            string? download = default,
+            string? accept = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get file metadata<br/>
+        /// Returns file metadata including size, hash, and links to XET authentication
+        /// </summary>
+        /// <param name="namespace"></param>
+        /// <param name="repo"></param>
+        /// <param name="path">
+        /// Wildcard path parameter
+        /// </param>
+        /// <param name="noContentDisposition"></param>
+        /// <param name="download"></param>
+        /// <param name="accept">
+        /// Returns json information about the XET file info
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::HuggingFace.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetContainersResolveResponse>> GetContainersByNamespaceByRepoResolveByPathAsResponseAsync(
+            string @namespace,
+            string repo,
+            string path,
+            string? noContentDisposition = default,
+            string? download = default,
+            string? accept = default,
+            global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

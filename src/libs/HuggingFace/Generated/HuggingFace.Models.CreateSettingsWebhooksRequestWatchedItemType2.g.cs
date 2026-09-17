@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -51,6 +55,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateSettingsWebhooksRequestWatchedItemType2.Bucket => "bucket",
+                CreateSettingsWebhooksRequestWatchedItemType2.Container => "container",
                 CreateSettingsWebhooksRequestWatchedItemType2.Dataset => "dataset",
                 CreateSettingsWebhooksRequestWatchedItemType2.Kernel => "kernel",
                 CreateSettingsWebhooksRequestWatchedItemType2.Model => "model",
@@ -68,6 +73,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => CreateSettingsWebhooksRequestWatchedItemType2.Bucket,
+                "container" => CreateSettingsWebhooksRequestWatchedItemType2.Container,
                 "dataset" => CreateSettingsWebhooksRequestWatchedItemType2.Dataset,
                 "kernel" => CreateSettingsWebhooksRequestWatchedItemType2.Kernel,
                 "model" => CreateSettingsWebhooksRequestWatchedItemType2.Model,

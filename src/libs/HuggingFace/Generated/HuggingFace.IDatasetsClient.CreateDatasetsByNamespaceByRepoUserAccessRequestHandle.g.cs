@@ -52,6 +52,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="status"></param>
         /// <param name="rejectionReason"></param>
+        /// <param name="resetReason"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -62,6 +63,7 @@ namespace HuggingFace
             string? userId = default,
             string? user = default,
             string? rejectionReason = default,
+            string? resetReason = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

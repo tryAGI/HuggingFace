@@ -20,6 +20,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Rejected,
+        /// <summary>
+        ///
+        /// </summary>
+        Reset,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace HuggingFace
                 CreateModelsUserAccessRequestHandleRequestStatus.Accepted => "accepted",
                 CreateModelsUserAccessRequestHandleRequestStatus.Pending => "pending",
                 CreateModelsUserAccessRequestHandleRequestStatus.Rejected => "rejected",
+                CreateModelsUserAccessRequestHandleRequestStatus.Reset => "reset",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace HuggingFace
                 "accepted" => CreateModelsUserAccessRequestHandleRequestStatus.Accepted,
                 "pending" => CreateModelsUserAccessRequestHandleRequestStatus.Pending,
                 "rejected" => CreateModelsUserAccessRequestHandleRequestStatus.Rejected,
+                "reset" => CreateModelsUserAccessRequestHandleRequestStatus.Reset,
                 _ => null,
             };
         }

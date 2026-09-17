@@ -20,6 +20,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Rejected,
+        /// <summary>
+        ///
+        /// </summary>
+        Reset,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace HuggingFace
                 GetDatasetsUserAccessRequestStatus.Accepted => "accepted",
                 GetDatasetsUserAccessRequestStatus.Pending => "pending",
                 GetDatasetsUserAccessRequestStatus.Rejected => "rejected",
+                GetDatasetsUserAccessRequestStatus.Reset => "reset",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace HuggingFace
                 "accepted" => GetDatasetsUserAccessRequestStatus.Accepted,
                 "pending" => GetDatasetsUserAccessRequestStatus.Pending,
                 "rejected" => GetDatasetsUserAccessRequestStatus.Rejected,
+                "reset" => GetDatasetsUserAccessRequestStatus.Reset,
                 _ => null,
             };
         }

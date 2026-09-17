@@ -15,6 +15,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -43,6 +47,7 @@ namespace HuggingFace
             return value switch
             {
                 CreateQuicksearchRequestRepoType.Bucket => "bucket",
+                CreateQuicksearchRequestRepoType.Container => "container",
                 CreateQuicksearchRequestRepoType.Dataset => "dataset",
                 CreateQuicksearchRequestRepoType.Kernel => "kernel",
                 CreateQuicksearchRequestRepoType.Model => "model",
@@ -58,6 +63,7 @@ namespace HuggingFace
             return value switch
             {
                 "bucket" => CreateQuicksearchRequestRepoType.Bucket,
+                "container" => CreateQuicksearchRequestRepoType.Container,
                 "dataset" => CreateQuicksearchRequestRepoType.Dataset,
                 "kernel" => CreateQuicksearchRequestRepoType.Kernel,
                 "model" => CreateQuicksearchRequestRepoType.Model,
