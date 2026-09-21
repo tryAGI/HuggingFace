@@ -18,8 +18,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("sha")]
-        public string? Sha { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("commit")]
+        public string? Commit { get; set; }
 
         /// <summary>
         ///
@@ -37,18 +37,18 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetKernelsResponseItemBuildMetadataBuilder" /> class.
         /// </summary>
         /// <param name="version"></param>
-        /// <param name="sha"></param>
+        /// <param name="commit"></param>
         /// <param name="dirty"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetKernelsResponseItemBuildMetadataBuilder(
             string version,
-            string? sha,
+            string? commit,
             bool? dirty)
         {
             this.Version = version ?? throw new global::System.ArgumentNullException(nameof(version));
-            this.Sha = sha;
+            this.Commit = commit;
             this.Dirty = dirty;
         }
 
