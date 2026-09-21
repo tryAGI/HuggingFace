@@ -23,6 +23,12 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content_access_policy_request")]
+        public bool? ContentAccessPolicyRequest { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("daily_papers_digest")]
         public bool? DailyPapersDigest { get; set; }
 
@@ -175,6 +181,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="announcements"></param>
         /// <param name="arxivPaperActivity"></param>
+        /// <param name="contentAccessPolicyRequest"></param>
         /// <param name="dailyPapersDigest"></param>
         /// <param name="discussionsParticipating"></param>
         /// <param name="discussionsWatched"></param>
@@ -205,6 +212,7 @@ namespace HuggingFace
         public PatchSettingsNotificationsRequestNotifications(
             bool? announcements,
             bool? arxivPaperActivity,
+            bool? contentAccessPolicyRequest,
             bool? dailyPapersDigest,
             bool? discussionsParticipating,
             bool? discussionsWatched,
@@ -232,6 +240,7 @@ namespace HuggingFace
         {
             this.Announcements = announcements;
             this.ArxivPaperActivity = arxivPaperActivity;
+            this.ContentAccessPolicyRequest = contentAccessPolicyRequest;
             this.DailyPapersDigest = dailyPapersDigest;
             this.DiscussionsParticipating = discussionsParticipating;
             this.DiscussionsWatched = discussionsWatched;

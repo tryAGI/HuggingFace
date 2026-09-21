@@ -12,15 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enforceAuth")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool EnforceAuth { get; set; }
-
-        /// <summary>
-        /// Whether the declared ipRanges match the admin-validated CIDR ranges
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("areCidrRangesApproved")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool AreCidrRangesApproved { get; set; }
+        public required global::HuggingFace.AnyOf<bool?, string> EnforceAuth { get; set; }
 
         /// <summary>
         ///
@@ -65,6 +59,13 @@ namespace HuggingFace
         public required bool KeepReposMetadataVisible { get; set; }
 
         /// <summary>
+        /// Whether the declared ipRanges match the admin-validated CIDR ranges
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("areCidrRangesApproved")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AreCidrRangesApproved { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -74,36 +75,36 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="PatchOrganizationsSettingsNetworkSecurityResponse" /> class.
         /// </summary>
         /// <param name="enforceAuth"></param>
-        /// <param name="areCidrRangesApproved">
-        /// Whether the declared ipRanges match the admin-validated CIDR ranges
-        /// </param>
         /// <param name="enforceIpRestriction"></param>
         /// <param name="highRateLimits"></param>
         /// <param name="ipRanges"></param>
         /// <param name="blockedContents"></param>
         /// <param name="allowedContents"></param>
         /// <param name="keepReposMetadataVisible"></param>
+        /// <param name="areCidrRangesApproved">
+        /// Whether the declared ipRanges match the admin-validated CIDR ranges
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchOrganizationsSettingsNetworkSecurityResponse(
-            bool enforceAuth,
-            bool areCidrRangesApproved,
+            global::HuggingFace.AnyOf<bool?, string> enforceAuth,
             bool enforceIpRestriction,
             bool highRateLimits,
             global::System.Collections.Generic.IList<string> ipRanges,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponseBlockedContent> blockedContents,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponseAllowedContent> allowedContents,
-            bool keepReposMetadataVisible)
+            bool keepReposMetadataVisible,
+            bool areCidrRangesApproved)
         {
             this.EnforceAuth = enforceAuth;
-            this.AreCidrRangesApproved = areCidrRangesApproved;
             this.EnforceIpRestriction = enforceIpRestriction;
             this.HighRateLimits = highRateLimits;
             this.IpRanges = ipRanges ?? throw new global::System.ArgumentNullException(nameof(ipRanges));
             this.BlockedContents = blockedContents ?? throw new global::System.ArgumentNullException(nameof(blockedContents));
             this.AllowedContents = allowedContents ?? throw new global::System.ArgumentNullException(nameof(allowedContents));
             this.KeepReposMetadataVisible = keepReposMetadataVisible;
+            this.AreCidrRangesApproved = areCidrRangesApproved;
         }
 
         /// <summary>
