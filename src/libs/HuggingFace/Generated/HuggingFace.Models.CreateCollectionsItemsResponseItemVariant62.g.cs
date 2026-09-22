@@ -48,6 +48,12 @@ namespace HuggingFace
         public bool? Private { get; set; }
 
         /// <summary>
+        /// Free-text description of the bucket / container image
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
@@ -142,6 +148,9 @@ namespace HuggingFace
         /// <param name="note"></param>
         /// <param name="gallery"></param>
         /// <param name="private"></param>
+        /// <param name="description">
+        /// Free-text description of the bucket / container image
+        /// </param>
         /// <param name="adminTags"></param>
         /// <param name="disabled"></param>
         /// <param name="resourceGroup"></param>
@@ -162,6 +171,7 @@ namespace HuggingFace
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant6Note2? note,
             global::System.Collections.Generic.IList<string>? gallery,
             bool? @private,
+            string? description,
             global::System.Collections.Generic.IList<string>? adminTags,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant6Disabled2? disabled,
             global::HuggingFace.CreateCollectionsItemsResponseItemVariant6ResourceGroup2? resourceGroup,
@@ -173,6 +183,7 @@ namespace HuggingFace
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Private = @private;
+            this.Description = description;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Size = size;

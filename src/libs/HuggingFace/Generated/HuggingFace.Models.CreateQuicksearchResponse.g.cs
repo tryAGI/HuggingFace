@@ -116,6 +116,20 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("containers")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseContainer> Containers { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("containersCount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double ContainersCount { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("kernels")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseKernel> Kernels { get; set; }
@@ -165,6 +179,8 @@ namespace HuggingFace
         /// <param name="collectionsCount"></param>
         /// <param name="buckets"></param>
         /// <param name="bucketsCount"></param>
+        /// <param name="containers"></param>
+        /// <param name="containersCount"></param>
         /// <param name="kernels"></param>
         /// <param name="kernelsCount"></param>
         /// <param name="blogs"></param>
@@ -188,6 +204,8 @@ namespace HuggingFace
             double collectionsCount,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseBucket> buckets,
             double bucketsCount,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseContainer> containers,
+            double containersCount,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseKernel> kernels,
             double kernelsCount,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseBlog> blogs,
@@ -208,6 +226,8 @@ namespace HuggingFace
             this.CollectionsCount = collectionsCount;
             this.Buckets = buckets ?? throw new global::System.ArgumentNullException(nameof(buckets));
             this.BucketsCount = bucketsCount;
+            this.Containers = containers ?? throw new global::System.ArgumentNullException(nameof(containers));
+            this.ContainersCount = containersCount;
             this.Kernels = kernels ?? throw new global::System.ArgumentNullException(nameof(kernels));
             this.KernelsCount = kernelsCount;
             this.Blogs = blogs ?? throw new global::System.ArgumentNullException(nameof(blogs));

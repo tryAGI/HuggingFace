@@ -86,7 +86,7 @@ namespace HuggingFace
         /// Comma-separated or array of pipeline types
         /// </param>
         /// <param name="exclude">
-        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, kernels/repo, blog/blogSlug<br/>
+        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, containers/containerName, kernels/repo, blog/blogSlug<br/>
         /// Default Value: []
         /// </param>
         /// <param name="namespace">
@@ -159,7 +159,7 @@ namespace HuggingFace
         /// Comma-separated or array of pipeline types
         /// </param>
         /// <param name="exclude">
-        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, kernels/repo, blog/blogSlug<br/>
+        /// Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, containers/containerName, kernels/repo, blog/blogSlug<br/>
         /// Default Value: []
         /// </param>
         /// <param name="namespace">
