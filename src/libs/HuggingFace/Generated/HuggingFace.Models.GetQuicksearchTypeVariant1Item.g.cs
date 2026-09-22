@@ -23,6 +23,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Container,
+        /// <summary>
+        ///
+        /// </summary>
         Dataset,
         /// <summary>
         ///
@@ -65,6 +69,7 @@ namespace HuggingFace
                 GetQuicksearchTypeVariant1Item.Blog => "blog",
                 GetQuicksearchTypeVariant1Item.Bucket => "bucket",
                 GetQuicksearchTypeVariant1Item.Collection => "collection",
+                GetQuicksearchTypeVariant1Item.Container => "container",
                 GetQuicksearchTypeVariant1Item.Dataset => "dataset",
                 GetQuicksearchTypeVariant1Item.Kernel => "kernel",
                 GetQuicksearchTypeVariant1Item.Model => "model",
@@ -85,6 +90,7 @@ namespace HuggingFace
                 "blog" => GetQuicksearchTypeVariant1Item.Blog,
                 "bucket" => GetQuicksearchTypeVariant1Item.Bucket,
                 "collection" => GetQuicksearchTypeVariant1Item.Collection,
+                "container" => GetQuicksearchTypeVariant1Item.Container,
                 "dataset" => GetQuicksearchTypeVariant1Item.Dataset,
                 "kernel" => GetQuicksearchTypeVariant1Item.Kernel,
                 "model" => GetQuicksearchTypeVariant1Item.Model,

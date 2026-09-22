@@ -34,6 +34,12 @@ namespace HuggingFace
         public global::HuggingFace.CreateBucketsRequestRegion? Region { get; set; }
 
         /// <summary>
+        /// Free-text description.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -52,6 +58,9 @@ namespace HuggingFace
         /// <param name="region">
         /// The region where the bucket is hosted.
         /// </param>
+        /// <param name="description">
+        /// Free-text description.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -59,12 +68,14 @@ namespace HuggingFace
             bool? @private,
             string? resourceGroupId,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateBucketsRequestCdnItem>? cdn,
-            global::HuggingFace.CreateBucketsRequestRegion? region)
+            global::HuggingFace.CreateBucketsRequestRegion? region,
+            string? description)
         {
             this.Private = @private;
             this.ResourceGroupId = resourceGroupId;
             this.Cdn = cdn;
             this.Region = region;
+            this.Description = description;
         }
 
         /// <summary>

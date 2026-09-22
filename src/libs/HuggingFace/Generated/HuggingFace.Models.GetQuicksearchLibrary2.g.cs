@@ -111,6 +111,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Causilo,
+        /// <summary>
+        ///
+        /// </summary>
         Ccpfn,
         /// <summary>
         ///
@@ -308,6 +312,10 @@ namespace HuggingFace
         ///
         /// </summary>
         GeometryCrafter,
+        /// <summary>
+        ///
+        /// </summary>
+        Gliformer,
         /// <summary>
         ///
         /// </summary>
@@ -971,6 +979,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Vqweb,
+        /// <summary>
+        ///
+        /// </summary>
         Vui,
         /// <summary>
         ///
@@ -1039,6 +1051,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Cancertathomev2 => "cancertathomev2",
                 GetQuicksearchLibrary2.CartesiaMlx => "cartesia_mlx",
                 GetQuicksearchLibrary2.CartesiaPytorch => "cartesia_pytorch",
+                GetQuicksearchLibrary2.Causilo => "causilo",
                 GetQuicksearchLibrary2.Ccpfn => "ccpfn",
                 GetQuicksearchLibrary2.Champ => "champ",
                 GetQuicksearchLibrary2.Chaossim => "chaossim",
@@ -1089,6 +1102,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.GemmaCpp => "gemma.cpp",
                 GetQuicksearchLibrary2.Genmo => "genmo",
                 GetQuicksearchLibrary2.GeometryCrafter => "geometry-crafter",
+                GetQuicksearchLibrary2.Gliformer => "gliformer",
                 GetQuicksearchLibrary2.Gliner => "gliner",
                 GetQuicksearchLibrary2.Gliner2 => "gliner2",
                 GetQuicksearchLibrary2.GlmTts => "glm-tts",
@@ -1254,6 +1268,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Vismatch => "vismatch",
                 GetQuicksearchLibrary2.Voicecraft => "voicecraft",
                 GetQuicksearchLibrary2.Voxcpm => "voxcpm",
+                GetQuicksearchLibrary2.Vqweb => "vqweb",
                 GetQuicksearchLibrary2.Vui => "vui",
                 GetQuicksearchLibrary2.Wan22 => "wan2.2",
                 GetQuicksearchLibrary2.Wham => "wham",
@@ -1297,6 +1312,7 @@ namespace HuggingFace
                 "cancertathomev2" => GetQuicksearchLibrary2.Cancertathomev2,
                 "cartesia_mlx" => GetQuicksearchLibrary2.CartesiaMlx,
                 "cartesia_pytorch" => GetQuicksearchLibrary2.CartesiaPytorch,
+                "causilo" => GetQuicksearchLibrary2.Causilo,
                 "ccpfn" => GetQuicksearchLibrary2.Ccpfn,
                 "champ" => GetQuicksearchLibrary2.Champ,
                 "chaossim" => GetQuicksearchLibrary2.Chaossim,
@@ -1347,6 +1363,7 @@ namespace HuggingFace
                 "gemma.cpp" => GetQuicksearchLibrary2.GemmaCpp,
                 "genmo" => GetQuicksearchLibrary2.Genmo,
                 "geometry-crafter" => GetQuicksearchLibrary2.GeometryCrafter,
+                "gliformer" => GetQuicksearchLibrary2.Gliformer,
                 "gliner" => GetQuicksearchLibrary2.Gliner,
                 "gliner2" => GetQuicksearchLibrary2.Gliner2,
                 "glm-tts" => GetQuicksearchLibrary2.GlmTts,
@@ -1512,6 +1529,7 @@ namespace HuggingFace
                 "vismatch" => GetQuicksearchLibrary2.Vismatch,
                 "voicecraft" => GetQuicksearchLibrary2.Voicecraft,
                 "voxcpm" => GetQuicksearchLibrary2.Voxcpm,
+                "vqweb" => GetQuicksearchLibrary2.Vqweb,
                 "vui" => GetQuicksearchLibrary2.Vui,
                 "wan2.2" => GetQuicksearchLibrary2.Wan22,
                 "wham" => GetQuicksearchLibrary2.Wham,
