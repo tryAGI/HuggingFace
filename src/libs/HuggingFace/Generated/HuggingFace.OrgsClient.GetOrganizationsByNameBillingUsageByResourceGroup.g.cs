@@ -54,7 +54,7 @@ namespace HuggingFace
         /// Default Value: 2026-09-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-09-24T09:34:26.368Z
+        /// Default Value: 2026-09-24T13:29:54.529Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -85,7 +85,7 @@ namespace HuggingFace
         /// Default Value: 2026-09-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-09-24T09:34:26.368Z
+        /// Default Value: 2026-09-24T13:29:54.529Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
