@@ -48,7 +48,7 @@ namespace HuggingFace
         /// Events:<br/>
         /// - `ready`: `{"cursor"}` — replay (if any) is done, live changes follow. `cursor` may be absent if the feed has seen no change yet.<br/>
         /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?}]}` — a batch of changes coalesced over ~200ms. An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`); `mtime`/`mtimeNanos` are `null` when a re-upload cleared them. `xetHash` is omitted without content read access.<br/>
-        /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list.<br/>
+        /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list. A `since` at or after the bucket's `updatedAt` never resets, however old.<br/>
         /// - `reconnect`: `{"cursor"}` — sent after 20 minutes or when the server shuts down (deploys), then the stream ends; reconnect with that cursor. Treat any other end of the stream the same way: reconnect with the last cursor you received.<br/>
         /// A `: ping` comment is sent every 30s. Resume with `?cursor=` (exclusive) or `?since=` (inclusive); without either, only live changes are sent.
         /// </summary>
@@ -86,7 +86,7 @@ namespace HuggingFace
         /// Events:<br/>
         /// - `ready`: `{"cursor"}` — replay (if any) is done, live changes follow. `cursor` may be absent if the feed has seen no change yet.<br/>
         /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?}]}` — a batch of changes coalesced over ~200ms. An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`); `mtime`/`mtimeNanos` are `null` when a re-upload cleared them. `xetHash` is omitted without content read access.<br/>
-        /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list.<br/>
+        /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list. A `since` at or after the bucket's `updatedAt` never resets, however old.<br/>
         /// - `reconnect`: `{"cursor"}` — sent after 20 minutes or when the server shuts down (deploys), then the stream ends; reconnect with that cursor. Treat any other end of the stream the same way: reconnect with the last cursor you received.<br/>
         /// A `: ping` comment is sent every 30s. Resume with `?cursor=` (exclusive) or `?since=` (inclusive); without either, only live changes are sent.
         /// </summary>
