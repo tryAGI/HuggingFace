@@ -35,6 +35,9 @@ namespace HuggingFace
         /// <param name="url"></param>
         /// <param name="job"></param>
         /// <param name="jobSourceId"></param>
+        /// <param name="secrets">
+        /// Secrets of the job started by the webhook, used together with `jobSourceId`: the source job's own secrets are never copied. On update, listed keys are replaced, an empty value removes a secret, and omitted keys keep their stored value.
+        /// </param>
         /// <param name="domains"></param>
         /// <param name="secret"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -46,6 +49,7 @@ namespace HuggingFace
             string? url = default,
             global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2>? job = default,
             string? jobSourceId = default,
+            global::System.Collections.Generic.Dictionary<string, string>? secrets = default,
             string? secret = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
