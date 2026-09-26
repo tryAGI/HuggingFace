@@ -35,6 +35,12 @@ namespace HuggingFace
         public string? JobSourceId { get; set; }
 
         /// <summary>
+        /// Secrets of the job started by the webhook, used together with `jobSourceId`: the source job's own secrets are never copied. On update, listed keys are replaced, an empty value removes a secret, and omitted keys keep their stored value.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secrets")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Secrets { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("domains")]
@@ -61,6 +67,9 @@ namespace HuggingFace
         /// <param name="url"></param>
         /// <param name="job"></param>
         /// <param name="jobSourceId"></param>
+        /// <param name="secrets">
+        /// Secrets of the job started by the webhook, used together with `jobSourceId`: the source job's own secrets are never copied. On update, listed keys are replaced, an empty value removes a secret, and omitted keys keep their stored value.
+        /// </param>
         /// <param name="secret"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -71,12 +80,14 @@ namespace HuggingFace
             string? url,
             global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant12, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant22>? job,
             string? jobSourceId,
+            global::System.Collections.Generic.Dictionary<string, string>? secrets,
             string? secret)
         {
             this.Watched = watched ?? throw new global::System.ArgumentNullException(nameof(watched));
             this.Url = url;
             this.Job = job;
             this.JobSourceId = jobSourceId;
+            this.Secrets = secrets;
             this.Domains = domains ?? throw new global::System.ArgumentNullException(nameof(domains));
             this.Secret = secret;
         }
