@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public string PickInputTypeVariant1() => IsInputTypeVariant1
-            ? InputTypeVariant1!
+        public string PickInputTypeVariant1() => InputTypeVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputTypeVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<int> PickInputTypeVariant2() => IsInputTypeVariant2
-            ? InputTypeVariant2!
+        public global::System.Collections.Generic.IList<int> PickInputTypeVariant2() => InputTypeVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputTypeVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -154,13 +154,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsInputTypeVariant1 && inputTypeVariant1 != null)
+            if (InputTypeVariant1 is { } __value0 && inputTypeVariant1 != null)
             {
-                return inputTypeVariant1(InputTypeVariant1!);
+                return inputTypeVariant1(__value0);
             }
-            else if (IsInputTypeVariant2 && inputTypeVariant2 != null)
+            else if (InputTypeVariant2 is { } __value1 && inputTypeVariant2 != null)
             {
-                return inputTypeVariant2(InputTypeVariant2!);
+                return inputTypeVariant2(__value1);
             }
 
             return default(TResult);
@@ -180,13 +180,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsInputTypeVariant1)
+            if (InputTypeVariant1 is { } __value0)
             {
-                inputTypeVariant1?.Invoke(InputTypeVariant1!);
+                inputTypeVariant1?.Invoke(__value0);
             }
-            else if (IsInputTypeVariant2)
+            else if (InputTypeVariant2 is { } __value1)
             {
-                inputTypeVariant2?.Invoke(InputTypeVariant2!);
+                inputTypeVariant2?.Invoke(__value1);
             }
         }
 
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsInputTypeVariant1)
+            if (InputTypeVariant1 is { } __value0)
             {
-                inputTypeVariant1?.Invoke(InputTypeVariant1!);
+                inputTypeVariant1?.Invoke(__value0);
             }
-            else if (IsInputTypeVariant2)
+            else if (InputTypeVariant2 is { } __value1)
             {
-                inputTypeVariant2?.Invoke(InputTypeVariant2!);
+                inputTypeVariant2?.Invoke(__value1);
             }
         }
 

@@ -178,19 +178,19 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ModelTypeVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ModelTypeVariant1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ModelTypeVariant1).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ModelTypeVariant1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickModelTypeVariant1(), typeInfo);
             }
             else if (value.IsModelTypeVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ModelTypeVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ModelTypeVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ModelTypeVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ModelTypeVariant2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickModelTypeVariant2(), typeInfo);
             }
             else if (value.IsModelTypeVariant3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.ModelTypeVariant3), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.ModelTypeVariant3?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.ModelTypeVariant3).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ModelTypeVariant3!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickModelTypeVariant3(), typeInfo);
             }
         }
     }

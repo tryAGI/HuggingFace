@@ -166,7 +166,7 @@ namespace HuggingFace
                 PrepareCreateOrganizationsByNameScimProvisioningV2GroupsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name!,
+                    name: name,
                     request: request);
 
                 return __httpRequest;
@@ -189,7 +189,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/scim-provisioning/v2/Groups\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -223,7 +223,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/scim-provisioning/v2/Groups\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -264,7 +264,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/scim-provisioning/v2/Groups\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -312,7 +312,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/scim-provisioning/v2/Groups\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -334,7 +334,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/scim-provisioning/v2/Groups\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<int> PickInputIdsVariant1() => IsInputIdsVariant1
-            ? InputIdsVariant1!
+        public global::System.Collections.Generic.IList<int> PickInputIdsVariant1() => InputIdsVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputIdsVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>> PickInputIdsVariant2() => IsInputIdsVariant2
-            ? InputIdsVariant2!
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>> PickInputIdsVariant2() => InputIdsVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputIdsVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -132,13 +132,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsInputIdsVariant1 && inputIdsVariant1 != null)
+            if (InputIdsVariant1 is { } __value0 && inputIdsVariant1 != null)
             {
-                return inputIdsVariant1(InputIdsVariant1!);
+                return inputIdsVariant1(__value0);
             }
-            else if (IsInputIdsVariant2 && inputIdsVariant2 != null)
+            else if (InputIdsVariant2 is { } __value1 && inputIdsVariant2 != null)
             {
-                return inputIdsVariant2(InputIdsVariant2!);
+                return inputIdsVariant2(__value1);
             }
 
             return default(TResult);
@@ -158,13 +158,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsInputIdsVariant1)
+            if (InputIdsVariant1 is { } __value0)
             {
-                inputIdsVariant1?.Invoke(InputIdsVariant1!);
+                inputIdsVariant1?.Invoke(__value0);
             }
-            else if (IsInputIdsVariant2)
+            else if (InputIdsVariant2 is { } __value1)
             {
-                inputIdsVariant2?.Invoke(InputIdsVariant2!);
+                inputIdsVariant2?.Invoke(__value1);
             }
         }
 
@@ -181,13 +181,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsInputIdsVariant1)
+            if (InputIdsVariant1 is { } __value0)
             {
-                inputIdsVariant1?.Invoke(InputIdsVariant1!);
+                inputIdsVariant1?.Invoke(__value0);
             }
-            else if (IsInputIdsVariant2)
+            else if (InputIdsVariant2 is { } __value1)
             {
-                inputIdsVariant2?.Invoke(InputIdsVariant2!);
+                inputIdsVariant2?.Invoke(__value1);
             }
         }
 

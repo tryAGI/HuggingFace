@@ -149,13 +149,13 @@ namespace HuggingFace.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::HuggingFace.InputType), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::HuggingFace.InputType> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::HuggingFace.InputType).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Type!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickType(), typeInfo);
             }
             else if (value.IsInputVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::HuggingFace.InputType>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::HuggingFace.InputType>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::HuggingFace.InputType>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.InputVariant2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickInputVariant2(), typeInfo);
             }
         }
     }

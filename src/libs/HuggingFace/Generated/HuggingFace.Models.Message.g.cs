@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.MessageBody PickBody() => IsBody
-            ? Body!.Value
+        public global::HuggingFace.MessageBody PickBody() => Body is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Body' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.MessageVariant2 PickMessageVariant2() => IsMessageVariant2
-            ? MessageVariant2!
+        public global::HuggingFace.MessageVariant2 PickMessageVariant2() => MessageVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsBody && body != null)
+            if (Body is { } __value0 && body != null)
             {
-                return body(Body!);
+                return body(__value0);
             }
-            else if (IsMessageVariant2 && messageVariant2 != null)
+            else if (MessageVariant2 is { } __value1 && messageVariant2 != null)
             {
-                return messageVariant2(MessageVariant2!);
+                return messageVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsBody)
+            if (Body is { } __value0)
             {
-                body?.Invoke(Body!);
+                body?.Invoke(__value0);
             }
-            else if (IsMessageVariant2)
+            else if (MessageVariant2 is { } __value1)
             {
-                messageVariant2?.Invoke(MessageVariant2!);
+                messageVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsBody)
+            if (Body is { } __value0)
             {
-                body?.Invoke(Body!);
+                body?.Invoke(__value0);
             }
-            else if (IsMessageVariant2)
+            else if (MessageVariant2 is { } __value1)
             {
-                messageVariant2?.Invoke(MessageVariant2!);
+                messageVariant2?.Invoke(__value1);
             }
         }
 

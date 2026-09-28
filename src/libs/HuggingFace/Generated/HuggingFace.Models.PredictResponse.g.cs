@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::HuggingFace.Prediction> PickPredictResponseVariant1() => IsPredictResponseVariant1
-            ? PredictResponseVariant1!
+        public global::System.Collections.Generic.IList<global::HuggingFace.Prediction> PickPredictResponseVariant1() => PredictResponseVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PredictResponseVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>> PickPredictResponseVariant2() => IsPredictResponseVariant2
-            ? PredictResponseVariant2!
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::HuggingFace.Prediction>> PickPredictResponseVariant2() => PredictResponseVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PredictResponseVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -132,13 +132,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsPredictResponseVariant1 && predictResponseVariant1 != null)
+            if (PredictResponseVariant1 is { } __value0 && predictResponseVariant1 != null)
             {
-                return predictResponseVariant1(PredictResponseVariant1!);
+                return predictResponseVariant1(__value0);
             }
-            else if (IsPredictResponseVariant2 && predictResponseVariant2 != null)
+            else if (PredictResponseVariant2 is { } __value1 && predictResponseVariant2 != null)
             {
-                return predictResponseVariant2(PredictResponseVariant2!);
+                return predictResponseVariant2(__value1);
             }
 
             return default(TResult);
@@ -158,13 +158,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsPredictResponseVariant1)
+            if (PredictResponseVariant1 is { } __value0)
             {
-                predictResponseVariant1?.Invoke(PredictResponseVariant1!);
+                predictResponseVariant1?.Invoke(__value0);
             }
-            else if (IsPredictResponseVariant2)
+            else if (PredictResponseVariant2 is { } __value1)
             {
-                predictResponseVariant2?.Invoke(PredictResponseVariant2!);
+                predictResponseVariant2?.Invoke(__value1);
             }
         }
 
@@ -181,13 +181,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsPredictResponseVariant1)
+            if (PredictResponseVariant1 is { } __value0)
             {
-                predictResponseVariant1?.Invoke(PredictResponseVariant1!);
+                predictResponseVariant1?.Invoke(__value0);
             }
-            else if (IsPredictResponseVariant2)
+            else if (PredictResponseVariant2 is { } __value1)
             {
-                predictResponseVariant2?.Invoke(PredictResponseVariant2!);
+                predictResponseVariant2?.Invoke(__value1);
             }
         }
 
