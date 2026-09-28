@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.TextMessage PickText() => IsText
-            ? Text!
+        public global::HuggingFace.TextMessage PickText() => Text is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ToolCallMessage PickToolCall() => IsToolCall
-            ? ToolCall!
+        public global::HuggingFace.ToolCallMessage PickToolCall() => ToolCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCall' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsText && text != null)
+            if (Text is { } __value0 && text != null)
             {
-                return text(Text!);
+                return text(__value0);
             }
-            else if (IsToolCall && toolCall != null)
+            else if (ToolCall is { } __value1 && toolCall != null)
             {
-                return toolCall(ToolCall!);
+                return toolCall(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsToolCall)
+            else if (ToolCall is { } __value1)
             {
-                toolCall?.Invoke(ToolCall!);
+                toolCall?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsToolCall)
+            else if (ToolCall is { } __value1)
             {
-                toolCall?.Invoke(ToolCall!);
+                toolCall?.Invoke(__value1);
             }
         }
 

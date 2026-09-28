@@ -156,9 +156,9 @@ namespace HuggingFace
                 PrepareDeleteCollectionsByNamespaceBySlugItemsBySlugRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    @namespace: @namespace!,
-                    slug: slug!,
-                    slug2: slug2!);
+                    @namespace: @namespace,
+                    slug: slug,
+                    slug2: slug2);
 
                 return __httpRequest;
             }
@@ -180,7 +180,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/collections/{@namespace}/{slug2}/items/{slug2}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -214,7 +214,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/collections/{@namespace}/{slug2}/items/{slug2}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -255,7 +255,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/collections/{@namespace}/{slug2}/items/{slug2}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -303,7 +303,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/collections/{@namespace}/{slug2}/items/{slug2}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -325,7 +325,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/collections/{@namespace}/{slug2}/items/{slug2}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

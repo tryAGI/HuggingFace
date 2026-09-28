@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ModelTypeVariant1 PickModelTypeVariant1() => IsModelTypeVariant1
-            ? ModelTypeVariant1!
+        public global::HuggingFace.ModelTypeVariant1 PickModelTypeVariant1() => ModelTypeVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelTypeVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ModelTypeVariant2 PickModelTypeVariant2() => IsModelTypeVariant2
-            ? ModelTypeVariant2!
+        public global::HuggingFace.ModelTypeVariant2 PickModelTypeVariant2() => ModelTypeVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelTypeVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ModelTypeVariant3 PickModelTypeVariant3() => IsModelTypeVariant3
-            ? ModelTypeVariant3!
+        public global::HuggingFace.ModelTypeVariant3 PickModelTypeVariant3() => ModelTypeVariant3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelTypeVariant3' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsModelTypeVariant1 && modelTypeVariant1 != null)
+            if (ModelTypeVariant1 is { } __value0 && modelTypeVariant1 != null)
             {
-                return modelTypeVariant1(ModelTypeVariant1!);
+                return modelTypeVariant1(__value0);
             }
-            else if (IsModelTypeVariant2 && modelTypeVariant2 != null)
+            else if (ModelTypeVariant2 is { } __value1 && modelTypeVariant2 != null)
             {
-                return modelTypeVariant2(ModelTypeVariant2!);
+                return modelTypeVariant2(__value1);
             }
-            else if (IsModelTypeVariant3 && modelTypeVariant3 != null)
+            else if (ModelTypeVariant3 is { } __value2 && modelTypeVariant3 != null)
             {
-                return modelTypeVariant3(ModelTypeVariant3!);
+                return modelTypeVariant3(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsModelTypeVariant1)
+            if (ModelTypeVariant1 is { } __value0)
             {
-                modelTypeVariant1?.Invoke(ModelTypeVariant1!);
+                modelTypeVariant1?.Invoke(__value0);
             }
-            else if (IsModelTypeVariant2)
+            else if (ModelTypeVariant2 is { } __value1)
             {
-                modelTypeVariant2?.Invoke(ModelTypeVariant2!);
+                modelTypeVariant2?.Invoke(__value1);
             }
-            else if (IsModelTypeVariant3)
+            else if (ModelTypeVariant3 is { } __value2)
             {
-                modelTypeVariant3?.Invoke(ModelTypeVariant3!);
+                modelTypeVariant3?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsModelTypeVariant1)
+            if (ModelTypeVariant1 is { } __value0)
             {
-                modelTypeVariant1?.Invoke(ModelTypeVariant1!);
+                modelTypeVariant1?.Invoke(__value0);
             }
-            else if (IsModelTypeVariant2)
+            else if (ModelTypeVariant2 is { } __value1)
             {
-                modelTypeVariant2?.Invoke(ModelTypeVariant2!);
+                modelTypeVariant2?.Invoke(__value1);
             }
-            else if (IsModelTypeVariant3)
+            else if (ModelTypeVariant3 is { } __value2)
             {
-                modelTypeVariant3?.Invoke(ModelTypeVariant3!);
+                modelTypeVariant3?.Invoke(__value2);
             }
         }
 

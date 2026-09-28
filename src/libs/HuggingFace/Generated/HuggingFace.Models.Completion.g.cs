@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12> PickCompletionVariant1() => IsCompletionVariant1
-            ? CompletionVariant1!.Value
+        public global::HuggingFace.AllOf<global::HuggingFace.Chunk, global::HuggingFace.CompletionVariant12> PickCompletionVariant1() => CompletionVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22> PickCompletionVariant2() => IsCompletionVariant2
-            ? CompletionVariant2!.Value
+        public global::HuggingFace.AllOf<global::HuggingFace.CompletionFinal, global::HuggingFace.CompletionVariant22> PickCompletionVariant2() => CompletionVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsCompletionVariant1 && completionVariant1 != null)
+            if (CompletionVariant1 is { } __value0 && completionVariant1 != null)
             {
-                return completionVariant1(CompletionVariant1!);
+                return completionVariant1(__value0);
             }
-            else if (IsCompletionVariant2 && completionVariant2 != null)
+            else if (CompletionVariant2 is { } __value1 && completionVariant2 != null)
             {
-                return completionVariant2(CompletionVariant2!);
+                return completionVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsCompletionVariant1)
+            if (CompletionVariant1 is { } __value0)
             {
-                completionVariant1?.Invoke(CompletionVariant1!);
+                completionVariant1?.Invoke(__value0);
             }
-            else if (IsCompletionVariant2)
+            else if (CompletionVariant2 is { } __value1)
             {
-                completionVariant2?.Invoke(CompletionVariant2!);
+                completionVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsCompletionVariant1)
+            if (CompletionVariant1 is { } __value0)
             {
-                completionVariant1?.Invoke(CompletionVariant1!);
+                completionVariant1?.Invoke(__value0);
             }
-            else if (IsCompletionVariant2)
+            else if (CompletionVariant2 is { } __value1)
             {
-                completionVariant2?.Invoke(CompletionVariant2!);
+                completionVariant2?.Invoke(__value1);
             }
         }
 

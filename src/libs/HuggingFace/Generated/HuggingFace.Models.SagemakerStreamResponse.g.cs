@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.StreamResponse PickStreamResponse() => IsStreamResponse
-            ? StreamResponse!
+        public global::HuggingFace.StreamResponse PickStreamResponse() => StreamResponse is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'StreamResponse' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ChatCompletionChunk PickChatCompletionChunk() => IsChatCompletionChunk
-            ? ChatCompletionChunk!
+        public global::HuggingFace.ChatCompletionChunk PickChatCompletionChunk() => ChatCompletionChunk is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionChunk' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.Chunk PickChunk() => IsChunk
-            ? Chunk!
+        public global::HuggingFace.Chunk PickChunk() => Chunk is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Chunk' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsStreamResponse && streamResponse != null)
+            if (StreamResponse is { } __value0 && streamResponse != null)
             {
-                return streamResponse(StreamResponse!);
+                return streamResponse(__value0);
             }
-            else if (IsChatCompletionChunk && chatCompletionChunk != null)
+            else if (ChatCompletionChunk is { } __value1 && chatCompletionChunk != null)
             {
-                return chatCompletionChunk(ChatCompletionChunk!);
+                return chatCompletionChunk(__value1);
             }
-            else if (IsChunk && chunk != null)
+            else if (Chunk is { } __value2 && chunk != null)
             {
-                return chunk(Chunk!);
+                return chunk(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsStreamResponse)
+            if (StreamResponse is { } __value0)
             {
-                streamResponse?.Invoke(StreamResponse!);
+                streamResponse?.Invoke(__value0);
             }
-            else if (IsChatCompletionChunk)
+            else if (ChatCompletionChunk is { } __value1)
             {
-                chatCompletionChunk?.Invoke(ChatCompletionChunk!);
+                chatCompletionChunk?.Invoke(__value1);
             }
-            else if (IsChunk)
+            else if (Chunk is { } __value2)
             {
-                chunk?.Invoke(Chunk!);
+                chunk?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsStreamResponse)
+            if (StreamResponse is { } __value0)
             {
-                streamResponse?.Invoke(StreamResponse!);
+                streamResponse?.Invoke(__value0);
             }
-            else if (IsChatCompletionChunk)
+            else if (ChatCompletionChunk is { } __value1)
             {
-                chatCompletionChunk?.Invoke(ChatCompletionChunk!);
+                chatCompletionChunk?.Invoke(__value1);
             }
-            else if (IsChunk)
+            else if (Chunk is { } __value2)
             {
-                chunk?.Invoke(Chunk!);
+                chunk?.Invoke(__value2);
             }
         }
 

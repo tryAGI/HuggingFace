@@ -54,7 +54,7 @@ namespace HuggingFace
         /// Default Value: 2026-09-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-09-27T20:58:26.735Z
+        /// Default Value: 2026-09-25T09:35:21.698Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -85,7 +85,7 @@ namespace HuggingFace
         /// Default Value: 2026-09-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-09-27T20:58:26.735Z
+        /// Default Value: 2026-09-25T09:35:21.698Z
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -175,7 +175,7 @@ namespace HuggingFace
                 PrepareGetOrganizationsByNameBillingUsageByResourceGroupRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name!,
+                    name: name,
                     startDate: startDate,
                     endDate: endDate);
 
@@ -199,7 +199,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -233,7 +233,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -274,7 +274,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -322,7 +322,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -344,7 +344,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/organizations/{name}/billing/usage-by-resource-group\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

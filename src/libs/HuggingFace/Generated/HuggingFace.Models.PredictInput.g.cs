@@ -43,8 +43,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public string PickPredictInputVariant1() => IsPredictInputVariant1
-            ? PredictInputVariant1!
+        public string PickPredictInputVariant1() => PredictInputVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PredictInputVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<string> PickPredictInputVariant2() => IsPredictInputVariant2
-            ? PredictInputVariant2!
+        public global::System.Collections.Generic.IList<string> PickPredictInputVariant2() => PredictInputVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PredictInputVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -117,8 +117,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>> PickPredictInputVariant3() => IsPredictInputVariant3
-            ? PredictInputVariant3!
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>> PickPredictInputVariant3() => PredictInputVariant3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PredictInputVariant3' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -197,17 +197,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsPredictInputVariant1 && predictInputVariant1 != null)
+            if (PredictInputVariant1 is { } __value0 && predictInputVariant1 != null)
             {
-                return predictInputVariant1(PredictInputVariant1!);
+                return predictInputVariant1(__value0);
             }
-            else if (IsPredictInputVariant2 && predictInputVariant2 != null)
+            else if (PredictInputVariant2 is { } __value1 && predictInputVariant2 != null)
             {
-                return predictInputVariant2(PredictInputVariant2!);
+                return predictInputVariant2(__value1);
             }
-            else if (IsPredictInputVariant3 && predictInputVariant3 != null)
+            else if (PredictInputVariant3 is { } __value2 && predictInputVariant3 != null)
             {
-                return predictInputVariant3(PredictInputVariant3!);
+                return predictInputVariant3(__value2);
             }
 
             return default(TResult);
@@ -229,17 +229,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsPredictInputVariant1)
+            if (PredictInputVariant1 is { } __value0)
             {
-                predictInputVariant1?.Invoke(PredictInputVariant1!);
+                predictInputVariant1?.Invoke(__value0);
             }
-            else if (IsPredictInputVariant2)
+            else if (PredictInputVariant2 is { } __value1)
             {
-                predictInputVariant2?.Invoke(PredictInputVariant2!);
+                predictInputVariant2?.Invoke(__value1);
             }
-            else if (IsPredictInputVariant3)
+            else if (PredictInputVariant3 is { } __value2)
             {
-                predictInputVariant3?.Invoke(PredictInputVariant3!);
+                predictInputVariant3?.Invoke(__value2);
             }
         }
 
@@ -257,17 +257,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsPredictInputVariant1)
+            if (PredictInputVariant1 is { } __value0)
             {
-                predictInputVariant1?.Invoke(PredictInputVariant1!);
+                predictInputVariant1?.Invoke(__value0);
             }
-            else if (IsPredictInputVariant2)
+            else if (PredictInputVariant2 is { } __value1)
             {
-                predictInputVariant2?.Invoke(PredictInputVariant2!);
+                predictInputVariant2?.Invoke(__value1);
             }
-            else if (IsPredictInputVariant3)
+            else if (PredictInputVariant3 is { } __value2)
             {
-                predictInputVariant3?.Invoke(PredictInputVariant3!);
+                predictInputVariant3?.Invoke(__value2);
             }
         }
 

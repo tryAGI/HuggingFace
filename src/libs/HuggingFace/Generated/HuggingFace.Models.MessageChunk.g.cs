@@ -47,8 +47,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.MessageChunkVariant1 PickText() => IsText
-            ? Text!
+        public global::HuggingFace.MessageChunkVariant1 PickText() => Text is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Text' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.MessageChunkVariant2 PickImageUrl() => IsImageUrl
-            ? ImageUrl!
+        public global::HuggingFace.MessageChunkVariant2 PickImageUrl() => ImageUrl is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ImageUrl' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -185,13 +185,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsText && text != null)
+            if (Text is { } __value0 && text != null)
             {
-                return text(Text!);
+                return text(__value0);
             }
-            else if (IsImageUrl && imageUrl != null)
+            else if (ImageUrl is { } __value1 && imageUrl != null)
             {
-                return imageUrl(ImageUrl!);
+                return imageUrl(__value1);
             }
 
             return default(TResult);
@@ -211,13 +211,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsImageUrl)
+            else if (ImageUrl is { } __value1)
             {
-                imageUrl?.Invoke(ImageUrl!);
+                imageUrl?.Invoke(__value1);
             }
         }
 
@@ -234,13 +234,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsText)
+            if (Text is { } __value0)
             {
-                text?.Invoke(Text!);
+                text?.Invoke(__value0);
             }
-            else if (IsImageUrl)
+            else if (ImageUrl is { } __value1)
             {
-                imageUrl?.Invoke(ImageUrl!);
+                imageUrl?.Invoke(__value1);
             }
         }
 

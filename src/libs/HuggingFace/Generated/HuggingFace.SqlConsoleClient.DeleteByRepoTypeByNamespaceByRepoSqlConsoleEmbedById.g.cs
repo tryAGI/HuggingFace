@@ -171,10 +171,10 @@ namespace HuggingFace
                 PrepareDeleteByRepoTypeByNamespaceByRepoSqlConsoleEmbedByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoType: repoType!,
-                    @namespace: @namespace!,
-                    repo: repo!,
-                    id: id!);
+                    repoType: repoType,
+                    @namespace: @namespace,
+                    repo: repo,
+                    id: id);
 
                 return __httpRequest;
             }
@@ -196,7 +196,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -230,7 +230,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -271,7 +271,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -319,7 +319,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -341,7 +341,7 @@ namespace HuggingFace
                                 pathTemplate: "$\"/api/{(global::System.Uri.EscapeDataString(repoType.ToValueString()))}/{@namespace}/{repo}/sql-console/embed/{id}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.MessageBodyVariant1 PickMessageBodyVariant1() => IsMessageBodyVariant1
-            ? MessageBodyVariant1!
+        public global::HuggingFace.MessageBodyVariant1 PickMessageBodyVariant1() => MessageBodyVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageBodyVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.MessageBodyVariant2 PickMessageBodyVariant2() => IsMessageBodyVariant2
-            ? MessageBodyVariant2!
+        public global::HuggingFace.MessageBodyVariant2 PickMessageBodyVariant2() => MessageBodyVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageBodyVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsMessageBodyVariant1 && messageBodyVariant1 != null)
+            if (MessageBodyVariant1 is { } __value0 && messageBodyVariant1 != null)
             {
-                return messageBodyVariant1(MessageBodyVariant1!);
+                return messageBodyVariant1(__value0);
             }
-            else if (IsMessageBodyVariant2 && messageBodyVariant2 != null)
+            else if (MessageBodyVariant2 is { } __value1 && messageBodyVariant2 != null)
             {
-                return messageBodyVariant2(MessageBodyVariant2!);
+                return messageBodyVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsMessageBodyVariant1)
+            if (MessageBodyVariant1 is { } __value0)
             {
-                messageBodyVariant1?.Invoke(MessageBodyVariant1!);
+                messageBodyVariant1?.Invoke(__value0);
             }
-            else if (IsMessageBodyVariant2)
+            else if (MessageBodyVariant2 is { } __value1)
             {
-                messageBodyVariant2?.Invoke(MessageBodyVariant2!);
+                messageBodyVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsMessageBodyVariant1)
+            if (MessageBodyVariant1 is { } __value0)
             {
-                messageBodyVariant1?.Invoke(MessageBodyVariant1!);
+                messageBodyVariant1?.Invoke(__value0);
             }
-            else if (IsMessageBodyVariant2)
+            else if (MessageBodyVariant2 is { } __value1)
             {
-                messageBodyVariant2?.Invoke(MessageBodyVariant2!);
+                messageBodyVariant2?.Invoke(__value1);
             }
         }
 

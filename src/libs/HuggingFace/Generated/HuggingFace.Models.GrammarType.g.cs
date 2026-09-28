@@ -47,8 +47,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.GrammarTypeVariant1 PickJson() => IsJson
-            ? Json!
+        public global::HuggingFace.GrammarTypeVariant1 PickJson() => Json is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Json' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.GrammarTypeVariant2 PickRegex() => IsRegex
-            ? Regex!
+        public global::HuggingFace.GrammarTypeVariant2 PickRegex() => Regex is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Regex' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.GrammarTypeVariant3 PickJsonSchema() => IsJsonSchema
-            ? JsonSchema!
+        public global::HuggingFace.GrammarTypeVariant3 PickJsonSchema() => JsonSchema is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonSchema' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -250,17 +250,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsJson && json != null)
+            if (Json is { } __value0 && json != null)
             {
-                return json(Json!);
+                return json(__value0);
             }
-            else if (IsRegex && regex != null)
+            else if (Regex is { } __value1 && regex != null)
             {
-                return regex(Regex!);
+                return regex(__value1);
             }
-            else if (IsJsonSchema && jsonSchema != null)
+            else if (JsonSchema is { } __value2 && jsonSchema != null)
             {
-                return jsonSchema(JsonSchema!);
+                return jsonSchema(__value2);
             }
 
             return default(TResult);
@@ -282,17 +282,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsJson)
+            if (Json is { } __value0)
             {
-                json?.Invoke(Json!);
+                json?.Invoke(__value0);
             }
-            else if (IsRegex)
+            else if (Regex is { } __value1)
             {
-                regex?.Invoke(Regex!);
+                regex?.Invoke(__value1);
             }
-            else if (IsJsonSchema)
+            else if (JsonSchema is { } __value2)
             {
-                jsonSchema?.Invoke(JsonSchema!);
+                jsonSchema?.Invoke(__value2);
             }
         }
 
@@ -310,17 +310,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsJson)
+            if (Json is { } __value0)
             {
-                json?.Invoke(Json!);
+                json?.Invoke(__value0);
             }
-            else if (IsRegex)
+            else if (Regex is { } __value1)
             {
-                regex?.Invoke(Regex!);
+                regex?.Invoke(__value1);
             }
-            else if (IsJsonSchema)
+            else if (JsonSchema is { } __value2)
             {
-                jsonSchema?.Invoke(JsonSchema!);
+                jsonSchema?.Invoke(__value2);
             }
         }
 

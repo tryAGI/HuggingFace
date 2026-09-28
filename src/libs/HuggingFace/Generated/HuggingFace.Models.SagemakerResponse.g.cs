@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.GenerateResponse PickGenerate() => IsGenerate
-            ? Generate!
+        public global::HuggingFace.GenerateResponse PickGenerate() => Generate is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Generate' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ChatCompletion PickChatCompletion() => IsChatCompletion
-            ? ChatCompletion!
+        public global::HuggingFace.ChatCompletion PickChatCompletion() => ChatCompletion is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletion' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.CompletionFinal PickCompletionFinal() => IsCompletionFinal
-            ? CompletionFinal!
+        public global::HuggingFace.CompletionFinal PickCompletionFinal() => CompletionFinal is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CompletionFinal' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsGenerate && generate != null)
+            if (Generate is { } __value0 && generate != null)
             {
-                return generate(Generate!);
+                return generate(__value0);
             }
-            else if (IsChatCompletion && chatCompletion != null)
+            else if (ChatCompletion is { } __value1 && chatCompletion != null)
             {
-                return chatCompletion(ChatCompletion!);
+                return chatCompletion(__value1);
             }
-            else if (IsCompletionFinal && completionFinal != null)
+            else if (CompletionFinal is { } __value2 && completionFinal != null)
             {
-                return completionFinal(CompletionFinal!);
+                return completionFinal(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsGenerate)
+            if (Generate is { } __value0)
             {
-                generate?.Invoke(Generate!);
+                generate?.Invoke(__value0);
             }
-            else if (IsChatCompletion)
+            else if (ChatCompletion is { } __value1)
             {
-                chatCompletion?.Invoke(ChatCompletion!);
+                chatCompletion?.Invoke(__value1);
             }
-            else if (IsCompletionFinal)
+            else if (CompletionFinal is { } __value2)
             {
-                completionFinal?.Invoke(CompletionFinal!);
+                completionFinal?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsGenerate)
+            if (Generate is { } __value0)
             {
-                generate?.Invoke(Generate!);
+                generate?.Invoke(__value0);
             }
-            else if (IsChatCompletion)
+            else if (ChatCompletion is { } __value1)
             {
-                chatCompletion?.Invoke(ChatCompletion!);
+                chatCompletion?.Invoke(__value1);
             }
-            else if (IsCompletionFinal)
+            else if (CompletionFinal is { } __value2)
             {
-                completionFinal?.Invoke(CompletionFinal!);
+                completionFinal?.Invoke(__value2);
             }
         }
 

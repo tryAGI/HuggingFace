@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ToolChoiceVariant1 PickToolChoiceVariant1() => IsToolChoiceVariant1
-            ? ToolChoiceVariant1!.Value
+        public global::HuggingFace.ToolChoiceVariant1 PickToolChoiceVariant1() => ToolChoiceVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ToolChoiceVariant2 PickToolChoiceVariant2() => IsToolChoiceVariant2
-            ? ToolChoiceVariant2!.Value
+        public global::HuggingFace.ToolChoiceVariant2 PickToolChoiceVariant2() => ToolChoiceVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ToolChoiceVariant3 PickToolChoiceVariant3() => IsToolChoiceVariant3
-            ? ToolChoiceVariant3!.Value
+        public global::HuggingFace.ToolChoiceVariant3 PickToolChoiceVariant3() => ToolChoiceVariant3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant3' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ToolChoiceVariant4 PickToolChoiceVariant4() => IsToolChoiceVariant4
-            ? ToolChoiceVariant4!
+        public global::HuggingFace.ToolChoiceVariant4 PickToolChoiceVariant4() => ToolChoiceVariant4 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolChoiceVariant4' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -307,21 +307,21 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsToolChoiceVariant1 && toolChoiceVariant1 != null)
+            if (ToolChoiceVariant1 is { } __value0 && toolChoiceVariant1 != null)
             {
-                return toolChoiceVariant1(ToolChoiceVariant1!);
+                return toolChoiceVariant1(__value0);
             }
-            else if (IsToolChoiceVariant2 && toolChoiceVariant2 != null)
+            else if (ToolChoiceVariant2 is { } __value1 && toolChoiceVariant2 != null)
             {
-                return toolChoiceVariant2(ToolChoiceVariant2!);
+                return toolChoiceVariant2(__value1);
             }
-            else if (IsToolChoiceVariant3 && toolChoiceVariant3 != null)
+            else if (ToolChoiceVariant3 is { } __value2 && toolChoiceVariant3 != null)
             {
-                return toolChoiceVariant3(ToolChoiceVariant3!);
+                return toolChoiceVariant3(__value2);
             }
-            else if (IsToolChoiceVariant4 && toolChoiceVariant4 != null)
+            else if (ToolChoiceVariant4 is { } __value3 && toolChoiceVariant4 != null)
             {
-                return toolChoiceVariant4(ToolChoiceVariant4!);
+                return toolChoiceVariant4(__value3);
             }
 
             return default(TResult);
@@ -345,21 +345,21 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsToolChoiceVariant1)
+            if (ToolChoiceVariant1 is { } __value0)
             {
-                toolChoiceVariant1?.Invoke(ToolChoiceVariant1!);
+                toolChoiceVariant1?.Invoke(__value0);
             }
-            else if (IsToolChoiceVariant2)
+            else if (ToolChoiceVariant2 is { } __value1)
             {
-                toolChoiceVariant2?.Invoke(ToolChoiceVariant2!);
+                toolChoiceVariant2?.Invoke(__value1);
             }
-            else if (IsToolChoiceVariant3)
+            else if (ToolChoiceVariant3 is { } __value2)
             {
-                toolChoiceVariant3?.Invoke(ToolChoiceVariant3!);
+                toolChoiceVariant3?.Invoke(__value2);
             }
-            else if (IsToolChoiceVariant4)
+            else if (ToolChoiceVariant4 is { } __value3)
             {
-                toolChoiceVariant4?.Invoke(ToolChoiceVariant4!);
+                toolChoiceVariant4?.Invoke(__value3);
             }
         }
 
@@ -378,21 +378,21 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsToolChoiceVariant1)
+            if (ToolChoiceVariant1 is { } __value0)
             {
-                toolChoiceVariant1?.Invoke(ToolChoiceVariant1!);
+                toolChoiceVariant1?.Invoke(__value0);
             }
-            else if (IsToolChoiceVariant2)
+            else if (ToolChoiceVariant2 is { } __value1)
             {
-                toolChoiceVariant2?.Invoke(ToolChoiceVariant2!);
+                toolChoiceVariant2?.Invoke(__value1);
             }
-            else if (IsToolChoiceVariant3)
+            else if (ToolChoiceVariant3 is { } __value2)
             {
-                toolChoiceVariant3?.Invoke(ToolChoiceVariant3!);
+                toolChoiceVariant3?.Invoke(__value2);
             }
-            else if (IsToolChoiceVariant4)
+            else if (ToolChoiceVariant4 is { } __value3)
             {
-                toolChoiceVariant4?.Invoke(ToolChoiceVariant4!);
+                toolChoiceVariant4?.Invoke(__value3);
             }
         }
 

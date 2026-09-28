@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<float> PickEmbeddingVariant1() => IsEmbeddingVariant1
-            ? EmbeddingVariant1!
+        public global::System.Collections.Generic.IList<float> PickEmbeddingVariant1() => EmbeddingVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public string PickEmbeddingVariant2() => IsEmbeddingVariant2
-            ? EmbeddingVariant2!
+        public string PickEmbeddingVariant2() => EmbeddingVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -154,13 +154,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsEmbeddingVariant1 && embeddingVariant1 != null)
+            if (EmbeddingVariant1 is { } __value0 && embeddingVariant1 != null)
             {
-                return embeddingVariant1(EmbeddingVariant1!);
+                return embeddingVariant1(__value0);
             }
-            else if (IsEmbeddingVariant2 && embeddingVariant2 != null)
+            else if (EmbeddingVariant2 is { } __value1 && embeddingVariant2 != null)
             {
-                return embeddingVariant2(EmbeddingVariant2!);
+                return embeddingVariant2(__value1);
             }
 
             return default(TResult);
@@ -180,13 +180,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsEmbeddingVariant1)
+            if (EmbeddingVariant1 is { } __value0)
             {
-                embeddingVariant1?.Invoke(EmbeddingVariant1!);
+                embeddingVariant1?.Invoke(__value0);
             }
-            else if (IsEmbeddingVariant2)
+            else if (EmbeddingVariant2 is { } __value1)
             {
-                embeddingVariant2?.Invoke(EmbeddingVariant2!);
+                embeddingVariant2?.Invoke(__value1);
             }
         }
 
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsEmbeddingVariant1)
+            if (EmbeddingVariant1 is { } __value0)
             {
-                embeddingVariant1?.Invoke(EmbeddingVariant1!);
+                embeddingVariant1?.Invoke(__value0);
             }
-            else if (IsEmbeddingVariant2)
+            else if (EmbeddingVariant2 is { } __value1)
             {
-                embeddingVariant2?.Invoke(EmbeddingVariant2!);
+                embeddingVariant2?.Invoke(__value1);
             }
         }
 

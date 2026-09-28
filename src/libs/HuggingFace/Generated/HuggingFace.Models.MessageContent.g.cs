@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public string PickMessageContentVariant1() => IsMessageContentVariant1
-            ? MessageContentVariant1!
+        public string PickMessageContentVariant1() => MessageContentVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageContentVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk> PickMessageContentVariant2() => IsMessageContentVariant2
-            ? MessageContentVariant2!
+        public global::System.Collections.Generic.IList<global::HuggingFace.MessageChunk> PickMessageContentVariant2() => MessageContentVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageContentVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -154,13 +154,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsMessageContentVariant1 && messageContentVariant1 != null)
+            if (MessageContentVariant1 is { } __value0 && messageContentVariant1 != null)
             {
-                return messageContentVariant1(MessageContentVariant1!);
+                return messageContentVariant1(__value0);
             }
-            else if (IsMessageContentVariant2 && messageContentVariant2 != null)
+            else if (MessageContentVariant2 is { } __value1 && messageContentVariant2 != null)
             {
-                return messageContentVariant2(MessageContentVariant2!);
+                return messageContentVariant2(__value1);
             }
 
             return default(TResult);
@@ -180,13 +180,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsMessageContentVariant1)
+            if (MessageContentVariant1 is { } __value0)
             {
-                messageContentVariant1?.Invoke(MessageContentVariant1!);
+                messageContentVariant1?.Invoke(__value0);
             }
-            else if (IsMessageContentVariant2)
+            else if (MessageContentVariant2 is { } __value1)
             {
-                messageContentVariant2?.Invoke(MessageContentVariant2!);
+                messageContentVariant2?.Invoke(__value1);
             }
         }
 
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsMessageContentVariant1)
+            if (MessageContentVariant1 is { } __value0)
             {
-                messageContentVariant1?.Invoke(MessageContentVariant1!);
+                messageContentVariant1?.Invoke(__value0);
             }
-            else if (IsMessageContentVariant2)
+            else if (MessageContentVariant2 is { } __value1)
             {
-                messageContentVariant2?.Invoke(MessageContentVariant2!);
+                messageContentVariant2?.Invoke(__value1);
             }
         }
 

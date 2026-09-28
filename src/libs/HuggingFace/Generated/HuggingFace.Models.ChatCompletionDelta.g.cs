@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.TextMessage PickTextMessage() => IsTextMessage
-            ? TextMessage!
+        public global::HuggingFace.TextMessage PickTextMessage() => TextMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::HuggingFace.ToolCallDelta PickToolCall() => IsToolCall
-            ? ToolCall!
+        public global::HuggingFace.ToolCallDelta PickToolCall() => ToolCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCall' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsTextMessage && textMessage != null)
+            if (TextMessage is { } __value0 && textMessage != null)
             {
-                return textMessage(TextMessage!);
+                return textMessage(__value0);
             }
-            else if (IsToolCall && toolCall != null)
+            else if (ToolCall is { } __value1 && toolCall != null)
             {
-                return toolCall(ToolCall!);
+                return toolCall(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsTextMessage)
+            if (TextMessage is { } __value0)
             {
-                textMessage?.Invoke(TextMessage!);
+                textMessage?.Invoke(__value0);
             }
-            else if (IsToolCall)
+            else if (ToolCall is { } __value1)
             {
-                toolCall?.Invoke(ToolCall!);
+                toolCall?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsTextMessage)
+            if (TextMessage is { } __value0)
             {
-                textMessage?.Invoke(TextMessage!);
+                textMessage?.Invoke(__value0);
             }
-            else if (IsToolCall)
+            else if (ToolCall is { } __value1)
             {
-                toolCall?.Invoke(ToolCall!);
+                toolCall?.Invoke(__value1);
             }
         }
 

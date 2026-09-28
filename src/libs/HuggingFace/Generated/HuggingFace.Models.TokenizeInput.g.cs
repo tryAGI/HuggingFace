@@ -42,8 +42,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public string PickTokenizeInputVariant1() => IsTokenizeInputVariant1
-            ? TokenizeInputVariant1!
+        public string PickTokenizeInputVariant1() => TokenizeInputVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TokenizeInputVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<string> PickTokenizeInputVariant2() => IsTokenizeInputVariant2
-            ? TokenizeInputVariant2!
+        public global::System.Collections.Generic.IList<string> PickTokenizeInputVariant2() => TokenizeInputVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TokenizeInputVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -154,13 +154,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsTokenizeInputVariant1 && tokenizeInputVariant1 != null)
+            if (TokenizeInputVariant1 is { } __value0 && tokenizeInputVariant1 != null)
             {
-                return tokenizeInputVariant1(TokenizeInputVariant1!);
+                return tokenizeInputVariant1(__value0);
             }
-            else if (IsTokenizeInputVariant2 && tokenizeInputVariant2 != null)
+            else if (TokenizeInputVariant2 is { } __value1 && tokenizeInputVariant2 != null)
             {
-                return tokenizeInputVariant2(TokenizeInputVariant2!);
+                return tokenizeInputVariant2(__value1);
             }
 
             return default(TResult);
@@ -180,13 +180,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsTokenizeInputVariant1)
+            if (TokenizeInputVariant1 is { } __value0)
             {
-                tokenizeInputVariant1?.Invoke(TokenizeInputVariant1!);
+                tokenizeInputVariant1?.Invoke(__value0);
             }
-            else if (IsTokenizeInputVariant2)
+            else if (TokenizeInputVariant2 is { } __value1)
             {
-                tokenizeInputVariant2?.Invoke(TokenizeInputVariant2!);
+                tokenizeInputVariant2?.Invoke(__value1);
             }
         }
 
@@ -203,13 +203,13 @@ namespace HuggingFace
                 Validate();
             }
 
-            if (IsTokenizeInputVariant1)
+            if (TokenizeInputVariant1 is { } __value0)
             {
-                tokenizeInputVariant1?.Invoke(TokenizeInputVariant1!);
+                tokenizeInputVariant1?.Invoke(__value0);
             }
-            else if (IsTokenizeInputVariant2)
+            else if (TokenizeInputVariant2 is { } __value1)
             {
-                tokenizeInputVariant2?.Invoke(TokenizeInputVariant2!);
+                tokenizeInputVariant2?.Invoke(__value1);
             }
         }
 
