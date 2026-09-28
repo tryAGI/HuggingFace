@@ -1,19 +1,14 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
-
 namespace HuggingFace
 {
     /// <summary>
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_8e63d8b82f66ca07")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_c5ad13955541a572")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22_58364b4cdf9d73f9")]
@@ -522,10 +517,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_8e63d8b82f66ca07")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_c5ad13955541a572")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22_58364b4cdf9d73f9")]

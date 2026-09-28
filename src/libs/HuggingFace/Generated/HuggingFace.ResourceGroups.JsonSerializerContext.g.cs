@@ -1,19 +1,14 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
-
 namespace HuggingFace
 {
     /// <summary>
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant5>>), TypeInfoPropertyName = "PatchOrganizationsResourceGroupsResponseResourceVariant5_d055e2d0ad2489a3")]

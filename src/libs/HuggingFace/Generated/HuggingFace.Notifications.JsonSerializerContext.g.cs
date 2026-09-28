@@ -1,19 +1,14 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
-
 namespace HuggingFace
 {
     /// <summary>
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetNotificationsResponseNotificationVariant1, global::HuggingFace.GetNotificationsResponseNotificationVariant2, global::HuggingFace.GetNotificationsResponseNotificationVariant3, global::HuggingFace.GetNotificationsResponseNotificationVariant4>>), TypeInfoPropertyName = "GetNotificationsResponseNotificationVariant4_aead50af1b168734")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetNotificationsResponseNotificationVariant1, global::HuggingFace.GetNotificationsResponseNotificationVariant2, global::HuggingFace.GetNotificationsResponseNotificationVariant3, global::HuggingFace.GetNotificationsResponseNotificationVariant4>), TypeInfoPropertyName = "GetNotificationsResponseNotificationVariant4_2dc13260934ff273")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetNotificationsResponseNotificationVariant1, global::HuggingFace.GetNotificationsResponseNotificationVariant2, global::HuggingFace.GetNotificationsResponseNotificationVariant3, global::HuggingFace.GetNotificationsResponseNotificationVariant4>?), TypeInfoPropertyName = "GetNotificationsResponseNotificationVariant4_7ddfe3c5ed9d456b")]
