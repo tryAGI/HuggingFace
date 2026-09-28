@@ -106,6 +106,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsResourceGroupsResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserRole), TypeInfoPropertyName = "PatchOrganizationsResourceGroupsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserOrgRole), TypeInfoPropertyName = "PatchOrganizationsResourceGroupsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1Type), TypeInfoPropertyName = "PatchOrganizationsResourceGroupsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant2))]
@@ -123,6 +124,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsResourceGroupsResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserRole), TypeInfoPropertyName = "GetOrganizationsResourceGroupsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserOrgRole), TypeInfoPropertyName = "GetOrganizationsResourceGroupsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseResourceVariant1Type), TypeInfoPropertyName = "GetOrganizationsResourceGroupsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseResourceVariant2))]
@@ -138,6 +140,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserRole), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1Type), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant2))]
@@ -153,6 +156,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserRole), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserOrgRole), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1Type), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant2))]
@@ -168,6 +172,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserRole), TypeInfoPropertyName = "DeleteOrganizationsResourceGroupsUsersResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRole), TypeInfoPropertyName = "DeleteOrganizationsResourceGroupsUsersResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1Type), TypeInfoPropertyName = "DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant2))]
@@ -183,6 +188,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserRole), TypeInfoPropertyName = "PatchOrganizationsResourceGroupsUsersResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserOrgRole), TypeInfoPropertyName = "PatchOrganizationsResourceGroupsUsersResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseResourceVariant1Type), TypeInfoPropertyName = "PatchOrganizationsResourceGroupsUsersResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseResourceVariant2))]
@@ -199,6 +205,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole), TypeInfoPropertyName = "GetOrganizationsResourceGroupsResponseItemUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole), TypeInfoPropertyName = "GetOrganizationsResourceGroupsResponseItemUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1Type), TypeInfoPropertyName = "GetOrganizationsResourceGroupsResponseItemResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2))]
@@ -215,6 +222,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserRole), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserOrgRole), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant2))]
@@ -236,34 +244,42 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant1Role?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsResponseAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsResponseAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserRole?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserOrgRole?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1Type?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseAutoJoinVariant1Role?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserRole?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserOrgRole?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseResourceVariant1Type?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserRole?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsSettingsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsSettingsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1Type?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsSettingsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserRole?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsUsersResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserOrgRole?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsUsersResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1Type?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsUsersResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role?), TypeInfoPropertyName = "NullableDeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullableDeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserRole?), TypeInfoPropertyName = "NullableDeleteOrganizationsResourceGroupsUsersResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRole?), TypeInfoPropertyName = "NullableDeleteOrganizationsResourceGroupsUsersResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1Type?), TypeInfoPropertyName = "NullableDeleteOrganizationsResourceGroupsUsersResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserRole?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsUsersResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserOrgRole?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsUsersResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseResourceVariant1Type?), TypeInfoPropertyName = "NullablePatchOrganizationsResourceGroupsUsersResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseItemAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseItemUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseItemUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1Type?), TypeInfoPropertyName = "NullableGetOrganizationsResourceGroupsResponseItemResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Role?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsResponseAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsResponseAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserRole?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsResponseUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserOrgRole?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.RepoId>))]
@@ -454,6 +470,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserRole?)
 
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserOrgRole?)
+
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1Type)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1Type?)
@@ -469,6 +489,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserRole)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserOrgRole?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseResourceVariant1Type)
 
@@ -486,6 +510,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserRole?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole?)
+
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1Type)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1Type?)
@@ -501,6 +529,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserRole)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserOrgRole?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1Type)
 
@@ -518,6 +550,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserRole?)
 
+                    || typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRole?)
+
                     || typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1Type)
 
                     || typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1Type?)
@@ -533,6 +569,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserRole)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserOrgRole?)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseResourceVariant1Type)
 
@@ -550,6 +590,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole?)
 
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole?)
+
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1Type)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1Type?)
@@ -565,6 +609,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserRole)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserOrgRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserOrgRole?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type)
 
@@ -695,6 +743,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsResponseUserRoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsResponseUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsResponseUserOrgRoleNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1Type))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsResponseResourceVariant1TypeJsonConverter();
@@ -733,6 +791,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserRole?))
                 {
                     return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseUserOrgRoleNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseResourceVariant1Type))
@@ -775,6 +843,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsResponseUserRoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRoleNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1Type))
                 {
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsResponseResourceVariant1TypeJsonConverter();
@@ -813,6 +891,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserRole?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsUsersResponseUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsUsersResponseUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsUsersResponseUserOrgRoleNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1Type))
@@ -855,6 +943,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.DeleteOrganizationsResourceGroupsUsersResponseUserRoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteOrganizationsResourceGroupsUsersResponseUserOrgRoleNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1Type))
                 {
                     return new global::HuggingFace.JsonConverters.DeleteOrganizationsResourceGroupsUsersResponseResourceVariant1TypeJsonConverter();
@@ -893,6 +991,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserRole?))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsUsersResponseUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsUsersResponseUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsUsersResponseUserOrgRoleNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersResponseResourceVariant1Type))
@@ -935,6 +1043,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseItemUserRoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseItemUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseItemUserOrgRoleNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1Type))
                 {
                     return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseItemResourceVariant1TypeJsonConverter();
@@ -973,6 +1091,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserRole?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsResponseUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserOrgRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsResponseUserOrgRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserOrgRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsResponseUserOrgRoleNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type))

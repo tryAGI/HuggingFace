@@ -54,6 +54,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orgRole")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseItemUserOrgRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole OrgRole { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("addedBy")]
         public string? AddedBy { get; set; }
 
@@ -73,6 +81,7 @@ namespace HuggingFace
         /// <param name="name"></param>
         /// <param name="avatarUrl"></param>
         /// <param name="role"></param>
+        /// <param name="orgRole"></param>
         /// <param name="addedBy"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -84,6 +93,7 @@ namespace HuggingFace
             string name,
             string avatarUrl,
             global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserRole role,
+            global::HuggingFace.GetOrganizationsResourceGroupsResponseItemUserOrgRole orgRole,
             string? addedBy,
             string type = "user")
         {
@@ -93,6 +103,7 @@ namespace HuggingFace
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.Role = role;
+            this.OrgRole = orgRole;
             this.AddedBy = addedBy;
         }
 
