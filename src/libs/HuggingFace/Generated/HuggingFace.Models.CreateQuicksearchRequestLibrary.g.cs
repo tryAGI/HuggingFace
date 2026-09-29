@@ -295,6 +295,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Flexray,
+        /// <summary>
+        ///
+        /// </summary>
         Flextab,
         /// <summary>
         ///
@@ -415,6 +419,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        JevStyle,
+        /// <summary>
+        ///
+        /// </summary>
         K2,
         /// <summary>
         ///
@@ -519,6 +527,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Mect,
+        /// <summary>
+        ///
+        /// </summary>
         Medvae,
         /// <summary>
         ///
@@ -536,6 +548,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Mflux,
+        /// <summary>
+        ///
+        /// </summary>
+        Microduck,
         /// <summary>
         ///
         /// </summary>
@@ -1097,6 +1113,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Fasttext => "fasttext",
                 CreateQuicksearchRequestLibrary.Fixer => "fixer",
                 CreateQuicksearchRequestLibrary.Flair => "flair",
+                CreateQuicksearchRequestLibrary.Flexray => "flexray",
                 CreateQuicksearchRequestLibrary.Flextab => "flextab",
                 CreateQuicksearchRequestLibrary.Fme => "fme",
                 CreateQuicksearchRequestLibrary.GemmaCpp => "gemma.cpp",
@@ -1127,6 +1144,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Infinitetalk => "infinitetalk",
                 CreateQuicksearchRequestLibrary.Intellifold => "intellifold",
                 CreateQuicksearchRequestLibrary.IsingDecoding => "ising-decoding",
+                CreateQuicksearchRequestLibrary.JevStyle => "jev-style",
                 CreateQuicksearchRequestLibrary.K2 => "k2",
                 CreateQuicksearchRequestLibrary.Keras => "keras",
                 CreateQuicksearchRequestLibrary.KerasHub => "keras-hub",
@@ -1153,11 +1171,13 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Manas1 => "manas-1",
                 CreateQuicksearchRequestLibrary.Mars5Tts => "mars5-tts",
                 CreateQuicksearchRequestLibrary.Matanyone => "matanyone",
+                CreateQuicksearchRequestLibrary.Mect => "mect",
                 CreateQuicksearchRequestLibrary.Medvae => "medvae",
                 CreateQuicksearchRequestLibrary.Memra => "memra",
                 CreateQuicksearchRequestLibrary.Merlin => "merlin",
                 CreateQuicksearchRequestLibrary.MeshAnything => "mesh-anything",
                 CreateQuicksearchRequestLibrary.Mflux => "mflux",
+                CreateQuicksearchRequestLibrary.Microduck => "microduck",
                 CreateQuicksearchRequestLibrary.Mindspore => "mindspore",
                 CreateQuicksearchRequestLibrary.MiniOmni2 => "mini-omni2",
                 CreateQuicksearchRequestLibrary.MinimaxH3 => "minimax-h3",
@@ -1358,6 +1378,7 @@ namespace HuggingFace
                 "fasttext" => CreateQuicksearchRequestLibrary.Fasttext,
                 "fixer" => CreateQuicksearchRequestLibrary.Fixer,
                 "flair" => CreateQuicksearchRequestLibrary.Flair,
+                "flexray" => CreateQuicksearchRequestLibrary.Flexray,
                 "flextab" => CreateQuicksearchRequestLibrary.Flextab,
                 "fme" => CreateQuicksearchRequestLibrary.Fme,
                 "gemma.cpp" => CreateQuicksearchRequestLibrary.GemmaCpp,
@@ -1388,6 +1409,7 @@ namespace HuggingFace
                 "infinitetalk" => CreateQuicksearchRequestLibrary.Infinitetalk,
                 "intellifold" => CreateQuicksearchRequestLibrary.Intellifold,
                 "ising-decoding" => CreateQuicksearchRequestLibrary.IsingDecoding,
+                "jev-style" => CreateQuicksearchRequestLibrary.JevStyle,
                 "k2" => CreateQuicksearchRequestLibrary.K2,
                 "keras" => CreateQuicksearchRequestLibrary.Keras,
                 "keras-hub" => CreateQuicksearchRequestLibrary.KerasHub,
@@ -1414,11 +1436,13 @@ namespace HuggingFace
                 "manas-1" => CreateQuicksearchRequestLibrary.Manas1,
                 "mars5-tts" => CreateQuicksearchRequestLibrary.Mars5Tts,
                 "matanyone" => CreateQuicksearchRequestLibrary.Matanyone,
+                "mect" => CreateQuicksearchRequestLibrary.Mect,
                 "medvae" => CreateQuicksearchRequestLibrary.Medvae,
                 "memra" => CreateQuicksearchRequestLibrary.Memra,
                 "merlin" => CreateQuicksearchRequestLibrary.Merlin,
                 "mesh-anything" => CreateQuicksearchRequestLibrary.MeshAnything,
                 "mflux" => CreateQuicksearchRequestLibrary.Mflux,
+                "microduck" => CreateQuicksearchRequestLibrary.Microduck,
                 "mindspore" => CreateQuicksearchRequestLibrary.Mindspore,
                 "mini-omni2" => CreateQuicksearchRequestLibrary.MiniOmni2,
                 "minimax-h3" => CreateQuicksearchRequestLibrary.MinimaxH3,

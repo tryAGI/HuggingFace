@@ -295,6 +295,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Flexray,
+        /// <summary>
+        ///
+        /// </summary>
         Flextab,
         /// <summary>
         ///
@@ -415,6 +419,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        JevStyle,
+        /// <summary>
+        ///
+        /// </summary>
         K2,
         /// <summary>
         ///
@@ -519,6 +527,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Mect,
+        /// <summary>
+        ///
+        /// </summary>
         Medvae,
         /// <summary>
         ///
@@ -536,6 +548,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Mflux,
+        /// <summary>
+        ///
+        /// </summary>
+        Microduck,
         /// <summary>
         ///
         /// </summary>
@@ -1097,6 +1113,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Fasttext => "fasttext",
                 CreateQuicksearchLibrary2.Fixer => "fixer",
                 CreateQuicksearchLibrary2.Flair => "flair",
+                CreateQuicksearchLibrary2.Flexray => "flexray",
                 CreateQuicksearchLibrary2.Flextab => "flextab",
                 CreateQuicksearchLibrary2.Fme => "fme",
                 CreateQuicksearchLibrary2.GemmaCpp => "gemma.cpp",
@@ -1127,6 +1144,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Infinitetalk => "infinitetalk",
                 CreateQuicksearchLibrary2.Intellifold => "intellifold",
                 CreateQuicksearchLibrary2.IsingDecoding => "ising-decoding",
+                CreateQuicksearchLibrary2.JevStyle => "jev-style",
                 CreateQuicksearchLibrary2.K2 => "k2",
                 CreateQuicksearchLibrary2.Keras => "keras",
                 CreateQuicksearchLibrary2.KerasHub => "keras-hub",
@@ -1153,11 +1171,13 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Manas1 => "manas-1",
                 CreateQuicksearchLibrary2.Mars5Tts => "mars5-tts",
                 CreateQuicksearchLibrary2.Matanyone => "matanyone",
+                CreateQuicksearchLibrary2.Mect => "mect",
                 CreateQuicksearchLibrary2.Medvae => "medvae",
                 CreateQuicksearchLibrary2.Memra => "memra",
                 CreateQuicksearchLibrary2.Merlin => "merlin",
                 CreateQuicksearchLibrary2.MeshAnything => "mesh-anything",
                 CreateQuicksearchLibrary2.Mflux => "mflux",
+                CreateQuicksearchLibrary2.Microduck => "microduck",
                 CreateQuicksearchLibrary2.Mindspore => "mindspore",
                 CreateQuicksearchLibrary2.MiniOmni2 => "mini-omni2",
                 CreateQuicksearchLibrary2.MinimaxH3 => "minimax-h3",
@@ -1358,6 +1378,7 @@ namespace HuggingFace
                 "fasttext" => CreateQuicksearchLibrary2.Fasttext,
                 "fixer" => CreateQuicksearchLibrary2.Fixer,
                 "flair" => CreateQuicksearchLibrary2.Flair,
+                "flexray" => CreateQuicksearchLibrary2.Flexray,
                 "flextab" => CreateQuicksearchLibrary2.Flextab,
                 "fme" => CreateQuicksearchLibrary2.Fme,
                 "gemma.cpp" => CreateQuicksearchLibrary2.GemmaCpp,
@@ -1388,6 +1409,7 @@ namespace HuggingFace
                 "infinitetalk" => CreateQuicksearchLibrary2.Infinitetalk,
                 "intellifold" => CreateQuicksearchLibrary2.Intellifold,
                 "ising-decoding" => CreateQuicksearchLibrary2.IsingDecoding,
+                "jev-style" => CreateQuicksearchLibrary2.JevStyle,
                 "k2" => CreateQuicksearchLibrary2.K2,
                 "keras" => CreateQuicksearchLibrary2.Keras,
                 "keras-hub" => CreateQuicksearchLibrary2.KerasHub,
@@ -1414,11 +1436,13 @@ namespace HuggingFace
                 "manas-1" => CreateQuicksearchLibrary2.Manas1,
                 "mars5-tts" => CreateQuicksearchLibrary2.Mars5Tts,
                 "matanyone" => CreateQuicksearchLibrary2.Matanyone,
+                "mect" => CreateQuicksearchLibrary2.Mect,
                 "medvae" => CreateQuicksearchLibrary2.Medvae,
                 "memra" => CreateQuicksearchLibrary2.Memra,
                 "merlin" => CreateQuicksearchLibrary2.Merlin,
                 "mesh-anything" => CreateQuicksearchLibrary2.MeshAnything,
                 "mflux" => CreateQuicksearchLibrary2.Mflux,
+                "microduck" => CreateQuicksearchLibrary2.Microduck,
                 "mindspore" => CreateQuicksearchLibrary2.Mindspore,
                 "mini-omni2" => CreateQuicksearchLibrary2.MiniOmni2,
                 "minimax-h3" => CreateQuicksearchLibrary2.MinimaxH3,
