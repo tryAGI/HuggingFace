@@ -20,6 +20,10 @@ namespace HuggingFace
         ///
         /// </summary>
         ResourceGroupLimit,
+        /// <summary>
+        ///
+        /// </summary>
+        SpendLimit,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace HuggingFace
                 PutJobsLabelsResponseStatusCancelReason.NoCredits => "NO_CREDITS",
                 PutJobsLabelsResponseStatusCancelReason.NoSubscription => "NO_SUBSCRIPTION",
                 PutJobsLabelsResponseStatusCancelReason.ResourceGroupLimit => "RESOURCE_GROUP_LIMIT",
+                PutJobsLabelsResponseStatusCancelReason.SpendLimit => "SPEND_LIMIT",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace HuggingFace
                 "NO_CREDITS" => PutJobsLabelsResponseStatusCancelReason.NoCredits,
                 "NO_SUBSCRIPTION" => PutJobsLabelsResponseStatusCancelReason.NoSubscription,
                 "RESOURCE_GROUP_LIMIT" => PutJobsLabelsResponseStatusCancelReason.ResourceGroupLimit,
+                "SPEND_LIMIT" => PutJobsLabelsResponseStatusCancelReason.SpendLimit,
                 _ => null,
             };
         }
