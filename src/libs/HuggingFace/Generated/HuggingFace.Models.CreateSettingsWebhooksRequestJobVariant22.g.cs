@@ -74,7 +74,7 @@ namespace HuggingFace
         public int? Attempts { get; set; }
 
         /// <summary>
-        /// Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dots, dashes, and underscores.
+        /// Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
         public global::System.Collections.Generic.Dictionary<string, string>? Labels { get; set; }
@@ -136,7 +136,7 @@ namespace HuggingFace
         /// Default Value: 1
         /// </param>
         /// <param name="labels">
-        /// Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dots, dashes, and underscores.
+        /// Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores.
         /// </param>
         /// <param name="volumes">
         /// HuggingFace Buckets or Repos to mount as volumes in the job container.

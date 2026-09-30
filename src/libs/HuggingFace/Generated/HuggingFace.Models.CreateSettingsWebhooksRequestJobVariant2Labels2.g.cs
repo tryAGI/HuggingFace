@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    /// Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dots, dashes, and underscores.
+    /// Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores.
     /// </summary>
     public sealed partial class CreateSettingsWebhooksRequestJobVariant2Labels2
     {
