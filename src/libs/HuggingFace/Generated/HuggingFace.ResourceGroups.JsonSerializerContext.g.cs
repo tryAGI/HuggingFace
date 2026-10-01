@@ -61,20 +61,13 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant3, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant4, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant5>>), TypeInfoPropertyName = "GetOrganizationsResourceGroupsResponseItemResourceVariant5_8e6107b3c0459c3d")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant5>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsResponseResourceVariant5_9839cd72a0bfad84")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.RepoId))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.RepoIdType), TypeInfoPropertyName = "RepoIdType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsResourceGroupsRequestSpendLimits))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string>), TypeInfoPropertyName = "AnyOfBooleanString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Scope), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2))]
@@ -90,7 +83,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsRequestUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsRequestUserRole), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsRequestUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.RepoId>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant2>), TypeInfoPropertyName = "AnyOfCreateOrganizationsResourceGroupsRequestAutoJoinVariant1CreateOrganizationsResourceGroupsRequestAutoJoinVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Role2")]
@@ -229,10 +221,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.RepoIdType?), TypeInfoPropertyName = "NullableRepoIdType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string>?), TypeInfoPropertyName = "NullableAnyOfBooleanString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Scope?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Scope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1Role?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsUsersRequestUserVariant1Role2")]
@@ -282,7 +271,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseUserOrgRole?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsResponseUserOrgRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type?), TypeInfoPropertyName = "NullableCreateOrganizationsResourceGroupsResponseResourceVariant1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateOrganizationsResourceGroupsRequestUser>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.RepoId>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsResourceGroupsResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetOrganizationsResourceGroupsResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUser>))]
@@ -339,39 +327,10 @@ namespace HuggingFace
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
+            global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant5>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetOrganizationsResourceGroupsResponseAutoJoinVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseAutoJoinVariant2>());
@@ -388,19 +347,6 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant1, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant2, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant3, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant4, global::HuggingFace.GetOrganizationsResourceGroupsResponseItemResourceVariant5>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsResponseAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseAutoJoinVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant5>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
 
@@ -422,11 +368,7 @@ namespace HuggingFace
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::HuggingFace.RepoIdType)
-
-                    || typeToConvert == typeof(global::HuggingFace.RepoIdType?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role)
+                    typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role?)
 
@@ -623,16 +565,6 @@ namespace HuggingFace
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
-                if (typeToConvert == typeof(global::HuggingFace.RepoIdType))
-                {
-                    return new global::HuggingFace.JsonConverters.RepoIdTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.RepoIdType?))
-                {
-                    return new global::HuggingFace.JsonConverters.RepoIdTypeNullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1Role))
                 {
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1RoleJsonConverter();
@@ -1119,7 +1051,7 @@ namespace HuggingFace
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
         {
             private readonly object _gate = new();
-            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[1];
+            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[2];
 
             public global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(
                 global::System.Type type,
@@ -1156,6 +1088,8 @@ namespace HuggingFace
                 return index switch
                 {
                     0 => new ResourceGroupsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+
+                    1 => global::HuggingFace.PartitionCoreSourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

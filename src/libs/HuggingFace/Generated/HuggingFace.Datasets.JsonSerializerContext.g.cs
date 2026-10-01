@@ -9,29 +9,11 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_60423815358459ae")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_56fefee51393bc31")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_0c26e235ad6c6b53")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2_e742511aec53809d")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2_47f1c283d1315290")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant1, global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant2>?), TypeInfoPropertyName = "GetDatasetsLeaderboardResponseItemSourceAuthorVariant2_c67317e7ab953592")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_114f0b82594c6a32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_37702d3e766b204d")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2_b0589d561f11c771")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2_4fdcb8ac3d372f64")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>?), TypeInfoPropertyName = "GetDatasetsUserAccessRequestResponseItemGrantedByVariant2_c370d428545adba2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_e8c9ffcd0d741b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsLfsFilesBatchRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsLfsFilesBatchRequestDeletions))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsLfsFilesDuplicateRequest))]
@@ -39,8 +21,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsLfsFilesDuplicateRequestTargetType), TypeInfoPropertyName = "CreateDatasetsLfsFilesDuplicateRequestTargetType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsLfsFilesDuplicateRequestFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsLfsFilesDuplicateRequestFile))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>), TypeInfoPropertyName = "AnyOfIListStringString2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, bool?>), TypeInfoPropertyName = "AnyOfStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsPathsInfoRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsPreuploadRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsPreuploadRequestFile>))]
@@ -70,7 +50,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsCommitsExpandItem), TypeInfoPropertyName = "GetDatasetsCommitsExpandItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsCommitContentType), TypeInfoPropertyName = "CreateDatasetsCommitContentType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsTagsByTypeType), TypeInfoPropertyName = "GetDatasetsTagsByTypeType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingType), TypeInfoPropertyName = "GetTrendingType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestStatus), TypeInfoPropertyName = "GetDatasetsUserAccessRequestStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsTreesizeResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsLfsFilesResponseItem>))]
@@ -211,93 +190,15 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsTagsByTypeResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsTagsByTypeResponseItemType), TypeInfoPropertyName = "GetDatasetsTagsByTypeResponseItemType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfo))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated?>), TypeInfoPropertyName = "AnyOfBooleanGetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataResourceGroup))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProvider>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProvider))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderFeatures))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated?>), TypeInfoPropertyName = "AnyOfBooleanGetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataResourceGroup))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardware))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeReplicas))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<double?, string>), TypeInfoPropertyName = "AnyOfDoubleString2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomain>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomain))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHotReloading))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepo))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataResourceGroup))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsResolveResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetResolveCacheDatasetsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsUserAccessRequestResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUser))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUserOrg>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUserOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUserServiceAccount))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>), TypeInfoPropertyName = "AnyOfGetDatasetsUserAccessRequestResponseItemGrantedByVariant1GetDatasetsUserAccessRequestResponseItemGrantedByVariant22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1Org>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1Org))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1ServiceAccount))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus), TypeInfoPropertyName = "GetDatasetsUserAccessRequestResponseItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItemError), TypeInfoPropertyName = "CreateDatasetsUserAccessRequestBatchResponseItemError2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsLfsFilesDuplicateRequestTargetType?), TypeInfoPropertyName = "NullableCreateDatasetsLfsFilesDuplicateRequestTargetType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>?), TypeInfoPropertyName = "NullableAnyOfIListStringString2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, bool?>?), TypeInfoPropertyName = "NullableAnyOfStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutDatasetsSettingsRequestVisibility?), TypeInfoPropertyName = "NullablePutDatasetsSettingsRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutDatasetsSettingsRequestDiscussionsSorting?), TypeInfoPropertyName = "NullablePutDatasetsSettingsRequestDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutDatasetsSettingsRequestGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanPutDatasetsSettingsRequestGated2")]
@@ -311,7 +212,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsCommitsExpandItem?), TypeInfoPropertyName = "NullableGetDatasetsCommitsExpandItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsCommitContentType?), TypeInfoPropertyName = "NullableCreateDatasetsCommitContentType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsTagsByTypeType?), TypeInfoPropertyName = "NullableGetDatasetsTagsByTypeType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingType?), TypeInfoPropertyName = "NullableGetTrendingType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestStatus?), TypeInfoPropertyName = "NullableGetDatasetsUserAccessRequestStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsLfsFilesResponseItemPusherPrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetDatasetsLfsFilesResponseItemPusherPrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsLfsFilesResponseItemPusherPrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetDatasetsLfsFilesResponseItemPusherPrimaryOrgUserRole2")]
@@ -356,39 +256,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetDatasetsLeaderboardResponseItemSourceAuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetDatasetsLeaderboardResponseItemSourceAuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsTagsByTypeResponseItemType?), TypeInfoPropertyName = "NullableGetDatasetsTagsByTypeResponseItemType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanGetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanGetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<double?, string>?), TypeInfoPropertyName = "NullableAnyOfDoubleString2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility?), TypeInfoPropertyName = "NullableGetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus?), TypeInfoPropertyName = "NullableGetDatasetsUserAccessRequestResponseItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItemError?), TypeInfoPropertyName = "NullableCreateDatasetsUserAccessRequestBatchResponseItemError2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateDatasetsLfsFilesDuplicateRequestFile>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.List<string>, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateDatasetsPreuploadRequestFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDatasetsLikersExpandItem>))]
@@ -419,15 +288,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDatasetsLeaderboardResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.List<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDatasetsTagsByTypeResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProvider>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomain>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDatasetsUserAccessRequestResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUserOrg>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1Org>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItem>))]
     internal sealed partial class DatasetsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -476,61 +337,12 @@ namespace HuggingFace
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
+            global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsRequestGated?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDatasetsNotebookResponseVariant1, global::HuggingFace.GetDatasetsNotebookResponseVariant2, global::HuggingFace.GetDatasetsNotebookResponseVariant3>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDatasetsLeaderboardResponseItemAuthorVariant1, global::HuggingFace.GetDatasetsLeaderboardResponseItemAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant1, global::HuggingFace.GetDatasetsLeaderboardResponseItemSourceAuthorVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
 
@@ -603,10 +415,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetDatasetsTagsByTypeType)
 
                     || typeToConvert == typeof(global::HuggingFace.GetDatasetsTagsByTypeType?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingType)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingType?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetDatasetsUserAccessRequestStatus)
 
@@ -772,110 +580,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetDatasetsTagsByTypeResponseItemType?)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus?)
-
                     || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItemError)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItemError?);
@@ -1013,16 +717,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetDatasetsTagsByTypeType?))
                 {
                     return new global::HuggingFace.JsonConverters.GetDatasetsTagsByTypeTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingType))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingType?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetDatasetsUserAccessRequestStatus))
@@ -1435,266 +1129,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.GetDatasetsTagsByTypeResponseItemTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewerJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewer?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoViewerNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarieJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarieNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormatJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormat?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoFormatNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitieJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitie?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoModalitieNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGatedJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGated?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant1RepoDataGatedNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTaskJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTaskNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGatedJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGatedNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1PlanJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1Plan?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1PlanNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlanJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlan?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgPlanNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRoleJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRole?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2PrimaryOrgUserRoleNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdkJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdk?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataSdkNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStageJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStage?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeStageNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrentJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrent?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareCurrentNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequestedJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequested?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeHardwareRequestedNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStageJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStage?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataRuntimeDomainStageNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1PlanJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1Plan?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1PlanNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlanJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlan?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgPlanNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRoleJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRole?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2PrimaryOrgUserRoleNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1PlanJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1Plan?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1PlanNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlanJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlan?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgPlanNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRoleJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRole?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2PrimaryOrgUserRoleNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibilityJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibilityNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus))
-                {
-                    return new global::HuggingFace.JsonConverters.GetDatasetsUserAccessRequestResponseItemStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetDatasetsUserAccessRequestResponseItemStatusNullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItemError))
                 {
                     return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestBatchResponseItemErrorJsonConverter();
@@ -1711,7 +1145,7 @@ namespace HuggingFace
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
         {
             private readonly object _gate = new();
-            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[1];
+            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[2];
 
             public global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(
                 global::System.Type type,
@@ -1748,6 +1182,8 @@ namespace HuggingFace
                 return index switch
                 {
                     0 => new DatasetsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+
+                    1 => global::HuggingFace.PartitionCoreSourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

@@ -64,17 +64,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03a436f808c58a38")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_531cd14b157a6497")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.RepoId))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.RepoIdType), TypeInfoPropertyName = "RepoIdType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequest))]
@@ -509,6 +501,14 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6Data))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2>), TypeInfoPropertyName = "OneOfGetDiscussionsResponseVariant2EventVariant7AuthorVariant1GetDiscussionsResponseVariant2EventVariant7AuthorVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1OauthApp))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1OauthAppImageData))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1Plan), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthApp))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthAppImageData))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrg))]
     internal sealed partial class DiscussionsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -573,14 +573,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2_5242c816dcee7b38")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03a436f808c58a38")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_531cd14b157a6497")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1OauthApp))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1OauthAppImageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1Plan), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant1Plan2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthApp))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthAppImageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrg))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7Data))]
@@ -610,7 +602,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9Data))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?>), TypeInfoPropertyName = "AnyOfIListStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2Changes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentResponseNewMessage))]
@@ -772,11 +763,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataReaction))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataReactionReaction), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataReactionReaction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataIdentifiedLanguage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.RepoIdType?), TypeInfoPropertyName = "NullableRepoIdType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestReaction2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestAction2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequestReason?), TypeInfoPropertyName = "NullableCreateBlogCommentHideRequestReason2_3")]
@@ -933,7 +920,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant1Plan?), TypeInfoPropertyName = "NullableGetDiscussionsResponseVariant2EventVariant9AuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetDiscussionsResponseVariant2EventVariant9AuthorVariant2PrimaryOrgUserRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?>?), TypeInfoPropertyName = "NullableAnyOfIListStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateDiscussionsCommentResponseNewMessageAuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateDiscussionsCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateDiscussionsCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2")]
@@ -984,7 +970,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataReactionReaction?), TypeInfoPropertyName = "NullableCreatePostsCommentReplyResponseNewMessageDataReactionReaction2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction2>))]
@@ -993,7 +978,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDiscussionsResponseDiscussionTopReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataReaction>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.List<string>, bool?>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreatePapersCommentResponseNewMessageDataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataReaction>))]
@@ -1046,37 +1030,7 @@ namespace HuggingFace
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
+            global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>());
@@ -1111,13 +1065,10 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8AuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, bool?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDiscussionsTitleResponseNewTitleAuthorVariant1, global::HuggingFace.CreateDiscussionsTitleResponseNewTitleAuthorVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentReplyResponseNewMessageAuthorVariant2>());
@@ -1126,15 +1077,6 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
 
@@ -1156,11 +1098,7 @@ namespace HuggingFace
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::HuggingFace.RepoIdType)
-
-                    || typeToConvert == typeof(global::HuggingFace.RepoIdType?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction)
+                    typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction?)
 
@@ -1953,16 +1891,6 @@ namespace HuggingFace
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
-                if (typeToConvert == typeof(global::HuggingFace.RepoIdType))
-                {
-                    return new global::HuggingFace.JsonConverters.RepoIdTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.RepoIdType?))
-                {
-                    return new global::HuggingFace.JsonConverters.RepoIdTypeNullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction))
                 {
                     return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestReactionJsonConverter();
@@ -3939,7 +3867,7 @@ namespace HuggingFace
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
         {
             private readonly object _gate = new();
-            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[2];
+            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[3];
 
             public global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(
                 global::System.Type type,
@@ -3978,6 +3906,8 @@ namespace HuggingFace
                     0 => new DiscussionsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
 
                     1 => new DiscussionsSourceGenerationContextChunk1(new global::System.Text.Json.JsonSerializerOptions()),
+
+                    2 => global::HuggingFace.PartitionCoreSourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

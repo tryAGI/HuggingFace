@@ -10,23 +10,15 @@ namespace HuggingFace
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateKernelsLfsFilesDuplicateRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateKernelsLfsFilesDuplicateRequestTarget))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateKernelsLfsFilesDuplicateRequestTargetType), TypeInfoPropertyName = "CreateKernelsLfsFilesDuplicateRequestTargetType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateKernelsLfsFilesDuplicateRequestFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateKernelsLfsFilesDuplicateRequestFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateKernelsAccessRequestApproveRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>), TypeInfoPropertyName = "AnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsLikersExpandItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsLikersExpandItem), TypeInfoPropertyName = "GetKernelsLikersExpandItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsSort), TypeInfoPropertyName = "GetKernelsSort2")]
@@ -47,24 +39,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsScanResponseFilesWithIssueLevel), TypeInfoPropertyName = "GetKernelsScanResponseFilesWithIssueLevel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string, string>), TypeInfoPropertyName = "AnyOfBooleanStringString2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadata))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibility))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem), TypeInfoPropertyName = "GetKernelsResponseItemBuildMetadataCompatibilityTorchItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO), TypeInfoPropertyName = "GetKernelsResponseItemBuildMetadataCompatibilityO2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem), TypeInfoPropertyName = "GetKernelsResponseItemBuildMetadataCompatibilityArchItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItemBuildMetadataBackend>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackend))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendType), TypeInfoPropertyName = "GetKernelsResponseItemBuildMetadataBackendType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType), TypeInfoPropertyName = "GetKernelsResponseItemBuildMetadataBackendHardwareType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBuilder))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie), TypeInfoPropertyName = "GetKernelsResponseItemSupportedDriverFamilie2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemResourceGroup))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetKernelsResponseGated?>), TypeInfoPropertyName = "AnyOfBooleanGetKernelsResponseGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseGated), TypeInfoPropertyName = "GetKernelsResponseGated2")]
@@ -91,12 +65,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsRevisionResponseAuthorDataVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetKernelsRevisionResponseAuthorDataVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsRevisionResponseSupportedDriverFamilie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsRevisionResponseSupportedDriverFamilie), TypeInfoPropertyName = "GetKernelsRevisionResponseSupportedDriverFamilie2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateKernelsLfsFilesDuplicateRequestTargetType?), TypeInfoPropertyName = "NullableCreateKernelsLfsFilesDuplicateRequestTargetType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?), TypeInfoPropertyName = "NullableAnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsLikersExpandItem?), TypeInfoPropertyName = "NullableGetKernelsLikersExpandItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsSort?), TypeInfoPropertyName = "NullableGetKernelsSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsDirection?), TypeInfoPropertyName = "NullableGetKernelsDirection2")]
@@ -104,13 +74,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsExpand2?), TypeInfoPropertyName = "NullableGetKernelsExpand22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsExpandItem?), TypeInfoPropertyName = "NullableGetKernelsExpandItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsScanResponseFilesWithIssueLevel?), TypeInfoPropertyName = "NullableGetKernelsScanResponseFilesWithIssueLevel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string, string>?), TypeInfoPropertyName = "NullableAnyOfBooleanStringString2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem?), TypeInfoPropertyName = "NullableGetKernelsResponseItemBuildMetadataCompatibilityTorchItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO?), TypeInfoPropertyName = "NullableGetKernelsResponseItemBuildMetadataCompatibilityO2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem?), TypeInfoPropertyName = "NullableGetKernelsResponseItemBuildMetadataCompatibilityArchItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendType?), TypeInfoPropertyName = "NullableGetKernelsResponseItemBuildMetadataBackendType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType?), TypeInfoPropertyName = "NullableGetKernelsResponseItemBuildMetadataBackendHardwareType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie?), TypeInfoPropertyName = "NullableGetKernelsResponseItemSupportedDriverFamilie2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetKernelsResponseGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanGetKernelsResponseGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseGated?), TypeInfoPropertyName = "NullableGetKernelsResponseGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>?), TypeInfoPropertyName = "NullableOneOfGetKernelsResponseAuthorDataVariant1GetKernelsResponseAuthorDataVariant22")]
@@ -125,9 +88,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsRevisionResponseAuthorDataVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetKernelsRevisionResponseAuthorDataVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsRevisionResponseAuthorDataVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetKernelsRevisionResponseAuthorDataVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsRevisionResponseSupportedDriverFamilie?), TypeInfoPropertyName = "NullableGetKernelsRevisionResponseSupportedDriverFamilie2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateKernelsLfsFilesDuplicateRequestFile>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsLikersExpandItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetKernelsExpand2?, global::System.Collections.Generic.List<global::HuggingFace.GetKernelsExpandItem>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsExpandItem>))]
@@ -135,12 +96,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateKernelsLfsFilesDuplicateResponseFailedItem2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsScanResponseFilesWithIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemBuildMetadataBackend>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseSupportedDriverFamilie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsRevisionResponseSupportedDriverFamilie>))]
     internal sealed partial class KernelsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
@@ -190,54 +145,12 @@ namespace HuggingFace
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetKernelsExpand2?, global::System.Collections.Generic.IList<global::HuggingFace.GetKernelsExpandItem>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, bool?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetKernelsResponseGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetKernelsResponseAuthorDataVariant1, global::HuggingFace.GetKernelsResponseAuthorDataVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetKernelsRevisionResponseGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetKernelsRevisionResponseAuthorDataVariant1, global::HuggingFace.GetKernelsRevisionResponseAuthorDataVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
 
@@ -286,30 +199,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetKernelsScanResponseFilesWithIssueLevel)
 
                     || typeToConvert == typeof(global::HuggingFace.GetKernelsScanResponseFilesWithIssueLevel?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendType)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendType?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseGated)
 
@@ -426,66 +315,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.GetKernelsScanResponseFilesWithIssueLevelNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataCompatibilityTorchItemJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataCompatibilityTorchItemNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataCompatibilityOJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataCompatibilityONullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataCompatibilityArchItemJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityArchItem?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataCompatibilityArchItemNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendType))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataBackendTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendType?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataBackendTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataBackendHardwareTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataBackendHardwareType?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemBuildMetadataBackendHardwareTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemSupportedDriverFamilieJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemSupportedDriverFamilie?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetKernelsResponseItemSupportedDriverFamilieNullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseGated))
                 {
                     return new global::HuggingFace.JsonConverters.GetKernelsResponseGatedJsonConverter();
@@ -592,7 +421,7 @@ namespace HuggingFace
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
         {
             private readonly object _gate = new();
-            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[1];
+            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[2];
 
             public global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(
                 global::System.Type type,
@@ -629,6 +458,8 @@ namespace HuggingFace
                 return index switch
                 {
                     0 => new KernelsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+
+                    1 => global::HuggingFace.PartitionCoreSourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
