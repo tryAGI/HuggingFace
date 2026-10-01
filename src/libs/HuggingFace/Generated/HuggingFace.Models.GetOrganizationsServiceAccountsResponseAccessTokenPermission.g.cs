@@ -59,6 +59,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        RepoContributeWrite,
+        /// <summary>
+        ///
+        /// </summary>
         RepoWrite,
         /// <summary>
         ///
@@ -90,6 +94,7 @@ namespace HuggingFace
                 GetOrganizationsServiceAccountsResponseAccessTokenPermission.OrgServiceAccountsWrite => "org.serviceAccounts.write",
                 GetOrganizationsServiceAccountsResponseAccessTokenPermission.OrgWrite => "org.write",
                 GetOrganizationsServiceAccountsResponseAccessTokenPermission.RepoContentRead => "repo.content.read",
+                GetOrganizationsServiceAccountsResponseAccessTokenPermission.RepoContributeWrite => "repo.contribute.write",
                 GetOrganizationsServiceAccountsResponseAccessTokenPermission.RepoWrite => "repo.write",
                 GetOrganizationsServiceAccountsResponseAccessTokenPermission.ResourceGroupWrite => "resourceGroup.write",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -114,6 +119,7 @@ namespace HuggingFace
                 "org.serviceAccounts.write" => GetOrganizationsServiceAccountsResponseAccessTokenPermission.OrgServiceAccountsWrite,
                 "org.write" => GetOrganizationsServiceAccountsResponseAccessTokenPermission.OrgWrite,
                 "repo.content.read" => GetOrganizationsServiceAccountsResponseAccessTokenPermission.RepoContentRead,
+                "repo.contribute.write" => GetOrganizationsServiceAccountsResponseAccessTokenPermission.RepoContributeWrite,
                 "repo.write" => GetOrganizationsServiceAccountsResponseAccessTokenPermission.RepoWrite,
                 "resourceGroup.write" => GetOrganizationsServiceAccountsResponseAccessTokenPermission.ResourceGroupWrite,
                 _ => null,

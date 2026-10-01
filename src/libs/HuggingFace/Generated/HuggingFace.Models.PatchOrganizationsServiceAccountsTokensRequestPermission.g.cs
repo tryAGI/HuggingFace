@@ -59,6 +59,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        RepoContributeWrite,
+        /// <summary>
+        ///
+        /// </summary>
         RepoWrite,
         /// <summary>
         ///
@@ -90,6 +94,7 @@ namespace HuggingFace
                 PatchOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite => "org.serviceAccounts.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.OrgWrite => "org.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.RepoContentRead => "repo.content.read",
+                PatchOrganizationsServiceAccountsTokensRequestPermission.RepoContributeWrite => "repo.contribute.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.RepoWrite => "repo.write",
                 PatchOrganizationsServiceAccountsTokensRequestPermission.ResourceGroupWrite => "resourceGroup.write",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -114,6 +119,7 @@ namespace HuggingFace
                 "org.serviceAccounts.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.OrgServiceAccountsWrite,
                 "org.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.OrgWrite,
                 "repo.content.read" => PatchOrganizationsServiceAccountsTokensRequestPermission.RepoContentRead,
+                "repo.contribute.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.RepoContributeWrite,
                 "repo.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.RepoWrite,
                 "resourceGroup.write" => PatchOrganizationsServiceAccountsTokensRequestPermission.ResourceGroupWrite,
                 _ => null,
