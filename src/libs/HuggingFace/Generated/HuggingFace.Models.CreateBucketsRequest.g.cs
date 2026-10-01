@@ -9,10 +9,17 @@ namespace HuggingFace
     public sealed partial class CreateBucketsRequest
     {
         /// <summary>
-        /// Bucket visibility. Defaults to public
+        /// Bucket visibility. Defaults to public. Cannot be specified along with visibility.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
         public bool? Private { get; set; }
+
+        /// <summary>
+        /// Bucket visibility. Cannot be specified along with private.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateBucketsRequestVisibilityJsonConverter))]
+        public global::HuggingFace.CreateBucketsRequestVisibility? Visibility { get; set; }
 
         /// <summary>
         ///
@@ -49,7 +56,10 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateBucketsRequest" /> class.
         /// </summary>
         /// <param name="private">
-        /// Bucket visibility. Defaults to public
+        /// Bucket visibility. Defaults to public. Cannot be specified along with visibility.
+        /// </param>
+        /// <param name="visibility">
+        /// Bucket visibility. Cannot be specified along with private.
         /// </param>
         /// <param name="resourceGroupId"></param>
         /// <param name="cdn">
@@ -66,12 +76,14 @@ namespace HuggingFace
 #endif
         public CreateBucketsRequest(
             bool? @private,
+            global::HuggingFace.CreateBucketsRequestVisibility? visibility,
             string? resourceGroupId,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateBucketsRequestCdnItem>? cdn,
             global::HuggingFace.CreateBucketsRequestRegion? region,
             string? description)
         {
             this.Private = @private;
+            this.Visibility = visibility;
             this.ResourceGroupId = resourceGroupId;
             this.Cdn = cdn;
             this.Region = region;
