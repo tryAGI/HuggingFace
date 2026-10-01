@@ -492,7 +492,10 @@ namespace HuggingFace
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="private">
-        /// Bucket visibility. Defaults to public
+        /// Bucket visibility. Defaults to public. Cannot be specified along with visibility.
+        /// </param>
+        /// <param name="visibility">
+        /// Bucket visibility. Cannot be specified along with private.
         /// </param>
         /// <param name="resourceGroupId"></param>
         /// <param name="cdn">
@@ -511,6 +514,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             bool? @private = default,
+            global::HuggingFace.CreateBucketsRequestVisibility? visibility = default,
             string? resourceGroupId = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateBucketsRequestCdnItem>? cdn = default,
             global::HuggingFace.CreateBucketsRequestRegion? region = default,
@@ -521,6 +525,7 @@ namespace HuggingFace
             var __request = new global::HuggingFace.CreateBucketsRequest
             {
                 Private = @private,
+                Visibility = visibility,
                 ResourceGroupId = resourceGroupId,
                 Cdn = cdn,
                 Region = region,

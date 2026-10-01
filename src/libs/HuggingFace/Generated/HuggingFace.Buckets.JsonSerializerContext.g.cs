@@ -28,6 +28,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>), TypeInfoPropertyName = "AnyOfIListStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsResourceGroupRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequestVisibility), TypeInfoPropertyName = "CreateBucketsRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateBucketsRequestCdnItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequestCdnItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequestCdnItemProvider), TypeInfoPropertyName = "CreateBucketsRequestCdnItemProvider2")]
@@ -98,6 +99,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsLfsFilesDuplicateRequestTargetType?), TypeInfoPropertyName = "NullableCreateBucketsLfsFilesDuplicateRequestTargetType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>?), TypeInfoPropertyName = "NullableAnyOfIListStringString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequestVisibility?), TypeInfoPropertyName = "NullableCreateBucketsRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequestCdnItemProvider?), TypeInfoPropertyName = "NullableCreateBucketsRequestCdnItemProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequestCdnItemRegion?), TypeInfoPropertyName = "NullableCreateBucketsRequestCdnItemRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBucketsRequestRegion?), TypeInfoPropertyName = "NullableCreateBucketsRequestRegion2")]
@@ -246,6 +248,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBucketsLfsFilesDuplicateRequestTargetType?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateBucketsRequestVisibility)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateBucketsRequestVisibility?)
+
                     || typeToConvert == typeof(global::HuggingFace.CreateBucketsRequestCdnItemProvider)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBucketsRequestCdnItemProvider?)
@@ -331,6 +337,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateBucketsLfsFilesDuplicateRequestTargetType?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateBucketsLfsFilesDuplicateRequestTargetTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateBucketsRequestVisibility))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateBucketsRequestVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateBucketsRequestVisibility?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateBucketsRequestVisibilityNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateBucketsRequestCdnItemProvider))

@@ -51,6 +51,12 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spendLimitReached")]
+        public bool? SpendLimitReached { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("billingMode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetWhoamiV2ResponseOrgBillingModeJsonConverter))]
         public global::HuggingFace.GetWhoamiV2ResponseOrgBillingMode? BillingMode { get; set; }
@@ -109,6 +115,7 @@ namespace HuggingFace
         /// <param name="avatarUrl"></param>
         /// <param name="email"></param>
         /// <param name="canPay"></param>
+        /// <param name="spendLimitReached"></param>
         /// <param name="billingMode"></param>
         /// <param name="periodEnd"></param>
         /// <param name="plan"></param>
@@ -128,6 +135,7 @@ namespace HuggingFace
             string avatarUrl,
             string? email,
             bool? canPay,
+            bool? spendLimitReached,
             global::HuggingFace.GetWhoamiV2ResponseOrgBillingMode? billingMode,
             double? periodEnd,
             global::HuggingFace.GetWhoamiV2ResponseOrgPlan? plan,
@@ -142,6 +150,7 @@ namespace HuggingFace
             this.Fullname = fullname ?? throw new global::System.ArgumentNullException(nameof(fullname));
             this.Email = email;
             this.CanPay = canPay;
+            this.SpendLimitReached = spendLimitReached;
             this.BillingMode = billingMode;
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.PeriodEnd = periodEnd;

@@ -23,6 +23,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>), TypeInfoPropertyName = "AnyOfIListStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>), TypeInfoPropertyName = "AnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestVisibility), TypeInfoPropertyName = "CreateContainersRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateContainersRequestCdnItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestCdnItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestCdnItemProvider), TypeInfoPropertyName = "CreateContainersRequestCdnItemProvider2")]
@@ -84,6 +85,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>?), TypeInfoPropertyName = "NullableAnyOfIListStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?), TypeInfoPropertyName = "NullableAnyOfStringIListString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestVisibility?), TypeInfoPropertyName = "NullableCreateContainersRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestCdnItemProvider?), TypeInfoPropertyName = "NullableCreateContainersRequestCdnItemProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestCdnItemRegion?), TypeInfoPropertyName = "NullableCreateContainersRequestCdnItemRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestRegion?), TypeInfoPropertyName = "NullableCreateContainersRequestRegion2")]
@@ -225,7 +227,11 @@ namespace HuggingFace
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::HuggingFace.CreateContainersRequestCdnItemProvider)
+                    typeToConvert == typeof(global::HuggingFace.CreateContainersRequestVisibility)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateContainersRequestVisibility?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateContainersRequestCdnItemProvider)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateContainersRequestCdnItemProvider?)
 
@@ -298,6 +304,16 @@ namespace HuggingFace
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
+                if (typeToConvert == typeof(global::HuggingFace.CreateContainersRequestVisibility))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateContainersRequestVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateContainersRequestVisibility?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateContainersRequestVisibilityNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.CreateContainersRequestCdnItemProvider))
                 {
                     return new global::HuggingFace.JsonConverters.CreateContainersRequestCdnItemProviderJsonConverter();
