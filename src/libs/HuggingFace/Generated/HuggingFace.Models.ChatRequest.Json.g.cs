@@ -21,7 +21,7 @@ namespace HuggingFace
         /// </summary>
         public string ToJson()
         {
-            return ToJson(global::HuggingFace.HuggingFaceInferenceSourceGenerationContext.Default);
+            return ToJson(global::HuggingFace.SourceGenerationContext.Default);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace HuggingFace
         {
             if (jsonSerializerOptions is null)
             {
-                return ToJson(global::HuggingFace.HuggingFaceInferenceSourceGenerationContext.Default);
+                return ToJson(global::HuggingFace.SourceGenerationContext.Default);
             }
 
             return global::System.Text.Json.JsonSerializer.Serialize(
@@ -65,7 +65,7 @@ namespace HuggingFace
         {
             return FromJson(
                 json,
-                global::HuggingFace.HuggingFaceInferenceSourceGenerationContext.Default);
+                global::HuggingFace.SourceGenerationContext.Default);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace HuggingFace
             {
                 return FromJson(
                     json,
-                    global::HuggingFace.HuggingFaceInferenceSourceGenerationContext.Default);
+                    global::HuggingFace.SourceGenerationContext.Default);
             }
 
             return global::System.Text.Json.JsonSerializer.Deserialize<global::HuggingFace.ChatRequest>(
@@ -112,7 +112,7 @@ namespace HuggingFace
         {
             return FromJsonStreamAsync(
                 jsonStream,
-                global::HuggingFace.HuggingFaceInferenceSourceGenerationContext.Default);
+                global::HuggingFace.SourceGenerationContext.Default);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace HuggingFace
             {
                 return FromJsonStreamAsync(
                     jsonStream,
-                    global::HuggingFace.HuggingFaceInferenceSourceGenerationContext.Default);
+                    global::HuggingFace.SourceGenerationContext.Default);
             }
 
             return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HuggingFace.ChatRequest?>(

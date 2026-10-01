@@ -115,7 +115,6 @@ PYEOF
 autosdk generate tgi-openapi.json \
   --namespace HuggingFace \
   --clientClassName HuggingFaceInferenceClient \
-  --json-serializer-context HuggingFaceInferenceSourceGenerationContext \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations \
@@ -129,7 +128,6 @@ fetch_spec --fail --silent --show-error -L -o tei-openapi.json \
 autosdk generate tei-openapi.json \
   --namespace HuggingFace \
   --clientClassName HuggingFaceEmbeddingClient \
-  --json-serializer-context HuggingFaceEmbeddingSourceGenerationContext \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations \
