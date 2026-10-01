@@ -7,7 +7,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -517,7 +518,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -1027,7 +1029,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -1537,7 +1540,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -2047,7 +2051,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -2557,7 +2562,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -3067,7 +3073,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -3577,7 +3584,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -4087,7 +4095,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -4597,7 +4606,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -5107,7 +5117,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -5617,7 +5628,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -6127,7 +6139,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -6637,7 +6650,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -7147,7 +7161,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -7657,7 +7672,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -8167,7 +8183,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -8677,7 +8694,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -9187,7 +9205,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -9697,7 +9716,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
@@ -10207,7 +10227,8 @@ namespace HuggingFace
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        GenerationMode = global::System.Text.Json.Serialization.JsonSourceGenerationMode.Metadata
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2_b870b62a4c306981")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2>>), TypeInfoPropertyName = "CreateOrganizationsResourceGroupsUsersRequestUserVariant2_42694aec3675c5b0")]
