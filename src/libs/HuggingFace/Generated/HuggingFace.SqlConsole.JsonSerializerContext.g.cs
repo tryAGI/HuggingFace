@@ -19,17 +19,20 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedRequestView))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchSqlConsoleEmbedRepoType), TypeInfoPropertyName = "PatchSqlConsoleEmbedRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteSqlConsoleEmbedRepoType), TypeInfoPropertyName = "DeleteSqlConsoleEmbedRepoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType), TypeInfoPropertyName = "CreateSqlConsoleEmbedHideRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType), TypeInfoPropertyName = "CreateSqlConsoleEmbedRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchSqlConsoleEmbedResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchSqlConsoleEmbedResponseView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchSqlConsoleEmbedResponseView))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteSqlConsoleEmbedResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedHideResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateSqlConsoleEmbedResponseView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedResponseView))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchSqlConsoleEmbedRepoType?), TypeInfoPropertyName = "NullablePatchSqlConsoleEmbedRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteSqlConsoleEmbedRepoType?), TypeInfoPropertyName = "NullableDeleteSqlConsoleEmbedRepoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType?), TypeInfoPropertyName = "NullableCreateSqlConsoleEmbedHideRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType?), TypeInfoPropertyName = "NullableCreateSqlConsoleEmbedRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateSqlConsoleEmbedRequestView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchSqlConsoleEmbedResponseView>))]
@@ -111,6 +114,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.DeleteSqlConsoleEmbedRepoType?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType?)
+
                     || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType?);
@@ -138,6 +145,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.DeleteSqlConsoleEmbedRepoType?))
                 {
                     return new global::HuggingFace.JsonConverters.DeleteSqlConsoleEmbedRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSqlConsoleEmbedHideRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSqlConsoleEmbedHideRepoTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType))
