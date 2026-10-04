@@ -1295,6 +1295,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.DeleteSqlConsoleEmbedRepoType?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType?)
+
                     || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType?)
@@ -7346,6 +7350,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.DeleteSqlConsoleEmbedRepoType?))
                 {
                     return new global::HuggingFace.JsonConverters.DeleteSqlConsoleEmbedRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSqlConsoleEmbedHideRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedHideRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSqlConsoleEmbedHideRepoTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateSqlConsoleEmbedRepoType))

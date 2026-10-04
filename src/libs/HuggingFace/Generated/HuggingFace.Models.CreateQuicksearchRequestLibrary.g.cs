@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        AadyaNeural,
+        /// <summary>
+        ///
+        /// </summary>
         Acestep,
         /// <summary>
         ///
@@ -40,6 +44,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Araclip,
+        /// <summary>
+        ///
+        /// </summary>
+        Asimov,
         /// <summary>
         ///
         /// </summary>
@@ -307,6 +315,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Gaussianformer,
+        /// <summary>
+        ///
+        /// </summary>
         GemmaCpp,
         /// <summary>
         ///
@@ -452,6 +464,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Lagernvs,
+        /// <summary>
+        ///
+        /// </summary>
+        Laya,
         /// <summary>
         ///
         /// </summary>
@@ -1044,12 +1060,14 @@ namespace HuggingFace
             {
                 CreateQuicksearchRequestLibrary.x3dtopiaXl => "3dtopia-xl",
                 CreateQuicksearchRequestLibrary.PaddleOCR => "PaddleOCR",
+                CreateQuicksearchRequestLibrary.AadyaNeural => "aadya-neural",
                 CreateQuicksearchRequestLibrary.Acestep => "acestep",
                 CreateQuicksearchRequestLibrary.AdapterTransformers => "adapter-transformers",
                 CreateQuicksearchRequestLibrary.Allennlp => "allennlp",
                 CreateQuicksearchRequestLibrary.Aneforge => "aneforge",
                 CreateQuicksearchRequestLibrary.Anemoi => "anemoi",
                 CreateQuicksearchRequestLibrary.Araclip => "araclip",
+                CreateQuicksearchRequestLibrary.Asimov => "asimov",
                 CreateQuicksearchRequestLibrary.Asteroid => "asteroid",
                 CreateQuicksearchRequestLibrary.Audiocraft => "audiocraft",
                 CreateQuicksearchRequestLibrary.Audioseal => "audioseal",
@@ -1116,6 +1134,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Flexray => "flexray",
                 CreateQuicksearchRequestLibrary.Flextab => "flextab",
                 CreateQuicksearchRequestLibrary.Fme => "fme",
+                CreateQuicksearchRequestLibrary.Gaussianformer => "gaussianformer",
                 CreateQuicksearchRequestLibrary.GemmaCpp => "gemma.cpp",
                 CreateQuicksearchRequestLibrary.Genmo => "genmo",
                 CreateQuicksearchRequestLibrary.GeometryCrafter => "geometry-crafter",
@@ -1153,6 +1172,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Kittentts => "kittentts",
                 CreateQuicksearchRequestLibrary.Kronos => "kronos",
                 CreateQuicksearchRequestLibrary.Lagernvs => "lagernvs",
+                CreateQuicksearchRequestLibrary.Laya => "laya",
                 CreateQuicksearchRequestLibrary.Lerobot => "lerobot",
                 CreateQuicksearchRequestLibrary.Lightglue => "lightglue",
                 CreateQuicksearchRequestLibrary.LightningIr => "lightning-ir",
@@ -1309,12 +1329,14 @@ namespace HuggingFace
             {
                 "3dtopia-xl" => CreateQuicksearchRequestLibrary.x3dtopiaXl,
                 "PaddleOCR" => CreateQuicksearchRequestLibrary.PaddleOCR,
+                "aadya-neural" => CreateQuicksearchRequestLibrary.AadyaNeural,
                 "acestep" => CreateQuicksearchRequestLibrary.Acestep,
                 "adapter-transformers" => CreateQuicksearchRequestLibrary.AdapterTransformers,
                 "allennlp" => CreateQuicksearchRequestLibrary.Allennlp,
                 "aneforge" => CreateQuicksearchRequestLibrary.Aneforge,
                 "anemoi" => CreateQuicksearchRequestLibrary.Anemoi,
                 "araclip" => CreateQuicksearchRequestLibrary.Araclip,
+                "asimov" => CreateQuicksearchRequestLibrary.Asimov,
                 "asteroid" => CreateQuicksearchRequestLibrary.Asteroid,
                 "audiocraft" => CreateQuicksearchRequestLibrary.Audiocraft,
                 "audioseal" => CreateQuicksearchRequestLibrary.Audioseal,
@@ -1381,6 +1403,7 @@ namespace HuggingFace
                 "flexray" => CreateQuicksearchRequestLibrary.Flexray,
                 "flextab" => CreateQuicksearchRequestLibrary.Flextab,
                 "fme" => CreateQuicksearchRequestLibrary.Fme,
+                "gaussianformer" => CreateQuicksearchRequestLibrary.Gaussianformer,
                 "gemma.cpp" => CreateQuicksearchRequestLibrary.GemmaCpp,
                 "genmo" => CreateQuicksearchRequestLibrary.Genmo,
                 "geometry-crafter" => CreateQuicksearchRequestLibrary.GeometryCrafter,
@@ -1418,6 +1441,7 @@ namespace HuggingFace
                 "kittentts" => CreateQuicksearchRequestLibrary.Kittentts,
                 "kronos" => CreateQuicksearchRequestLibrary.Kronos,
                 "lagernvs" => CreateQuicksearchRequestLibrary.Lagernvs,
+                "laya" => CreateQuicksearchRequestLibrary.Laya,
                 "lerobot" => CreateQuicksearchRequestLibrary.Lerobot,
                 "lightglue" => CreateQuicksearchRequestLibrary.Lightglue,
                 "lightning-ir" => CreateQuicksearchRequestLibrary.LightningIr,
