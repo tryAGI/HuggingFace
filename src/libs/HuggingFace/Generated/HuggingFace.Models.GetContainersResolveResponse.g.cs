@@ -50,6 +50,13 @@ namespace HuggingFace
         public string? ContentType { get; set; }
 
         /// <summary>
+        /// ISO 8601 timestamp of when the file was added to the bucket
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("uploadedAt")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string UploadedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -73,6 +80,9 @@ namespace HuggingFace
         /// <param name="size">
         /// The size of the file
         /// </param>
+        /// <param name="uploadedAt">
+        /// ISO 8601 timestamp of when the file was added to the bucket
+        /// </param>
         /// <param name="contentType">
         /// The content type of the file
         /// </param>
@@ -85,6 +95,7 @@ namespace HuggingFace
             string reconstructionUrl,
             string etag,
             double size,
+            string uploadedAt,
             string? contentType)
         {
             this.Hash = hash ?? throw new global::System.ArgumentNullException(nameof(hash));
@@ -93,6 +104,7 @@ namespace HuggingFace
             this.Etag = etag ?? throw new global::System.ArgumentNullException(nameof(etag));
             this.Size = size;
             this.ContentType = contentType;
+            this.UploadedAt = uploadedAt ?? throw new global::System.ArgumentNullException(nameof(uploadedAt));
         }
 
         /// <summary>
