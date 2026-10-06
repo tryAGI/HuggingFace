@@ -132,7 +132,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperation))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2UsersRequestOperationOp2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2UsersRequestOperationPath2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1ValueItem>))]
@@ -509,6 +508,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseOwnerType), TypeInfoPropertyName = "CreateScheduledJobsResponseOwnerType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseInitiator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseInitiatorType), TypeInfoPropertyName = "CreateScheduledJobsResponseInitiatorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpec))]
     internal sealed partial class PartitionCoreSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -552,7 +552,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateScheduledJobsRunResponseInitiatorVariant4_844475dccb0c0e89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_73a114b1b1cf4050")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_e8c9ffcd0d741b89")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpec))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpecArch), TypeInfoPropertyName = "CreateScheduledJobsResponseJobSpecArch2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpecFlavor), TypeInfoPropertyName = "CreateScheduledJobsResponseJobSpecFlavor2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpecDurations))]
@@ -683,7 +682,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsWebhooksRequestDomain2?), TypeInfoPropertyName = "NullableCreateSettingsWebhooksRequestDomain22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string>?), TypeInfoPropertyName = "NullableAnyOfBooleanString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath?), TypeInfoPropertyName = "NullablePatchOrganizationsScimV2UsersRequestOperationPath2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp?), TypeInfoPropertyName = "NullablePatchOrganizationsScimProvisioningV2UsersRequestOperationOp2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath?), TypeInfoPropertyName = "NullablePatchOrganizationsScimProvisioningV2UsersRequestOperationPath2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>?), TypeInfoPropertyName = "NullableAnyOfIListStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, bool?>?), TypeInfoPropertyName = "NullableAnyOfStringBoolean2")]
@@ -1157,10 +1155,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp?)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath)
 
@@ -1989,16 +1983,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath?))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsScimV2UsersRequestOperationPathNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchOrganizationsScimProvisioningV2UsersRequestOperationOpJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchOrganizationsScimProvisioningV2UsersRequestOperationOpNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath))
