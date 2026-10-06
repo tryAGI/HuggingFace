@@ -12,9 +12,8 @@ namespace HuggingFace
         /// `remove` operation is not supported for non-managed organizations
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("op")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.PatchOrganizationsScimProvisioningV2UsersRequestOperationOpJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp Op { get; set; }
+        public required string Op { get; set; }
 
         /// <summary>
         ///
@@ -48,11 +47,11 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchOrganizationsScimProvisioningV2UsersRequestOperation(
-            global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp op,
+            string op,
             object value,
             global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath? path)
         {
-            this.Op = op;
+            this.Op = op ?? throw new global::System.ArgumentNullException(nameof(op));
             this.Path = path;
             this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
         }

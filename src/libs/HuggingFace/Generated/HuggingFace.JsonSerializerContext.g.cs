@@ -515,10 +515,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath?)
 
-                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp?)
-
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath?)
@@ -5400,16 +5396,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath?))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsScimV2UsersRequestOperationPathNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchOrganizationsScimProvisioningV2UsersRequestOperationOpJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationOp?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchOrganizationsScimProvisioningV2UsersRequestOperationOpNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath))
