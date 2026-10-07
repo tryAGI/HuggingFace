@@ -3,10 +3,10 @@
 namespace HuggingFace.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class PatchOrganizationsResourceGroupsUsersRequestRoleNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole?>
+    public sealed class PatchOrganizationsResourceGroupsUsersRequestVariant1RoleNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role?>
     {
         /// <inheritdoc />
-        public override global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole? Read(
+        public override global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role? Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace HuggingFace.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRoleExtensions.ToEnum(stringValue);
+                        return global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1RoleExtensions.ToEnum(stringValue);
                     }
 
                     break;
@@ -26,11 +26,11 @@ namespace HuggingFace.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole)numValue;
+                    return (global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole?);
+                    return default(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role?);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,7 +42,7 @@ namespace HuggingFace.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole? value,
+            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role? value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
@@ -53,7 +53,7 @@ namespace HuggingFace.JsonConverters
             }
             else
             {
-                writer.WriteStringValue(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRoleExtensions.ToValueString(value.Value));
+                writer.WriteStringValue(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1RoleExtensions.ToValueString(value.Value));
             }
         }
     }

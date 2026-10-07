@@ -66,6 +66,12 @@ namespace HuggingFace
         public string? AddedBy { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("roleSetBy")]
+        public string? RoleSetBy { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -83,6 +89,7 @@ namespace HuggingFace
         /// <param name="role"></param>
         /// <param name="orgRole"></param>
         /// <param name="addedBy"></param>
+        /// <param name="roleSetBy"></param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -95,6 +102,7 @@ namespace HuggingFace
             global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserRole role,
             global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole orgRole,
             string? addedBy,
+            string? roleSetBy,
             string type = "user")
         {
             this.Type = type;
@@ -105,6 +113,7 @@ namespace HuggingFace
             this.Role = role;
             this.OrgRole = orgRole;
             this.AddedBy = addedBy;
+            this.RoleSetBy = roleSetBy;
         }
 
         /// <summary>

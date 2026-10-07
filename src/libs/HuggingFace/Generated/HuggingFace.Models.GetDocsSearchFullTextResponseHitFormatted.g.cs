@@ -63,12 +63,6 @@ namespace HuggingFace
         public string? Content { get; set; }
 
         /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("anchor")]
-        public string? Anchor { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -86,7 +80,6 @@ namespace HuggingFace
         /// <param name="hierarchyLvl5"></param>
         /// <param name="hierarchyLvl6"></param>
         /// <param name="content"></param>
-        /// <param name="anchor"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -99,8 +92,7 @@ namespace HuggingFace
             string? hierarchyLvl4,
             string? hierarchyLvl5,
             string? hierarchyLvl6,
-            string? content,
-            string? anchor)
+            string? content)
         {
             this.Url = url;
             this.HierarchyLvl0 = hierarchyLvl0;
@@ -111,7 +103,6 @@ namespace HuggingFace
             this.HierarchyLvl5 = hierarchyLvl5;
             this.HierarchyLvl6 = hierarchyLvl6;
             this.Content = content;
-            this.Anchor = anchor;
         }
 
         /// <summary>

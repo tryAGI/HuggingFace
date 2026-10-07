@@ -16,7 +16,7 @@ namespace HuggingFace
         public required global::System.Collections.Generic.IList<string> Schemas { get; set; }
 
         /// <summary>
-        /// Username of the existing Hugging Face user
+        /// IdP username. Ignored: the user is matched by confirmed email
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userName")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -53,7 +53,7 @@ namespace HuggingFace
         /// </summary>
         /// <param name="schemas"></param>
         /// <param name="userName">
-        /// Username of the existing Hugging Face user
+        /// IdP username. Ignored: the user is matched by confirmed email
         /// </param>
         /// <param name="emails"></param>
         /// <param name="externalId">

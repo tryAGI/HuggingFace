@@ -41,7 +41,7 @@ namespace HuggingFace
         /// <param name="name"></param>
         /// <param name="schemas"></param>
         /// <param name="userName">
-        /// Username of the existing Hugging Face user
+        /// IdP username. Ignored: the user is matched by confirmed email
         /// </param>
         /// <param name="emails"></param>
         /// <param name="active">
