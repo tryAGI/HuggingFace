@@ -2,7 +2,7 @@
 
 namespace HuggingFace
 {
-    public sealed partial class PatchOrganizationsResourceGroupsUsersRequest
+    public sealed partial class PatchOrganizationsResourceGroupsUsersRequestVariant2
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -47,20 +47,20 @@ namespace HuggingFace
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest? FromJson(
+        public static global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest),
-                jsonSerializerContext) as global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest;
+                typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2),
+                jsonSerializerContext) as global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2;
         }
 
         /// <summary>
         /// Deserializes a JSON string using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest? FromJson(
+        public static global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2? FromJson(
             string json)
         {
             return FromJson(
@@ -75,7 +75,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest? FromJson(
+        public static global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -86,7 +86,7 @@ namespace HuggingFace
                     global::HuggingFace.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2>(
                 json,
                 jsonSerializerOptions);
         }
@@ -94,20 +94,20 @@ namespace HuggingFace
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest;
+                typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2),
+                jsonSerializerContext).ConfigureAwait(false)) as global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2;
         }
 
         /// <summary>
         /// Deserializes a JSON stream using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream)
         {
             return FromJsonStreamAsync(
@@ -122,7 +122,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -133,7 +133,7 @@ namespace HuggingFace
                     global::HuggingFace.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2?>(
                 jsonStream,
                 jsonSerializerOptions);
         }

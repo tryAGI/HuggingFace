@@ -60,18 +60,6 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
-        public string? Content { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("anchor")]
-        public string? Anchor { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_formatted")]
         public global::HuggingFace.GetDocsSearchFullTextResponseHitFormatted? Formatted { get; set; }
 
@@ -92,8 +80,6 @@ namespace HuggingFace
         /// <param name="hierarchyLvl4"></param>
         /// <param name="hierarchyLvl5"></param>
         /// <param name="hierarchyLvl6"></param>
-        /// <param name="content"></param>
-        /// <param name="anchor"></param>
         /// <param name="formatted"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -107,8 +93,6 @@ namespace HuggingFace
             string? hierarchyLvl4,
             string? hierarchyLvl5,
             string? hierarchyLvl6,
-            string? content,
-            string? anchor,
             global::HuggingFace.GetDocsSearchFullTextResponseHitFormatted? formatted)
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
@@ -119,8 +103,6 @@ namespace HuggingFace
             this.HierarchyLvl4 = hierarchyLvl4;
             this.HierarchyLvl5 = hierarchyLvl5;
             this.HierarchyLvl6 = hierarchyLvl6;
-            this.Content = content;
-            this.Anchor = anchor;
             this.Formatted = formatted;
         }
 

@@ -39,6 +39,13 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("text_plain")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string TextPlain { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("product")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Product { get; set; }
@@ -94,6 +101,7 @@ namespace HuggingFace
         /// <param name="vectors"></param>
         /// <param name="heading1"></param>
         /// <param name="text"></param>
+        /// <param name="textPlain"></param>
         /// <param name="product"></param>
         /// <param name="sourcePageUrl"></param>
         /// <param name="sourcePageTitle"></param>
@@ -109,6 +117,7 @@ namespace HuggingFace
             global::HuggingFace.GetDocsSearchResponseItemVectors vectors,
             string heading1,
             string text,
+            string textPlain,
             string product,
             string sourcePageUrl,
             string sourcePageTitle,
@@ -121,6 +130,7 @@ namespace HuggingFace
             this.Vectors = vectors ?? throw new global::System.ArgumentNullException(nameof(vectors));
             this.Heading1 = heading1 ?? throw new global::System.ArgumentNullException(nameof(heading1));
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
+            this.TextPlain = textPlain ?? throw new global::System.ArgumentNullException(nameof(textPlain));
             this.Product = product ?? throw new global::System.ArgumentNullException(nameof(product));
             this.SourcePageUrl = sourcePageUrl ?? throw new global::System.ArgumentNullException(nameof(sourcePageUrl));
             this.SourcePageTitle = sourcePageTitle ?? throw new global::System.ArgumentNullException(nameof(sourcePageTitle));

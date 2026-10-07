@@ -30,14 +30,14 @@ namespace HuggingFace
             ref string name,
             ref string resourceGroupId,
             ref string username,
-            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest request);
+            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2> request);
         partial void PrepareEditOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
             string resourceGroupId,
             string username,
-            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest request);
+            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2> request);
         partial void ProcessEditOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -49,7 +49,7 @@ namespace HuggingFace
 
         /// <summary>
         /// Change user role<br/>
-        /// Change the role of a user in a resource group.<br/>
+        /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user's SCIM groups.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -64,7 +64,7 @@ namespace HuggingFace
             string resourceGroupId,
             string username,
 
-            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest request,
+            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -82,7 +82,7 @@ namespace HuggingFace
         }
         /// <summary>
         /// Change user role<br/>
-        /// Change the role of a user in a resource group.<br/>
+        /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user's SCIM groups.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -97,12 +97,10 @@ namespace HuggingFace
             string resourceGroupId,
             string username,
 
-            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest request,
+            global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
             PrepareEditOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameArguments(
@@ -464,13 +462,12 @@ namespace HuggingFace
         }
         /// <summary>
         /// Change user role<br/>
-        /// Change the role of a user in a resource group.<br/>
+        /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user's SCIM groups.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="resourceGroupId"></param>
         /// <param name="username"></param>
-        /// <param name="role"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -478,13 +475,11 @@ namespace HuggingFace
             string name,
             string resourceGroupId,
             string username,
-            global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestRole role,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequest
+            var __request = new global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant2>
             {
-                Role = role,
             };
 
             return await EditOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameAsync(
