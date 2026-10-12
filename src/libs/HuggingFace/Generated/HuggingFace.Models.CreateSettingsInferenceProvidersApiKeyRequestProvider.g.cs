@@ -51,6 +51,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Openrouter,
+        /// <summary>
+        ///
+        /// </summary>
         Ovhcloud,
         /// <summary>
         ///
@@ -100,6 +104,7 @@ namespace HuggingFace
                 CreateSettingsInferenceProvidersApiKeyRequestProvider.Groq => "groq",
                 CreateSettingsInferenceProvidersApiKeyRequestProvider.Novita => "novita",
                 CreateSettingsInferenceProvidersApiKeyRequestProvider.Nscale => "nscale",
+                CreateSettingsInferenceProvidersApiKeyRequestProvider.Openrouter => "openrouter",
                 CreateSettingsInferenceProvidersApiKeyRequestProvider.Ovhcloud => "ovhcloud",
                 CreateSettingsInferenceProvidersApiKeyRequestProvider.Publicai => "publicai",
                 CreateSettingsInferenceProvidersApiKeyRequestProvider.Replicate => "replicate",
@@ -127,6 +132,7 @@ namespace HuggingFace
                 "groq" => CreateSettingsInferenceProvidersApiKeyRequestProvider.Groq,
                 "novita" => CreateSettingsInferenceProvidersApiKeyRequestProvider.Novita,
                 "nscale" => CreateSettingsInferenceProvidersApiKeyRequestProvider.Nscale,
+                "openrouter" => CreateSettingsInferenceProvidersApiKeyRequestProvider.Openrouter,
                 "ovhcloud" => CreateSettingsInferenceProvidersApiKeyRequestProvider.Ovhcloud,
                 "publicai" => CreateSettingsInferenceProvidersApiKeyRequestProvider.Publicai,
                 "replicate" => CreateSettingsInferenceProvidersApiKeyRequestProvider.Replicate,

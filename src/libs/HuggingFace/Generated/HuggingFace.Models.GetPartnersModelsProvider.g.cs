@@ -55,6 +55,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Openrouter,
+        /// <summary>
+        ///
+        /// </summary>
         Ovhcloud,
         /// <summary>
         ///
@@ -105,6 +109,7 @@ namespace HuggingFace
                 GetPartnersModelsProvider.HfInference => "hf-inference",
                 GetPartnersModelsProvider.Novita => "novita",
                 GetPartnersModelsProvider.Nscale => "nscale",
+                GetPartnersModelsProvider.Openrouter => "openrouter",
                 GetPartnersModelsProvider.Ovhcloud => "ovhcloud",
                 GetPartnersModelsProvider.Publicai => "publicai",
                 GetPartnersModelsProvider.Replicate => "replicate",
@@ -133,6 +138,7 @@ namespace HuggingFace
                 "hf-inference" => GetPartnersModelsProvider.HfInference,
                 "novita" => GetPartnersModelsProvider.Novita,
                 "nscale" => GetPartnersModelsProvider.Nscale,
+                "openrouter" => GetPartnersModelsProvider.Openrouter,
                 "ovhcloud" => GetPartnersModelsProvider.Ovhcloud,
                 "publicai" => GetPartnersModelsProvider.Publicai,
                 "replicate" => GetPartnersModelsProvider.Replicate,

@@ -47,6 +47,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        HumainAi,
+        /// <summary>
+        ///
+        /// </summary>
         Novita,
         /// <summary>
         ///
@@ -56,6 +60,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Openai,
+        /// <summary>
+        ///
+        /// </summary>
+        Openrouter,
         /// <summary>
         ///
         /// </summary>
@@ -107,9 +115,11 @@ namespace HuggingFace
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.FireworksAi => "fireworks-ai",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Groq => "groq",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.HfInference => "hf-inference",
+                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.HumainAi => "humain-ai",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Novita => "novita",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Nscale => "nscale",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Openai => "openai",
+                PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Openrouter => "openrouter",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Ovhcloud => "ovhcloud",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Publicai => "publicai",
                 PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Replicate => "replicate",
@@ -136,9 +146,11 @@ namespace HuggingFace
                 "fireworks-ai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.FireworksAi,
                 "groq" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Groq,
                 "hf-inference" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.HfInference,
+                "humain-ai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.HumainAi,
                 "novita" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Novita,
                 "nscale" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Nscale,
                 "openai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Openai,
+                "openrouter" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Openrouter,
                 "ovhcloud" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Ovhcloud,
                 "publicai" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Publicai,
                 "replicate" => PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider.Replicate,

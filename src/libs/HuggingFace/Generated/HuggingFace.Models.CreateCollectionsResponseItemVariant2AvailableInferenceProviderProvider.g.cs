@@ -47,6 +47,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        HumainAi,
+        /// <summary>
+        ///
+        /// </summary>
         Novita,
         /// <summary>
         ///
@@ -56,6 +60,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Openai,
+        /// <summary>
+        ///
+        /// </summary>
+        Openrouter,
         /// <summary>
         ///
         /// </summary>
@@ -107,9 +115,11 @@ namespace HuggingFace
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.FireworksAi => "fireworks-ai",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Groq => "groq",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.HfInference => "hf-inference",
+                CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.HumainAi => "humain-ai",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Novita => "novita",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Nscale => "nscale",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Openai => "openai",
+                CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Openrouter => "openrouter",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Ovhcloud => "ovhcloud",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Publicai => "publicai",
                 CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Replicate => "replicate",
@@ -136,9 +146,11 @@ namespace HuggingFace
                 "fireworks-ai" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.FireworksAi,
                 "groq" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Groq,
                 "hf-inference" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.HfInference,
+                "humain-ai" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.HumainAi,
                 "novita" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Novita,
                 "nscale" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Nscale,
                 "openai" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Openai,
+                "openrouter" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Openrouter,
                 "ovhcloud" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Ovhcloud,
                 "publicai" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Publicai,
                 "replicate" => CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider.Replicate,

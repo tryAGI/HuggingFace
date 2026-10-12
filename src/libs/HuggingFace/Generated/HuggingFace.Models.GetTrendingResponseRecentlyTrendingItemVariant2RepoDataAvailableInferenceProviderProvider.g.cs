@@ -47,6 +47,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        HumainAi,
+        /// <summary>
+        ///
+        /// </summary>
         Novita,
         /// <summary>
         ///
@@ -56,6 +60,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Openai,
+        /// <summary>
+        ///
+        /// </summary>
+        Openrouter,
         /// <summary>
         ///
         /// </summary>
@@ -107,9 +115,11 @@ namespace HuggingFace
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.FireworksAi => "fireworks-ai",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Groq => "groq",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.HfInference => "hf-inference",
+                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.HumainAi => "humain-ai",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Novita => "novita",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nscale => "nscale",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Openai => "openai",
+                GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Openrouter => "openrouter",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Ovhcloud => "ovhcloud",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Publicai => "publicai",
                 GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Replicate => "replicate",
@@ -136,9 +146,11 @@ namespace HuggingFace
                 "fireworks-ai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.FireworksAi,
                 "groq" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Groq,
                 "hf-inference" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.HfInference,
+                "humain-ai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.HumainAi,
                 "novita" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Novita,
                 "nscale" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Nscale,
                 "openai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Openai,
+                "openrouter" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Openrouter,
                 "ovhcloud" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Ovhcloud,
                 "publicai" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Publicai,
                 "replicate" => GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider.Replicate,

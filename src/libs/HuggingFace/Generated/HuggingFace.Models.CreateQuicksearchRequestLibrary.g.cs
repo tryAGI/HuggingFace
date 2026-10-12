@@ -255,6 +255,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Drinkme,
+        /// <summary>
+        ///
+        /// </summary>
         Edsnlp,
         /// <summary>
         ///
@@ -1119,6 +1123,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Diffusionkit => "diffusionkit",
                 CreateQuicksearchRequestLibrary.DockingAtHome => "docking-at-home",
                 CreateQuicksearchRequestLibrary.Doctr => "doctr",
+                CreateQuicksearchRequestLibrary.Drinkme => "drinkme",
                 CreateQuicksearchRequestLibrary.Edsnlp => "edsnlp",
                 CreateQuicksearchRequestLibrary.Elm => "elm",
                 CreateQuicksearchRequestLibrary.Encoderfile => "encoderfile",
@@ -1388,6 +1393,7 @@ namespace HuggingFace
                 "diffusionkit" => CreateQuicksearchRequestLibrary.Diffusionkit,
                 "docking-at-home" => CreateQuicksearchRequestLibrary.DockingAtHome,
                 "doctr" => CreateQuicksearchRequestLibrary.Doctr,
+                "drinkme" => CreateQuicksearchRequestLibrary.Drinkme,
                 "edsnlp" => CreateQuicksearchRequestLibrary.Edsnlp,
                 "elm" => CreateQuicksearchRequestLibrary.Elm,
                 "encoderfile" => CreateQuicksearchRequestLibrary.Encoderfile,
