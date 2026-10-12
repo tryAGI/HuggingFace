@@ -47,6 +47,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        HumainAi,
+        /// <summary>
+        ///
+        /// </summary>
         Novita,
         /// <summary>
         ///
@@ -56,6 +60,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Openai,
+        /// <summary>
+        ///
+        /// </summary>
+        Openrouter,
         /// <summary>
         ///
         /// </summary>
@@ -107,9 +115,11 @@ namespace HuggingFace
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.FireworksAi => "fireworks-ai",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Groq => "groq",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.HfInference => "hf-inference",
+                GetPapersResponseLinkedModelAvailableInferenceProviderProvider.HumainAi => "humain-ai",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Novita => "novita",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Nscale => "nscale",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Openai => "openai",
+                GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Openrouter => "openrouter",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Ovhcloud => "ovhcloud",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Publicai => "publicai",
                 GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Replicate => "replicate",
@@ -136,9 +146,11 @@ namespace HuggingFace
                 "fireworks-ai" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.FireworksAi,
                 "groq" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Groq,
                 "hf-inference" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.HfInference,
+                "humain-ai" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.HumainAi,
                 "novita" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Novita,
                 "nscale" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Nscale,
                 "openai" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Openai,
+                "openrouter" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Openrouter,
                 "ovhcloud" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Ovhcloud,
                 "publicai" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Publicai,
                 "replicate" => GetPapersResponseLinkedModelAvailableInferenceProviderProvider.Replicate,
