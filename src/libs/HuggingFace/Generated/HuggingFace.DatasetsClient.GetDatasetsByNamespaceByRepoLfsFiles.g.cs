@@ -29,7 +29,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            ref string? cursor,
+            byte[]? cursor,
             ref global::HuggingFace.GetDatasetsLfsFilesDirection? direction,
             ref int? limit,
             ref global::HuggingFace.GetDatasetsLfsFilesSort? sort,
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            string? cursor,
+            byte[]? cursor,
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction,
             int? limit,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort,
@@ -76,7 +76,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsLfsFilesResponseItem>> GetDatasetsByNamespaceByRepoLfsFilesAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,
@@ -121,7 +121,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsLfsFilesResponseItem>>> GetDatasetsByNamespaceByRepoLfsFilesAsResponseAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,
@@ -135,7 +135,7 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 repo: ref repo,
-                cursor: ref cursor,
+                cursor: cursor,
                 direction: ref direction,
                 limit: ref limit,
                 sort: ref sort,
@@ -168,7 +168,7 @@ namespace HuggingFace
                                 path: $"/api/datasets/{@namespace}/{repo}/lfs-files",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("cursor", cursor?.ToString())
                                 .AddOptionalParameter("direction", direction?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("sort", sort?.ToValueString())

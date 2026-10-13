@@ -27,12 +27,12 @@ namespace HuggingFace
             };
         partial void PrepareGetPapersArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? cursor,
+            byte[]? cursor,
             ref int? limit);
         partial void PrepareGetPapersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? cursor,
+            byte[]? cursor,
             int? limit);
         partial void ProcessGetPapersResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -57,7 +57,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetPapersResponseItem>> GetPapersAsync(
-            string? cursor = default,
+            byte[]? cursor = default,
             int? limit = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -85,7 +85,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetPapersResponseItem>>> GetPapersAsResponseAsync(
-            string? cursor = default,
+            byte[]? cursor = default,
             int? limit = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -94,7 +94,7 @@ namespace HuggingFace
                 client: HttpClient);
             PrepareGetPapersArguments(
                 httpClient: HttpClient,
-                cursor: ref cursor,
+                cursor: cursor,
                 limit: ref limit);
 
 
@@ -124,7 +124,7 @@ namespace HuggingFace
                                 path: "/api/papers",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("cursor", cursor?.ToString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
