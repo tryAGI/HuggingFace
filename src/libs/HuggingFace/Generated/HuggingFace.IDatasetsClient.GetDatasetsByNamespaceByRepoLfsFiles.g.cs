@@ -27,7 +27,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsLfsFilesResponseItem>> GetDatasetsByNamespaceByRepoLfsFilesAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,
@@ -57,7 +57,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetDatasetsLfsFilesResponseItem>>> GetDatasetsByNamespaceByRepoLfsFilesAsResponseAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetDatasetsLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetDatasetsLfsFilesSort? sort = default,

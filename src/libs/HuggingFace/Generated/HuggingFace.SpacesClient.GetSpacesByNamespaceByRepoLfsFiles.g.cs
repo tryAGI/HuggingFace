@@ -29,7 +29,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            ref string? cursor,
+            byte[]? cursor,
             ref global::HuggingFace.GetSpacesLfsFilesDirection? direction,
             ref int? limit,
             ref global::HuggingFace.GetSpacesLfsFilesSort? sort,
@@ -39,7 +39,7 @@ namespace HuggingFace
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            string? cursor,
+            byte[]? cursor,
             global::HuggingFace.GetSpacesLfsFilesDirection? direction,
             int? limit,
             global::HuggingFace.GetSpacesLfsFilesSort? sort,
@@ -76,7 +76,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetSpacesLfsFilesResponseItem>> GetSpacesByNamespaceByRepoLfsFilesAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetSpacesLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetSpacesLfsFilesSort? sort = default,
@@ -121,7 +121,7 @@ namespace HuggingFace
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetSpacesLfsFilesResponseItem>>> GetSpacesByNamespaceByRepoLfsFilesAsResponseAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetSpacesLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetSpacesLfsFilesSort? sort = default,
@@ -135,7 +135,7 @@ namespace HuggingFace
                 httpClient: HttpClient,
                 @namespace: ref @namespace,
                 repo: ref repo,
-                cursor: ref cursor,
+                cursor: cursor,
                 direction: ref direction,
                 limit: ref limit,
                 sort: ref sort,
@@ -168,7 +168,7 @@ namespace HuggingFace
                                 path: $"/api/spaces/{@namespace}/{repo}/lfs-files",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("cursor", cursor?.ToString())
                                 .AddOptionalParameter("direction", direction?.ToValueString())
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("sort", sort?.ToValueString())

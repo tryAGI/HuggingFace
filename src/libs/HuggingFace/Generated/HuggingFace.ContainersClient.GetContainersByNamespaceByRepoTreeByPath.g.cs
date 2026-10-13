@@ -31,7 +31,7 @@ namespace HuggingFace
             ref string repo,
             ref string path,
             ref int? limit,
-            ref string? cursor,
+            byte[]? cursor,
             ref string? recursive,
             ref global::HuggingFace.GetContainersTreeSort? sort,
             ref global::HuggingFace.GetContainersTreeDirection? direction);
@@ -42,7 +42,7 @@ namespace HuggingFace
             string repo,
             string path,
             int? limit,
-            string? cursor,
+            byte[]? cursor,
             string? recursive,
             global::HuggingFace.GetContainersTreeSort? sort,
             global::HuggingFace.GetContainersTreeDirection? direction);
@@ -87,7 +87,7 @@ namespace HuggingFace
             string repo,
             string path,
             int? limit = default,
-            string? cursor = default,
+            byte[]? cursor = default,
             string? recursive = default,
             global::HuggingFace.GetContainersTreeSort? sort = default,
             global::HuggingFace.GetContainersTreeDirection? direction = default,
@@ -141,7 +141,7 @@ namespace HuggingFace
             string repo,
             string path,
             int? limit = default,
-            string? cursor = default,
+            byte[]? cursor = default,
             string? recursive = default,
             global::HuggingFace.GetContainersTreeSort? sort = default,
             global::HuggingFace.GetContainersTreeDirection? direction = default,
@@ -156,7 +156,7 @@ namespace HuggingFace
                 repo: ref repo,
                 path: ref path,
                 limit: ref limit,
-                cursor: ref cursor,
+                cursor: cursor,
                 recursive: ref recursive,
                 sort: ref sort,
                 direction: ref direction);
@@ -189,7 +189,7 @@ namespace HuggingFace
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("cursor", cursor?.ToString())
                                 .AddOptionalParameter("recursive", recursive)
                                 .AddOptionalParameter("sort", sort?.ToValueString())
                                 .AddOptionalParameter("direction", direction?.ToValueString())

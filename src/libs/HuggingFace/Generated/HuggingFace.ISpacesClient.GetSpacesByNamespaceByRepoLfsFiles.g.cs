@@ -27,7 +27,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::HuggingFace.GetSpacesLfsFilesResponseItem>> GetSpacesByNamespaceByRepoLfsFilesAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetSpacesLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetSpacesLfsFilesSort? sort = default,
@@ -57,7 +57,7 @@ namespace HuggingFace
         global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::HuggingFace.GetSpacesLfsFilesResponseItem>>> GetSpacesByNamespaceByRepoLfsFilesAsResponseAsync(
             string @namespace,
             string repo,
-            string? cursor = default,
+            byte[]? cursor = default,
             global::HuggingFace.GetSpacesLfsFilesDirection? direction = default,
             int? limit = default,
             global::HuggingFace.GetSpacesLfsFilesSort? sort = default,
