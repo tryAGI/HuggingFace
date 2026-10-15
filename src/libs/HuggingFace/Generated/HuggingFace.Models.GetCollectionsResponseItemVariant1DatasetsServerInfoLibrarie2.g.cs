@@ -11,6 +11,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Agentenv,
+        /// <summary>
+        ///
+        /// </summary>
         Argilla,
         /// <summary>
         ///
@@ -86,6 +90,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Agentenv => "agentenv",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Argilla => "argilla",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Dask => "dask",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Datadesigner => "datadesigner",
@@ -112,6 +117,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                "agentenv" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Agentenv,
                 "argilla" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Argilla,
                 "dask" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Dask,
                 "datadesigner" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Datadesigner,

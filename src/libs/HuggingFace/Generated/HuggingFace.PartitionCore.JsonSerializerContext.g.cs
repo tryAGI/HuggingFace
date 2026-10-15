@@ -244,6 +244,10 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsScimV2SchemasResponseItemMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsScimV2SchemasResponseMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<double>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsSafetensorsMetadataResponseIndex))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>), TypeInfoPropertyName = "AnyOfGetModelsSafetensorsMetadataResponseHeadersVariant1DictionaryStringString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?>), TypeInfoPropertyName = "AnyOfIListStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string, string>), TypeInfoPropertyName = "AnyOfBooleanStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadata))]
@@ -505,10 +509,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsExposeResponseHfTokenTokenRole), TypeInfoPropertyName = "PutJobsExposeResponseHfTokenTokenRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseStatus))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseStatusLastJob))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseOwner))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseOwnerType), TypeInfoPropertyName = "CreateScheduledJobsResponseOwnerType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseInitiator))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseInitiatorType), TypeInfoPropertyName = "CreateScheduledJobsResponseInitiatorType2")]
     internal sealed partial class PartitionCoreSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -552,6 +552,10 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateScheduledJobsRunResponseInitiatorVariant4_844475dccb0c0e89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_73a114b1b1cf4050")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_e8c9ffcd0d741b89")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseOwner))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseOwnerType), TypeInfoPropertyName = "CreateScheduledJobsResponseOwnerType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseInitiator))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseInitiatorType), TypeInfoPropertyName = "CreateScheduledJobsResponseInitiatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpec))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpecArch), TypeInfoPropertyName = "CreateScheduledJobsResponseJobSpecArch2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseJobSpecFlavor), TypeInfoPropertyName = "CreateScheduledJobsResponseJobSpecFlavor2")]
@@ -731,6 +735,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemType?), TypeInfoPropertyName = "NullableGetOrganizationsAuditLogExportResponseItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemAuthorType?), TypeInfoPropertyName = "NullableGetOrganizationsAuditLogExportResponseItemAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemTokenRole?), TypeInfoPropertyName = "NullableGetOrganizationsAuditLogExportResponseItemTokenRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>?), TypeInfoPropertyName = "NullableAnyOfGetModelsSafetensorsMetadataResponseHeadersVariant1DictionaryStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?>?), TypeInfoPropertyName = "NullableAnyOfIListStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string, string>?), TypeInfoPropertyName = "NullableAnyOfBooleanStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem?), TypeInfoPropertyName = "NullableGetKernelsResponseItemBuildMetadataCompatibilityTorchItem2")]
@@ -1012,6 +1017,7 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant13, global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant23>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, bool?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>());
