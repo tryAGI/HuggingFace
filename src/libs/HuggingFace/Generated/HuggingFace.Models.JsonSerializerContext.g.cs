@@ -51,6 +51,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsTagsByTypeType), TypeInfoPropertyName = "GetModelsTagsByTypeType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsUserAccessRequestStatus), TypeInfoPropertyName = "GetModelsUserAccessRequestStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsTreesizeResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsSafetensorsMetadataResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLfsFilesResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsLfsFilesResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsLfsFilesResponseItemPusher))]

@@ -11,6 +11,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Agentenv,
+        /// <summary>
+        ///
+        /// </summary>
         Argilla,
         /// <summary>
         ///
@@ -86,6 +90,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Agentenv => "agentenv",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Argilla => "argilla",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Dask => "dask",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Datadesigner => "datadesigner",
@@ -112,6 +117,7 @@ namespace HuggingFace
         {
             return value switch
             {
+                "agentenv" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Agentenv,
                 "argilla" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Argilla,
                 "dask" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Dask,
                 "datadesigner" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Datadesigner,

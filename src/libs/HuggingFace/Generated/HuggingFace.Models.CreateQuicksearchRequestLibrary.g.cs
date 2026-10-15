@@ -271,6 +271,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Ensomi,
+        /// <summary>
+        ///
+        /// </summary>
         Espnet,
         /// <summary>
         ///
@@ -1127,6 +1131,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Edsnlp => "edsnlp",
                 CreateQuicksearchRequestLibrary.Elm => "elm",
                 CreateQuicksearchRequestLibrary.Encoderfile => "encoderfile",
+                CreateQuicksearchRequestLibrary.Ensomi => "ensomi",
                 CreateQuicksearchRequestLibrary.Espnet => "espnet",
                 CreateQuicksearchRequestLibrary.Eupe => "eupe",
                 CreateQuicksearchRequestLibrary.F5Tts => "f5-tts",
@@ -1397,6 +1402,7 @@ namespace HuggingFace
                 "edsnlp" => CreateQuicksearchRequestLibrary.Edsnlp,
                 "elm" => CreateQuicksearchRequestLibrary.Elm,
                 "encoderfile" => CreateQuicksearchRequestLibrary.Encoderfile,
+                "ensomi" => CreateQuicksearchRequestLibrary.Ensomi,
                 "espnet" => CreateQuicksearchRequestLibrary.Espnet,
                 "eupe" => CreateQuicksearchRequestLibrary.Eupe,
                 "f5-tts" => CreateQuicksearchRequestLibrary.F5Tts,

@@ -159,6 +159,7 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetUsersFollowersResponseItemVariant1, global::HuggingFace.GetUsersFollowersResponseItemVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutModelsSettingsResponseGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutSpacesSettingsResponseGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>());
