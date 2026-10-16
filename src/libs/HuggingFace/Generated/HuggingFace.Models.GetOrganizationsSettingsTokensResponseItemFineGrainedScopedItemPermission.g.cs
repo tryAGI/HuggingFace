@@ -175,6 +175,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        RepoDeleteWrite,
+        /// <summary>
+        ///
+        /// </summary>
         RepoDevModeRead,
         /// <summary>
         ///
@@ -391,6 +395,7 @@ namespace HuggingFace
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoContentRead => "repo.content.read",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoContentWrite => "repo.content.write",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoContributeWrite => "repo.contribute.write",
+                GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoDeleteWrite => "repo.delete.write",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoDevModeRead => "repo.devMode.read",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoLfsRead => "repo.lfs.read",
                 GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoRead => "repo.read",
@@ -483,6 +488,7 @@ namespace HuggingFace
                 "repo.content.read" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoContentRead,
                 "repo.content.write" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoContentWrite,
                 "repo.contribute.write" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoContributeWrite,
+                "repo.delete.write" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoDeleteWrite,
                 "repo.devMode.read" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoDevModeRead,
                 "repo.lfs.read" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoLfsRead,
                 "repo.read" => GetOrganizationsSettingsTokensResponseItemFineGrainedScopedItemPermission.RepoRead,
