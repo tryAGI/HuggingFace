@@ -779,6 +779,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        SageMusic,
+        /// <summary>
+        ///
+        /// </summary>
         Sam3dBody,
         /// <summary>
         ///
@@ -1258,6 +1262,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.RouteePowertrain => "routee-powertrain",
                 GetQuicksearchLibrary2.Rwkv => "rwkv",
                 GetQuicksearchLibrary2.Saelens => "saelens",
+                GetQuicksearchLibrary2.SageMusic => "sage-music",
                 GetQuicksearchLibrary2.Sam3dBody => "sam-3d-body",
                 GetQuicksearchLibrary2.Sam3dObjects => "sam-3d-objects",
                 GetQuicksearchLibrary2.Sam2 => "sam2",
@@ -1529,6 +1534,7 @@ namespace HuggingFace
                 "routee-powertrain" => GetQuicksearchLibrary2.RouteePowertrain,
                 "rwkv" => GetQuicksearchLibrary2.Rwkv,
                 "saelens" => GetQuicksearchLibrary2.Saelens,
+                "sage-music" => GetQuicksearchLibrary2.SageMusic,
                 "sam-3d-body" => GetQuicksearchLibrary2.Sam3dBody,
                 "sam-3d-objects" => GetQuicksearchLibrary2.Sam3dObjects,
                 "sam2" => GetQuicksearchLibrary2.Sam2,
