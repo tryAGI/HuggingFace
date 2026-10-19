@@ -55,7 +55,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
             global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus status,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequest> requests,
+            global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>> requests,
             string? rejectionReason = default,
             string? resetReason = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,

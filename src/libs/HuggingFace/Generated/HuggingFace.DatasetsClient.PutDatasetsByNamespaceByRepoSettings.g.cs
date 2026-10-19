@@ -467,6 +467,9 @@ namespace HuggingFace
         /// <param name="orgMembersGated">
         /// If true, members of the owning org (except admins) must also go through the gated access-request flow.
         /// </param>
+        /// <param name="gatedProfileSharing">
+        /// What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.
+        /// </param>
         /// <param name="gatedNotificationsEmail"></param>
         /// <param name="gatedNotificationsMode"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -481,6 +484,7 @@ namespace HuggingFace
             global::HuggingFace.PutDatasetsSettingsRequestDiscussionsSorting? discussionsSorting = default,
             global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutDatasetsSettingsRequestGated?>? gated = default,
             bool? orgMembersGated = default,
+            global::HuggingFace.AnyOf<global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant2>? gatedProfileSharing = default,
             string? gatedNotificationsEmail = default,
             global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode? gatedNotificationsMode = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
@@ -494,6 +498,7 @@ namespace HuggingFace
                 DiscussionsSorting = discussionsSorting,
                 Gated = gated,
                 OrgMembersGated = orgMembersGated,
+                GatedProfileSharing = gatedProfileSharing,
                 GatedNotificationsEmail = gatedNotificationsEmail,
                 GatedNotificationsMode = gatedNotificationsMode,
             };

@@ -11,6 +11,12 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("requestId")]
+        public string? RequestId { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
         public string? UserId { get; set; }
 
@@ -44,6 +50,7 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateDatasetsUserAccessRequestBatchResponseItem" /> class.
         /// </summary>
         /// <param name="ok"></param>
+        /// <param name="requestId"></param>
         /// <param name="userId"></param>
         /// <param name="user"></param>
         /// <param name="error"></param>
@@ -52,10 +59,12 @@ namespace HuggingFace
 #endif
         public CreateDatasetsUserAccessRequestBatchResponseItem(
             bool ok,
+            string? requestId,
             string? userId,
             string? user,
             global::HuggingFace.CreateDatasetsUserAccessRequestBatchResponseItemError? error)
         {
+            this.RequestId = requestId;
             this.UserId = userId;
             this.User = user;
             this.Ok = ok;

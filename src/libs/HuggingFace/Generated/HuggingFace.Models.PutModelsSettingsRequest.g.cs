@@ -48,6 +48,13 @@ namespace HuggingFace
         public bool? OrgMembersGated { get; set; }
 
         /// <summary>
+        /// What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gatedProfileSharing")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2>? GatedProfileSharing { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("gatedNotificationsEmail")]
@@ -79,6 +86,9 @@ namespace HuggingFace
         /// <param name="orgMembersGated">
         /// If true, members of the owning org (except admins) must also go through the gated access-request flow.
         /// </param>
+        /// <param name="gatedProfileSharing">
+        /// What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.
+        /// </param>
         /// <param name="gatedNotificationsEmail"></param>
         /// <param name="gatedNotificationsMode"></param>
 #if NET7_0_OR_GREATER
@@ -91,6 +101,7 @@ namespace HuggingFace
             global::HuggingFace.PutModelsSettingsRequestDiscussionsSorting? discussionsSorting,
             global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutModelsSettingsRequestGated?>? gated,
             bool? orgMembersGated,
+            global::HuggingFace.AnyOf<global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2>? gatedProfileSharing,
             string? gatedNotificationsEmail,
             global::HuggingFace.PutModelsSettingsRequestGatedNotificationsMode? gatedNotificationsMode)
         {
@@ -100,6 +111,7 @@ namespace HuggingFace
             this.DiscussionsSorting = discussionsSorting;
             this.Gated = gated;
             this.OrgMembersGated = orgMembersGated;
+            this.GatedProfileSharing = gatedProfileSharing;
             this.GatedNotificationsEmail = gatedNotificationsEmail;
             this.GatedNotificationsMode = gatedNotificationsMode;
         }

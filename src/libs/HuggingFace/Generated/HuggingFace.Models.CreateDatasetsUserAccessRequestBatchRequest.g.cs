@@ -33,7 +33,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequest> Requests { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant3>> Requests { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -53,7 +53,7 @@ namespace HuggingFace
 #endif
         public CreateDatasetsUserAccessRequestBatchRequest(
             global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestStatus status,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequest> requests,
+            global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant3>> requests,
             string? rejectionReason,
             string? resetReason)
         {

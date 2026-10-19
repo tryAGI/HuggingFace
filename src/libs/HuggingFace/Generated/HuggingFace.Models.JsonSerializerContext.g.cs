@@ -9,6 +9,12 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3>), TypeInfoPropertyName = "CreateModelsUserAccessRequestHandleRequestVariant3_454a412683f2d585")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>>), TypeInfoPropertyName = "CreateModelsUserAccessRequestBatchRequestRequestVariant3_7bc9ff1aedc00a72")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>), TypeInfoPropertyName = "CreateModelsUserAccessRequestBatchRequestRequestVariant3_758ce21dd566edb9")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3>?), TypeInfoPropertyName = "CreateModelsUserAccessRequestHandleRequestVariant3_3ba687048afe5996")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>?), TypeInfoPropertyName = "CreateModelsUserAccessRequestBatchRequestRequestVariant3_6ba59411af620e82")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>>), TypeInfoPropertyName = "CreateModelsUserAccessRequestBatchRequestRequestVariant3_07373deb04ef5c14")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
@@ -33,13 +39,21 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestDiscussionsSorting), TypeInfoPropertyName = "PutModelsSettingsRequestDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutModelsSettingsRequestGated?>), TypeInfoPropertyName = "AnyOfBooleanPutModelsSettingsRequestGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestGated), TypeInfoPropertyName = "PutModelsSettingsRequestGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2>), TypeInfoPropertyName = "AnyOfPutModelsSettingsRequestGatedProfileSharingVariant1PutModelsSettingsRequestGatedProfileSharingVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestGatedNotificationsMode), TypeInfoPropertyName = "PutModelsSettingsRequestGatedNotificationsMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus), TypeInfoPropertyName = "CreateModelsUserAccessRequestHandleRequestStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status), TypeInfoPropertyName = "CreateModelsUserAccessRequestHandleRequestVariant1Status2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status), TypeInfoPropertyName = "CreateModelsUserAccessRequestHandleRequestVariant2Status2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status), TypeInfoPropertyName = "CreateModelsUserAccessRequestHandleRequestVariant3Status2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus), TypeInfoPropertyName = "CreateModelsUserAccessRequestBatchRequestStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequest>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestGrantRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsLikersExpandItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsLikersExpandItem), TypeInfoPropertyName = "GetModelsLikersExpandItem2")]
@@ -126,6 +140,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseDiscussionsSorting), TypeInfoPropertyName = "PutModelsSettingsResponseDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutModelsSettingsResponseGated?>), TypeInfoPropertyName = "AnyOfBooleanPutModelsSettingsResponseGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseGated), TypeInfoPropertyName = "PutModelsSettingsResponseGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant2>), TypeInfoPropertyName = "AnyOfPutModelsSettingsResponseGatedProfileSharingVariant1PutModelsSettingsResponseGatedProfileSharingVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseGatedNotificationsMode), TypeInfoPropertyName = "PutModelsSettingsResponseGatedNotificationsMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetModelsTreeResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsTreeResponseItem))]
@@ -186,8 +203,11 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestDiscussionsSorting?), TypeInfoPropertyName = "NullablePutModelsSettingsRequestDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutModelsSettingsRequestGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanPutModelsSettingsRequestGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestGated?), TypeInfoPropertyName = "NullablePutModelsSettingsRequestGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2>?), TypeInfoPropertyName = "NullableAnyOfPutModelsSettingsRequestGatedProfileSharingVariant1PutModelsSettingsRequestGatedProfileSharingVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsRequestGatedNotificationsMode?), TypeInfoPropertyName = "NullablePutModelsSettingsRequestGatedNotificationsMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus?), TypeInfoPropertyName = "NullableCreateModelsUserAccessRequestHandleRequestStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status?), TypeInfoPropertyName = "NullableCreateModelsUserAccessRequestHandleRequestVariant1Status2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status?), TypeInfoPropertyName = "NullableCreateModelsUserAccessRequestHandleRequestVariant2Status2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status?), TypeInfoPropertyName = "NullableCreateModelsUserAccessRequestHandleRequestVariant3Status2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus?), TypeInfoPropertyName = "NullableCreateModelsUserAccessRequestBatchRequestStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsLikersExpandItem?), TypeInfoPropertyName = "NullableGetModelsLikersExpandItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsLfsFilesDirection?), TypeInfoPropertyName = "NullableGetModelsLfsFilesDirection2")]
@@ -216,6 +236,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseDiscussionsSorting?), TypeInfoPropertyName = "NullablePutModelsSettingsResponseDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutModelsSettingsResponseGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanPutModelsSettingsResponseGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseGated?), TypeInfoPropertyName = "NullablePutModelsSettingsResponseGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant2>?), TypeInfoPropertyName = "NullableAnyOfPutModelsSettingsResponseGatedProfileSharingVariant1PutModelsSettingsResponseGatedProfileSharingVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutModelsSettingsResponseGatedNotificationsMode?), TypeInfoPropertyName = "NullablePutModelsSettingsResponseGatedNotificationsMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsTreeResponseItemType?), TypeInfoPropertyName = "NullableGetModelsTreeResponseItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsTreeResponseItemSecurityFileStatusStatus?), TypeInfoPropertyName = "NullableGetModelsTreeResponseItemSecurityFileStatusStatus2")]
@@ -235,7 +256,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchResponseItemError?), TypeInfoPropertyName = "NullableCreateModelsUserAccessRequestBatchResponseItemError2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateModelsLfsFilesDuplicateRequestFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateModelsPreuploadRequestFile>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetModelsLikersExpandItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetModelsCommitsExpandItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetModelsLfsFilesResponseItem>))]
@@ -314,7 +334,11 @@ namespace HuggingFace
         {
             global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutModelsSettingsRequestGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutModelsSettingsResponseGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsNotebookResponseVariant1, global::HuggingFace.GetModelsNotebookResponseVariant2, global::HuggingFace.GetModelsNotebookResponseVariant3>());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
@@ -357,9 +381,17 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.PutModelsSettingsRequestGatedNotificationsMode?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus)
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus?)
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus)
 
@@ -588,14 +620,34 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.PutModelsSettingsRequestGatedNotificationsModeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus))
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status))
                 {
-                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestStatusJsonConverter();
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant1StatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus?))
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status?))
                 {
-                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestStatusNullableJsonConverter();
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant1StatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant2StatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant2StatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant3StatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant3StatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus))

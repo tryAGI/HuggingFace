@@ -16,6 +16,13 @@ namespace HuggingFace
         public string Mode { get; set; } = "auto";
 
         /// <summary>
+        /// What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("profileSharing")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant2>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant2>? ProfileSharing { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -24,14 +31,19 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsResponseGatingVariant2Variant2" /> class.
         /// </summary>
+        /// <param name="profileSharing">
+        /// What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.
+        /// </param>
         /// <param name="mode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsResponseGatingVariant2Variant2(
+            global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant2>? profileSharing,
             string mode = "auto")
         {
             this.Mode = mode;
+            this.ProfileSharing = profileSharing;
         }
 
         /// <summary>

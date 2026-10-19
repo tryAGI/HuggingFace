@@ -9,7 +9,14 @@ namespace HuggingFace
     public sealed partial class GetDatasetsUserAccessRequestResponseItem
     {
         /// <summary>
-        ///
+        /// Id of the request, usable to accept/reject it even when the requester identity is not shared
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("requestId")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string RequestId { get; set; }
+
+        /// <summary>
+        /// Absent when the requester's profile is not shared
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         public global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUser? User { get; set; }
@@ -57,9 +64,14 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDatasetsUserAccessRequestResponseItem" /> class.
         /// </summary>
+        /// <param name="requestId">
+        /// Id of the request, usable to accept/reject it even when the requester identity is not shared
+        /// </param>
         /// <param name="status"></param>
         /// <param name="timestamp"></param>
-        /// <param name="user"></param>
+        /// <param name="user">
+        /// Absent when the requester's profile is not shared
+        /// </param>
         /// <param name="grantedBy"></param>
         /// <param name="fields"></param>
         /// <param name="reviewedAt"></param>
@@ -67,6 +79,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetDatasetsUserAccessRequestResponseItem(
+            string requestId,
             global::HuggingFace.GetDatasetsUserAccessRequestResponseItemStatus status,
             global::System.DateTime timestamp,
             global::HuggingFace.GetDatasetsUserAccessRequestResponseItemUser? user,
@@ -74,6 +87,7 @@ namespace HuggingFace
             global::System.Collections.Generic.Dictionary<string, string>? fields,
             global::System.DateTime? reviewedAt)
         {
+            this.RequestId = requestId ?? throw new global::System.ArgumentNullException(nameof(requestId));
             this.User = user;
             this.GrantedBy = grantedBy;
             this.Status = status;
