@@ -29,13 +29,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string repo,
-            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request);
+            global::HuggingFace.OneOf<global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3> request);
         partial void PrepareCreateDatasetsByNamespaceByRepoUserAccessRequestHandleRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string repo,
-            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request);
+            global::HuggingFace.OneOf<global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3> request);
         partial void ProcessCreateDatasetsByNamespaceByRepoUserAccessRequestHandleResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -54,7 +54,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -81,12 +81,10 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest request,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
             PrepareCreateDatasetsByNamespaceByRepoUserAccessRequestHandleArguments(
@@ -434,36 +432,17 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-        /// <param name="userId">
-        /// Either userId or user must be provided
-        /// </param>
-        /// <param name="user">
-        /// Either userId or user must be provided
-        /// </param>
-        /// <param name="status"></param>
-        /// <param name="rejectionReason"></param>
-        /// <param name="resetReason"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task CreateDatasetsByNamespaceByRepoUserAccessRequestHandleAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestStatus status,
-            string? userId = default,
-            string? user = default,
-            string? rejectionReason = default,
-            string? resetReason = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequest
+            var __request = new global::HuggingFace.OneOf<global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3>
             {
-                UserId = userId,
-                User = user,
-                Status = status,
-                RejectionReason = rejectionReason,
-                ResetReason = resetReason,
             };
 
             await CreateDatasetsByNamespaceByRepoUserAccessRequestHandleAsync(

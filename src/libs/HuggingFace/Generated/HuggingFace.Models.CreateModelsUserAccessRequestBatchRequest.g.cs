@@ -33,7 +33,7 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequest> Requests { get; set; }
+        public required global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>> Requests { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -53,7 +53,7 @@ namespace HuggingFace
 #endif
         public CreateModelsUserAccessRequestBatchRequest(
             global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus status,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequest> requests,
+            global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>> requests,
             string? rejectionReason,
             string? resetReason)
         {

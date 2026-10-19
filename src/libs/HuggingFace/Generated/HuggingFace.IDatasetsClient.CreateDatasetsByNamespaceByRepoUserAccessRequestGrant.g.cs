@@ -6,7 +6,7 @@ namespace HuggingFace
     {
         /// <summary>
         /// Grant access<br/>
-        /// Grant access to a user for a gated repository
+        /// Grant access to a user for a gated repository.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -23,7 +23,7 @@ namespace HuggingFace
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Grant access<br/>
-        /// Grant access to a user for a gated repository
+        /// Grant access to a user for a gated repository.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -40,7 +40,7 @@ namespace HuggingFace
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Grant access<br/>
-        /// Grant access to a user for a gated repository
+        /// Grant access to a user for a gated repository.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>

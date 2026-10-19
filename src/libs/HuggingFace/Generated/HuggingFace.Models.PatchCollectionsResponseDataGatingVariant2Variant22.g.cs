@@ -16,6 +16,13 @@ namespace HuggingFace
         public string Mode { get; set; } = "auto";
 
         /// <summary>
+        /// What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("profileSharing")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant22>))]
+        public global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant22>? ProfileSharing { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -24,14 +31,19 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchCollectionsResponseDataGatingVariant2Variant22" /> class.
         /// </summary>
+        /// <param name="profileSharing">
+        /// What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.
+        /// </param>
         /// <param name="mode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchCollectionsResponseDataGatingVariant2Variant22(
+            global::HuggingFace.AnyOf<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant22>? profileSharing,
             string mode = "auto")
         {
             this.Mode = mode;
+            this.ProfileSharing = profileSharing;
         }
 
         /// <summary>

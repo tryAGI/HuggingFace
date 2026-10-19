@@ -18,7 +18,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.CreateModelsUserAccessRequestHandleRequest request,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -35,7 +35,7 @@ namespace HuggingFace
             string @namespace,
             string repo,
 
-            global::HuggingFace.CreateModelsUserAccessRequestHandleRequest request,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -44,26 +44,12 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
-        /// <param name="userId">
-        /// Either userId or user must be provided
-        /// </param>
-        /// <param name="user">
-        /// Either userId or user must be provided
-        /// </param>
-        /// <param name="status"></param>
-        /// <param name="rejectionReason"></param>
-        /// <param name="resetReason"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateModelsByNamespaceByRepoUserAccessRequestHandleAsync(
             string @namespace,
             string repo,
-            global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus status,
-            string? userId = default,
-            string? user = default,
-            string? rejectionReason = default,
-            string? resetReason = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

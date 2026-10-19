@@ -67,8 +67,11 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutModelsSettingsRequestGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsRequestGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutSpacesSettingsRequestGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsRequestGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateQuicksearchRequestLang?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateQuicksearchRequestLibrary?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchRequestTypeVariant1Item>, global::System.Collections.Generic.IList<string>>());
@@ -80,10 +83,18 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateReposCreateRequestVariant1, global::HuggingFace.CreateReposCreateRequestVariant2, global::HuggingFace.CreateReposCreateRequestVariant3, global::HuggingFace.CreateReposCreateRequestVariant4>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateModelsUserAccessRequestBatchRequestRequestVariant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant1, global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant2, global::HuggingFace.CreateDatasetsUserAccessRequestBatchRequestRequestVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant2, global::HuggingFace.PatchCollectionsRequestGatingVariant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant1, global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant1, global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant22, global::HuggingFace.PatchCollectionsRequestGatingVariant32>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant12, global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant12, global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateJobsRequestVariant1, global::HuggingFace.CreateJobsRequestVariant2>());
@@ -161,8 +172,11 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetUsersFollowersResponseItemVariant1, global::HuggingFace.GetUsersFollowersResponseItemVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutModelsSettingsResponseGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutModelsSettingsResponseGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutSpacesSettingsResponseGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutDatasetsSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutDatasetsSettingsResponseGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsNotebookResponseVariant1, global::HuggingFace.GetModelsNotebookResponseVariant2, global::HuggingFace.GetModelsNotebookResponseVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDatasetsNotebookResponseVariant1, global::HuggingFace.GetDatasetsNotebookResponseVariant2, global::HuggingFace.GetDatasetsNotebookResponseVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSpacesNotebookResponseVariant1, global::HuggingFace.GetSpacesNotebookResponseVariant2, global::HuggingFace.GetSpacesNotebookResponseVariant3>());
@@ -228,6 +242,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseOwnerVariant1, global::HuggingFace.GetCollectionsResponseOwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant1, global::HuggingFace.GetCollectionsResponseItemVariant2, global::HuggingFace.GetCollectionsResponseItemVariant3, global::HuggingFace.GetCollectionsResponseItemVariant4, global::HuggingFace.GetCollectionsResponseItemVariant5, global::HuggingFace.GetCollectionsResponseItemVariant6>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseItemVariant1Gated?>());
@@ -239,6 +255,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant1, global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant1, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant2, global::HuggingFace.PatchCollectionsResponseDataItemVariant3, global::HuggingFace.PatchCollectionsResponseDataItemVariant4, global::HuggingFace.PatchCollectionsResponseDataItemVariant5, global::HuggingFace.PatchCollectionsResponseDataItemVariant6>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated?>());
@@ -250,6 +268,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant22, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant32>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant22, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant32>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant12, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant12, global::HuggingFace.GetCollectionsResponseItemVariant22, global::HuggingFace.GetCollectionsResponseItemVariant32, global::HuggingFace.GetCollectionsResponseItemVariant42, global::HuggingFace.GetCollectionsResponseItemVariant52, global::HuggingFace.GetCollectionsResponseItemVariant62>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseItemVariant1Gated2?>());
@@ -261,6 +281,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant12, global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant32>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant32>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant12, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant22, global::HuggingFace.PatchCollectionsResponseDataItemVariant32, global::HuggingFace.PatchCollectionsResponseDataItemVariant42, global::HuggingFace.PatchCollectionsResponseDataItemVariant52, global::HuggingFace.PatchCollectionsResponseDataItemVariant62>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated2?>());
@@ -272,6 +294,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3, global::HuggingFace.CreateCollectionsItemsResponseItemVariant4, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5, global::HuggingFace.CreateCollectionsItemsResponseItemVariant6>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated?>());
@@ -283,6 +307,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant22, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant32>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant22, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant32>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant12, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant12, global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant22, global::HuggingFace.CreateCollectionsItemsResponseItemVariant32, global::HuggingFace.CreateCollectionsItemsResponseItemVariant42, global::HuggingFace.CreateCollectionsItemsResponseItemVariant52, global::HuggingFace.CreateCollectionsItemsResponseItemVariant62>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated2?>());
@@ -294,6 +320,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsResponseOwnerVariant1, global::HuggingFace.CreateCollectionsResponseOwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsResponseItemVariant1, global::HuggingFace.CreateCollectionsResponseItemVariant2, global::HuggingFace.CreateCollectionsResponseItemVariant3, global::HuggingFace.CreateCollectionsResponseItemVariant4, global::HuggingFace.CreateCollectionsResponseItemVariant5, global::HuggingFace.CreateCollectionsResponseItemVariant6>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsResponseItemVariant1Gated?>());
@@ -306,6 +334,8 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant1Item>, global::System.Collections.Generic.IList<global::HuggingFace.GetCollectionsResponseVariant2Item>>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant3>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemGatingVariant2Variant3ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemOwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant1, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant2, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant3, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant4, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant5, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant6>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseVariant1ItemItemVariant1Gated?>());
@@ -757,13 +787,29 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateReposMoveRequestType?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus)
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus?)
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestStatus)
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestStatus?)
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1Status)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1Status?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2Status)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2Status?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3Status)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3Status?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus)
 
@@ -6000,24 +6046,64 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateReposMoveRequestTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus))
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status))
                 {
-                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestStatusJsonConverter();
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant1StatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestStatus?))
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant1Status?))
                 {
-                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestStatusNullableJsonConverter();
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant1StatusNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestStatus))
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status))
                 {
-                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestStatusJsonConverter();
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant2StatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestStatus?))
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant2Status?))
                 {
-                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestStatusNullableJsonConverter();
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant2StatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant3StatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestHandleRequestVariant3Status?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateModelsUserAccessRequestHandleRequestVariant3StatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1Status))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestVariant1StatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant1Status?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestVariant1StatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2Status))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestVariant2StatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant2Status?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestVariant2StatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3Status))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestVariant3StatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateDatasetsUserAccessRequestHandleRequestVariant3Status?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateDatasetsUserAccessRequestHandleRequestVariant3StatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateModelsUserAccessRequestBatchRequestStatus))

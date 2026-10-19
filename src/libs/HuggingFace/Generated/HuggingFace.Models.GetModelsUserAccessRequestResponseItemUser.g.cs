@@ -4,7 +4,7 @@
 namespace HuggingFace
 {
     /// <summary>
-    ///
+    /// Absent when the requester's profile is not shared
     /// </summary>
     public sealed partial class GetModelsUserAccessRequestResponseItemUser
     {

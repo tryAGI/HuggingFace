@@ -33,6 +33,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestDiscussionsSorting), TypeInfoPropertyName = "PutSpacesSettingsRequestDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutSpacesSettingsRequestGated?>), TypeInfoPropertyName = "AnyOfBooleanPutSpacesSettingsRequestGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestGated), TypeInfoPropertyName = "PutSpacesSettingsRequestGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant2>), TypeInfoPropertyName = "AnyOfPutSpacesSettingsRequestGatedProfileSharingVariant1PutSpacesSettingsRequestGatedProfileSharingVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestGatedNotificationsMode), TypeInfoPropertyName = "PutSpacesSettingsRequestGatedNotificationsMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSpacesSecretsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteSpacesSecretsRequest))]
@@ -133,6 +136,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseDiscussionsSorting), TypeInfoPropertyName = "PutSpacesSettingsResponseDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutSpacesSettingsResponseGated?>), TypeInfoPropertyName = "AnyOfBooleanPutSpacesSettingsResponseGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseGated), TypeInfoPropertyName = "PutSpacesSettingsResponseGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant2>), TypeInfoPropertyName = "AnyOfPutSpacesSettingsResponseGatedProfileSharingVariant1PutSpacesSettingsResponseGatedProfileSharingVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseGatedNotificationsMode), TypeInfoPropertyName = "PutSpacesSettingsResponseGatedNotificationsMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetSpacesTreeResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSpacesTreeResponseItem))]
@@ -199,6 +205,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestDiscussionsSorting?), TypeInfoPropertyName = "NullablePutSpacesSettingsRequestDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutSpacesSettingsRequestGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanPutSpacesSettingsRequestGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestGated?), TypeInfoPropertyName = "NullablePutSpacesSettingsRequestGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant2>?), TypeInfoPropertyName = "NullableAnyOfPutSpacesSettingsRequestGatedProfileSharingVariant1PutSpacesSettingsRequestGatedProfileSharingVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsRequestGatedNotificationsMode?), TypeInfoPropertyName = "NullablePutSpacesSettingsRequestGatedNotificationsMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesVolumesRequestVolumeType?), TypeInfoPropertyName = "NullablePutSpacesVolumesRequestVolumeType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSpacesHardwareRequestFlavor?), TypeInfoPropertyName = "NullableCreateSpacesHardwareRequestFlavor2")]
@@ -230,6 +237,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseDiscussionsSorting?), TypeInfoPropertyName = "NullablePutSpacesSettingsResponseDiscussionsSorting2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.PutSpacesSettingsResponseGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanPutSpacesSettingsResponseGated2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseGated?), TypeInfoPropertyName = "NullablePutSpacesSettingsResponseGated2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant2>?), TypeInfoPropertyName = "NullableAnyOfPutSpacesSettingsResponseGatedProfileSharingVariant1PutSpacesSettingsResponseGatedProfileSharingVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutSpacesSettingsResponseGatedNotificationsMode?), TypeInfoPropertyName = "NullablePutSpacesSettingsResponseGatedNotificationsMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSpacesTreeResponseItemType?), TypeInfoPropertyName = "NullableGetSpacesTreeResponseItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSpacesTreeResponseItemSecurityFileStatusStatus?), TypeInfoPropertyName = "NullableGetSpacesTreeResponseItemSecurityFileStatusStatus2")]
@@ -328,7 +336,9 @@ namespace HuggingFace
         {
             global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutSpacesSettingsRequestGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutSpacesSettingsResponseGated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSpacesNotebookResponseVariant1, global::HuggingFace.GetSpacesNotebookResponseVariant2, global::HuggingFace.GetSpacesNotebookResponseVariant3>());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
