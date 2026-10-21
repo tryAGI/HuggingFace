@@ -187,6 +187,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgServiceAccountTokenS3CredentialCreate,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgServiceAccountTokenS3CredentialDelete,
+        /// <summary>
+        ///
+        /// </summary>
         OrgServiceAccountTokenUpdate,
         /// <summary>
         ///
@@ -550,6 +558,8 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate => "org.service_account.token.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete => "org.service_account.token.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate => "org.service_account.token.rotate",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate => "org.service_account.token.s3_credential.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete => "org.service_account.token.s3_credential.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate => "org.service_account.token.update",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders => "org.settings.inference_providers",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd => "org.settings.inference_providers.keys.add",
@@ -681,6 +691,8 @@ namespace HuggingFace
                 "org.service_account.token.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate,
                 "org.service_account.token.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete,
                 "org.service_account.token.rotate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate,
+                "org.service_account.token.s3_credential.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate,
+                "org.service_account.token.s3_credential.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete,
                 "org.service_account.token.update" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate,
                 "org.settings.inference_providers" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders,
                 "org.settings.inference_providers.keys.add" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd,
