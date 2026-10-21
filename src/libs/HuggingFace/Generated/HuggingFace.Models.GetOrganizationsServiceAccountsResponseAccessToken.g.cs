@@ -90,6 +90,12 @@ namespace HuggingFace
         public bool? SkipNetworkSecurity { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("s3AccessKey")]
+        public string? S3AccessKey { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -112,6 +118,7 @@ namespace HuggingFace
         /// <param name="expiration"></param>
         /// <param name="last4"></param>
         /// <param name="skipNetworkSecurity"></param>
+        /// <param name="s3AccessKey"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -127,7 +134,8 @@ namespace HuggingFace
             global::System.DateTime? lastUsedAt,
             global::System.DateTime? expiration,
             string? last4,
-            bool? skipNetworkSecurity)
+            bool? skipNetworkSecurity,
+            string? s3AccessKey)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
@@ -141,6 +149,7 @@ namespace HuggingFace
             this.EndpointPatterns = endpointPatterns ?? throw new global::System.ArgumentNullException(nameof(endpointPatterns));
             this.Last4 = last4;
             this.SkipNetworkSecurity = skipNetworkSecurity;
+            this.S3AccessKey = s3AccessKey;
         }
 
         /// <summary>
