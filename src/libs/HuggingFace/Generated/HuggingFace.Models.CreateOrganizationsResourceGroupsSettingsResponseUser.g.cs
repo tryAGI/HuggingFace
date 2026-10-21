@@ -72,6 +72,12 @@ namespace HuggingFace
         public string? RoleSetBy { get; set; }
 
         /// <summary>
+        /// Whether the user is an external collaborator of the organization
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isExternalCollaborator")]
+        public bool? IsExternalCollaborator { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -90,6 +96,9 @@ namespace HuggingFace
         /// <param name="orgRole"></param>
         /// <param name="addedBy"></param>
         /// <param name="roleSetBy"></param>
+        /// <param name="isExternalCollaborator">
+        /// Whether the user is an external collaborator of the organization
+        /// </param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -103,6 +112,7 @@ namespace HuggingFace
             global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseUserOrgRole orgRole,
             string? addedBy,
             string? roleSetBy,
+            bool? isExternalCollaborator,
             string type = "user")
         {
             this.Type = type;
@@ -114,6 +124,7 @@ namespace HuggingFace
             this.OrgRole = orgRole;
             this.AddedBy = addedBy;
             this.RoleSetBy = roleSetBy;
+            this.IsExternalCollaborator = isExternalCollaborator;
         }
 
         /// <summary>

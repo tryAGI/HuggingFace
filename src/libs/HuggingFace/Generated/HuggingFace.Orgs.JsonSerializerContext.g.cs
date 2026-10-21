@@ -30,6 +30,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroup>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroup))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroupRole), TypeInfoPropertyName = "PutOrganizationsMembersRoleRequestResourceGroupRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType), TypeInfoPropertyName = "PutOrganizationsMembersAccountTypeRequestAccountType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesType), TypeInfoPropertyName = "GetOrganizationsSettingsRepositoriesType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesSort), TypeInfoPropertyName = "GetOrganizationsSettingsRepositoriesSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesDirection), TypeInfoPropertyName = "GetOrganizationsSettingsRepositoriesDirection2")]
@@ -108,6 +110,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContentResource?), TypeInfoPropertyName = "NullablePatchOrganizationsSettingsNetworkSecurityRequestAllowedContentResource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestRole?), TypeInfoPropertyName = "NullablePutOrganizationsMembersRoleRequestRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroupRole?), TypeInfoPropertyName = "NullablePutOrganizationsMembersRoleRequestResourceGroupRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType?), TypeInfoPropertyName = "NullablePutOrganizationsMembersAccountTypeRequestAccountType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesType?), TypeInfoPropertyName = "NullableGetOrganizationsSettingsRepositoriesType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesSort?), TypeInfoPropertyName = "NullableGetOrganizationsSettingsRepositoriesSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesDirection?), TypeInfoPropertyName = "NullableGetOrganizationsSettingsRepositoriesDirection2")]
@@ -239,6 +242,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroupRole?)
 
+                    || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType)
+
+                    || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType?)
+
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesType)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesType?)
@@ -342,6 +349,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroupRole?))
                 {
                     return new global::HuggingFace.JsonConverters.PutOrganizationsMembersRoleRequestResourceGroupRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType))
+                {
+                    return new global::HuggingFace.JsonConverters.PutOrganizationsMembersAccountTypeRequestAccountTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType?))
+                {
+                    return new global::HuggingFace.JsonConverters.PutOrganizationsMembersAccountTypeRequestAccountTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsSettingsRepositoriesType))
