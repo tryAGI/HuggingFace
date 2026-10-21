@@ -495,6 +495,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersRequestUserVariant2Role?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteRequestRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteRequestRole?)
+
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role?)
@@ -510,6 +514,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Scope)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Scope?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestMinRoleToCreate)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestMinRoleToCreate?)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource)
 
@@ -542,6 +550,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroupRole)
 
                     || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroupRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType)
+
+                    || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType?)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath)
 
@@ -1639,6 +1651,30 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1Type?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseResourceGroupRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseResourceGroupRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemResourceGroupRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemResourceGroupRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseResourceGroupRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseResourceGroupRole?)
+
                     || typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role)
 
                     || typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role?)
@@ -1718,6 +1754,14 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsSettingsResponseMinRoleToCreate)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsSettingsResponseMinRoleToCreate?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseMinRoleToCreate)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseMinRoleToCreate?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseBlockedContentResource)
 
@@ -5316,6 +5360,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsUsersRequestUserVariant2RoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteRequestRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInviteRequestRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteRequestRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInviteRequestRoleNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsResourceGroupsUsersRequestVariant1Role))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsResourceGroupsUsersRequestVariant1RoleJsonConverter();
@@ -5354,6 +5408,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1Scope?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1ScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestMinRoleToCreate))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsRequestMinRoleToCreateJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestMinRoleToCreate?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsRequestMinRoleToCreateNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource))
@@ -5434,6 +5498,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroupRole?))
                 {
                     return new global::HuggingFace.JsonConverters.PutOrganizationsMembersRoleRequestResourceGroupRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType))
+                {
+                    return new global::HuggingFace.JsonConverters.PutOrganizationsMembersAccountTypeRequestAccountTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersAccountTypeRequestAccountType?))
+                {
+                    return new global::HuggingFace.JsonConverters.PutOrganizationsMembersAccountTypeRequestAccountTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimV2UsersRequestOperationPath))
@@ -8176,6 +8250,66 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsUsersResponseResourceVariant1TypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInviteResponseRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInviteResponseRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseResourceGroupRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInviteResponseResourceGroupRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInviteResponseResourceGroupRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInviteResponseResourceGroupRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsInvitationsResponseItemRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsInvitationsResponseItemRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemResourceGroupRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsInvitationsResponseItemResourceGroupRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsInvitationsResponseItemResourceGroupRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsInvitationsResponseItemResourceGroupRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInvitationResendResponseRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInvitationResendResponseRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseResourceGroupRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInvitationResendResponseResourceGroupRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsInvitationResendResponseResourceGroupRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsInvitationResendResponseResourceGroupRoleNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1Role))
                 {
                     return new global::HuggingFace.JsonConverters.DeleteOrganizationsResourceGroupsUsersResponseAutoJoinVariant1RoleJsonConverter();
@@ -8374,6 +8508,26 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsResponseResourceVariant1Type?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsResponseResourceVariant1TypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsSettingsResponseMinRoleToCreate))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsSettingsResponseMinRoleToCreateJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsResourceGroupsSettingsResponseMinRoleToCreate?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsSettingsResponseMinRoleToCreateNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseMinRoleToCreate))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsResponseMinRoleToCreateJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponseMinRoleToCreate?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsResourceGroupsSettingsResponseMinRoleToCreateNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsSettingsNetworkSecurityResponseBlockedContentResource))

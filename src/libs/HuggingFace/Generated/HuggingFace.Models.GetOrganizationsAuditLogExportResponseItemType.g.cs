@@ -107,6 +107,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgChangeAccountType,
+        /// <summary>
+        ///
+        /// </summary>
         OrgChangeRole,
         /// <summary>
         ///
@@ -423,6 +427,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        ResourceGroupInviteRevoke,
+        /// <summary>
+        ///
+        /// </summary>
+        ResourceGroupInviteUser,
+        /// <summary>
+        ///
+        /// </summary>
         ResourceGroupRemoveUsers,
         /// <summary>
         ///
@@ -518,6 +530,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OauthToken => "oauth.token",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport => "org.audit_log.export",
+                GetOrganizationsAuditLogExportResponseItemType.OrgChangeAccountType => "org.change_account_type",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole => "org.change_role",
                 GetOrganizationsAuditLogExportResponseItemType.OrgCreate => "org.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgDelete => "org.delete",
@@ -597,6 +610,8 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.ResourceGroupChangeRole => "resource_group.change_role",
                 GetOrganizationsAuditLogExportResponseItemType.ResourceGroupCreate => "resource_group.create",
                 GetOrganizationsAuditLogExportResponseItemType.ResourceGroupDelete => "resource_group.delete",
+                GetOrganizationsAuditLogExportResponseItemType.ResourceGroupInviteRevoke => "resource_group.invite.revoke",
+                GetOrganizationsAuditLogExportResponseItemType.ResourceGroupInviteUser => "resource_group.invite_user",
                 GetOrganizationsAuditLogExportResponseItemType.ResourceGroupRemoveUsers => "resource_group.remove_users",
                 GetOrganizationsAuditLogExportResponseItemType.ResourceGroupSettings => "resource_group.settings",
                 GetOrganizationsAuditLogExportResponseItemType.ScheduledJobCreate => "scheduled_job.create",
@@ -646,6 +661,7 @@ namespace HuggingFace
                 "oauth.token" => GetOrganizationsAuditLogExportResponseItemType.OauthToken,
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
                 "org.audit_log.export" => GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport,
+                "org.change_account_type" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeAccountType,
                 "org.change_role" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole,
                 "org.create" => GetOrganizationsAuditLogExportResponseItemType.OrgCreate,
                 "org.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgDelete,
@@ -725,6 +741,8 @@ namespace HuggingFace
                 "resource_group.change_role" => GetOrganizationsAuditLogExportResponseItemType.ResourceGroupChangeRole,
                 "resource_group.create" => GetOrganizationsAuditLogExportResponseItemType.ResourceGroupCreate,
                 "resource_group.delete" => GetOrganizationsAuditLogExportResponseItemType.ResourceGroupDelete,
+                "resource_group.invite.revoke" => GetOrganizationsAuditLogExportResponseItemType.ResourceGroupInviteRevoke,
+                "resource_group.invite_user" => GetOrganizationsAuditLogExportResponseItemType.ResourceGroupInviteUser,
                 "resource_group.remove_users" => GetOrganizationsAuditLogExportResponseItemType.ResourceGroupRemoveUsers,
                 "resource_group.settings" => GetOrganizationsAuditLogExportResponseItemType.ResourceGroupSettings,
                 "scheduled_job.create" => GetOrganizationsAuditLogExportResponseItemType.ScheduledJobCreate,
