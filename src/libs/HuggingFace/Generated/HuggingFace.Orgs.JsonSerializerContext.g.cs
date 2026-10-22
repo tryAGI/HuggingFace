@@ -80,6 +80,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroup>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroup))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole), TypeInfoPropertyName = "GetOrganizationsMembersResponseItemResourceGroupRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole), TypeInfoPropertyName = "GetOrganizationsMembersResponseItemResourceGroupAssignedRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsBillingUsageByResourceGroupResponsePeriod))]
@@ -130,6 +131,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponseAllowedContentResource?), TypeInfoPropertyName = "NullablePatchOrganizationsSettingsNetworkSecurityResponseAllowedContentResource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsMembersResponseItemRole?), TypeInfoPropertyName = "NullableGetOrganizationsMembersResponseItemRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole?), TypeInfoPropertyName = "NullableGetOrganizationsMembersResponseItemResourceGroupRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole?), TypeInfoPropertyName = "NullableGetOrganizationsMembersResponseItemResourceGroupAssignedRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PutOrganizationsMembersRoleRequestResourceGroup>))]
@@ -304,7 +306,11 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole?);
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -509,6 +515,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole?))
                 {
                     return new global::HuggingFace.JsonConverters.GetOrganizationsMembersResponseItemResourceGroupRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsMembersResponseItemResourceGroupAssignedRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsMembersResponseItemResourceGroupAssignedRoleNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

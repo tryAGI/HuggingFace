@@ -7,6 +7,7 @@ namespace HuggingFace
         /// <summary>
         /// Add users<br/>
         /// Add one or more organization members to a resource group.<br/>
+        /// Use the `inherit` role to give a member the same role they have in the organization, following it when it changes.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -25,6 +26,7 @@ namespace HuggingFace
         /// <summary>
         /// Add users<br/>
         /// Add one or more organization members to a resource group.<br/>
+        /// Use the `inherit` role to give a member the same role they have in the organization, following it when it changes.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -43,6 +45,7 @@ namespace HuggingFace
         /// <summary>
         /// Add users<br/>
         /// Add one or more organization members to a resource group.<br/>
+        /// Use the `inherit` role to give a member the same role they have in the organization, following it when it changes.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>

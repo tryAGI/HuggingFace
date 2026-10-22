@@ -50,6 +50,7 @@ namespace HuggingFace
         /// <summary>
         /// Change user role<br/>
         /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user's SCIM groups.<br/>
+        /// Use the `inherit` role to give the member the same role they have in the organization, following it when it changes.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -83,6 +84,7 @@ namespace HuggingFace
         /// <summary>
         /// Change user role<br/>
         /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user's SCIM groups.<br/>
+        /// Use the `inherit` role to give the member the same role they have in the organization, following it when it changes.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>
@@ -463,6 +465,7 @@ namespace HuggingFace
         /// <summary>
         /// Change user role<br/>
         /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user's SCIM groups.<br/>
+        /// Use the `inherit` role to give the member the same role they have in the organization, following it when it changes.<br/>
         /// Requires the org to have a Team plan or higher.
         /// </summary>
         /// <param name="name"></param>

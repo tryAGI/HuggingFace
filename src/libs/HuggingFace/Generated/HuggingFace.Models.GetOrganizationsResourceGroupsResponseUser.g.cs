@@ -54,6 +54,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assignedRole")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseUserAssignedRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.GetOrganizationsResourceGroupsResponseUserAssignedRole AssignedRole { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("orgRole")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsResourceGroupsResponseUserOrgRoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -93,6 +101,7 @@ namespace HuggingFace
         /// <param name="name"></param>
         /// <param name="avatarUrl"></param>
         /// <param name="role"></param>
+        /// <param name="assignedRole"></param>
         /// <param name="orgRole"></param>
         /// <param name="addedBy"></param>
         /// <param name="roleSetBy"></param>
@@ -109,6 +118,7 @@ namespace HuggingFace
             string name,
             string avatarUrl,
             global::HuggingFace.GetOrganizationsResourceGroupsResponseUserRole role,
+            global::HuggingFace.GetOrganizationsResourceGroupsResponseUserAssignedRole assignedRole,
             global::HuggingFace.GetOrganizationsResourceGroupsResponseUserOrgRole orgRole,
             string? addedBy,
             string? roleSetBy,
@@ -121,6 +131,7 @@ namespace HuggingFace
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.Role = role;
+            this.AssignedRole = assignedRole;
             this.OrgRole = orgRole;
             this.AddedBy = addedBy;
             this.RoleSetBy = roleSetBy;
