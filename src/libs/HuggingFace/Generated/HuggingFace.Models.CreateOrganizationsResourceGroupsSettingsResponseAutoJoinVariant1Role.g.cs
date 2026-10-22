@@ -19,6 +19,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Inherit,
+        /// <summary>
+        ///
+        /// </summary>
         NoAccess,
         /// <summary>
         ///
@@ -44,6 +48,7 @@ namespace HuggingFace
             {
                 CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Admin => "admin",
                 CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Contributor => "contributor",
+                CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Inherit => "inherit",
                 CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.NoAccess => "no_access",
                 CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Read => "read",
                 CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Write => "write",
@@ -59,6 +64,7 @@ namespace HuggingFace
             {
                 "admin" => CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Admin,
                 "contributor" => CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Contributor,
+                "inherit" => CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Inherit,
                 "no_access" => CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.NoAccess,
                 "read" => CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Read,
                 "write" => CreateOrganizationsResourceGroupsSettingsResponseAutoJoinVariant1Role.Write,

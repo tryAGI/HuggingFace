@@ -38,6 +38,14 @@ namespace HuggingFace
         public required global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole Role { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assignedRole")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetOrganizationsMembersResponseItemResourceGroupAssignedRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole AssignedRole { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -50,6 +58,7 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="numUsers"></param>
         /// <param name="role"></param>
+        /// <param name="assignedRole"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,12 +66,14 @@ namespace HuggingFace
             string name,
             string id,
             double numUsers,
-            global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole role)
+            global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupRole role,
+            global::HuggingFace.GetOrganizationsMembersResponseItemResourceGroupAssignedRole assignedRole)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.NumUsers = numUsers;
             this.Role = role;
+            this.AssignedRole = assignedRole;
         }
 
         /// <summary>
