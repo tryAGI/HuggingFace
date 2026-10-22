@@ -31,7 +31,8 @@ namespace HuggingFace
             ref string? search,
             ref string? email,
             ref string? cursor,
-            ref int? limit);
+            ref int? limit,
+            ref string? includeExternal);
         partial void PrepareGetOrganizationsByNameMembersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -39,7 +40,8 @@ namespace HuggingFace
             string? search,
             string? email,
             string? cursor,
-            int? limit);
+            int? limit,
+            string? includeExternal);
         partial void ProcessGetOrganizationsByNameMembersResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -60,6 +62,9 @@ namespace HuggingFace
         /// <param name="limit">
         /// Default Value: 500
         /// </param>
+        /// <param name="includeExternal">
+        /// Include external collaborators. Only honored for org admins.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -69,6 +74,7 @@ namespace HuggingFace
             string? email = default,
             string? cursor = default,
             int? limit = default,
+            string? includeExternal = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -78,6 +84,7 @@ namespace HuggingFace
                 email: email,
                 cursor: cursor,
                 limit: limit,
+                includeExternal: includeExternal,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -95,6 +102,9 @@ namespace HuggingFace
         /// <param name="limit">
         /// Default Value: 500
         /// </param>
+        /// <param name="includeExternal">
+        /// Include external collaborators. Only honored for org admins.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
@@ -104,6 +114,7 @@ namespace HuggingFace
             string? email = default,
             string? cursor = default,
             int? limit = default,
+            string? includeExternal = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -115,7 +126,8 @@ namespace HuggingFace
                 search: ref search,
                 email: ref email,
                 cursor: ref cursor,
-                limit: ref limit);
+                limit: ref limit,
+                includeExternal: ref includeExternal);
 
 
             var __authorizations = global::HuggingFace.EndPointSecurityResolver.ResolveAuthorizations(
@@ -148,6 +160,7 @@ namespace HuggingFace
                                 .AddOptionalParameter("email", email)
                                 .AddOptionalParameter("cursor", cursor)
                                 .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("includeExternal", includeExternal)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::HuggingFace.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -193,7 +206,8 @@ namespace HuggingFace
                     search: search,
                     email: email,
                     cursor: cursor,
-                    limit: limit);
+                    limit: limit,
+                    includeExternal: includeExternal);
 
                 return __httpRequest;
             }
