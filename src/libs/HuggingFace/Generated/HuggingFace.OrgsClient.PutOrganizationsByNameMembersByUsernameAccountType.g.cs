@@ -42,7 +42,7 @@ namespace HuggingFace
 
         /// <summary>
         /// Change account type<br/>
-        /// Convert a member into an external collaborator, who isn't required to sign in with SSO, or back into a member. Need a paid plan.
+        /// Convert a member into an external collaborator, who isn't required to sign in with SSO, or back into a member. Need a paid plan. Doesn't affect the role, which must be changed separately.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="username"></param>
@@ -69,7 +69,7 @@ namespace HuggingFace
         }
         /// <summary>
         /// Change account type<br/>
-        /// Convert a member into an external collaborator, who isn't required to sign in with SSO, or back into a member. Need a paid plan.
+        /// Convert a member into an external collaborator, who isn't required to sign in with SSO, or back into a member. Need a paid plan. Doesn't affect the role, which must be changed separately.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="username"></param>
@@ -430,7 +430,7 @@ namespace HuggingFace
         }
         /// <summary>
         /// Change account type<br/>
-        /// Convert a member into an external collaborator, who isn't required to sign in with SSO, or back into a member. Need a paid plan.
+        /// Convert a member into an external collaborator, who isn't required to sign in with SSO, or back into a member. Need a paid plan. Doesn't affect the role, which must be changed separately.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="username"></param>
