@@ -66,6 +66,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyRequest))]
@@ -508,7 +509,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthApp))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthAppImageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrg))]
     internal sealed partial class DiscussionsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -573,6 +573,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2_5242c816dcee7b38")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03a436f808c58a38")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_531cd14b157a6497")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrg))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7Data))]
