@@ -66,6 +66,13 @@ namespace HuggingFace
         public required bool AreCidrRangesApproved { get; set; }
 
         /// <summary>
+        /// The admin-validated CIDR ranges
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("validatedIpRanges")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ValidatedIpRanges { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -84,6 +91,9 @@ namespace HuggingFace
         /// <param name="areCidrRangesApproved">
         /// Whether the declared ipRanges match the admin-validated CIDR ranges
         /// </param>
+        /// <param name="validatedIpRanges">
+        /// The admin-validated CIDR ranges
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -95,7 +105,8 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponseBlockedContent> blockedContents,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponseAllowedContent> allowedContents,
             bool keepReposMetadataVisible,
-            bool areCidrRangesApproved)
+            bool areCidrRangesApproved,
+            global::System.Collections.Generic.IList<string> validatedIpRanges)
         {
             this.EnforceAuth = enforceAuth;
             this.EnforceIpRestriction = enforceIpRestriction;
@@ -105,6 +116,7 @@ namespace HuggingFace
             this.AllowedContents = allowedContents ?? throw new global::System.ArgumentNullException(nameof(allowedContents));
             this.KeepReposMetadataVisible = keepReposMetadataVisible;
             this.AreCidrRangesApproved = areCidrRangesApproved;
+            this.ValidatedIpRanges = validatedIpRanges ?? throw new global::System.ArgumentNullException(nameof(validatedIpRanges));
         }
 
         /// <summary>
