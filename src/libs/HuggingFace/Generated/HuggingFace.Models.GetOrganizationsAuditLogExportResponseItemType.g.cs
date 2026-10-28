@@ -95,6 +95,30 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OauthAppCreate,
+        /// <summary>
+        ///
+        /// </summary>
+        OauthAppDelete,
+        /// <summary>
+        ///
+        /// </summary>
+        OauthAppSecretDelete,
+        /// <summary>
+        ///
+        /// </summary>
+        OauthAppSecretExpire,
+        /// <summary>
+        ///
+        /// </summary>
+        OauthAppSecretRotate,
+        /// <summary>
+        ///
+        /// </summary>
+        OauthAppUpdate,
+        /// <summary>
+        ///
+        /// </summary>
         OauthToken,
         /// <summary>
         ///
@@ -535,6 +559,12 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.JobsCreate => "jobs.create",
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateExpose => "jobs.update_expose",
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels => "jobs.update_labels",
+                GetOrganizationsAuditLogExportResponseItemType.OauthAppCreate => "oauth.app.create",
+                GetOrganizationsAuditLogExportResponseItemType.OauthAppDelete => "oauth.app.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretDelete => "oauth.app.secret.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretExpire => "oauth.app.secret.expire",
+                GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretRotate => "oauth.app.secret.rotate",
+                GetOrganizationsAuditLogExportResponseItemType.OauthAppUpdate => "oauth.app.update",
                 GetOrganizationsAuditLogExportResponseItemType.OauthToken => "oauth.token",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport => "org.audit_log.export",
@@ -668,6 +698,12 @@ namespace HuggingFace
                 "jobs.create" => GetOrganizationsAuditLogExportResponseItemType.JobsCreate,
                 "jobs.update_expose" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateExpose,
                 "jobs.update_labels" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels,
+                "oauth.app.create" => GetOrganizationsAuditLogExportResponseItemType.OauthAppCreate,
+                "oauth.app.delete" => GetOrganizationsAuditLogExportResponseItemType.OauthAppDelete,
+                "oauth.app.secret.delete" => GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretDelete,
+                "oauth.app.secret.expire" => GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretExpire,
+                "oauth.app.secret.rotate" => GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretRotate,
+                "oauth.app.update" => GetOrganizationsAuditLogExportResponseItemType.OauthAppUpdate,
                 "oauth.token" => GetOrganizationsAuditLogExportResponseItemType.OauthToken,
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
                 "org.audit_log.export" => GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport,
