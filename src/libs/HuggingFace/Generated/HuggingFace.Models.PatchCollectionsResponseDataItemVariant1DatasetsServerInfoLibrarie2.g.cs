@@ -51,6 +51,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Lerobot,
+        /// <summary>
+        ///
+        /// </summary>
         Mlcroissant,
         /// <summary>
         ///
@@ -100,6 +104,7 @@ namespace HuggingFace
                 PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Fiftyone => "fiftyone",
                 PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Harbor => "harbor",
                 PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Lance => "lance",
+                PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Lerobot => "lerobot",
                 PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Mlcroissant => "mlcroissant",
                 PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.NemoGym => "nemo-gym",
                 PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Openenv => "openenv",
@@ -127,6 +132,7 @@ namespace HuggingFace
                 "fiftyone" => PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Fiftyone,
                 "harbor" => PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Harbor,
                 "lance" => PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Lance,
+                "lerobot" => PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Lerobot,
                 "mlcroissant" => PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Mlcroissant,
                 "nemo-gym" => PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.NemoGym,
                 "openenv" => PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2.Openenv,

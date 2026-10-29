@@ -263,6 +263,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Egohand,
+        /// <summary>
+        ///
+        /// </summary>
         Elm,
         /// <summary>
         ///
@@ -771,6 +775,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        RtDetrHandDetectorV1,
+        /// <summary>
+        ///
+        /// </summary>
         Rwkv,
         /// <summary>
         ///
@@ -1133,6 +1141,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Doctr => "doctr",
                 CreateQuicksearchRequestLibrary.Drinkme => "drinkme",
                 CreateQuicksearchRequestLibrary.Edsnlp => "edsnlp",
+                CreateQuicksearchRequestLibrary.Egohand => "egohand",
                 CreateQuicksearchRequestLibrary.Elm => "elm",
                 CreateQuicksearchRequestLibrary.Encoderfile => "encoderfile",
                 CreateQuicksearchRequestLibrary.Ensomi => "ensomi",
@@ -1260,6 +1269,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Rkllm => "rkllm",
                 CreateQuicksearchRequestLibrary.RoboOrchardLab => "robo-orchard-lab",
                 CreateQuicksearchRequestLibrary.RouteePowertrain => "routee-powertrain",
+                CreateQuicksearchRequestLibrary.RtDetrHandDetectorV1 => "rt-detr-hand-detector-v1",
                 CreateQuicksearchRequestLibrary.Rwkv => "rwkv",
                 CreateQuicksearchRequestLibrary.Saelens => "saelens",
                 CreateQuicksearchRequestLibrary.SageMusic => "sage-music",
@@ -1405,6 +1415,7 @@ namespace HuggingFace
                 "doctr" => CreateQuicksearchRequestLibrary.Doctr,
                 "drinkme" => CreateQuicksearchRequestLibrary.Drinkme,
                 "edsnlp" => CreateQuicksearchRequestLibrary.Edsnlp,
+                "egohand" => CreateQuicksearchRequestLibrary.Egohand,
                 "elm" => CreateQuicksearchRequestLibrary.Elm,
                 "encoderfile" => CreateQuicksearchRequestLibrary.Encoderfile,
                 "ensomi" => CreateQuicksearchRequestLibrary.Ensomi,
@@ -1532,6 +1543,7 @@ namespace HuggingFace
                 "rkllm" => CreateQuicksearchRequestLibrary.Rkllm,
                 "robo-orchard-lab" => CreateQuicksearchRequestLibrary.RoboOrchardLab,
                 "routee-powertrain" => CreateQuicksearchRequestLibrary.RouteePowertrain,
+                "rt-detr-hand-detector-v1" => CreateQuicksearchRequestLibrary.RtDetrHandDetectorV1,
                 "rwkv" => CreateQuicksearchRequestLibrary.Rwkv,
                 "saelens" => CreateQuicksearchRequestLibrary.Saelens,
                 "sage-music" => CreateQuicksearchRequestLibrary.SageMusic,

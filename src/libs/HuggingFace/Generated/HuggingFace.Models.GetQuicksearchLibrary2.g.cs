@@ -263,6 +263,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Egohand,
+        /// <summary>
+        ///
+        /// </summary>
         Elm,
         /// <summary>
         ///
@@ -771,6 +775,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        RtDetrHandDetectorV1,
+        /// <summary>
+        ///
+        /// </summary>
         Rwkv,
         /// <summary>
         ///
@@ -1133,6 +1141,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Doctr => "doctr",
                 GetQuicksearchLibrary2.Drinkme => "drinkme",
                 GetQuicksearchLibrary2.Edsnlp => "edsnlp",
+                GetQuicksearchLibrary2.Egohand => "egohand",
                 GetQuicksearchLibrary2.Elm => "elm",
                 GetQuicksearchLibrary2.Encoderfile => "encoderfile",
                 GetQuicksearchLibrary2.Ensomi => "ensomi",
@@ -1260,6 +1269,7 @@ namespace HuggingFace
                 GetQuicksearchLibrary2.Rkllm => "rkllm",
                 GetQuicksearchLibrary2.RoboOrchardLab => "robo-orchard-lab",
                 GetQuicksearchLibrary2.RouteePowertrain => "routee-powertrain",
+                GetQuicksearchLibrary2.RtDetrHandDetectorV1 => "rt-detr-hand-detector-v1",
                 GetQuicksearchLibrary2.Rwkv => "rwkv",
                 GetQuicksearchLibrary2.Saelens => "saelens",
                 GetQuicksearchLibrary2.SageMusic => "sage-music",
@@ -1405,6 +1415,7 @@ namespace HuggingFace
                 "doctr" => GetQuicksearchLibrary2.Doctr,
                 "drinkme" => GetQuicksearchLibrary2.Drinkme,
                 "edsnlp" => GetQuicksearchLibrary2.Edsnlp,
+                "egohand" => GetQuicksearchLibrary2.Egohand,
                 "elm" => GetQuicksearchLibrary2.Elm,
                 "encoderfile" => GetQuicksearchLibrary2.Encoderfile,
                 "ensomi" => GetQuicksearchLibrary2.Ensomi,
@@ -1532,6 +1543,7 @@ namespace HuggingFace
                 "rkllm" => GetQuicksearchLibrary2.Rkllm,
                 "robo-orchard-lab" => GetQuicksearchLibrary2.RoboOrchardLab,
                 "routee-powertrain" => GetQuicksearchLibrary2.RouteePowertrain,
+                "rt-detr-hand-detector-v1" => GetQuicksearchLibrary2.RtDetrHandDetectorV1,
                 "rwkv" => GetQuicksearchLibrary2.Rwkv,
                 "saelens" => GetQuicksearchLibrary2.Saelens,
                 "sage-music" => GetQuicksearchLibrary2.SageMusic,

@@ -51,6 +51,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Lerobot,
+        /// <summary>
+        ///
+        /// </summary>
         Mlcroissant,
         /// <summary>
         ///
@@ -100,6 +104,7 @@ namespace HuggingFace
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Fiftyone => "fiftyone",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Harbor => "harbor",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Lance => "lance",
+                GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Lerobot => "lerobot",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Mlcroissant => "mlcroissant",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.NemoGym => "nemo-gym",
                 GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Openenv => "openenv",
@@ -127,6 +132,7 @@ namespace HuggingFace
                 "fiftyone" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Fiftyone,
                 "harbor" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Harbor,
                 "lance" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Lance,
+                "lerobot" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Lerobot,
                 "mlcroissant" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Mlcroissant,
                 "nemo-gym" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.NemoGym,
                 "openenv" => GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2.Openenv,

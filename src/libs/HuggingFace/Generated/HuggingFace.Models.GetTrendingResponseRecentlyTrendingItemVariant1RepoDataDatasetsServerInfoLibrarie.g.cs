@@ -51,6 +51,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Lerobot,
+        /// <summary>
+        ///
+        /// </summary>
         Mlcroissant,
         /// <summary>
         ///
@@ -100,6 +104,7 @@ namespace HuggingFace
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Fiftyone => "fiftyone",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Harbor => "harbor",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Lance => "lance",
+                GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Lerobot => "lerobot",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Mlcroissant => "mlcroissant",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.NemoGym => "nemo-gym",
                 GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Openenv => "openenv",
@@ -127,6 +132,7 @@ namespace HuggingFace
                 "fiftyone" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Fiftyone,
                 "harbor" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Harbor,
                 "lance" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Lance,
+                "lerobot" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Lerobot,
                 "mlcroissant" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Mlcroissant,
                 "nemo-gym" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.NemoGym,
                 "openenv" => GetTrendingResponseRecentlyTrendingItemVariant1RepoDataDatasetsServerInfoLibrarie.Openenv,
