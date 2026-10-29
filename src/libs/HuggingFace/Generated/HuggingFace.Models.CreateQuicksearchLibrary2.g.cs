@@ -263,6 +263,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Egohand,
+        /// <summary>
+        ///
+        /// </summary>
         Elm,
         /// <summary>
         ///
@@ -771,6 +775,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        RtDetrHandDetectorV1,
+        /// <summary>
+        ///
+        /// </summary>
         Rwkv,
         /// <summary>
         ///
@@ -1133,6 +1141,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Doctr => "doctr",
                 CreateQuicksearchLibrary2.Drinkme => "drinkme",
                 CreateQuicksearchLibrary2.Edsnlp => "edsnlp",
+                CreateQuicksearchLibrary2.Egohand => "egohand",
                 CreateQuicksearchLibrary2.Elm => "elm",
                 CreateQuicksearchLibrary2.Encoderfile => "encoderfile",
                 CreateQuicksearchLibrary2.Ensomi => "ensomi",
@@ -1260,6 +1269,7 @@ namespace HuggingFace
                 CreateQuicksearchLibrary2.Rkllm => "rkllm",
                 CreateQuicksearchLibrary2.RoboOrchardLab => "robo-orchard-lab",
                 CreateQuicksearchLibrary2.RouteePowertrain => "routee-powertrain",
+                CreateQuicksearchLibrary2.RtDetrHandDetectorV1 => "rt-detr-hand-detector-v1",
                 CreateQuicksearchLibrary2.Rwkv => "rwkv",
                 CreateQuicksearchLibrary2.Saelens => "saelens",
                 CreateQuicksearchLibrary2.SageMusic => "sage-music",
@@ -1405,6 +1415,7 @@ namespace HuggingFace
                 "doctr" => CreateQuicksearchLibrary2.Doctr,
                 "drinkme" => CreateQuicksearchLibrary2.Drinkme,
                 "edsnlp" => CreateQuicksearchLibrary2.Edsnlp,
+                "egohand" => CreateQuicksearchLibrary2.Egohand,
                 "elm" => CreateQuicksearchLibrary2.Elm,
                 "encoderfile" => CreateQuicksearchLibrary2.Encoderfile,
                 "ensomi" => CreateQuicksearchLibrary2.Ensomi,
@@ -1532,6 +1543,7 @@ namespace HuggingFace
                 "rkllm" => CreateQuicksearchLibrary2.Rkllm,
                 "robo-orchard-lab" => CreateQuicksearchLibrary2.RoboOrchardLab,
                 "routee-powertrain" => CreateQuicksearchLibrary2.RouteePowertrain,
+                "rt-detr-hand-detector-v1" => CreateQuicksearchLibrary2.RtDetrHandDetectorV1,
                 "rwkv" => CreateQuicksearchLibrary2.Rwkv,
                 "saelens" => CreateQuicksearchLibrary2.Saelens,
                 "sage-music" => CreateQuicksearchLibrary2.SageMusic,

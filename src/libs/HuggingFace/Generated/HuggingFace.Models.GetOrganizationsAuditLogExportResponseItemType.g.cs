@@ -103,6 +103,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OauthAppMove,
+        /// <summary>
+        ///
+        /// </summary>
         OauthAppSecretDelete,
         /// <summary>
         ///
@@ -561,6 +565,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels => "jobs.update_labels",
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppCreate => "oauth.app.create",
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppDelete => "oauth.app.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OauthAppMove => "oauth.app.move",
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretDelete => "oauth.app.secret.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretExpire => "oauth.app.secret.expire",
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretRotate => "oauth.app.secret.rotate",
@@ -700,6 +705,7 @@ namespace HuggingFace
                 "jobs.update_labels" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels,
                 "oauth.app.create" => GetOrganizationsAuditLogExportResponseItemType.OauthAppCreate,
                 "oauth.app.delete" => GetOrganizationsAuditLogExportResponseItemType.OauthAppDelete,
+                "oauth.app.move" => GetOrganizationsAuditLogExportResponseItemType.OauthAppMove,
                 "oauth.app.secret.delete" => GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretDelete,
                 "oauth.app.secret.expire" => GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretExpire,
                 "oauth.app.secret.rotate" => GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretRotate,

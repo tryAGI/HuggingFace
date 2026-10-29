@@ -84,6 +84,13 @@ namespace HuggingFace
         public global::HuggingFace.CreateOauthUserinfoResponseBillingMode? BillingMode { get; set; }
 
         /// <summary>
+        /// Names of the organizations the user belongs to, as a list of strings for OIDC clients syncing groups from a claim
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("groups")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> Groups { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("orgs")]
@@ -104,6 +111,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="isPro">
         /// Whether the user is a Pro user
+        /// </param>
+        /// <param name="groups">
+        /// Names of the organizations the user belongs to, as a list of strings for OIDC clients syncing groups from a claim
         /// </param>
         /// <param name="orgs"></param>
         /// <param name="name">
@@ -142,6 +152,7 @@ namespace HuggingFace
         public CreateOauthUserinfoResponse(
             string sub,
             bool isPro,
+            global::System.Collections.Generic.IList<string> groups,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOauthUserinfoResponseOrg> orgs,
             string? name,
             string? preferredUsername,
@@ -166,6 +177,7 @@ namespace HuggingFace
             this.IsPro = isPro;
             this.CanPay = canPay;
             this.BillingMode = billingMode;
+            this.Groups = groups ?? throw new global::System.ArgumentNullException(nameof(groups));
             this.Orgs = orgs ?? throw new global::System.ArgumentNullException(nameof(orgs));
         }
 
