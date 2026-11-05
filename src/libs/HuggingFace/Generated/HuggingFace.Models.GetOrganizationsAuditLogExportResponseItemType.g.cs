@@ -319,6 +319,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgSsoCredentialAuthorize,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgSsoCredentialDeauthorize,
+        /// <summary>
+        ///
+        /// </summary>
         OrgSsoJoin,
         /// <summary>
         ///
@@ -619,6 +627,8 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSso => "org.settings.sso",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoDisable => "org.settings.sso.disable",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoEnable => "org.settings.sso.enable",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSsoCredentialAuthorize => "org.sso_credential.authorize",
+                GetOrganizationsAuditLogExportResponseItemType.OrgSsoCredentialDeauthorize => "org.sso_credential.deauthorize",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSsoJoin => "org.sso_join",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSsoLogin => "org.sso_login",
                 GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequest => "org.token_approval.authorization_request",
@@ -759,6 +769,8 @@ namespace HuggingFace
                 "org.settings.sso" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSso,
                 "org.settings.sso.disable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoDisable,
                 "org.settings.sso.enable" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsSsoEnable,
+                "org.sso_credential.authorize" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoCredentialAuthorize,
+                "org.sso_credential.deauthorize" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoCredentialDeauthorize,
                 "org.sso_join" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoJoin,
                 "org.sso_login" => GetOrganizationsAuditLogExportResponseItemType.OrgSsoLogin,
                 "org.token_approval.authorization_request" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequest,

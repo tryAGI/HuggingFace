@@ -18,6 +18,9 @@ namespace HuggingFace
         /// <param name="cursor">
         /// Pagination cursor
         /// </param>
+        /// <param name="startAfter">
+        /// Start the listing right after this path, in the requested `sort` and `direction` (exclusive). With `sort=path` it does not need to exist; with `sort=uploadedAt` it must be an existing entry of the listed folder. Cannot be combined with `cursor`.
+        /// </param>
         /// <param name="recursive">
         /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.
         /// </param>
@@ -37,6 +40,7 @@ namespace HuggingFace
             string path,
             int? limit = default,
             byte[]? cursor = default,
+            string? startAfter = default,
             string? recursive = default,
             global::HuggingFace.GetContainersTreeSort? sort = default,
             global::HuggingFace.GetContainersTreeDirection? direction = default,
@@ -55,6 +59,9 @@ namespace HuggingFace
         /// </param>
         /// <param name="cursor">
         /// Pagination cursor
+        /// </param>
+        /// <param name="startAfter">
+        /// Start the listing right after this path, in the requested `sort` and `direction` (exclusive). With `sort=path` it does not need to exist; with `sort=uploadedAt` it must be an existing entry of the listed folder. Cannot be combined with `cursor`.
         /// </param>
         /// <param name="recursive">
         /// When false, returns collapsed directory entries instead of listing all files recursively. The number of entries returned can then be less than the limit, but there will always be a pagination link if there are more entries. Note: non-recursive listing hasn't a strong consistency guarantees.
@@ -75,6 +82,7 @@ namespace HuggingFace
             string path,
             int? limit = default,
             byte[]? cursor = default,
+            string? startAfter = default,
             string? recursive = default,
             global::HuggingFace.GetContainersTreeSort? sort = default,
             global::HuggingFace.GetContainersTreeDirection? direction = default,
