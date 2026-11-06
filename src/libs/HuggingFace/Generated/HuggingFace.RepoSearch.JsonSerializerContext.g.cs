@@ -76,12 +76,15 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseDataset>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseDataset))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType), TypeInfoPropertyName = "GetQuicksearchResponseDatasetAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseModel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseModel))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType), TypeInfoPropertyName = "GetQuicksearchResponseModelAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseOrg>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseOrg))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseSpace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseSpace))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType), TypeInfoPropertyName = "GetQuicksearchResponseSpaceAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponsePaper>))]
@@ -90,8 +93,10 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseCollection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseBucket>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseBucket))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType), TypeInfoPropertyName = "GetQuicksearchResponseBucketAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseContainer>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseContainer))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType), TypeInfoPropertyName = "GetQuicksearchResponseContainerAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseKernel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseKernel))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetQuicksearchResponseBlog>))]
@@ -99,12 +104,15 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseDataset>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseDataset))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType), TypeInfoPropertyName = "CreateQuicksearchResponseDatasetAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseModel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseModel))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType), TypeInfoPropertyName = "CreateQuicksearchResponseModelAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseOrg>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseOrg))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseSpace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseSpace))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType), TypeInfoPropertyName = "CreateQuicksearchResponseSpaceAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponsePaper>))]
@@ -113,8 +121,10 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseCollection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseBucket>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseBucket))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType), TypeInfoPropertyName = "CreateQuicksearchResponseBucketAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseContainer>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseContainer))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType), TypeInfoPropertyName = "CreateQuicksearchResponseContainerAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseKernel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseKernel))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchResponseBlog>))]
@@ -165,6 +175,16 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetSearchFullTextType2?, global::System.Collections.Generic.IList<global::HuggingFace.GetSearchFullTextTypeItem>>?), TypeInfoPropertyName = "NullableAnyOfGetSearchFullTextType2IListGetSearchFullTextTypeItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSearchFullTextType2?), TypeInfoPropertyName = "NullableGetSearchFullTextType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSearchFullTextTypeItem?), TypeInfoPropertyName = "NullableGetSearchFullTextTypeItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType?), TypeInfoPropertyName = "NullableGetQuicksearchResponseDatasetAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType?), TypeInfoPropertyName = "NullableGetQuicksearchResponseModelAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType?), TypeInfoPropertyName = "NullableGetQuicksearchResponseSpaceAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType?), TypeInfoPropertyName = "NullableGetQuicksearchResponseBucketAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType?), TypeInfoPropertyName = "NullableGetQuicksearchResponseContainerAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType?), TypeInfoPropertyName = "NullableCreateQuicksearchResponseDatasetAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType?), TypeInfoPropertyName = "NullableCreateQuicksearchResponseModelAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType?), TypeInfoPropertyName = "NullableCreateQuicksearchResponseSpaceAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType?), TypeInfoPropertyName = "NullableCreateQuicksearchResponseBucketAuthorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType?), TypeInfoPropertyName = "NullableCreateQuicksearchResponseContainerAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.List<global::HuggingFace.CreateQuicksearchRequestTypeVariant1Item>, global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateQuicksearchRequestTypeVariant1Item>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.List<global::HuggingFace.CreateQuicksearchRequestOrgsFilterVariant1Item>, global::System.Collections.Generic.List<string>>))]
@@ -394,7 +414,47 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetSearchFullTextTypeItem)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetSearchFullTextTypeItem?);
+                    || typeToConvert == typeof(global::HuggingFace.GetSearchFullTextTypeItem?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -629,6 +689,106 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetSearchFullTextTypeItem?))
                 {
                     return new global::HuggingFace.JsonConverters.GetSearchFullTextTypeItemNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseDatasetAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseDatasetAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseModelAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseModelAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseSpaceAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseSpaceAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseBucketAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseBucketAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseContainerAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseContainerAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseDatasetAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseDatasetAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseModelAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseModelAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseSpaceAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseSpaceAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseBucketAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseBucketAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseContainerAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseContainerAuthorTypeNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

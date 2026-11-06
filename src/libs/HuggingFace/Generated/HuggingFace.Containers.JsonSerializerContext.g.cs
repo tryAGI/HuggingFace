@@ -14,6 +14,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersResourceGroupRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersRequestVisibility), TypeInfoPropertyName = "CreateContainersRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateContainersRequestCdnItem>))]
@@ -32,6 +33,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetRegistryTokenResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersXetWriteTokenResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersXetReadTokenResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersResourceGroupResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersResourceGroupResponseType), TypeInfoPropertyName = "CreateContainersResourceGroupResponseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersResourceGroupResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersResponse))]
@@ -80,6 +84,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutContainersSettingsRequestCdnRegionRegion?), TypeInfoPropertyName = "NullablePutContainersSettingsRequestCdnRegionRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersTreeSort?), TypeInfoPropertyName = "NullableGetContainersTreeSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersTreeDirection?), TypeInfoPropertyName = "NullableGetContainersTreeDirection2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersResourceGroupResponseType?), TypeInfoPropertyName = "NullableCreateContainersResourceGroupResponseType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersResponseRepoType?), TypeInfoPropertyName = "NullableGetContainersResponseRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersResponseCdnRegionProvider?), TypeInfoPropertyName = "NullableGetContainersResponseCdnRegionProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersResponseCdnRegionRegion?), TypeInfoPropertyName = "NullableGetContainersResponseCdnRegionRegion2")]
@@ -200,6 +205,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetContainersTreeDirection)
 
                     || typeToConvert == typeof(global::HuggingFace.GetContainersTreeDirection?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetContainersResponseRepoType)
 
@@ -324,6 +333,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetContainersTreeDirection?))
                 {
                     return new global::HuggingFace.JsonConverters.GetContainersTreeDirectionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateContainersResourceGroupResponseTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateContainersResourceGroupResponseTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetContainersResponseRepoType))

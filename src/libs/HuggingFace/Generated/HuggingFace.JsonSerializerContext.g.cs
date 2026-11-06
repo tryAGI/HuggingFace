@@ -2479,6 +2479,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBucketsResourceGroupResponseType?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType?)
+
                     || typeToConvert == typeof(global::HuggingFace.PutModelsSettingsResponseVisibility)
 
                     || typeToConvert == typeof(global::HuggingFace.PutModelsSettingsResponseVisibility?)
@@ -3274,6 +3278,46 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility)
 
                     || typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetSpacesHardwareResponseItemAcceleratorType)
 
@@ -10356,6 +10400,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateBucketsResourceGroupResponseTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateContainersResourceGroupResponseTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateContainersResourceGroupResponseType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateContainersResourceGroupResponseTypeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.PutModelsSettingsResponseVisibility))
                 {
                     return new global::HuggingFace.JsonConverters.PutModelsSettingsResponseVisibilityJsonConverter();
@@ -12344,6 +12398,106 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibility?))
                 {
                     return new global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseDatasetAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseDatasetAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseDatasetAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseModelAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseModelAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseModelAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseSpaceAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseSpaceAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseSpaceAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseBucketAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseBucketAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseBucketAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseContainerAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetQuicksearchResponseContainerAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetQuicksearchResponseContainerAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseDatasetAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseDatasetAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseDatasetAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseModelAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseModelAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseModelAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseSpaceAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseSpaceAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseBucketAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseBucketAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseBucketAuthorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseContainerAuthorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateQuicksearchResponseContainerAuthorType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateQuicksearchResponseContainerAuthorTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetSpacesHardwareResponseItemAcceleratorType))

@@ -22,6 +22,13 @@ namespace HuggingFace
         public bool? Private { get; set; }
 
         /// <summary>
+        /// Whether the repo is owned by a user or an organization
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("authorType")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateQuicksearchResponseModelAuthorTypeJsonConverter))]
+        public global::HuggingFace.CreateQuicksearchResponseModelAuthorType? AuthorType { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trendingWeight")]
@@ -40,16 +47,21 @@ namespace HuggingFace
         /// <param name="id"></param>
         /// <param name="trendingWeight"></param>
         /// <param name="private"></param>
+        /// <param name="authorType">
+        /// Whether the repo is owned by a user or an organization
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateQuicksearchResponseModel(
             string id,
             double trendingWeight,
-            bool? @private)
+            bool? @private,
+            global::HuggingFace.CreateQuicksearchResponseModelAuthorType? authorType)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Private = @private;
+            this.AuthorType = authorType;
             this.TrendingWeight = trendingWeight;
         }
 
