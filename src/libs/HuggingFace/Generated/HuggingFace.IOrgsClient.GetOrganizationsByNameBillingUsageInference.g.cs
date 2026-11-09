@@ -13,7 +13,7 @@ namespace HuggingFace
         /// Default Value: 2026-11-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-11-07T00:37:26.070Z
+        /// Default Value: 2026-11-06T16:59:11.537Z
         /// </param>
         /// <param name="limit">
         /// Number of daily periods per page<br/>
@@ -38,7 +38,7 @@ namespace HuggingFace
         /// Default Value: 2026-11-01T00:00:00.000Z
         /// </param>
         /// <param name="endDate">
-        /// Default Value: 2026-11-07T00:37:26.070Z
+        /// Default Value: 2026-11-06T16:59:11.537Z
         /// </param>
         /// <param name="limit">
         /// Number of daily periods per page<br/>
