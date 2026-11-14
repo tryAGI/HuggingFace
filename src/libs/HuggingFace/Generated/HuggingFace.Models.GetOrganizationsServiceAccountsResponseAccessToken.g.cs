@@ -73,6 +73,13 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("userPermissions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission> UserPermissions { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endpointPatterns")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> EndpointPatterns { get; set; }
@@ -88,6 +95,12 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipNetworkSecurity")]
         public bool? SkipNetworkSecurity { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("canReadGatedRepos")]
+        public bool? CanReadGatedRepos { get; set; }
 
         /// <summary>
         ///
@@ -113,11 +126,13 @@ namespace HuggingFace
         /// <param name="permissions"></param>
         /// <param name="repoIds"></param>
         /// <param name="repoPermissions"></param>
+        /// <param name="userPermissions"></param>
         /// <param name="endpointPatterns"></param>
         /// <param name="lastUsedAt"></param>
         /// <param name="expiration"></param>
         /// <param name="last4"></param>
         /// <param name="skipNetworkSecurity"></param>
+        /// <param name="canReadGatedRepos"></param>
         /// <param name="s3AccessKey"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -130,11 +145,13 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission> permissions,
             global::System.Collections.Generic.IList<string> repoIds,
             global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission> repoPermissions,
+            global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission> userPermissions,
             global::System.Collections.Generic.IList<string> endpointPatterns,
             global::System.DateTime? lastUsedAt,
             global::System.DateTime? expiration,
             string? last4,
             bool? skipNetworkSecurity,
+            bool? canReadGatedRepos,
             string? s3AccessKey)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -146,9 +163,11 @@ namespace HuggingFace
             this.Permissions = permissions ?? throw new global::System.ArgumentNullException(nameof(permissions));
             this.RepoIds = repoIds ?? throw new global::System.ArgumentNullException(nameof(repoIds));
             this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
+            this.UserPermissions = userPermissions ?? throw new global::System.ArgumentNullException(nameof(userPermissions));
             this.EndpointPatterns = endpointPatterns ?? throw new global::System.ArgumentNullException(nameof(endpointPatterns));
             this.Last4 = last4;
             this.SkipNetworkSecurity = skipNetworkSecurity;
+            this.CanReadGatedRepos = canReadGatedRepos;
             this.S3AccessKey = s3AccessKey;
         }
 

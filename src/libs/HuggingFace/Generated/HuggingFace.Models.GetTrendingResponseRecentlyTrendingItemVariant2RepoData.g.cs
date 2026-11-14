@@ -39,6 +39,12 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("openRouterProviders")]
+        public global::System.Collections.Generic.IList<string>? OpenRouterProviders { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isLikedByUser")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsLikedByUser { get; set; }
@@ -134,6 +140,7 @@ namespace HuggingFace
         /// <param name="likes"></param>
         /// <param name="private"></param>
         /// <param name="gated"></param>
+        /// <param name="openRouterProviders"></param>
         /// <param name="pipelineTag"></param>
         /// <param name="resourceGroup"></param>
         /// <param name="numParameters"></param>
@@ -154,6 +161,7 @@ namespace HuggingFace
             double likes,
             bool @private,
             global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataGated?> gated,
+            global::System.Collections.Generic.IList<string>? openRouterProviders,
             string? pipelineTag,
             global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataResourceGroup? resourceGroup,
             double? numParameters,
@@ -166,6 +174,7 @@ namespace HuggingFace
             this.Downloads = downloads;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.AvailableInferenceProviders = availableInferenceProviders ?? throw new global::System.ArgumentNullException(nameof(availableInferenceProviders));
+            this.OpenRouterProviders = openRouterProviders;
             this.IsLikedByUser = isLikedByUser;
             this.LastModified = lastModified;
             this.Likes = likes;

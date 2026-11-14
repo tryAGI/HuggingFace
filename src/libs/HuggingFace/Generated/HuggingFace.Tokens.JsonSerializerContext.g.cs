@@ -15,7 +15,12 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateCredentialsRevokeRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCredentialsRevokeRequestCredential>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCredentialsRevokeRequestCredential>), TypeInfoPropertyName = "AnyOfStringCreateCredentialsRevokeRequestCredential2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateCredentialsRevokeRequestCredential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCredentialsRevokeRequestCredential>?), TypeInfoPropertyName = "NullableAnyOfStringCreateCredentialsRevokeRequestCredential2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.AnyOf<string, global::HuggingFace.CreateCredentialsRevokeRequestCredential>>))]
     internal sealed partial class TokensSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -64,6 +69,7 @@ namespace HuggingFace
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.CreateCredentialsRevokeRequestCredential>());
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()

@@ -16,6 +16,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDuplicateRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDuplicateRequestVisibility), TypeInfoPropertyName = "CreateDuplicateRequestVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDuplicateRequestHardware), TypeInfoPropertyName = "CreateDuplicateRequestHardware2")]
@@ -65,8 +66,14 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateReposCreateRequestVariant4Sdk), TypeInfoPropertyName = "CreateReposCreateRequestVariant4Sdk2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateReposMoveRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateReposMoveRequestType), TypeInfoPropertyName = "CreateReposMoveRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType), TypeInfoPropertyName = "GetSettingsTrustedPublishersRepoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType), TypeInfoPropertyName = "CreateSettingsTrustedPublishersRepoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType), TypeInfoPropertyName = "DeleteSettingsTrustedPublishersRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDuplicateRepoType), TypeInfoPropertyName = "CreateDuplicateRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDuplicateStatusRepoType), TypeInfoPropertyName = "GetDuplicateStatusRepoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetSettingsTrustedPublishersResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDuplicateResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDuplicateStatusResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateReposCreateResponse))]
@@ -95,6 +102,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateReposCreateRequestVariant4VolumeType?), TypeInfoPropertyName = "NullableCreateReposCreateRequestVariant4VolumeType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateReposCreateRequestVariant4Sdk?), TypeInfoPropertyName = "NullableCreateReposCreateRequestVariant4Sdk2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateReposMoveRequestType?), TypeInfoPropertyName = "NullableCreateReposMoveRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType?), TypeInfoPropertyName = "NullableGetSettingsTrustedPublishersRepoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType?), TypeInfoPropertyName = "NullableCreateSettingsTrustedPublishersRepoType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType?), TypeInfoPropertyName = "NullableDeleteSettingsTrustedPublishersRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDuplicateRepoType?), TypeInfoPropertyName = "NullableCreateDuplicateRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDuplicateStatusRepoType?), TypeInfoPropertyName = "NullableGetDuplicateStatusRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateDuplicateRequestSecret>))]
@@ -107,6 +117,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateReposCreateRequestVariant4Secret>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateReposCreateRequestVariant4Variable>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateReposCreateRequestVariant4Volume>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsTrustedPublishersResponseItem>))]
     internal sealed partial class ReposSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -268,6 +279,18 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateReposMoveRequestType)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateReposMoveRequestType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateDuplicateRepoType)
 
@@ -510,6 +533,36 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateReposMoveRequestType?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateReposMoveRequestTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteSettingsTrustedPublishersRepoTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateDuplicateRepoType))

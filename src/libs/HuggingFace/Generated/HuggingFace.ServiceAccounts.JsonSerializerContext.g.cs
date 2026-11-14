@@ -20,11 +20,15 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission), TypeInfoPropertyName = "CreateOrganizationsServiceAccountsTokensRequestPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission), TypeInfoPropertyName = "CreateOrganizationsServiceAccountsTokensRequestRepoPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission), TypeInfoPropertyName = "CreateOrganizationsServiceAccountsTokensRequestUserPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission), TypeInfoPropertyName = "PatchOrganizationsServiceAccountsTokensRequestPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission), TypeInfoPropertyName = "PatchOrganizationsServiceAccountsTokensRequestRepoPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission), TypeInfoPropertyName = "PatchOrganizationsServiceAccountsTokensRequestUserPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsResponse))]
@@ -36,6 +40,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission), TypeInfoPropertyName = "GetOrganizationsServiceAccountsResponseAccessTokenPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission), TypeInfoPropertyName = "GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission), TypeInfoPropertyName = "GetOrganizationsServiceAccountsResponseAccessTokenUserPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensResponseTokenInfo))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensResponse))]
@@ -44,19 +50,25 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission?), TypeInfoPropertyName = "NullableCreateOrganizationsServiceAccountsTokensRequestPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission?), TypeInfoPropertyName = "NullableCreateOrganizationsServiceAccountsTokensRequestRepoPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission?), TypeInfoPropertyName = "NullableCreateOrganizationsServiceAccountsTokensRequestUserPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission?), TypeInfoPropertyName = "NullablePatchOrganizationsServiceAccountsTokensRequestPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission?), TypeInfoPropertyName = "NullablePatchOrganizationsServiceAccountsTokensRequestRepoPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission?), TypeInfoPropertyName = "NullablePatchOrganizationsServiceAccountsTokensRequestUserPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRole?), TypeInfoPropertyName = "NullableGetOrganizationsServiceAccountsResponseAccessTokenRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission?), TypeInfoPropertyName = "NullableGetOrganizationsServiceAccountsResponseAccessTokenPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?), TypeInfoPropertyName = "NullableGetOrganizationsServiceAccountsResponseAccessTokenRepoPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission?), TypeInfoPropertyName = "NullableGetOrganizationsServiceAccountsResponseAccessTokenUserPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetOrganizationsServiceAccountsResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessToken>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission>))]
     internal sealed partial class ServiceAccountsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -134,6 +146,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission?)
+
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission?)
@@ -141,6 +157,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRole)
 
@@ -152,7 +172,11 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?);
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -179,6 +203,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestRepoPermissionNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestUserPermissionNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestPermissionJsonConverter();
@@ -197,6 +231,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission?))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestRepoPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestUserPermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRole))
@@ -227,6 +271,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?))
                 {
                     return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenUserPermissionNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

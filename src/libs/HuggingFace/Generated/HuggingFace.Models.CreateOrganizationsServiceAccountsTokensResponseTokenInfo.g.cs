@@ -52,6 +52,13 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("userPermissions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> UserPermissions { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endpointPatterns")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> EndpointPatterns { get; set; }
@@ -62,6 +69,13 @@ namespace HuggingFace
         [global::System.Text.Json.Serialization.JsonPropertyName("skipNetworkSecurity")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool SkipNetworkSecurity { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("canReadGatedRepos")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool CanReadGatedRepos { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -77,8 +91,10 @@ namespace HuggingFace
         /// <param name="createdAt"></param>
         /// <param name="repoIds"></param>
         /// <param name="repoPermissions"></param>
+        /// <param name="userPermissions"></param>
         /// <param name="endpointPatterns"></param>
         /// <param name="skipNetworkSecurity"></param>
+        /// <param name="canReadGatedRepos"></param>
         /// <param name="permissions"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -89,8 +105,10 @@ namespace HuggingFace
             string createdAt,
             global::System.Collections.Generic.IList<string> repoIds,
             global::System.Collections.Generic.IList<string> repoPermissions,
+            global::System.Collections.Generic.IList<string> userPermissions,
             global::System.Collections.Generic.IList<string> endpointPatterns,
             bool skipNetworkSecurity,
+            bool canReadGatedRepos,
             global::System.Collections.Generic.IList<string>? permissions)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -99,8 +117,10 @@ namespace HuggingFace
             this.Permissions = permissions;
             this.RepoIds = repoIds ?? throw new global::System.ArgumentNullException(nameof(repoIds));
             this.RepoPermissions = repoPermissions ?? throw new global::System.ArgumentNullException(nameof(repoPermissions));
+            this.UserPermissions = userPermissions ?? throw new global::System.ArgumentNullException(nameof(userPermissions));
             this.EndpointPatterns = endpointPatterns ?? throw new global::System.ArgumentNullException(nameof(endpointPatterns));
             this.SkipNetworkSecurity = skipNetworkSecurity;
+            this.CanReadGatedRepos = canReadGatedRepos;
         }
 
         /// <summary>
