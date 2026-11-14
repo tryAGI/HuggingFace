@@ -47,6 +47,7 @@ namespace HuggingFace
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.JobStatusCancelReason?, string>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.CreateCredentialsRevokeRequestCredential>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant12, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant22>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant1, global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant2>());
@@ -72,6 +73,7 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsRequestGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateQuicksearchRequestLang?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateQuicksearchRequestLibrary?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchRequestTypeVariant1Item>, global::System.Collections.Generic.IList<string>>());
@@ -177,6 +179,10 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutDatasetsSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutDatasetsSettingsResponseGatedProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsNotebookResponseVariant1, global::HuggingFace.GetModelsNotebookResponseVariant2, global::HuggingFace.GetModelsNotebookResponseVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDatasetsNotebookResponseVariant1, global::HuggingFace.GetDatasetsNotebookResponseVariant2, global::HuggingFace.GetDatasetsNotebookResponseVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSpacesNotebookResponseVariant1, global::HuggingFace.GetSpacesNotebookResponseVariant2, global::HuggingFace.GetSpacesNotebookResponseVariant3>());
@@ -535,6 +541,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission?)
+
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission?)
@@ -542,6 +552,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestRole)
 
@@ -658,6 +672,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode)
 
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus)
 
@@ -1170,6 +1188,18 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateSpacesCommitContentType)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateSpacesCommitContentType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType)
 
@@ -1822,6 +1852,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemRole)
 
@@ -2530,6 +2564,46 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsResponseGatedNotificationsMode)
 
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsResponseGatedNotificationsMode?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetModelsTreeResponseItemType)
 
@@ -5540,6 +5614,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestRepoPermissionNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestUserPermissionNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestPermissionJsonConverter();
@@ -5558,6 +5642,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission?))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestRepoPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestUserPermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestRole))
@@ -5848,6 +5942,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode?))
                 {
                     return new global::HuggingFace.JsonConverters.PutDatasetsSettingsRequestGatedNotificationsModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRequestPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRequestPermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus))
@@ -7128,6 +7232,36 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateSpacesCommitContentType?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateSpacesCommitContentTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteSettingsTrustedPublishersRepoTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType))
@@ -8758,6 +8892,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?))
                 {
                     return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenUserPermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemRole))
@@ -10528,6 +10672,106 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsResponseGatedNotificationsMode?))
                 {
                     return new global::HuggingFace.JsonConverters.PutDatasetsSettingsResponseGatedNotificationsModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponsePermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponsePermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetModelsTreeResponseItemType))

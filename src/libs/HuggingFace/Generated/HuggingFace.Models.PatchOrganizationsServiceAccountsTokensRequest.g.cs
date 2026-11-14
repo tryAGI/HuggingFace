@@ -33,6 +33,12 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>? RepoPermissions { get; set; }
 
         /// <summary>
+        /// Permissions on the service account itself.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("userPermissions")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission>? UserPermissions { get; set; }
+
+        /// <summary>
         /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endpointPatterns")]
@@ -43,6 +49,12 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipNetworkSecurity")]
         public bool? SkipNetworkSecurity { get; set; }
+
+        /// <summary>
+        /// Read contents of gated repos the service account has access to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("canReadGatedRepos")]
+        public bool? CanReadGatedRepos { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -65,11 +77,17 @@ namespace HuggingFace
         /// <param name="repoPermissions">
         /// Permissions granted on the selected `repoIds`.
         /// </param>
+        /// <param name="userPermissions">
+        /// Permissions on the service account itself.
+        /// </param>
         /// <param name="endpointPatterns">
         /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.
         /// </param>
         /// <param name="skipNetworkSecurity">
         /// Exempt this token from the org's Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.
+        /// </param>
+        /// <param name="canReadGatedRepos">
+        /// Read contents of gated repos the service account has access to.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,15 +97,19 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>? permissions,
             global::System.Collections.Generic.IList<string>? repoIds,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission>? userPermissions,
             global::System.Collections.Generic.IList<string>? endpointPatterns,
-            bool? skipNetworkSecurity)
+            bool? skipNetworkSecurity,
+            bool? canReadGatedRepos)
         {
             this.DisplayName = displayName;
             this.Permissions = permissions;
             this.RepoIds = repoIds;
             this.RepoPermissions = repoPermissions;
+            this.UserPermissions = userPermissions;
             this.EndpointPatterns = endpointPatterns;
             this.SkipNetworkSecurity = skipNetworkSecurity;
+            this.CanReadGatedRepos = canReadGatedRepos;
         }
 
         /// <summary>

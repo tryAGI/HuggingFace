@@ -211,6 +211,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgServiceAccountTokenInvalidate,
+        /// <summary>
+        ///
+        /// </summary>
         OrgServiceAccountTokenRotate,
         /// <summary>
         ///
@@ -600,6 +604,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete => "org.service_account.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate => "org.service_account.token.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete => "org.service_account.token.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenInvalidate => "org.service_account.token.invalidate",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate => "org.service_account.token.rotate",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate => "org.service_account.token.s3_credential.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete => "org.service_account.token.s3_credential.delete",
@@ -742,6 +747,7 @@ namespace HuggingFace
                 "org.service_account.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete,
                 "org.service_account.token.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate,
                 "org.service_account.token.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete,
+                "org.service_account.token.invalidate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenInvalidate,
                 "org.service_account.token.rotate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate,
                 "org.service_account.token.s3_credential.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate,
                 "org.service_account.token.s3_credential.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete,

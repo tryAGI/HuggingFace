@@ -11,6 +11,8 @@ namespace HuggingFace
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_bd6b7a093538c100")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_12f4551a80dbccdd")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2>), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemConfiguredByVariant2_313b4925a720058e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2>), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseConfiguredByVariant2_a9ac6c190db44070")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_60423815358459ae")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_56fefee51393bc31")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_0c26e235ad6c6b53")]
@@ -26,6 +28,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateScheduledJobsRunResponseInitiatorVariant4_3730a73b89fb6daa")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant2>?), TypeInfoPropertyName = "PatchOrganizationsScimV2GroupsRequestOperationVariant2_635500fff3e24abc")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>?), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_d6166dc28917bc83")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant2>?), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemClaimsVariant2_e1fccbe62f73f221")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2>?), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemConfiguredByVariant2_a00aa28a1ac7be54")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2>?), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseConfiguredByVariant2_31bdc0406fb1dc5e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_114f0b82594c6a32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_37702d3e766b204d")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2_b0589d561f11c771")]
@@ -140,6 +145,11 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>), TypeInfoPropertyName = "AnyOfIListStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, bool?>), TypeInfoPropertyName = "AnyOfStringBoolean2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant2>), TypeInfoPropertyName = "AnyOfCreateSettingsTrustedPublishersRequestClaimsVariant1CreateSettingsTrustedPublishersRequestClaimsVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission), TypeInfoPropertyName = "CreateSettingsTrustedPublishersRequestPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>), TypeInfoPropertyName = "AnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<int?, double?>), TypeInfoPropertyName = "AnyOfInt32Double2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsRequestVariant1Flavor), TypeInfoPropertyName = "CreateJobsRequestVariant1Flavor2")]
@@ -249,6 +259,32 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>), TypeInfoPropertyName = "AnyOfGetModelsSafetensorsMetadataResponseHeadersVariant1DictionaryStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant2>), TypeInfoPropertyName = "AnyOfGetSettingsTrustedPublishersResponseItemClaimsVariant1GetSettingsTrustedPublishersResponseItemClaimsVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrg))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemCapabilitie2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant2>), TypeInfoPropertyName = "AnyOfCreateSettingsTrustedPublishersResponseClaimsVariant1CreateSettingsTrustedPublishersResponseClaimsVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrg))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseCapabilitie2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponsePermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?>), TypeInfoPropertyName = "AnyOfIListStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string, string>), TypeInfoPropertyName = "AnyOfBooleanStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadata))]
@@ -473,6 +509,54 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsLabelsResponseExpose))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsLabelsResponseNetwork))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsLabelsResponseOwner))]
+    internal sealed partial class PartitionCoreSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_bd6b7a093538c100")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_12f4551a80dbccdd")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2>), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemConfiguredByVariant2_313b4925a720058e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2>), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseConfiguredByVariant2_a9ac6c190db44070")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_60423815358459ae")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_56fefee51393bc31")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_0c26e235ad6c6b53")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2_e742511aec53809d")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2_47f1c283d1315290")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>), TypeInfoPropertyName = "GetJobsResponseItemInitiatorVariant4_d502ef195e1146cc")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsResponseInitiatorVariant1, global::HuggingFace.CreateJobsResponseInitiatorVariant2, global::HuggingFace.CreateJobsResponseInitiatorVariant3, global::HuggingFace.CreateJobsResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateJobsResponseInitiatorVariant4_38d28d932087b926")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>), TypeInfoPropertyName = "GetJobsResponseInitiatorVariant4_ba3f3cadaa5d3fca")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateJobsCancelResponseInitiatorVariant4_445217000e6c4563")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant1, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant2, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant3, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateJobsDuplicateResponseInitiatorVariant4_d092da52e4bb88e0")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsLabelsResponseInitiatorVariant1, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant2, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant3, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant4>), TypeInfoPropertyName = "PutJobsLabelsResponseInitiatorVariant4_934ad60af8fa12af")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>), TypeInfoPropertyName = "PutJobsExposeResponseInitiatorVariant4_32ce8c567c534fae")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateScheduledJobsRunResponseInitiatorVariant4_3730a73b89fb6daa")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant2>?), TypeInfoPropertyName = "PatchOrganizationsScimV2GroupsRequestOperationVariant2_635500fff3e24abc")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>?), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_d6166dc28917bc83")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant2>?), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemClaimsVariant2_e1fccbe62f73f221")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2>?), TypeInfoPropertyName = "GetSettingsTrustedPublishersResponseItemConfiguredByVariant2_a00aa28a1ac7be54")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2>?), TypeInfoPropertyName = "CreateSettingsTrustedPublishersResponseConfiguredByVariant2_31bdc0406fb1dc5e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_114f0b82594c6a32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_37702d3e766b204d")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2_b0589d561f11c771")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2_4fdcb8ac3d372f64")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetModelsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetModelsUserAccessRequestResponseItemGrantedByVariant2>?), TypeInfoPropertyName = "GetModelsUserAccessRequestResponseItemGrantedByVariant2_224bcfa68939ee09")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>?), TypeInfoPropertyName = "GetDatasetsUserAccessRequestResponseItemGrantedByVariant2_c370d428545adba2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>?), TypeInfoPropertyName = "GetJobsResponseItemInitiatorVariant4_91e44973794bff35")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsResponseInitiatorVariant1, global::HuggingFace.CreateJobsResponseInitiatorVariant2, global::HuggingFace.CreateJobsResponseInitiatorVariant3, global::HuggingFace.CreateJobsResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateJobsResponseInitiatorVariant4_4e602848974368e8")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>?), TypeInfoPropertyName = "GetJobsResponseInitiatorVariant4_56f06fa6078693bc")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateJobsCancelResponseInitiatorVariant4_9507f26ffa8d0f4a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant1, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant2, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant3, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateJobsDuplicateResponseInitiatorVariant4_d056eb4a71485c39")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsLabelsResponseInitiatorVariant1, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant2, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant3, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant4>?), TypeInfoPropertyName = "PutJobsLabelsResponseInitiatorVariant4_59513fc8a130abbc")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>?), TypeInfoPropertyName = "PutJobsExposeResponseInitiatorVariant4_33115e36649c42b4")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateScheduledJobsRunResponseInitiatorVariant4_844475dccb0c0e89")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_73a114b1b1cf4050")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_e8c9ffcd0d741b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsLabelsResponseOwnerType), TypeInfoPropertyName = "PutJobsLabelsResponseOwnerType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsLabelsResponseResourceGroup))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsLabelsResponseInitiatorVariant1))]
@@ -509,49 +593,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsExposeResponseHfToken))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutJobsExposeResponseHfTokenTokenRole), TypeInfoPropertyName = "PutJobsExposeResponseHfTokenTokenRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseStatus))]
-    internal sealed partial class PartitionCoreSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_bd6b7a093538c100")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_12f4551a80dbccdd")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_60423815358459ae")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_56fefee51393bc31")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_0c26e235ad6c6b53")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2_e742511aec53809d")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2_47f1c283d1315290")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>), TypeInfoPropertyName = "GetJobsResponseItemInitiatorVariant4_d502ef195e1146cc")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsResponseInitiatorVariant1, global::HuggingFace.CreateJobsResponseInitiatorVariant2, global::HuggingFace.CreateJobsResponseInitiatorVariant3, global::HuggingFace.CreateJobsResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateJobsResponseInitiatorVariant4_38d28d932087b926")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>), TypeInfoPropertyName = "GetJobsResponseInitiatorVariant4_ba3f3cadaa5d3fca")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateJobsCancelResponseInitiatorVariant4_445217000e6c4563")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant1, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant2, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant3, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateJobsDuplicateResponseInitiatorVariant4_d092da52e4bb88e0")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsLabelsResponseInitiatorVariant1, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant2, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant3, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant4>), TypeInfoPropertyName = "PutJobsLabelsResponseInitiatorVariant4_934ad60af8fa12af")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>), TypeInfoPropertyName = "PutJobsExposeResponseInitiatorVariant4_32ce8c567c534fae")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>), TypeInfoPropertyName = "CreateScheduledJobsRunResponseInitiatorVariant4_3730a73b89fb6daa")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant2>?), TypeInfoPropertyName = "PatchOrganizationsScimV2GroupsRequestOperationVariant2_635500fff3e24abc")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>?), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_d6166dc28917bc83")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_114f0b82594c6a32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAuthorDataVariant2_37702d3e766b204d")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataOriginRepoAuthorVariant2_b0589d561f11c771")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2>?), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3RepoDataAuthorDataVariant2_4fdcb8ac3d372f64")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetModelsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetModelsUserAccessRequestResponseItemGrantedByVariant2>?), TypeInfoPropertyName = "GetModelsUserAccessRequestResponseItemGrantedByVariant2_224bcfa68939ee09")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant1, global::HuggingFace.GetDatasetsUserAccessRequestResponseItemGrantedByVariant2>?), TypeInfoPropertyName = "GetDatasetsUserAccessRequestResponseItemGrantedByVariant2_c370d428545adba2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseItemInitiatorVariant1, global::HuggingFace.GetJobsResponseItemInitiatorVariant2, global::HuggingFace.GetJobsResponseItemInitiatorVariant3, global::HuggingFace.GetJobsResponseItemInitiatorVariant4>?), TypeInfoPropertyName = "GetJobsResponseItemInitiatorVariant4_91e44973794bff35")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsResponseInitiatorVariant1, global::HuggingFace.CreateJobsResponseInitiatorVariant2, global::HuggingFace.CreateJobsResponseInitiatorVariant3, global::HuggingFace.CreateJobsResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateJobsResponseInitiatorVariant4_4e602848974368e8")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetJobsResponseInitiatorVariant1, global::HuggingFace.GetJobsResponseInitiatorVariant2, global::HuggingFace.GetJobsResponseInitiatorVariant3, global::HuggingFace.GetJobsResponseInitiatorVariant4>?), TypeInfoPropertyName = "GetJobsResponseInitiatorVariant4_56f06fa6078693bc")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsCancelResponseInitiatorVariant1, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant2, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant3, global::HuggingFace.CreateJobsCancelResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateJobsCancelResponseInitiatorVariant4_9507f26ffa8d0f4a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant1, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant2, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant3, global::HuggingFace.CreateJobsDuplicateResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateJobsDuplicateResponseInitiatorVariant4_d056eb4a71485c39")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsLabelsResponseInitiatorVariant1, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant2, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant3, global::HuggingFace.PutJobsLabelsResponseInitiatorVariant4>?), TypeInfoPropertyName = "PutJobsLabelsResponseInitiatorVariant4_59513fc8a130abbc")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.PutJobsExposeResponseInitiatorVariant1, global::HuggingFace.PutJobsExposeResponseInitiatorVariant2, global::HuggingFace.PutJobsExposeResponseInitiatorVariant3, global::HuggingFace.PutJobsExposeResponseInitiatorVariant4>?), TypeInfoPropertyName = "PutJobsExposeResponseInitiatorVariant4_33115e36649c42b4")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant1, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant2, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant3, global::HuggingFace.CreateScheduledJobsRunResponseInitiatorVariant4>?), TypeInfoPropertyName = "CreateScheduledJobsRunResponseInitiatorVariant4_844475dccb0c0e89")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.AnyOf<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>>), TypeInfoPropertyName = "PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2_73a114b1b1cf4050")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>>), TypeInfoPropertyName = "GetTrendingResponseRecentlyTrendingItemVariant3_e8c9ffcd0d741b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseStatusLastJob))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseOwner))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsResponseOwnerType), TypeInfoPropertyName = "CreateScheduledJobsResponseOwnerType2")]
@@ -691,6 +732,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath?), TypeInfoPropertyName = "NullablePatchOrganizationsScimProvisioningV2UsersRequestOperationPath2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, string>?), TypeInfoPropertyName = "NullableAnyOfIListStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, bool?>?), TypeInfoPropertyName = "NullableAnyOfStringBoolean2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant2>?), TypeInfoPropertyName = "NullableAnyOfCreateSettingsTrustedPublishersRequestClaimsVariant1CreateSettingsTrustedPublishersRequestClaimsVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission?), TypeInfoPropertyName = "NullableCreateSettingsTrustedPublishersRequestPermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.IList<string>>?), TypeInfoPropertyName = "NullableAnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<int?, double?>?), TypeInfoPropertyName = "NullableAnyOfInt32Double2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsRequestVariant1Flavor?), TypeInfoPropertyName = "NullableCreateJobsRequestVariant1Flavor2")]
@@ -737,6 +780,17 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemAuthorType?), TypeInfoPropertyName = "NullableGetOrganizationsAuditLogExportResponseItemAuthorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemTokenRole?), TypeInfoPropertyName = "NullableGetOrganizationsAuditLogExportResponseItemTokenRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>?), TypeInfoPropertyName = "NullableAnyOfGetModelsSafetensorsMetadataResponseHeadersVariant1DictionaryStringString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan?), TypeInfoPropertyName = "NullableGetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableGetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie?), TypeInfoPropertyName = "NullableGetSettingsTrustedPublishersResponseItemCapabilitie2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission?), TypeInfoPropertyName = "NullableGetSettingsTrustedPublishersResponseItemPermission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant2>?), TypeInfoPropertyName = "NullableAnyOfCreateSettingsTrustedPublishersResponseClaimsVariant1CreateSettingsTrustedPublishersResponseClaimsVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan?), TypeInfoPropertyName = "NullableCreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie?), TypeInfoPropertyName = "NullableCreateSettingsTrustedPublishersResponseCapabilitie2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission?), TypeInfoPropertyName = "NullableCreateSettingsTrustedPublishersResponsePermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.IList<string>, bool?>?), TypeInfoPropertyName = "NullableAnyOfIListStringBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, string, string>?), TypeInfoPropertyName = "NullableAnyOfBooleanStringString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem?), TypeInfoPropertyName = "NullableGetKernelsResponseItemBuildMetadataCompatibilityTorchItem2")]
@@ -882,6 +936,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1ValueItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.List<string>, string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<string, global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateJobsRequestVariant1Volume>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateJobsRequestVariant2Volume>))]
@@ -899,6 +954,10 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItem3>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain3>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<double>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::System.Collections.Generic.List<string>, bool?>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityO>))]
@@ -989,6 +1048,7 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, bool?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<int?, double?>());
@@ -1019,6 +1079,10 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, bool?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant1, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant3>());
@@ -1168,6 +1232,10 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsScimProvisioningV2UsersRequestOperationPath?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission?)
+
                     || typeToConvert == typeof(global::HuggingFace.CreateJobsRequestVariant1Flavor)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateJobsRequestVariant1Flavor?)
@@ -1311,6 +1379,46 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemTokenRole)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemTokenRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem)
 
@@ -2003,6 +2111,16 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsScimProvisioningV2UsersRequestOperationPathNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRequestPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRequestPermissionNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.CreateJobsRequestVariant1Flavor))
                 {
                     return new global::HuggingFace.JsonConverters.CreateJobsRequestVariant1FlavorJsonConverter();
@@ -2361,6 +2479,106 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsAuditLogExportResponseItemTokenRole?))
                 {
                     return new global::HuggingFace.JsonConverters.GetOrganizationsAuditLogExportResponseItemTokenRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponsePermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponsePermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetKernelsResponseItemBuildMetadataCompatibilityTorchItem))
