@@ -20,7 +20,7 @@ namespace HuggingFace
             string slug,
             string slug2,
 
-            global::HuggingFace.PatchCollectionsItemsRequest2 request,
+            global::HuggingFace.PatchCollectionsItemsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -39,7 +39,7 @@ namespace HuggingFace
             string slug,
             string slug2,
 
-            global::HuggingFace.PatchCollectionsItemsRequest2 request,
+            global::HuggingFace.PatchCollectionsItemsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

@@ -389,7 +389,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -434,7 +434,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -466,10 +466,21 @@ namespace HuggingFace
         /// Default Value: []
         /// </param>
         /// <param name="repoIds">
-        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.
+        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide and resource-group permissions.
         /// </param>
         /// <param name="repoPermissions">
         /// Permissions granted on the selected `repoIds`.<br/>
+        /// Default Value: []
+        /// </param>
+        /// <param name="resourceGroupIds">
+        /// Resource groups of the organization to grant `resourceGroupPermissions` on. Applies to every repository currently or later in those resource groups, and overrides the org-wide permissions.
+        /// </param>
+        /// <param name="resourceGroupPermissions">
+        /// Permissions granted on the repositories of the selected `resourceGroupIds`.<br/>
+        /// Default Value: []
+        /// </param>
+        /// <param name="userPermissions">
+        /// Permissions on the service account itself.<br/>
         /// Default Value: []
         /// </param>
         /// <param name="endpointPatterns">
@@ -478,6 +489,10 @@ namespace HuggingFace
         /// </param>
         /// <param name="skipNetworkSecurity">
         /// Exempt this token from the org's Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="canReadGatedRepos">
+        /// Read contents of gated repos the service account has access to.<br/>
         /// Default Value: false
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -490,8 +505,12 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestPermission>? permissions = default,
             global::System.Collections.Generic.IList<string>? repoIds = default,
             global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions = default,
+            global::System.Collections.Generic.IList<string>? resourceGroupIds = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestResourceGroupPermission>? resourceGroupPermissions = default,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission>? userPermissions = default,
             global::System.Collections.Generic.IList<string>? endpointPatterns = default,
             bool? skipNetworkSecurity = default,
+            bool? canReadGatedRepos = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -501,8 +520,12 @@ namespace HuggingFace
                 Permissions = permissions,
                 RepoIds = repoIds,
                 RepoPermissions = repoPermissions,
+                ResourceGroupIds = resourceGroupIds,
+                ResourceGroupPermissions = resourceGroupPermissions,
+                UserPermissions = userPermissions,
                 EndpointPatterns = endpointPatterns,
                 SkipNetworkSecurity = skipNetworkSecurity,
+                CanReadGatedRepos = canReadGatedRepos,
             };
 
             return await CreateOrganizationsByNameServiceAccountsByServiceAccountIdTokensAsync(

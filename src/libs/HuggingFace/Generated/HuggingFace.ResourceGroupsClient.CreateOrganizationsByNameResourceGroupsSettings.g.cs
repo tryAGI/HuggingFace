@@ -28,12 +28,12 @@ namespace HuggingFace
         partial void PrepareCreateOrganizationsByNameResourceGroupsSettingsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string name,
-            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest2 request);
+            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest request);
         partial void PrepareCreateOrganizationsByNameResourceGroupsSettingsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string name,
-            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest2 request);
+            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest request);
         partial void ProcessCreateOrganizationsByNameResourceGroupsSettingsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -54,10 +54,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse2> CreateOrganizationsByNameResourceGroupsSettingsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse> CreateOrganizationsByNameResourceGroupsSettingsAsync(
             string name,
 
-            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest2 request,
+            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -82,10 +82,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse2>> CreateOrganizationsByNameResourceGroupsSettingsAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse>> CreateOrganizationsByNameResourceGroupsSettingsAsResponseAsync(
             string name,
 
-            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest2 request,
+            global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -372,9 +372,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -384,7 +384,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -404,9 +404,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -429,7 +429,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -462,14 +462,14 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse2> CreateOrganizationsByNameResourceGroupsSettingsAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsResponse> CreateOrganizationsByNameResourceGroupsSettingsAsync(
             string name,
             global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestMinRoleToCreate? minRoleToCreate = default,
             string? allowExternalInvites = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest2
+            var __request = new global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequest
             {
                 MinRoleToCreate = minRoleToCreate,
                 AllowExternalInvites = allowExternalInvites,
