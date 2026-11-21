@@ -27,14 +27,14 @@ namespace HuggingFace
             };
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsByNumArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::HuggingFace.GetDiscussionsRepoType2 repoType,
+            ref global::HuggingFace.GetDiscussionsRepoType repoType,
             ref string @namespace,
             ref string repo,
             ref string num);
         partial void PrepareGetByRepoTypeByNamespaceByRepoDiscussionsByNumRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::HuggingFace.GetDiscussionsRepoType2 repoType,
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string num);
@@ -58,7 +58,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
-            global::HuggingFace.GetDiscussionsRepoType2 repoType,
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string num,
@@ -87,7 +87,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsResponseAsync(
-            global::HuggingFace.GetDiscussionsRepoType2 repoType,
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string num,
@@ -385,7 +385,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -430,7 +430,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(

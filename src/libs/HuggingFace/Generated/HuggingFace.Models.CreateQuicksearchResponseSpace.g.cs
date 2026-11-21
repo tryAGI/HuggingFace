@@ -36,13 +36,6 @@ namespace HuggingFace
         public required string Emoji { get; set; }
 
         /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("trendingWeight")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double TrendingWeight { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -53,7 +46,6 @@ namespace HuggingFace
         /// </summary>
         /// <param name="id"></param>
         /// <param name="emoji"></param>
-        /// <param name="trendingWeight"></param>
         /// <param name="private"></param>
         /// <param name="authorType">
         /// Whether the repo is owned by a user or an organization
@@ -64,7 +56,6 @@ namespace HuggingFace
         public CreateQuicksearchResponseSpace(
             string id,
             string emoji,
-            double trendingWeight,
             bool? @private,
             global::HuggingFace.CreateQuicksearchResponseSpaceAuthorType? authorType)
         {
@@ -72,7 +63,6 @@ namespace HuggingFace
             this.Private = @private;
             this.AuthorType = authorType;
             this.Emoji = emoji ?? throw new global::System.ArgumentNullException(nameof(emoji));
-            this.TrendingWeight = trendingWeight;
         }
 
         /// <summary>

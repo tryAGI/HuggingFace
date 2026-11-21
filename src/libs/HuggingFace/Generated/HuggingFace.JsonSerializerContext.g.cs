@@ -47,8 +47,9 @@ namespace HuggingFace
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.JobStatusCancelReason?, string>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<string, global::HuggingFace.CreateCredentialsRevokeRequestCredential>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant12, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant1, global::HuggingFace.PutOrganizationsSettingsSsoCredentialsRequestVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsSettingsRequestAutoJoinVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
@@ -58,6 +59,7 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant1, global::HuggingFace.CreateOrganizationsResourceGroupsRequestAutoJoinVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestBlockedContentResource?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityRequestAllowedContentResource?, string>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersRequestClaimsVariant1, global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersRequestClaimsVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimV2GroupsRequestOperationVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant1, global::HuggingFace.PatchOrganizationsScimProvisioningV2GroupsRequestOperationVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
@@ -72,6 +74,7 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsRequestGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsRequestGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant1, global::HuggingFace.PutDatasetsSettingsRequestGatedProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersRequestClaimsVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateQuicksearchRequestLang?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateQuicksearchRequestLibrary?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::HuggingFace.CreateQuicksearchRequestTypeVariant1Item>, global::System.Collections.Generic.IList<string>>());
@@ -92,9 +95,9 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant2, global::HuggingFace.PatchCollectionsRequestGatingVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant1, global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant1, global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant22, global::HuggingFace.PatchCollectionsRequestGatingVariant32>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant12, global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant12, global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant2, global::HuggingFace.PatchCollectionsRequestGatingVariant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant1, global::HuggingFace.PatchCollectionsRequestGatingVariant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant1, global::HuggingFace.PatchCollectionsRequestGatingVariant3ProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<string>, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateJobsRequestVariant1, global::HuggingFace.CreateJobsRequestVariant2>());
@@ -136,9 +139,9 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant1, global::HuggingFace.GetSettingsWebhooksResponseWebhookJobVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant12, global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1, global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant13, global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant23>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1, global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseAutoJoinVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant1, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant2, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant3, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant4, global::HuggingFace.PatchOrganizationsResourceGroupsResponseResourceVariant5>());
@@ -161,14 +164,18 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponseBlockedContentResource?, string>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchOrganizationsSettingsNetworkSecurityResponseAllowedContentResource?, string>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemClaimsVariant1, global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseClaimsVariant1, global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetUsersFollowersResponseItemVariant1, global::HuggingFace.GetUsersFollowersResponseItemVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsSafetensorsMetadataResponseHeadersVariant1, global::System.Collections.Generic.Dictionary<string, string>>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutModelsSettingsResponseGated?>());
@@ -177,6 +184,10 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutSpacesSettingsResponseGatedProfileSharingVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PutDatasetsSettingsResponseGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PutDatasetsSettingsResponseGatedProfileSharingVariant1, global::HuggingFace.PutDatasetsSettingsResponseGatedProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1, global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseClaimsVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1, global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetModelsNotebookResponseVariant1, global::HuggingFace.GetModelsNotebookResponseVariant2, global::HuggingFace.GetModelsNotebookResponseVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetDatasetsNotebookResponseVariant1, global::HuggingFace.GetDatasetsNotebookResponseVariant2, global::HuggingFace.GetDatasetsNotebookResponseVariant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetSpacesNotebookResponseVariant1, global::HuggingFace.GetSpacesNotebookResponseVariant2, global::HuggingFace.GetSpacesNotebookResponseVariant3>());
@@ -266,32 +277,32 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant22, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant32>?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant22, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant32>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant12, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseOwnerVariant12, global::HuggingFace.GetCollectionsResponseOwnerVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant12, global::HuggingFace.GetCollectionsResponseItemVariant22, global::HuggingFace.GetCollectionsResponseItemVariant32, global::HuggingFace.GetCollectionsResponseItemVariant42, global::HuggingFace.GetCollectionsResponseItemVariant52, global::HuggingFace.GetCollectionsResponseItemVariant62>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseItemVariant1Gated2?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseItemVariant2Gated2?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant12, global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3>?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseOwnerVariant1, global::HuggingFace.GetCollectionsResponseOwnerVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant1, global::HuggingFace.GetCollectionsResponseItemVariant2, global::HuggingFace.GetCollectionsResponseItemVariant3, global::HuggingFace.GetCollectionsResponseItemVariant4, global::HuggingFace.GetCollectionsResponseItemVariant5, global::HuggingFace.GetCollectionsResponseItemVariant6>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseItemVariant1Gated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetCollectionsResponseItemVariant2Gated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant12, global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant32>?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant22, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant32>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant12, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant22, global::HuggingFace.PatchCollectionsResponseDataItemVariant32, global::HuggingFace.PatchCollectionsResponseDataItemVariant42, global::HuggingFace.PatchCollectionsResponseDataItemVariant52, global::HuggingFace.PatchCollectionsResponseDataItemVariant62>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated2?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataItemVariant2Gated2?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant1, global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant1, global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3>?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataOwnerVariant1, global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant2, global::HuggingFace.PatchCollectionsResponseDataItemVariant3, global::HuggingFace.PatchCollectionsResponseDataItemVariant4, global::HuggingFace.PatchCollectionsResponseDataItemVariant5, global::HuggingFace.PatchCollectionsResponseDataItemVariant6>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.PatchCollectionsResponseDataItemVariant2Gated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant12, global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant1, global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant2>());
@@ -305,19 +316,19 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant22, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant32>?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant22, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant32>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant12, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant12, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant12, global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant22, global::HuggingFace.CreateCollectionsItemsResponseItemVariant32, global::HuggingFace.CreateCollectionsItemsResponseItemVariant42, global::HuggingFace.CreateCollectionsItemsResponseItemVariant52, global::HuggingFace.CreateCollectionsItemsResponseItemVariant62>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated2?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated2?>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3>?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant2ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant1, global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3ProfileSharingVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3, global::HuggingFace.CreateCollectionsItemsResponseItemVariant4, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5, global::HuggingFace.CreateCollectionsItemsResponseItemVariant6>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated?>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<double?, string>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant12, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1, global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.AnyOf<bool?, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3>?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant1, global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant2ProfileSharingVariant2>());
@@ -443,38 +454,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestDomain?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestWatchedItemType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestWatchedItemType2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Flavor2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Flavor2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Arch2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Arch2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1VolumeType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1VolumeType2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Flavor2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Flavor2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Arch2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Arch2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2VolumeType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2VolumeType2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestDomain2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestDomain2?)
-
                     || typeToConvert == typeof(global::HuggingFace.CreateSettingsInferenceProvidersApiKeyRequestProvider)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateSettingsInferenceProvidersApiKeyRequestProvider?)
@@ -535,6 +514,14 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestRepoPermission?)
 
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestResourceGroupPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestResourceGroupPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission?)
+
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission?)
@@ -542,6 +529,18 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersRequestCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersRequestCapabilitie?)
 
                     || typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestRole)
 
@@ -578,18 +577,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateModelsLfsFilesDuplicateRequestTargetType)
 
@@ -658,6 +645,10 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode)
 
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus)
 
@@ -871,29 +862,13 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestGatingVariant3NotificationsMode?)
 
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestTheme2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestTheme2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestGatingVariant3NotificationsMode2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestGatingVariant3NotificationsMode2?)
-
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsRequestItemType)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsRequestItemType?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsRequestItemType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsRequestItemType2?)
-
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction2?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsRequestItemType)
 
@@ -1095,17 +1070,9 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2?)
-
                     || typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetModelsLikersExpandItem)
 
@@ -1171,6 +1138,18 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateSpacesCommitContentType?)
 
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType)
+
+                    || typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType?)
+
                     || typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType)
 
                     || typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType?)
@@ -1190,10 +1169,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsRepoType)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsRepoType?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2?)
 
                     || typeToConvert == typeof(global::HuggingFace.DeleteDiscussionsRepoType)
 
@@ -1495,38 +1470,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetSettingsWebhooksResponseWebhookDomain?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor3)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor3?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor3)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor3?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType3)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType3?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain3)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain3?)
-
                     || typeToConvert == typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemType)
 
                     || typeToConvert == typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemType?)
@@ -1822,6 +1765,54 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenResourceGroupPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenResourceGroupPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponsePermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponsePermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemRole)
 
@@ -2171,70 +2162,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2?)
-
                     || typeToConvert == typeof(global::HuggingFace.GetWhoamiV2ResponseAuthAccessTokenRole)
 
                     || typeToConvert == typeof(global::HuggingFace.GetWhoamiV2ResponseAuthAccessTokenRole?)
@@ -2270,6 +2197,22 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole)
 
                     || typeToConvert == typeof(global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBillingMode)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBillingMode?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBalanceType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBalanceType?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetUsersLikesResponseItemRepoType)
 
@@ -2530,6 +2473,46 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsResponseGatedNotificationsMode)
 
                     || typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsResponseGatedNotificationsMode?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie?)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission)
+
+                    || typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetModelsTreeResponseItemType)
 
@@ -3855,302 +3838,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionRegion?)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3NotificationsMode2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3NotificationsMode2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseTheme2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseTheme2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoViewer2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoViewer2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoFormat2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoFormat2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoModalitie2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoModalitie2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1Gated2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1Gated2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProvider2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProvider2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderModelStatus2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderModelStatus2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderTask2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderTask2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2Gated2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2Gated2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Sdk2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Sdk2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeStage2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeStage2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareCurrent2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareCurrent2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareRequested2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareRequested2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeDomainStage2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeDomainStage2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Visibility2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Visibility2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5Theme2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5Theme2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6RepoType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6RepoType2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionProvider2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionProvider2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionRegion2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionRegion2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3NotificationsMode2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3NotificationsMode2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataTheme2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataTheme2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoViewer2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoViewer2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoFormat2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoFormat2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoModalitie2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoModalitie2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProviderStatus2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProviderStatus2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderModelStatus2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderModelStatus2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderTask2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderTask2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2Gated2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2Gated2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Sdk2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Sdk2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeStage2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeStage2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareCurrent2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareCurrent2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareRequested2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareRequested2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeDomainStage2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeDomainStage2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Visibility2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Visibility2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5Theme2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5Theme2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6RepoType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6RepoType2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionRegion2)
-
-                    || typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionRegion2?)
-
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode?)
@@ -4298,154 +3985,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseTheme2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseTheme2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoViewer2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoViewer2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoFormat2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoFormat2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoModalitie2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoModalitie2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProviderStatus2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProviderStatus2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderModelStatus2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderModelStatus2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderTask2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderTask2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Sdk2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Sdk2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeStage2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeStage2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareCurrent2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareCurrent2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareRequested2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareRequested2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeDomainStage2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeDomainStage2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Visibility2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Visibility2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Theme2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Theme2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6RepoType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6RepoType2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionProvider2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionProvider2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion2?)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3NotificationsMode)
 
@@ -5310,86 +4849,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestDomainNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestWatchedItemType2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestWatchedItemType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestWatchedItemType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestWatchedItemType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Flavor2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant1Flavor2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Flavor2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant1Flavor2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Arch2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant1Arch2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1Arch2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant1Arch2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1VolumeType2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant1VolumeType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1VolumeType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant1VolumeType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Flavor2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant2Flavor2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Flavor2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant2Flavor2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Arch2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant2Arch2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2Arch2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant2Arch2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2VolumeType2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant2VolumeType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2VolumeType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestJobVariant2VolumeType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestDomain2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestDomain2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksRequestDomain2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksRequestDomain2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateSettingsInferenceProvidersApiKeyRequestProvider))
                 {
                     return new global::HuggingFace.JsonConverters.CreateSettingsInferenceProvidersApiKeyRequestProviderJsonConverter();
@@ -5540,6 +4999,26 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestRepoPermissionNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestResourceGroupPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestResourceGroupPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestResourceGroupPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestResourceGroupPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTokensRequestUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTokensRequestUserPermissionNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestPermissionJsonConverter();
@@ -5558,6 +5037,36 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission?))
                 {
                     return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestRepoPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.PatchOrganizationsServiceAccountsTokensRequestUserPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersRequestCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersRequestCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersRequestCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersRequestCapabilitieNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.PutOrganizationsMembersRoleRequestRole))
@@ -5648,36 +5157,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateBlogCommentHideRequestReasonNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestReaction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestReaction2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestAction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestAction2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentHideRequestReason2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentHideRequestReason2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateModelsLfsFilesDuplicateRequestTargetType))
@@ -5848,6 +5327,16 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsRequestGatedNotificationsMode?))
                 {
                     return new global::HuggingFace.JsonConverters.PutDatasetsSettingsRequestGatedNotificationsModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRequestPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRequestPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRequestPermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus))
@@ -6380,26 +5869,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.PatchCollectionsRequestGatingVariant3NotificationsModeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestTheme2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsRequestTheme2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestTheme2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsRequestTheme2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestGatingVariant3NotificationsMode2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsRequestGatingVariant3NotificationsMode2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsRequestGatingVariant3NotificationsMode2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsRequestGatingVariant3NotificationsMode2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsRequestItemType))
                 {
                     return new global::HuggingFace.JsonConverters.CreateCollectionsItemsRequestItemTypeJsonConverter();
@@ -6410,16 +5879,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateCollectionsItemsRequestItemTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsRequestItemType2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsRequestItemType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsRequestItemType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsRequestItemType2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction))
                 {
                     return new global::HuggingFace.JsonConverters.CreateCollectionsItemsBatchRequestItemActionJsonConverter();
@@ -6428,16 +5887,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateCollectionsItemsBatchRequestItemActionNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsBatchRequestItemAction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsBatchRequestItemAction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsBatchRequestItemAction2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsRequestItemType))
@@ -6940,16 +6389,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateInferenceEndpointsAuthCheckPermsNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateInferenceEndpointsAuthCheckPerms2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateInferenceEndpointsAuthCheckPerms2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms))
                 {
                     return new global::HuggingFace.JsonConverters.CreateJobsAuthCheckPermsJsonConverter();
@@ -6958,16 +6397,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateJobsAuthCheckPermsNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateJobsAuthCheckPerms2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateJobsAuthCheckPerms2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetModelsLikersExpandItem))
@@ -7130,6 +6559,36 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateSpacesCommitContentTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersRepoTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteSettingsTrustedPublishersRepoTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.DeleteSettingsTrustedPublishersRepoType?))
+                {
+                    return new global::HuggingFace.JsonConverters.DeleteSettingsTrustedPublishersRepoTypeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType))
                 {
                     return new global::HuggingFace.JsonConverters.GetDiscussionsRepoTypeJsonConverter();
@@ -7178,16 +6637,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateDiscussionsRepoType?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateDiscussionsRepoTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetDiscussionsRepoType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetDiscussionsRepoType2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.DeleteDiscussionsRepoType))
@@ -7940,86 +7389,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.GetSettingsWebhooksResponseWebhookDomainNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookWatchedItemType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookWatchedItemType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookDomain2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookDomain2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor3))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor3?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant1Flavor3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor3))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor3?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookJobVariant2Flavor3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType3))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookWatchedItemType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookWatchedItemType3?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookWatchedItemType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain3))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookDomain3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsWebhooksResponseWebhookDomain3?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateSettingsWebhooksResponseWebhookDomain3NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemType))
                 {
                     return new global::HuggingFace.JsonConverters.GetSettingsRepositoriesResponseItemTypeJsonConverter();
@@ -8758,6 +8127,126 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermission?))
                 {
                     return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenRepoPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenResourceGroupPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenResourceGroupPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenResourceGroupPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenResourceGroupPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenUserPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsResponseAccessTokenUserPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsResponseAccessTokenUserPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsServiceAccountsTrustedPublishersResponseItemPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsServiceAccountsTrustedPublishersResponseItemPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponseCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponseCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponsePermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponsePermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateOrganizationsServiceAccountsTrustedPublishersResponsePermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateOrganizationsServiceAccountsTrustedPublishersResponsePermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsMembersResponseItemRole))
@@ -9630,166 +9119,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataReactionReactionNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataHiddenReason2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataHiddenReason2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataReactionReaction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataReactionReaction2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.GetWhoamiV2ResponseAuthAccessTokenRole))
                 {
                     return new global::HuggingFace.JsonConverters.GetWhoamiV2ResponseAuthAccessTokenRoleJsonConverter();
@@ -9878,6 +9207,46 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetWhoamiV2ResponseOrgResourceGroupRole?))
                 {
                     return new global::HuggingFace.JsonConverters.GetWhoamiV2ResponseOrgResourceGroupRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBillingMode))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsBillingCreditsResponseBillingModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBillingMode?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsBillingCreditsResponseBillingModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBalanceType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsBillingCreditsResponseBalanceTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetOrganizationsBillingCreditsResponseBalanceType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetOrganizationsBillingCreditsResponseBalanceTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBillingModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBillingModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBalanceTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBalanceTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetUsersLikesResponseItemRepoType))
@@ -10528,6 +9897,106 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.PutDatasetsSettingsResponseGatedNotificationsMode?))
                 {
                     return new global::HuggingFace.JsonConverters.PutDatasetsSettingsResponseGatedNotificationsModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemPermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsTrustedPublishersResponseItemPermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsTrustedPublishersResponseItemPermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant1PlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant1Plan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant1PlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlan?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgPlanNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRole?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseConfiguredByVariant2PrimaryOrgUserRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseCapabilitieJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponseCapabilitie?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponseCapabilitieNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponsePermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.CreateSettingsTrustedPublishersResponsePermission?))
+                {
+                    return new global::HuggingFace.JsonConverters.CreateSettingsTrustedPublishersResponsePermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetModelsTreeResponseItemType))
@@ -13840,746 +13309,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6CdnRegionRegionNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3NotificationsMode2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseGatingVariant2Variant3NotificationsMode2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseGatingVariant2Variant3NotificationsMode2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseGatingVariant2Variant3NotificationsMode2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseOwnerVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseOwnerVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseOwnerVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseOwnerVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseOwnerVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseOwnerVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseOwnerVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseTheme2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseTheme2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseTheme2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseTheme2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoViewer2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoViewer2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoViewer2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoViewer2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoLibrarie2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoFormat2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoFormat2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoFormat2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoFormat2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoModalitie2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoModalitie2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1DatasetsServerInfoModalitie2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1DatasetsServerInfoModalitie2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1Gated2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1Gated2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant1Gated2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant1Gated2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProvider2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderProvider2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProvider2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderProvider2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderModelStatus2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderModelStatus2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderModelStatus2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderModelStatus2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderTask2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderTask2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AvailableInferenceProviderTask2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AvailableInferenceProviderTask2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2Gated2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2Gated2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2Gated2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2Gated2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AuthorDataVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AuthorDataVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Sdk2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3Sdk2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Sdk2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3Sdk2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeStage2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeStage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeStage2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeStage2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareCurrent2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeHardwareCurrent2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareCurrent2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeHardwareCurrent2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareRequested2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeHardwareRequested2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeHardwareRequested2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeHardwareRequested2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeDomainStage2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeDomainStage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3RuntimeDomainStage2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3RuntimeDomainStage2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3AuthorDataVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3AuthorDataVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Visibility2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3Visibility2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant3Visibility2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant3Visibility2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5OwnerVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5OwnerVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5Theme2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5Theme2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant5Theme2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant5Theme2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6RepoType2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant6RepoType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6RepoType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant6RepoType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionProvider2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant6CdnRegionProvider2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionProvider2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant6CdnRegionProvider2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionRegion2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant6CdnRegionRegion2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetCollectionsResponseItemVariant6CdnRegionRegion2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetCollectionsResponseItemVariant6CdnRegionRegion2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3NotificationsMode2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataGatingVariant2Variant3NotificationsMode2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataGatingVariant2Variant3NotificationsMode2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataGatingVariant2Variant3NotificationsMode2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataOwnerVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataOwnerVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataOwnerVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataTheme2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataTheme2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataTheme2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataTheme2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoViewer2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoViewer2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoViewer2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoViewer2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoLibrarie2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoFormat2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoFormat2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoFormat2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoFormat2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoModalitie2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoModalitie2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoModalitie2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1DatasetsServerInfoModalitie2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1Gated2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant1Gated2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant1Gated2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProvider2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProviderStatus2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProviderStatus2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProviderStatus2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderProviderStatus2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderModelStatus2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderModelStatus2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderModelStatus2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderModelStatus2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderTask2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderTask2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderTask2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AvailableInferenceProviderTask2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2Gated2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2Gated2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2Gated2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2Gated2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AuthorDataVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AuthorDataVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant2AuthorDataVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Sdk2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3Sdk2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Sdk2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3Sdk2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeStage2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeStage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeStage2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeStage2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareCurrent2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeHardwareCurrent2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareCurrent2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeHardwareCurrent2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareRequested2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeHardwareRequested2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeHardwareRequested2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeHardwareRequested2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeDomainStage2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeDomainStage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3RuntimeDomainStage2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3RuntimeDomainStage2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3AuthorDataVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3AuthorDataVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Visibility2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3Visibility2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant3Visibility2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant3Visibility2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5OwnerVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5OwnerVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5Theme2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5Theme2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant5Theme2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant5Theme2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6RepoType2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6RepoType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6RepoType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6RepoType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6CdnRegionProvider2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionRegion2))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6CdnRegionRegion2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.PatchCollectionsResponseDataItemVariant6CdnRegionRegion2?))
-                {
-                    return new global::HuggingFace.JsonConverters.PatchCollectionsResponseDataItemVariant6CdnRegionRegion2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode))
                 {
                     return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsModeJsonConverter();
@@ -14948,376 +13677,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant6CdnRegionRegionNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseGatingVariant2Variant3NotificationsMode2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseOwnerVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseOwnerVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseOwnerVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseTheme2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseTheme2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseTheme2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseTheme2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoViewer2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoViewer2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoViewer2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoViewer2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoLibrarie2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoFormat2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoFormat2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoFormat2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoFormat2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoModalitie2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoModalitie2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoModalitie2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1DatasetsServerInfoModalitie2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1Gated2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant1Gated2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant1Gated2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProvider2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProviderStatus2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProviderStatus2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProviderStatus2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderProviderStatus2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderModelStatus2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderModelStatus2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderModelStatus2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderModelStatus2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderTask2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderTask2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderTask2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AvailableInferenceProviderTask2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2Gated2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2Gated2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2Gated2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant2AuthorDataVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Sdk2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3Sdk2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Sdk2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3Sdk2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeStage2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeStage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeStage2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeStage2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareCurrent2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareCurrent2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareCurrent2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareCurrent2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareRequested2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareRequested2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareRequested2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeHardwareRequested2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeDomainStage2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeDomainStage2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3RuntimeDomainStage2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3RuntimeDomainStage2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3OriginRepoAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3AuthorDataVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Visibility2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3Visibility2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant3Visibility2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant3Visibility2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5OwnerVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5OwnerVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5OwnerVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Theme2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5Theme2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant5Theme2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant5Theme2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6RepoType2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant6RepoType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6RepoType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant6RepoType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionProvider2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant6CdnRegionProvider2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionProvider2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant6CdnRegionProvider2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateCollectionsItemsResponseItemVariant6CdnRegionRegion2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.CreateCollectionsResponseGatingVariant2Variant3NotificationsMode))

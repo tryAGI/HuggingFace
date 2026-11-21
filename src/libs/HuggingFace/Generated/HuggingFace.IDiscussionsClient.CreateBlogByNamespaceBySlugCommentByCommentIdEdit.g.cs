@@ -19,7 +19,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentEditRequest2 request,
+            global::HuggingFace.CreateBlogCommentEditRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -37,7 +37,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentEditRequest2 request,
+            global::HuggingFace.CreateBlogCommentEditRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

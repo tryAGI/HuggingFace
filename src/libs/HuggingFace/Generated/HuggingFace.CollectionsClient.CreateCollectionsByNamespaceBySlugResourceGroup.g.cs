@@ -29,13 +29,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string slug,
-            global::HuggingFace.CreateCollectionsResourceGroupRequest2 request);
+            global::HuggingFace.CreateCollectionsResourceGroupRequest request);
         partial void PrepareCreateCollectionsByNamespaceBySlugResourceGroupRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
-            global::HuggingFace.CreateCollectionsResourceGroupRequest2 request);
+            global::HuggingFace.CreateCollectionsResourceGroupRequest request);
         partial void ProcessCreateCollectionsByNamespaceBySlugResourceGroupResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -55,11 +55,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResourceGroupResponse2> CreateCollectionsByNamespaceBySlugResourceGroupAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResourceGroupResponse> CreateCollectionsByNamespaceBySlugResourceGroupAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.CreateCollectionsResourceGroupRequest2 request,
+            global::HuggingFace.CreateCollectionsResourceGroupRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -84,11 +84,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsResourceGroupResponse2>> CreateCollectionsByNamespaceBySlugResourceGroupAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsResourceGroupResponse>> CreateCollectionsByNamespaceBySlugResourceGroupAsResponseAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.CreateCollectionsResourceGroupRequest2 request,
+            global::HuggingFace.CreateCollectionsResourceGroupRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -377,9 +377,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.CreateCollectionsResourceGroupResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.CreateCollectionsResourceGroupResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsResourceGroupResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsResourceGroupResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -389,7 +389,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -409,9 +409,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.CreateCollectionsResourceGroupResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.CreateCollectionsResourceGroupResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsResourceGroupResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsResourceGroupResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -434,7 +434,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -463,14 +463,14 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResourceGroupResponse2> CreateCollectionsByNamespaceBySlugResourceGroupAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsResourceGroupResponse> CreateCollectionsByNamespaceBySlugResourceGroupAsync(
             string @namespace,
             string slug,
             string? resourceGroupId = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateCollectionsResourceGroupRequest2
+            var __request = new global::HuggingFace.CreateCollectionsResourceGroupRequest
             {
                 ResourceGroupId = resourceGroupId,
             };

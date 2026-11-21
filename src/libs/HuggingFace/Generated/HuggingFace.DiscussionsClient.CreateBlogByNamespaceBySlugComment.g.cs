@@ -29,13 +29,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string slug,
-            global::HuggingFace.CreateBlogCommentRequest2 request);
+            global::HuggingFace.CreateBlogCommentRequest request);
         partial void PrepareCreateBlogByNamespaceBySlugCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
-            global::HuggingFace.CreateBlogCommentRequest2 request);
+            global::HuggingFace.CreateBlogCommentRequest request);
         partial void ProcessCreateBlogByNamespaceBySlugCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -54,11 +54,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentResponse2> CreateBlogByNamespaceBySlugCommentAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentResponse> CreateBlogByNamespaceBySlugCommentAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.CreateBlogCommentRequest2 request,
+            global::HuggingFace.CreateBlogCommentRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -82,11 +82,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogCommentResponse2>> CreateBlogByNamespaceBySlugCommentAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogCommentResponse>> CreateBlogByNamespaceBySlugCommentAsResponseAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.CreateBlogCommentRequest2 request,
+            global::HuggingFace.CreateBlogCommentRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -375,9 +375,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.CreateBlogCommentResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.CreateBlogCommentResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogCommentResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogCommentResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -387,7 +387,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -407,9 +407,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.CreateBlogCommentResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.CreateBlogCommentResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogCommentResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateBlogCommentResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -432,7 +432,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -458,14 +458,14 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentResponse2> CreateBlogByNamespaceBySlugCommentAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateBlogCommentResponse> CreateBlogByNamespaceBySlugCommentAsync(
             string @namespace,
             string slug,
             string comment,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateBlogCommentRequest2
+            var __request = new global::HuggingFace.CreateBlogCommentRequest
             {
                 Comment = comment,
             };

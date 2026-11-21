@@ -27,6 +27,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        BillingEndSubscription,
+        /// <summary>
+        ///
+        /// </summary>
         BillingGcpAdd,
         /// <summary>
         ///
@@ -135,6 +139,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgBlogAnalyticsExport,
+        /// <summary>
+        ///
+        /// </summary>
         OrgChangeAccountType,
         /// <summary>
         ///
@@ -211,6 +219,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgServiceAccountTokenInvalidate,
+        /// <summary>
+        ///
+        /// </summary>
         OrgServiceAccountTokenRotate,
         /// <summary>
         ///
@@ -224,6 +236,14 @@ namespace HuggingFace
         ///
         /// </summary>
         OrgServiceAccountTokenUpdate,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgServiceAccountTrustedPublisherCreate,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgServiceAccountTrustedPublisherDelete,
         /// <summary>
         ///
         /// </summary>
@@ -554,6 +574,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.BillingAwsRemove => "billing.aws_remove",
                 GetOrganizationsAuditLogExportResponseItemType.BillingCancelSubscription => "billing.cancel_subscription",
                 GetOrganizationsAuditLogExportResponseItemType.BillingCreateCustomer => "billing.create_customer",
+                GetOrganizationsAuditLogExportResponseItemType.BillingEndSubscription => "billing.end_subscription",
                 GetOrganizationsAuditLogExportResponseItemType.BillingGcpAdd => "billing.gcp_add",
                 GetOrganizationsAuditLogExportResponseItemType.BillingGcpRemove => "billing.gcp_remove",
                 GetOrganizationsAuditLogExportResponseItemType.BillingMarketplaceApprove => "billing.marketplace_approve",
@@ -581,6 +602,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OauthToken => "oauth.token",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport => "org.audit_log.export",
+                GetOrganizationsAuditLogExportResponseItemType.OrgBlogAnalyticsExport => "org.blog_analytics.export",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeAccountType => "org.change_account_type",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole => "org.change_role",
                 GetOrganizationsAuditLogExportResponseItemType.OrgCreate => "org.create",
@@ -600,10 +622,13 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete => "org.service_account.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate => "org.service_account.token.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete => "org.service_account.token.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenInvalidate => "org.service_account.token.invalidate",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate => "org.service_account.token.rotate",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate => "org.service_account.token.s3_credential.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete => "org.service_account.token.s3_credential.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate => "org.service_account.token.update",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherCreate => "org.service_account.trusted_publisher.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherDelete => "org.service_account.trusted_publisher.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders => "org.settings.inference_providers",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd => "org.settings.inference_providers.keys.add",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysRemove => "org.settings.inference_providers.keys.remove",
@@ -696,6 +721,7 @@ namespace HuggingFace
                 "billing.aws_remove" => GetOrganizationsAuditLogExportResponseItemType.BillingAwsRemove,
                 "billing.cancel_subscription" => GetOrganizationsAuditLogExportResponseItemType.BillingCancelSubscription,
                 "billing.create_customer" => GetOrganizationsAuditLogExportResponseItemType.BillingCreateCustomer,
+                "billing.end_subscription" => GetOrganizationsAuditLogExportResponseItemType.BillingEndSubscription,
                 "billing.gcp_add" => GetOrganizationsAuditLogExportResponseItemType.BillingGcpAdd,
                 "billing.gcp_remove" => GetOrganizationsAuditLogExportResponseItemType.BillingGcpRemove,
                 "billing.marketplace_approve" => GetOrganizationsAuditLogExportResponseItemType.BillingMarketplaceApprove,
@@ -723,6 +749,7 @@ namespace HuggingFace
                 "oauth.token" => GetOrganizationsAuditLogExportResponseItemType.OauthToken,
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
                 "org.audit_log.export" => GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport,
+                "org.blog_analytics.export" => GetOrganizationsAuditLogExportResponseItemType.OrgBlogAnalyticsExport,
                 "org.change_account_type" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeAccountType,
                 "org.change_role" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole,
                 "org.create" => GetOrganizationsAuditLogExportResponseItemType.OrgCreate,
@@ -742,10 +769,13 @@ namespace HuggingFace
                 "org.service_account.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete,
                 "org.service_account.token.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate,
                 "org.service_account.token.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete,
+                "org.service_account.token.invalidate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenInvalidate,
                 "org.service_account.token.rotate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate,
                 "org.service_account.token.s3_credential.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate,
                 "org.service_account.token.s3_credential.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete,
                 "org.service_account.token.update" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate,
+                "org.service_account.trusted_publisher.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherCreate,
+                "org.service_account.trusted_publisher.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherDelete,
                 "org.settings.inference_providers" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders,
                 "org.settings.inference_providers.keys.add" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd,
                 "org.settings.inference_providers.keys.remove" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysRemove,

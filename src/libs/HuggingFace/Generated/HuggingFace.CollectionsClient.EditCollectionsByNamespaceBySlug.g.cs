@@ -29,13 +29,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string slug,
-            global::HuggingFace.PatchCollectionsRequest2 request);
+            global::HuggingFace.PatchCollectionsRequest request);
         partial void PrepareEditCollectionsByNamespaceBySlugRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
-            global::HuggingFace.PatchCollectionsRequest2 request);
+            global::HuggingFace.PatchCollectionsRequest request);
         partial void ProcessEditCollectionsByNamespaceBySlugResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -54,11 +54,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchCollectionsResponse2> EditCollectionsByNamespaceBySlugAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchCollectionsResponse> EditCollectionsByNamespaceBySlugAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.PatchCollectionsRequest2 request,
+            global::HuggingFace.PatchCollectionsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -82,11 +82,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.PatchCollectionsResponse2>> EditCollectionsByNamespaceBySlugAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.PatchCollectionsResponse>> EditCollectionsByNamespaceBySlugAsResponseAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.PatchCollectionsRequest2 request,
+            global::HuggingFace.PatchCollectionsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -375,9 +375,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.PatchCollectionsResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.PatchCollectionsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.PatchCollectionsResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.PatchCollectionsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -387,7 +387,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -407,9 +407,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.PatchCollectionsResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.PatchCollectionsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.PatchCollectionsResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.PatchCollectionsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -432,7 +432,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -463,19 +463,19 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchCollectionsResponse2> EditCollectionsByNamespaceBySlugAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.PatchCollectionsResponse> EditCollectionsByNamespaceBySlugAsync(
             string @namespace,
             string slug,
             int? position = default,
             bool? @private = default,
-            global::HuggingFace.PatchCollectionsRequestTheme2? theme = default,
+            global::HuggingFace.PatchCollectionsRequestTheme? theme = default,
             string? title = default,
             string? description = default,
-            global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant22, global::HuggingFace.PatchCollectionsRequestGatingVariant32>? gating = default,
+            global::HuggingFace.AnyOf<bool?, global::HuggingFace.PatchCollectionsRequestGatingVariant2, global::HuggingFace.PatchCollectionsRequestGatingVariant3>? gating = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.PatchCollectionsRequest2
+            var __request = new global::HuggingFace.PatchCollectionsRequest
             {
                 Position = position,
                 Private = @private,
