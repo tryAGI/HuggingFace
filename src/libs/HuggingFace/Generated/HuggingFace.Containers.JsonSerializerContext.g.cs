@@ -66,9 +66,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersBatchResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateContainersBatchResponseFailedItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersBatchResponseFailedItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersBatchResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateContainersBatchResponseFailedItem2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateContainersBatchResponseFailedItem2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetContainersTreeResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersTreeResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetContainersTreeResponseItemType), TypeInfoPropertyName = "GetContainersTreeResponseItemType2")]
@@ -102,7 +99,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetContainersResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetContainersResponseItemCdnRegion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateContainersBatchResponseFailedItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateContainersBatchResponseFailedItem2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetContainersTreeResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateContainersPathsInfoResponseItem>))]
     internal sealed partial class ContainersSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext

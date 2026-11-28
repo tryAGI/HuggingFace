@@ -12,17 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderVariant2?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider Provider { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("providerStatus")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatusJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus ProviderStatus { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderVariant2?> Provider { get; set; }
 
         /// <summary>
         ///
@@ -114,7 +106,6 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProvider" /> class.
         /// </summary>
         /// <param name="provider"></param>
-        /// <param name="providerStatus"></param>
         /// <param name="modelStatus"></param>
         /// <param name="providerId"></param>
         /// <param name="task"></param>
@@ -131,8 +122,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProvider(
-            global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProvider provider,
-            global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderStatus providerStatus,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderProviderVariant2?> provider,
             global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderModelStatus modelStatus,
             string providerId,
             global::HuggingFace.GetTrendingResponseRecentlyTrendingItemVariant2RepoDataAvailableInferenceProviderTask task,
@@ -147,7 +137,6 @@ namespace HuggingFace
             global::System.DateTime? freeUntil)
         {
             this.Provider = provider;
-            this.ProviderStatus = providerStatus;
             this.ModelStatus = modelStatus;
             this.ProviderId = providerId ?? throw new global::System.ArgumentNullException(nameof(providerId));
             this.Task = task;

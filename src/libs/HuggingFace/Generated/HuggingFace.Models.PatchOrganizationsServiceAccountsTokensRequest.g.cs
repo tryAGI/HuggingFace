@@ -21,7 +21,7 @@ namespace HuggingFace
         public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>? Permissions { get; set; }
 
         /// <summary>
-        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.
+        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide and resource-group permissions.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoIds")]
         public global::System.Collections.Generic.IList<string>? RepoIds { get; set; }
@@ -31,6 +31,24 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repoPermissions")]
         public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>? RepoPermissions { get; set; }
+
+        /// <summary>
+        /// Resource groups of the organization to grant `resourceGroupPermissions` on. Applies to every repository currently or later in those resource groups, and overrides the org-wide permissions.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupIds")]
+        public global::System.Collections.Generic.IList<string>? ResourceGroupIds { get; set; }
+
+        /// <summary>
+        /// Permissions granted on the repositories of the selected `resourceGroupIds`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupPermissions")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermission>? ResourceGroupPermissions { get; set; }
+
+        /// <summary>
+        /// Permissions on the service account itself.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("userPermissions")]
+        public global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission>? UserPermissions { get; set; }
 
         /// <summary>
         /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.
@@ -43,6 +61,12 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipNetworkSecurity")]
         public bool? SkipNetworkSecurity { get; set; }
+
+        /// <summary>
+        /// Read contents of gated repos the service account has access to.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("canReadGatedRepos")]
+        public bool? CanReadGatedRepos { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -60,16 +84,28 @@ namespace HuggingFace
         /// Org-wide permissions for this token
         /// </param>
         /// <param name="repoIds">
-        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.
+        /// Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide and resource-group permissions.
         /// </param>
         /// <param name="repoPermissions">
         /// Permissions granted on the selected `repoIds`.
+        /// </param>
+        /// <param name="resourceGroupIds">
+        /// Resource groups of the organization to grant `resourceGroupPermissions` on. Applies to every repository currently or later in those resource groups, and overrides the org-wide permissions.
+        /// </param>
+        /// <param name="resourceGroupPermissions">
+        /// Permissions granted on the repositories of the selected `resourceGroupIds`.
+        /// </param>
+        /// <param name="userPermissions">
+        /// Permissions on the service account itself.
         /// </param>
         /// <param name="endpointPatterns">
         /// Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token's org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.
         /// </param>
         /// <param name="skipNetworkSecurity">
         /// Exempt this token from the org's Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.
+        /// </param>
+        /// <param name="canReadGatedRepos">
+        /// Read contents of gated repos the service account has access to.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,15 +115,23 @@ namespace HuggingFace
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestPermission>? permissions,
             global::System.Collections.Generic.IList<string>? repoIds,
             global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestRepoPermission>? repoPermissions,
+            global::System.Collections.Generic.IList<string>? resourceGroupIds,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestResourceGroupPermission>? resourceGroupPermissions,
+            global::System.Collections.Generic.IList<global::HuggingFace.PatchOrganizationsServiceAccountsTokensRequestUserPermission>? userPermissions,
             global::System.Collections.Generic.IList<string>? endpointPatterns,
-            bool? skipNetworkSecurity)
+            bool? skipNetworkSecurity,
+            bool? canReadGatedRepos)
         {
             this.DisplayName = displayName;
             this.Permissions = permissions;
             this.RepoIds = repoIds;
             this.RepoPermissions = repoPermissions;
+            this.ResourceGroupIds = resourceGroupIds;
+            this.ResourceGroupPermissions = resourceGroupPermissions;
+            this.UserPermissions = userPermissions;
             this.EndpointPatterns = endpointPatterns;
             this.SkipNetworkSecurity = skipNetworkSecurity;
+            this.CanReadGatedRepos = canReadGatedRepos;
         }
 
         /// <summary>

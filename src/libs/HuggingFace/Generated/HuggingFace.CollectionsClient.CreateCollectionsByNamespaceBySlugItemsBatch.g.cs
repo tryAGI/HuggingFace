@@ -29,13 +29,13 @@ namespace HuggingFace
             global::System.Net.Http.HttpClient httpClient,
             ref string @namespace,
             ref string slug,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem2> request);
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem> request);
         partial void PrepareCreateCollectionsByNamespaceBySlugItemsBatchRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem2> request);
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem> request);
         partial void ProcessCreateCollectionsByNamespaceBySlugItemsBatchResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -54,7 +54,7 @@ namespace HuggingFace
             string @namespace,
             string slug,
 
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem2> request,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -81,7 +81,7 @@ namespace HuggingFace
             string @namespace,
             string slug,
 
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem2> request,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -375,7 +375,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -411,7 +411,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(

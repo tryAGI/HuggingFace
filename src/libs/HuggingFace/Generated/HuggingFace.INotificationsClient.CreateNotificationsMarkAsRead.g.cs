@@ -102,9 +102,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="lastUpdate"></param>
         /// <param name="applyToAll"></param>
-        /// <param name="discussionIds">
-        /// Default Value: []
-        /// </param>
+        /// <param name="discussionIds"></param>
         /// <param name="read">
         /// Default Value: true
         /// </param>

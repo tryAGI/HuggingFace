@@ -12,10 +12,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse2> CreateSettingsWebhooksByWebhookIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksByWebhookIdAsync(
             string webhookId,
 
-            global::HuggingFace.CreateSettingsWebhooksRequest2 request,
+            global::HuggingFace.CreateSettingsWebhooksRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -26,10 +26,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse2>> CreateSettingsWebhooksByWebhookIdAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse>> CreateSettingsWebhooksByWebhookIdAsResponseAsync(
             string webhookId,
 
-            global::HuggingFace.CreateSettingsWebhooksRequest2 request,
+            global::HuggingFace.CreateSettingsWebhooksRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -48,12 +48,12 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse2> CreateSettingsWebhooksByWebhookIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksByWebhookIdAsync(
             string webhookId,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem2> watched,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain2> domains,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem> watched,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain> domains,
             string? url = default,
-            global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant12, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant22>? job = default,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2>? job = default,
             string? jobSourceId = default,
             global::System.Collections.Generic.Dictionary<string, string>? secrets = default,
             string? secret = default,

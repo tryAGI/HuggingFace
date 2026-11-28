@@ -13,7 +13,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.GetCollectionsResponse> GetCollectionsByNamespaceBySlugByIdAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.GetCollectionsResponse3> GetCollectionsByNamespaceBySlugByIdAsync(
             string @namespace,
             string slug,
             string id,
@@ -28,7 +28,7 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetCollectionsResponse>> GetCollectionsByNamespaceBySlugByIdAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.GetCollectionsResponse3>> GetCollectionsByNamespaceBySlugByIdAsResponseAsync(
             string @namespace,
             string slug,
             string id,

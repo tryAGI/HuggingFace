@@ -9,6 +9,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?>), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2_120159d813d2166c")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?>?), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2_295e5572a54da667")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
@@ -48,8 +50,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModel))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProvider>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProvider))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant12")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderModelStatus), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderModelStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderTask), TypeInfoPropertyName = "GetPapersResponseLinkedModelAvailableInferenceProviderTask2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderFeatures))]
@@ -112,8 +114,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetPapersField2?, global::System.Collections.Generic.IList<global::HuggingFace.GetPapersFieldItem>>?), TypeInfoPropertyName = "NullableAnyOfGetPapersField2IListGetPapersFieldItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersField2?), TypeInfoPropertyName = "NullableGetPapersField22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersFieldItem?), TypeInfoPropertyName = "NullableGetPapersFieldItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider?), TypeInfoPropertyName = "NullableGetPapersResponseLinkedModelAvailableInferenceProviderProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus?), TypeInfoPropertyName = "NullableGetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?), TypeInfoPropertyName = "NullableGetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant12")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?), TypeInfoPropertyName = "NullableGetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderModelStatus?), TypeInfoPropertyName = "NullableGetPapersResponseLinkedModelAvailableInferenceProviderModelStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderTask?), TypeInfoPropertyName = "NullableGetPapersResponseLinkedModelAvailableInferenceProviderTask2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<bool?, global::HuggingFace.GetPapersResponseLinkedModelGated?>?), TypeInfoPropertyName = "NullableAnyOfBooleanGetPapersResponseLinkedModelGated2")]
@@ -203,6 +205,7 @@ namespace HuggingFace
         {
             global::HuggingFace.PartitionCoreSourceGenerationContext.AddConverters(options);
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetPapersField2?, global::System.Collections.Generic.IList<global::HuggingFace.GetPapersFieldItem>>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetPapersResponseLinkedModelGated?>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetPapersResponseLinkedModelAuthorDataVariant1, global::HuggingFace.GetPapersResponseLinkedModelAuthorDataVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.AnyOfJsonConverter<bool?, global::HuggingFace.GetPapersResponseLinkedDatasetGated?>());
@@ -241,13 +244,13 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetPapersFieldItem?)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider)
+                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider?)
+                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus)
+                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2)
 
-                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus?)
+                    || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderModelStatus)
 
@@ -360,24 +363,24 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.GetPapersFieldItemNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider))
+                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1))
                 {
-                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderJsonConverter();
+                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1JsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider?))
+                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?))
                 {
-                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderNullableJsonConverter();
+                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1NullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus))
+                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2))
                 {
-                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatusJsonConverter();
+                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2JsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus?))
+                if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?))
                 {
-                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatusNullableJsonConverter();
+                    return new global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderModelStatus))

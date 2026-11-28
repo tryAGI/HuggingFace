@@ -20,10 +20,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse3> CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse> CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsync(
             string @namespace,
             string endpoint,
-            global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2 perms,
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms perms,
             string? own = default,
             string? isCreator = default,
             string? creatorId = default,
@@ -48,10 +48,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse3>> CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse>> CreateInferenceEndpointsByNamespaceByEndpointAuthCheckByPermsAsResponseAsync(
             string @namespace,
             string endpoint,
-            global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2 perms,
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms perms,
             string? own = default,
             string? isCreator = default,
             string? creatorId = default,

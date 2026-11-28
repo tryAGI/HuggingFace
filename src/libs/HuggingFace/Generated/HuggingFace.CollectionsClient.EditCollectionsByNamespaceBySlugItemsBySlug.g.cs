@@ -30,14 +30,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string slug,
             ref string slug2,
-            global::HuggingFace.PatchCollectionsItemsRequest2 request);
+            global::HuggingFace.PatchCollectionsItemsRequest request);
         partial void PrepareEditCollectionsByNamespaceBySlugItemsBySlugRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
             string slug2,
-            global::HuggingFace.PatchCollectionsItemsRequest2 request);
+            global::HuggingFace.PatchCollectionsItemsRequest request);
         partial void ProcessEditCollectionsByNamespaceBySlugItemsBySlugResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -58,7 +58,7 @@ namespace HuggingFace
             string slug,
             string slug2,
 
-            global::HuggingFace.PatchCollectionsItemsRequest2 request,
+            global::HuggingFace.PatchCollectionsItemsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -88,7 +88,7 @@ namespace HuggingFace
             string slug,
             string slug2,
 
-            global::HuggingFace.PatchCollectionsItemsRequest2 request,
+            global::HuggingFace.PatchCollectionsItemsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -384,7 +384,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -420,7 +420,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -460,7 +460,7 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.PatchCollectionsItemsRequest2
+            var __request = new global::HuggingFace.PatchCollectionsItemsRequest
             {
                 Gallery = gallery,
                 Note = note,

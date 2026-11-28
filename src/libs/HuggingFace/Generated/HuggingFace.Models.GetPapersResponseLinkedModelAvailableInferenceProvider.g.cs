@@ -12,17 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider Provider { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("providerStatus")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatusJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus ProviderStatus { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?> Provider { get; set; }
 
         /// <summary>
         ///
@@ -114,7 +106,6 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="GetPapersResponseLinkedModelAvailableInferenceProvider" /> class.
         /// </summary>
         /// <param name="provider"></param>
-        /// <param name="providerStatus"></param>
         /// <param name="modelStatus"></param>
         /// <param name="providerId"></param>
         /// <param name="task"></param>
@@ -131,8 +122,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetPapersResponseLinkedModelAvailableInferenceProvider(
-            global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProvider provider,
-            global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderStatus providerStatus,
+            global::HuggingFace.AnyOf<global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant1?, global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderProviderVariant2?> provider,
             global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderModelStatus modelStatus,
             string providerId,
             global::HuggingFace.GetPapersResponseLinkedModelAvailableInferenceProviderTask task,
@@ -147,7 +137,6 @@ namespace HuggingFace
             global::System.DateTime? freeUntil)
         {
             this.Provider = provider;
-            this.ProviderStatus = providerStatus;
             this.ModelStatus = modelStatus;
             this.ProviderId = providerId ?? throw new global::System.ArgumentNullException(nameof(providerId));
             this.Task = task;

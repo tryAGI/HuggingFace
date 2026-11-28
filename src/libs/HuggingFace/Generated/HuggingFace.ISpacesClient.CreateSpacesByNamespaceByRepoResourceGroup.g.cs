@@ -5,8 +5,8 @@ namespace HuggingFace
     public partial interface ISpacesClient
     {
         /// <summary>
-        /// Add resource group<br/>
-        /// Add the repository to a resource group
+        /// Assign resource group<br/>
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -22,8 +22,8 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Add resource group<br/>
-        /// Add the repository to a resource group
+        /// Assign resource group<br/>
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -39,13 +39,13 @@ namespace HuggingFace
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Add resource group<br/>
-        /// Add the repository to a resource group
+        /// Assign resource group<br/>
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="resourceGroupId">
-        /// The resource group to add the repository to, if null, the repository will be removed from the resource group
+        /// The resource group to assign the repository to. If null, the repository is removed from any resource group.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

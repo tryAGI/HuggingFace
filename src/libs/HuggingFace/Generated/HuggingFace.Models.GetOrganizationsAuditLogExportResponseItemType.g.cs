@@ -27,6 +27,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        BillingEndSubscription,
+        /// <summary>
+        ///
+        /// </summary>
         BillingGcpAdd,
         /// <summary>
         ///
@@ -87,6 +91,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        JobsSshAccess,
+        /// <summary>
+        ///
+        /// </summary>
         JobsUpdateExpose,
         /// <summary>
         ///
@@ -127,11 +135,19 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OauthTokenRevoke,
+        /// <summary>
+        ///
+        /// </summary>
         OrgAddUser,
         /// <summary>
         ///
         /// </summary>
         OrgAuditLogExport,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgBlogAnalyticsExport,
         /// <summary>
         ///
         /// </summary>
@@ -211,6 +227,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        OrgServiceAccountTokenInvalidate,
+        /// <summary>
+        ///
+        /// </summary>
         OrgServiceAccountTokenRotate,
         /// <summary>
         ///
@@ -224,6 +244,14 @@ namespace HuggingFace
         ///
         /// </summary>
         OrgServiceAccountTokenUpdate,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgServiceAccountTrustedPublisherCreate,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgServiceAccountTrustedPublisherDelete,
         /// <summary>
         ///
         /// </summary>
@@ -356,6 +384,14 @@ namespace HuggingFace
         ///
         /// </summary>
         OrgTokenApprovalEnabled,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgTokenRepoScopeDisabled,
+        /// <summary>
+        ///
+        /// </summary>
+        OrgTokenRepoScopeEnabled,
         /// <summary>
         ///
         /// </summary>
@@ -531,6 +567,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        SpacesSshAccess,
+        /// <summary>
+        ///
+        /// </summary>
+        SpacesUpdateDevMode,
+        /// <summary>
+        ///
+        /// </summary>
         SpacesUpdateHardware,
         /// <summary>
         ///
@@ -554,6 +598,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.BillingAwsRemove => "billing.aws_remove",
                 GetOrganizationsAuditLogExportResponseItemType.BillingCancelSubscription => "billing.cancel_subscription",
                 GetOrganizationsAuditLogExportResponseItemType.BillingCreateCustomer => "billing.create_customer",
+                GetOrganizationsAuditLogExportResponseItemType.BillingEndSubscription => "billing.end_subscription",
                 GetOrganizationsAuditLogExportResponseItemType.BillingGcpAdd => "billing.gcp_add",
                 GetOrganizationsAuditLogExportResponseItemType.BillingGcpRemove => "billing.gcp_remove",
                 GetOrganizationsAuditLogExportResponseItemType.BillingMarketplaceApprove => "billing.marketplace_approve",
@@ -569,6 +614,7 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.CollectionUpdateResourceGroup => "collection.update_resource_group",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCancel => "jobs.cancel",
                 GetOrganizationsAuditLogExportResponseItemType.JobsCreate => "jobs.create",
+                GetOrganizationsAuditLogExportResponseItemType.JobsSshAccess => "jobs.ssh_access",
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateExpose => "jobs.update_expose",
                 GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels => "jobs.update_labels",
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppCreate => "oauth.app.create",
@@ -579,8 +625,10 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretRotate => "oauth.app.secret.rotate",
                 GetOrganizationsAuditLogExportResponseItemType.OauthAppUpdate => "oauth.app.update",
                 GetOrganizationsAuditLogExportResponseItemType.OauthToken => "oauth.token",
+                GetOrganizationsAuditLogExportResponseItemType.OauthTokenRevoke => "oauth.token.revoke",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAddUser => "org.add_user",
                 GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport => "org.audit_log.export",
+                GetOrganizationsAuditLogExportResponseItemType.OrgBlogAnalyticsExport => "org.blog_analytics.export",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeAccountType => "org.change_account_type",
                 GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole => "org.change_role",
                 GetOrganizationsAuditLogExportResponseItemType.OrgCreate => "org.create",
@@ -600,10 +648,13 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete => "org.service_account.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate => "org.service_account.token.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete => "org.service_account.token.delete",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenInvalidate => "org.service_account.token.invalidate",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate => "org.service_account.token.rotate",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate => "org.service_account.token.s3_credential.create",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete => "org.service_account.token.s3_credential.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate => "org.service_account.token.update",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherCreate => "org.service_account.trusted_publisher.create",
+                GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherDelete => "org.service_account.trusted_publisher.delete",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders => "org.settings.inference_providers",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd => "org.settings.inference_providers.keys.add",
                 GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysRemove => "org.settings.inference_providers.keys.remove",
@@ -637,6 +688,8 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequestRevoked => "org.token_approval.authorization_request.revoked",
                 GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalDisabled => "org.token_approval.disabled",
                 GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalEnabled => "org.token_approval.enabled",
+                GetOrganizationsAuditLogExportResponseItemType.OrgTokenRepoScopeDisabled => "org.token_repo_scope.disabled",
+                GetOrganizationsAuditLogExportResponseItemType.OrgTokenRepoScopeEnabled => "org.token_repo_scope.enabled",
                 GetOrganizationsAuditLogExportResponseItemType.OrgUpdateJoinSettings => "org.update_join_settings",
                 GetOrganizationsAuditLogExportResponseItemType.OrgUpdateSettings => "org.update_settings",
                 GetOrganizationsAuditLogExportResponseItemType.RepoAddSecret => "repo.add_secret",
@@ -680,6 +733,8 @@ namespace HuggingFace
                 GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveStorage => "spaces.remove_storage",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveVolumes => "spaces.remove_volumes",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesSetVolumes => "spaces.set_volumes",
+                GetOrganizationsAuditLogExportResponseItemType.SpacesSshAccess => "spaces.ssh_access",
+                GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateDevMode => "spaces.update_dev_mode",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateHardware => "spaces.update_hardware",
                 GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateSleepTime => "spaces.update_sleep_time",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -696,6 +751,7 @@ namespace HuggingFace
                 "billing.aws_remove" => GetOrganizationsAuditLogExportResponseItemType.BillingAwsRemove,
                 "billing.cancel_subscription" => GetOrganizationsAuditLogExportResponseItemType.BillingCancelSubscription,
                 "billing.create_customer" => GetOrganizationsAuditLogExportResponseItemType.BillingCreateCustomer,
+                "billing.end_subscription" => GetOrganizationsAuditLogExportResponseItemType.BillingEndSubscription,
                 "billing.gcp_add" => GetOrganizationsAuditLogExportResponseItemType.BillingGcpAdd,
                 "billing.gcp_remove" => GetOrganizationsAuditLogExportResponseItemType.BillingGcpRemove,
                 "billing.marketplace_approve" => GetOrganizationsAuditLogExportResponseItemType.BillingMarketplaceApprove,
@@ -711,6 +767,7 @@ namespace HuggingFace
                 "collection.update_resource_group" => GetOrganizationsAuditLogExportResponseItemType.CollectionUpdateResourceGroup,
                 "jobs.cancel" => GetOrganizationsAuditLogExportResponseItemType.JobsCancel,
                 "jobs.create" => GetOrganizationsAuditLogExportResponseItemType.JobsCreate,
+                "jobs.ssh_access" => GetOrganizationsAuditLogExportResponseItemType.JobsSshAccess,
                 "jobs.update_expose" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateExpose,
                 "jobs.update_labels" => GetOrganizationsAuditLogExportResponseItemType.JobsUpdateLabels,
                 "oauth.app.create" => GetOrganizationsAuditLogExportResponseItemType.OauthAppCreate,
@@ -721,8 +778,10 @@ namespace HuggingFace
                 "oauth.app.secret.rotate" => GetOrganizationsAuditLogExportResponseItemType.OauthAppSecretRotate,
                 "oauth.app.update" => GetOrganizationsAuditLogExportResponseItemType.OauthAppUpdate,
                 "oauth.token" => GetOrganizationsAuditLogExportResponseItemType.OauthToken,
+                "oauth.token.revoke" => GetOrganizationsAuditLogExportResponseItemType.OauthTokenRevoke,
                 "org.add_user" => GetOrganizationsAuditLogExportResponseItemType.OrgAddUser,
                 "org.audit_log.export" => GetOrganizationsAuditLogExportResponseItemType.OrgAuditLogExport,
+                "org.blog_analytics.export" => GetOrganizationsAuditLogExportResponseItemType.OrgBlogAnalyticsExport,
                 "org.change_account_type" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeAccountType,
                 "org.change_role" => GetOrganizationsAuditLogExportResponseItemType.OrgChangeRole,
                 "org.create" => GetOrganizationsAuditLogExportResponseItemType.OrgCreate,
@@ -742,10 +801,13 @@ namespace HuggingFace
                 "org.service_account.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountDelete,
                 "org.service_account.token.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenCreate,
                 "org.service_account.token.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenDelete,
+                "org.service_account.token.invalidate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenInvalidate,
                 "org.service_account.token.rotate" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenRotate,
                 "org.service_account.token.s3_credential.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialCreate,
                 "org.service_account.token.s3_credential.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenS3CredentialDelete,
                 "org.service_account.token.update" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTokenUpdate,
+                "org.service_account.trusted_publisher.create" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherCreate,
+                "org.service_account.trusted_publisher.delete" => GetOrganizationsAuditLogExportResponseItemType.OrgServiceAccountTrustedPublisherDelete,
                 "org.settings.inference_providers" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProviders,
                 "org.settings.inference_providers.keys.add" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysAdd,
                 "org.settings.inference_providers.keys.remove" => GetOrganizationsAuditLogExportResponseItemType.OrgSettingsInferenceProvidersKeysRemove,
@@ -779,6 +841,8 @@ namespace HuggingFace
                 "org.token_approval.authorization_request.revoked" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalAuthorizationRequestRevoked,
                 "org.token_approval.disabled" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalDisabled,
                 "org.token_approval.enabled" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenApprovalEnabled,
+                "org.token_repo_scope.disabled" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenRepoScopeDisabled,
+                "org.token_repo_scope.enabled" => GetOrganizationsAuditLogExportResponseItemType.OrgTokenRepoScopeEnabled,
                 "org.update_join_settings" => GetOrganizationsAuditLogExportResponseItemType.OrgUpdateJoinSettings,
                 "org.update_settings" => GetOrganizationsAuditLogExportResponseItemType.OrgUpdateSettings,
                 "repo.add_secret" => GetOrganizationsAuditLogExportResponseItemType.RepoAddSecret,
@@ -822,6 +886,8 @@ namespace HuggingFace
                 "spaces.remove_storage" => GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveStorage,
                 "spaces.remove_volumes" => GetOrganizationsAuditLogExportResponseItemType.SpacesRemoveVolumes,
                 "spaces.set_volumes" => GetOrganizationsAuditLogExportResponseItemType.SpacesSetVolumes,
+                "spaces.ssh_access" => GetOrganizationsAuditLogExportResponseItemType.SpacesSshAccess,
+                "spaces.update_dev_mode" => GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateDevMode,
                 "spaces.update_hardware" => GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateHardware,
                 "spaces.update_sleep_time" => GetOrganizationsAuditLogExportResponseItemType.SpacesUpdateSleepTime,
                 _ => null,

@@ -19,7 +19,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentReactionRequest2 request,
+            global::HuggingFace.CreateBlogCommentReactionRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -37,7 +37,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentReactionRequest2 request,
+            global::HuggingFace.CreateBlogCommentReactionRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -55,8 +55,8 @@ namespace HuggingFace
             string @namespace,
             string slug,
             string commentId,
-            global::HuggingFace.CreateBlogCommentReactionRequestReaction2 reaction,
-            global::HuggingFace.CreateBlogCommentReactionRequestAction2 action,
+            global::HuggingFace.CreateBlogCommentReactionRequestReaction reaction,
+            global::HuggingFace.CreateBlogCommentReactionRequestAction action,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

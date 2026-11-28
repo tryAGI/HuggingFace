@@ -22,8 +22,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateScheduledJobsScheduleRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutScheduledJobsLabelsRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckPerms), TypeInfoPropertyName = "CreateJobsAuthCheckPerms2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckPerms2), TypeInfoPropertyName = "CreateJobsAuthCheckPerms22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckPerms), TypeInfoPropertyName = "CreateJobsAuthCheckPerms2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetJobsStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsStageItem>>), TypeInfoPropertyName = "AnyOfGetJobsStage2IListGetJobsStageItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetJobsStage2), TypeInfoPropertyName = "GetJobsStage22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetJobsStageItem>))]
@@ -35,9 +34,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckResponseNamespace))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckResponseUser))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckResponseNamespace2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckResponseUser2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetJobsHardwareResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetJobsHardwareResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetJobsHardwareResponseItemAccelerator))]
@@ -62,8 +58,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.PutScheduledJobsLabelsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateJobsRequestVariant1, global::HuggingFace.CreateJobsRequestVariant2>?), TypeInfoPropertyName = "NullableOneOfCreateJobsRequestVariant1CreateJobsRequestVariant22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckPerms?), TypeInfoPropertyName = "NullableCreateJobsAuthCheckPerms2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckPerms2?), TypeInfoPropertyName = "NullableCreateJobsAuthCheckPerms22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateJobsAuthCheckPerms?), TypeInfoPropertyName = "NullableCreateJobsAuthCheckPerms2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetJobsStage2?, global::System.Collections.Generic.IList<global::HuggingFace.GetJobsStageItem>>?), TypeInfoPropertyName = "NullableAnyOfGetJobsStage2IListGetJobsStageItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetJobsStage2?), TypeInfoPropertyName = "NullableGetJobsStage22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetJobsStageItem?), TypeInfoPropertyName = "NullableGetJobsStageItem2")]
@@ -155,10 +150,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2?)
-
                     || typeToConvert == typeof(global::HuggingFace.GetJobsStage2)
 
                     || typeToConvert == typeof(global::HuggingFace.GetJobsStage2?)
@@ -196,16 +187,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateJobsAuthCheckPermsNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateJobsAuthCheckPerms2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateJobsAuthCheckPerms2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateJobsAuthCheckPerms2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetJobsStage2))
