@@ -31,6 +31,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Akeratos,
+        /// <summary>
+        ///
+        /// </summary>
+        Alkove,
+        /// <summary>
+        ///
+        /// </summary>
         Allennlp,
         /// <summary>
         ///
@@ -68,6 +76,14 @@ namespace HuggingFace
         ///
         /// </summary>
         BagelMot,
+        /// <summary>
+        ///
+        /// </summary>
+        Basalt,
+        /// <summary>
+        ///
+        /// </summary>
+        Basedecision,
         /// <summary>
         ///
         /// </summary>
@@ -143,11 +159,19 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Chessqueries,
+        /// <summary>
+        ///
+        /// </summary>
         Chexmix,
         /// <summary>
         ///
         /// </summary>
         ChronosForecasting,
+        /// <summary>
+        ///
+        /// </summary>
+        CircuitTracer,
         /// <summary>
         ///
         /// </summary>
@@ -176,6 +200,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Comet,
+        /// <summary>
+        ///
+        /// </summary>
+        Cooperscene,
         /// <summary>
         ///
         /// </summary>
@@ -219,6 +247,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Dewml,
+        /// <summary>
+        ///
+        /// </summary>
         DiaTts,
         /// <summary>
         ///
@@ -259,6 +291,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        DuoWorldModel,
+        /// <summary>
+        ///
+        /// </summary>
         Edsnlp,
         /// <summary>
         ///
@@ -288,6 +324,10 @@ namespace HuggingFace
         ///
         /// </summary>
         F5Tts,
+        /// <summary>
+        ///
+        /// </summary>
+        FahrFace,
         /// <summary>
         ///
         /// </summary>
@@ -327,6 +367,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Fse,
+        /// <summary>
+        ///
+        /// </summary>
         Gaussianformer,
         /// <summary>
         ///
@@ -356,6 +400,10 @@ namespace HuggingFace
         ///
         /// </summary>
         GlmTts,
+        /// <summary>
+        ///
+        /// </summary>
+        Glyd,
         /// <summary>
         ///
         /// </summary>
@@ -439,6 +487,14 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        InworldSava,
+        /// <summary>
+        ///
+        /// </summary>
+        InworldVoiceIsolation,
+        /// <summary>
+        ///
+        /// </summary>
         IsingDecoding,
         /// <summary>
         ///
@@ -471,6 +527,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Konfai,
+        /// <summary>
+        ///
+        /// </summary>
         Kronos,
         /// <summary>
         ///
@@ -487,11 +547,31 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Libreyolo,
+        /// <summary>
+        ///
+        /// </summary>
         Lightglue,
         /// <summary>
         ///
         /// </summary>
         LightningIr,
+        /// <summary>
+        ///
+        /// </summary>
+        LimxDynamics,
+        /// <summary>
+        ///
+        /// </summary>
+        LingbotMap,
+        /// <summary>
+        ///
+        /// </summary>
+        LinnetTts,
+        /// <summary>
+        ///
+        /// </summary>
+        Liteparse,
         /// <summary>
         ///
         /// </summary>
@@ -559,6 +639,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Mediapipe,
+        /// <summary>
+        ///
+        /// </summary>
         Medvae,
         /// <summary>
         ///
@@ -591,11 +675,19 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        MinicpmOcr,
+        /// <summary>
+        ///
+        /// </summary>
         MinimaxH3,
         /// <summary>
         ///
         /// </summary>
         Mitie,
+        /// <summary>
+        ///
+        /// </summary>
+        Mjlab,
         /// <summary>
         ///
         /// </summary>
@@ -651,6 +743,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Neurobrix,
+        /// <summary>
+        ///
+        /// </summary>
         Ninfer,
         /// <summary>
         ///
@@ -660,6 +756,10 @@ namespace HuggingFace
         ///
         /// </summary>
         NvMedtech,
+        /// <summary>
+        ///
+        /// </summary>
+        OnnxruntimeGenai,
         /// <summary>
         ///
         /// </summary>
@@ -680,6 +780,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Opendde,
+        /// <summary>
+        ///
+        /// </summary>
+        Opendecision,
         /// <summary>
         ///
         /// </summary>
@@ -707,11 +811,27 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        PikaH3Flex,
+        /// <summary>
+        ///
+        /// </summary>
         Piper,
         /// <summary>
         ///
         /// </summary>
+        Pixeldense,
+        /// <summary>
+        ///
+        /// </summary>
         PocketTts,
+        /// <summary>
+        ///
+        /// </summary>
+        Pqgan,
+        /// <summary>
+        ///
+        /// </summary>
+        Protomotions,
         /// <summary>
         ///
         /// </summary>
@@ -747,6 +867,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Redefiner,
+        /// <summary>
+        ///
+        /// </summary>
         Refiners,
         /// <summary>
         ///
@@ -760,6 +884,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Reverb,
+        /// <summary>
+        ///
+        /// </summary>
+        ReverbTts,
         /// <summary>
         ///
         /// </summary>
@@ -780,6 +908,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Rwkv,
+        /// <summary>
+        ///
+        /// </summary>
+        S1s2,
         /// <summary>
         ///
         /// </summary>
@@ -812,6 +944,10 @@ namespace HuggingFace
         ///
         /// </summary>
         Sana,
+        /// <summary>
+        ///
+        /// </summary>
+        SapCase,
         /// <summary>
         ///
         /// </summary>
@@ -903,7 +1039,15 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        StrandsDecider,
+        /// <summary>
+        ///
+        /// </summary>
         Supertonic,
+        /// <summary>
+        ///
+        /// </summary>
+        Svdtrunc,
         /// <summary>
         ///
         /// </summary>
@@ -963,6 +1107,10 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        TorchPointcloud,
+        /// <summary>
+        ///
+        /// </summary>
         Torchgeo,
         /// <summary>
         ///
@@ -995,11 +1143,19 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        UnitreeRl,
+        /// <summary>
+        ///
+        /// </summary>
         UnitySentis,
         /// <summary>
         ///
         /// </summary>
         Univa,
+        /// <summary>
+        ///
+        /// </summary>
+        VertoAsr,
         /// <summary>
         ///
         /// </summary>
@@ -1043,11 +1199,19 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        Wavegen,
+        /// <summary>
+        ///
+        /// </summary>
         Wham,
         /// <summary>
         ///
         /// </summary>
         Whisperkit,
+        /// <summary>
+        ///
+        /// </summary>
+        Wilddet3d,
         /// <summary>
         ///
         /// </summary>
@@ -1059,7 +1223,15 @@ namespace HuggingFace
         /// <summary>
         ///
         /// </summary>
+        ZaoLib,
+        /// <summary>
+        ///
+        /// </summary>
         Zeromodels,
+        /// <summary>
+        ///
+        /// </summary>
+        Zipsplat,
         /// <summary>
         ///
         /// </summary>
@@ -1083,6 +1255,8 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.AadyaNeural => "aadya-neural",
                 CreateQuicksearchRequestLibrary.Acestep => "acestep",
                 CreateQuicksearchRequestLibrary.AdapterTransformers => "adapter-transformers",
+                CreateQuicksearchRequestLibrary.Akeratos => "akeratos",
+                CreateQuicksearchRequestLibrary.Alkove => "alkove",
                 CreateQuicksearchRequestLibrary.Allennlp => "allennlp",
                 CreateQuicksearchRequestLibrary.Aneforge => "aneforge",
                 CreateQuicksearchRequestLibrary.Anemoi => "anemoi",
@@ -1093,6 +1267,8 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Audioseal => "audioseal",
                 CreateQuicksearchRequestLibrary.AviationNer => "aviation-ner",
                 CreateQuicksearchRequestLibrary.BagelMot => "bagel-mot",
+                CreateQuicksearchRequestLibrary.Basalt => "basalt",
+                CreateQuicksearchRequestLibrary.Basedecision => "basedecision",
                 CreateQuicksearchRequestLibrary.Bboxmaskpose => "bboxmaskpose",
                 CreateQuicksearchRequestLibrary.Ben2 => "ben2",
                 CreateQuicksearchRequestLibrary.Bertopic => "bertopic",
@@ -1111,8 +1287,10 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Chaossim => "chaossim",
                 CreateQuicksearchRequestLibrary.ChatTts => "chat_tts",
                 CreateQuicksearchRequestLibrary.Chatterbox => "chatterbox",
+                CreateQuicksearchRequestLibrary.Chessqueries => "chessqueries",
                 CreateQuicksearchRequestLibrary.Chexmix => "chexmix",
                 CreateQuicksearchRequestLibrary.ChronosForecasting => "chronos-forecasting",
+                CreateQuicksearchRequestLibrary.CircuitTracer => "circuit-tracer",
                 CreateQuicksearchRequestLibrary.Clara => "clara",
                 CreateQuicksearchRequestLibrary.Clipscope => "clipscope",
                 CreateQuicksearchRequestLibrary.CloudAgents => "cloud-agents",
@@ -1120,6 +1298,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Collectorvision => "collectorvision",
                 CreateQuicksearchRequestLibrary.Colpali => "colpali",
                 CreateQuicksearchRequestLibrary.Comet => "comet",
+                CreateQuicksearchRequestLibrary.Cooperscene => "cooperscene",
                 CreateQuicksearchRequestLibrary.Cortiq => "cortiq",
                 CreateQuicksearchRequestLibrary.Cosmos => "cosmos",
                 CreateQuicksearchRequestLibrary.Cosyvoice => "cosyvoice",
@@ -1130,6 +1309,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.DepthPro => "depth-pro",
                 CreateQuicksearchRequestLibrary.DermFoundation => "derm-foundation",
                 CreateQuicksearchRequestLibrary.DescribeAnything => "describe-anything",
+                CreateQuicksearchRequestLibrary.Dewml => "dewml",
                 CreateQuicksearchRequestLibrary.DiaTts => "dia-tts",
                 CreateQuicksearchRequestLibrary.Dia2 => "dia2",
                 CreateQuicksearchRequestLibrary.DiffInterpretationTuning => "diff-interpretation-tuning",
@@ -1140,6 +1320,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.DockingAtHome => "docking-at-home",
                 CreateQuicksearchRequestLibrary.Doctr => "doctr",
                 CreateQuicksearchRequestLibrary.Drinkme => "drinkme",
+                CreateQuicksearchRequestLibrary.DuoWorldModel => "duo-world-model",
                 CreateQuicksearchRequestLibrary.Edsnlp => "edsnlp",
                 CreateQuicksearchRequestLibrary.Egohand => "egohand",
                 CreateQuicksearchRequestLibrary.Elm => "elm",
@@ -1148,6 +1329,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Espnet => "espnet",
                 CreateQuicksearchRequestLibrary.Eupe => "eupe",
                 CreateQuicksearchRequestLibrary.F5Tts => "f5-tts",
+                CreateQuicksearchRequestLibrary.FahrFace => "fahr-face",
                 CreateQuicksearchRequestLibrary.Fairseq => "fairseq",
                 CreateQuicksearchRequestLibrary.Fastai => "fastai",
                 CreateQuicksearchRequestLibrary.Fastprint => "fastprint",
@@ -1157,6 +1339,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Flexray => "flexray",
                 CreateQuicksearchRequestLibrary.Flextab => "flextab",
                 CreateQuicksearchRequestLibrary.Fme => "fme",
+                CreateQuicksearchRequestLibrary.Fse => "fse",
                 CreateQuicksearchRequestLibrary.Gaussianformer => "gaussianformer",
                 CreateQuicksearchRequestLibrary.GemmaCpp => "gemma.cpp",
                 CreateQuicksearchRequestLibrary.Genmo => "genmo",
@@ -1165,6 +1348,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Gliner => "gliner",
                 CreateQuicksearchRequestLibrary.Gliner2 => "gliner2",
                 CreateQuicksearchRequestLibrary.GlmTts => "glm-tts",
+                CreateQuicksearchRequestLibrary.Glyd => "glyd",
                 CreateQuicksearchRequestLibrary.GlyphByt5 => "glyph-byt5",
                 CreateQuicksearchRequestLibrary.GraniteLibrary => "granite-library",
                 CreateQuicksearchRequestLibrary.Grok => "grok",
@@ -1185,6 +1369,8 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.InfiniteYou => "infinite-you",
                 CreateQuicksearchRequestLibrary.Infinitetalk => "infinitetalk",
                 CreateQuicksearchRequestLibrary.Intellifold => "intellifold",
+                CreateQuicksearchRequestLibrary.InworldSava => "inworld-sava",
+                CreateQuicksearchRequestLibrary.InworldVoiceIsolation => "inworld-voice-isolation",
                 CreateQuicksearchRequestLibrary.IsingDecoding => "ising-decoding",
                 CreateQuicksearchRequestLibrary.JevStyle => "jev-style",
                 CreateQuicksearchRequestLibrary.K2 => "k2",
@@ -1193,12 +1379,18 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Kernels => "kernels",
                 CreateQuicksearchRequestLibrary.KimiAudio => "kimi-audio",
                 CreateQuicksearchRequestLibrary.Kittentts => "kittentts",
+                CreateQuicksearchRequestLibrary.Konfai => "konfai",
                 CreateQuicksearchRequestLibrary.Kronos => "kronos",
                 CreateQuicksearchRequestLibrary.Lagernvs => "lagernvs",
                 CreateQuicksearchRequestLibrary.Laya => "laya",
                 CreateQuicksearchRequestLibrary.Lerobot => "lerobot",
+                CreateQuicksearchRequestLibrary.Libreyolo => "libreyolo",
                 CreateQuicksearchRequestLibrary.Lightglue => "lightglue",
                 CreateQuicksearchRequestLibrary.LightningIr => "lightning-ir",
+                CreateQuicksearchRequestLibrary.LimxDynamics => "limx-dynamics",
+                CreateQuicksearchRequestLibrary.LingbotMap => "lingbot-map",
+                CreateQuicksearchRequestLibrary.LinnetTts => "linnet-tts",
+                CreateQuicksearchRequestLibrary.Liteparse => "liteparse",
                 CreateQuicksearchRequestLibrary.Litert => "litert",
                 CreateQuicksearchRequestLibrary.LitertLm => "litert-lm",
                 CreateQuicksearchRequestLibrary.Liveportrait => "liveportrait",
@@ -1215,6 +1407,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Mars5Tts => "mars5-tts",
                 CreateQuicksearchRequestLibrary.Matanyone => "matanyone",
                 CreateQuicksearchRequestLibrary.Mect => "mect",
+                CreateQuicksearchRequestLibrary.Mediapipe => "mediapipe",
                 CreateQuicksearchRequestLibrary.Medvae => "medvae",
                 CreateQuicksearchRequestLibrary.Memra => "memra",
                 CreateQuicksearchRequestLibrary.Merlin => "merlin",
@@ -1223,8 +1416,10 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Microduck => "microduck",
                 CreateQuicksearchRequestLibrary.Mindspore => "mindspore",
                 CreateQuicksearchRequestLibrary.MiniOmni2 => "mini-omni2",
+                CreateQuicksearchRequestLibrary.MinicpmOcr => "minicpm-ocr",
                 CreateQuicksearchRequestLibrary.MinimaxH3 => "minimax-h3",
                 CreateQuicksearchRequestLibrary.Mitie => "mitie",
+                CreateQuicksearchRequestLibrary.Mjlab => "mjlab",
                 CreateQuicksearchRequestLibrary.MlAgents => "ml-agents",
                 CreateQuicksearchRequestLibrary.MlSharp => "ml-sharp",
                 CreateQuicksearchRequestLibrary.MlcLlm => "mlc-llm",
@@ -1238,22 +1433,29 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Mtvcraft => "mtvcraft",
                 CreateQuicksearchRequestLibrary.Multimolecule => "multimolecule",
                 CreateQuicksearchRequestLibrary.Nemo => "nemo",
+                CreateQuicksearchRequestLibrary.Neurobrix => "neurobrix",
                 CreateQuicksearchRequestLibrary.Ninfer => "ninfer",
                 CreateQuicksearchRequestLibrary.Nobg => "nobg",
                 CreateQuicksearchRequestLibrary.NvMedtech => "nv-medtech",
+                CreateQuicksearchRequestLibrary.OnnxruntimeGenai => "onnxruntime-genai",
                 CreateQuicksearchRequestLibrary.OpenOasis => "open-oasis",
                 CreateQuicksearchRequestLibrary.OpenSora => "open-sora",
                 CreateQuicksearchRequestLibrary.OpenClip => "open_clip",
                 CreateQuicksearchRequestLibrary.Openasr => "openasr",
                 CreateQuicksearchRequestLibrary.Opendde => "opendde",
+                CreateQuicksearchRequestLibrary.Opendecision => "opendecision",
                 CreateQuicksearchRequestLibrary.Openpeerllm => "openpeerllm",
                 CreateQuicksearchRequestLibrary.Outetts => "outetts",
                 CreateQuicksearchRequestLibrary.Paddlenlp => "paddlenlp",
                 CreateQuicksearchRequestLibrary.Peft => "peft",
                 CreateQuicksearchRequestLibrary.PerceptionEncoder => "perception-encoder",
                 CreateQuicksearchRequestLibrary.PhantomWan => "phantom-wan",
+                CreateQuicksearchRequestLibrary.PikaH3Flex => "pika-h3-flex",
                 CreateQuicksearchRequestLibrary.Piper => "piper",
+                CreateQuicksearchRequestLibrary.Pixeldense => "pixeldense",
                 CreateQuicksearchRequestLibrary.PocketTts => "pocket-tts",
+                CreateQuicksearchRequestLibrary.Pqgan => "pqgan",
+                CreateQuicksearchRequestLibrary.Protomotions => "protomotions",
                 CreateQuicksearchRequestLibrary.PrunaAi => "pruna-ai",
                 CreateQuicksearchRequestLibrary.Pxia => "pxia",
                 CreateQuicksearchRequestLibrary.PyFeat => "py-feat",
@@ -1262,15 +1464,18 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Quantumpeer => "quantumpeer",
                 CreateQuicksearchRequestLibrary.Qwen3Tts => "qwen3_tts",
                 CreateQuicksearchRequestLibrary.Recurrentgemma => "recurrentgemma",
+                CreateQuicksearchRequestLibrary.Redefiner => "redefiner",
                 CreateQuicksearchRequestLibrary.Refiners => "refiners",
                 CreateQuicksearchRequestLibrary.Relik => "relik",
                 CreateQuicksearchRequestLibrary.Renderformer => "renderformer",
                 CreateQuicksearchRequestLibrary.Reverb => "reverb",
+                CreateQuicksearchRequestLibrary.ReverbTts => "reverb-tts",
                 CreateQuicksearchRequestLibrary.Rkllm => "rkllm",
                 CreateQuicksearchRequestLibrary.RoboOrchardLab => "robo-orchard-lab",
                 CreateQuicksearchRequestLibrary.RouteePowertrain => "routee-powertrain",
                 CreateQuicksearchRequestLibrary.RtDetrHandDetectorV1 => "rt-detr-hand-detector-v1",
                 CreateQuicksearchRequestLibrary.Rwkv => "rwkv",
+                CreateQuicksearchRequestLibrary.S1s2 => "s1s2",
                 CreateQuicksearchRequestLibrary.Saelens => "saelens",
                 CreateQuicksearchRequestLibrary.SageMusic => "sage-music",
                 CreateQuicksearchRequestLibrary.Sam3dBody => "sam-3d-body",
@@ -1279,6 +1484,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Same => "same",
                 CreateQuicksearchRequestLibrary.SampleFactory => "sample-factory",
                 CreateQuicksearchRequestLibrary.Sana => "sana",
+                CreateQuicksearchRequestLibrary.SapCase => "sap-case",
                 CreateQuicksearchRequestLibrary.SapRpt1Oss => "sap-rpt-1-oss",
                 CreateQuicksearchRequestLibrary.Sapiens => "sapiens",
                 CreateQuicksearchRequestLibrary.Sapiens2 => "sapiens2",
@@ -1301,7 +1507,9 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.StableAudioTools => "stable-audio-tools",
                 CreateQuicksearchRequestLibrary.StableBaselines3 => "stable-baselines3",
                 CreateQuicksearchRequestLibrary.Stanza => "stanza",
+                CreateQuicksearchRequestLibrary.StrandsDecider => "strands-decider",
                 CreateQuicksearchRequestLibrary.Supertonic => "supertonic",
+                CreateQuicksearchRequestLibrary.Svdtrunc => "svdtrunc",
                 CreateQuicksearchRequestLibrary.Swarmformer => "swarmformer",
                 CreateQuicksearchRequestLibrary.SynthefyMigas => "synthefy-migas",
                 CreateQuicksearchRequestLibrary.Tabpfn => "tabpfn",
@@ -1316,6 +1524,7 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Timm => "timm",
                 CreateQuicksearchRequestLibrary.Tirex => "tirex",
                 CreateQuicksearchRequestLibrary.Tirex2 => "tirex-2",
+                CreateQuicksearchRequestLibrary.TorchPointcloud => "torch-pointcloud",
                 CreateQuicksearchRequestLibrary.Torchgeo => "torchgeo",
                 CreateQuicksearchRequestLibrary.Transformers => "transformers",
                 CreateQuicksearchRequestLibrary.TransformersJs => "transformers.js",
@@ -1324,8 +1533,10 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Tunejury => "tunejury",
                 CreateQuicksearchRequestLibrary.Ultralytics => "ultralytics",
                 CreateQuicksearchRequestLibrary.Uni3dar => "uni-3dar",
+                CreateQuicksearchRequestLibrary.UnitreeRl => "unitree-rl",
                 CreateQuicksearchRequestLibrary.UnitySentis => "unity-sentis",
                 CreateQuicksearchRequestLibrary.Univa => "univa",
+                CreateQuicksearchRequestLibrary.VertoAsr => "verto-asr",
                 CreateQuicksearchRequestLibrary.VfiMamba => "vfi-mamba",
                 CreateQuicksearchRequestLibrary.Vibevoice => "vibevoice",
                 CreateQuicksearchRequestLibrary.Videoprism => "videoprism",
@@ -1336,11 +1547,15 @@ namespace HuggingFace
                 CreateQuicksearchRequestLibrary.Vqweb => "vqweb",
                 CreateQuicksearchRequestLibrary.Vui => "vui",
                 CreateQuicksearchRequestLibrary.Wan22 => "wan2.2",
+                CreateQuicksearchRequestLibrary.Wavegen => "wavegen",
                 CreateQuicksearchRequestLibrary.Wham => "wham",
                 CreateQuicksearchRequestLibrary.Whisperkit => "whisperkit",
+                CreateQuicksearchRequestLibrary.Wilddet3d => "wilddet3d",
                 CreateQuicksearchRequestLibrary.Yolov10 => "yolov10",
                 CreateQuicksearchRequestLibrary.Yolov26 => "yolov26",
+                CreateQuicksearchRequestLibrary.ZaoLib => "zao-lib",
                 CreateQuicksearchRequestLibrary.Zeromodels => "zeromodels",
+                CreateQuicksearchRequestLibrary.Zipsplat => "zipsplat",
                 CreateQuicksearchRequestLibrary.Zonos => "zonos",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -1357,6 +1572,8 @@ namespace HuggingFace
                 "aadya-neural" => CreateQuicksearchRequestLibrary.AadyaNeural,
                 "acestep" => CreateQuicksearchRequestLibrary.Acestep,
                 "adapter-transformers" => CreateQuicksearchRequestLibrary.AdapterTransformers,
+                "akeratos" => CreateQuicksearchRequestLibrary.Akeratos,
+                "alkove" => CreateQuicksearchRequestLibrary.Alkove,
                 "allennlp" => CreateQuicksearchRequestLibrary.Allennlp,
                 "aneforge" => CreateQuicksearchRequestLibrary.Aneforge,
                 "anemoi" => CreateQuicksearchRequestLibrary.Anemoi,
@@ -1367,6 +1584,8 @@ namespace HuggingFace
                 "audioseal" => CreateQuicksearchRequestLibrary.Audioseal,
                 "aviation-ner" => CreateQuicksearchRequestLibrary.AviationNer,
                 "bagel-mot" => CreateQuicksearchRequestLibrary.BagelMot,
+                "basalt" => CreateQuicksearchRequestLibrary.Basalt,
+                "basedecision" => CreateQuicksearchRequestLibrary.Basedecision,
                 "bboxmaskpose" => CreateQuicksearchRequestLibrary.Bboxmaskpose,
                 "ben2" => CreateQuicksearchRequestLibrary.Ben2,
                 "bertopic" => CreateQuicksearchRequestLibrary.Bertopic,
@@ -1385,8 +1604,10 @@ namespace HuggingFace
                 "chaossim" => CreateQuicksearchRequestLibrary.Chaossim,
                 "chat_tts" => CreateQuicksearchRequestLibrary.ChatTts,
                 "chatterbox" => CreateQuicksearchRequestLibrary.Chatterbox,
+                "chessqueries" => CreateQuicksearchRequestLibrary.Chessqueries,
                 "chexmix" => CreateQuicksearchRequestLibrary.Chexmix,
                 "chronos-forecasting" => CreateQuicksearchRequestLibrary.ChronosForecasting,
+                "circuit-tracer" => CreateQuicksearchRequestLibrary.CircuitTracer,
                 "clara" => CreateQuicksearchRequestLibrary.Clara,
                 "clipscope" => CreateQuicksearchRequestLibrary.Clipscope,
                 "cloud-agents" => CreateQuicksearchRequestLibrary.CloudAgents,
@@ -1394,6 +1615,7 @@ namespace HuggingFace
                 "collectorvision" => CreateQuicksearchRequestLibrary.Collectorvision,
                 "colpali" => CreateQuicksearchRequestLibrary.Colpali,
                 "comet" => CreateQuicksearchRequestLibrary.Comet,
+                "cooperscene" => CreateQuicksearchRequestLibrary.Cooperscene,
                 "cortiq" => CreateQuicksearchRequestLibrary.Cortiq,
                 "cosmos" => CreateQuicksearchRequestLibrary.Cosmos,
                 "cosyvoice" => CreateQuicksearchRequestLibrary.Cosyvoice,
@@ -1404,6 +1626,7 @@ namespace HuggingFace
                 "depth-pro" => CreateQuicksearchRequestLibrary.DepthPro,
                 "derm-foundation" => CreateQuicksearchRequestLibrary.DermFoundation,
                 "describe-anything" => CreateQuicksearchRequestLibrary.DescribeAnything,
+                "dewml" => CreateQuicksearchRequestLibrary.Dewml,
                 "dia-tts" => CreateQuicksearchRequestLibrary.DiaTts,
                 "dia2" => CreateQuicksearchRequestLibrary.Dia2,
                 "diff-interpretation-tuning" => CreateQuicksearchRequestLibrary.DiffInterpretationTuning,
@@ -1414,6 +1637,7 @@ namespace HuggingFace
                 "docking-at-home" => CreateQuicksearchRequestLibrary.DockingAtHome,
                 "doctr" => CreateQuicksearchRequestLibrary.Doctr,
                 "drinkme" => CreateQuicksearchRequestLibrary.Drinkme,
+                "duo-world-model" => CreateQuicksearchRequestLibrary.DuoWorldModel,
                 "edsnlp" => CreateQuicksearchRequestLibrary.Edsnlp,
                 "egohand" => CreateQuicksearchRequestLibrary.Egohand,
                 "elm" => CreateQuicksearchRequestLibrary.Elm,
@@ -1422,6 +1646,7 @@ namespace HuggingFace
                 "espnet" => CreateQuicksearchRequestLibrary.Espnet,
                 "eupe" => CreateQuicksearchRequestLibrary.Eupe,
                 "f5-tts" => CreateQuicksearchRequestLibrary.F5Tts,
+                "fahr-face" => CreateQuicksearchRequestLibrary.FahrFace,
                 "fairseq" => CreateQuicksearchRequestLibrary.Fairseq,
                 "fastai" => CreateQuicksearchRequestLibrary.Fastai,
                 "fastprint" => CreateQuicksearchRequestLibrary.Fastprint,
@@ -1431,6 +1656,7 @@ namespace HuggingFace
                 "flexray" => CreateQuicksearchRequestLibrary.Flexray,
                 "flextab" => CreateQuicksearchRequestLibrary.Flextab,
                 "fme" => CreateQuicksearchRequestLibrary.Fme,
+                "fse" => CreateQuicksearchRequestLibrary.Fse,
                 "gaussianformer" => CreateQuicksearchRequestLibrary.Gaussianformer,
                 "gemma.cpp" => CreateQuicksearchRequestLibrary.GemmaCpp,
                 "genmo" => CreateQuicksearchRequestLibrary.Genmo,
@@ -1439,6 +1665,7 @@ namespace HuggingFace
                 "gliner" => CreateQuicksearchRequestLibrary.Gliner,
                 "gliner2" => CreateQuicksearchRequestLibrary.Gliner2,
                 "glm-tts" => CreateQuicksearchRequestLibrary.GlmTts,
+                "glyd" => CreateQuicksearchRequestLibrary.Glyd,
                 "glyph-byt5" => CreateQuicksearchRequestLibrary.GlyphByt5,
                 "granite-library" => CreateQuicksearchRequestLibrary.GraniteLibrary,
                 "grok" => CreateQuicksearchRequestLibrary.Grok,
@@ -1459,6 +1686,8 @@ namespace HuggingFace
                 "infinite-you" => CreateQuicksearchRequestLibrary.InfiniteYou,
                 "infinitetalk" => CreateQuicksearchRequestLibrary.Infinitetalk,
                 "intellifold" => CreateQuicksearchRequestLibrary.Intellifold,
+                "inworld-sava" => CreateQuicksearchRequestLibrary.InworldSava,
+                "inworld-voice-isolation" => CreateQuicksearchRequestLibrary.InworldVoiceIsolation,
                 "ising-decoding" => CreateQuicksearchRequestLibrary.IsingDecoding,
                 "jev-style" => CreateQuicksearchRequestLibrary.JevStyle,
                 "k2" => CreateQuicksearchRequestLibrary.K2,
@@ -1467,12 +1696,18 @@ namespace HuggingFace
                 "kernels" => CreateQuicksearchRequestLibrary.Kernels,
                 "kimi-audio" => CreateQuicksearchRequestLibrary.KimiAudio,
                 "kittentts" => CreateQuicksearchRequestLibrary.Kittentts,
+                "konfai" => CreateQuicksearchRequestLibrary.Konfai,
                 "kronos" => CreateQuicksearchRequestLibrary.Kronos,
                 "lagernvs" => CreateQuicksearchRequestLibrary.Lagernvs,
                 "laya" => CreateQuicksearchRequestLibrary.Laya,
                 "lerobot" => CreateQuicksearchRequestLibrary.Lerobot,
+                "libreyolo" => CreateQuicksearchRequestLibrary.Libreyolo,
                 "lightglue" => CreateQuicksearchRequestLibrary.Lightglue,
                 "lightning-ir" => CreateQuicksearchRequestLibrary.LightningIr,
+                "limx-dynamics" => CreateQuicksearchRequestLibrary.LimxDynamics,
+                "lingbot-map" => CreateQuicksearchRequestLibrary.LingbotMap,
+                "linnet-tts" => CreateQuicksearchRequestLibrary.LinnetTts,
+                "liteparse" => CreateQuicksearchRequestLibrary.Liteparse,
                 "litert" => CreateQuicksearchRequestLibrary.Litert,
                 "litert-lm" => CreateQuicksearchRequestLibrary.LitertLm,
                 "liveportrait" => CreateQuicksearchRequestLibrary.Liveportrait,
@@ -1489,6 +1724,7 @@ namespace HuggingFace
                 "mars5-tts" => CreateQuicksearchRequestLibrary.Mars5Tts,
                 "matanyone" => CreateQuicksearchRequestLibrary.Matanyone,
                 "mect" => CreateQuicksearchRequestLibrary.Mect,
+                "mediapipe" => CreateQuicksearchRequestLibrary.Mediapipe,
                 "medvae" => CreateQuicksearchRequestLibrary.Medvae,
                 "memra" => CreateQuicksearchRequestLibrary.Memra,
                 "merlin" => CreateQuicksearchRequestLibrary.Merlin,
@@ -1497,8 +1733,10 @@ namespace HuggingFace
                 "microduck" => CreateQuicksearchRequestLibrary.Microduck,
                 "mindspore" => CreateQuicksearchRequestLibrary.Mindspore,
                 "mini-omni2" => CreateQuicksearchRequestLibrary.MiniOmni2,
+                "minicpm-ocr" => CreateQuicksearchRequestLibrary.MinicpmOcr,
                 "minimax-h3" => CreateQuicksearchRequestLibrary.MinimaxH3,
                 "mitie" => CreateQuicksearchRequestLibrary.Mitie,
+                "mjlab" => CreateQuicksearchRequestLibrary.Mjlab,
                 "ml-agents" => CreateQuicksearchRequestLibrary.MlAgents,
                 "ml-sharp" => CreateQuicksearchRequestLibrary.MlSharp,
                 "mlc-llm" => CreateQuicksearchRequestLibrary.MlcLlm,
@@ -1512,22 +1750,29 @@ namespace HuggingFace
                 "mtvcraft" => CreateQuicksearchRequestLibrary.Mtvcraft,
                 "multimolecule" => CreateQuicksearchRequestLibrary.Multimolecule,
                 "nemo" => CreateQuicksearchRequestLibrary.Nemo,
+                "neurobrix" => CreateQuicksearchRequestLibrary.Neurobrix,
                 "ninfer" => CreateQuicksearchRequestLibrary.Ninfer,
                 "nobg" => CreateQuicksearchRequestLibrary.Nobg,
                 "nv-medtech" => CreateQuicksearchRequestLibrary.NvMedtech,
+                "onnxruntime-genai" => CreateQuicksearchRequestLibrary.OnnxruntimeGenai,
                 "open-oasis" => CreateQuicksearchRequestLibrary.OpenOasis,
                 "open-sora" => CreateQuicksearchRequestLibrary.OpenSora,
                 "open_clip" => CreateQuicksearchRequestLibrary.OpenClip,
                 "openasr" => CreateQuicksearchRequestLibrary.Openasr,
                 "opendde" => CreateQuicksearchRequestLibrary.Opendde,
+                "opendecision" => CreateQuicksearchRequestLibrary.Opendecision,
                 "openpeerllm" => CreateQuicksearchRequestLibrary.Openpeerllm,
                 "outetts" => CreateQuicksearchRequestLibrary.Outetts,
                 "paddlenlp" => CreateQuicksearchRequestLibrary.Paddlenlp,
                 "peft" => CreateQuicksearchRequestLibrary.Peft,
                 "perception-encoder" => CreateQuicksearchRequestLibrary.PerceptionEncoder,
                 "phantom-wan" => CreateQuicksearchRequestLibrary.PhantomWan,
+                "pika-h3-flex" => CreateQuicksearchRequestLibrary.PikaH3Flex,
                 "piper" => CreateQuicksearchRequestLibrary.Piper,
+                "pixeldense" => CreateQuicksearchRequestLibrary.Pixeldense,
                 "pocket-tts" => CreateQuicksearchRequestLibrary.PocketTts,
+                "pqgan" => CreateQuicksearchRequestLibrary.Pqgan,
+                "protomotions" => CreateQuicksearchRequestLibrary.Protomotions,
                 "pruna-ai" => CreateQuicksearchRequestLibrary.PrunaAi,
                 "pxia" => CreateQuicksearchRequestLibrary.Pxia,
                 "py-feat" => CreateQuicksearchRequestLibrary.PyFeat,
@@ -1536,15 +1781,18 @@ namespace HuggingFace
                 "quantumpeer" => CreateQuicksearchRequestLibrary.Quantumpeer,
                 "qwen3_tts" => CreateQuicksearchRequestLibrary.Qwen3Tts,
                 "recurrentgemma" => CreateQuicksearchRequestLibrary.Recurrentgemma,
+                "redefiner" => CreateQuicksearchRequestLibrary.Redefiner,
                 "refiners" => CreateQuicksearchRequestLibrary.Refiners,
                 "relik" => CreateQuicksearchRequestLibrary.Relik,
                 "renderformer" => CreateQuicksearchRequestLibrary.Renderformer,
                 "reverb" => CreateQuicksearchRequestLibrary.Reverb,
+                "reverb-tts" => CreateQuicksearchRequestLibrary.ReverbTts,
                 "rkllm" => CreateQuicksearchRequestLibrary.Rkllm,
                 "robo-orchard-lab" => CreateQuicksearchRequestLibrary.RoboOrchardLab,
                 "routee-powertrain" => CreateQuicksearchRequestLibrary.RouteePowertrain,
                 "rt-detr-hand-detector-v1" => CreateQuicksearchRequestLibrary.RtDetrHandDetectorV1,
                 "rwkv" => CreateQuicksearchRequestLibrary.Rwkv,
+                "s1s2" => CreateQuicksearchRequestLibrary.S1s2,
                 "saelens" => CreateQuicksearchRequestLibrary.Saelens,
                 "sage-music" => CreateQuicksearchRequestLibrary.SageMusic,
                 "sam-3d-body" => CreateQuicksearchRequestLibrary.Sam3dBody,
@@ -1553,6 +1801,7 @@ namespace HuggingFace
                 "same" => CreateQuicksearchRequestLibrary.Same,
                 "sample-factory" => CreateQuicksearchRequestLibrary.SampleFactory,
                 "sana" => CreateQuicksearchRequestLibrary.Sana,
+                "sap-case" => CreateQuicksearchRequestLibrary.SapCase,
                 "sap-rpt-1-oss" => CreateQuicksearchRequestLibrary.SapRpt1Oss,
                 "sapiens" => CreateQuicksearchRequestLibrary.Sapiens,
                 "sapiens2" => CreateQuicksearchRequestLibrary.Sapiens2,
@@ -1575,7 +1824,9 @@ namespace HuggingFace
                 "stable-audio-tools" => CreateQuicksearchRequestLibrary.StableAudioTools,
                 "stable-baselines3" => CreateQuicksearchRequestLibrary.StableBaselines3,
                 "stanza" => CreateQuicksearchRequestLibrary.Stanza,
+                "strands-decider" => CreateQuicksearchRequestLibrary.StrandsDecider,
                 "supertonic" => CreateQuicksearchRequestLibrary.Supertonic,
+                "svdtrunc" => CreateQuicksearchRequestLibrary.Svdtrunc,
                 "swarmformer" => CreateQuicksearchRequestLibrary.Swarmformer,
                 "synthefy-migas" => CreateQuicksearchRequestLibrary.SynthefyMigas,
                 "tabpfn" => CreateQuicksearchRequestLibrary.Tabpfn,
@@ -1590,6 +1841,7 @@ namespace HuggingFace
                 "timm" => CreateQuicksearchRequestLibrary.Timm,
                 "tirex" => CreateQuicksearchRequestLibrary.Tirex,
                 "tirex-2" => CreateQuicksearchRequestLibrary.Tirex2,
+                "torch-pointcloud" => CreateQuicksearchRequestLibrary.TorchPointcloud,
                 "torchgeo" => CreateQuicksearchRequestLibrary.Torchgeo,
                 "transformers" => CreateQuicksearchRequestLibrary.Transformers,
                 "transformers.js" => CreateQuicksearchRequestLibrary.TransformersJs,
@@ -1598,8 +1850,10 @@ namespace HuggingFace
                 "tunejury" => CreateQuicksearchRequestLibrary.Tunejury,
                 "ultralytics" => CreateQuicksearchRequestLibrary.Ultralytics,
                 "uni-3dar" => CreateQuicksearchRequestLibrary.Uni3dar,
+                "unitree-rl" => CreateQuicksearchRequestLibrary.UnitreeRl,
                 "unity-sentis" => CreateQuicksearchRequestLibrary.UnitySentis,
                 "univa" => CreateQuicksearchRequestLibrary.Univa,
+                "verto-asr" => CreateQuicksearchRequestLibrary.VertoAsr,
                 "vfi-mamba" => CreateQuicksearchRequestLibrary.VfiMamba,
                 "vibevoice" => CreateQuicksearchRequestLibrary.Vibevoice,
                 "videoprism" => CreateQuicksearchRequestLibrary.Videoprism,
@@ -1610,11 +1864,15 @@ namespace HuggingFace
                 "vqweb" => CreateQuicksearchRequestLibrary.Vqweb,
                 "vui" => CreateQuicksearchRequestLibrary.Vui,
                 "wan2.2" => CreateQuicksearchRequestLibrary.Wan22,
+                "wavegen" => CreateQuicksearchRequestLibrary.Wavegen,
                 "wham" => CreateQuicksearchRequestLibrary.Wham,
                 "whisperkit" => CreateQuicksearchRequestLibrary.Whisperkit,
+                "wilddet3d" => CreateQuicksearchRequestLibrary.Wilddet3d,
                 "yolov10" => CreateQuicksearchRequestLibrary.Yolov10,
                 "yolov26" => CreateQuicksearchRequestLibrary.Yolov26,
+                "zao-lib" => CreateQuicksearchRequestLibrary.ZaoLib,
                 "zeromodels" => CreateQuicksearchRequestLibrary.Zeromodels,
+                "zipsplat" => CreateQuicksearchRequestLibrary.Zipsplat,
                 "zonos" => CreateQuicksearchRequestLibrary.Zonos,
                 _ => null,
             };

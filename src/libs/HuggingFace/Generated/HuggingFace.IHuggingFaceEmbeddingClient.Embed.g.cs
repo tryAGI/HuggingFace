@@ -54,7 +54,8 @@ namespace HuggingFace
         /// Example: null
         /// </param>
         /// <param name="truncate">
-        /// Default Value: false<br/>
+        /// Whether to truncate inputs that are longer than the maximum supported size. Defaults to<br/>
+        /// the `--auto-truncate` value of the server, which is `true` unless changed.<br/>
         /// Example: false
         /// </param>
         /// <param name="truncationDirection">

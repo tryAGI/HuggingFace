@@ -11,8 +11,6 @@ namespace HuggingFace
     )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_8e63d8b82f66ca07")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_c5ad13955541a572")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22_58364b4cdf9d73f9")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22>), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22_7fdb8a213c65c700")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_90d7537f31d97fd2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_dbc642ee1cdf70f8")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2_4c89e733a4a722a3")]
@@ -27,9 +25,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_2916f907fd82fdcb")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2_3156bce685967fa5")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_a5b8fec756ab5956")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>?), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22_fe150dd301c4b5b9")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant22>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant22_8a215d01846bf3ce")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22_313948f0fe57d5b8")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03d9691468fd7530")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1AuthorVariant2_619220aa198ab37b")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2_b1e95a0b901fad7b")]
@@ -71,19 +66,11 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction), TypeInfoPropertyName = "CreateBlogCommentReactionRequestReaction2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction), TypeInfoPropertyName = "CreateBlogCommentReactionRequestAction2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction), TypeInfoPropertyName = "CreateBlogCommentReactionRequestReaction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction), TypeInfoPropertyName = "CreateBlogCommentReactionRequestAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequestReason), TypeInfoPropertyName = "CreateBlogCommentHideRequestReason2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequestReason), TypeInfoPropertyName = "CreateBlogCommentHideRequestReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentEditRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentRequest2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyRequest2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequest2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2), TypeInfoPropertyName = "CreateBlogCommentReactionRequestReaction22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2), TypeInfoPropertyName = "CreateBlogCommentReactionRequestAction22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequest2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2), TypeInfoPropertyName = "CreateBlogCommentHideRequestReason22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentEditRequest2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusRequest))]
@@ -115,12 +102,11 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentHideRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentHideRequestReason), TypeInfoPropertyName = "CreatePostsCommentHideRequestReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentEditRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsRepoType), TypeInfoPropertyName = "GetDiscussionsRepoType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsRepoType), TypeInfoPropertyName = "GetDiscussionsRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsType), TypeInfoPropertyName = "GetDiscussionsType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsStatus), TypeInfoPropertyName = "GetDiscussionsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsSort), TypeInfoPropertyName = "GetDiscussionsSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsRepoType), TypeInfoPropertyName = "CreateDiscussionsRepoType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsRepoType2), TypeInfoPropertyName = "GetDiscussionsRepoType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteDiscussionsRepoType), TypeInfoPropertyName = "DeleteDiscussionsRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentRepoType), TypeInfoPropertyName = "CreateDiscussionsCommentRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusRepoType), TypeInfoPropertyName = "CreateDiscussionsStatusRepoType2")]
@@ -139,25 +125,25 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1OauthApp))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1OauthAppImageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant1Plan2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2OauthApp))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2OauthAppImageData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataHiddenReason2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataHiddenReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataReactionReaction2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataReactionReaction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataIdentifiedLanguage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessage))]
@@ -165,78 +151,26 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1OauthApp))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1OauthAppImageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2OauthApp))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2OauthAppImageData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataHiddenReason2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataHiddenReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrg))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReaction))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataReactionReaction2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataReactionReaction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataIdentifiedLanguage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessage2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant22>), TypeInfoPropertyName = "OneOfCreateBlogCommentResponseNewMessageAuthorVariant12CreateBlogCommentResponseNewMessageAuthorVariant222")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1OauthApp2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1OauthAppImageData2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant22))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2OauthApp2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2OauthAppImageData2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrg2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageData2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataHiddenReason22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatest2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrg2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataReactionReaction22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataIdentifiedLanguage2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessage2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant22>), TypeInfoPropertyName = "OneOfCreateBlogCommentReplyResponseNewMessageAuthorVariant12CreateBlogCommentReplyResponseNewMessageAuthorVariant222")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1OauthApp2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1OauthAppImageData2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant22))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2OauthApp2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2OauthAppImageData2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrg2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageData2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataHiddenReason22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatest2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrg2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReaction2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReaction2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataReactionReaction22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataIdentifiedLanguage2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetDiscussionsResponseDiscussion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseDiscussion))]
@@ -509,70 +443,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthApp))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2OauthAppImageData))]
-    internal sealed partial class DiscussionsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_8e63d8b82f66ca07")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_c5ad13955541a572")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22_58364b4cdf9d73f9")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22>), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22_7fdb8a213c65c700")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_90d7537f31d97fd2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_dbc642ee1cdf70f8")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2_4c89e733a4a722a3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_8891c76efab697ba")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_96c3b36f53ae4b99")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2_76c60aa5d18c29a1")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2_2b44a7d68a07dc7b")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2_e087716c13f6cbdd")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2_5e314b4adb1c55ae")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2_de741f5b94614883")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2_7db36d503453a249")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_2916f907fd82fdcb")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2_3156bce685967fa5")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_a5b8fec756ab5956")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>?), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22_fe150dd301c4b5b9")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant22>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant22_8a215d01846bf3ce")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22_313948f0fe57d5b8")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03d9691468fd7530")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1AuthorVariant2_619220aa198ab37b")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2_b1e95a0b901fad7b")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant2AuthorVariant2_6cbfec45f78d61fe")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant3AuthorVariant2_a5abe50e7c278670")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant4AuthorVariant2_425f1dbaefb78c23")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant5AuthorVariant2_6bf42e50c8934bfa")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant6AuthorVariant2_ecc24b79d3202e0c")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant7AuthorVariant2_e81295fb71e678d5")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant8AuthorVariant2_bf832678d52ea655")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9AuthorVariant2_8a93e5e8e9427a6b")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_fd8661b15097c67d")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant1AuthorVariant2_f876b4fbd6f716f5")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2_e54af5dd539b7b99")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant2AuthorVariant2_529cf38a934b2ab7")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant3AuthorVariant2_3f081e229fab9098")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant4AuthorVariant2_05ee8cd260745a2e")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant5AuthorVariant2_475c42b5696cd3ab")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant6AuthorVariant2_3518cb29f6ef8a52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2_23a7ac91f6f02fa7")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant8AuthorVariant2_2284b1d7164e759f")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9AuthorVariant2_2ccdf69d0aa46dde")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreateDiscussionsCommentResponseNewMessageAuthorVariant2_d27079817200bfd4")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2_accc321513c6666b")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>?), TypeInfoPropertyName = "CreateDiscussionsStatusResponseNewStatusAuthorVariant2_786654aa9080fbdd")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2_ad2ffb60b37ebb8a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentReplyResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreatePapersCommentReplyResponseNewMessageAuthorVariant2_d16e24f4e370eecf")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2_b669df334aa7b701")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2_c859cf131041412a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageAuthorVariant2_b0108515706688d1")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2_5242c816dcee7b38")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03a436f808c58a38")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_531cd14b157a6497")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrg))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgPlan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgUserRole), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2PrimaryOrgUserRole2")]
@@ -639,6 +509,65 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1Plan), TypeInfoPropertyName = "CreateDiscussionsStatusResponseNewStatusAuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2OauthApp))]
+    internal sealed partial class DiscussionsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_8e63d8b82f66ca07")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_c5ad13955541a572")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_90d7537f31d97fd2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_dbc642ee1cdf70f8")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2_4c89e733a4a722a3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_8891c76efab697ba")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_96c3b36f53ae4b99")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2_76c60aa5d18c29a1")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2_2b44a7d68a07dc7b")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2_e087716c13f6cbdd")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2_5e314b4adb1c55ae")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2_de741f5b94614883")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2_7db36d503453a249")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2_2916f907fd82fdcb")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageAuthorVariant2_3156bce685967fa5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2_a5b8fec756ab5956")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03d9691468fd7530")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1AuthorVariant2_619220aa198ab37b")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant1DataLatestAuthorVariant2_b1e95a0b901fad7b")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant2AuthorVariant2_6cbfec45f78d61fe")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant3AuthorVariant2_a5abe50e7c278670")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant4AuthorVariant2_425f1dbaefb78c23")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant5AuthorVariant2_6bf42e50c8934bfa")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant6AuthorVariant2_ecc24b79d3202e0c")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant7AuthorVariant2_e81295fb71e678d5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant8AuthorVariant2_bf832678d52ea655")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9AuthorVariant2_8a93e5e8e9427a6b")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_fd8661b15097c67d")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant1AuthorVariant2_f876b4fbd6f716f5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant1DataLatestAuthorVariant2_e54af5dd539b7b99")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant2AuthorVariant2_529cf38a934b2ab7")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant3AuthorVariant2_3f081e229fab9098")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant4AuthorVariant2_05ee8cd260745a2e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant5AuthorVariant2_475c42b5696cd3ab")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant6AuthorVariant2_3518cb29f6ef8a52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant7AuthorVariant2_23a7ac91f6f02fa7")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant8AuthorVariant2_2284b1d7164e759f")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9AuthorVariant2>?), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9AuthorVariant2_2ccdf69d0aa46dde")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreateDiscussionsCommentResponseNewMessageAuthorVariant2_d27079817200bfd4")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreateDiscussionsCommentResponseNewMessageDataLatestAuthorVariant2_accc321513c6666b")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant1, global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2>?), TypeInfoPropertyName = "CreateDiscussionsStatusResponseNewStatusAuthorVariant2_786654aa9080fbdd")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePapersCommentResponseNewMessageDataLatestAuthorVariant2_ad2ffb60b37ebb8a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePapersCommentReplyResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreatePapersCommentReplyResponseNewMessageAuthorVariant2_d16e24f4e370eecf")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePapersCommentReplyResponseNewMessageDataLatestAuthorVariant2_b669df334aa7b701")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentResponseNewMessageDataLatestAuthorVariant2_c859cf131041412a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageAuthorVariant2_b0108515706688d1")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2>?), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataLatestAuthorVariant2_5242c816dcee7b38")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant1EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant1EventVariant9_03a436f808c58a38")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant2EventVariant1, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant2, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant3, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant4, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant5, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant6, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant7, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant8, global::HuggingFace.GetDiscussionsResponseVariant2EventVariant9>>), TypeInfoPropertyName = "GetDiscussionsResponseVariant2EventVariant9_531cd14b157a6497")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2OauthAppImageData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2PrimaryOrg))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusResponseNewStatusAuthorVariant2PrimaryOrgPlan), TypeInfoPropertyName = "CreateDiscussionsStatusResponseNewStatusAuthorVariant2PrimaryOrgPlan2")]
@@ -765,12 +694,9 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataReactionReaction), TypeInfoPropertyName = "CreatePostsCommentReplyResponseNewMessageDataReactionReaction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataIdentifiedLanguage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestReaction2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestAction2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequestReason?), TypeInfoPropertyName = "NullableCreateBlogCommentHideRequestReason2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestReaction22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestAction22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2?), TypeInfoPropertyName = "NullableCreateBlogCommentHideRequestReason22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestReaction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction?), TypeInfoPropertyName = "NullableCreateBlogCommentReactionRequestAction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentHideRequestReason?), TypeInfoPropertyName = "NullableCreateBlogCommentHideRequestReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus?), TypeInfoPropertyName = "NullableCreateDiscussionsStatusRequestStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsIgnoreRequestAction?), TypeInfoPropertyName = "NullableCreateDiscussionsIgnoreRequestAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentHideRequestReason?), TypeInfoPropertyName = "NullableCreateDiscussionsCommentHideRequestReason2")]
@@ -782,12 +708,11 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReactionRequestReaction?), TypeInfoPropertyName = "NullableCreatePostsCommentReactionRequestReaction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReactionRequestAction?), TypeInfoPropertyName = "NullableCreatePostsCommentReactionRequestAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentHideRequestReason?), TypeInfoPropertyName = "NullableCreatePostsCommentHideRequestReason2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsRepoType?), TypeInfoPropertyName = "NullableGetDiscussionsRepoType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsRepoType?), TypeInfoPropertyName = "NullableGetDiscussionsRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsType?), TypeInfoPropertyName = "NullableGetDiscussionsType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsStatus?), TypeInfoPropertyName = "NullableGetDiscussionsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsSort?), TypeInfoPropertyName = "NullableGetDiscussionsSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsRepoType?), TypeInfoPropertyName = "NullableCreateDiscussionsRepoType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsRepoType2?), TypeInfoPropertyName = "NullableGetDiscussionsRepoType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.DeleteDiscussionsRepoType?), TypeInfoPropertyName = "NullableDeleteDiscussionsRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentRepoType?), TypeInfoPropertyName = "NullableCreateDiscussionsCommentRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsStatusRepoType?), TypeInfoPropertyName = "NullableCreateDiscussionsStatusRepoType2")]
@@ -801,39 +726,22 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentHideRepoType?), TypeInfoPropertyName = "NullableCreateDiscussionsCommentHideRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateDiscussionsCommentReactionRepoType?), TypeInfoPropertyName = "NullableCreateDiscussionsCommentReactionRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2>?), TypeInfoPropertyName = "NullableOneOfCreateBlogCommentResponseNewMessageAuthorVariant1CreateBlogCommentResponseNewMessageAuthorVariant22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant1Plan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataHiddenReason2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataReactionReaction2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataHiddenReason2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataReactionReaction2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant22>?), TypeInfoPropertyName = "NullableOneOfCreateBlogCommentResponseNewMessageAuthorVariant12CreateBlogCommentResponseNewMessageAuthorVariant222")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataHiddenReason22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataReactionReaction22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataHiddenReason22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataReactionReaction22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataHiddenReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction?), TypeInfoPropertyName = "NullableCreateBlogCommentResponseNewMessageDataReactionReaction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataHiddenReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction?), TypeInfoPropertyName = "NullableCreateBlogCommentReplyResponseNewMessageDataReactionReaction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant1, global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant2>?), TypeInfoPropertyName = "NullableOneOfGetDiscussionsResponseDiscussionAuthorVariant1GetDiscussionsResponseDiscussionAuthorVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant1Plan?), TypeInfoPropertyName = "NullableGetDiscussionsResponseDiscussionAuthorVariant1Plan2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgPlan?), TypeInfoPropertyName = "NullableGetDiscussionsResponseDiscussionAuthorVariant2PrimaryOrgPlan2")]
@@ -973,8 +881,6 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreatePostsCommentReplyResponseNewMessageDataReactionReaction?), TypeInfoPropertyName = "NullableCreatePostsCommentReplyResponseNewMessageDataReactionReaction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReaction>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateBlogCommentResponseNewMessageDataReaction2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReaction2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDiscussionsResponseDiscussion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDiscussionsResponseDiscussionTopReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetDiscussionsResponseVariant1EventVariant1DataReaction>))]
@@ -1036,10 +942,10 @@ namespace HuggingFace
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant22>());
-            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant12, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant22>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2>());
+            options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1, global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant1, global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>());
             options.Converters.Add(new global::HuggingFace.JsonConverters.OneOfJsonConverter<global::HuggingFace.GetDiscussionsResponseVariant1AuthorVariant1, global::HuggingFace.GetDiscussionsResponseVariant1AuthorVariant2>());
@@ -1111,18 +1017,6 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason?)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2?)
-
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus?)
@@ -1186,10 +1080,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsRepoType)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateDiscussionsRepoType?)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2)
-
-                    || typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2?)
 
                     || typeToConvert == typeof(global::HuggingFace.DeleteDiscussionsRepoType)
 
@@ -1302,70 +1192,6 @@ namespace HuggingFace
                     || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction)
 
                     || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2?)
 
                     || typeToConvert == typeof(global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant1Plan)
 
@@ -1922,36 +1748,6 @@ namespace HuggingFace
                     return new global::HuggingFace.JsonConverters.CreateBlogCommentHideRequestReasonNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestReaction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestReaction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestReaction2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestAction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReactionRequestAction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReactionRequestAction2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentHideRequestReason2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentHideRequestReason2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentHideRequestReason2NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::HuggingFace.CreateDiscussionsStatusRequestStatus))
                 {
                     return new global::HuggingFace.JsonConverters.CreateDiscussionsStatusRequestStatusJsonConverter();
@@ -2110,16 +1906,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateDiscussionsRepoType?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateDiscussionsRepoTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2))
-                {
-                    return new global::HuggingFace.JsonConverters.GetDiscussionsRepoType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.GetDiscussionsRepoType2?))
-                {
-                    return new global::HuggingFace.JsonConverters.GetDiscussionsRepoType2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.DeleteDiscussionsRepoType))
@@ -2400,166 +2186,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataReactionReactionNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataHiddenReason2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataHiddenReason2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataHiddenReason2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataReactionReaction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentResponseNewMessageDataReactionReaction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentResponseNewMessageDataReactionReaction2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataHiddenReason2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant1Plan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgPlan2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataLatestAuthorVariant2PrimaryOrgUserRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateBlogCommentReplyResponseNewMessageDataReactionReaction2NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetDiscussionsResponseDiscussionAuthorVariant1Plan))

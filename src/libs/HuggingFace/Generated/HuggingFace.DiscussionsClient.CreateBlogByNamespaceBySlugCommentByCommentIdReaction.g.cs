@@ -30,14 +30,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string slug,
             ref string commentId,
-            global::HuggingFace.CreateBlogCommentReactionRequest2 request);
+            global::HuggingFace.CreateBlogCommentReactionRequest request);
         partial void PrepareCreateBlogByNamespaceBySlugCommentByCommentIdReactionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
             string commentId,
-            global::HuggingFace.CreateBlogCommentReactionRequest2 request);
+            global::HuggingFace.CreateBlogCommentReactionRequest request);
         partial void ProcessCreateBlogByNamespaceBySlugCommentByCommentIdReactionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -57,7 +57,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentReactionRequest2 request,
+            global::HuggingFace.CreateBlogCommentReactionRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -86,7 +86,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentReactionRequest2 request,
+            global::HuggingFace.CreateBlogCommentReactionRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -382,7 +382,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -418,7 +418,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -450,12 +450,12 @@ namespace HuggingFace
             string @namespace,
             string slug,
             string commentId,
-            global::HuggingFace.CreateBlogCommentReactionRequestReaction2 reaction,
-            global::HuggingFace.CreateBlogCommentReactionRequestAction2 action,
+            global::HuggingFace.CreateBlogCommentReactionRequestReaction reaction,
+            global::HuggingFace.CreateBlogCommentReactionRequestAction action,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateBlogCommentReactionRequest2
+            var __request = new global::HuggingFace.CreateBlogCommentReactionRequest
             {
                 Reaction = reaction,
                 Action = action,

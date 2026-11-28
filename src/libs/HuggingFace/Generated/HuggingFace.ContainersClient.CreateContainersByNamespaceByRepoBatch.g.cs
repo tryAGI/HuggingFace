@@ -45,12 +45,16 @@ namespace HuggingFace
 
         /// <summary>
         /// Batch file operations<br/>
-        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, or deleteFile instruction.<br/>
-        /// All add/copy operations must come before all delete operations.<br/>
+        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, updateMetadata, or deleteFile instruction.<br/>
+        /// All add/copy/update operations must come before all delete operations.<br/>
+        /// addFile and copyFile set the whole state of the file: `mtime` and `mode` are cleared when omitted.<br/>
+        /// updateMetadata only changes the metadata it is given, on an existing file, without touching its content or `uploadedAt`.<br/>
+        /// `mode` is the POSIX st_mode (decimal integer); with the S_IFLNK file type bits, the file is a symlink whose content is the target.<br/>
         /// JSON-lines payload:<br/>
         /// ```json<br/>
-        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
-        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
+        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"updateMetadata","path":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
         /// 	'{"type":"deleteFile","path":"..."}'<br/>
         /// ```
         /// </summary>
@@ -76,12 +80,16 @@ namespace HuggingFace
         }
         /// <summary>
         /// Batch file operations<br/>
-        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, or deleteFile instruction.<br/>
-        /// All add/copy operations must come before all delete operations.<br/>
+        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, updateMetadata, or deleteFile instruction.<br/>
+        /// All add/copy/update operations must come before all delete operations.<br/>
+        /// addFile and copyFile set the whole state of the file: `mtime` and `mode` are cleared when omitted.<br/>
+        /// updateMetadata only changes the metadata it is given, on an existing file, without touching its content or `uploadedAt`.<br/>
+        /// `mode` is the POSIX st_mode (decimal integer); with the S_IFLNK file type bits, the file is a symlink whose content is the target.<br/>
         /// JSON-lines payload:<br/>
         /// ```json<br/>
-        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
-        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
+        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"updateMetadata","path":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
         /// 	'{"type":"deleteFile","path":"..."}'<br/>
         /// ```
         /// </summary>
@@ -354,19 +362,19 @@ namespace HuggingFace
                             {
                                 string? __content_422 = null;
                                 global::System.Exception? __exception_422 = null;
-                                global::HuggingFace.CreateContainersBatchResponse2? __value_422 = null;
+                                global::HuggingFace.CreateContainersBatchResponse? __value_422 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_422 = global::HuggingFace.CreateContainersBatchResponse2.FromJson(__content_422, JsonSerializerContext);
+                                        __value_422 = __content_422 is not { Length: > 0 } ? null : global::HuggingFace.CreateContainersBatchResponse.FromJson(__content_422, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_422 = global::HuggingFace.CreateContainersBatchResponse2.FromJson(__content_422, JsonSerializerContext);
+                                        __value_422 = __content_422 is not { Length: > 0 } ? null : global::HuggingFace.CreateContainersBatchResponse.FromJson(__content_422, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -375,9 +383,9 @@ namespace HuggingFace
                                 }
 
 
-                                throw global::HuggingFace.ApiException<global::HuggingFace.CreateContainersBatchResponse2>.Create(
+                                throw global::HuggingFace.ApiException<global::HuggingFace.CreateContainersBatchResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_422 is { Length: > 0 } ? __content_422 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_422,
                                     responseBody: __content_422,
                                     responseObject: __value_422,
@@ -420,7 +428,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -465,7 +473,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(

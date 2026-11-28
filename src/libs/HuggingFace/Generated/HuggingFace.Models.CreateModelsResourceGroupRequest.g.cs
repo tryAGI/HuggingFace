@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class CreateModelsResourceGroupRequest
     {
         /// <summary>
-        /// The resource group to add the repository to, if null, the repository will be removed from the resource group
+        /// The resource group to assign the repository to. If null, the repository is removed from any resource group.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resourceGroupId")]
         public string? ResourceGroupId { get; set; }
@@ -24,7 +24,7 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateModelsResourceGroupRequest" /> class.
         /// </summary>
         /// <param name="resourceGroupId">
-        /// The resource group to add the repository to, if null, the repository will be removed from the resource group
+        /// The resource group to assign the repository to. If null, the repository is removed from any resource group.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

@@ -6,12 +6,16 @@ namespace HuggingFace
     {
         /// <summary>
         /// Batch file operations<br/>
-        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, or deleteFile instruction.<br/>
-        /// All add/copy operations must come before all delete operations.<br/>
+        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, updateMetadata, or deleteFile instruction.<br/>
+        /// All add/copy/update operations must come before all delete operations.<br/>
+        /// addFile and copyFile set the whole state of the file: `mtime` and `mode` are cleared when omitted.<br/>
+        /// updateMetadata only changes the metadata it is given, on an existing file, without touching its content or `uploadedAt`.<br/>
+        /// `mode` is the POSIX st_mode (decimal integer); with the S_IFLNK file type bits, the file is a symlink whose content is the target.<br/>
         /// JSON-lines payload:<br/>
         /// ```json<br/>
-        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
-        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
+        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"updateMetadata","path":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
         /// 	'{"type":"deleteFile","path":"..."}'<br/>
         /// ```
         /// </summary>
@@ -27,12 +31,16 @@ namespace HuggingFace
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Batch file operations<br/>
-        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, or deleteFile instruction.<br/>
-        /// All add/copy operations must come before all delete operations.<br/>
+        /// Accepts NDJSON (newline-delimited JSON) where each line is an addFile, copyFile, updateMetadata, or deleteFile instruction.<br/>
+        /// All add/copy/update operations must come before all delete operations.<br/>
+        /// addFile and copyFile set the whole state of the file: `mtime` and `mode` are cleared when omitted.<br/>
+        /// updateMetadata only changes the metadata it is given, on an existing file, without touching its content or `uploadedAt`.<br/>
+        /// `mode` is the POSIX st_mode (decimal integer); with the S_IFLNK file type bits, the file is a symlink whose content is the target.<br/>
         /// JSON-lines payload:<br/>
         /// ```json<br/>
-        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
-        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"..."}' +<br/>
+        /// 	'{"type":"addFile","path":"...","xetHash":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"copyFile","path":"...","xetHash":"...","sourceRepoType":"...","sourceRepoId":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
+        /// 	'{"type":"updateMetadata","path":"...","mtime":...,"mtimeNanos":...,"contentType":"...","mode":...}' +<br/>
         /// 	'{"type":"deleteFile","path":"..."}'<br/>
         /// ```
         /// </summary>

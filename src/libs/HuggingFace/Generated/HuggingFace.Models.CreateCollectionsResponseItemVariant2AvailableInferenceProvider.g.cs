@@ -12,17 +12,9 @@ namespace HuggingFace
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.AnyOfJsonConverter<global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderVariant1?, global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderVariant2?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider Provider { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("providerStatus")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::HuggingFace.JsonConverters.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatusJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus ProviderStatus { get; set; }
+        public required global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderVariant1?, global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderVariant2?> Provider { get; set; }
 
         /// <summary>
         ///
@@ -114,7 +106,6 @@ namespace HuggingFace
         /// Initializes a new instance of the <see cref="CreateCollectionsResponseItemVariant2AvailableInferenceProvider" /> class.
         /// </summary>
         /// <param name="provider"></param>
-        /// <param name="providerStatus"></param>
         /// <param name="modelStatus"></param>
         /// <param name="providerId"></param>
         /// <param name="task"></param>
@@ -131,8 +122,7 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCollectionsResponseItemVariant2AvailableInferenceProvider(
-            global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProvider provider,
-            global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderStatus providerStatus,
+            global::HuggingFace.AnyOf<global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderVariant1?, global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderProviderVariant2?> provider,
             global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderModelStatus modelStatus,
             string providerId,
             global::HuggingFace.CreateCollectionsResponseItemVariant2AvailableInferenceProviderTask task,
@@ -147,7 +137,6 @@ namespace HuggingFace
             global::System.DateTime? freeUntil)
         {
             this.Provider = provider;
-            this.ProviderStatus = providerStatus;
             this.ModelStatus = modelStatus;
             this.ProviderId = providerId ?? throw new global::System.ArgumentNullException(nameof(providerId));
             this.Task = task;

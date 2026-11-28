@@ -28,12 +28,12 @@ namespace HuggingFace
         partial void PrepareCreateSettingsWebhooksByWebhookIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string webhookId,
-            global::HuggingFace.CreateSettingsWebhooksRequest2 request);
+            global::HuggingFace.CreateSettingsWebhooksRequest request);
         partial void PrepareCreateSettingsWebhooksByWebhookIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string webhookId,
-            global::HuggingFace.CreateSettingsWebhooksRequest2 request);
+            global::HuggingFace.CreateSettingsWebhooksRequest request);
         partial void ProcessCreateSettingsWebhooksByWebhookIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -51,10 +51,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse2> CreateSettingsWebhooksByWebhookIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksByWebhookIdAsync(
             string webhookId,
 
-            global::HuggingFace.CreateSettingsWebhooksRequest2 request,
+            global::HuggingFace.CreateSettingsWebhooksRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -76,10 +76,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse2>> CreateSettingsWebhooksByWebhookIdAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse>> CreateSettingsWebhooksByWebhookIdAsResponseAsync(
             string webhookId,
 
-            global::HuggingFace.CreateSettingsWebhooksRequest2 request,
+            global::HuggingFace.CreateSettingsWebhooksRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -366,9 +366,9 @@ namespace HuggingFace
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::HuggingFace.CreateSettingsWebhooksResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::HuggingFace.CreateSettingsWebhooksResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -378,7 +378,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -398,9 +398,9 @@ namespace HuggingFace
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::HuggingFace.CreateSettingsWebhooksResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::HuggingFace.CreateSettingsWebhooksResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse2>(
+                                    return new global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateSettingsWebhooksResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::HuggingFace.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -423,7 +423,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -456,19 +456,19 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse2> CreateSettingsWebhooksByWebhookIdAsync(
+        public async global::System.Threading.Tasks.Task<global::HuggingFace.CreateSettingsWebhooksResponse> CreateSettingsWebhooksByWebhookIdAsync(
             string webhookId,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem2> watched,
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain2> domains,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestWatchedItem> watched,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateSettingsWebhooksRequestDomain> domains,
             string? url = default,
-            global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant12, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant22>? job = default,
+            global::HuggingFace.OneOf<global::HuggingFace.CreateSettingsWebhooksRequestJobVariant1, global::HuggingFace.CreateSettingsWebhooksRequestJobVariant2>? job = default,
             string? jobSourceId = default,
             global::System.Collections.Generic.Dictionary<string, string>? secrets = default,
             string? secret = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateSettingsWebhooksRequest2
+            var __request = new global::HuggingFace.CreateSettingsWebhooksRequest
             {
                 Watched = watched,
                 Url = url,

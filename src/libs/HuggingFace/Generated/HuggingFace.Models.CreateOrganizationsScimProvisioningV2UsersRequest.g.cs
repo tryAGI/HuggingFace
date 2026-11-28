@@ -36,7 +36,7 @@ namespace HuggingFace
         public bool? Active { get; set; }
 
         /// <summary>
-        /// SSO unique identifier (SAML nameid or OIDC sub claim) - required for SSO login
+        /// IdP SCIM identifier, used to look the user up. SSO login matches the SAML NameID or OIDC sub separately
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("externalId")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -57,7 +57,7 @@ namespace HuggingFace
         /// </param>
         /// <param name="emails"></param>
         /// <param name="externalId">
-        /// SSO unique identifier (SAML nameid or OIDC sub claim) - required for SSO login
+        /// IdP SCIM identifier, used to look the user up. SSO login matches the SAML NameID or OIDC sub separately
         /// </param>
         /// <param name="active">
         /// Default Value: true

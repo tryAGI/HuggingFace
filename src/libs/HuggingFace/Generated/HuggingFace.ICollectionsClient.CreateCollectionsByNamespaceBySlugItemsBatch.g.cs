@@ -18,7 +18,7 @@ namespace HuggingFace
             string @namespace,
             string slug,
 
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem2> request,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -35,7 +35,7 @@ namespace HuggingFace
             string @namespace,
             string slug,
 
-            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem2> request,
+            global::System.Collections.Generic.IList<global::HuggingFace.CreateCollectionsItemsBatchRequestItem> request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

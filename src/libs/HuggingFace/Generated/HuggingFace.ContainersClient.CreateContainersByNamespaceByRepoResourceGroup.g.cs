@@ -46,8 +46,8 @@ namespace HuggingFace
             ref string content);
 
         /// <summary>
-        /// Add resource group<br/>
-        /// Add the repository to a resource group
+        /// Assign resource group<br/>
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -75,8 +75,8 @@ namespace HuggingFace
             return __response.Body;
         }
         /// <summary>
-        /// Add resource group<br/>
-        /// Add the repository to a resource group
+        /// Assign resource group<br/>
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
@@ -389,7 +389,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -434,7 +434,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -452,13 +452,13 @@ namespace HuggingFace
             }
         }
         /// <summary>
-        /// Add resource group<br/>
-        /// Add the repository to a resource group
+        /// Assign resource group<br/>
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="repo"></param>
         /// <param name="resourceGroupId">
-        /// The resource group to add the repository to, if null, the repository will be removed from the resource group
+        /// The resource group to assign the repository to. If null, the repository is removed from any resource group.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

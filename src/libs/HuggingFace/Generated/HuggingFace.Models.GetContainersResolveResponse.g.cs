@@ -57,6 +57,24 @@ namespace HuggingFace
         public required string UploadedAt { get; set; }
 
         /// <summary>
+        /// ISO 8601 original file modification time, when set by the uploader
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mtime")]
+        public string? Mtime { get; set; }
+
+        /// <summary>
+        /// Sub-millisecond remainder of mtime, in nanoseconds (0–999_999)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mtimeNanos")]
+        public double? MtimeNanos { get; set; }
+
+        /// <summary>
+        /// POSIX st_mode of the file, when set by the uploader
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public double? Mode { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -86,6 +104,15 @@ namespace HuggingFace
         /// <param name="contentType">
         /// The content type of the file
         /// </param>
+        /// <param name="mtime">
+        /// ISO 8601 original file modification time, when set by the uploader
+        /// </param>
+        /// <param name="mtimeNanos">
+        /// Sub-millisecond remainder of mtime, in nanoseconds (0–999_999)
+        /// </param>
+        /// <param name="mode">
+        /// POSIX st_mode of the file, when set by the uploader
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -96,7 +123,10 @@ namespace HuggingFace
             string etag,
             double size,
             string uploadedAt,
-            string? contentType)
+            string? contentType,
+            string? mtime,
+            double? mtimeNanos,
+            double? mode)
         {
             this.Hash = hash ?? throw new global::System.ArgumentNullException(nameof(hash));
             this.RefreshUrl = refreshUrl ?? throw new global::System.ArgumentNullException(nameof(refreshUrl));
@@ -105,6 +135,9 @@ namespace HuggingFace
             this.Size = size;
             this.ContentType = contentType;
             this.UploadedAt = uploadedAt ?? throw new global::System.ArgumentNullException(nameof(uploadedAt));
+            this.Mtime = mtime;
+            this.MtimeNanos = mtimeNanos;
+            this.Mode = mode;
         }
 
         /// <summary>

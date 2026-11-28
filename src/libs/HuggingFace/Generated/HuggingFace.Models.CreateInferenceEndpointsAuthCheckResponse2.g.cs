@@ -13,14 +13,14 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("namespace")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace2 Namespace { get; set; }
+        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace Namespace { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser2 User { get; set; }
+        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser User { get; set; }
 
         /// <summary>
         ///
@@ -52,8 +52,8 @@ namespace HuggingFace
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateInferenceEndpointsAuthCheckResponse2(
-            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace2 @namespace,
-            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser2 user,
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace @namespace,
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser user,
             global::System.Collections.Generic.IList<string> patternRestrictions,
             string? resourceGroupId)
         {

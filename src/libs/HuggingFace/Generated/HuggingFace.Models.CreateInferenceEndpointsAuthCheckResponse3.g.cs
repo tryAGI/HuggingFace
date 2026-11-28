@@ -13,14 +13,21 @@ namespace HuggingFace
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("namespace")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace3 Namespace { get; set; }
+        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace Namespace { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser3 User { get; set; }
+        public required global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser User { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("patternRestrictions")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> PatternRestrictions { get; set; }
 
         /// <summary>
         ///
@@ -39,17 +46,20 @@ namespace HuggingFace
         /// </summary>
         /// <param name="namespace"></param>
         /// <param name="user"></param>
+        /// <param name="patternRestrictions"></param>
         /// <param name="resourceGroupId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateInferenceEndpointsAuthCheckResponse3(
-            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace3 @namespace,
-            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser3 user,
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace @namespace,
+            global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser user,
+            global::System.Collections.Generic.IList<string> patternRestrictions,
             string? resourceGroupId)
         {
             this.Namespace = @namespace ?? throw new global::System.ArgumentNullException(nameof(@namespace));
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.PatternRestrictions = patternRestrictions ?? throw new global::System.ArgumentNullException(nameof(patternRestrictions));
             this.ResourceGroupId = resourceGroupId;
         }
 

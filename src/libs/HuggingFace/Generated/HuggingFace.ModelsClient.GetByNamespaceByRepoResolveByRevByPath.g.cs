@@ -404,13 +404,13 @@ namespace HuggingFace
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_302 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_302 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
+                                        __value_302 = __content_302 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_302 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_302 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
+                                        __value_302 = __content_302 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_302, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -421,7 +421,7 @@ namespace HuggingFace
 
                                 throw global::HuggingFace.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_302 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_302 is { Length: > 0 } ? __content_302 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_302,
                                     responseBody: __content_302,
                                     responseObject: __value_302,
@@ -441,13 +441,13 @@ namespace HuggingFace
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_304 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_304 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
+                                        __value_304 = __content_304 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_304 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_304 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
+                                        __value_304 = __content_304 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_304, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -458,7 +458,7 @@ namespace HuggingFace
 
                                 throw global::HuggingFace.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_304 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_304 is { Length: > 0 } ? __content_304 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_304,
                                     responseBody: __content_304,
                                     responseObject: __value_304,
@@ -478,13 +478,13 @@ namespace HuggingFace
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_307 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_307 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
+                                        __value_307 = __content_307 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_307 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_307 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
+                                        __value_307 = __content_307 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_307, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -495,7 +495,7 @@ namespace HuggingFace
 
                                 throw global::HuggingFace.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_307 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_307 is { Length: > 0 } ? __content_307 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_307,
                                     responseBody: __content_307,
                                     responseObject: __value_307,
@@ -538,7 +538,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -583,7 +583,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(

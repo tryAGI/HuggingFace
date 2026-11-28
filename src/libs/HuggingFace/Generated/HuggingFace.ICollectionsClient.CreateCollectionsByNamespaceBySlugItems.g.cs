@@ -14,11 +14,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsItemsResponse2> CreateCollectionsByNamespaceBySlugItemsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsItemsResponse> CreateCollectionsByNamespaceBySlugItemsAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.CreateCollectionsItemsRequest2 request,
+            global::HuggingFace.CreateCollectionsItemsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -31,11 +31,11 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsItemsResponse2>> CreateCollectionsByNamespaceBySlugItemsAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.CreateCollectionsItemsResponse>> CreateCollectionsByNamespaceBySlugItemsAsResponseAsync(
             string @namespace,
             string slug,
 
-            global::HuggingFace.CreateCollectionsItemsRequest2 request,
+            global::HuggingFace.CreateCollectionsItemsRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -49,10 +49,10 @@ namespace HuggingFace
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsItemsResponse2> CreateCollectionsByNamespaceBySlugItemsAsync(
+        global::System.Threading.Tasks.Task<global::HuggingFace.CreateCollectionsItemsResponse> CreateCollectionsByNamespaceBySlugItemsAsync(
             string @namespace,
             string slug,
-            global::HuggingFace.CreateCollectionsItemsRequestItem2 item,
+            global::HuggingFace.CreateCollectionsItemsRequestItem item,
             string? note = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

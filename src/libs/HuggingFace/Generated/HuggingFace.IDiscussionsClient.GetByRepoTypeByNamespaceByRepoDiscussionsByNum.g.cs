@@ -15,7 +15,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsync(
-            global::HuggingFace.GetDiscussionsRepoType2 repoType,
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string num,
@@ -32,7 +32,7 @@ namespace HuggingFace
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::HuggingFace.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::HuggingFace.AutoSDKHttpResponse<global::HuggingFace.OneOf<global::HuggingFace.GetDiscussionsResponseVariant1, global::HuggingFace.GetDiscussionsResponseVariant2>>> GetByRepoTypeByNamespaceByRepoDiscussionsByNumAsResponseAsync(
-            global::HuggingFace.GetDiscussionsRepoType2 repoType,
+            global::HuggingFace.GetDiscussionsRepoType repoType,
             string @namespace,
             string repo,
             string num,

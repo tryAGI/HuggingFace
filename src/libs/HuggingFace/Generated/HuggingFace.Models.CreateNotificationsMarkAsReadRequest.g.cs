@@ -9,7 +9,7 @@ namespace HuggingFace
     public sealed partial class CreateNotificationsMarkAsReadRequest
     {
         /// <summary>
-        /// Default Value: []
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("discussionIds")]
         public global::System.Collections.Generic.IList<string>? DiscussionIds { get; set; }
@@ -29,9 +29,7 @@ namespace HuggingFace
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateNotificationsMarkAsReadRequest" /> class.
         /// </summary>
-        /// <param name="discussionIds">
-        /// Default Value: []
-        /// </param>
+        /// <param name="discussionIds"></param>
         /// <param name="read">
         /// Default Value: true
         /// </param>

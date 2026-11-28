@@ -14,6 +14,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsBillingPrepaidCreditsPurchaseLinkRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesType), TypeInfoPropertyName = "GetSettingsRepositoriesType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesSort), TypeInfoPropertyName = "GetSettingsRepositoriesSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesDirection), TypeInfoPropertyName = "GetSettingsRepositoriesDirection2")]
@@ -26,6 +27,12 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemType), TypeInfoPropertyName = "GetSettingsRepositoriesResponseItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemVisibility), TypeInfoPropertyName = "GetSettingsRepositoriesResponseItemVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingCreditsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode), TypeInfoPropertyName = "GetSettingsBillingCreditsResponseBillingMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetSettingsBillingCreditsResponseBalance>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalance))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType), TypeInfoPropertyName = "GetSettingsBillingCreditsResponseBalanceType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateSettingsBillingPrepaidCreditsPurchaseLinkResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponsePeriod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponsePeriod))]
@@ -73,6 +80,8 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetUsersFollowersExpandItem?), TypeInfoPropertyName = "NullableGetUsersFollowersExpandItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemType?), TypeInfoPropertyName = "NullableGetSettingsRepositoriesResponseItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemVisibility?), TypeInfoPropertyName = "NullableGetSettingsRepositoriesResponseItemVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode?), TypeInfoPropertyName = "NullableGetSettingsBillingCreditsResponseBillingMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType?), TypeInfoPropertyName = "NullableGetSettingsBillingCreditsResponseBalanceType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetUsersLikesResponseItemRepoType?), TypeInfoPropertyName = "NullableGetUsersLikesResponseItemRepoType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.AnyOf<global::HuggingFace.GetUsersFollowersResponseItemVariant1, global::HuggingFace.GetUsersFollowersResponseItemVariant2>?), TypeInfoPropertyName = "NullableAnyOfGetUsersFollowersResponseItemVariant1GetUsersFollowersResponseItemVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.GetUsersFollowingOrgsResponseItemOrgType?), TypeInfoPropertyName = "NullableGetUsersFollowingOrgsResponseItemOrgType2")]
@@ -80,6 +89,7 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetUsersFollowersExpandItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsMcpResponseSpaceTool>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsRepositoriesResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsBillingCreditsResponseBalance>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponsePeriod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsBillingUsageByInferenceSessionResponsePeriodSession>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::HuggingFace.GetSettingsBillingUsageJobsResponseUsageJobDetail>))]
@@ -186,6 +196,14 @@ namespace HuggingFace
 
                     || typeToConvert == typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemVisibility?)
 
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode?)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType)
+
+                    || typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType?)
+
                     || typeToConvert == typeof(global::HuggingFace.GetUsersLikesResponseItemRepoType)
 
                     || typeToConvert == typeof(global::HuggingFace.GetUsersLikesResponseItemRepoType?)
@@ -261,6 +279,26 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.GetSettingsRepositoriesResponseItemVisibility?))
                 {
                     return new global::HuggingFace.JsonConverters.GetSettingsRepositoriesResponseItemVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBillingModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBillingMode?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBillingModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBalanceTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::HuggingFace.GetSettingsBillingCreditsResponseBalanceType?))
+                {
+                    return new global::HuggingFace.JsonConverters.GetSettingsBillingCreditsResponseBalanceTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::HuggingFace.GetUsersLikesResponseItemRepoType))

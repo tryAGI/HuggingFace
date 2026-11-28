@@ -47,7 +47,7 @@ namespace HuggingFace
         /// Server-sent events (`Accept: text/event-stream`) of the bucket's file changes, so clients can stop polling `/tree`.<br/>
         /// Events:<br/>
         /// - `ready`: `{"cursor"}` — replay (if any) is done, live changes follow. `cursor` may be absent if the feed has seen no change yet.<br/>
-        /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?}]}` — a batch of changes coalesced over ~200ms. An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`); `mtime`/`mtimeNanos` are `null` when a re-upload cleared them. `xetHash` is omitted without content read access.<br/>
+        /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?, "mode"?, "contentType"?}]}` — a batch of changes coalesced over ~200ms. An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`, an `updateMetadata` just the metadata it changed); `mtime`/`mtimeNanos`/`mode` are `null` when a re-upload cleared them. `contentType` is only sent on an `update` that changed it. `xetHash` is omitted without content read access.<br/>
         /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list. A `since` at or after the bucket's `updatedAt` never resets, however old.<br/>
         /// - `reconnect`: `{"cursor"}` — sent after 20 minutes or when the server shuts down (deploys), then the stream ends; reconnect with that cursor. Treat any other end of the stream the same way: reconnect with the last cursor you received.<br/>
         /// A `: ping` comment is sent every 30s. Resume with `?cursor=` (exclusive) or `?since=` (inclusive); without either, only live changes are sent.
@@ -85,7 +85,7 @@ namespace HuggingFace
         /// Server-sent events (`Accept: text/event-stream`) of the bucket's file changes, so clients can stop polling `/tree`.<br/>
         /// Events:<br/>
         /// - `ready`: `{"cursor"}` — replay (if any) is done, live changes follow. `cursor` may be absent if the feed has seen no change yet.<br/>
-        /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?}]}` — a batch of changes coalesced over ~200ms. An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`); `mtime`/`mtimeNanos` are `null` when a re-upload cleared them. `xetHash` is omitted without content read access.<br/>
+        /// - `changes`: `{"cursor", "changes": [{"path", "op": "add" | "update" | "delete", "size"?, "xetHash"?, "uploadedAt"?, "mtime"?, "mtimeNanos"?, "mode"?, "contentType"?}]}` — a batch of changes coalesced over ~200ms. An `update` only carries the fields that changed (an identical re-upload has just `uploadedAt`, an `updateMetadata` just the metadata it changed); `mtime`/`mtimeNanos`/`mode` are `null` when a re-upload cleared them. `contentType` is only sent on an `update` that changed it. `xetHash` is omitted without content read access.<br/>
         /// - `reset`: `{"reason": "cursor_too_old"}` — the requested `cursor`/`since` is older than what the server buffers (about 15 minutes); the stream ends and the client must re-list. A `since` at or after the bucket's `updatedAt` never resets, however old.<br/>
         /// - `reconnect`: `{"cursor"}` — sent after 20 minutes or when the server shuts down (deploys), then the stream ends; reconnect with that cursor. Treat any other end of the stream the same way: reconnect with the last cursor you received.<br/>
         /// A `: ping` comment is sent every 30s. Resume with `?cursor=` (exclusive) or `?since=` (inclusive); without either, only live changes are sent.
@@ -381,13 +381,13 @@ namespace HuggingFace
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_503 = global::HuggingFace.GetBucketsEventsResponse.FromJson(__content_503, JsonSerializerContext);
+                                        __value_503 = __content_503 is not { Length: > 0 } ? null : global::HuggingFace.GetBucketsEventsResponse.FromJson(__content_503, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_503 = global::HuggingFace.GetBucketsEventsResponse.FromJson(__content_503, JsonSerializerContext);
+                                        __value_503 = __content_503 is not { Length: > 0 } ? null : global::HuggingFace.GetBucketsEventsResponse.FromJson(__content_503, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -398,7 +398,7 @@ namespace HuggingFace
 
                                 throw global::HuggingFace.ApiException<global::HuggingFace.GetBucketsEventsResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_503 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_503 is { Length: > 0 } ? __content_503 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_503,
                                     responseBody: __content_503,
                                     responseObject: __value_503,
@@ -434,7 +434,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -470,7 +470,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(

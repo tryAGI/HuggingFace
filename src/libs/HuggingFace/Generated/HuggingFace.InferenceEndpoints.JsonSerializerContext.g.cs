@@ -14,23 +14,14 @@ namespace HuggingFace
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms), TypeInfoPropertyName = "CreateInferenceEndpointsAuthCheckPerms2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2), TypeInfoPropertyName = "CreateInferenceEndpointsAuthCheckPerms22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms), TypeInfoPropertyName = "CreateInferenceEndpointsAuthCheckPerms2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseNamespace4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckResponseUser4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object?>), TypeInfoPropertyName = "DictionaryStringObject_System_Collections_Generic_Dictionary_string_object_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms?), TypeInfoPropertyName = "NullableCreateInferenceEndpointsAuthCheckPerms2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2?), TypeInfoPropertyName = "NullableCreateInferenceEndpointsAuthCheckPerms22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms?), TypeInfoPropertyName = "NullableCreateInferenceEndpointsAuthCheckPerms2")]
     internal sealed partial class InferenceEndpointsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -102,11 +93,7 @@ namespace HuggingFace
                 return
                     typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms)
 
-                    || typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms?)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2)
-
-                    || typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2?);
+                    || typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -121,16 +108,6 @@ namespace HuggingFace
                 if (typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms?))
                 {
                     return new global::HuggingFace.JsonConverters.CreateInferenceEndpointsAuthCheckPermsNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateInferenceEndpointsAuthCheckPerms2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::HuggingFace.CreateInferenceEndpointsAuthCheckPerms2?))
-                {
-                    return new global::HuggingFace.JsonConverters.CreateInferenceEndpointsAuthCheckPerms2NullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

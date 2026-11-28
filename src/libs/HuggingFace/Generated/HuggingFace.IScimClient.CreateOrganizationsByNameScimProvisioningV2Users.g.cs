@@ -48,7 +48,7 @@ namespace HuggingFace
         /// Default Value: true
         /// </param>
         /// <param name="externalId">
-        /// SSO unique identifier (SAML nameid or OIDC sub claim) - required for SSO login
+        /// IdP SCIM identifier, used to look the user up. SSO login matches the SAML NameID or OIDC sub separately
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

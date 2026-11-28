@@ -61,6 +61,12 @@ namespace HuggingFace
         public string? ContentType { get; set; }
 
         /// <summary>
+        /// POSIX st_mode, when set by the uploader. With the S_IFLNK type bits (0o120000), the file is a symlink whose content is the target
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public int? Mode { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -81,6 +87,9 @@ namespace HuggingFace
         /// Sub-millisecond remainder of mtime, in nanoseconds (0–999_999)
         /// </param>
         /// <param name="contentType"></param>
+        /// <param name="mode">
+        /// POSIX st_mode, when set by the uploader. With the S_IFLNK type bits (0o120000), the file is a symlink whose content is the target
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -92,7 +101,8 @@ namespace HuggingFace
             string? xetHash,
             global::System.DateTime? mtime,
             int? mtimeNanos,
-            string? contentType)
+            string? contentType,
+            int? mode)
         {
             this.Type = type;
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
@@ -102,6 +112,7 @@ namespace HuggingFace
             this.MtimeNanos = mtimeNanos;
             this.UploadedAt = uploadedAt;
             this.ContentType = contentType;
+            this.Mode = mode;
         }
 
         /// <summary>

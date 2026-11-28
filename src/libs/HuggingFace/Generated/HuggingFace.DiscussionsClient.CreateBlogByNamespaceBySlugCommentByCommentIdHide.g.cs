@@ -30,14 +30,14 @@ namespace HuggingFace
             ref string @namespace,
             ref string slug,
             ref string commentId,
-            global::HuggingFace.CreateBlogCommentHideRequest2 request);
+            global::HuggingFace.CreateBlogCommentHideRequest request);
         partial void PrepareCreateBlogByNamespaceBySlugCommentByCommentIdHideRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string @namespace,
             string slug,
             string commentId,
-            global::HuggingFace.CreateBlogCommentHideRequest2 request);
+            global::HuggingFace.CreateBlogCommentHideRequest request);
         partial void ProcessCreateBlogByNamespaceBySlugCommentByCommentIdHideResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -57,7 +57,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentHideRequest2 request,
+            global::HuggingFace.CreateBlogCommentHideRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -86,7 +86,7 @@ namespace HuggingFace
             string slug,
             string commentId,
 
-            global::HuggingFace.CreateBlogCommentHideRequest2 request,
+            global::HuggingFace.CreateBlogCommentHideRequest request,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -382,7 +382,7 @@ namespace HuggingFace
                                 {
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -418,7 +418,7 @@ namespace HuggingFace
 
                                     throw global::HuggingFace.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -449,11 +449,11 @@ namespace HuggingFace
             string @namespace,
             string slug,
             string commentId,
-            global::HuggingFace.CreateBlogCommentHideRequestReason2? reason = default,
+            global::HuggingFace.CreateBlogCommentHideRequestReason? reason = default,
             global::HuggingFace.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::HuggingFace.CreateBlogCommentHideRequest2
+            var __request = new global::HuggingFace.CreateBlogCommentHideRequest
             {
                 Reason = reason,
             };
